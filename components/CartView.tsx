@@ -38,7 +38,7 @@ export function CartView(): JSX.Element {
 
         <ul className="divide-y divide-line">
           {lines.map((line) => (
-            <li key={line.entry.id}>
+            <li key={line.key}>
               <CartLineItem
                 line={line}
                 onQuantityChange={setQty}

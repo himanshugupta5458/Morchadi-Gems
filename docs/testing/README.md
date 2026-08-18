@@ -71,6 +71,7 @@ purpose.
 | [PLAN-address-validation.md](PLAN-address-validation.md) | [2026-08-17](RESULT-2026-08-17-address-validation.md) — 83/83 pass |
 | [PLAN-order-pricing.md](PLAN-order-pricing.md) | [2026-08-17](RESULT-2026-08-17-order-pricing.md) — 36/36 pass |
 | [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) | [2026-08-18](RESULT-2026-08-18-shipping-threshold.md) — 20/20 pass |
+| [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) | [2026-08-18](RESULT-2026-08-18-cart-line-keys.md) — 85/85 pass |
 
 ## Runners
 
@@ -92,9 +93,12 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | --- | --- | --- |
 | `lib/shop.test.ts` | Filtering, sorting, pagination, URL vocabulary | [PLAN-shop-logic.md](PLAN-shop-logic.md) |
 | `lib/quantity.test.ts` | `clampQuantity` bounds, flooring, and non-finite input | — small enough to read directly |
-| `lib/cart.test.ts` | Cart arithmetic — add/merge/clamp, remove, set quantity, pruning, hostile persisted data, subtotal/shipping/total | [PLAN-cart-logic.md](PLAN-cart-logic.md) |
+| `lib/cart.test.ts` | Cart arithmetic — add/merge/clamp, remove, set quantity, pruning, hostile persisted data, subtotal/shipping/total, and line identity once a product has options | [PLAN-cart-logic.md](PLAN-cart-logic.md), [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
+| `lib/options.test.ts` | `lineKey`, option defaults and resolution, staleness, hostile stored selections, the order summary | [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
+| `lib/order-options.test.ts` | Merging a product's lines before pricing, order-time option validation, Cashfree `order_tags` packing | [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
+| `lib/product-options.test.tsx` | The product-page selectors, the cart line echo, the personalized note, per-line edits | [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
 | `lib/cart-context.test.tsx` | `CartProvider` hydration, `localStorage` persistence, the header badge, and the `/cart` view | [PLAN-cart-logic.md](PLAN-cart-logic.md) |
 | `lib/address.test.ts` | Per-field and aggregate address validation, the Indian states list, focus order | [PLAN-address-validation.md](PLAN-address-validation.md) |
-| `lib/checkout.test.ts` | The `sessionStorage` checkout bundle — assembly from cart lines, and parsing hostile stored data | [PLAN-address-validation.md](PLAN-address-validation.md) |
+| `lib/checkout.test.ts` | The `sessionStorage` checkout bundle — assembly from cart lines, the recorded choices it carries, and parsing hostile stored data | [PLAN-address-validation.md](PLAN-address-validation.md), [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
 | `lib/address-checkout.test.tsx` | `/address` — the empty-cart guard, blur/submit validation, focus, the handoff to `/payment`, repopulation | [PLAN-address-validation.md](PLAN-address-validation.md) |
 | `lib/order.test.ts` | Server-side order pricing — catalogue-only totals, `mrp` exclusion, hostile items, per-item error collection, untrusted-body parsing, the free-shipping boundary | [PLAN-order-pricing.md](PLAN-order-pricing.md), [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) |

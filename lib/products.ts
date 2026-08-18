@@ -1,5 +1,6 @@
 import catalogue from "@/data/products.json";
 import type { CatalogueEntry, Category, Product } from "@/types/product";
+import { hasProductOptions } from "@/lib/options";
 
 const products = catalogue as Product[];
 
@@ -7,6 +8,9 @@ const products = catalogue as Product[];
  * Narrows a product to the fields a cart line needs. Server Components call this before
  * handing anything to a client cart component, so a full product record — descriptions,
  * details, reviews — never crosses the boundary.
+ *
+ * `options` is part of that minimum: the client cart re-validates a persisted selection and
+ * fills in defaults, and it cannot do either without knowing what is currently offered.
  */
 export function toCatalogueEntry(product: Product): CatalogueEntry {
   return {
@@ -16,6 +20,7 @@ export function toCatalogueEntry(product: Product): CatalogueEntry {
     mrp: product.mrp,
     image: product.images.length > 0 ? product.images[0] : null,
     inStock: product.inStock,
+    ...(hasProductOptions(product.options) ? { options: product.options } : {}),
   };
 }
 

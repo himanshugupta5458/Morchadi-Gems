@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import type { CatalogueEntry } from "@/types/product";
+import type { CatalogueEntry, SelectedOptions } from "@/types/product";
 import { useCart } from "@/lib/cart-context";
 import { CHECKOUT_ADDRESS_PATH } from "@/lib/navigation";
 import { useToast } from "@/lib/toast-context";
@@ -25,13 +25,21 @@ export function ProductPurchaseActions({
   const { showToast } = useToast();
   const router = useRouter();
 
-  function handleAddToCart(entry: CatalogueEntry, quantity: number): void {
-    addItem(entry, quantity);
+  function handleAddToCart(
+    entry: CatalogueEntry,
+    quantity: number,
+    selectedOptions?: SelectedOptions,
+  ): void {
+    addItem(entry, quantity, selectedOptions);
     showToast(ADDED_TO_CART_MESSAGE);
   }
 
-  function handleBuyNow(entry: CatalogueEntry, quantity: number): void {
-    addItem(entry, quantity);
+  function handleBuyNow(
+    entry: CatalogueEntry,
+    quantity: number,
+    selectedOptions?: SelectedOptions,
+  ): void {
+    addItem(entry, quantity, selectedOptions);
     router.push(CHECKOUT_ADDRESS_PATH);
   }
 

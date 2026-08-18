@@ -222,3 +222,98 @@ describe("parseCheckoutData", () => {
     expect(tampered?.total).toBe(1);
   });
 });
+
+const INITIAL_RING: CatalogueEntry = {
+  id: "P001",
+  name: "Wave Band Initial Ring",
+  price: 400,
+  mrp: 600,
+  image: "/products/P001.webp",
+  inStock: true,
+  options: [{ name: "Letter", values: ["A", "B", "C"] }],
+};
+
+const OPTIONED_CATALOGUE: CatalogueEntry[] = [INITIAL_RING, NECKLACE];
+
+function optionedLines(selections: { letter: string; qty: number }[]): CartLine[] {
+  return buildCartLines(
+    selections.map(({ letter, qty }) => ({
+      productId: "P001",
+      name: "snapshot",
+      price: 1,
+      image: "",
+      qty,
+      selectedOptions: { Letter: letter },
+    })),
+    OPTIONED_CATALOGUE,
+  );
+}
+
+describe("the checkout bundle carries recorded choices", () => {
+  it("puts each line's selection into the bundle", () => {
+    const bundle = buildCheckoutData(
+      optionedLines([{ letter: "A", qty: 1 }, { letter: "C", qty: 2 }]),
+      ADDRESS,
+    );
+
+    expect(bundle.cart.map((item) => item.selectedOptions)).toEqual([
+      { Letter: "A" },
+      { Letter: "C" },
+    ]);
+  });
+
+  it("keeps two selections of one product as two bundle lines", () => {
+    const bundle = buildCheckoutData(
+      optionedLines([{ letter: "A", qty: 1 }, { letter: "C", qty: 2 }]),
+      ADDRESS,
+    );
+
+    expect(bundle.cart).toHaveLength(2);
+    expect(bundle.cart.every((item) => item.productId === "P001")).toBe(true);
+  });
+
+  it("totals the bundle as if the choices were not there", () => {
+    const withChoices = buildCheckoutData(
+      optionedLines([{ letter: "A", qty: 1 }, { letter: "C", qty: 2 }]),
+      ADDRESS,
+    );
+    const asOneLine = buildCheckoutData(
+      optionedLines([{ letter: "A", qty: 3 }]),
+      ADDRESS,
+    );
+
+    expect(withChoices.subtotal).toBe(asOneLine.subtotal);
+    expect(withChoices.total).toBe(asOneLine.total);
+    expect(withChoices.subtotal).toBe(400 * 3);
+  });
+
+  it("leaves a product without options without a selection", () => {
+    const bundle = buildCheckoutData(linesFor({ "nk-001": 1 }), ADDRESS);
+
+    expect(bundle.cart[0]).not.toHaveProperty("selectedOptions");
+  });
+
+  it("survives the round trip through sessionStorage", () => {
+    const bundle = buildCheckoutData(
+      optionedLines([{ letter: "B", qty: 1 }]),
+      ADDRESS,
+    );
+
+    expect(parseCheckoutData(JSON.stringify(bundle))?.cart[0].selectedOptions).toEqual({
+      Letter: "B",
+    });
+  });
+
+  it("drops an unreadable stored selection instead of the whole bundle", () => {
+    const bundle: CheckoutData = {
+      ...buildCheckoutData(optionedLines([{ letter: "B", qty: 1 }]), ADDRESS),
+    };
+    const tampered = JSON.parse(JSON.stringify(bundle)) as Record<string, unknown>;
+    (tampered.cart as Record<string, unknown>[])[0].selectedOptions = "Letter=B";
+
+    const parsed = parseCheckoutData(JSON.stringify(tampered));
+
+    expect(parsed).not.toBeNull();
+    expect(parsed?.cart[0]).not.toHaveProperty("selectedOptions");
+  });
+});

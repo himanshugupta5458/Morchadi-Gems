@@ -70,3 +70,4 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [016](ADR-016-real-product-import.md) | Real product import and the P-code id scheme | Accepted |
 | [017](ADR-017-final-content-pass.md) | Final content pass on the policy set and the about page | Accepted |
 | [018](ADR-018-honest-product-description.md) | Honest product description — anti-tarnish, not hallmarked | Accepted |
+| [019](ADR-019-product-options.md) | Product options — a recorded choice, never a price | Accepted |

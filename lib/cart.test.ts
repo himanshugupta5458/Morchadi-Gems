@@ -3,8 +3,10 @@ import type { CartItem } from "@/types/cart";
 import type { CatalogueEntry } from "@/types/product";
 import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { MAX_QUANTITY, MIN_QUANTITY } from "@/lib/quantity";
+import { lineKey } from "@/lib/options";
 import {
   addProductToCart,
+  cartItemKey,
   buildCartLines,
   calculateCartTotals,
   countCartItems,
@@ -501,5 +503,304 @@ describe("shipping rule", () => {
   it("reads both numbers from config rather than writing them into the cart math", () => {
     expect(FLAT_SHIPPING_RATE).toBe(99);
     expect(FREE_SHIPPING_THRESHOLD).toBe(799);
+  });
+});
+
+const INITIAL_RING = makeEntry({
+  id: "P001",
+  name: "Wave Band Initial Ring",
+  price: 400,
+  mrp: 600,
+  image: "/products/P001.webp",
+  options: [{ name: "Letter", values: ["A", "B", "C"] }],
+});
+
+const WATCH_RING = makeEntry({
+  id: "P010",
+  name: "Mini Watch Ring",
+  price: 300,
+  mrp: 500,
+  image: "/products/P010.webp",
+  options: [
+    { name: "Colour", values: ["Silver", "Golden"] },
+    { name: "Letter", values: ["A", "B"] },
+  ],
+});
+
+const OPTIONED_CATALOGUE: CatalogueEntry[] = [INITIAL_RING, WATCH_RING, NECKLACE];
+
+function optionedTotals(items: CartItem[]): ReturnType<typeof calculateCartTotals> {
+  return calculateCartTotals(buildCartLines(items, OPTIONED_CATALOGUE));
+}
+
+describe("options — line identity", () => {
+  it("records the defaults for a shopper who never touched a selector", () => {
+    const items = addProductToCart([], INITIAL_RING, 1);
+
+    expect(items[0].selectedOptions).toEqual({ Letter: "A" });
+  });
+
+  it("records every group's default, not just the first group's", () => {
+    expect(addProductToCart([], WATCH_RING, 1)[0].selectedOptions).toEqual({
+      Colour: "Silver",
+      Letter: "A",
+    });
+  });
+
+  it("leaves a product without options exactly as it was", () => {
+    expect(addProductToCart([], NECKLACE, 2)[0]).not.toHaveProperty("selectedOptions");
+  });
+
+  it("makes two selections of one product two lines", () => {
+    const items = addProductToCart(
+      addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+      INITIAL_RING,
+      1,
+      { Letter: "B" },
+    );
+
+    expect(items).toHaveLength(2);
+    expect(items.map((item) => item.selectedOptions)).toEqual([
+      { Letter: "A" },
+      { Letter: "B" },
+    ]);
+  });
+
+  it("increments the existing line when the selection is the same", () => {
+    const items = addProductToCart(
+      addProductToCart([], INITIAL_RING, 2, { Letter: "B" }),
+      INITIAL_RING,
+      3,
+      { Letter: "B" },
+    );
+
+    expect(items).toHaveLength(1);
+    expect(items[0]).toMatchObject({ qty: 5, selectedOptions: { Letter: "B" } });
+  });
+
+  it("increments the defaulted line when the same defaults are added again", () => {
+    const items = addProductToCart(addProductToCart([], INITIAL_RING, 1), INITIAL_RING, 1, {
+      Letter: "A",
+    });
+
+    expect(items).toHaveLength(1);
+    expect(items[0].qty).toBe(2);
+  });
+
+  it("clamps a merged line at the maximum, as it does without options", () => {
+    const items = addProductToCart(
+      addProductToCart([], INITIAL_RING, MAX_QUANTITY, { Letter: "C" }),
+      INITIAL_RING,
+      MAX_QUANTITY,
+      { Letter: "C" },
+    );
+
+    expect(items[0].qty).toBe(MAX_QUANTITY);
+  });
+
+  it("resolves a requested value the catalogue does not offer to the default", () => {
+    const items = addProductToCart([], INITIAL_RING, 1, { Letter: "Z" });
+
+    expect(items[0].selectedOptions).toEqual({ Letter: "A" });
+  });
+
+  it("keys a line the same however the requested record was ordered", () => {
+    const oneWay = addProductToCart([], WATCH_RING, 1, {
+      Letter: "B",
+      Colour: "Golden",
+    });
+    const otherWay = addProductToCart([], WATCH_RING, 1, {
+      Colour: "Golden",
+      Letter: "B",
+    });
+
+    expect(cartItemKey(oneWay[0])).toBe(cartItemKey(otherWay[0]));
+  });
+
+  it("removes only the line that was asked for", () => {
+    const items = addProductToCart(
+      addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+      INITIAL_RING,
+      1,
+      { Letter: "B" },
+    );
+
+    const remaining = removeProductFromCart(items, lineKey("P001", { Letter: "A" }));
+
+    expect(remaining).toHaveLength(1);
+    expect(remaining[0].selectedOptions).toEqual({ Letter: "B" });
+  });
+
+  it("sets the quantity of only the line that was asked for", () => {
+    const items = setCartItemQuantity(
+      addProductToCart(
+        addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+        INITIAL_RING,
+        1,
+        { Letter: "B" },
+      ),
+      lineKey("P001", { Letter: "B" }),
+      4,
+    );
+
+    expect(items.map((item) => item.qty)).toEqual([1, 4]);
+  });
+
+  it("gives every cart line a key the display can address", () => {
+    const lines = buildCartLines(
+      addProductToCart(
+        addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+        INITIAL_RING,
+        1,
+        { Letter: "B" },
+      ),
+      OPTIONED_CATALOGUE,
+    );
+
+    expect(lines.map((line) => line.key)).toEqual([
+      lineKey("P001", { Letter: "A" }),
+      lineKey("P001", { Letter: "B" }),
+    ]);
+    expect(lines.map((line) => line.selectedOptions)).toEqual([
+      { Letter: "A" },
+      { Letter: "B" },
+    ]);
+  });
+});
+
+describe("options — money is untouched", () => {
+  it("prices two selections of one product exactly as two of the same piece", () => {
+    const withOptions = optionedTotals(
+      addProductToCart(
+        addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+        INITIAL_RING,
+        1,
+        { Letter: "B" },
+      ),
+    );
+    const withoutOptions = optionedTotals(addProductToCart([], INITIAL_RING, 2));
+
+    expect(withOptions).toEqual(withoutOptions);
+  });
+
+  it("charges the same whichever value is chosen", () => {
+    const letterA = optionedTotals(addProductToCart([], INITIAL_RING, 3, { Letter: "A" }));
+    const letterC = optionedTotals(addProductToCart([], INITIAL_RING, 3, { Letter: "C" }));
+
+    expect(letterA).toEqual(letterC);
+    expect(letterA.subtotal).toBe(INITIAL_RING.price * 3);
+  });
+
+  it("counts a personalized line by its quantity, like any other", () => {
+    const items = addProductToCart(
+      addProductToCart([], INITIAL_RING, 2, { Letter: "A" }),
+      INITIAL_RING,
+      3,
+      { Letter: "B" },
+    );
+
+    expect(countCartItems(items)).toBe(5);
+  });
+
+  it("leaves the unit price and line total reading from the catalogue", () => {
+    const [line] = buildCartLines(
+      addProductToCart([], INITIAL_RING, 2, { Letter: "C" }),
+      OPTIONED_CATALOGUE,
+    );
+
+    expect(line.unitPrice).toBe(INITIAL_RING.price);
+    expect(line.lineTotal).toBe(INITIAL_RING.price * 2);
+  });
+});
+
+describe("options — reconciling a persisted cart", () => {
+  it("drops a line whose chosen value has been withdrawn", () => {
+    const stored = addProductToCart([], INITIAL_RING, 1, { Letter: "C" });
+    const trimmedCatalogue: CatalogueEntry[] = [
+      { ...INITIAL_RING, options: [{ name: "Letter", values: ["A", "B"] }] },
+      NECKLACE,
+    ];
+
+    expect(reconcileCartWithCatalogue(stored, trimmedCatalogue)).toEqual([]);
+  });
+
+  it("drops a line whose whole group has been removed", () => {
+    const stored = addProductToCart([], INITIAL_RING, 1, { Letter: "A" });
+    const renamedGroup: CatalogueEntry[] = [
+      { ...INITIAL_RING, options: [{ name: "Initial", values: ["A", "B"] }] },
+    ];
+
+    expect(reconcileCartWithCatalogue(stored, renamedGroup)).toEqual([]);
+  });
+
+  it("drops a line whose product no longer has options at all", () => {
+    const stored = addProductToCart([], INITIAL_RING, 1, { Letter: "A" });
+    const plainRing: CatalogueEntry[] = [makeEntry({ id: "P001", name: "Wave Band Ring" })];
+
+    expect(reconcileCartWithCatalogue(stored, plainRing)).toEqual([]);
+  });
+
+  it("keeps the sibling line whose choice is still offered", () => {
+    const stored = addProductToCart(
+      addProductToCart([], INITIAL_RING, 1, { Letter: "A" }),
+      INITIAL_RING,
+      2,
+      { Letter: "C" },
+    );
+    const trimmedCatalogue: CatalogueEntry[] = [
+      { ...INITIAL_RING, options: [{ name: "Letter", values: ["A", "B"] }] },
+    ];
+
+    const items = reconcileCartWithCatalogue(stored, trimmedCatalogue);
+
+    expect(items).toHaveLength(1);
+    expect(items[0]).toMatchObject({ qty: 1, selectedOptions: { Letter: "A" } });
+  });
+
+  it("fills in the default for a line stored before the product gained a group", () => {
+    const preOptionsItem: CartItem = {
+      productId: "P001",
+      name: "Wave Band Initial Ring",
+      price: 400,
+      image: "/products/P001.webp",
+      qty: 2,
+    };
+
+    expect(reconcileCartWithCatalogue([preOptionsItem], OPTIONED_CATALOGUE)[0]).toMatchObject(
+      { qty: 2, selectedOptions: { Letter: "A" } },
+    );
+  });
+
+  it("merges duplicates of one selection without merging different selections", () => {
+    const stored = [
+      ...addProductToCart([], INITIAL_RING, 3, { Letter: "A" }),
+      ...addProductToCart([], INITIAL_RING, 2, { Letter: "A" }),
+      ...addProductToCart([], INITIAL_RING, 1, { Letter: "B" }),
+    ];
+
+    const items = reconcileCartWithCatalogue(stored, OPTIONED_CATALOGUE);
+
+    expect(items).toHaveLength(2);
+    expect(items[0]).toMatchObject({ qty: 5, selectedOptions: { Letter: "A" } });
+    expect(items[1]).toMatchObject({ qty: 1, selectedOptions: { Letter: "B" } });
+  });
+
+  it("reads a stored selection back out of localStorage", () => {
+    const stored = JSON.stringify(addProductToCart([], INITIAL_RING, 1, { Letter: "B" }));
+
+    expect(parsePersistedCart(stored)[0].selectedOptions).toEqual({ Letter: "B" });
+  });
+
+  it("keeps a line whose stored selection is unreadable, minus the selection", () => {
+    const stored = JSON.stringify([
+      { productId: "P001", name: "Wave Band Initial Ring", price: 400, image: "", qty: 1, selectedOptions: "Letter=B" },
+    ]);
+
+    const parsed = parsePersistedCart(stored);
+
+    expect(parsed[0]).not.toHaveProperty("selectedOptions");
+    expect(reconcileCartWithCatalogue(parsed, OPTIONED_CATALOGUE)[0]).toMatchObject({
+      selectedOptions: { Letter: "A" },
+    });
   });
 });

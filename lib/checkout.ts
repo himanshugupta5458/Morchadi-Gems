@@ -1,5 +1,6 @@
 import { isIndianState, type Address, type CartItem, type CheckoutData } from "@/types/cart";
 import { calculateCartTotals, selectPayableLines, type CartLine } from "@/lib/cart";
+import { parseSelectedOptions } from "@/lib/options";
 
 export const CHECKOUT_STORAGE_KEY = "morchadi-checkout-v1";
 
@@ -25,6 +26,9 @@ export function buildCheckoutData(
     price: line.unitPrice,
     image: line.entry.image ?? "",
     qty: line.quantity,
+    ...(line.selectedOptions === undefined
+      ? {}
+      : { selectedOptions: line.selectedOptions }),
   }));
 
   return { cart, address, subtotal, shipping, total };
@@ -41,6 +45,24 @@ function isCartItem(value: unknown): value is CartItem {
     typeof candidate.name === "string" &&
     typeof candidate.image === "string"
   );
+}
+
+/**
+ * Keeps a stored line's recorded choices only when they are still a record of strings. The
+ * bundle is display-and-fulfilment data, never pricing data, so a malformed selection costs
+ * the line its options rather than costing the shopper their order.
+ */
+function withParsedSelection(item: CartItem): CartItem {
+  const selectedOptions = parseSelectedOptions(item.selectedOptions);
+  const line: CartItem = {
+    productId: item.productId,
+    name: item.name,
+    price: item.price,
+    image: item.image,
+    qty: item.qty,
+  };
+
+  return selectedOptions === undefined ? line : { ...line, selectedOptions };
 }
 
 function isAddress(value: unknown): value is Address {
@@ -90,7 +112,7 @@ export function parseCheckoutData(rawValue: string | null): CheckoutData | null 
       : undefined;
 
   return {
-    cart: candidate.cart,
+    cart: candidate.cart.map(withParsedSelection),
     address: candidate.address,
     subtotal: candidate.subtotal,
     shipping: candidate.shipping,

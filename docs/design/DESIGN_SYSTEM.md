@@ -301,8 +301,11 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | `ProductImagePanel` | Server | One square image, `object-contain` on `ivory`, or the placeholder |
 | `ProductGallery` | *Client* | `ProductImagePanel` plus a thumbnail strip. **Only rendered when `images.length > 1`** |
 | `QuantityStepper` | *Client* | Controlled. `value` / `onChange` / `disabled` / `accessibleLabel` |
-| `ProductPurchasePanel` | *Client* | Owns quantity state; takes a `CatalogueEntry` and required `onAddToCart` / `onBuyNow` |
+| `ProductPurchasePanel` | *Client* | Owns quantity **and option** state; takes a `CatalogueEntry` and required `onAddToCart` / `onBuyNow` |
 | `ProductPurchaseActions` | *Client* | Wraps the panel and supplies both handlers from `useCart()` |
+| `ProductOptionSelector` | *Client* | One option group. Chips up to six values, a select beyond |
+| `SelectedOptionsSummary` | Server | `Letter: A · Colour: Silver`; renders nothing when there is no selection |
+| `PersonalizedNote` | Server | &ldquo;Personalized · non-returnable&rdquo;, long form with a `/refund` link |
 | `ProductDetailsList` | Server | Definition list; renders only the `details` keys present |
 | `ProductReviews` | Server | Aggregate plus the per-product review list |
 
@@ -326,6 +329,51 @@ Rani Haar&rdquo;. Ids are generated with `useId`, so several steppers never coll
 supplies them. Add to cart adds and toasts; Buy now adds and then navigates to `/address`, so
 the item is still in the cart if the shopper backs out.
 
+#### `ProductOptionSelector`
+
+```tsx
+<ProductOptionSelector option={option} value={value} onChange={choose} />
+```
+
+| Prop | Type | Default | Notes |
+| --- | --- | --- | --- |
+| `option` | `ProductOption` | — | One group: `{ name, values }` |
+| `value` | `string` | — | Always set — there is no empty state |
+| `disabled` | `boolean` | `false` | Sold-out products still render their selectors, inert |
+| `onChange` | `(value: string) => void` | — | |
+
+**The layout is chosen by list length, not by group name.** Six values or fewer render as
+chips; anything longer becomes a native select. Twenty-five engraving letters as chips are a
+wall to scan, and four locket shapes in a dropdown hide the choice behind a click.
+
+**Chips are radio inputs, not buttons.** A visually-hidden `<input type="radio">` per value
+with a styled `<label>` gets arrow-key navigation, the checked state, the group's accessible
+name from the `<legend>`, and focus rings via `peer-focus-visible` — none of which a row of
+`<button>`s gets without re-implementing all of it. The select branch is a plain labelled
+`<select>` reusing `fieldControlClasses`, so it matches the address form's controls.
+
+**There is no &ldquo;please choose&rdquo; state.** `ProductPurchasePanel` seeds the selection
+with each group's first value, so a personalized piece is addable without touching a selector.
+The current selection is echoed under the selectors as &ldquo;Your choice — Letter: A&rdquo;,
+because a default the shopper never picked still has to be one they can see. See
+[ADR-019](../decisions/ADR-019-product-options.md).
+
+#### `PersonalizedNote` and `SelectedOptionsSummary`
+
+```tsx
+<PersonalizedNote withExplanation />       product page — the sentence and the /refund link
+<PersonalizedNote />                       cart line — the label alone
+<SelectedOptionsSummary selectedOptions={line.selectedOptions} />
+```
+
+`PersonalizedNote` is `/refund`'s made-to-order carve-out said at the moment it applies rather
+than only on the policy page. `withExplanation` is off on a cart line because four stacked
+copies of one sentence is noise; the label still carries the meaning.
+
+`SelectedOptionsSummary` returns `null` when there is no selection, so a caller never has to
+guard it — the cart line, the checkout summary and the confirmation receipt all render it
+unconditionally and only the personalized lines show anything.
+
 ### Cart components
 
 Rationale in [ADR-010](../decisions/ADR-010-cart-architecture.md).
@@ -335,7 +383,7 @@ Rationale in [ADR-010](../decisions/ADR-010-cart-architecture.md).
 | `AddToCartButton` | *Client* | The island a Server Component slots into a card |
 | `ProductPurchaseActions` | *Client* | Wraps `ProductPurchasePanel` with cart handlers |
 | `CartView` | *Client* | The whole of `/cart` below the heading; picks loading / empty / populated |
-| `CartLineItem` | *Client* | One line: thumbnail, name, unit `PriceDisplay`, stepper, line total, remove |
+| `CartLineItem` | *Client* | One line: thumbnail, name, chosen options, unit `PriceDisplay`, stepper, line total, remove |
 | `CartSummary` | *Client* | Subtotal, shipping, total, and the two CTAs. Sticky from `lg` |
 | `CartEmptyState` | Server | Gem icon, rule, and a Continue shopping CTA |
 | `ToastViewport` | *Client* | The always-mounted `role="status"` live region |
@@ -359,7 +407,23 @@ attribute is the courtesy and the pure function is the rule.
 
 **It takes a `CatalogueEntry`, never a `Product`.** Props crossing into a Client Component are
 serialised into the page, so handing a card the full record would ship its description, details
-and reviews to the browser. `toCatalogueEntry(product)` narrows it to six fields first.
+and reviews to the browser. `toCatalogueEntry(product)` narrows it to six fields — seven for
+the four products that carry `options`, which the client cart needs in order to re-validate a
+stored choice and fill in defaults.
+
+**A card's Add to cart works on a personalized product without a selector.** It passes no
+selection, and `addProductToCart` resolves that to each group's defaults, so the four optioned
+products behave on a shop card exactly as the other ninety-six do.
+
+#### Cart lines are keyed by choice, not by product
+
+`/cart` addresses every edit by `CartLine.key` — `lineKey(productId, selectedOptions)` — so one
+product can hold several lines, one per recorded choice, and the stepper and the remove button
+act on the line the shopper is looking at. Their accessible names carry the choice too
+(&ldquo;Increase quantity, Wave Band Initial Ring, Letter: B&rdquo;), because two lines of one
+product would otherwise be two identically-named controls. For the ninety-six products without
+options the key *is* the product id and nothing about the line changed. See
+[ADR-019](../decisions/ADR-019-product-options.md).
 
 #### `OrderTotals`
 
@@ -813,7 +877,8 @@ tones on their actual grounds, the testimonial cards on `honey`, and the cart pi
 would otherwise only be visible with something in a cart: `AddToCartButton` in both states,
 `CartSummary` populated and blocked, `CartEmptyState`, the form fields in default, optional and
 errored states, all three `CheckoutSteps` positions, `CheckoutGuardNotice`, the `Prose` element set,
-`PolicyDisclaimer`, and `TextAreaField` in its errored state. The global chrome wraps
+`PolicyDisclaimer`, `TextAreaField` in its errored state, and both `ProductOptionSelector`
+layouts with the `PersonalizedNote` in both of its forms. The global chrome wraps
 it like any other route, so the header, footer, announcement bar, and WhatsApp button are
 checked in place rather than mocked in a panel.
 

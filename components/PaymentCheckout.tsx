@@ -39,10 +39,12 @@ async function readResponseBody(response: Response): Promise<unknown> {
 /**
  * Step two of checkout. It shows what is about to be charged and hands the browser to
  * Cashfree, and it is deliberately incapable of doing anything else: it holds no credentials,
- * knows no Cashfree endpoint, and sends only product ids, quantities and the address to our
- * own route. The amount below the button is what the *server* will independently arrive at
- * from the same ids — it is a rendering of the order, not an instruction about its price.
- * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md).
+ * knows no Cashfree endpoint, and sends only product ids, quantities, the recorded option
+ * choices and the address to our own route. The amount below the button is what the *server*
+ * will independently arrive at from the same ids — it is a rendering of the order, not an
+ * instruction about its price, and a recorded choice is not an input to it at all.
+ * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md) and
+ * [ADR-019](/docs/decisions/ADR-019-product-options.md).
  */
 export function PaymentCheckout(): JSX.Element {
   const { lines, subtotal, shipping, total, hasUnavailableItems, isHydrated } =
@@ -80,6 +82,9 @@ export function PaymentCheckout(): JSX.Element {
     const items: CreateOrderItem[] = selectPayableLines(lines).map((line) => ({
       productId: line.entry.id,
       qty: line.quantity,
+      ...(line.selectedOptions === undefined
+        ? {}
+        : { selectedOptions: line.selectedOptions }),
     }));
 
     let response: Response;

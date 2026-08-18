@@ -1,5 +1,6 @@
 import type { AddressErrors } from "@/lib/address";
 import type { Address } from "@/types/cart";
+import type { SelectedOptions } from "@/types/product";
 
 /**
  * Which Cashfree environment an order was created against. It travels back to the browser in
@@ -16,6 +17,12 @@ export type CashfreeMode = "sandbox" | "production";
 export interface CreateOrderItem {
   productId: string;
   qty: number;
+  /**
+   * The recorded choices for this line. Fulfilment data, not pricing data — it is checked
+   * against the catalogue and written into the order's metadata, and no amount reads it.
+   * See ADR-019.
+   */
+  selectedOptions?: SelectedOptions;
 }
 
 export interface CreateOrderRequest {
@@ -34,6 +41,7 @@ export type OrderItemErrorCode =
   | "OUT_OF_STOCK"
   | "INVALID_QUANTITY"
   | "DUPLICATE_PRODUCT"
+  | "INVALID_OPTION"
   | "EMPTY_CART";
 
 /** `productId` is null for a fault about the order as a whole rather than about one line. */

@@ -4,7 +4,8 @@ Prices a cart server-side and creates a Cashfree payment session for it. Returns
 `payment_session_id` the browser SDK needs to redirect to hosted checkout.
 
 Handler: `app/api/create-order/route.ts`. Runtime: **Node** (`export const runtime = "nodejs"`).
-Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md).
+Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md) and,
+for the option fields, [ADR-019](../decisions/ADR-019-product-options.md).
 
 ## Request
 
@@ -15,7 +16,11 @@ Content-Type: application/json
 
 ```ts
 interface CreateOrderRequest {
-  items: { productId: string; qty: number }[];
+  items: {
+    productId: string;
+    qty: number;
+    selectedOptions?: Record<string, string>;   // { "Letter": "A" } — recorded, never priced
+  }[];
   address: {
     name: string;
     phone: string;      // 10 digits, no country code — the server prefixes +91
@@ -28,6 +33,11 @@ interface CreateOrderRequest {
   };
 }
 ```
+
+One entry per **cart line**, not per product: a product with options can appear more than
+once with different `selectedOptions`, and both entries are recorded. They are summed into a
+single priced item before pricing, so the per-product quantity cap applies to the total across
+a product's lines.
 
 There is **no amount field, and adding one has no effect**. `price`, `mrp`, `lineTotal`,
 `subtotal`, `shipping` and `total` are all discarded by `parseOrderItems` before the body
@@ -44,17 +54,30 @@ In order. The first failing group returns; nothing further runs.
 | 2 | `items` is an array of objects each with a non-empty string `productId` | `400 REQUEST_MALFORMED` |
 | 3 | `items` is non-empty | `400 ITEMS_INVALID` (`EMPTY_CART`) |
 | 4 | Every `productId` exists in `data/products.json` | `400 ITEMS_INVALID` (`UNKNOWN_PRODUCT`) |
-| 5 | No `productId` appears twice | `400 ITEMS_INVALID` (`DUPLICATE_PRODUCT`) |
+| 5 | No `productId` appears twice **after lines are merged** | `400 ITEMS_INVALID` (`DUPLICATE_PRODUCT`) |
 | 6 | Every product is `inStock` | `400 ITEMS_INVALID` (`OUT_OF_STOCK`) |
-| 7 | Every `qty` is an integer in `[1, 10]` | `400 ITEMS_INVALID` (`INVALID_QUANTITY`) |
-| 8 | The address passes `validateAddressForm` — the same validator `/address` uses | `400 ADDRESS_INVALID` |
-| 9 | The computed `total` is greater than zero | `400 ORDER_TOTAL_INVALID` |
-| 10 | `CASHFREE_APP_ID` and `CASHFREE_SECRET_KEY` are set | `503 PAYMENT_NOT_CONFIGURED` |
-| 11 | Cashfree returns 2xx with a `payment_session_id` | `502 PAYMENT_GATEWAY_UNAVAILABLE` |
+| 7 | Every merged `qty` is an integer in `[1, 10]` | `400 ITEMS_INVALID` (`INVALID_QUANTITY`) |
+| 8 | Every `selectedOptions` names a group and value the catalogue still offers | `400 ITEMS_INVALID` (`INVALID_OPTION`) |
+| 9 | The address passes `validateAddressForm` — the same validator `/address` uses | `400 ADDRESS_INVALID` |
+| 10 | The computed `total` is greater than zero | `400 ORDER_TOTAL_INVALID` |
+| 11 | `CASHFREE_APP_ID` and `CASHFREE_SECRET_KEY` are set | `503 PAYMENT_NOT_CONFIGURED` |
+| 12 | Cashfree returns 2xx with a `payment_session_id` | `502 PAYMENT_GATEWAY_UNAVAILABLE` |
 
-Checks 3–7 are collected, not short-circuited: one response reports every bad line. Items are
-checked before the address so that a shopper with two problems is sent to `/cart` first,
-where the fix is.
+Checks 3–7 are collected, not short-circuited: one response reports every bad line. Check 8 is
+collected the same way, but it runs as its own pass after pricing, so an order with both a
+pricing fault and an option fault reports the pricing faults first.
+
+Because check 5 runs on the *merged* items, two lines of one product are a valid order — that
+is the whole point of options — but their quantities add up against check 7. Five of `Letter:
+A` and six of `Letter: B` is eleven Wave Band Initial Rings and is refused.
+
+A `selectedOptions` naming a group the product does not have — including any selection at all
+on a product with no options — fails check 8. A selection that is merely *incomplete* does
+not: the missing groups take their default values, the same as for a shopper who never opened
+a selector.
+
+Items are checked before the address so that a shopper with two problems is sent to `/cart`
+first, where the fix is.
 
 The address is re-validated even though `/address` already validated it. "The client said it
 was valid" is not a fact the server has.
@@ -74,7 +97,8 @@ was valid" is not a fact the server has.
 | --- | --- |
 | Any `price`, `mrp`, `lineTotal`, `subtotal`, `shipping`, `total` | Discarded before validation; unreachable from the pricing core |
 | `name`, `image` on an item | Discarded; line item names come from the catalogue |
-| `productId`, `qty` | The only inputs, and both are validated above |
+| `productId`, `qty` | The only pricing inputs, and both are validated above |
+| `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
 
 `mrp` is never read on any path. The `catalogue` parameter of `buildOrderFromCart` is typed
@@ -133,8 +157,8 @@ Body is not JSON, is not an object, or `items` is not a list of `{ productId, qt
 
 One or more lines cannot be ordered. `details` carries one entry per fault, in request order,
 with `productId` (null for `EMPTY_CART`) and a `code` of `EMPTY_CART`, `UNKNOWN_PRODUCT`,
-`DUPLICATE_PRODUCT`, `OUT_OF_STOCK` or `INVALID_QUANTITY`. `retryable: false` — the fix is on
-`/cart`.
+`DUPLICATE_PRODUCT`, `OUT_OF_STOCK`, `INVALID_QUANTITY` or `INVALID_OPTION`.
+`retryable: false` — the fix is on `/cart`.
 
 ```json
 {
@@ -222,9 +246,19 @@ which case `https://api.cashfree.com`. Timeout 15s, `cache: "no-store"`.
   },
   "order_meta": {
     "return_url": "https://www.morchadigems.com/order-confirmation?order_id=MG_1786968394909_v8j3wggq"
+  },
+  "order_tags": {
+    "options": "P001:Letter=A; P001:Letter=B; P010:Colour=Golden"
   }
 }
 ```
+
+`order_tags` is present **only when something in the order has options**; an order of the
+ninety-six plain products sends exactly the body it sent before ADR-019. It is the fulfilment
+record — with no database, the payment record is the order record, and this is where a packer
+reads what to engrave. Values are capped at 255 characters, so a long summary is split across
+`options`, `options_2` and `options_3` rather than truncated, and if even three values are not
+enough the last one ends `; +N more`. No amount is ever written to it.
 
 `order_amount` is the server's computed total. `customer_id` is generated fresh per order and
 links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,

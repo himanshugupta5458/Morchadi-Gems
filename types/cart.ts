@@ -1,9 +1,17 @@
+import type { SelectedOptions } from "@/types/product";
+
 export interface CartItem {
   productId: string;
   name: string;
   price: number;
   image: string;
   qty: number;
+  /**
+   * The recorded choices for this line, complete and current against the catalogue. Absent
+   * on a product sold in one configuration. Two lines of one product with different
+   * selections are two lines — see `lineKey` in `lib/options.ts` and ADR-019.
+   */
+  selectedOptions?: SelectedOptions;
 }
 
 /**

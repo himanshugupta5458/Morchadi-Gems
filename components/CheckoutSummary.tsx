@@ -7,6 +7,7 @@ import { formatRupees } from "@/lib/format";
 import { CART_PATH } from "@/lib/navigation";
 import { OrderTotals } from "@/components/OrderTotals";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
+import { SelectedOptionsSummary } from "@/components/SelectedOptionsSummary";
 
 export interface CheckoutSummaryProps {
   lines: CartLine[];
@@ -40,7 +41,7 @@ export function CheckoutSummary({
 
       <ul className="mt-6 flex flex-col gap-4 border-b border-line pb-6">
         {lines.map((line) => (
-          <li key={line.entry.id} className="flex items-center gap-3">
+          <li key={line.key} className="flex items-center gap-3">
             <span className="relative h-14 w-14 shrink-0 overflow-hidden border border-line bg-white">
               {line.entry.image === null ? (
                 <ProductImagePlaceholder />
@@ -58,8 +59,9 @@ export function CheckoutSummary({
               </span>
             </span>
 
-            <span className="min-w-0 flex-1 text-body-sm text-ink">
-              {line.entry.name}
+            <span className="flex min-w-0 flex-1 flex-col gap-0.5 text-body-sm text-ink">
+              <span>{line.entry.name}</span>
+              <SelectedOptionsSummary selectedOptions={line.selectedOptions} />
             </span>
 
             <span className="font-sans text-body-sm text-ink">

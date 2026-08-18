@@ -56,12 +56,18 @@ export interface ProductDetails {
 /**
  * A choice the buyer makes without changing the price — an engraved letter, a shape, a
  * plating colour. Carried as catalogue data only; nothing reads it into a cart line yet.
- * See ADR-016.
+ * See ADR-016 and ADR-019.
  */
 export interface ProductOption {
   name: string;
   values: string[];
 }
+
+/**
+ * One chosen value per option group — `{ Letter: "A" }`. Part of a cart line's identity, and
+ * of nothing else: no amount, no stock check and no image ever reads it. See ADR-019.
+ */
+export type SelectedOptions = Record<string, string>;
 
 /**
  * The projection of a product the browser is allowed to hold. It carries what a cart line
@@ -78,6 +84,11 @@ export interface CatalogueEntry {
   mrp: number;
   image: string | null;
   inStock: boolean;
+  /**
+   * Carried so the client cart can re-validate a persisted selection and fill in defaults
+   * without the full catalogue. Absent on the ninety-six products sold in one configuration.
+   */
+  options?: ProductOption[];
 }
 
 export interface Product {

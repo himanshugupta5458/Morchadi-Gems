@@ -1,8 +1,10 @@
 import Image from "next/image";
 import type { CartItem } from "@/types/cart";
 import { formatRupees } from "@/lib/format";
+import { cartItemKey } from "@/lib/cart";
 import { OrderTotals } from "@/components/OrderTotals";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
+import { SelectedOptionsSummary } from "@/components/SelectedOptionsSummary";
 
 export interface OrderReceiptProps {
   items: CartItem[];
@@ -33,7 +35,7 @@ export function OrderReceipt({
 
       <ul className="mt-6 flex flex-col gap-4 border-b border-line pb-6">
         {items.map((item) => (
-          <li key={item.productId} className="flex items-center gap-3">
+          <li key={cartItemKey(item)} className="flex items-center gap-3">
             <span className="relative h-14 w-14 shrink-0 overflow-hidden border border-line bg-white">
               {item.image.length === 0 ? (
                 <ProductImagePlaceholder />
@@ -51,7 +53,10 @@ export function OrderReceipt({
               </span>
             </span>
 
-            <span className="min-w-0 flex-1 text-body-sm text-ink">{item.name}</span>
+            <span className="flex min-w-0 flex-1 flex-col gap-0.5 text-body-sm text-ink">
+              <span>{item.name}</span>
+              <SelectedOptionsSummary selectedOptions={item.selectedOptions} />
+            </span>
 
             <span className="font-sans text-body-sm text-ink">
               {formatRupees(item.price * item.qty)}

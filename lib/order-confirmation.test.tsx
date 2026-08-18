@@ -215,6 +215,26 @@ describe("/order-confirmation — PAID", () => {
     expect(screen.getByText("Ananya Iyer")).toBeTruthy();
   });
 
+  it("lists what was chosen on each personalized line", async () => {
+    seedBundle(
+      makeBundle({
+        orderId: ORDER_ID,
+        cart: [
+          { ...CART_ITEM, productId: "P001", name: "Wave Band Initial Ring", qty: 1, selectedOptions: { Letter: "A" } },
+          { ...CART_ITEM, productId: "P001", name: "Wave Band Initial Ring", qty: 1, selectedOptions: { Letter: "B" } },
+          CART_ITEM,
+        ],
+      }),
+    );
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText("Letter: A")).toBeTruthy();
+    expect(screen.getByText("Letter: B")).toBeTruthy();
+    expect(screen.getAllByText("Wave Band Initial Ring")).toHaveLength(2);
+  });
+
   it("offers no Edit link on the delivered-to address once the order is paid", async () => {
     seedBundle(makeBundle({ orderId: ORDER_ID }));
     respondWith(verified("PAID", 2099));

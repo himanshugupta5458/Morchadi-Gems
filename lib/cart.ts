@@ -1,6 +1,12 @@
 import type { CartItem } from "@/types/cart";
-import type { CatalogueEntry } from "@/types/product";
+import type { CatalogueEntry, SelectedOptions } from "@/types/product";
 import { calculateShipping } from "@/lib/config";
+import {
+  isSelectionStale,
+  lineKey,
+  parseSelectedOptions,
+  resolveSelectedOptions,
+} from "@/lib/options";
 import { clampQuantity } from "@/lib/quantity";
 
 export const CART_STORAGE_KEY = "morchadi-cart-v1";
@@ -11,7 +17,10 @@ export const CART_STORAGE_KEY = "morchadi-cart-v1";
  * the moment the shopper reloads and a stale snapshot can never decide what is charged.
  */
 export interface CartLine {
+  /** `lineKey(productId, selectedOptions)`. What every edit and removal addresses. */
+  key: string;
   entry: CatalogueEntry;
+  selectedOptions?: SelectedOptions;
   quantity: number;
   unitPrice: number;
   lineTotal: number;
@@ -24,14 +33,31 @@ export interface CartTotals {
   total: number;
 }
 
-function toCartItem(entry: CatalogueEntry, quantity: number): CartItem {
+/**
+ * The selection is resolved against the entry's current options rather than taken as given,
+ * so every line in the cart carries a complete, catalogue-valid choice — including a line
+ * whose shopper never opened a selector, which gets the defaults.
+ */
+function toCartItem(
+  entry: CatalogueEntry,
+  quantity: number,
+  requestedOptions?: SelectedOptions,
+): CartItem {
+  const selectedOptions = resolveSelectedOptions(entry.options, requestedOptions);
+
   return {
     productId: entry.id,
     name: entry.name,
     price: entry.price,
     image: entry.image ?? "",
     qty: clampQuantity(quantity),
+    ...(selectedOptions === undefined ? {} : { selectedOptions }),
   };
+}
+
+/** The identity of the line an item occupies. Options never touch price — only identity. */
+export function cartItemKey(item: CartItem): string {
+  return lineKey(item.productId, item.selectedOptions);
 }
 
 function indexCatalogue(catalogue: CatalogueEntry[]): Map<string, CatalogueEntry> {
@@ -42,56 +68,61 @@ export function countCartItems(items: CartItem[]): number {
   return items.reduce((count, item) => count + item.qty, 0);
 }
 
+/**
+ * Takes a line key, not a product id. The two are the same string for a product sold in one
+ * configuration, which is why every option-less call site reads unchanged.
+ */
 export function findCartItem(
   items: CartItem[],
-  productId: string,
+  key: string,
 ): CartItem | undefined {
-  return items.find((item) => item.productId === productId);
+  return items.find((item) => cartItemKey(item) === key);
 }
 
 /**
- * Adding a product already in the cart increments that line rather than appending a second
- * one, and the result is clamped, so a line can never exceed the per-line maximum however
- * many times Add to cart is pressed. An out-of-stock entry is refused outright — the
- * buttons that call this are disabled, and this is the backstop behind them.
+ * Adding a product already in the cart *with the same choices* increments that line rather
+ * than appending a second one, and the result is clamped, so a line can never exceed the
+ * per-line maximum however many times Add to cart is pressed. A different choice is a
+ * different line. An out-of-stock entry is refused outright — the buttons that call this are
+ * disabled, and this is the backstop behind them.
  */
 export function addProductToCart(
   items: CartItem[],
   entry: CatalogueEntry,
   quantity: number = 1,
+  selectedOptions?: SelectedOptions,
 ): CartItem[] {
   if (!entry.inStock) return items;
 
   const requestedQuantity = clampQuantity(quantity);
-  const existingItem = findCartItem(items, entry.id);
+  const addedItem = toCartItem(entry, requestedQuantity, selectedOptions);
+  const addedKey = cartItemKey(addedItem);
 
-  if (existingItem === undefined) {
-    return [...items, toCartItem(entry, requestedQuantity)];
+  if (findCartItem(items, addedKey) === undefined) {
+    return [...items, addedItem];
   }
 
   return items.map((item) =>
-    item.productId === entry.id
-      ? toCartItem(entry, item.qty + requestedQuantity)
+    cartItemKey(item) === addedKey
+      ? toCartItem(entry, item.qty + requestedQuantity, item.selectedOptions)
       : item,
   );
 }
 
 export function removeProductFromCart(
   items: CartItem[],
-  productId: string,
+  key: string,
 ): CartItem[] {
-  return items.filter((item) => item.productId !== productId);
+  return items.filter((item) => cartItemKey(item) !== key);
 }
 
 export function setCartItemQuantity(
   items: CartItem[],
-  productId: string,
+  key: string,
   quantity: number,
 ): CartItem[] {
   return items.map((item) =>
-    item.productId === productId
-      ? { ...item, qty: clampQuantity(quantity) }
-      : item,
+    cartItemKey(item) === key ? { ...item, qty: clampQuantity(quantity) } : item,
   );
 }
 
@@ -112,13 +143,18 @@ export function parsePersistedCart(rawValue: string | null): CartItem[] {
 
   if (!Array.isArray(parsedValue)) return [];
 
-  return parsedValue.filter(isPersistedCartItem).map((entry) => ({
-    productId: entry.productId,
-    name: typeof entry.name === "string" ? entry.name : "",
-    price: typeof entry.price === "number" ? entry.price : 0,
-    image: typeof entry.image === "string" ? entry.image : "",
-    qty: clampQuantity(entry.qty),
-  }));
+  return parsedValue.filter(isPersistedCartItem).map((entry) => {
+    const selectedOptions = parseSelectedOptions(entry.selectedOptions);
+
+    return {
+      productId: entry.productId,
+      name: typeof entry.name === "string" ? entry.name : "",
+      price: typeof entry.price === "number" ? entry.price : 0,
+      image: typeof entry.image === "string" ? entry.image : "",
+      qty: clampQuantity(entry.qty),
+      ...(selectedOptions === undefined ? {} : { selectedOptions }),
+    };
+  });
 }
 
 interface PersistedCartItem {
@@ -127,6 +163,7 @@ interface PersistedCartItem {
   price?: unknown;
   image?: unknown;
   qty: number;
+  selectedOptions?: unknown;
 }
 
 function isPersistedCartItem(value: unknown): value is PersistedCartItem {
@@ -141,30 +178,38 @@ function isPersistedCartItem(value: unknown): value is PersistedCartItem {
 
 /**
  * The gate every persisted cart passes through before it becomes state. It drops items whose
- * product has left the catalogue, merges any duplicate lines for one product, re-clamps
- * quantities, and refreshes each snapshot from the catalogue. An item whose product is now
- * `inStock: false` is deliberately kept — the shopper chose it, so the cart page shows it and
- * asks them to remove it rather than silently deleting it.
+ * product has left the catalogue, drops items whose recorded choice the catalogue no longer
+ * offers, merges any duplicate lines for one line key, re-clamps quantities, and refreshes
+ * each snapshot from the catalogue. An item whose product is now `inStock: false` is
+ * deliberately kept — the shopper chose it, so the cart page shows it and asks them to remove
+ * it rather than silently deleting it.
+ *
+ * A withdrawn option is treated more harshly than a sold-out product because there is nothing
+ * to keep: the line describes a piece we cannot make. Substituting another value would ship
+ * the shopper something they did not ask for. See ADR-019.
  */
 export function reconcileCartWithCatalogue(
   items: CartItem[],
   catalogue: CatalogueEntry[],
 ): CartItem[] {
   const catalogueById = indexCatalogue(catalogue);
-  const mergedByProductId = new Map<string, CartItem>();
+  const mergedByLineKey = new Map<string, CartItem>();
 
   for (const item of items) {
     const entry = catalogueById.get(item.productId);
     if (entry === undefined) continue;
+    if (isSelectionStale(entry.options, item.selectedOptions)) continue;
 
-    const alreadyMerged = mergedByProductId.get(entry.id);
+    const reconciledItem = toCartItem(entry, item.qty, item.selectedOptions);
+    const key = cartItemKey(reconciledItem);
+    const alreadyMerged = mergedByLineKey.get(key);
     const mergedQuantity =
       alreadyMerged === undefined ? item.qty : alreadyMerged.qty + item.qty;
 
-    mergedByProductId.set(entry.id, toCartItem(entry, mergedQuantity));
+    mergedByLineKey.set(key, toCartItem(entry, mergedQuantity, item.selectedOptions));
   }
 
-  return Array.from(mergedByProductId.values());
+  return Array.from(mergedByLineKey.values());
 }
 
 export function buildCartLines(
@@ -180,7 +225,11 @@ export function buildCartLines(
 
     const quantity = clampQuantity(item.qty);
     lines.push({
+      key: cartItemKey(item),
       entry,
+      ...(item.selectedOptions === undefined
+        ? {}
+        : { selectedOptions: item.selectedOptions }),
       quantity,
       unitPrice: entry.price,
       lineTotal: entry.price * quantity,

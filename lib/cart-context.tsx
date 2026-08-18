@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import type { CartItem } from "@/types/cart";
-import type { CatalogueEntry } from "@/types/product";
+import type { CatalogueEntry, SelectedOptions } from "@/types/product";
 import {
   CART_STORAGE_KEY,
   addProductToCart,
@@ -38,9 +38,19 @@ export interface CartContextValue {
    * this flips, which is what keeps the server and first client render identical.
    */
   isHydrated: boolean;
-  addItem: (entry: CatalogueEntry, quantity?: number) => void;
-  removeItem: (productId: string) => void;
-  setQty: (productId: string, quantity: number) => void;
+  /**
+   * `selectedOptions` may be omitted even for a product that has options — the defaults are
+   * applied for a shopper who never touched a selector. A selection the catalogue no longer
+   * offers is resolved to the default rather than stored.
+   */
+  addItem: (
+    entry: CatalogueEntry,
+    quantity?: number,
+    selectedOptions?: SelectedOptions,
+  ) => void;
+  /** Addressed by `CartLine.key`, not by product id — one product can hold several lines. */
+  removeItem: (lineKey: string) => void;
+  setQty: (lineKey: string, quantity: number) => void;
   clearCart: () => void;
 }
 
@@ -93,18 +103,25 @@ export function CartProvider({
     writeStoredCart(items);
   }, [isHydrated, items]);
 
-  const addItem = useCallback((entry: CatalogueEntry, quantity: number = 1) => {
-    setItems((currentItems) => addProductToCart(currentItems, entry, quantity));
+  const addItem = useCallback(
+    (
+      entry: CatalogueEntry,
+      quantity: number = 1,
+      selectedOptions?: SelectedOptions,
+    ) => {
+      setItems((currentItems) =>
+        addProductToCart(currentItems, entry, quantity, selectedOptions),
+      );
+    },
+    [],
+  );
+
+  const removeItem = useCallback((lineKey: string) => {
+    setItems((currentItems) => removeProductFromCart(currentItems, lineKey));
   }, []);
 
-  const removeItem = useCallback((productId: string) => {
-    setItems((currentItems) => removeProductFromCart(currentItems, productId));
-  }, []);
-
-  const setQty = useCallback((productId: string, quantity: number) => {
-    setItems((currentItems) =>
-      setCartItemQuantity(currentItems, productId, quantity),
-    );
+  const setQty = useCallback((lineKey: string, quantity: number) => {
+    setItems((currentItems) => setCartItemQuantity(currentItems, lineKey, quantity));
   }, []);
 
   const clearCart = useCallback(() => {

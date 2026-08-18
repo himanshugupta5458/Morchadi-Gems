@@ -17,7 +17,12 @@ import {
   readCashfreeCredentials,
   resolveCashfreeMode,
 } from "@/lib/cashfree-config";
-import { buildOrderFromCart, parseOrderItems } from "@/lib/order";
+import {
+  buildOrderFromCart,
+  mergeOrderItemsByProduct,
+  parseOrderItems,
+} from "@/lib/order";
+import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
 import { getAllProducts } from "@/lib/products";
 
 /**
@@ -100,6 +105,17 @@ function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
   });
 }
 
+/**
+ * There is no database ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so the payment
+ * record *is* the order record and the shopper's engraving choice has to travel with it.
+ * `order_tags` is where it goes — a compact `P001:Letter=A; P010:Colour=Golden`, never an
+ * amount. Orders with nothing to record send the request they always sent.
+ */
+function buildOptionTags(summary: string): Record<string, string> | null {
+  const tags = toOrderOptionTags(summary);
+  return Object.keys(tags).length === 0 ? null : tags;
+}
+
 interface CashfreeOrderResponse {
   payment_session_id?: unknown;
 }
@@ -118,10 +134,15 @@ function readPaymentSessionId(payload: unknown): string | null {
 /**
  * Creates a Cashfree payment session for a cart.
  *
- * The client sends product ids, quantities and a delivery address. It does not send — and
- * could not usefully send — a price, a line total, or an order total: the amount charged is
- * recomputed here from `data/products.json` on every call, and the request body is not
- * consulted for it. See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md) and
+ * The client sends product ids, quantities, any recorded option choices, and a delivery
+ * address. It does not send — and could not usefully send — a price, a line total, or an
+ * order total: the amount charged is recomputed here from `data/products.json` on every
+ * call, and the request body is not consulted for it. Options do not enter that calculation
+ * at any point; they are validated against the catalogue and recorded in the order's
+ * metadata.
+ *
+ * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md),
+ * [ADR-019](/docs/decisions/ADR-019-product-options.md) and
  * [the contract](/docs/api/create-order.md).
  */
 export async function POST(request: Request): Promise<NextResponse> {
@@ -143,13 +164,25 @@ export async function POST(request: Request): Promise<NextResponse> {
     return malformed("REQUEST_MALFORMED", "We could not read the items in your cart.");
   }
 
-  const order = buildOrderFromCart(items, getAllProducts());
+  const products = getAllProducts();
+
+  const order = buildOrderFromCart(mergeOrderItemsByProduct(items), products);
   if (!order.valid) {
     return errorResponse(400, {
       error: "ITEMS_INVALID",
       message: "Something in your cart can no longer be ordered.",
       retryable: false,
       details: order.errors,
+    });
+  }
+
+  const lineOptions = validateOrderLineOptions(items, products);
+  if (lineOptions.errors.length > 0) {
+    return errorResponse(400, {
+      error: "ITEMS_INVALID",
+      message: "Something in your cart can no longer be ordered.",
+      retryable: false,
+      details: lineOptions.errors,
     });
   }
 
@@ -186,6 +219,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const orderId = generateOrderId();
   const mode = resolveCashfreeMode();
+  const optionTags = buildOptionTags(lineOptions.summary);
 
   let cashfreeResponse: Response;
   try {
@@ -211,6 +245,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         order_meta: {
           return_url: buildReturnUrl(request.url, orderId),
         },
+        ...(optionTags === null ? {} : { order_tags: optionTags }),
       }),
       cache: "no-store",
       signal: AbortSignal.timeout(CASHFREE_TIMEOUT_MS),

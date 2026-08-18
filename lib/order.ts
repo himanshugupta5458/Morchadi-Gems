@@ -1,4 +1,5 @@
 import { calculateShipping } from "@/lib/config";
+import { parseSelectedOptions } from "@/lib/options";
 import { MAX_QUANTITY, MIN_QUANTITY } from "@/lib/quantity";
 import type { CreateOrderItem, OrderItemError } from "@/types/order";
 
@@ -158,7 +159,9 @@ export function buildOrderFromCart(
  * A non-numeric `qty` becomes `NaN` rather than failing the whole request, so a bad quantity
  * is reported against the product it belongs to instead of collapsing into one opaque
  * "malformed request". Any extra fields the client sent — a price, a total, a name — are
- * dropped here and never reach the pricing core.
+ * dropped here and never reach the pricing core. `selectedOptions` survives because
+ * fulfilment needs it, and it is checked against the catalogue by `validateOrderLineOptions`
+ * before it is recorded; the pricing core below ignores it entirely.
  */
 export function parseOrderItems(value: unknown): CreateOrderItem[] | null {
   if (!Array.isArray(value)) return null;
@@ -173,11 +176,40 @@ export function parseOrderItems(value: unknown): CreateOrderItem[] | null {
       return null;
     }
 
+    const selectedOptions = parseSelectedOptions(record.selectedOptions);
+
     items.push({
       productId: record.productId,
       qty: typeof record.qty === "number" ? record.qty : Number.NaN,
+      ...(selectedOptions === undefined ? {} : { selectedOptions }),
     });
   }
 
   return items;
+}
+
+/**
+ * Collapses the lines of one product into a single priced item, summing their quantities.
+ *
+ * Options gave one product the ability to occupy several cart lines, and
+ * `buildOrderFromCart` refuses a repeated product id — deliberately, because merging inside
+ * the pricing core would let a client beat the per-line quantity cap by repeating a product.
+ * Merging *here*, before pricing, keeps that guard intact: the summed quantity is what gets
+ * bounds-checked, so two lines of six are still refused. Nothing about the amount changes,
+ * since a choice never changes a price. See ADR-019.
+ */
+export function mergeOrderItemsByProduct(
+  items: readonly CreateOrderItem[],
+): CreateOrderItem[] {
+  const quantityByProductId = new Map<string, number>();
+
+  for (const item of items) {
+    const runningQuantity = quantityByProductId.get(item.productId);
+    quantityByProductId.set(
+      item.productId,
+      runningQuantity === undefined ? item.qty : runningQuantity + item.qty,
+    );
+  }
+
+  return Array.from(quantityByProductId, ([productId, qty]) => ({ productId, qty }));
 }

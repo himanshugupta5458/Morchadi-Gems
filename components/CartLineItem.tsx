@@ -4,15 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CartLine } from "@/lib/cart";
 import { formatRupees } from "@/lib/format";
+import { formatSelectedOptions } from "@/lib/options";
+import { PersonalizedNote } from "@/components/PersonalizedNote";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { QuantityStepper } from "@/components/QuantityStepper";
+import { SelectedOptionsSummary } from "@/components/SelectedOptionsSummary";
 import { CloseIcon } from "@/components/icons";
 
 export interface CartLineItemProps {
   line: CartLine;
-  onQuantityChange: (productId: string, quantity: number) => void;
-  onRemove: (productId: string) => void;
+  onQuantityChange: (lineKey: string, quantity: number) => void;
+  onRemove: (lineKey: string) => void;
 }
 
 /**
@@ -20,14 +23,25 @@ export interface CartLineItemProps {
  * shopper chose, states plainly that it cannot be bought, and offers the one action that
  * unblocks checkout — the stepper and the line total are withdrawn because neither means
  * anything for an item that contributes nothing.
+ *
+ * Every action addresses `line.key`, not the product id, because one product can hold several
+ * lines here — one per recorded choice. See ADR-019.
  */
 export function CartLineItem({
   line,
   onQuantityChange,
   onRemove,
 }: CartLineItemProps): JSX.Element {
-  const { entry, quantity, lineTotal, isPayable } = line;
+  const { key, entry, selectedOptions, quantity, lineTotal, isPayable } = line;
   const productHref = `/product/${entry.id}`;
+  const isPersonalized = selectedOptions !== undefined;
+  const removeLabel =
+    isPersonalized
+      ? `Remove ${entry.name} (${formatSelectedOptions(selectedOptions)}) from cart`
+      : `Remove ${entry.name} from cart`;
+  const quantityLabel = isPersonalized
+    ? `${entry.name}, ${formatSelectedOptions(selectedOptions)}`
+    : entry.name;
 
   return (
     <div className="flex gap-4 py-6 sm:gap-6">
@@ -60,6 +74,8 @@ export function CartLineItem({
               {entry.name}
             </Link>
 
+            <SelectedOptionsSummary selectedOptions={selectedOptions} />
+
             {isPayable ? (
               <PriceDisplay mrp={entry.mrp} price={entry.price} />
             ) : (
@@ -71,8 +87,8 @@ export function CartLineItem({
 
           <button
             type="button"
-            onClick={() => onRemove(entry.id)}
-            aria-label={`Remove ${entry.name} from cart`}
+            onClick={() => onRemove(key)}
+            aria-label={removeLabel}
             className="-mr-2 -mt-2 inline-flex h-10 w-10 shrink-0 items-center justify-center text-muted transition-colors duration-250 hover:text-sale"
           >
             <CloseIcon className="h-4 w-4" />
@@ -83,8 +99,8 @@ export function CartLineItem({
           <div className="flex flex-wrap items-center justify-between gap-4">
             <QuantityStepper
               value={quantity}
-              accessibleLabel={entry.name}
-              onChange={(nextQuantity) => onQuantityChange(entry.id, nextQuantity)}
+              accessibleLabel={quantityLabel}
+              onChange={(nextQuantity) => onQuantityChange(key, nextQuantity)}
             />
             <span className="font-sans text-body-lg font-medium text-ink">
               {formatRupees(lineTotal)}
@@ -96,6 +112,8 @@ export function CartLineItem({
             checkout.
           </p>
         )}
+
+        {isPersonalized ? <PersonalizedNote /> : null}
       </div>
     </div>
   );

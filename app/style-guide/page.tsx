@@ -22,6 +22,7 @@ import { CategoryTile } from "@/components/CategoryTile";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductGallery } from "@/components/ProductGallery";
+import { ProductOptionSelectorPreview } from "@/components/ProductOptionSelectorPreview";
 import { QuantityStepperPreview } from "@/components/QuantityStepperPreview";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ViewAllLink } from "@/components/ViewAllLink";
@@ -372,6 +373,13 @@ export default function StyleGuidePage(): JSX.Element {
         note="Min 1, max 10. Buttons disable at the bounds and every path — buttons, typing, paste — goes through clampQuantity, so an invalid value cannot exist. Second row is the sold-out (disabled) state."
       >
         <QuantityStepperPreview />
+      </Panel>
+
+      <Panel
+        title="Product options"
+        note="Six values or fewer render as radio chips; anything longer becomes a select, because twenty-five engraving letters as chips are a wall rather than a set of choices. Every group is pre-selected with its first value, so a personalized piece is addable without touching a selector, and the choice is echoed below. A recorded choice never changes a price, an image, or stock. The note is the refund policy's made-to-order carve-out, long form on the product page and short on a cart line."
+      >
+        <ProductOptionSelectorPreview />
       </Panel>
 
       <Panel
