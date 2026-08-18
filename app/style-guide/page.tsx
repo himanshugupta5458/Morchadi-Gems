@@ -272,6 +272,20 @@ export default function StyleGuidePage(): JSX.Element {
       </Panel>
 
       <Panel
+        title="Paired calls to action"
+        note="Equal width belongs to the pair, not to either button. The container declares two equal columns with a 17rem floor and each button spans its column with fullWidth, so labels of different lengths still render at identical width. One full-width column below sm."
+      >
+        <div className="grid w-full grid-cols-1 gap-4 sm:w-auto sm:grid-cols-[repeat(2,minmax(17rem,1fr))]">
+          <ButtonLink href="/shop" fullWidth>
+            Shop Collection
+          </ButtonLink>
+          <ButtonLink href="/shop" variant="secondary" fullWidth>
+            Explore Categories
+          </ButtonLink>
+        </div>
+      </Panel>
+
+      <Panel
         title="ViewAllLink"
         note="The shelf action that sits opposite a left-aligned SectionHeading. Arrow nudges right on hover."
       >

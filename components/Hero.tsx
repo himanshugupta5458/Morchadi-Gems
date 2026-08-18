@@ -51,9 +51,15 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
             can.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <ButtonLink href="/shop">Shop Collection</ButtonLink>
-            <ButtonLink href={`#${categoryAnchorId}`} variant="secondary">
+          <div className="grid w-full grid-cols-1 gap-4 sm:w-auto sm:grid-cols-[repeat(2,minmax(17rem,1fr))]">
+            <ButtonLink href="/shop" fullWidth>
+              Shop Collection
+            </ButtonLink>
+            <ButtonLink
+              href={`#${categoryAnchorId}`}
+              variant="secondary"
+              fullWidth
+            >
               Explore Categories
             </ButtonLink>
           </div>

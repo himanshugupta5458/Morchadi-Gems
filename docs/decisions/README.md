@@ -76,3 +76,5 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [022](ADR-022-logo-integration.md) | The real logo replaces the text wordmark | Accepted |
 | [023](ADR-023-home-polish.md) | Home polish — real imagery, everyday positioning, button spacing | Accepted |
 | [024](ADR-024-funnel-ui-polish.md) | Funnel UI polish — logo scale, two button scales, card alignment, one price facet, compact product details, em-dash sweep | Accepted |
+| [025](ADR-025-button-padding-tailwind-content.md) | Button padding never rendered — `lib/` was outside Tailwind's content globs | Accepted |
+| [026](ADR-026-paired-cta-equal-width.md) | A pair of calls to action is one grid, not two buttons | Accepted |

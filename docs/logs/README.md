@@ -56,4 +56,6 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 
 ## Index
 
-No logs yet.
+| Date | Symptom | Severity | Status |
+| --- | --- | --- | --- |
+| [2026-08-18](2026-08-18-buttons-render-with-no-padding.md) | Buttons render as thin labels with the text hugging the top and bottom edges | Major | Resolved |

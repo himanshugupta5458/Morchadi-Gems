@@ -140,26 +140,39 @@ ground means adding a third tone here rather than overriding colours at the call
 Both variants hover to `maroon`. `className` is excluded from the props so variants stay
 the only way to change a button's appearance.
 
-| Size | Padding | Type | Rendered height | Used by |
-| --- | --- | --- | --- | --- |
-| `md` | `px-12 py-[1.375rem]` | `text-label` — 12px on an 18px line | **64px** | Hero CTAs, Add to cart / Buy now, cart CTAs |
-| `sm` | `px-4 py-2.5` | `text-[0.6875rem] leading-4` — 11px on a 16px line | **38px** | `ProductCard` only |
+| Size | Padding | Type | Line box | Rendered height | Used by |
+| --- | --- | --- | --- | --- | --- |
+| `md` | `px-10 py-5` | `text-label` — 12px | 18px | **60px** | Hero CTAs, Add to cart / Buy now, cart CTAs, forms |
+| `sm` | `px-5 py-2.5` | `text-[0.6875rem]` — 11px | ~16px | **~38px** | `ProductCard` only |
 
 The scale is chosen by **what the button sits inside**, not by emphasis. `md` is the
-page-level call to action, and its 22px of vertical padding around an 18px line box is
-deliberate excess: at 12px uppercase tracked `0.14em`, anything less reads as a border drawn
-tightly around text rather than as something to press.
+page-level call to action: 20px above and below an 18px line box and 40px either side, so the
+label occupies about 30% of the button's height and sits nearer the middle of its box in both
+axes. At 12px uppercase tracked `0.14em`, less than that reads as a border drawn tightly
+around text rather than as something to press. `sm` is the in-card scale and stays compact, so
+a product card reads as a product first and a button second.
 
-The two are not the same shape scaled. `sm` is used almost always `fullWidth` inside a
-product card, where a 375px two-column grid leaves about 125px of content width — past about
-`px-6`, "Add to cart" wraps to two lines. It stays narrow for that reason, and `leading-4`
-pins its line box so 38px is a stated number rather than a browser default. **Widening `sm`
-past `px-4` is a regression;** check a two-column card grid at 375px before changing it.
+**Padding alone decides the height.** There is no `h-*`, `min-h-*`, `max-h-*` or `leading-*`
+in `buttonClasses()`; the line box comes from `text-label`'s own theme definition. Height is
+exactly padding + line box + border, and the two padding numbers are the only way to change
+it. A test asserts the absence of the height and leading classes, because a fixed height
+capping a button below what its padding implies looks set and isn't.
 
-Both numbers are asserted in `lib/button-styles.test.ts`, because they are arbitrary values
-Tailwind cannot warn about if the type scale moves underneath them. See
-[ADR-024](../decisions/ADR-024-funnel-ui-polish.md), which supersedes the spacing set in
-[ADR-023](../decisions/ADR-023-home-polish.md).
+**Nothing can override this at a call site.** `Button` declares
+`Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className">` and `ButtonLink` has no
+`className` prop, so passing padding to a button is a type error rather than a convention.
+The raw `<button>`s in `MobileNav`, `PrimaryNav`, `ShopFilterDrawer`, `QuantityStepper`,
+`ProductOptionSelector` and `WhatsAppButton` carry their own padding, but they are separate
+controls and none renders the shared component.
+
+**Use ordinary scale values here, not arbitrary ones.** `lib/button-styles.ts` is the only
+file outside `app/` and `components/` that declares classes, and for three prompts it sat
+outside Tailwind's `content` globs — so `px-12` and `py-[1.375rem]` generated no CSS at all
+and the buttons rendered with zero padding while the class strings sat correctly in the HTML.
+The glob is fixed, but an arbitrary value remains the one most likely to vanish silently.
+Verify a change here by grepping the **emitted CSS** for the rule, not the markup for the
+class. See [ADR-025](../decisions/ADR-025-button-padding-tailwind-content.md) and
+[the diagnosis log](../logs/2026-08-18-buttons-render-with-no-padding.md).
 
 ### `ButtonLink`
 
@@ -175,6 +188,25 @@ first and use `Button` only when something genuinely fires on click.
 Both components build their classes with `buttonClasses()` from `lib/button-styles.ts`, so
 a variant cannot look one way as a button and another as a link. Change the appearance
 there, never at a call site.
+
+#### A pair of calls to action
+
+```tsx
+<div className="grid w-full grid-cols-1 gap-4 sm:w-auto sm:grid-cols-[repeat(2,minmax(17rem,1fr))]">
+  <ButtonLink href="/shop" fullWidth>Shop Collection</ButtonLink>
+  <ButtonLink href="#shop-by-category" variant="secondary" fullWidth>Explore Categories</ButtonLink>
+</div>
+```
+
+Two buttons side by side are a **matched set**, and equal width is a property of the set, not
+of either button. The container declares two equal columns — `minmax(17rem, 1fr)`, a 272px
+floor that clears the longer label with room to spare, growing together above it — and each
+button spans its column with `fullWidth`. Below `sm` it collapses to one full-width column.
+`gap-4` separates them at every width.
+
+Do not reach for a minimum width on the component instead: it would follow every `md` button
+to every call site, and a pair whose labels both exceeded it would fall out of step again.
+See [ADR-026](../decisions/ADR-026-paired-cta-equal-width.md).
 
 ### `ViewAllLink`
 

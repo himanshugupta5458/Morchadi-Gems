@@ -18,15 +18,19 @@ const variantClasses: Record<ButtonVariant, string> = {
 };
 
 /**
- * Two scales, one style. `md` is the page-level call to action: 22px of vertical padding
- * around an 18px line box lands a 64px tall button, so the label sits in open space rather
- * than against the edges. `sm` is the in-card scale at 38px, small enough that a product
- * card reads as a product first and a button second. See
- * [ADR-024](/docs/decisions/ADR-024-funnel-ui-polish.md).
+ * Padding alone defines the height of both scales. Nothing here sets `h-*`, and nothing
+ * overrides the line box `text-label` brings, so the only way to change how tall a button is
+ * is to change these two numbers.
+ *
+ * `md` is the page-level call to action: 20px above and below an 18px line box, a 60px
+ * button, with 40px either side so the label never reaches the border. `sm` is the in-card
+ * scale at roughly 38px, small enough that a product card reads as a product first and a
+ * button second. See [ADR-025](/docs/decisions/ADR-025-button-padding-tailwind-content.md)
+ * and [ADR-026](/docs/decisions/ADR-026-paired-cta-equal-width.md).
  */
 const sizeClasses: Record<ButtonSize, string> = {
-  sm: "px-4 py-2.5 text-[0.6875rem] leading-4",
-  md: "px-12 py-[1.375rem] text-label",
+  sm: "px-5 py-2.5 text-[0.6875rem]",
+  md: "px-10 py-5 text-label",
 };
 
 /**
