@@ -1,0 +1,3534 @@
+[
+  {
+    "id": "nk-001",
+    "name": "Kundan Rani Haar",
+    "category": "necklaces",
+    "price": 18500,
+    "mrp": 24400,
+    "images": [
+      "/products/nk-001.webp"
+    ],
+    "shortDescription": "A layered bridal haar of kundan florals finished with a fringe of freshwater pearls.",
+    "details": {
+      "material": "Gold plated brass with uncut kundan and freshwater pearl drops",
+      "weight": "68 g",
+      "closure": "Adjustable dori"
+    },
+    "rating": 4.8,
+    "reviewCount": 142,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "Wore it to my sister's sangeet and got compliments all evening."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "Bought for a housewarming gift and it was very well received."
+      },
+      {
+        "name": "Farah Sheikh",
+        "rating": 5,
+        "text": "Perfect for a Navratri look without going overboard."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-002",
+    "name": "Polki Choker with Pearl Drops",
+    "category": "necklaces",
+    "price": 12900,
+    "mrp": 15200,
+    "images": [
+      "/products/nk-002.webp"
+    ],
+    "shortDescription": "A close fitting polki choker that sits high on the collarbone, edged with pearl drops.",
+    "details": {
+      "material": "Gold plated brass with polki stones and shell pearls",
+      "weight": "52 g",
+      "closure": "Adjustable dori"
+    },
+    "rating": 4.7,
+    "reviewCount": 96,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "The gold tone is warm rather than brassy, which was my worry."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-003",
+    "name": "Meenakari Peacock Necklace",
+    "category": "necklaces",
+    "price": 3450,
+    "mrp": 4300,
+    "images": [
+      "/products/nk-003.webp"
+    ],
+    "shortDescription": "Twin enamelled peacocks in green and rose meena on an antique gold frame.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "34 g",
+      "closure": "S hook clasp"
+    },
+    "rating": 4.5,
+    "reviewCount": 211,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "The enamel work is detailed and the shade has not faded with regular wear."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "Reordered a second one in a different colour after wearing the first."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-004",
+    "name": "Temple Lakshmi Long Haar",
+    "category": "necklaces",
+    "price": 15750,
+    "mrp": 22100,
+    "images": [
+      "/products/nk-004.webp"
+    ],
+    "shortDescription": "A South Indian temple haar centred on a Lakshmi motif with red kemp stone borders.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "74 g",
+      "closure": "Screw clasp"
+    },
+    "rating": 4.9,
+    "reviewCount": 88,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "Feels sturdy, not hollow. Worth the money."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "Great for a bride's sister or a friend of the family."
+      },
+      {
+        "name": "Pallavi Chandran",
+        "rating": 5,
+        "text": "A friend asked me to order the same one for her."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-005",
+    "name": "Oxidised Silver Tribal Necklace",
+    "category": "necklaces",
+    "price": 1290,
+    "mrp": 1450,
+    "images": [
+      "/products/nk-005.webp"
+    ],
+    "shortDescription": "A chunky oxidised statement piece with tribal coin discs and turquoise beadwork.",
+    "details": {
+      "material": "Oxidised German silver with glass beads",
+      "weight": "46 g",
+      "closure": "Adjustable dori"
+    },
+    "rating": 4.4,
+    "reviewCount": 327,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "My daughter borrowed it the day it arrived and I have not seen it since."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "Comfortable clasp that I can manage on my own without help."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-006",
+    "name": "Jadau Emerald Collar Necklace",
+    "category": "necklaces",
+    "price": 22400,
+    "mrp": 28700,
+    "images": [
+      "/products/nk-006.webp"
+    ],
+    "shortDescription": "A broad jadau collar with emerald cabochons set into a soft gold bed.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and emerald green stones",
+      "weight": "81 g",
+      "closure": "Box clasp"
+    },
+    "rating": 4.9,
+    "reviewCount": 41,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "The thread work is tight and there are no loose ends."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "nk-007",
+    "name": "Beaded Moti Mala",
+    "category": "necklaces",
+    "price": 849,
+    "mrp": 980,
+    "images": [
+      "/products/nk-007.webp"
+    ],
+    "shortDescription": "A single strand pearl mala that finishes an everyday kurta without fuss.",
+    "details": {
+      "material": "Shell pearls on nylon thread with brass spacers",
+      "weight": "28 g",
+      "closure": "Lobster clasp"
+    },
+    "rating": 4.3,
+    "reviewCount": 402,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 5,
+        "text": "My mother in law asked where I had it made."
+      },
+      {
+        "name": "Kalpana Iyengar",
+        "rating": 5,
+        "text": "The turquoise has natural veining, which I prefer to a flat colour."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-008",
+    "name": "Antique Gold Guttapusalu Necklace",
+    "category": "necklaces",
+    "price": 9800,
+    "mrp": 9800,
+    "images": [
+      "/products/nk-008.webp"
+    ],
+    "shortDescription": "A Guttapusalu with cascading pearl bunches, worn in the Telugu bridal tradition.",
+    "details": {
+      "material": "Antique gold plated brass with pearl clusters",
+      "weight": "63 g",
+      "closure": "Screw clasp"
+    },
+    "rating": 4.8,
+    "reviewCount": 74,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 5,
+        "text": "The green stones are a deeper shade in person than on screen, which I liked."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "Great everyday piece that does not need much care."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-009",
+    "name": "Thewa Art Statement Necklace",
+    "category": "necklaces",
+    "price": 4650,
+    "mrp": 5650,
+    "images": [
+      "/products/nk-009.webp"
+    ],
+    "shortDescription": "Rajasthani thewa panels of gold leaf fused onto coloured glass, set in a wide bib.",
+    "details": {
+      "material": "Brass with thewa gold work on fused glass",
+      "weight": "39 g",
+      "closure": "S hook clasp"
+    },
+    "rating": 4.6,
+    "reviewCount": 118,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "Value for money. I have paid more for less at local shops."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "Bought during a sale and it still felt underpriced."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-010",
+    "name": "Layered Pearl Satlada",
+    "category": "necklaces",
+    "price": 7200,
+    "mrp": 9400,
+    "images": [
+      "/products/nk-010.webp"
+    ],
+    "shortDescription": "Seven graduated strands of pearl in the Hyderabadi satlada style.",
+    "details": {
+      "material": "Shell pearls with gold plated brass spacers",
+      "weight": "58 g",
+      "closure": "Box clasp"
+    },
+    "rating": 4.7,
+    "reviewCount": 63,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 4,
+        "text": "Took a star off as the chain is a little short for my liking."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "Strong enough for a full day of dancing at a reception."
+      },
+      {
+        "name": "Aditya Pawar",
+        "rating": 5,
+        "text": "Genuinely happy with this. Would order again."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-011",
+    "name": "Ruby Kundan Bridal Necklace",
+    "category": "necklaces",
+    "price": 16800,
+    "mrp": 18500,
+    "images": [
+      "/products/nk-011.webp"
+    ],
+    "shortDescription": "A full bridal necklace of kundan panels punctuated with deep ruby drops.",
+    "details": {
+      "material": "Gold plated brass with kundan and ruby red stones",
+      "weight": "71 g",
+      "closure": "Adjustable dori"
+    },
+    "rating": 4.8,
+    "reviewCount": 109,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "The mirror work catches light nicely under indoor lighting."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 3,
+        "text": "The stones are glued rather than set in a couple of places, but they are holding."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-012",
+    "name": "Silver Filigree Choker",
+    "category": "necklaces",
+    "price": 2950,
+    "mrp": 4050,
+    "images": [
+      "/products/nk-012.webp"
+    ],
+    "shortDescription": "Hand drawn silver wire worked into a fine filigree lattice, light on the neck.",
+    "details": {
+      "material": "925 sterling silver filigree",
+      "weight": "31 g",
+      "closure": "Lobster clasp"
+    },
+    "rating": 4.6,
+    "reviewCount": 156,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "Fit is snug but not tight. True to the measurements listed."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "The finish is consistent across both pieces of the pair."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "nk-013",
+    "name": "Terracotta Handpainted Necklace",
+    "category": "necklaces",
+    "price": 599,
+    "mrp": 720,
+    "images": [
+      "/products/nk-013.webp"
+    ],
+    "shortDescription": "Hand painted terracotta discs strung on a cotton dori, made by artisans in Panruti.",
+    "details": {
+      "material": "Kiln fired terracotta with lacquer finish on cotton dori",
+      "weight": "22 g",
+      "closure": "Adjustable dori"
+    },
+    "rating": 4.2,
+    "reviewCount": 189,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "I wear it with jeans as easily as with a saree."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      },
+      {
+        "name": "Ishita Sen",
+        "rating": 5,
+        "text": "Pairs well with both silk and cotton. More versatile than I expected."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "er-001",
+    "name": "Kundan Chandbali",
+    "category": "earrings",
+    "price": 2450,
+    "mrp": 3100,
+    "images": [
+      "/products/er-001.webp"
+    ],
+    "shortDescription": "A crescent chandbali edged with pearls, sized to move without pulling at the ear.",
+    "details": {
+      "material": "Gold plated brass with kundan stones and pearl fringe",
+      "weight": "18 g (pair)",
+      "closure": "Push back",
+      "type": "Chandbali"
+    },
+    "rating": 4.7,
+    "reviewCount": 264,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "Stones are well matched in size and colour across the piece."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "It has quickly become the piece I reach for by default."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-002",
+    "name": "Pearl Fringe Jhumka",
+    "category": "earrings",
+    "price": 1850,
+    "mrp": 2100,
+    "images": [
+      "/products/er-002.webp"
+    ],
+    "shortDescription": "A classic dome jhumka with a full skirt of pearls that catches the light as you move.",
+    "details": {
+      "material": "Gold plated brass with shell pearl fringe",
+      "weight": "16 g (pair)",
+      "closure": "Push back",
+      "type": "Jhumka"
+    },
+    "rating": 4.6,
+    "reviewCount": 318,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "The temple motifs are crisp and clearly defined."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 4,
+        "text": "Slight scratch on arrival, but it was replaced without any argument."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-003",
+    "name": "Oxidised Silver Mirror Jhumka",
+    "category": "earrings",
+    "price": 649,
+    "mrp": 870,
+    "images": [
+      "/products/er-003.webp"
+    ],
+    "shortDescription": "Kutch style mirror work set into an oxidised dome, light enough for all day wear.",
+    "details": {
+      "material": "Oxidised German silver with mirror inlay",
+      "weight": "14 g (pair)",
+      "closure": "Hook wire",
+      "type": "Jhumka"
+    },
+    "rating": 4.4,
+    "reviewCount": 487,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "This is the second piece I have bought here and the quality is consistent."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "The beads are uniform and the stringing is tight."
+      },
+      {
+        "name": "Nandini Bhatt",
+        "rating": 3,
+        "text": "Three stars only because the size ran small for me. Quality is good."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-004",
+    "name": "Polki Diamond Studs",
+    "category": "earrings",
+    "price": 11500,
+    "mrp": 14300,
+    "images": [
+      "/products/er-004.webp"
+    ],
+    "shortDescription": "A single polki stone per ear, set flat in the uncut tradition.",
+    "details": {
+      "material": "Gold plated brass with polki stones",
+      "weight": "6 g (pair)",
+      "closure": "Screw back",
+      "type": "Stud"
+    },
+    "rating": 4.9,
+    "reviewCount": 52,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "The design is traditional but the weight is modern. Best of both."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 4,
+        "text": "Simple packaging, but the piece itself is the real thing."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "er-005",
+    "name": "Meenakari Peacock Jhumki",
+    "category": "earrings",
+    "price": 1650,
+    "mrp": 1900,
+    "images": [
+      "/products/er-005.webp"
+    ],
+    "shortDescription": "Enamelled peacock jhumkis in rose and green meena on an antique base.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "15 g (pair)",
+      "closure": "Push back",
+      "type": "Jhumka"
+    },
+    "rating": 4.5,
+    "reviewCount": 372,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Silver has a nice matte finish rather than a mirror polish."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "The kundan is set flush and does not catch on clothes."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-006",
+    "name": "Temple Lakshmi Jhumka",
+    "category": "earrings",
+    "price": 5400,
+    "mrp": 7000,
+    "images": [
+      "/products/er-006.webp"
+    ],
+    "shortDescription": "A temple jhumka with a Lakshmi motif and a kemp stone border, weighted for a clean drop.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "24 g (pair)",
+      "closure": "Screw back",
+      "type": "Jhumka"
+    },
+    "rating": 4.8,
+    "reviewCount": 141,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "The filigree is fine and even. Clearly hand finished."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "The detailing at the back is as neat as the front."
+      },
+      {
+        "name": "Sheetal Bhandari",
+        "rating": 5,
+        "text": "Works for office wear too if you keep the rest simple."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-007",
+    "name": "Emerald Drop Earrings",
+    "category": "earrings",
+    "price": 8900,
+    "mrp": 10800,
+    "images": [
+      "/products/er-007.webp"
+    ],
+    "shortDescription": "A faceted emerald green drop suspended below a kundan stud.",
+    "details": {
+      "material": "Gold plated brass with emerald green stones and pearls",
+      "weight": "19 g (pair)",
+      "closure": "Push back",
+      "type": "Drop"
+    },
+    "rating": 4.7,
+    "reviewCount": 78,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "Traditional design done tastefully, never gaudy."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-008",
+    "name": "Ear Cuff with Kundan Chain",
+    "category": "earrings",
+    "price": 1350,
+    "mrp": 1800,
+    "images": [
+      "/products/er-008.webp"
+    ],
+    "shortDescription": "A kundan stud trailing a fine chain to a comfortable ear cuff, no extra piercing needed.",
+    "details": {
+      "material": "Gold plated brass with kundan stones",
+      "weight": "12 g (pair)",
+      "closure": "Clip on",
+      "type": "Ear cuff"
+    },
+    "rating": 4.3,
+    "reviewCount": 205,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-009",
+    "name": "Thread Work Jhumka",
+    "category": "earrings",
+    "price": 449,
+    "mrp": 530,
+    "images": [
+      "/products/er-009.webp"
+    ],
+    "shortDescription": "Silk thread wound over a brass frame in bright festive colours, feather light.",
+    "details": {
+      "material": "Silk thread over brass frame",
+      "weight": "11 g (pair)",
+      "closure": "Hook wire",
+      "type": "Jhumka"
+    },
+    "rating": 4.2,
+    "reviewCount": 553,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "Easy to clean with a dry cloth. No special care needed."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 4,
+        "text": "Good finish for the price, though the clasp needs a careful hand."
+      },
+      {
+        "name": "Urvashi Solanki",
+        "rating": 5,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-010",
+    "name": "Rose Gold Hoops with CZ",
+    "category": "earrings",
+    "price": 1150,
+    "mrp": 1450,
+    "images": [
+      "/products/er-010.webp"
+    ],
+    "shortDescription": "A slim rose gold hoop pave set with cubic zirconia along the front face.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "9 g (pair)",
+      "closure": "Hinged snap",
+      "type": "Hoop"
+    },
+    "rating": 4.5,
+    "reviewCount": 167,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "The pink meena work is vibrant and has not chipped."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 4,
+        "text": "Delivery took a day longer than promised but the piece itself is lovely."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "er-011",
+    "name": "Jadau Bridal Chandbali",
+    "category": "earrings",
+    "price": 13600,
+    "mrp": 19000,
+    "images": [
+      "/products/er-011.webp"
+    ],
+    "shortDescription": "A broad jadau chandbali built for bridal wear, with a support chain for the hair.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and pearl fringe",
+      "weight": "31 g (pair)",
+      "closure": "Screw back",
+      "type": "Chandbali"
+    },
+    "rating": 4.9,
+    "reviewCount": 46,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 5,
+        "text": "The size options were accurate. I ordered by the chart and it fit."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "The pearls have a soft sheen rather than a plastic shine. Very pleased."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-012",
+    "name": "Terracotta Disc Earrings",
+    "category": "earrings",
+    "price": 399,
+    "mrp": 450,
+    "images": [
+      "/products/er-012.webp"
+    ],
+    "shortDescription": "Hand painted terracotta discs on a hook wire, in earthy festival colours.",
+    "details": {
+      "material": "Kiln fired terracotta with lacquer finish",
+      "weight": "8 g (pair)",
+      "closure": "Hook wire",
+      "type": "Dangler"
+    },
+    "rating": 4.1,
+    "reviewCount": 296,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "The antique gold tone works well with maroon and deep green."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "Plating still looks new after six weeks. No greening on the skin."
+      },
+      {
+        "name": "Karthik Subramanian",
+        "rating": 4,
+        "text": "Not as broad as I imagined but it suits my frame better this way."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "er-013",
+    "name": "Silver Filigree Danglers",
+    "category": "earrings",
+    "price": 1950,
+    "mrp": 2500,
+    "images": [
+      "/products/er-013.webp"
+    ],
+    "shortDescription": "Fine silver wirework in a teardrop dangler, matte finished rather than mirror polished.",
+    "details": {
+      "material": "925 sterling silver filigree",
+      "weight": "13 g (pair)",
+      "closure": "Push back",
+      "type": "Dangler"
+    },
+    "rating": 4.6,
+    "reviewCount": 132,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "Feels handmade rather than mass produced."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-001",
+    "name": "Kundan Cocktail Ring",
+    "category": "rings",
+    "price": 1750,
+    "mrp": 2000,
+    "images": [
+      "/products/rg-001.webp"
+    ],
+    "shortDescription": "A broad kundan face on an adjustable shank, sized to fit most fingers.",
+    "details": {
+      "material": "Gold plated brass with kundan stones",
+      "weight": "9 g",
+      "type": "Adjustable"
+    },
+    "rating": 4.5,
+    "reviewCount": 243,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "It is exactly the shade of green I was hoping for."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 5,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-002",
+    "name": "Polki Solitaire Ring",
+    "category": "rings",
+    "price": 9400,
+    "mrp": 12800,
+    "images": [
+      "/products/rg-002.webp"
+    ],
+    "shortDescription": "One uncut polki stone in a closed setting, quiet enough for daily wear.",
+    "details": {
+      "material": "Gold plated brass with a single polki stone",
+      "weight": "7 g",
+      "type": "Fixed, size 14"
+    },
+    "rating": 4.8,
+    "reviewCount": 67,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "Comfortable for long wear, no pinching or pulling."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "Ordered two, gifted one. Both were finished identically."
+      },
+      {
+        "name": "Nisha Verma",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-003",
+    "name": "Oxidised Silver Adjustable Ring",
+    "category": "rings",
+    "price": 399,
+    "mrp": 490,
+    "images": [
+      "/products/rg-003.webp"
+    ],
+    "shortDescription": "An oxidised band with tribal etching that opens to fit any finger.",
+    "details": {
+      "material": "Oxidised German silver",
+      "weight": "6 g",
+      "type": "Adjustable"
+    },
+    "rating": 4.2,
+    "reviewCount": 612,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "Good gifting option under budget. I bought three."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 5,
+        "text": "The oxidised finish is even, not patchy like cheaper pieces."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-004",
+    "name": "Meenakari Enamel Band",
+    "category": "rings",
+    "price": 1100,
+    "mrp": 1450,
+    "images": [
+      "/products/rg-004.webp"
+    ],
+    "shortDescription": "A slim band carrying a run of blue and green meena work.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "7 g",
+      "type": "Fixed, size 16"
+    },
+    "rating": 4.4,
+    "reviewCount": 188,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "The polish is even and there are no rough edges anywhere."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "Beautiful traditional design without looking dated."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-005",
+    "name": "Emerald Statement Ring",
+    "category": "rings",
+    "price": 12200,
+    "mrp": 12200,
+    "images": [
+      "/products/rg-005.webp"
+    ],
+    "shortDescription": "A large emerald green cabochon ringed by kundan, built to be the only ring you wear.",
+    "details": {
+      "material": "Gold plated brass with emerald green stone and kundan halo",
+      "weight": "12 g",
+      "type": "Fixed, size 15"
+    },
+    "rating": 4.9,
+    "reviewCount": 39,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "Wore it to my sister's sangeet and got compliments all evening."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 5,
+        "text": "Bought for a housewarming gift and it was very well received."
+      },
+      {
+        "name": "Vidya Ramesh",
+        "rating": 5,
+        "text": "Perfect for a Navratri look without going overboard."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-006",
+    "name": "Temple Motif Ring",
+    "category": "rings",
+    "price": 2350,
+    "mrp": 3250,
+    "images": [
+      "/products/rg-006.webp"
+    ],
+    "shortDescription": "A temple deity motif with kemp stone accents on an adjustable shank.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "10 g",
+      "type": "Adjustable"
+    },
+    "rating": 4.6,
+    "reviewCount": 154,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "The gold tone is warm rather than brassy, which was my worry."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-007",
+    "name": "Pearl Cluster Ring",
+    "category": "rings",
+    "price": 1950,
+    "mrp": 2350,
+    "images": [
+      "/products/rg-007.webp"
+    ],
+    "shortDescription": "A cluster of small pearls massed into a soft dome.",
+    "details": {
+      "material": "Gold plated brass with shell pearls",
+      "weight": "8 g",
+      "type": "Fixed, size 14"
+    },
+    "rating": 4.5,
+    "reviewCount": 121,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "The enamel work is detailed and the shade has not faded with regular wear."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "Reordered a second one in a different colour after wearing the first."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-008",
+    "name": "Jadau Ruby Ring",
+    "category": "rings",
+    "price": 8600,
+    "mrp": 10800,
+    "images": [
+      "/products/rg-008.webp"
+    ],
+    "shortDescription": "Ruby red stones bedded in gold in the jadau manner, with a filigree gallery.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and ruby red stones",
+      "weight": "11 g",
+      "type": "Fixed, size 16"
+    },
+    "rating": 4.8,
+    "reviewCount": 58,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Feels sturdy, not hollow. Worth the money."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "Great for a bride's sister or a friend of the family."
+      },
+      {
+        "name": "Sakshi Tiwari",
+        "rating": 5,
+        "text": "A friend asked me to order the same one for her."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-009",
+    "name": "Silver Bichhiya Toe Ring Pair",
+    "category": "rings",
+    "price": 549,
+    "mrp": 630,
+    "images": [
+      "/products/rg-009.webp"
+    ],
+    "shortDescription": "A traditional bichhiya pair with a simple etched top, open backed to adjust.",
+    "details": {
+      "material": "925 sterling silver",
+      "weight": "5 g (pair)",
+      "type": "Toe ring pair, adjustable"
+    },
+    "rating": 4.3,
+    "reviewCount": 431,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "My daughter borrowed it the day it arrived and I have not seen it since."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "Comfortable clasp that I can manage on my own without help."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-010",
+    "name": "Rose Gold Stackable Ring Set",
+    "category": "rings",
+    "price": 2200,
+    "mrp": 2950,
+    "images": [
+      "/products/rg-010.webp"
+    ],
+    "shortDescription": "Three slim bands meant to be worn together or spread across fingers.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "9 g (set of three)",
+      "type": "Stackable set, size 15"
+    },
+    "rating": 4.5,
+    "reviewCount": 176,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "The thread work is tight and there are no loose ends."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-011",
+    "name": "Navratna Nine Gem Ring",
+    "category": "rings",
+    "price": 14500,
+    "mrp": 18000,
+    "images": [
+      "/products/rg-011.webp"
+    ],
+    "shortDescription": "The nine navratna stones set in their traditional astrological order.",
+    "details": {
+      "material": "Gold plated brass with nine coloured stones",
+      "weight": "13 g",
+      "type": "Fixed, size 16"
+    },
+    "rating": 4.7,
+    "reviewCount": 84,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "My mother in law asked where I had it made."
+      },
+      {
+        "name": "Ipsita Panda",
+        "rating": 5,
+        "text": "The turquoise has natural veining, which I prefer to a flat colour."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-012",
+    "name": "Filigree Silver Ring",
+    "category": "rings",
+    "price": 799,
+    "mrp": 930,
+    "images": [
+      "/products/rg-012.webp"
+    ],
+    "shortDescription": "A light filigree face in drawn silver wire on a plain band.",
+    "details": {
+      "material": "925 sterling silver filigree",
+      "weight": "5 g",
+      "type": "Fixed, size 14"
+    },
+    "rating": 4.4,
+    "reviewCount": 209,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "The green stones are a deeper shade in person than on screen, which I liked."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "Great everyday piece that does not need much care."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "rg-013",
+    "name": "Thumb Ring with Turquoise",
+    "category": "rings",
+    "price": 899,
+    "mrp": 1160,
+    "images": [
+      "/products/rg-013.webp"
+    ],
+    "shortDescription": "A wide oxidised thumb ring centred on a turquoise cabochon.",
+    "details": {
+      "material": "Oxidised German silver with reconstituted turquoise",
+      "weight": "8 g",
+      "type": "Adjustable"
+    },
+    "rating": 4.3,
+    "reviewCount": 147,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "Value for money. I have paid more for less at local shops."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 5,
+        "text": "Bought during a sale and it still felt underpriced."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "br-001",
+    "name": "Kundan Bracelet",
+    "category": "bracelets",
+    "price": 2850,
+    "mrp": 3450,
+    "images": [
+      "/products/br-001.webp"
+    ],
+    "shortDescription": "Linked kundan panels on a flexible chain that follows the wrist.",
+    "details": {
+      "material": "Gold plated brass with kundan stones",
+      "weight": "26 g",
+      "closure": "Lobster clasp",
+      "type": "Chain"
+    },
+    "rating": 4.6,
+    "reviewCount": 198,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 4,
+        "text": "Took a star off as the chain is a little short for my liking."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "Strong enough for a full day of dancing at a reception."
+      },
+      {
+        "name": "Meghna Barua",
+        "rating": 5,
+        "text": "Genuinely happy with this. Would order again."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-002",
+    "name": "Oxidised Silver Charm Bracelet",
+    "category": "bracelets",
+    "price": 699,
+    "mrp": 920,
+    "images": [
+      "/products/br-002.webp"
+    ],
+    "shortDescription": "Oxidised charms and tiny ghungroo bells that sound softly as you move.",
+    "details": {
+      "material": "Oxidised German silver with bell charms",
+      "weight": "22 g",
+      "closure": "Adjustable dori",
+      "type": "Charm"
+    },
+    "rating": 4.3,
+    "reviewCount": 356,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "The mirror work catches light nicely under indoor lighting."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 3,
+        "text": "The stones are glued rather than set in a couple of places, but they are holding."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-003",
+    "name": "Pearl Strand Bracelet",
+    "category": "bracelets",
+    "price": 1450,
+    "mrp": 1700,
+    "images": [
+      "/products/br-003.webp"
+    ],
+    "shortDescription": "A double strand of pearls with a small kundan spacer at the centre.",
+    "details": {
+      "material": "Shell pearls with gold plated brass spacers",
+      "weight": "18 g",
+      "closure": "Lobster clasp",
+      "type": "Beaded"
+    },
+    "rating": 4.5,
+    "reviewCount": 224,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "Fit is snug but not tight. True to the measurements listed."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "The finish is consistent across both pieces of the pair."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-004",
+    "name": "Polki Tennis Bracelet",
+    "category": "bracelets",
+    "price": 16200,
+    "mrp": 20300,
+    "images": [
+      "/products/br-004.webp"
+    ],
+    "shortDescription": "An unbroken line of uncut polki stones running the full length of the wrist.",
+    "details": {
+      "material": "Gold plated brass with a line of polki stones",
+      "weight": "29 g",
+      "closure": "Box clasp",
+      "type": "Chain"
+    },
+    "rating": 4.9,
+    "reviewCount": 43,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "I wear it with jeans as easily as with a saree."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      },
+      {
+        "name": "Divya Rao",
+        "rating": 5,
+        "text": "Pairs well with both silk and cotton. More versatile than I expected."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-005",
+    "name": "Meenakari Cuff Bracelet",
+    "category": "bracelets",
+    "price": 2650,
+    "mrp": 3700,
+    "images": [
+      "/products/br-005.webp"
+    ],
+    "shortDescription": "An open cuff carrying a band of floral meena work in blue and coral.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "34 g",
+      "closure": "Slip on",
+      "type": "Cuff"
+    },
+    "rating": 4.6,
+    "reviewCount": 137,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "Stones are well matched in size and colour across the piece."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "It has quickly become the piece I reach for by default."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-006",
+    "name": "Temple Motif Bracelet",
+    "category": "bracelets",
+    "price": 4200,
+    "mrp": 4700,
+    "images": [
+      "/products/br-006.webp"
+    ],
+    "shortDescription": "Repeating temple arches with kemp stone centres on a solid link chain.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "31 g",
+      "closure": "Screw clasp",
+      "type": "Chain"
+    },
+    "rating": 4.7,
+    "reviewCount": 91,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "The temple motifs are crisp and clearly defined."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 4,
+        "text": "Slight scratch on arrival, but it was replaced without any argument."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-007",
+    "name": "Jadau Emerald Bracelet",
+    "category": "bracelets",
+    "price": 10800,
+    "mrp": 13800,
+    "images": [
+      "/products/br-007.webp"
+    ],
+    "shortDescription": "Emerald green stones bedded in gold across five jadau panels.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and emerald green stones",
+      "weight": "36 g",
+      "closure": "Box clasp",
+      "type": "Chain"
+    },
+    "rating": 4.8,
+    "reviewCount": 52,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "This is the second piece I have bought here and the quality is consistent."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "The beads are uniform and the stringing is tight."
+      },
+      {
+        "name": "Sanjana Rathore",
+        "rating": 3,
+        "text": "Three stars only because the size ran small for me. Quality is good."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-008",
+    "name": "Silk Thread Beaded Bracelet",
+    "category": "bracelets",
+    "price": 349,
+    "mrp": 400,
+    "images": [
+      "/products/br-008.webp"
+    ],
+    "shortDescription": "Glass beads threaded onto silk over elastic, sized to slip straight on.",
+    "details": {
+      "material": "Silk thread with glass beads on an elastic core",
+      "weight": "12 g",
+      "closure": "Slip on",
+      "type": "Beaded"
+    },
+    "rating": 4.1,
+    "reviewCount": 478,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "The design is traditional but the weight is modern. Best of both."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 4,
+        "text": "Simple packaging, but the piece itself is the real thing."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-009",
+    "name": "Rose Gold Chain Bracelet",
+    "category": "bracelets",
+    "price": 1550,
+    "mrp": 2100,
+    "images": [
+      "/products/br-009.webp"
+    ],
+    "shortDescription": "A fine rose gold chain with a scatter of cubic zirconia along its length.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "16 g",
+      "closure": "Lobster clasp",
+      "type": "Chain"
+    },
+    "rating": 4.4,
+    "reviewCount": 183,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "Silver has a nice matte finish rather than a mirror polish."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "The kundan is set flush and does not catch on clothes."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-010",
+    "name": "Antique Coin Bracelet",
+    "category": "bracelets",
+    "price": 2100,
+    "mrp": 2550,
+    "images": [
+      "/products/br-010.webp"
+    ],
+    "shortDescription": "Kasu style coin discs strung close together in the South Indian tradition.",
+    "details": {
+      "material": "Antique gold plated brass with temple coin discs",
+      "weight": "33 g",
+      "closure": "Toggle clasp",
+      "type": "Chain"
+    },
+    "rating": 4.6,
+    "reviewCount": 165,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "The filigree is fine and even. Clearly hand finished."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "The detailing at the back is as neat as the front."
+      },
+      {
+        "name": "Farah Sheikh",
+        "rating": 5,
+        "text": "Works for office wear too if you keep the rest simple."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "br-011",
+    "name": "Turquoise Bead Bracelet",
+    "category": "bracelets",
+    "price": 749,
+    "mrp": 970,
+    "images": [
+      "/products/br-011.webp"
+    ],
+    "shortDescription": "Turquoise beads spaced along an oxidised chain, adjustable at the back.",
+    "details": {
+      "material": "Oxidised German silver with reconstituted turquoise",
+      "weight": "19 g",
+      "closure": "Adjustable dori",
+      "type": "Beaded"
+    },
+    "rating": 4.3,
+    "reviewCount": 141,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "Traditional design done tastefully, never gaudy."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "br-012",
+    "name": "Diamond Cut Silver Bracelet",
+    "category": "bracelets",
+    "price": 3900,
+    "mrp": 4300,
+    "images": [
+      "/products/br-012.webp"
+    ],
+    "shortDescription": "A machine faceted silver chain that throws light from every angle.",
+    "details": {
+      "material": "925 sterling silver, diamond cut finish",
+      "weight": "27 g",
+      "closure": "Lobster clasp",
+      "type": "Chain"
+    },
+    "rating": 4.7,
+    "reviewCount": 106,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-001",
+    "name": "Kundan Kada Pair",
+    "category": "bangles",
+    "price": 7800,
+    "mrp": 10800,
+    "images": [
+      "/products/bn-001.webp"
+    ],
+    "shortDescription": "A broad kundan kada in a matched pair, opening on a screw hinge.",
+    "details": {
+      "material": "Gold plated brass with kundan stones",
+      "weight": "88 g (pair)",
+      "closure": "Screw",
+      "type": "Kada"
+    },
+    "rating": 4.8,
+    "reviewCount": 112,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "Easy to clean with a dry cloth. No special care needed."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 4,
+        "text": "Good finish for the price, though the clasp needs a careful hand."
+      },
+      {
+        "name": "Pallavi Chandran",
+        "rating": 5,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-002",
+    "name": "Meenakari Bangle Set of Six",
+    "category": "bangles",
+    "price": 2450,
+    "mrp": 2950,
+    "images": [
+      "/products/bn-002.webp"
+    ],
+    "shortDescription": "Six thin enamelled bangles meant to be stacked and heard together.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "76 g (set of six)",
+      "closure": "Slip on",
+      "type": "Bangle set"
+    },
+    "rating": 4.5,
+    "reviewCount": 287,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "The pink meena work is vibrant and has not chipped."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 4,
+        "text": "Delivery took a day longer than promised but the piece itself is lovely."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-003",
+    "name": "Oxidised Silver Kada",
+    "category": "bangles",
+    "price": 1250,
+    "mrp": 1250,
+    "images": [
+      "/products/bn-003.webp"
+    ],
+    "shortDescription": "A single wide oxidised kada with etched tribal banding.",
+    "details": {
+      "material": "Oxidised German silver",
+      "weight": "54 g",
+      "closure": "Slip on",
+      "type": "Kada"
+    },
+    "rating": 4.4,
+    "reviewCount": 264,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "The size options were accurate. I ordered by the chart and it fit."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "The pearls have a soft sheen rather than a plastic shine. Very pleased."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-004",
+    "name": "Polki Broad Kada",
+    "category": "bangles",
+    "price": 19500,
+    "mrp": 22200,
+    "images": [
+      "/products/bn-004.webp"
+    ],
+    "shortDescription": "A statement bridal kada of uncut polki, hinged so it clears the hand easily.",
+    "details": {
+      "material": "Gold plated brass with polki stones and pearl edging",
+      "weight": "104 g",
+      "closure": "Hinged with clip",
+      "type": "Kada"
+    },
+    "rating": 4.9,
+    "reviewCount": 37,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "The antique gold tone works well with maroon and deep green."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 5,
+        "text": "Plating still looks new after six weeks. No greening on the skin."
+      },
+      {
+        "name": "Kalpana Iyengar",
+        "rating": 4,
+        "text": "Not as broad as I imagined but it suits my frame better this way."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-005",
+    "name": "Temple Lakshmi Bangle Pair",
+    "category": "bangles",
+    "price": 11400,
+    "mrp": 15300,
+    "images": [
+      "/products/bn-005.webp"
+    ],
+    "shortDescription": "A temple kada pair with repeating Lakshmi motifs and kemp stone rows.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "96 g (pair)",
+      "closure": "Screw",
+      "type": "Kada"
+    },
+    "rating": 4.9,
+    "reviewCount": 68,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 5,
+        "text": "Feels handmade rather than mass produced."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-006",
+    "name": "Glass Chudi Set",
+    "category": "bangles",
+    "price": 499,
+    "mrp": 620,
+    "images": [
+      "/products/bn-006.webp"
+    ],
+    "shortDescription": "A dozen lac and glass chudis in graduated shades, the sound of a wedding house.",
+    "details": {
+      "material": "Lac coated glass with foil work",
+      "weight": "62 g (set of twelve)",
+      "closure": "Slip on",
+      "type": "Chudi set"
+    },
+    "rating": 4,
+    "reviewCount": 519,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "It is exactly the shade of green I was hoping for."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "bn-007",
+    "name": "Jadau Enamel Bangle",
+    "category": "bangles",
+    "price": 13200,
+    "mrp": 15300,
+    "images": [
+      "/products/bn-007.webp"
+    ],
+    "shortDescription": "Jadau stones on the face and hand painted meena on the reverse, finished on both sides.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and meenakari reverse",
+      "weight": "71 g",
+      "closure": "Hinged with clip",
+      "type": "Kada"
+    },
+    "rating": 4.8,
+    "reviewCount": 44,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "Comfortable for long wear, no pinching or pulling."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "Ordered two, gifted one. Both were finished identically."
+      },
+      {
+        "name": "Aditya Pawar",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-008",
+    "name": "Antique Gold Screw Bangle Pair",
+    "category": "bangles",
+    "price": 6800,
+    "mrp": 8800,
+    "images": [
+      "/products/bn-008.webp"
+    ],
+    "shortDescription": "A plain antique gold pair with a beaded rim, the everyday half of a bridal set.",
+    "details": {
+      "material": "Antique gold plated brass",
+      "weight": "82 g (pair)",
+      "closure": "Screw",
+      "type": "Bangle pair"
+    },
+    "rating": 4.6,
+    "reviewCount": 129,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "Good gifting option under budget. I bought three."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 5,
+        "text": "The oxidised finish is even, not patchy like cheaper pieces."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-009",
+    "name": "Silk Thread Bangle Set",
+    "category": "bangles",
+    "price": 599,
+    "mrp": 720,
+    "images": [
+      "/products/bn-009.webp"
+    ],
+    "shortDescription": "Silk thread wound over a metal core, matched to festive colours.",
+    "details": {
+      "material": "Silk thread over metal frame with stone accents",
+      "weight": "48 g (set of four)",
+      "closure": "Slip on",
+      "type": "Bangle set"
+    },
+    "rating": 4.2,
+    "reviewCount": 341,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "The polish is even and there are no rough edges anywhere."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "Beautiful traditional design without looking dated."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-010",
+    "name": "Pearl Studded Bangle",
+    "category": "bangles",
+    "price": 3200,
+    "mrp": 4200,
+    "images": [
+      "/products/bn-010.webp"
+    ],
+    "shortDescription": "Rows of small pearls studded across a domed gold band.",
+    "details": {
+      "material": "Gold plated brass with shell pearls",
+      "weight": "58 g",
+      "closure": "Hinged with clip",
+      "type": "Kada"
+    },
+    "rating": 4.6,
+    "reviewCount": 152,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "Wore it to my sister's sangeet and got compliments all evening."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 5,
+        "text": "Bought for a housewarming gift and it was very well received."
+      },
+      {
+        "name": "Ishita Sen",
+        "rating": 5,
+        "text": "Perfect for a Navratri look without going overboard."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-011",
+    "name": "Rajwadi Filigree Kada",
+    "category": "bangles",
+    "price": 4400,
+    "mrp": 5200,
+    "images": [
+      "/products/bn-011.webp"
+    ],
+    "shortDescription": "Rajasthani filigree worked into an open kada, lighter than its size suggests.",
+    "details": {
+      "material": "925 sterling silver filigree with antique finish",
+      "weight": "66 g",
+      "closure": "Slip on",
+      "type": "Kada"
+    },
+    "rating": 4.7,
+    "reviewCount": 97,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "The gold tone is warm rather than brassy, which was my worry."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "bn-012",
+    "name": "Rose Gold Slim Bangle Stack",
+    "category": "bangles",
+    "price": 2750,
+    "mrp": 3450,
+    "images": [
+      "/products/bn-012.webp"
+    ],
+    "shortDescription": "Three slim rose gold bangles, one plain and two set with cubic zirconia.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "44 g (set of three)",
+      "closure": "Slip on",
+      "type": "Bangle set"
+    },
+    "rating": 4.5,
+    "reviewCount": 118,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "The enamel work is detailed and the shade has not faded with regular wear."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 5,
+        "text": "Reordered a second one in a different colour after wearing the first."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "bn-013",
+    "name": "Tribal Brass Kada",
+    "category": "bangles",
+    "price": 899,
+    "mrp": 1260,
+    "images": [
+      "/products/bn-013.webp"
+    ],
+    "shortDescription": "A heavy unpolished brass kada with hammered tribal texture.",
+    "details": {
+      "material": "Solid brass with antique patina",
+      "weight": "72 g",
+      "closure": "Slip on",
+      "type": "Kada"
+    },
+    "rating": 4.3,
+    "reviewCount": 226,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "Feels sturdy, not hollow. Worth the money."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "Great for a bride's sister or a friend of the family."
+      },
+      {
+        "name": "Nandini Bhatt",
+        "rating": 5,
+        "text": "A friend asked me to order the same one for her."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-001",
+    "name": "Kundan Pendant with Chain",
+    "category": "pendants",
+    "price": 2250,
+    "mrp": 2500,
+    "images": [
+      "/products/pd-001.webp"
+    ],
+    "shortDescription": "A single kundan medallion on a fine chain, the simplest way to wear the style.",
+    "details": {
+      "material": "Gold plated brass with kundan stones on an 18 inch chain",
+      "weight": "16 g",
+      "closure": "Spring ring clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.6,
+    "reviewCount": 231,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "My daughter borrowed it the day it arrived and I have not seen it since."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "Comfortable clasp that I can manage on my own without help."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-002",
+    "name": "Polki Teardrop Pendant",
+    "category": "pendants",
+    "price": 8700,
+    "mrp": 11100,
+    "images": [
+      "/products/pd-002.webp"
+    ],
+    "shortDescription": "An uncut polki teardrop that reads as antique rather than sparkling.",
+    "details": {
+      "material": "Gold plated brass with polki stones on an 18 inch chain",
+      "weight": "19 g",
+      "closure": "Lobster clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.8,
+    "reviewCount": 76,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "The thread work is tight and there are no loose ends."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-003",
+    "name": "Om Oxidised Silver Pendant",
+    "category": "pendants",
+    "price": 499,
+    "mrp": 570,
+    "images": [
+      "/products/pd-003.webp"
+    ],
+    "shortDescription": "An Om symbol cut into oxidised silver, hung on a black cotton dori.",
+    "details": {
+      "material": "Oxidised German silver",
+      "weight": "11 g",
+      "closure": "Adjustable dori",
+      "type": "Pendant with dori"
+    },
+    "rating": 4.3,
+    "reviewCount": 438,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "My mother in law asked where I had it made."
+      },
+      {
+        "name": "Sheetal Bhandari",
+        "rating": 5,
+        "text": "The turquoise has natural veining, which I prefer to a flat colour."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-004",
+    "name": "Meenakari Peacock Pendant",
+    "category": "pendants",
+    "price": 1450,
+    "mrp": 1950,
+    "images": [
+      "/products/pd-004.webp"
+    ],
+    "shortDescription": "An enamelled peacock in rose and green meena, painted on both faces.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel on a 16 inch chain",
+      "weight": "14 g",
+      "closure": "Spring ring clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.5,
+    "reviewCount": 267,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "The green stones are a deeper shade in person than on screen, which I liked."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "Great everyday piece that does not need much care."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-005",
+    "name": "Temple Ganesha Pendant",
+    "category": "pendants",
+    "price": 3100,
+    "mrp": 3800,
+    "images": [
+      "/products/pd-005.webp"
+    ],
+    "shortDescription": "A seated Ganesha in relief with a kemp stone border, cast rather than stamped.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones on an 18 inch chain",
+      "weight": "21 g",
+      "closure": "Screw clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.7,
+    "reviewCount": 143,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "Value for money. I have paid more for less at local shops."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "Bought during a sale and it still felt underpriced."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-006",
+    "name": "Emerald Drop Pendant",
+    "category": "pendants",
+    "price": 9600,
+    "mrp": 12500,
+    "images": [
+      "/products/pd-006.webp"
+    ],
+    "shortDescription": "A faceted emerald green drop below a halo of kundan, on a fine gold chain.",
+    "details": {
+      "material": "Gold plated brass with an emerald green stone and kundan halo",
+      "weight": "18 g",
+      "closure": "Lobster clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.8,
+    "reviewCount": 61,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 4,
+        "text": "Took a star off as the chain is a little short for my liking."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "Strong enough for a full day of dancing at a reception."
+      },
+      {
+        "name": "Urvashi Solanki",
+        "rating": 5,
+        "text": "Genuinely happy with this. Would order again."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-007",
+    "name": "Pearl Solitaire Pendant",
+    "category": "pendants",
+    "price": 1850,
+    "mrp": 2050,
+    "images": [
+      "/products/pd-007.webp"
+    ],
+    "shortDescription": "One large pearl on a plain cap, the pendant you can leave on for weeks.",
+    "details": {
+      "material": "Shell pearl with gold plated brass cap on a 16 inch chain",
+      "weight": "12 g",
+      "closure": "Spring ring clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.5,
+    "reviewCount": 214,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "The mirror work catches light nicely under indoor lighting."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 3,
+        "text": "The stones are glued rather than set in a couple of places, but they are holding."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-008",
+    "name": "Evil Eye Silver Pendant",
+    "category": "pendants",
+    "price": 649,
+    "mrp": 900,
+    "images": [
+      "/products/pd-008.webp"
+    ],
+    "shortDescription": "A small enamelled nazar in blue and white on a light silver chain.",
+    "details": {
+      "material": "925 sterling silver with blue enamel",
+      "weight": "9 g",
+      "closure": "Spring ring clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.4,
+    "reviewCount": 302,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 5,
+        "text": "Fit is snug but not tight. True to the measurements listed."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "The finish is consistent across both pieces of the pair."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "pd-009",
+    "name": "Jadau Locket Pendant",
+    "category": "pendants",
+    "price": 11900,
+    "mrp": 14300,
+    "images": [
+      "/products/pd-009.webp"
+    ],
+    "shortDescription": "A jadau locket with a pearl drop, hinged to open onto a small photograph.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and pearl drop",
+      "weight": "26 g",
+      "closure": "Box clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.9,
+    "reviewCount": 34,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "I wear it with jeans as easily as with a saree."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      },
+      {
+        "name": "Karthik Subramanian",
+        "rating": 5,
+        "text": "Pairs well with both silk and cotton. More versatile than I expected."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-010",
+    "name": "Rose Gold Initial Pendant",
+    "category": "pendants",
+    "price": 1250,
+    "mrp": 1600,
+    "images": [
+      "/products/pd-010.webp"
+    ],
+    "shortDescription": "A script initial outlined in cubic zirconia, available across the alphabet.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia on a 16 inch chain",
+      "weight": "10 g",
+      "closure": "Spring ring clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.4,
+    "reviewCount": 189,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "Stones are well matched in size and colour across the piece."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "It has quickly become the piece I reach for by default."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-011",
+    "name": "Navratna Pendant",
+    "category": "pendants",
+    "price": 7400,
+    "mrp": 8400,
+    "images": [
+      "/products/pd-011.webp"
+    ],
+    "shortDescription": "The nine navratna stones arranged in their traditional order around a centre ruby.",
+    "details": {
+      "material": "Gold plated brass with nine coloured stones",
+      "weight": "22 g",
+      "closure": "Screw clasp",
+      "type": "Pendant with chain"
+    },
+    "rating": 4.7,
+    "reviewCount": 88,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "The temple motifs are crisp and clearly defined."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 4,
+        "text": "Slight scratch on arrival, but it was replaced without any argument."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "pd-012",
+    "name": "Terracotta Tribal Pendant",
+    "category": "pendants",
+    "price": 349,
+    "mrp": 470,
+    "images": [
+      "/products/pd-012.webp"
+    ],
+    "shortDescription": "A hand painted terracotta face on a knotted cotton dori, adjustable in length.",
+    "details": {
+      "material": "Kiln fired terracotta with lacquer finish on cotton dori",
+      "weight": "15 g",
+      "closure": "Adjustable dori",
+      "type": "Pendant with dori"
+    },
+    "rating": 4.1,
+    "reviewCount": 253,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "This is the second piece I have bought here and the quality is consistent."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "The beads are uniform and the stringing is tight."
+      },
+      {
+        "name": "Nisha Verma",
+        "rating": 3,
+        "text": "Three stars only because the size ran small for me. Quality is good."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-001",
+    "name": "Silver Payal with Ghungroo",
+    "category": "anklets",
+    "price": 2650,
+    "mrp": 2650,
+    "images": [
+      "/products/ak-001.webp"
+    ],
+    "shortDescription": "A traditional silver payal hung with small ghungroo bells, sold as a pair.",
+    "details": {
+      "material": "925 sterling silver with ghungroo bells",
+      "weight": "38 g (pair)",
+      "closure": "Lobster clasp",
+      "type": "Payal pair"
+    },
+    "rating": 4.7,
+    "reviewCount": 276,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "The design is traditional but the weight is modern. Best of both."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 4,
+        "text": "Simple packaging, but the piece itself is the real thing."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-002",
+    "name": "Oxidised Silver Anklet Pair",
+    "category": "anklets",
+    "price": 899,
+    "mrp": 1040,
+    "images": [
+      "/products/ak-002.webp"
+    ],
+    "shortDescription": "A flat oxidised chain with tribal charms, matched as a pair.",
+    "details": {
+      "material": "Oxidised German silver",
+      "weight": "31 g (pair)",
+      "closure": "S hook",
+      "type": "Anklet pair"
+    },
+    "rating": 4.4,
+    "reviewCount": 344,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "Silver has a nice matte finish rather than a mirror polish."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "The kundan is set flush and does not catch on clothes."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-003",
+    "name": "Beaded Charm Anklet",
+    "category": "anklets",
+    "price": 449,
+    "mrp": 580,
+    "images": [
+      "/products/ak-003.webp"
+    ],
+    "shortDescription": "Coloured glass beads with tiny brass charms, adjustable through an extender chain.",
+    "details": {
+      "material": "Glass beads on nylon thread with brass charms",
+      "weight": "14 g",
+      "closure": "Adjustable extender chain",
+      "type": "Single anklet"
+    },
+    "rating": 4.2,
+    "reviewCount": 391,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "The filigree is fine and even. Clearly hand finished."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 5,
+        "text": "The detailing at the back is as neat as the front."
+      },
+      {
+        "name": "Vidya Ramesh",
+        "rating": 5,
+        "text": "Works for office wear too if you keep the rest simple."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-004",
+    "name": "Temple Motif Payal",
+    "category": "anklets",
+    "price": 3400,
+    "mrp": 4100,
+    "images": [
+      "/products/ak-004.webp"
+    ],
+    "shortDescription": "Temple arches with kemp stone centres, worked along the full length of the payal.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "44 g (pair)",
+      "closure": "Screw clasp",
+      "type": "Payal pair"
+    },
+    "rating": 4.6,
+    "reviewCount": 118,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "Traditional design done tastefully, never gaudy."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-005",
+    "name": "Meenakari Anklet",
+    "category": "anklets",
+    "price": 1550,
+    "mrp": 2050,
+    "images": [
+      "/products/ak-005.webp"
+    ],
+    "shortDescription": "Enamelled meena panels alternating with plain links in an antique finish.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "26 g",
+      "closure": "Lobster clasp",
+      "type": "Single anklet"
+    },
+    "rating": 4.5,
+    "reviewCount": 162,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-006",
+    "name": "Pearl Drop Anklet",
+    "category": "anklets",
+    "price": 1250,
+    "mrp": 1500,
+    "images": [
+      "/products/ak-006.webp"
+    ],
+    "shortDescription": "Small pearls dropped along a fine silver chain, quiet against the ankle.",
+    "details": {
+      "material": "Shell pearls with 925 sterling silver chain",
+      "weight": "19 g",
+      "closure": "Lobster clasp",
+      "type": "Single anklet"
+    },
+    "rating": 4.4,
+    "reviewCount": 147,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Easy to clean with a dry cloth. No special care needed."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 4,
+        "text": "Good finish for the price, though the clasp needs a careful hand."
+      },
+      {
+        "name": "Sakshi Tiwari",
+        "rating": 5,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-007",
+    "name": "Tribal Brass Anklet",
+    "category": "anklets",
+    "price": 599,
+    "mrp": 750,
+    "images": [
+      "/products/ak-007.webp"
+    ],
+    "shortDescription": "A heavy brass anklet with hammered texture and no plating to wear off.",
+    "details": {
+      "material": "Solid brass with antique patina",
+      "weight": "34 g",
+      "closure": "S hook",
+      "type": "Single anklet"
+    },
+    "rating": 4.3,
+    "reviewCount": 208,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "The pink meena work is vibrant and has not chipped."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 4,
+        "text": "Delivery took a day longer than promised but the piece itself is lovely."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-008",
+    "name": "Layered Chain Anklet",
+    "category": "anklets",
+    "price": 1050,
+    "mrp": 1450,
+    "images": [
+      "/products/ak-008.webp"
+    ],
+    "shortDescription": "Three silver chains of different weights layered on one clasp.",
+    "details": {
+      "material": "925 sterling silver, three layer chain",
+      "weight": "21 g",
+      "closure": "Adjustable extender chain",
+      "type": "Single anklet"
+    },
+    "rating": 4.5,
+    "reviewCount": 134,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "The size options were accurate. I ordered by the chart and it fit."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "The pearls have a soft sheen rather than a plastic shine. Very pleased."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "ak-009",
+    "name": "Kundan Anklet Pair",
+    "category": "anklets",
+    "price": 4800,
+    "mrp": 5400,
+    "images": [
+      "/products/ak-009.webp"
+    ],
+    "shortDescription": "Kundan panels between bell drops, the bridal end of the payal range.",
+    "details": {
+      "material": "Gold plated brass with kundan stones and ghungroo bells",
+      "weight": "52 g (pair)",
+      "closure": "Screw clasp",
+      "type": "Payal pair"
+    },
+    "rating": 4.8,
+    "reviewCount": 71,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 5,
+        "text": "The antique gold tone works well with maroon and deep green."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "Plating still looks new after six weeks. No greening on the skin."
+      },
+      {
+        "name": "Ipsita Panda",
+        "rating": 4,
+        "text": "Not as broad as I imagined but it suits my frame better this way."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-010",
+    "name": "Silk Thread Anklet",
+    "category": "anklets",
+    "price": 299,
+    "mrp": 380,
+    "images": [
+      "/products/ak-010.webp"
+    ],
+    "shortDescription": "Silk thread over elastic with a few glass beads, made to slip on and forget.",
+    "details": {
+      "material": "Silk thread with glass beads on an elastic core",
+      "weight": "9 g",
+      "closure": "Slip on",
+      "type": "Single anklet"
+    },
+    "rating": 4,
+    "reviewCount": 462,
+    "reviews": [
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "Feels handmade rather than mass produced."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-011",
+    "name": "Filigree Silver Payal",
+    "category": "anklets",
+    "price": 3250,
+    "mrp": 3750,
+    "images": [
+      "/products/ak-011.webp"
+    ],
+    "shortDescription": "Drawn silver wire worked into filigree links, matched as a pair.",
+    "details": {
+      "material": "925 sterling silver filigree",
+      "weight": "41 g (pair)",
+      "closure": "Lobster clasp",
+      "type": "Payal pair"
+    },
+    "rating": 4.7,
+    "reviewCount": 103,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "It is exactly the shade of green I was hoping for."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 5,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "ak-012",
+    "name": "Rose Gold Chain Anklet",
+    "category": "anklets",
+    "price": 1400,
+    "mrp": 1900,
+    "images": [
+      "/products/ak-012.webp"
+    ],
+    "shortDescription": "A fine rose gold chain with a single cubic zirconia charm at the side.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "17 g",
+      "closure": "Adjustable extender chain",
+      "type": "Single anklet"
+    },
+    "rating": 4.4,
+    "reviewCount": 156,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 5,
+        "text": "Comfortable for long wear, no pinching or pulling."
+      },
+      {
+        "name": "Keerthi Balaji",
+        "rating": 5,
+        "text": "Ordered two, gifted one. Both were finished identically."
+      },
+      {
+        "name": "Meghna Barua",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-001",
+    "name": "Kundan Nath",
+    "category": "nose-pins",
+    "price": 3600,
+    "mrp": 4400,
+    "images": [
+      "/products/np-001.webp"
+    ],
+    "shortDescription": "A kundan nath with a pearl fringe and a support chain that hooks over the ear.",
+    "details": {
+      "material": "Gold plated brass with kundan stones and pearl drops",
+      "weight": "12 g",
+      "type": "Nath with ear chain"
+    },
+    "rating": 4.7,
+    "reviewCount": 164,
+    "reviews": [
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "Good gifting option under budget. I bought three."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "The oxidised finish is even, not patchy like cheaper pieces."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-002",
+    "name": "Diamond Solitaire Nose Pin",
+    "category": "nose-pins",
+    "price": 15400,
+    "mrp": 20000,
+    "images": [
+      "/products/np-002.webp"
+    ],
+    "shortDescription": "A single certified diamond on an 18k gold screw pin, sized for daily wear.",
+    "details": {
+      "material": "18k gold with a certified solitaire diamond",
+      "weight": "1 g",
+      "type": "Screw pin"
+    },
+    "rating": 4.9,
+    "reviewCount": 47,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "The polish is even and there are no rough edges anywhere."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "Beautiful traditional design without looking dated."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-003",
+    "name": "Oxidised Silver Nose Ring",
+    "category": "nose-pins",
+    "price": 349,
+    "mrp": 380,
+    "images": [
+      "/products/np-003.webp"
+    ],
+    "shortDescription": "A plain oxidised hoop with a tiny bead, the everyday nose ring.",
+    "details": {
+      "material": "Oxidised German silver",
+      "weight": "3 g",
+      "type": "Wire hoop"
+    },
+    "rating": 4.2,
+    "reviewCount": 587,
+    "reviews": [
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "Wore it to my sister's sangeet and got compliments all evening."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 5,
+        "text": "Bought for a housewarming gift and it was very well received."
+      },
+      {
+        "name": "Divya Rao",
+        "rating": 5,
+        "text": "Perfect for a Navratri look without going overboard."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-004",
+    "name": "Polki Bridal Nath",
+    "category": "nose-pins",
+    "price": 9200,
+    "mrp": 12700,
+    "images": [
+      "/products/np-004.webp"
+    ],
+    "shortDescription": "A large Maharashtrian style polki nath with a pearl body and a hair chain.",
+    "details": {
+      "material": "Gold plated brass with polki stones and shell pearls",
+      "weight": "18 g",
+      "type": "Nath with ear chain"
+    },
+    "rating": 4.8,
+    "reviewCount": 82,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 5,
+        "text": "The gold tone is warm rather than brassy, which was my worry."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-005",
+    "name": "Pearl Drop Nose Pin",
+    "category": "nose-pins",
+    "price": 899,
+    "mrp": 1080,
+    "images": [
+      "/products/np-005.webp"
+    ],
+    "shortDescription": "A single small pearl on a press fit pin, light enough to be forgotten.",
+    "details": {
+      "material": "925 sterling silver with a shell pearl drop",
+      "weight": "2 g",
+      "type": "Press fit pin"
+    },
+    "rating": 4.4,
+    "reviewCount": 231,
+    "reviews": [
+      {
+        "name": "Hemal Vora",
+        "rating": 5,
+        "text": "The enamel work is detailed and the shade has not faded with regular wear."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 5,
+        "text": "Reordered a second one in a different colour after wearing the first."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "np-006",
+    "name": "Meenakari Nath with Chain",
+    "category": "nose-pins",
+    "price": 2450,
+    "mrp": 3100,
+    "images": [
+      "/products/np-006.webp"
+    ],
+    "shortDescription": "A meena painted nath in rose and green with a fine ear chain.",
+    "details": {
+      "material": "Brass with hand painted meenakari enamel",
+      "weight": "10 g",
+      "type": "Nath with ear chain"
+    },
+    "rating": 4.5,
+    "reviewCount": 138,
+    "reviews": [
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "Feels sturdy, not hollow. Worth the money."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "Great for a bride's sister or a friend of the family."
+      },
+      {
+        "name": "Sanjana Rathore",
+        "rating": 5,
+        "text": "A friend asked me to order the same one for her."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-007",
+    "name": "Temple Motif Nose Ring",
+    "category": "nose-pins",
+    "price": 1750,
+    "mrp": 2000,
+    "images": [
+      "/products/np-007.webp"
+    ],
+    "shortDescription": "A temple motif worked onto a hoop, with a single kemp stone at the front.",
+    "details": {
+      "material": "Antique gold plated brass with kemp stones",
+      "weight": "7 g",
+      "type": "Wire hoop"
+    },
+    "rating": 4.6,
+    "reviewCount": 112,
+    "reviews": [
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "My daughter borrowed it the day it arrived and I have not seen it since."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 5,
+        "text": "Comfortable clasp that I can manage on my own without help."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-008",
+    "name": "Emerald Stud Nose Pin",
+    "category": "nose-pins",
+    "price": 5600,
+    "mrp": 7500,
+    "images": [
+      "/products/np-008.webp"
+    ],
+    "shortDescription": "One emerald green stone in a closed gold setting on a screw pin.",
+    "details": {
+      "material": "18k gold with an emerald green stone",
+      "weight": "1 g",
+      "type": "Screw pin"
+    },
+    "rating": 4.7,
+    "reviewCount": 66,
+    "reviews": [
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 5,
+        "text": "The thread work is tight and there are no loose ends."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-009",
+    "name": "Tribal Silver Nose Ring",
+    "category": "nose-pins",
+    "price": 549,
+    "mrp": 680,
+    "images": [
+      "/products/np-009.webp"
+    ],
+    "shortDescription": "A wide tribal hoop with etched banding, worn in the Rajasthani style.",
+    "details": {
+      "material": "925 sterling silver with antique finish",
+      "weight": "5 g",
+      "type": "Wire hoop"
+    },
+    "rating": 4.3,
+    "reviewCount": 197,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 5,
+        "text": "My mother in law asked where I had it made."
+      },
+      {
+        "name": "Farah Sheikh",
+        "rating": 5,
+        "text": "The turquoise has natural veining, which I prefer to a flat colour."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-010",
+    "name": "Rose Gold CZ Nose Pin",
+    "category": "nose-pins",
+    "price": 799,
+    "mrp": 930,
+    "images": [
+      "/products/np-010.webp"
+    ],
+    "shortDescription": "A single cubic zirconia in a rose gold cup on a press fit pin.",
+    "details": {
+      "material": "Rose gold plated brass with cubic zirconia",
+      "weight": "1 g",
+      "type": "Press fit pin"
+    },
+    "rating": 4.3,
+    "reviewCount": 174,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "The green stones are a deeper shade in person than on screen, which I liked."
+      },
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "Great everyday piece that does not need much care."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-011",
+    "name": "Jadau Nath",
+    "category": "nose-pins",
+    "price": 12800,
+    "mrp": 16500,
+    "images": [
+      "/products/np-011.webp"
+    ],
+    "shortDescription": "A full jadau nath with a pearl fringe, made for the wedding day itself.",
+    "details": {
+      "material": "Gold plated brass with jadau setting and pearl fringe",
+      "weight": "21 g",
+      "type": "Nath with ear chain"
+    },
+    "rating": 4.9,
+    "reviewCount": 38,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "Value for money. I have paid more for less at local shops."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "Bought during a sale and it still felt underpriced."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "np-012",
+    "name": "Silver Clip On Nose Ring",
+    "category": "nose-pins",
+    "price": 399,
+    "mrp": 399,
+    "images": [
+      "/products/np-012.webp"
+    ],
+    "shortDescription": "A clip on hoop that grips without a piercing, tensioned to stay put.",
+    "details": {
+      "material": "925 sterling silver",
+      "weight": "3 g",
+      "type": "Clip on"
+    },
+    "rating": 4,
+    "reviewCount": 408,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 4,
+        "text": "Took a star off as the chain is a little short for my liking."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "Strong enough for a full day of dancing at a reception."
+      },
+      {
+        "name": "Pallavi Chandran",
+        "rating": 5,
+        "text": "Genuinely happy with this. Would order again."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  }
+]
