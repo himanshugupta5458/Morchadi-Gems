@@ -4,6 +4,21 @@ Where images live, how to put real photography in, and how to generate placehold
 products. The reasoning behind all of it is in
 [ADR-006](../decisions/ADR-006-product-image-convention.md).
 
+## Which files are real photography
+
+`public/products/P001.webp` … `P021.webp` are **the owner's own product photographs**, not
+generated placeholders. They exist nowhere else in this repository and are not reproducible
+by any script here. The other 79 files are generated placeholders.
+
+Nothing in the tooling can tell them apart. `generate:placeholders` never overwrites an
+existing file, which is what protects them — but the `rm -rf public/products` recipe further
+down this page would delete them, so **do not run it**. It was written when every file in
+that folder was regenerable, and it no longer is.
+
+The 21 products they belong to are the owner's real catalogue, imported in prompt 15; the
+id-is-the-P-code decision is in
+[ADR-016](../decisions/ADR-016-real-product-import.md).
+
 ## Where images live
 
 Everything is a local static file under `/public`. There is no CDN, no image host, and no
@@ -12,7 +27,7 @@ gone off the convention.
 
 ```
 public/
-├── products/     {id}.webp      — one per product, 100 files
+├── products/     {id}.webp      — one per product, 100 files (P001–P021 real, 79 placeholder)
 ├── categories/   {slug}.webp    — one per category, 8 files
 └── hero/         home-hero.webp — the home page hero panel, 1 file
 ```
@@ -82,13 +97,16 @@ To redo a placeholder you no longer want, delete that one file and re-run:
 rm public/products/nk-001.webp && npm run generate:placeholders
 ```
 
-To redo all of them after changing the artwork in the generator, delete the folders. **Only
-do this while every file in them is still a generated placeholder** — once real photos are
-in there, this deletes them.
+To redo all of them after changing the artwork in the generator, you would delete the
+folders and regenerate. **That is no longer safe and the command is left here only so it is
+recognisable when someone finds it in an old note:**
 
 ```bash
+# DO NOT RUN — deletes P001.webp … P021.webp, the owner's only copies
 rm -rf public/products public/categories && npm run generate:placeholders
 ```
+
+Delete individual placeholder files instead, by name.
 
 ## What the placeholders look like
 
@@ -125,7 +143,8 @@ authoring step; production only serves committed files.
 
 ## What validation checks
 
-`npm run validate:products` asserts, for all 100 products:
+`npm run validate:products` asserts, for all 100 products — the owner's 21 and the 79
+placeholders alike:
 
 - `images[0]` is exactly `/products/{id}.webp`
 - that file exists on disk

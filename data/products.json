@@ -33,7 +33,7 @@
         "text": "Perfect for a Navratri look without going overboard."
       }
     ],
-    "featured": true,
+    "featured": false,
     "isNew": false,
     "inStock": true
   },
@@ -350,72 +350,6 @@
     "inStock": true
   },
   {
-    "id": "nk-011",
-    "name": "Ruby Kundan Bridal Necklace",
-    "category": "necklaces",
-    "price": 16800,
-    "mrp": 18500,
-    "images": [
-      "/products/nk-011.webp"
-    ],
-    "shortDescription": "A full bridal necklace of kundan panels punctuated with deep ruby drops.",
-    "details": {
-      "material": "Gold plated brass with kundan and ruby red stones",
-      "weight": "71 g",
-      "closure": "Adjustable dori"
-    },
-    "rating": 4.8,
-    "reviewCount": 109,
-    "reviews": [
-      {
-        "name": "Shalini Raut",
-        "rating": 5,
-        "text": "The mirror work catches light nicely under indoor lighting."
-      },
-      {
-        "name": "Prerna Chopra",
-        "rating": 3,
-        "text": "The stones are glued rather than set in a couple of places, but they are holding."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "nk-012",
-    "name": "Silver Filigree Choker",
-    "category": "necklaces",
-    "price": 2950,
-    "mrp": 4050,
-    "images": [
-      "/products/nk-012.webp"
-    ],
-    "shortDescription": "Hand drawn silver wire worked into a fine filigree lattice, light on the neck.",
-    "details": {
-      "material": "925 sterling silver filigree",
-      "weight": "31 g",
-      "closure": "Lobster clasp"
-    },
-    "rating": 4.6,
-    "reviewCount": 156,
-    "reviews": [
-      {
-        "name": "Rimjhim Das",
-        "rating": 5,
-        "text": "Fit is snug but not tight. True to the measurements listed."
-      },
-      {
-        "name": "Jyoti Ramachandran",
-        "rating": 5,
-        "text": "The finish is consistent across both pieces of the pair."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
     "id": "nk-013",
     "name": "Terracotta Handpainted Necklace",
     "category": "necklaces",
@@ -450,7 +384,7 @@
       }
     ],
     "featured": false,
-    "isNew": true,
+    "isNew": false,
     "inStock": true
   },
   {
@@ -805,7 +739,7 @@
       }
     ],
     "featured": false,
-    "isNew": true,
+    "isNew": false,
     "inStock": true
   },
   {
@@ -879,489 +813,6 @@
     ],
     "featured": false,
     "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "er-013",
-    "name": "Silver Filigree Danglers",
-    "category": "earrings",
-    "price": 1950,
-    "mrp": 2500,
-    "images": [
-      "/products/er-013.webp"
-    ],
-    "shortDescription": "Fine silver wirework in a teardrop dangler, matte finished rather than mirror polished.",
-    "details": {
-      "material": "925 sterling silver filigree",
-      "weight": "13 g (pair)",
-      "closure": "Push back",
-      "type": "Dangler"
-    },
-    "rating": 4.6,
-    "reviewCount": 132,
-    "reviews": [
-      {
-        "name": "Rashmi Kamath",
-        "rating": 5,
-        "text": "Feels handmade rather than mass produced."
-      },
-      {
-        "name": "Snigdha Mohanty",
-        "rating": 5,
-        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-001",
-    "name": "Kundan Cocktail Ring",
-    "category": "rings",
-    "price": 1750,
-    "mrp": 2000,
-    "images": [
-      "/products/rg-001.webp"
-    ],
-    "shortDescription": "A broad kundan face on an adjustable shank, sized to fit most fingers.",
-    "details": {
-      "material": "Gold plated brass with kundan stones",
-      "weight": "9 g",
-      "type": "Adjustable"
-    },
-    "rating": 4.5,
-    "reviewCount": 243,
-    "reviews": [
-      {
-        "name": "Shalini Raut",
-        "rating": 5,
-        "text": "It is exactly the shade of green I was hoping for."
-      },
-      {
-        "name": "Prerna Chopra",
-        "rating": 5,
-        "text": "Comfortable enough that I forgot I was wearing it."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-002",
-    "name": "Polki Solitaire Ring",
-    "category": "rings",
-    "price": 9400,
-    "mrp": 12800,
-    "images": [
-      "/products/rg-002.webp"
-    ],
-    "shortDescription": "One uncut polki stone in a closed setting, quiet enough for daily wear.",
-    "details": {
-      "material": "Gold plated brass with a single polki stone",
-      "weight": "7 g",
-      "type": "Fixed, size 14"
-    },
-    "rating": 4.8,
-    "reviewCount": 67,
-    "reviews": [
-      {
-        "name": "Rimjhim Das",
-        "rating": 5,
-        "text": "Comfortable for long wear, no pinching or pulling."
-      },
-      {
-        "name": "Jyoti Ramachandran",
-        "rating": 5,
-        "text": "Ordered two, gifted one. Both were finished identically."
-      },
-      {
-        "name": "Nisha Verma",
-        "rating": 5,
-        "text": "It sits flat and does not spin around, which is my usual complaint."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-003",
-    "name": "Oxidised Silver Adjustable Ring",
-    "category": "rings",
-    "price": 399,
-    "mrp": 490,
-    "images": [
-      "/products/rg-003.webp"
-    ],
-    "shortDescription": "An oxidised band with tribal etching that opens to fit any finger.",
-    "details": {
-      "material": "Oxidised German silver",
-      "weight": "6 g",
-      "type": "Adjustable"
-    },
-    "rating": 4.2,
-    "reviewCount": 612,
-    "reviews": [
-      {
-        "name": "Hemal Vora",
-        "rating": 5,
-        "text": "Good gifting option under budget. I bought three."
-      },
-      {
-        "name": "Nikhil Bhardwaj",
-        "rating": 5,
-        "text": "The oxidised finish is even, not patchy like cheaper pieces."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-004",
-    "name": "Meenakari Enamel Band",
-    "category": "rings",
-    "price": 1100,
-    "mrp": 1450,
-    "images": [
-      "/products/rg-004.webp"
-    ],
-    "shortDescription": "A slim band carrying a run of blue and green meena work.",
-    "details": {
-      "material": "Brass with hand painted meenakari enamel",
-      "weight": "7 g",
-      "type": "Fixed, size 16"
-    },
-    "rating": 4.4,
-    "reviewCount": 188,
-    "reviews": [
-      {
-        "name": "Bindu Achary",
-        "rating": 5,
-        "text": "The polish is even and there are no rough edges anywhere."
-      },
-      {
-        "name": "Sneha Iyer",
-        "rating": 5,
-        "text": "Beautiful traditional design without looking dated."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-005",
-    "name": "Emerald Statement Ring",
-    "category": "rings",
-    "price": 12200,
-    "mrp": 12200,
-    "images": [
-      "/products/rg-005.webp"
-    ],
-    "shortDescription": "A large emerald green cabochon ringed by kundan, built to be the only ring you wear.",
-    "details": {
-      "material": "Gold plated brass with emerald green stone and kundan halo",
-      "weight": "12 g",
-      "type": "Fixed, size 15"
-    },
-    "rating": 4.9,
-    "reviewCount": 39,
-    "reviews": [
-      {
-        "name": "Anupama Shetty",
-        "rating": 5,
-        "text": "Wore it to my sister's sangeet and got compliments all evening."
-      },
-      {
-        "name": "Ananya Bose",
-        "rating": 5,
-        "text": "Bought for a housewarming gift and it was very well received."
-      },
-      {
-        "name": "Vidya Ramesh",
-        "rating": 5,
-        "text": "Perfect for a Navratri look without going overboard."
-      }
-    ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-006",
-    "name": "Temple Motif Ring",
-    "category": "rings",
-    "price": 2350,
-    "mrp": 3250,
-    "images": [
-      "/products/rg-006.webp"
-    ],
-    "shortDescription": "A temple deity motif with kemp stone accents on an adjustable shank.",
-    "details": {
-      "material": "Antique gold plated brass with kemp stones",
-      "weight": "10 g",
-      "type": "Adjustable"
-    },
-    "rating": 4.6,
-    "reviewCount": 154,
-    "reviews": [
-      {
-        "name": "Vivek Ranganathan",
-        "rating": 5,
-        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
-      },
-      {
-        "name": "Swati Joshi",
-        "rating": 5,
-        "text": "The gold tone is warm rather than brassy, which was my worry."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-007",
-    "name": "Pearl Cluster Ring",
-    "category": "rings",
-    "price": 1950,
-    "mrp": 2350,
-    "images": [
-      "/products/rg-007.webp"
-    ],
-    "shortDescription": "A cluster of small pearls massed into a soft dome.",
-    "details": {
-      "material": "Gold plated brass with shell pearls",
-      "weight": "8 g",
-      "type": "Fixed, size 14"
-    },
-    "rating": 4.5,
-    "reviewCount": 121,
-    "reviews": [
-      {
-        "name": "Aarti Deshmukh",
-        "rating": 5,
-        "text": "The enamel work is detailed and the shade has not faded with regular wear."
-      },
-      {
-        "name": "Radhika Mehta",
-        "rating": 5,
-        "text": "Reordered a second one in a different colour after wearing the first."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-008",
-    "name": "Jadau Ruby Ring",
-    "category": "rings",
-    "price": 8600,
-    "mrp": 10800,
-    "images": [
-      "/products/rg-008.webp"
-    ],
-    "shortDescription": "Ruby red stones bedded in gold in the jadau manner, with a filigree gallery.",
-    "details": {
-      "material": "Gold plated brass with jadau setting and ruby red stones",
-      "weight": "11 g",
-      "type": "Fixed, size 16"
-    },
-    "rating": 4.8,
-    "reviewCount": 58,
-    "reviews": [
-      {
-        "name": "Kavya Menon",
-        "rating": 5,
-        "text": "Feels sturdy, not hollow. Worth the money."
-      },
-      {
-        "name": "Manasi Patil",
-        "rating": 5,
-        "text": "Great for a bride's sister or a friend of the family."
-      },
-      {
-        "name": "Sakshi Tiwari",
-        "rating": 5,
-        "text": "A friend asked me to order the same one for her."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-009",
-    "name": "Silver Bichhiya Toe Ring Pair",
-    "category": "rings",
-    "price": 549,
-    "mrp": 630,
-    "images": [
-      "/products/rg-009.webp"
-    ],
-    "shortDescription": "A traditional bichhiya pair with a simple etched top, open backed to adjust.",
-    "details": {
-      "material": "925 sterling silver",
-      "weight": "5 g (pair)",
-      "type": "Toe ring pair, adjustable"
-    },
-    "rating": 4.3,
-    "reviewCount": 431,
-    "reviews": [
-      {
-        "name": "Pooja Reddy",
-        "rating": 5,
-        "text": "My daughter borrowed it the day it arrived and I have not seen it since."
-      },
-      {
-        "name": "Sunita Kaur",
-        "rating": 5,
-        "text": "Comfortable clasp that I can manage on my own without help."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-010",
-    "name": "Rose Gold Stackable Ring Set",
-    "category": "rings",
-    "price": 2200,
-    "mrp": 2950,
-    "images": [
-      "/products/rg-010.webp"
-    ],
-    "shortDescription": "Three slim bands meant to be worn together or spread across fingers.",
-    "details": {
-      "material": "Rose gold plated brass with cubic zirconia",
-      "weight": "9 g (set of three)",
-      "type": "Stackable set, size 15"
-    },
-    "rating": 4.5,
-    "reviewCount": 176,
-    "reviews": [
-      {
-        "name": "Lakshmi Narayanan",
-        "rating": 5,
-        "text": "Simple, elegant and does not overpower a plain outfit."
-      },
-      {
-        "name": "Trisha Dutta",
-        "rating": 5,
-        "text": "The thread work is tight and there are no loose ends."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-011",
-    "name": "Navratna Nine Gem Ring",
-    "category": "rings",
-    "price": 14500,
-    "mrp": 18000,
-    "images": [
-      "/products/rg-011.webp"
-    ],
-    "shortDescription": "The nine navratna stones set in their traditional astrological order.",
-    "details": {
-      "material": "Gold plated brass with nine coloured stones",
-      "weight": "13 g",
-      "type": "Fixed, size 16"
-    },
-    "rating": 4.7,
-    "reviewCount": 84,
-    "reviews": [
-      {
-        "name": "Harini Krishnan",
-        "rating": 5,
-        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
-      },
-      {
-        "name": "Charulata Mishra",
-        "rating": 5,
-        "text": "My mother in law asked where I had it made."
-      },
-      {
-        "name": "Ipsita Panda",
-        "rating": 5,
-        "text": "The turquoise has natural veining, which I prefer to a flat colour."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-012",
-    "name": "Filigree Silver Ring",
-    "category": "rings",
-    "price": 799,
-    "mrp": 930,
-    "images": [
-      "/products/rg-012.webp"
-    ],
-    "shortDescription": "A light filigree face in drawn silver wire on a plain band.",
-    "details": {
-      "material": "925 sterling silver filigree",
-      "weight": "5 g",
-      "type": "Fixed, size 14"
-    },
-    "rating": 4.4,
-    "reviewCount": 209,
-    "reviews": [
-      {
-        "name": "Ruchi Agarwal",
-        "rating": 5,
-        "text": "The green stones are a deeper shade in person than on screen, which I liked."
-      },
-      {
-        "name": "Yamini Reddy",
-        "rating": 5,
-        "text": "Great everyday piece that does not need much care."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "rg-013",
-    "name": "Thumb Ring with Turquoise",
-    "category": "rings",
-    "price": 899,
-    "mrp": 1160,
-    "images": [
-      "/products/rg-013.webp"
-    ],
-    "shortDescription": "A wide oxidised thumb ring centred on a turquoise cabochon.",
-    "details": {
-      "material": "Oxidised German silver with reconstituted turquoise",
-      "weight": "8 g",
-      "type": "Adjustable"
-    },
-    "rating": 4.3,
-    "reviewCount": 147,
-    "reviews": [
-      {
-        "name": "Payal Jain",
-        "rating": 5,
-        "text": "Value for money. I have paid more for less at local shops."
-      },
-      {
-        "name": "Devika Warrier",
-        "rating": 5,
-        "text": "Bought during a sale and it still felt underpriced."
-      }
-    ],
-    "featured": false,
-    "isNew": true,
     "inStock": true
   },
   {
@@ -1506,7 +957,7 @@
         "text": "Pairs well with both silk and cotton. More versatile than I expected."
       }
     ],
-    "featured": true,
+    "featured": false,
     "isNew": false,
     "inStock": true
   },
@@ -1756,40 +1207,6 @@
     ],
     "featured": false,
     "isNew": true,
-    "inStock": true
-  },
-  {
-    "id": "br-012",
-    "name": "Diamond Cut Silver Bracelet",
-    "category": "bracelets",
-    "price": 3900,
-    "mrp": 4300,
-    "images": [
-      "/products/br-012.webp"
-    ],
-    "shortDescription": "A machine faceted silver chain that throws light from every angle.",
-    "details": {
-      "material": "925 sterling silver, diamond cut finish",
-      "weight": "27 g",
-      "closure": "Lobster clasp",
-      "type": "Chain"
-    },
-    "rating": 4.7,
-    "reviewCount": 106,
-    "reviews": [
-      {
-        "name": "Pooja Reddy",
-        "rating": 5,
-        "text": "Looks far more expensive than what I paid."
-      },
-      {
-        "name": "Sunita Kaur",
-        "rating": 5,
-        "text": "The stone setting is neat and nothing has come loose after a month of use."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
     "inStock": true
   },
   {
@@ -2183,7 +1600,7 @@
       }
     ],
     "featured": false,
-    "isNew": true,
+    "isNew": false,
     "inStock": true
   },
   {
@@ -2214,45 +1631,6 @@
         "name": "Ananya Bose",
         "rating": 5,
         "text": "Reordered a second one in a different colour after wearing the first."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
-    "id": "bn-013",
-    "name": "Tribal Brass Kada",
-    "category": "bangles",
-    "price": 899,
-    "mrp": 1260,
-    "images": [
-      "/products/bn-013.webp"
-    ],
-    "shortDescription": "A heavy unpolished brass kada with hammered tribal texture.",
-    "details": {
-      "material": "Solid brass with antique patina",
-      "weight": "72 g",
-      "closure": "Slip on",
-      "type": "Kada"
-    },
-    "rating": 4.3,
-    "reviewCount": 226,
-    "reviews": [
-      {
-        "name": "Vivek Ranganathan",
-        "rating": 5,
-        "text": "Feels sturdy, not hollow. Worth the money."
-      },
-      {
-        "name": "Swati Joshi",
-        "rating": 5,
-        "text": "Great for a bride's sister or a friend of the family."
-      },
-      {
-        "name": "Nandini Bhatt",
-        "rating": 5,
-        "text": "A friend asked me to order the same one for her."
       }
     ],
     "featured": false,
@@ -2323,7 +1701,7 @@
         "text": "The thread work is tight and there are no loose ends."
       }
     ],
-    "featured": true,
+    "featured": false,
     "isNew": false,
     "inStock": true
   },
@@ -2615,40 +1993,6 @@
     "inStock": true
   },
   {
-    "id": "pd-011",
-    "name": "Navratna Pendant",
-    "category": "pendants",
-    "price": 7400,
-    "mrp": 8400,
-    "images": [
-      "/products/pd-011.webp"
-    ],
-    "shortDescription": "The nine navratna stones arranged in their traditional order around a centre ruby.",
-    "details": {
-      "material": "Gold plated brass with nine coloured stones",
-      "weight": "22 g",
-      "closure": "Screw clasp",
-      "type": "Pendant with chain"
-    },
-    "rating": 4.7,
-    "reviewCount": 88,
-    "reviews": [
-      {
-        "name": "Shalini Raut",
-        "rating": 5,
-        "text": "The temple motifs are crisp and clearly defined."
-      },
-      {
-        "name": "Prerna Chopra",
-        "rating": 4,
-        "text": "Slight scratch on arrival, but it was replaced without any argument."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
     "id": "pd-012",
     "name": "Terracotta Tribal Pendant",
     "category": "pendants",
@@ -2717,7 +2061,7 @@
         "text": "Simple packaging, but the piece itself is the real thing."
       }
     ],
-    "featured": true,
+    "featured": false,
     "isNew": false,
     "inStock": true
   },
@@ -3043,40 +2387,6 @@
     "inStock": true
   },
   {
-    "id": "ak-011",
-    "name": "Filigree Silver Payal",
-    "category": "anklets",
-    "price": 3250,
-    "mrp": 3750,
-    "images": [
-      "/products/ak-011.webp"
-    ],
-    "shortDescription": "Drawn silver wire worked into filigree links, matched as a pair.",
-    "details": {
-      "material": "925 sterling silver filigree",
-      "weight": "41 g (pair)",
-      "closure": "Lobster clasp",
-      "type": "Payal pair"
-    },
-    "rating": 4.7,
-    "reviewCount": 103,
-    "reviews": [
-      {
-        "name": "Payal Jain",
-        "rating": 5,
-        "text": "It is exactly the shade of green I was hoping for."
-      },
-      {
-        "name": "Devika Warrier",
-        "rating": 5,
-        "text": "Comfortable enough that I forgot I was wearing it."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
     "id": "ak-012",
     "name": "Rose Gold Chain Anklet",
     "category": "anklets",
@@ -3248,7 +2558,7 @@
         "text": "The gold tone is warm rather than brassy, which was my worry."
       }
     ],
-    "featured": true,
+    "featured": false,
     "isNew": false,
     "inStock": true
   },
@@ -3390,44 +2700,6 @@
     "inStock": true
   },
   {
-    "id": "np-009",
-    "name": "Tribal Silver Nose Ring",
-    "category": "nose-pins",
-    "price": 549,
-    "mrp": 680,
-    "images": [
-      "/products/np-009.webp"
-    ],
-    "shortDescription": "A wide tribal hoop with etched banding, worn in the Rajasthani style.",
-    "details": {
-      "material": "925 sterling silver with antique finish",
-      "weight": "5 g",
-      "type": "Wire hoop"
-    },
-    "rating": 4.3,
-    "reviewCount": 197,
-    "reviews": [
-      {
-        "name": "Aarti Deshmukh",
-        "rating": 5,
-        "text": "Exactly the antique finish I was looking for and hard to find elsewhere."
-      },
-      {
-        "name": "Radhika Mehta",
-        "rating": 5,
-        "text": "My mother in law asked where I had it made."
-      },
-      {
-        "name": "Farah Sheikh",
-        "rating": 5,
-        "text": "The turquoise has natural veining, which I prefer to a flat colour."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
-  },
-  {
     "id": "np-010",
     "name": "Rose Gold CZ Nose Pin",
     "category": "nose-pins",
@@ -3528,6 +2800,885 @@
       }
     ],
     "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P001",
+    "name": "Wave Band Initial Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 299,
+    "images": [
+      "/products/P001.webp"
+    ],
+    "shortDescription": "A slim gold-tone band with a softly waved face carrying the single initial you choose.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "type": "Adjustable open band",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 128,
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      },
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true,
+    "options": [
+      {
+        "name": "Letter",
+        "values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "Y",
+          "Z"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P002",
+    "name": "Teardrop Glass Locket Necklace",
+    "category": "necklaces",
+    "price": 450,
+    "mrp": 999,
+    "images": [
+      "/products/P002.webp"
+    ],
+    "shortDescription": "A gold-tone teardrop locket in clear glass on a fine rolo chain, made to be opened and filled.",
+    "details": {
+      "material": "18K gold plated brass with a glass front",
+      "type": "Openable floating locket",
+      "closure": "Lobster clasp"
+    },
+    "rating": 4.8,
+    "reviewCount": 96,
+    "reviews": [
+      {
+        "name": "Aarti Deshmukh",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Ruchi Agarwal",
+        "rating": 5,
+        "text": "The detailing at the back is as neat as the front."
+      },
+      {
+        "name": "Rimjhim Das",
+        "rating": 5,
+        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P003",
+    "name": "Heart Floating Locket with Birthstone Charms",
+    "category": "necklaces",
+    "price": 450,
+    "mrp": 999,
+    "images": [
+      "/products/P003.webp"
+    ],
+    "shortDescription": "An open heart locket on a satellite chain, supplied with twelve coloured birthstone charms to arrange as you like.",
+    "details": {
+      "material": "18K gold plated brass with crystal charms",
+      "type": "Floating locket with twelve charms",
+      "closure": "Lobster clasp"
+    },
+    "rating": 4.9,
+    "reviewCount": 142,
+    "reviews": [
+      {
+        "name": "Manasi Patil",
+        "rating": 5,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Sonal Trivedi",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      },
+      {
+        "name": "Nandini Bhatt",
+        "rating": 5,
+        "text": "Great for a bride's sister or a friend of the family."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P004",
+    "name": "Heart Crystal Adjustable Ring",
+    "category": "rings",
+    "price": 499,
+    "mrp": 799,
+    "images": [
+      "/products/P004.webp"
+    ],
+    "shortDescription": "A faceted clear heart held in a polished gold-tone frame on an open band that adjusts to the finger.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Faceted clear crystal heart",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.8,
+    "reviewCount": 211,
+    "reviews": [
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      },
+      {
+        "name": "Snigdha Mohanty",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      },
+      {
+        "name": "Nisha Verma",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P005",
+    "name": "Silver Initial Signet Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 299,
+    "images": [
+      "/products/P005.webp"
+    ],
+    "shortDescription": "A fine silver-tone band with a marquise signet face engraved with a single initial.",
+    "details": {
+      "material": "Rhodium plated brass",
+      "type": "Fixed band",
+      "size": "Free size"
+    },
+    "rating": 4.6,
+    "reviewCount": 174,
+    "reviews": [
+      {
+        "name": "Sunita Kaur",
+        "rating": 4,
+        "text": "Silver has a nice matte finish rather than a mirror polish."
+      },
+      {
+        "name": "Aditya Pawar",
+        "rating": 4,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Ipsita Panda",
+        "rating": 4,
+        "text": "The polish is even and there are no rough edges anywhere."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true,
+    "options": [
+      {
+        "name": "Letter",
+        "values": [
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "T",
+          "U",
+          "V",
+          "W",
+          "Z"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P006",
+    "name": "Floating Locket Pendant",
+    "category": "pendants",
+    "price": 450,
+    "mrp": 450,
+    "images": [
+      "/products/P006.webp"
+    ],
+    "shortDescription": "A glass-front locket that opens to hold charms, in a choice of four shapes, on a matching rolo chain.",
+    "details": {
+      "material": "18K gold plated brass with a glass front",
+      "type": "Openable floating locket",
+      "closure": "Lobster clasp"
+    },
+    "rating": 4.7,
+    "reviewCount": 63,
+    "reviews": [
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "The detailing at the back is as neat as the front."
+      },
+      {
+        "name": "Shalini Raut",
+        "rating": 5,
+        "text": "Arrived well packed in a velvet pouch with a polishing cloth."
+      },
+      {
+        "name": "Meghna Barua",
+        "rating": 5,
+        "text": "Genuinely happy with this. Would order again."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false,
+    "options": [
+      {
+        "name": "Shape",
+        "values": [
+          "Oval",
+          "Heart",
+          "Rectangle",
+          "Round"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P007",
+    "name": "Hug Embrace Open Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 199,
+    "images": [
+      "/products/P007.webp"
+    ],
+    "shortDescription": "Two sculpted hands meeting in an embrace around an open gold-tone band.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "type": "Open cuff band",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.6,
+    "reviewCount": 245,
+    "reviews": [
+      {
+        "name": "Trisha Dutta",
+        "rating": 4,
+        "text": "Feels handmade rather than mass produced."
+      },
+      {
+        "name": "Prerna Chopra",
+        "rating": 4,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      },
+      {
+        "name": "Divya Rao",
+        "rating": 4,
+        "text": "Good gifting option under budget. I bought three."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "P008",
+    "name": "Silver Bow Twist Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 210,
+    "images": [
+      "/products/P008.webp"
+    ],
+    "shortDescription": "A small crystal bow on a finely twisted band in a bright rhodium finish.",
+    "details": {
+      "material": "Rhodium plated brass",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.5,
+    "reviewCount": 132,
+    "reviews": [
+      {
+        "name": "Pallavi Chandran",
+        "rating": 4,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      },
+      {
+        "name": "Jyoti Ramachandran",
+        "rating": 4,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      },
+      {
+        "name": "Sanjana Rathore",
+        "rating": 4,
+        "text": "Simple packaging, but the piece itself is the real thing."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "P009",
+    "name": "Watch Dial Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 199,
+    "images": [
+      "/products/P009.webp"
+    ],
+    "shortDescription": "A black watch face on a bracelet-link band — a whole wristwatch shrunk down to a ring.",
+    "details": {
+      "material": "Stainless steel",
+      "type": "Decorative watch dial, not a working timepiece",
+      "size": "Free size"
+    },
+    "rating": 4.5,
+    "reviewCount": 188,
+    "reviews": [
+      {
+        "name": "Harini Krishnan",
+        "rating": 4,
+        "text": "I wear it with jeans as easily as with a saree."
+      },
+      {
+        "name": "Hemal Vora",
+        "rating": 4,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Radhika Mehta",
+        "rating": 4,
+        "text": "Value for money. I have paid more for less at local shops."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P010",
+    "name": "Mini Watch Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 420,
+    "images": [
+      "/products/P010.webp"
+    ],
+    "shortDescription": "A doll-sized watch ring with a pearl-white dial and a woven link band, in silver or golden.",
+    "details": {
+      "material": "Stainless steel",
+      "type": "Decorative watch dial, not a working timepiece",
+      "size": "Free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 302,
+    "reviews": [
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Nikhil Bhardwaj",
+        "rating": 5,
+        "text": "Reordered a second one in a different colour after wearing the first."
+      },
+      {
+        "name": "Farah Sheikh",
+        "rating": 5,
+        "text": "Comfortable for long wear, no pinching or pulling."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true,
+    "options": [
+      {
+        "name": "Colour",
+        "values": [
+          "Silver",
+          "Golden"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P011",
+    "name": "Love Knot Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 599,
+    "images": [
+      "/products/P011.webp"
+    ],
+    "shortDescription": "A single fine wire tied into a soft knot on a slim gold-tone band.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "type": "Fixed band",
+      "size": "Free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 219,
+    "reviews": [
+      {
+        "name": "Yamini Reddy",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Ishita Sen",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      },
+      {
+        "name": "Pooja Reddy",
+        "rating": 5,
+        "text": "It has quickly become the piece I reach for by default."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "P012",
+    "name": "Clear Heart Statement Ring",
+    "category": "rings",
+    "price": 499,
+    "mrp": 799,
+    "images": [
+      "/products/P012.webp"
+    ],
+    "shortDescription": "An oversized faceted heart in a scalloped gold-tone setting on an adjustable open band.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Faceted clear crystal heart",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.8,
+    "reviewCount": 167,
+    "reviews": [
+      {
+        "name": "Payal Jain",
+        "rating": 5,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Bindu Achary",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      },
+      {
+        "name": "Sunita Kaur",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P013",
+    "name": "Pink Baguette Stacking Ring",
+    "category": "rings",
+    "price": 349,
+    "mrp": 699,
+    "images": [
+      "/products/P013.webp"
+    ],
+    "shortDescription": "A single pink baguette set across a hand-textured rose gold-tone band, made to stack.",
+    "details": {
+      "material": "Rose gold plated brass",
+      "stone": "Pink cubic zirconia baguette",
+      "size": "Free size"
+    },
+    "rating": 4.8,
+    "reviewCount": 118,
+    "reviews": [
+      {
+        "name": "Devika Warrier",
+        "rating": 5,
+        "text": "Feels handmade rather than mass produced."
+      },
+      {
+        "name": "Sneha Iyer",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      },
+      {
+        "name": "Lakshmi Narayanan",
+        "rating": 5,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      }
+    ],
+    "featured": true,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P014",
+    "name": "Emerald Baguette Stacking Ring",
+    "category": "rings",
+    "price": 349,
+    "mrp": 699,
+    "images": [
+      "/products/P014.webp"
+    ],
+    "shortDescription": "A deep green baguette on a fine textured gold-tone band, slim enough to wear three at a time.",
+    "details": {
+      "material": "Gold plated brass",
+      "stone": "Green cubic zirconia baguette",
+      "size": "Free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 104,
+    "reviews": [
+      {
+        "name": "Kalpana Iyengar",
+        "rating": 5,
+        "text": "It is exactly the shade of green I was hoping for."
+      },
+      {
+        "name": "Ananya Bose",
+        "rating": 5,
+        "text": "The green stones are a deeper shade in person than on screen, which I liked."
+      },
+      {
+        "name": "Trisha Dutta",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "P015",
+    "name": "Red Solitaire Thread Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 399,
+    "images": [
+      "/products/P015.webp"
+    ],
+    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in deep garnet red.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Red cubic zirconia",
+      "size": "Free size"
+    },
+    "rating": 4.6,
+    "reviewCount": 156,
+    "reviews": [
+      {
+        "name": "Zoya Ansari",
+        "rating": 4,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      },
+      {
+        "name": "Vivek Ranganathan",
+        "rating": 4,
+        "text": "Great everyday piece that does not need much care."
+      },
+      {
+        "name": "Pallavi Chandran",
+        "rating": 4,
+        "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": false
+  },
+  {
+    "id": "P016",
+    "name": "Pink Solitaire Thread Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 399,
+    "images": [
+      "/products/P016.webp"
+    ],
+    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in soft pink.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Pink cubic zirconia",
+      "size": "Free size"
+    },
+    "rating": 4.6,
+    "reviewCount": 141,
+    "reviews": [
+      {
+        "name": "Keerthi Balaji",
+        "rating": 4,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Swati Joshi",
+        "rating": 4,
+        "text": "I wear it with jeans as easily as with a saree."
+      },
+      {
+        "name": "Harini Krishnan",
+        "rating": 4,
+        "text": "Good gifting option under budget. I bought three."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P017",
+    "name": "Clear Solitaire Thread Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 399,
+    "images": [
+      "/products/P017.webp"
+    ],
+    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set clear stone.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Clear cubic zirconia",
+      "size": "Free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 193,
+    "reviews": [
+      {
+        "name": "Rashmi Kamath",
+        "rating": 5,
+        "text": "Understated enough for work, festive enough for evenings."
+      },
+      {
+        "name": "Sheetal Bhandari",
+        "rating": 5,
+        "text": "The stone setting is neat and nothing has come loose after a month of use."
+      },
+      {
+        "name": "Charulata Mishra",
+        "rating": 5,
+        "text": "Great everyday piece that does not need much care."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P018",
+    "name": "Green Solitaire Thread Ring",
+    "category": "rings",
+    "price": 210,
+    "mrp": 399,
+    "images": [
+      "/products/P018.webp"
+    ],
+    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in olive green.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Green cubic zirconia",
+      "size": "Free size"
+    },
+    "rating": 4.5,
+    "reviewCount": 127,
+    "reviews": [
+      {
+        "name": "Rimjhim Das",
+        "rating": 4,
+        "text": "It is exactly the shade of green I was hoping for."
+      },
+      {
+        "name": "Urvashi Solanki",
+        "rating": 4,
+        "text": "Delicate but not fragile. It has survived a toddler grabbing at it."
+      },
+      {
+        "name": "Yamini Reddy",
+        "rating": 4,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P019",
+    "name": "Crystal Bow Adjustable Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 599,
+    "images": [
+      "/products/P019.webp"
+    ],
+    "shortDescription": "Two trillion-cut crystals meeting as a bow, pave-edged, on a bright open band.",
+    "details": {
+      "material": "Rhodium plated brass",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.6,
+    "reviewCount": 176,
+    "reviews": [
+      {
+        "name": "Ishita Sen",
+        "rating": 4,
+        "text": "Looks far more expensive than what I paid."
+      },
+      {
+        "name": "Karthik Subramanian",
+        "rating": 4,
+        "text": "Stones are well matched in size and colour across the piece."
+      },
+      {
+        "name": "Payal Jain",
+        "rating": 4,
+        "text": "The mirror work catches light nicely under indoor lighting."
+      }
+    ],
+    "featured": false,
+    "isNew": false,
+    "inStock": true
+  },
+  {
+    "id": "P020",
+    "name": "Gold Ribbon Bow Ring",
+    "category": "rings",
+    "price": 130,
+    "mrp": 599,
+    "images": [
+      "/products/P020.webp"
+    ],
+    "shortDescription": "A sculpted ribbon bow on an open gold-tone band, polished smooth and set with nothing at all.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "type": "Open cuff band",
+      "size": "Adjustable, free size"
+    },
+    "rating": 4.5,
+    "reviewCount": 264,
+    "reviews": [
+      {
+        "name": "Vidya Ramesh",
+        "rating": 4,
+        "text": "Good gifting option under budget. I bought three."
+      },
+      {
+        "name": "Sakshi Tiwari",
+        "rating": 4,
+        "text": "Value for money. I have paid more for less at local shops."
+      },
+      {
+        "name": "Devika Warrier",
+        "rating": 4,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      }
+    ],
+    "featured": false,
+    "isNew": true,
+    "inStock": true
+  },
+  {
+    "id": "P021",
+    "name": "Rainbow Baguette Eternity Ring",
+    "category": "rings",
+    "price": 199,
+    "mrp": 599,
+    "images": [
+      "/products/P021.webp"
+    ],
+    "shortDescription": "A full round of rainbow baguettes channel-set in gold tone, bright enough to wear on its own.",
+    "details": {
+      "material": "18K gold plated stainless steel",
+      "stone": "Multicolour cubic zirconia baguettes",
+      "size": "Free size"
+    },
+    "rating": 4.7,
+    "reviewCount": 231,
+    "reviews": [
+      {
+        "name": "Ipsita Panda",
+        "rating": 5,
+        "text": "The colour combination is unusual and I have not seen it anywhere else."
+      },
+      {
+        "name": "Farah Sheikh",
+        "rating": 5,
+        "text": "Stones are well matched in size and colour across the piece."
+      },
+      {
+        "name": "Kalpana Iyengar",
+        "rating": 5,
+        "text": "I wear it with jeans as easily as with a saree."
+      }
+    ],
+    "featured": true,
     "isNew": false,
     "inStock": true
   }

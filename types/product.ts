@@ -45,9 +45,22 @@ export interface Review {
 
 export interface ProductDetails {
   material: string;
-  weight: string;
+  /** Absent on the owner's own products, whose measured weights have not been supplied. */
+  weight?: string;
   closure?: string;
   type?: string;
+  stone?: string;
+  size?: string;
+}
+
+/**
+ * A choice the buyer makes without changing the price — an engraved letter, a shape, a
+ * plating colour. Carried as catalogue data only; nothing reads it into a cart line yet.
+ * See ADR-016.
+ */
+export interface ProductOption {
+  name: string;
+  values: string[];
 }
 
 /**
@@ -84,4 +97,6 @@ export interface Product {
   featured: boolean;
   isNew: boolean;
   inStock: boolean;
+  /** Absent or empty means the product is sold in exactly one configuration. */
+  options?: ProductOption[];
 }

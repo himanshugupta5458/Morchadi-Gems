@@ -14,6 +14,17 @@ const MAX_REVIEWS_PER_PRODUCT = 3;
 const MIN_RATING = 3.5;
 const MAX_RATING = 5.0;
 const MAX_IMPLIED_DISCOUNT_PERCENT = 60;
+const MAX_REAL_IMPLIED_DISCOUNT_PERCENT = 80;
+const MIN_PRICE = 100;
+const MAX_PRICE = 25000;
+
+/**
+ * The owner's own products carry their P-code as their id and are priced and stocked from
+ * the owner's list, so the conventions invented for the placeholder catalogue — the
+ * category id prefix, the discount ceiling, a stated weight — are checked only on the
+ * placeholders. Everything else is checked on every product alike. See ADR-016.
+ */
+const REAL_PRODUCT_ID = /^P\d{3}$/;
 
 const CATEGORY_ID_PREFIX = {
   necklaces: "nk",
@@ -66,6 +77,9 @@ let discountedCount = 0;
 let featuredCount = 0;
 let newCount = 0;
 let outOfStockCount = 0;
+let placeholderOutOfStockCount = 0;
+let realProductCount = 0;
+let optionedProductCount = 0;
 let productImagesOnDisk = 0;
 
 for (const product of catalogue) {
@@ -81,12 +95,15 @@ for (const product of catalogue) {
     `${label}: category "${product?.category}" is not a known slug`,
   );
 
+  const isRealProduct = REAL_PRODUCT_ID.test(product?.id ?? "");
+  if (isRealProduct) realProductCount += 1;
+
   if (CATEGORY_SLUGS.includes(product?.category)) {
     categoryCounts[product.category] += 1;
     const prefix = CATEGORY_ID_PREFIX[product.category];
     check(
-      new RegExp(`^${prefix}-\\d{3}$`).test(product.id),
-      `${label}: id does not match the ${prefix}-NNN convention for ${product.category}`,
+      isRealProduct || new RegExp(`^${prefix}-\\d{3}$`).test(product.id),
+      `${label}: id must be either a P-code or the ${prefix}-NNN convention for ${product.category}`,
     );
   }
 
@@ -113,9 +130,12 @@ for (const product of catalogue) {
     if (product.mrp >= product.price && product.mrp > 0) {
       const impliedDiscountPercent =
         ((product.mrp - product.price) / product.mrp) * 100;
+      const discountCeiling = isRealProduct
+        ? MAX_REAL_IMPLIED_DISCOUNT_PERCENT
+        : MAX_IMPLIED_DISCOUNT_PERCENT;
       check(
-        impliedDiscountPercent <= MAX_IMPLIED_DISCOUNT_PERCENT,
-        `${label}: implied discount ${impliedDiscountPercent.toFixed(1)}% exceeds the ${MAX_IMPLIED_DISCOUNT_PERCENT}% ceiling`,
+        impliedDiscountPercent <= discountCeiling,
+        `${label}: implied discount ${impliedDiscountPercent.toFixed(1)}% exceeds the ${discountCeiling}% ceiling`,
       );
       impliedDiscounts.push(impliedDiscountPercent);
       if (product.mrp > product.price) discountedCount += 1;
@@ -123,7 +143,7 @@ for (const product of catalogue) {
   }
 
   if (typeof product?.price === "number") {
-    if (product.price >= 299 && product.price <= 999) priceBands.budget += 1;
+    if (product.price >= MIN_PRICE && product.price <= 999) priceBands.budget += 1;
     else if (product.price >= 1000 && product.price <= 4999) priceBands.mid += 1;
     else if (product.price >= 5000 && product.price <= 25000) priceBands.premium += 1;
     else priceBands.outOfBand += 1;
@@ -165,7 +185,12 @@ for (const product of catalogue) {
   );
   if (details && typeof details === "object") {
     check(isNonEmptyString(details.material), `${label}: details.material is required`);
-    check(isNonEmptyString(details.weight), `${label}: details.weight is required`);
+    check(
+      isRealProduct
+        ? details.weight === undefined || isNonEmptyString(details.weight)
+        : isNonEmptyString(details.weight),
+      `${label}: details.weight is required`,
+    );
     check(
       details.closure === undefined || isNonEmptyString(details.closure),
       `${label}: details.closure must be a non-empty string when present`,
@@ -174,7 +199,15 @@ for (const product of catalogue) {
       details.type === undefined || isNonEmptyString(details.type),
       `${label}: details.type must be a non-empty string when present`,
     );
-    const allowedKeys = ["material", "weight", "closure", "type"];
+    check(
+      details.stone === undefined || isNonEmptyString(details.stone),
+      `${label}: details.stone must be a non-empty string when present`,
+    );
+    check(
+      details.size === undefined || isNonEmptyString(details.size),
+      `${label}: details.size must be a non-empty string when present`,
+    );
+    const allowedKeys = ["material", "weight", "closure", "type", "stone", "size"];
     const unknownKeys = Object.keys(details).filter((key) => !allowedKeys.includes(key));
     check(
       unknownKeys.length === 0,
@@ -225,13 +258,48 @@ for (const product of catalogue) {
   check(typeof product?.isNew === "boolean", `${label}: isNew must be a boolean`);
   check(typeof product?.inStock === "boolean", `${label}: inStock must be a boolean`);
 
+  const options = product?.options;
+  check(
+    options === undefined || Array.isArray(options),
+    `${label}: options must be an array when present`,
+  );
+  if (Array.isArray(options)) {
+    optionedProductCount += 1;
+    options.forEach((option, index) => {
+      check(
+        isNonEmptyString(option?.name),
+        `${label}: options[${index}].name must be a non-empty string`,
+      );
+      check(
+        Array.isArray(option?.values) &&
+          option.values.length >= 1 &&
+          option.values.every((value) => isNonEmptyString(value)),
+        `${label}: options[${index}] needs at least one non-empty value`,
+      );
+      if (Array.isArray(option?.values)) {
+        check(
+          new Set(option.values).size === option.values.length,
+          `${label}: options[${index}] has duplicate values`,
+        );
+      }
+    });
+    const optionNames = options.map((option) => option?.name);
+    check(
+      new Set(optionNames).size === optionNames.length,
+      `${label}: has two options with the same name`,
+    );
+  }
+
   if (product?.featured === true) featuredCount += 1;
   if (product?.isNew === true) newCount += 1;
-  if (product?.inStock === false) outOfStockCount += 1;
+  if (product?.inStock === false) {
+    outOfStockCount += 1;
+    if (!isRealProduct) placeholderOutOfStockCount += 1;
+  }
 
   const allowedProductKeys = [
     "id", "name", "category", "price", "mrp", "images", "shortDescription", "details",
-    "rating", "reviewCount", "reviews", "featured", "isNew", "inStock",
+    "rating", "reviewCount", "reviews", "featured", "isNew", "inStock", "options",
   ];
   const unknownProductKeys = Object.keys(product ?? {}).filter(
     (key) => !allowedProductKeys.includes(key),
@@ -260,12 +328,12 @@ check(
   `expected ${EXPECTED_NEW_COUNT} isNew products, found ${newCount}`,
 );
 check(
-  outOfStockCount >= 2 && outOfStockCount <= 3,
-  `expected 2-3 out-of-stock products, found ${outOfStockCount}`,
+  placeholderOutOfStockCount >= 2 && placeholderOutOfStockCount <= 3,
+  `expected 2-3 out-of-stock placeholder products so the sold-out UI keeps coverage beyond the owner's own, found ${placeholderOutOfStockCount}`,
 );
 check(
   priceBands.outOfBand === 0,
-  `${priceBands.outOfBand} products fall outside the 299-25000 price range`,
+  `${priceBands.outOfBand} products fall outside the ${MIN_PRICE}-${MAX_PRICE} price range`,
 );
 
 let categoryImagesOnDisk = 0;
@@ -284,13 +352,15 @@ console.log(`Products            ${catalogue.length}`);
 console.log(`Unique ids          ${seenIds.size}`);
 console.log(`Featured            ${featuredCount}`);
 console.log(`New arrivals        ${newCount}`);
-console.log(`Out of stock        ${outOfStockCount}`);
+console.log(`Out of stock        ${outOfStockCount} (${placeholderOutOfStockCount} placeholder)`);
+console.log(`Owner's own (P-code) ${realProductCount}`);
+console.log(`With options        ${optionedProductCount}`);
 console.log("\nCategory distribution");
 for (const slug of CATEGORY_SLUGS) {
   console.log(`  ${slug.padEnd(18)}${categoryCounts[slug]}`);
 }
 console.log("\nPrice bands");
-console.log(`  budget  299-999    ${priceBands.budget}`);
+console.log(`  budget  ${MIN_PRICE}-999    ${priceBands.budget}`);
 console.log(`  mid     1000-4999  ${priceBands.mid}`);
 console.log(`  premium 5000-25000 ${priceBands.premium}`);
 console.log("\nImages (id-keyed, local under /public)");

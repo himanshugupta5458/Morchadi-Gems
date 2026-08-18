@@ -24,15 +24,15 @@ See [ADR-002](../decisions/ADR-002-product-data-model.md).
 | TC-01 | File is valid JSON | Parse `data/products.json` | Parses without error; top level is an array | Automated |
 | TC-02 | Catalogue size | Count entries | Exactly 100 | Automated |
 | TC-03 | Identifier uniqueness | Collect all `id` values into a set | Set size equals entry count; no duplicates | Automated |
-| TC-04 | Identifier convention | Match each `id` against `^<prefix>-\d{3}$` for its category | Every id matches its category's prefix (`nk`, `er`, `rg`, `br`, `bn`, `pd`, `ak`, `np`) | Automated |
+| TC-04 | Identifier convention | Match each `id` against `^P\d{3}$`, or against `^<prefix>-\d{3}$` for its category | Every id is either a P-code (the owner's own products) or matches its category's prefix (`nk`, `er`, `br`, `bn`, `pd`, `ak`, `np`) — see [ADR-016](../decisions/ADR-016-real-product-import.md) | Automated |
 | TC-05 | Category validity | Check each `category` against the eight known slugs | No unknown slug | Automated |
 | TC-06 | Category coverage | Count products per category | All eight categories have at least one product | Automated |
 | TC-07 | Required scalar fields | Check `name`, `shortDescription` are non-empty strings | All present and non-empty | Automated |
 | TC-08 | Price type | Check `price` is a positive integer | All prices whole rupees, greater than zero | Automated |
-| TC-09 | Price range | Bucket prices into budget / mid / premium | Zero products fall outside ₹299–₹25,000 | Automated |
+| TC-09 | Price range | Bucket prices into budget / mid / premium | Zero products fall outside ₹100–₹25,000 | Automated |
 | TC-10 | Images shape | Check `images` is an array of non-empty strings | Array in every case, even with one placeholder | Automated |
-| TC-11 | Details shape | Check `details.material` and `details.weight` required; `closure` and `type` optional but non-empty when present | Conforms to `ProductDetails` | Automated |
-| TC-12 | Details has no stray keys | Compare `details` keys against the allowed four | No unknown keys | Automated |
+| TC-11 | Details shape | Check `details.material` required; `weight` required on placeholder rows and optional on the owner's; `closure`, `type`, `stone`, `size` optional but non-empty when present | Conforms to `ProductDetails` | Automated |
+| TC-12 | Details has no stray keys | Compare `details` keys against the allowed six | No unknown keys | Automated |
 | TC-13 | Rating range and precision | Check `rating` is 3.5–5.0 to one decimal | All within range | Automated |
 | TC-14 | Review count | Check `reviewCount` is a non-negative integer | Valid for every product | Automated |
 | TC-15 | Review array size | Count `reviews` per product | Between 2 and 3 inclusive | Automated |
@@ -40,9 +40,13 @@ See [ADR-002](../decisions/ADR-002-product-data-model.md).
 | TC-17 | Review text distinctness | Compare review texts within a product | No product repeats the same text twice | Automated |
 | TC-18 | Featured count | Count `featured === true` | Exactly 8 | Automated |
 | TC-19 | New arrivals count | Count `isNew === true` | Exactly 8 | Automated |
-| TC-20 | Out-of-stock fixture | Count `inStock === false` | Between 2 and 3, so the out-of-stock UI path has fixtures | Automated |
+| TC-20 | Out-of-stock fixture | Count `inStock === false` among the placeholder rows | Between 2 and 3, so the out-of-stock UI keeps coverage in categories and price bands the owner's sold-out rings do not reach | Automated |
 | TC-21 | Flag types | Check `featured`, `isNew`, `inStock` are booleans | No truthy strings or numbers | Automated |
-| TC-22 | Product has no stray keys | Compare each product's keys against the 13 allowed | No unknown keys | Automated |
+| TC-22 | Product has no stray keys | Compare each product's keys against the 15 allowed | No unknown keys | Automated |
+| TC-23 | Discount ceiling | Compute `(mrp - price) / mrp` per product | At most 60% on placeholder rows, 80% on the owner's — see [ADR-003](../decisions/ADR-003-discount-display-pricing.md) and [ADR-016](../decisions/ADR-016-real-product-import.md) | Automated |
+| TC-24 | Options shape | Where `options` is present, check it is an array of `{ name, values }` | Every option has a non-empty `name` and at least one non-empty value | Automated |
+| TC-25 | Options distinctness | Compare option names within a product, and values within an option | No product repeats an option name; no option repeats a value | Automated |
+| TC-26 | Owner's photography on disk | Check `public/products/P0NN.webp` exists for each P-code | All 21 present; covered by TC-10's on-disk check, called out here because these are irreplaceable files rather than regenerable placeholders | Automated |
 
 ## Negative cases
 

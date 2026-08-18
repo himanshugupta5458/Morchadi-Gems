@@ -9,6 +9,8 @@ const DETAIL_ROWS: { key: keyof ProductDetails; label: string }[] = [
   { key: "weight", label: "Weight" },
   { key: "closure", label: "Closure" },
   { key: "type", label: "Type" },
+  { key: "stone", label: "Stone" },
+  { key: "size", label: "Size" },
 ];
 
 export function ProductDetailsList({
