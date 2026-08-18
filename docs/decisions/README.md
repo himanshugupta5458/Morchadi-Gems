@@ -67,3 +67,6 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [012](ADR-012-static-and-policy-pages.md) | Static content and the policy set | Accepted |
 | [013](ADR-013-order-creation-and-payment.md) | Order creation and the payment step | Accepted |
 | [015](ADR-015-business-config-and-shipping-threshold.md) | Single-source business config and a free-shipping threshold | Accepted |
+| [016](ADR-016-real-product-import.md) | Real product import and the P-code id scheme | Accepted |
+| [017](ADR-017-final-content-pass.md) | Final content pass on the policy set and the about page | Accepted |
+| [018](ADR-018-honest-product-description.md) | Honest product description — anti-tarnish, not hallmarked | Accepted |

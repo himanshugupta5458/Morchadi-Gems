@@ -6,6 +6,7 @@ import {
   FREE_SHIPPING_THRESHOLD,
   LEGAL_CONFIG,
   RETURN_WINDOW_DAYS,
+  SITE_CONFIG,
 } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -15,7 +16,7 @@ const PATH = "/shipping";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Shipping Policy",
-  description: `Free shipping across India on Morchadi Gems orders of ${formatRupees(FREE_SHIPPING_THRESHOLD)} or more, ${formatRupees(FLAT_SHIPPING_RATE)} below that. Dispatch and delivery timelines, tracking, and our delivery area.`,
+  description: `Free shipping across ${LEGAL_CONFIG.shippingScope} on ${SITE_CONFIG.brandName} orders of ${formatRupees(FREE_SHIPPING_THRESHOLD)} or more, ${formatRupees(FLAT_SHIPPING_RATE)} below that. Dispatch within ${LEGAL_CONFIG.dispatchWindow}, delivery within ${LEGAL_CONFIG.deliveryWindow}.`,
   path: PATH,
 });
 
@@ -24,14 +25,37 @@ export default function ShippingPage(): JSX.Element {
     <PolicyPage
       roman="Shipping"
       accent="Policy"
-      summary={`Free across India over ${formatRupees(FREE_SHIPPING_THRESHOLD)}, ${formatRupees(FLAT_SHIPPING_RATE)} below it.`}
+      summary={`Dispatch within ${LEGAL_CONFIG.dispatchWindow}, delivery within ${LEGAL_CONFIG.deliveryWindow}, free over ${formatRupees(FREE_SHIPPING_THRESHOLD)}.`}
       currentHref={PATH}
     >
-      <h2>1. What shipping costs</h2>
+      <h2>1. Order processing and dispatch</h2>
+      <p>
+        Orders are processed and dispatched{" "}
+        <strong>within {LEGAL_CONFIG.dispatchWindow}</strong> of payment being confirmed.
+      </p>
+      <p>
+        Orders placed on a weekend or a public holiday are processed on the next business
+        day. Made-to-order and personalized pieces — letter rings and anything engraved to
+        your specification — may need a little longer to prepare; where that applies, it is
+        noted on the product page at the time of purchase.
+      </p>
+
+      <h2>2. Delivery timelines</h2>
+      <p>
+        Once dispatched, delivery takes{" "}
+        <strong>up to {LEGAL_CONFIG.deliveryWindow}</strong>, depending on the destination.
+        Metro addresses are usually at the shorter end of that range.
+      </p>
+      <p>
+        We deliver across {LEGAL_CONFIG.shippingScope} to serviceable PIN codes in all states
+        and union territories. These are indicative timelines rather than guarantees.
+      </p>
+
+      <h2>3. Shipping charges</h2>
       <p>
         <strong>
-          Free anywhere in India on orders of {formatRupees(FREE_SHIPPING_THRESHOLD)} or
-          more.
+          Free anywhere in {LEGAL_CONFIG.shippingScope} on orders of{" "}
+          {formatRupees(FREE_SHIPPING_THRESHOLD)} or more.
         </strong>{" "}
         Below that, a flat {formatRupees(FLAT_SHIPPING_RATE)} per order. The threshold is
         inclusive — an order subtotal of exactly {formatRupees(FREE_SHIPPING_THRESHOLD)}{" "}
@@ -47,78 +71,71 @@ export default function ShippingPage(): JSX.Element {
         our server from the current catalogue rather than in your browser. There are no
         separate handling, packaging or fuel charges, and no surcharge for remote PIN codes.
       </p>
-
-      <h2>2. Where we ship</h2>
       <p>
-        <strong>India only.</strong> We deliver to serviceable PIN codes across all states
-        and union territories, and the checkout offers Indian states and a six-digit PIN code
-        for that reason.
-      </p>
-      <p>
-        <strong>We do not ship internationally at present.</strong> If a PIN code turns out
-        to be unserviceable by our courier after you have ordered, we will contact you and
-        refund the order in full.
+        <strong>
+          We ship within {LEGAL_CONFIG.shippingScope} only and do not deliver outside it.
+        </strong>{" "}
+        If a PIN code turns out to be unserviceable by our courier after you have ordered, we
+        will contact you and refund the order in full.
       </p>
 
-      <h2>3. When your order leaves us</h2>
+      <h2>4. Order tracking</h2>
       <p>
-        Orders are dispatched within <strong>{LEGAL_CONFIG.dispatchWindow}</strong> of
-        payment being confirmed. Orders placed on a Sunday or a public holiday are processed
-        on the next working day.
-      </p>
-      <p>
-        Because pieces are finished by hand in small batches, an occasional order takes a
-        little longer to prepare. If yours will, we tell you rather than letting it go quiet.
-      </p>
-
-      <h2>4. How long delivery takes</h2>
-      <p>
-        Once dispatched, delivery typically takes{" "}
-        <strong>{LEGAL_CONFIG.deliveryWindow}</strong>, depending on the destination. Metro
-        addresses are usually at the shorter end of that range.
-      </p>
-      <p>
-        These are indicative timelines rather than guarantees. Once a parcel is with the
-        courier, its progress is in their hands — weather, strikes, festival-season volumes
-        and local restrictions can all add time.
-      </p>
-
-      <h2>5. Tracking</h2>
-      <p>
-        When your order is dispatched we email you a tracking reference and the courier it
-        has gone with. Tracking usually takes a few hours to go live after you receive it —
+        When your order is dispatched we email you a tracking number and the courier it has
+        gone with. Tracking can take up to 24 hours to start updating after you receive it —
         that gap is normal and not a sign of a problem.
       </p>
-
-      <h2>6. Delivery attempts and address accuracy</h2>
       <p>
         Please check your delivery address and mobile number before paying. We dispatch to
         the address given at checkout, and once a parcel is with the courier we cannot change
         it.
       </p>
-      <p>
-        Couriers generally attempt delivery more than once. If a parcel is returned to us as
-        undelivered, we will contact you to arrange a re-send at the standard{" "}
-        {formatRupees(FLAT_SHIPPING_RATE)} charge, or refund the order less any shipping
-        charge paid on it.
-      </p>
 
-      <h2>7. Packaging</h2>
+      <h2>5. Delivery conditions</h2>
+      <p>
+        Once a parcel is handed to the courier, its progress is in their hands. We are not
+        liable for delays caused by the courier, by weather, strikes, festival-season
+        volumes, local restrictions or other circumstances outside our reasonable control.
+      </p>
+      <p>
+        We are also not liable for loss or theft after a parcel has been marked delivered to
+        the address given at checkout. Couriers generally attempt delivery more than once; if
+        a parcel is returned to us as undelivered, we will contact you to arrange a re-send
+        at the standard {formatRupees(FLAT_SHIPPING_RATE)} charge, or refund the order less
+        any shipping charge paid on it.
+      </p>
       <p>
         Every piece ships in its box and pouch inside a tamper-evident outer. Please keep the
         packaging until you are sure you are keeping the piece — it is needed for a return.
       </p>
 
-      <h2>8. If something arrives damaged</h2>
+      <h2>6. Damaged or incorrect deliveries</h2>
       <p>
-        If the outer packaging is visibly tampered with or damaged, photograph it before
-        opening where you can, and contact us the same day. Damaged and incorrect deliveries
-        are covered in full under our{" "}
+        If a parcel arrives visibly tampered with, or a piece arrives damaged or is not what
+        you ordered, tell us{" "}
+        <strong>within {LEGAL_CONFIG.damageReportWindow} of delivery</strong> with
+        photographs of the piece and its packaging, at{" "}
+        <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>
+          {CONTACT_CONFIG.supportEmail}
+        </a>
+        .
+      </p>
+      <p>
+        We will offer a replacement, an exchange or a refund at our discretion, having looked
+        at the photographs. Where a replacement is agreed, it is dispatched within{" "}
+        {LEGAL_CONFIG.replacementDispatchWindow}. The full terms are in our{" "}
         <Link href="/refund">Refund &amp; Cancellation Policy</Link>, which also gives you{" "}
         {RETURN_WINDOW_DAYS} days to return a piece you have simply changed your mind about.
       </p>
 
-      <h2>9. Questions about a delivery</h2>
+      <h2>7. Changes to this policy</h2>
+      <p>
+        We may update this policy as our couriers and delivery area change. The date at the
+        top of this page shows when it last changed, and the version published when you place
+        an order is the version that applies to it.
+      </p>
+
+      <h2>8. Questions about a delivery</h2>
       <p>
         Email{" "}
         <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>

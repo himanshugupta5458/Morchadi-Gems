@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getCategoryLabel } from "@/types/product";
 import {
   FREE_SHIPPING_THRESHOLD,
+  PRODUCT_DESCRIPTOR,
   RETURN_WINDOW_DAYS,
   SITE_CONFIG,
 } from "@/lib/config";
@@ -30,7 +31,7 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
 
   const title = categoryLabel === null ? "Shop All Jewellery" : categoryLabel;
   const subject = categoryLabel === null ? "the full collection" : categoryLabel.toLowerCase();
-  const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — hallmarked, hand-finished jewellery with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
+  const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
 
   return {
     title,
@@ -83,8 +84,8 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
           accent={categoryLabel === null ? "Collection" : categoryLabel}
           subtitle={
             categoryLabel === null
-              ? "One hundred pieces, hallmarked and hand-finished, across eight collections."
-              : `Every ${categoryLabel.toLowerCase()} piece in the collection, hallmarked and hand-finished.`
+              ? "One hundred pieces, anti-tarnish and hand-finished, across eight collections."
+              : `Every ${categoryLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
           }
         />
       </header>

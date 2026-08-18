@@ -17,7 +17,7 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
       <div className="container grid grid-cols-1 items-center gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-28">
         <div className="flex flex-col items-start gap-7 lg:col-span-7">
           <span className="text-eyebrow uppercase text-gold-deep">
-            Hallmarked · Hand-finished · Shipped across India
+            Anti-tarnish · Hand-finished · Shipped across India
           </span>
 
           <h1 className="font-display text-display leading-[1.06] sm:text-display-lg">
@@ -28,7 +28,7 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
           <span aria-hidden className="block h-px w-20 bg-gold" />
 
           <p className="max-w-prose text-body-lg text-muted">
-            Kundan, polki, temple gold and oxidised silver — finished by hand in small
+            Gold-plated, anti-tarnish and kind to skin — finished by hand in small
             batches, priced to be worn rather than locked away.
           </p>
 
@@ -48,7 +48,7 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
               src={HERO_IMAGE_SRC}
-              alt="Morchadi Gems fine jewellery"
+              alt="Morchadi Gems artificial jewellery"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 100vw"

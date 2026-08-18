@@ -36,9 +36,9 @@ const TRUST_BADGES = [
     icon: <ReturnArrowIcon className={ICON_CLASS} />,
   },
   {
-    key: "certified-quality",
-    label: "Certified Quality",
-    detail: "Every piece inspected",
+    key: "anti-tarnish-quality",
+    label: "Anti-Tarnish Quality",
+    detail: "Checked by hand before dispatch",
     icon: <CertificateIcon className={ICON_CLASS} />,
   },
 ];

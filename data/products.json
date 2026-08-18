@@ -1580,7 +1580,7 @@
     ],
     "shortDescription": "Rajasthani filigree worked into an open kada, lighter than its size suggests.",
     "details": {
-      "material": "925 sterling silver filigree with antique finish",
+      "material": "Oxidised German silver filigree with an antique finish",
       "weight": "66 g",
       "closure": "Slip on",
       "type": "Kada"
@@ -1887,16 +1887,16 @@
   },
   {
     "id": "pd-008",
-    "name": "Evil Eye Silver Pendant",
+    "name": "Evil Eye Nazar Pendant",
     "category": "pendants",
     "price": 649,
     "mrp": 900,
     "images": [
       "/products/pd-008.webp"
     ],
-    "shortDescription": "A small enamelled nazar in blue and white on a light silver chain.",
+    "shortDescription": "A small enamelled nazar in blue and white on a light silver-toned chain.",
     "details": {
-      "material": "925 sterling silver with blue enamel",
+      "material": "Silver-plated brass with blue enamel",
       "weight": "9 g",
       "closure": "Spring ring clasp",
       "type": "Pendant with chain"
@@ -2033,16 +2033,16 @@
   },
   {
     "id": "ak-001",
-    "name": "Silver Payal with Ghungroo",
+    "name": "Ghungroo Payal Pair",
     "category": "anklets",
     "price": 2650,
     "mrp": 2650,
     "images": [
       "/products/ak-001.webp"
     ],
-    "shortDescription": "A traditional silver payal hung with small ghungroo bells, sold as a pair.",
+    "shortDescription": "A traditional silver-toned payal hung with small ghungroo bells, sold as a pair.",
     "details": {
-      "material": "925 sterling silver with ghungroo bells",
+      "material": "Silver-plated brass with ghungroo bells",
       "weight": "38 g (pair)",
       "closure": "Lobster clasp",
       "type": "Payal pair"
@@ -2215,9 +2215,9 @@
     "images": [
       "/products/ak-006.webp"
     ],
-    "shortDescription": "Small pearls dropped along a fine silver chain, quiet against the ankle.",
+    "shortDescription": "Small pearls dropped along a fine silver-toned chain, quiet against the ankle.",
     "details": {
-      "material": "Shell pearls with 925 sterling silver chain",
+      "material": "Shell pearls on a silver-plated brass chain",
       "weight": "19 g",
       "closure": "Lobster clasp",
       "type": "Single anklet"
@@ -2288,9 +2288,9 @@
     "images": [
       "/products/ak-008.webp"
     ],
-    "shortDescription": "Three silver chains of different weights layered on one clasp.",
+    "shortDescription": "Three silver-toned chains of different weights layered on one clasp.",
     "details": {
-      "material": "925 sterling silver, three layer chain",
+      "material": "Silver-plated brass, three layer chain",
       "weight": "21 g",
       "closure": "Adjustable extender chain",
       "type": "Single anklet"
@@ -2460,16 +2460,16 @@
   },
   {
     "id": "np-002",
-    "name": "Diamond Solitaire Nose Pin",
+    "name": "Crystal Solitaire Nose Pin",
     "category": "nose-pins",
     "price": 15400,
     "mrp": 20000,
     "images": [
       "/products/np-002.webp"
     ],
-    "shortDescription": "A single certified diamond on an 18k gold screw pin, sized for daily wear.",
+    "shortDescription": "A single cubic zirconia solitaire on a gold-plated screw pin, sized for daily wear.",
     "details": {
-      "material": "18k gold with a certified solitaire diamond",
+      "material": "Gold-plated brass with a cubic zirconia solitaire",
       "weight": "1 g",
       "type": "Screw pin"
     },
@@ -2573,7 +2573,7 @@
     ],
     "shortDescription": "A single small pearl on a press fit pin, light enough to be forgotten.",
     "details": {
-      "material": "925 sterling silver with a shell pearl drop",
+      "material": "Silver-plated brass with a shell pearl drop",
       "weight": "2 g",
       "type": "Press fit pin"
     },
@@ -2668,16 +2668,16 @@
   },
   {
     "id": "np-008",
-    "name": "Emerald Stud Nose Pin",
+    "name": "Emerald Green Stud Nose Pin",
     "category": "nose-pins",
     "price": 5600,
     "mrp": 7500,
     "images": [
       "/products/np-008.webp"
     ],
-    "shortDescription": "One emerald green stone in a closed gold setting on a screw pin.",
+    "shortDescription": "One emerald green stone in a closed gold-plated setting on a screw pin.",
     "details": {
-      "material": "18k gold with an emerald green stone",
+      "material": "Gold-plated brass with an emerald green stone",
       "weight": "1 g",
       "type": "Screw pin"
     },
@@ -2767,7 +2767,7 @@
   },
   {
     "id": "np-012",
-    "name": "Silver Clip On Nose Ring",
+    "name": "Clip On Nose Ring",
     "category": "nose-pins",
     "price": 399,
     "mrp": 399,
@@ -2776,7 +2776,7 @@
     ],
     "shortDescription": "A clip on hoop that grips without a piercing, tensioned to stay put.",
     "details": {
-      "material": "925 sterling silver",
+      "material": "Silver-plated brass",
       "weight": "3 g",
       "type": "Clip on"
     },

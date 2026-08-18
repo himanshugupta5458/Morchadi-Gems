@@ -4,6 +4,7 @@ import {
   CONTACT_CONFIG,
   LEGAL_CONFIG,
   RETURN_WINDOW_DAYS,
+  SITE_CONFIG,
 } from "@/lib/config";
 import { buildPageMetadata } from "@/lib/metadata";
 import { PolicyPage } from "@/components/PolicyPage";
@@ -12,7 +13,7 @@ const PATH = "/refund";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Refund & Cancellation Policy",
-  description: `Morchadi Gems accepts returns within ${RETURN_WINDOW_DAYS} days of delivery. How to return, cancel an order, and when your refund arrives.`,
+  description: `${SITE_CONFIG.brandName} accepts returns within ${RETURN_WINDOW_DAYS} days of delivery. How to return, what cannot be returned, how to cancel, and when your refund arrives.`,
   path: PATH,
 });
 
@@ -38,8 +39,13 @@ export default function RefundPage(): JSX.Element {
       <h2>2. Condition of returned pieces</h2>
       <p>To be accepted, a returned piece must be:</p>
       <ul>
-        <li>Unworn, undamaged and in its original condition</li>
-        <li>Complete with its box, pouch, tags and any certificate it came with</li>
+        <li>
+          <strong>Unused and unworn</strong>, undamaged and in its original condition
+        </li>
+        <li>
+          <strong>In its original packaging</strong>, complete with the box, pouch, tags and
+          any card it came with
+        </li>
         <li>Packed well enough to survive the journey back</li>
       </ul>
       <p>
@@ -50,32 +56,51 @@ export default function RefundPage(): JSX.Element {
 
       <h2>3. What cannot be returned</h2>
       <ul>
-        <li>Pieces made, engraved or resized to order</li>
         <li>
-          Pierced jewellery where hygiene rules prevent resale, such as nose pins and
-          earrings, unless the piece is faulty
+          <strong>Made-to-order and personalized pieces</strong>, including letter and
+          initial rings and anything engraved or made to your specification. These are made
+          for you alone and cannot be resold, so they are non-returnable{" "}
+          <strong>unless they arrive damaged or defective</strong>.
         </li>
-        <li>Anything bought in a clearance or final-sale event</li>
+        <li>
+          <strong>Pierced jewellery</strong> — nose pins and earrings — where hygiene rules
+          prevent resale, unless the piece is faulty
+        </li>
+        <li>
+          <strong>Clearance and final-sale pieces</strong>
+        </li>
       </ul>
       <p>
         These exclusions never limit your rights where a piece arrives faulty, damaged or not
         as described.
       </p>
 
-      <h2>4. Faulty, damaged or wrong pieces</h2>
+      <h2>4. Damaged, defective or incorrect pieces</h2>
       <p>
-        If a piece arrives faulty, damaged or is not what you ordered, contact us within{" "}
-        {RETURN_WINDOW_DAYS} days of delivery with photographs. We will arrange collection at
-        our cost and replace or refund it in full, including any shipping charge paid on the
-        original order.
+        If a piece arrives damaged or defective, or is not what you ordered, tell us{" "}
+        <strong>within {LEGAL_CONFIG.damageReportWindow} of delivery</strong> and send
+        photographs of the piece and its packaging to{" "}
+        <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>
+          {CONTACT_CONFIG.supportEmail}
+        </a>
+        . We arrange collection at our cost and replace or refund the order in full,
+        including any shipping charge paid on it.
+      </p>
+      <p>
+        Reporting within {LEGAL_CONFIG.damageReportWindow} lets us raise the claim with the
+        courier while it can still be investigated, which is why the window is short. See
+        also our <Link href="/shipping">Shipping Policy</Link>.
       </p>
 
-      <h2>5. Return shipping costs</h2>
+      <h2>5. Who pays return shipping</h2>
       <p>
-        For a change-of-mind return, any shipping charge paid on the original order is not
-        refunded, and return postage is at your cost — we do not arrange a pickup for
-        change-of-mind returns. For a faulty or incorrect piece, we cover shipping both ways
-        and arrange the collection ourselves.
+        <strong>Change of mind:</strong> return postage is at your cost, and any shipping
+        charge paid on the original order is not refunded. We do not arrange a pickup for
+        change-of-mind returns.
+      </p>
+      <p>
+        <strong>Faulty, damaged or incorrect pieces:</strong> we cover shipping both ways and
+        arrange the collection ourselves. You are never out of pocket for a mistake of ours.
       </p>
 
       <h2>6. Cancelling an order</h2>
@@ -103,15 +128,16 @@ export default function RefundPage(): JSX.Element {
       <p>
         We start the refund once a returned piece has been received and inspected, or
         immediately on a pre-dispatch cancellation. It typically reaches you within{" "}
-        {LEGAL_CONFIG.refundProcessingWindow} of us starting it, though the final step
-        depends on your bank or card issuer rather than on us.
+        <strong>{LEGAL_CONFIG.refundProcessingWindow}</strong>, though the final step depends
+        on your bank or card issuer rather than on us.
       </p>
 
       <h2>8. Exchanges</h2>
       <p>
         We do not process direct exchanges. Return the piece for a refund and place a new
         order — it is faster and it keeps the {RETURN_WINDOW_DAYS}-day window clean on both
-        sides.
+        sides. Where a piece arrived damaged or incorrect, we will send a replacement
+        instead if you prefer one.
       </p>
 
       <h2>9. How to start a return or cancellation</h2>

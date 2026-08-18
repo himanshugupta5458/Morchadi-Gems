@@ -17,8 +17,8 @@ export function Footer(): JSX.Element {
         <div className="flex flex-col gap-4 lg:col-span-2">
           <Wordmark tone="ivory" />
           <p className="max-w-prose text-body-sm text-ivory/70">
-            Hallmarked, hand-finished jewellery for everyday wear and the days that
-            matter. Shipped across India from our workshop.
+            Anti-tarnish, hand-finished artificial jewellery for everyday wear and the
+            days that matter. Shipped across India from our workshop.
           </p>
           <address className="flex flex-col gap-2.5 not-italic text-body-sm text-ivory/70">
             <span className="flex flex-col">

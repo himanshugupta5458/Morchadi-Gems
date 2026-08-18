@@ -6,7 +6,7 @@ import { formatRupees } from "@/lib/format";
 
 const ANNOUNCEMENTS = [
   `Free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India`,
-  "Certified & hallmarked jewellery",
+  "Anti-tarnish, skin-friendly jewellery",
   `Easy ${RETURN_WINDOW_DAYS}-day returns`,
 ];
 

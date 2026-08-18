@@ -601,11 +601,19 @@ what the page below it is called.
 <TrustBadge icon={<ShieldCheckIcon className="h-7 w-7" />} label="Secure Payments" />
 ```
 
-`TrustBadge` takes `icon`, `label`, and an optional `detail`. `TrustStrip` takes no props
-and renders the fixed four — Secure Payments, Free Shipping Over ₹799, Easy 7-Day Returns,
-Certified Quality — 2-up on mobile, 4-up from `lg`. The threshold and the returns window are
+`TrustBadge` takes `icon`, `label`, and an optional `detail`, and is the primitive a page
+maps its own list over — `/about` renders six of them in a 2/3-column grid for "Why Choose
+Morchadi". `TrustStrip` takes no props and renders the fixed four — Secure Payments, Free Shipping Over ₹799, Easy 7-Day Returns,
+Anti-Tarnish Quality — 2-up on mobile, 4-up from `lg`. The threshold and the returns window are
 `FREE_SHIPPING_THRESHOLD` and `RETURN_WINDOW_DAYS` from `lib/config.ts`, the same constants
 the cart charges from and the policies quote, so the badge cannot outlive the rule.
+
+The fourth badge used to read "Certified Quality". It does not any more: nothing here is
+certified, and a badge that says so is a false claim rather than a design choice
+([ADR-018](../decisions/ADR-018-honest-product-description.md)). Copy that describes the
+catalogue belongs to the same rule as copy that quotes a number — say what is true, and say it
+once. `PRODUCT_DESCRIPTOR` in `lib/config.ts` is the single definition of how the catalogue is
+described in metadata, read by `SITE_CONFIG.description` and by the shop's `generateMetadata`.
 
 ### `TestimonialCard`
 
@@ -714,9 +722,19 @@ content. A plain `<a>` to `wa.me` built by `buildWhatsAppLink()`; no widget, no 
 
 ### `TestimonialBand` / `TestimonialCarousel`
 
-`TestimonialBand` is the section: `honey` ground, a `tone="honey"` `SectionHeading`
-("Customer" / "Speak"), and the carousel. It reads `getTestimonials()` and passes the data
-down, so the JSON import stays server-side.
+`TestimonialBand` is the section: `honey` ground, a `tone="honey"` `SectionHeading` and the
+carousel. It reads `getTestimonials()` and passes the data down, so the JSON import stays
+server-side.
+
+| Prop | Type | Default | Notes |
+| --- | --- | --- | --- |
+| `roman` | `string` | `"Customer"` | Heading, roman half |
+| `accent` | `string` | `"Speak"` | Heading, italic half |
+| `subtitle` | `string` | `"What people tell us after the box arrives."` | |
+
+The home page takes the defaults; `/about` runs the same band as "Customer / Love"
+([ADR-017](../decisions/ADR-017-final-content-pass.md)). The data source is deliberately not
+a prop — the JSON import belongs inside the band.
 
 `TestimonialCarousel` is the Client Component. One DOM, two layouts: a snap-scrolling
 carousel with dot pagination below `lg`, a 3-column grid from `lg` where the dots are hidden.
@@ -744,6 +762,7 @@ In `lib/format.ts` — components stay presentational, so this logic does not li
 | `calculateDiscountPercent(mrp, price)` | `number` | `0` when there is no discount |
 | `hasVisibleDiscount(mrp, price)` | `boolean` | Branch on this, not on `mrp > price` |
 | `getInitials(fullName)` | `"AI"` | First letter of the first two words; monogram avatars |
+| `formatMilestone(count)` | `"10,000+"` | `en-IN`, no decimals; about-page stat band and journey |
 | `clampQuantity(value)` | `1`–`10` | In `lib/quantity.ts`. The only definition of a valid quantity |
 
 None of these convert `mrp` into an amount, and none should be made to.

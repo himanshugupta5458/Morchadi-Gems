@@ -46,7 +46,7 @@ export default function HomePage(): JSX.Element {
           <SectionHeading
             roman="Shop by"
             accent="Category"
-            subtitle="Eight collections, each finished in the same workshop and held to the same hallmark."
+            subtitle="Eight collections, each finished in the same workshop and held to the same anti-tarnish standard."
           />
           <CategoryGrid />
         </div>

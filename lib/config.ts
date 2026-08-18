@@ -40,15 +40,28 @@ export function amountToFreeShipping(subtotal: number): number {
  */
 export const RETURN_WINDOW_DAYS = 7;
 
+/**
+ * How the catalogue is described in one phrase, written once. The site description, the
+ * shop's per-category metadata and the footer all read it, so a page cannot quietly start
+ * claiming something the catalogue is not.
+ *
+ * The claim has to survive being read literally. These pieces are plated brass, alloy and
+ * stainless steel — artificial jewellery, not precious metal — so the phrase says
+ * anti-tarnish and skin-friendly, which is true and testable. The vocabulary that is barred
+ * here, and why, is listed in
+ * [ADR-018](/docs/decisions/ADR-018-honest-product-description.md).
+ */
+export const PRODUCT_DESCRIPTOR = "anti-tarnish, skin-friendly artificial jewellery";
+
 export const SITE_CONFIG = {
   brandName: BUSINESS.brandName,
-  title: `${BUSINESS.brandName} — Fine Jewellery Online`,
-  description: `Hallmarked, hand-finished jewellery from ${BUSINESS.brandName} — kundan, polki, temple gold and oxidised silver. Free shipping over ₹${FREE_SHIPPING_THRESHOLD} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`,
+  title: `${BUSINESS.brandName} — Artificial Jewellery Online`,
+  description: `Premium ${PRODUCT_DESCRIPTOR} from ${BUSINESS.brandName} — hand-finished, quality-checked, and priced to be worn. Free shipping over ₹${FREE_SHIPPING_THRESHOLD} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`,
   ogImage: {
     url: "/hero/home-hero.webp",
     width: 1600,
     height: 1200,
-    alt: `${BUSINESS.brandName} fine jewellery`,
+    alt: `${BUSINESS.brandName} artificial jewellery`,
   },
   whatsappNumber: BUSINESS.whatsappNumber,
   whatsappGreeting: `Hi ${BUSINESS.brandName}, I would like to know more about your jewellery.`,
@@ -83,8 +96,25 @@ export const LEGAL_CONFIG = {
   policyLastUpdatedIso: "2026-08-18",
   dispatchWindow: "2 business days",
   deliveryWindow: "7 business days",
-  refundProcessingWindow: "5–7 business days",
+  refundProcessingWindow: "7–10 business days",
+  damageReportWindow: "48 hours",
+  replacementDispatchWindow: "7 working days",
+  minimumAge: 18,
+  shippingScope: "India",
   paymentProvider: "Cashfree Payments",
+} as const;
+
+/**
+ * The facts the about page states about the business itself. They come from
+ * `config/business.ts` so the eyebrow, the story, the stat band and the journey timeline all
+ * read the same founding year and the same milestone numbers.
+ */
+export const STORY_CONFIG = {
+  foundedYear: BUSINESS.foundedYear,
+  customersServed: BUSINESS.customersServed,
+  designsReleased: BUSINESS.designsReleased,
+  deliveryCoverage: BUSINESS.deliveryCoverage,
+  homeCity: BUSINESS.jurisdictionCity,
 } as const;
 
 /**

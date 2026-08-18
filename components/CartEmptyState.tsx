@@ -19,7 +19,7 @@ export function CartEmptyState(): JSX.Element {
       <span aria-hidden className="block h-px w-16 bg-gold" />
 
       <p className="max-w-prose text-body text-muted">
-        Nothing chosen yet. The collection runs from everyday oxidised silver to kundan
+        Nothing chosen yet. The collection runs from everyday studs to statement pieces
         made for the front row — start anywhere.
       </p>
 

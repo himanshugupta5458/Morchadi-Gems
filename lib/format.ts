@@ -21,6 +21,15 @@ export function hasVisibleDiscount(mrp: number, price: number): boolean {
   return calculateDiscountPercent(mrp, price) > 0;
 }
 
+const wholeNumberFormatter = new Intl.NumberFormat("en-IN", {
+  maximumFractionDigits: 0,
+});
+
+/** 10000 → "10,000+". Display only — nothing is ever counted from this string. */
+export function formatMilestone(count: number): string {
+  return `${wholeNumberFormatter.format(count)}+`;
+}
+
 /** "Ananya Iyer" → "AI". Used for monogram avatars where no photo exists. */
 export function getInitials(fullName: string): string {
   return fullName

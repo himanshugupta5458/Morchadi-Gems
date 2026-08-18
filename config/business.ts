@@ -18,6 +18,18 @@ export const BUSINESS = {
   /** Customer-facing store name. Appears in the wordmark, page titles and share cards. */
   brandName: "Morchadi Gems",
 
+  /** Year the workshop opened. Drives the "Est." line, the story and the journey timeline. */
+  foundedYear: 2016,
+
+  /**
+   * Milestones the about page states as facts. They are claims made to a shopper, so they
+   * live beside the other business facts rather than inside a page, and the owner updates
+   * them here when the numbers move.
+   */
+  customersServed: 10000,
+  designsReleased: 500,
+  deliveryCoverage: "Pan India",
+
   /** Courts of this city and state govern the terms. */
   jurisdictionCity: "Jaipur",
   jurisdictionState: "Rajasthan",
