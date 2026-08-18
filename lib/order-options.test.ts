@@ -12,13 +12,17 @@ import { MAX_QUANTITY } from "@/lib/quantity";
 const INITIAL_RING: OrderOptionEntry = {
   id: "P001",
   name: "Wave Band Initial Ring",
-  options: [{ name: "Letter", values: ["A", "B", "C"] }],
+  options: [
+    { name: "Letter", type: "dropdown", values: ["A", "B", "C"], default: "A" },
+  ],
 };
 
 const WATCH_RING: OrderOptionEntry = {
   id: "P010",
   name: "Mini Watch Ring",
-  options: [{ name: "Colour", values: ["Silver", "Golden"] }],
+  options: [
+    { name: "Colour", type: "swatch", values: ["Silver", "Golden"], default: "Silver" },
+  ],
 };
 
 const PLAIN_NECKLACE: OrderOptionEntry = { id: "nk-001", name: "Kundan Rani Haar" };

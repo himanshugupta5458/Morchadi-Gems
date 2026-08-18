@@ -50,17 +50,17 @@ export interface ShopResults {
  */
 const sortComparators: Record<SortSlug, (left: Product, right: Product) => number> = {
   newest: (left, right) =>
-    Number(right.isNew) - Number(left.isNew) ||
-    right.rating - left.rating ||
+    Number(right.flags.isNew) - Number(left.flags.isNew) ||
+    right.rating.average - left.rating.average ||
     left.id.localeCompare(right.id),
   "rating-desc": (left, right) =>
-    right.rating - left.rating ||
-    right.reviewCount - left.reviewCount ||
+    right.rating.average - left.rating.average ||
+    right.rating.count - left.rating.count ||
     left.id.localeCompare(right.id),
   "price-asc": (left, right) =>
-    left.price - right.price || left.id.localeCompare(right.id),
+    left.pricing.price - right.pricing.price || left.id.localeCompare(right.id),
   "price-desc": (left, right) =>
-    right.price - left.price || left.id.localeCompare(right.id),
+    right.pricing.price - left.pricing.price || left.id.localeCompare(right.id),
 };
 
 function matchesCategories(product: Product, categories: ShopQuery["categories"]): boolean {
@@ -82,9 +82,9 @@ export function isProductInCollection(
     case "tag":
       return isCollectionTag(slug) && (product.collections ?? []).includes(slug);
     case "featured-flag":
-      return product.featured;
+      return product.flags.featured;
     case "new-flag":
-      return product.isNew;
+      return product.flags.isNew;
   }
 }
 
@@ -98,7 +98,9 @@ function matchesCollections(
 
 function matchesPriceBands(product: Product, priceBands: PriceBandSlug[]): boolean {
   if (priceBands.length === 0) return true;
-  return priceBands.some((slug) => isPriceInBand(product.price, getPriceBand(slug)));
+  return priceBands.some((slug) =>
+    isPriceInBand(product.pricing.price, getPriceBand(slug)),
+  );
 }
 
 /**

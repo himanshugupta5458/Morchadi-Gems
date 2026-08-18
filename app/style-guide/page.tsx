@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import type { Product } from "@/types/product";
+import type { Product, ProductOption } from "@/types/product";
 import {
   getAllProducts,
   getFeaturedProducts,
+  getPrimaryImage,
   toCatalogueEntry,
 } from "@/lib/products";
 import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
@@ -22,7 +23,9 @@ import { CategoryTile } from "@/components/CategoryTile";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductGallery } from "@/components/ProductGallery";
-import { ProductOptionSelectorPreview } from "@/components/ProductOptionSelectorPreview";
+import { ProductPurchaseActions } from "@/components/ProductPurchaseActions";
+import { ProductSelectionProvider } from "@/lib/product-selection";
+import { ProductOptionControlsPreview } from "@/components/ProductOptionControlsPreview";
 import { QuantityStepperPreview } from "@/components/QuantityStepperPreview";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ViewAllLink } from "@/components/ViewAllLink";
@@ -88,12 +91,65 @@ function Panel({
   );
 }
 
+const SHOWCASE_GALLERY_IMAGE_COUNT = 3;
+
+/**
+ * One group per control type, which is the whole point: no catalogued product carries all
+ * four, and a control that has never been looked at beside its siblings is a control nobody
+ * has really checked. Values are plausible rather than invented stock — this record is a
+ * rendering fixture, not a piece anyone can buy.
+ */
+const SHOWCASE_OPTIONS: ProductOption[] = [
+  {
+    name: "Colour",
+    type: "swatch",
+    values: ["Silver", "Golden", "Rose Gold"],
+    default: "Silver",
+  },
+  { name: "Size", type: "pills", values: ["S", "M", "L"], default: "M" },
+  {
+    name: "Letter",
+    type: "dropdown",
+    values: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""),
+    default: "A",
+  },
+  {
+    name: "Shape",
+    type: "chips",
+    values: ["Oval", "Heart", "Round", "Square"],
+    default: "Oval",
+  },
+];
+
+/**
+ * Built here and nowhere else. Its id is deliberately not a P-code, so it fails the
+ * catalogue's own id rule on sight and could not be pasted into `data/products.json` without
+ * `validate:products` refusing it. Nothing looks it up, nothing prices it, and the buy
+ * handlers it is rendered with do nothing. See ADR-027.
+ */
+function buildOptionControlsShowcase(images: string[]): Product {
+  return {
+    id: "style-guide-showcase",
+    name: "Option Controls Showcase",
+    category: "rings",
+    pricing: { price: 999, mrp: 1499 },
+    media: { images },
+    options: SHOWCASE_OPTIONS,
+    specs: { material: "Not a real piece", type: "Style guide fixture" },
+    description: "A synthetic record that exists to render every option control at once.",
+    rating: { average: 5, count: 0 },
+    reviews: [],
+    stock: { inStock: true },
+    flags: { featured: false, isNew: false },
+  };
+}
+
 function withoutImages(product: Product): Product {
-  return { ...product, images: [] };
+  return { ...product, media: { ...product.media, images: [] } };
 }
 
 function withoutDiscount(product: Product): Product {
-  return { ...product, mrp: product.price };
+  return { ...product, pricing: { ...product.pricing, mrp: product.pricing.price } };
 }
 
 export default function StyleGuidePage(): JSX.Element {
@@ -101,12 +157,23 @@ export default function StyleGuidePage(): JSX.Element {
   const catalogue = getAllProducts();
   const featured = getFeaturedProducts();
   const discountedProducts = featured.filter((product) =>
-    hasVisibleDiscount(product.mrp, product.price),
+    hasVisibleDiscount(product.pricing.mrp, product.pricing.price),
   );
   const fullPriceProduct = catalogue.find(
-    (product) => !hasVisibleDiscount(product.mrp, product.price),
+    (product) => !hasVisibleDiscount(product.pricing.mrp, product.pricing.price),
   );
-  const soldOutProduct = catalogue.find((product) => !product.inStock);
+  const soldOutProduct = catalogue.find((product) => !product.stock.inStock);
+  const multiImageProduct = catalogue.find(
+    (product) => product.media.images.length > 1,
+  );
+  const variantImageProduct = catalogue.find(
+    (product) => product.media.variantImages !== undefined,
+  );
+  const showcaseGalleryImages = catalogue
+    .slice(0, SHOWCASE_GALLERY_IMAGE_COUNT)
+    .map(getPrimaryImage)
+    .filter((image): image is string => image !== null);
+  const optionControlsShowcase = buildOptionControlsShowcase(showcaseGalleryImages);
   const sampleProduct = discountedProducts[0];
 
   const addToCartSamples = [
@@ -312,8 +379,12 @@ export default function StyleGuidePage(): JSX.Element {
           {priceSamples.map((product) => (
             <div key={product.id} className="flex flex-wrap items-baseline gap-3">
               <span className="w-24 text-body-sm text-muted">{product.id}</span>
-              <PriceDisplay mrp={product.mrp} price={product.price} />
-              <PriceDisplay mrp={product.mrp} price={product.price} size="lg" />
+              <PriceDisplay mrp={product.pricing.mrp} price={product.pricing.price} />
+              <PriceDisplay
+                mrp={product.pricing.mrp}
+                price={product.pricing.price}
+                size="lg"
+              />
             </div>
           ))}
         </div>
@@ -368,16 +439,40 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="ProductGallery"
-        note="Only rendered when a product carries more than one image. Every catalogued product currently has exactly one, so the product page renders ProductImagePanel directly and this path stays dormant. It is shown here against a synthetic two-image product so the swap logic is not shipped unseen."
+        note="Rendered instead of ProductImagePanel when a product carries more than one image or maps a photograph to an option value. A single-image product with no mapping never reaches it, so the common case still ships no client JavaScript for its picture. Left: the thumbnail strip, which appears only when there is more than one image to strip. Right: the same component driven by a selector, where choosing a finish swaps the main image and clicking a thumbnail wins until the next choice."
       >
-        <div className="max-w-sm">
-          <ProductGallery
-            images={[
-              discountedProducts[0].images[0],
-              discountedProducts[1].images[0],
-            ]}
-            productName={discountedProducts[0].name}
-          />
+        <div className="grid gap-10 lg:grid-cols-2">
+          {multiImageProduct ? (
+            <div className="flex max-w-sm flex-col gap-3">
+              <p className="text-body-sm text-muted">
+                Multi-image: {multiImageProduct.name}
+              </p>
+              <ProductSelectionProvider>
+                <ProductGallery
+                  images={multiImageProduct.media.images}
+                  productName={multiImageProduct.name}
+                />
+              </ProductSelectionProvider>
+            </div>
+          ) : null}
+
+          {variantImageProduct ? (
+            <div className="flex max-w-sm flex-col gap-3">
+              <p className="text-body-sm text-muted">
+                Per-variant: {variantImageProduct.name}
+              </p>
+              <ProductSelectionProvider options={variantImageProduct.options}>
+                <ProductGallery
+                  images={variantImageProduct.media.images}
+                  variantImages={variantImageProduct.media.variantImages}
+                  productName={variantImageProduct.name}
+                />
+                <ProductPurchaseActions
+                  item={toCatalogueEntry(variantImageProduct)}
+                />
+              </ProductSelectionProvider>
+            </div>
+          ) : null}
         </div>
       </Panel>
 
@@ -389,10 +484,15 @@ export default function StyleGuidePage(): JSX.Element {
       </Panel>
 
       <Panel
-        title="Product options"
-        note="Six values or fewer render as radio chips; anything longer becomes a select, because twenty-five engraving letters as chips are a wall rather than a set of choices. Every group is pre-selected with its first value, so a personalized piece is addable without touching a selector, and the choice is echoed below. A recorded choice never changes a price, an image, or stock. The note is the refund policy's made-to-order carve-out, long form on the product page and short on a cart line."
+        title="Product Option Controls"
+        note="All four control types on one screen, which no catalogued product can show: the real catalogue spreads dropdown, swatch and chips across five products and uses pills nowhere. The piece driving this panel is synthetic and lives in this file only. It is not in data/products.json, so it cannot appear in the shop, be found by an id, or reach a cart, and Add to cart and Buy now are inert here. Everything else is the real thing: the same ProductSelectionProvider, the same ProductPurchasePanel, the same four controls, the same spacing as the product page's info column. Dropdown for a long list to find your place in (Letter, as on P001 and P005), swatch for a finish (Colour, as on P010 and P048), pills for a point on a scale (Size, which no real product carries yet), chips for a set to compare (Shape, as on P006). Every group is pre-selected with its stated default; the table below reads each group's control and current value apart, where the panel's own summary reads them together as a shopper sees them. A recorded choice can change which photograph is shown; it never changes a price or stock."
       >
-        <ProductOptionSelectorPreview />
+        <ProductSelectionProvider options={optionControlsShowcase.options}>
+          <ProductOptionControlsPreview
+            item={toCatalogueEntry(optionControlsShowcase)}
+            galleryImages={optionControlsShowcase.media.images}
+          />
+        </ProductSelectionProvider>
       </Panel>
 
       <Panel
@@ -414,7 +514,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="Global chrome"
-        note="AnnouncementBar, Header, Footer, and WhatsAppButton are rendered by app/layout.tsx, so they wrap this page too, so scroll and check them in place rather than here."
+        note="Header, Footer, and WhatsAppButton are rendered by app/layout.tsx, so they wrap this page too, so scroll and check them in place rather than here. The rotating announcement now sits in the middle of the header's logo row rather than in a strip of its own, and is hidden below lg."
       >
         <div className="flex flex-col gap-4">
           <p className="max-w-prose text-body-sm text-muted">
@@ -568,12 +668,12 @@ export default function StyleGuidePage(): JSX.Element {
           <dt className="text-muted">name</dt>
           <dd className="text-ink">{sampleProduct.name}</dd>
           <dt className="text-muted">price (charged)</dt>
-          <dd className="text-ink">{formatRupees(sampleProduct.price)}</dd>
+          <dd className="text-ink">{formatRupees(sampleProduct.pricing.price)}</dd>
           <dt className="text-muted">mrp (display only)</dt>
-          <dd className="text-ink">{formatRupees(sampleProduct.mrp)}</dd>
+          <dd className="text-ink">{formatRupees(sampleProduct.pricing.mrp)}</dd>
           <dt className="text-muted">rating</dt>
           <dd className="text-ink">
-            {sampleProduct.rating} from {sampleProduct.reviewCount} reviews
+            {sampleProduct.rating.average} from {sampleProduct.rating.count} reviews
           </dd>
         </dl>
       </Panel>

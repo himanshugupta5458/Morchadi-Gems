@@ -119,37 +119,94 @@ export interface Review {
   text: string;
 }
 
-export interface ProductDetails {
-  material: string;
-  /** Absent on the owner's own products, whose measured weights have not been supplied. */
-  weight?: string;
-  closure?: string;
-  type?: string;
-  stone?: string;
-  size?: string;
+/**
+ * Which control a choice is made with. It is catalogue data rather than a guess made from
+ * the number of values, because two groups of the same size are not the same kind of
+ * question: four locket shapes are a set to compare, four ribbon colours are a set to look
+ * at. See [ADR-027](/docs/decisions/ADR-027-product-schema-migration.md).
+ */
+export type ProductOptionType = "dropdown" | "swatch" | "pills" | "chips";
+
+export const PRODUCT_OPTION_TYPES: readonly ProductOptionType[] = [
+  "dropdown",
+  "swatch",
+  "pills",
+  "chips",
+] as const;
+
+export function isProductOptionType(value: string): value is ProductOptionType {
+  return PRODUCT_OPTION_TYPES.some((type) => type === value);
 }
 
 /**
  * A choice the buyer makes without changing the price — an engraved letter, a shape, a
- * plating colour. Carried as catalogue data only; nothing reads it into a cart line yet.
- * See ADR-016 and ADR-019.
+ * plating colour. `default` is the value a shopper who never opens the control is recorded
+ * as having chosen, so it is written down rather than inferred from the order of `values`.
+ * See ADR-016, ADR-019 and ADR-027.
  */
 export interface ProductOption {
   name: string;
+  type: ProductOptionType;
   values: string[];
+  default: string;
 }
 
 /**
- * One chosen value per option group — `{ Letter: "A" }`. Part of a cart line's identity, and
- * of nothing else: no amount, no stock check and no image ever reads it. See ADR-019.
+ * One chosen value per option group — `{ Letter: "A" }`. Part of a cart line's identity and
+ * of which photograph is shown, and of nothing else: no amount and no stock check ever reads
+ * it. See ADR-019 and ADR-027.
  */
 export type SelectedOptions = Record<string, string>;
 
+/** The amount charged and the compare-at price beside it, kept apart from each other. */
+export interface ProductPricing {
+  /** The amount actually charged. The only field a server-side total may read. */
+  price: number;
+  /** Display-only compare-at price. Never used in any amount calculation. */
+  mrp: number;
+}
+
+/**
+ * A photograph keyed to one option value, under `"OptionName:value"` — `"Colour:Golden"`.
+ * Absent for every product photographed in a single configuration.
+ */
+export type VariantImages = Record<string, string>;
+
+export interface ProductMedia {
+  /** `images[0]` is the product's own photograph and is what every listing renders. */
+  images: string[];
+  variantImages?: VariantImages;
+}
+
+/**
+ * Open-ended on purpose: a watch has a strap and a locket has a closure, and a fixed list of
+ * six keys turned every spec a product did not have into an absence to encode. Keys are the
+ * spec name in lower case; `ProductDetailsList` supplies the display label. See ADR-027.
+ */
+export type ProductSpecs = Record<string, string>;
+
+export interface ProductRating {
+  average: number;
+  count: number;
+}
+
+export interface ProductStock {
+  inStock: boolean;
+}
+
+export interface ProductFlags {
+  featured: boolean;
+  isNew: boolean;
+}
+
 /**
  * The projection of a product the browser is allowed to hold. It carries what a cart line
- * has to render and price and nothing else — no description, details, or reviews — so the
+ * has to render and price and nothing else — no description, specs, or reviews — so the
  * client cart can prune stale ids and read a trusted price without the full catalogue
  * crossing the server boundary. See ADR-010.
+ *
+ * It stays flat where `Product` is grouped: this is a wire shape read by cart arithmetic,
+ * and every field on it is one the cart genuinely needs.
  */
 export interface CatalogueEntry {
   id: string;
@@ -162,33 +219,40 @@ export interface CatalogueEntry {
   inStock: boolean;
   /**
    * Carried so the client cart can re-validate a persisted selection and fill in defaults
-   * without the full catalogue. Absent on the ninety-six products sold in one configuration.
+   * without the full catalogue. Absent on products sold in one configuration.
    */
   options?: ProductOption[];
+  /**
+   * Carried so a cart line can show the photograph of the variant it records. Display only:
+   * no amount reads it. Absent on products photographed in one configuration.
+   */
+  variantImages?: VariantImages;
 }
 
+/**
+ * The catalogue record, grouped by what each field is *for* — money, media, specification,
+ * reception, availability, merchandising — rather than kept as one flat list of sixteen
+ * keys. The grouping is what lets `pricing` be the single named place an amount lives, and
+ * lets `specs` and `media` grow without the record's top level growing with them. See
+ * [ADR-027](/docs/decisions/ADR-027-product-schema-migration.md).
+ */
 export interface Product {
   id: string;
   name: string;
   category: Category;
-  /** The amount actually charged. The only field a server-side total may read. */
-  price: number;
-  /** Display-only compare-at price. Never used in any amount calculation. */
-  mrp: number;
-  images: string[];
-  shortDescription: string;
-  details: ProductDetails;
-  rating: number;
-  reviewCount: number;
-  reviews: Review[];
-  featured: boolean;
-  isNew: boolean;
-  inStock: boolean;
-  /** Absent or empty means the product is sold in exactly one configuration. */
-  options?: ProductOption[];
   /**
    * The hand-tagged collections this product belongs to. Absent or empty is normal — a
    * product needs no tag to appear in the derived collections. See ADR-020.
    */
   collections?: CollectionSlug[];
+  pricing: ProductPricing;
+  media: ProductMedia;
+  /** Absent or empty means the product is sold in exactly one configuration. */
+  options?: ProductOption[];
+  specs: ProductSpecs;
+  description: string;
+  rating: ProductRating;
+  reviews: Review[];
+  stock: ProductStock;
+  flags: ProductFlags;
 }

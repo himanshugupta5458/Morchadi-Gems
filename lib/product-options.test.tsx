@@ -6,6 +6,7 @@ import type { CatalogueEntry } from "@/types/product";
 import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { formatRupees } from "@/lib/format";
+import { ProductSelectionProvider } from "@/lib/product-selection";
 import { ToastProvider } from "@/lib/toast-context";
 import { CartView } from "@/components/CartView";
 import { ProductPurchaseActions } from "@/components/ProductPurchaseActions";
@@ -38,7 +39,7 @@ const INITIAL_RING: CatalogueEntry = {
   mrp: 600,
   image: "/products/P001.webp",
   inStock: true,
-  options: [{ name: "Letter", values: LETTERS }],
+  options: [{ name: "Letter", type: "dropdown", values: LETTERS, default: "A" }],
 };
 
 const WATCH_RING: CatalogueEntry = {
@@ -48,7 +49,9 @@ const WATCH_RING: CatalogueEntry = {
   mrp: 500,
   image: "/products/P010.webp",
   inStock: true,
-  options: [{ name: "Colour", values: ["Silver", "Golden"] }],
+  options: [
+    { name: "Colour", type: "swatch", values: ["Silver", "Golden"], default: "Silver" },
+  ],
 };
 
 const NECKLACE: CatalogueEntry = {
@@ -66,7 +69,9 @@ function ProductAndCart({ item }: { item: CatalogueEntry }): JSX.Element {
   return (
     <CartProvider catalogue={CATALOGUE}>
       <ToastProvider>
-        <ProductPurchaseActions item={item} />
+        <ProductSelectionProvider options={item.options}>
+          <ProductPurchaseActions item={item} />
+        </ProductSelectionProvider>
         <CartView />
       </ToastProvider>
     </CartProvider>

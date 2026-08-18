@@ -512,7 +512,9 @@ const INITIAL_RING = makeEntry({
   price: 400,
   mrp: 600,
   image: "/products/P001.webp",
-  options: [{ name: "Letter", values: ["A", "B", "C"] }],
+  options: [
+    { name: "Letter", type: "dropdown", values: ["A", "B", "C"], default: "A" },
+  ],
 });
 
 const WATCH_RING = makeEntry({
@@ -522,8 +524,8 @@ const WATCH_RING = makeEntry({
   mrp: 500,
   image: "/products/P010.webp",
   options: [
-    { name: "Colour", values: ["Silver", "Golden"] },
-    { name: "Letter", values: ["A", "B"] },
+    { name: "Colour", type: "swatch", values: ["Silver", "Golden"], default: "Silver" },
+    { name: "Letter", type: "dropdown", values: ["A", "B"], default: "A" },
   ],
 });
 
@@ -717,7 +719,12 @@ describe("options — reconciling a persisted cart", () => {
   it("drops a line whose chosen value has been withdrawn", () => {
     const stored = addProductToCart([], INITIAL_RING, 1, { Letter: "C" });
     const trimmedCatalogue: CatalogueEntry[] = [
-      { ...INITIAL_RING, options: [{ name: "Letter", values: ["A", "B"] }] },
+      {
+        ...INITIAL_RING,
+        options: [
+          { name: "Letter", type: "dropdown", values: ["A", "B"], default: "A" },
+        ],
+      },
       NECKLACE,
     ];
 
@@ -727,7 +734,12 @@ describe("options — reconciling a persisted cart", () => {
   it("drops a line whose whole group has been removed", () => {
     const stored = addProductToCart([], INITIAL_RING, 1, { Letter: "A" });
     const renamedGroup: CatalogueEntry[] = [
-      { ...INITIAL_RING, options: [{ name: "Initial", values: ["A", "B"] }] },
+      {
+        ...INITIAL_RING,
+        options: [
+          { name: "Initial", type: "dropdown", values: ["A", "B"], default: "A" },
+        ],
+      },
     ];
 
     expect(reconcileCartWithCatalogue(stored, renamedGroup)).toEqual([]);
@@ -748,7 +760,12 @@ describe("options — reconciling a persisted cart", () => {
       { Letter: "C" },
     );
     const trimmedCatalogue: CatalogueEntry[] = [
-      { ...INITIAL_RING, options: [{ name: "Letter", values: ["A", "B"] }] },
+      {
+        ...INITIAL_RING,
+        options: [
+          { name: "Letter", type: "dropdown", values: ["A", "B"], default: "A" },
+        ],
+      },
     ];
 
     const items = reconcileCartWithCatalogue(stored, trimmedCatalogue);

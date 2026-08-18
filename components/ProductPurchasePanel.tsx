@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import type { CatalogueEntry, SelectedOptions } from "@/types/product";
-import { defaultSelectedOptions, hasProductOptions } from "@/lib/options";
+import { hasProductOptions } from "@/lib/options";
+import { useProductSelection } from "@/lib/product-selection";
 import { MIN_QUANTITY } from "@/lib/quantity";
 import { Button } from "@/components/Button";
 import { PersonalizedNote } from "@/components/PersonalizedNote";
@@ -23,14 +24,15 @@ export interface ProductPurchasePanelProps {
 }
 
 /**
- * Presentational: it owns the selected quantity and the selected options, and nothing else.
- * Cart state is reached through `ProductPurchaseActions`, which supplies both handlers — this
- * panel never imports the cart, so it can be rendered in isolation on `/style-guide`.
+ * Presentational: it owns the selected quantity and nothing else. Cart state is reached
+ * through `ProductPurchaseActions`, which supplies both handlers, and the selected options
+ * come from `ProductSelectionProvider` — this panel never imports the cart, so it can be
+ * rendered in isolation on `/style-guide`.
  *
- * The selection starts at each group's first value, which is what makes a personalized piece
- * addable without touching a selector. It is echoed above the buttons because a default the
- * shopper never chose still has to be a default they can see. Nothing here reads a price:
- * a choice is recorded, never charged for. See ADR-019.
+ * The selection lives above this panel because the gallery in the other column reads it too:
+ * choosing a finish changes which photograph is shown. It is echoed above the buttons because
+ * a default the shopper never chose still has to be a default they can see. Nothing here
+ * reads a price: a choice is recorded, never charged for. See ADR-019 and ADR-027.
  */
 export function ProductPurchasePanel({
   item,
@@ -38,16 +40,10 @@ export function ProductPurchasePanel({
   onBuyNow,
 }: ProductPurchasePanelProps): JSX.Element {
   const [quantity, setQuantity] = useState(MIN_QUANTITY);
-  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions | undefined>(
-    () => defaultSelectedOptions(item.options),
-  );
+  const { selectedOptions, chooseOptionValue } = useProductSelection();
 
   const isSoldOut = !item.inStock;
   const isPersonalized = hasProductOptions(item.options);
-
-  function chooseOptionValue(groupName: string, value: string): void {
-    setSelectedOptions((current) => ({ ...current, [groupName]: value }));
-  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -57,7 +53,7 @@ export function ProductPurchasePanel({
             <ProductOptionSelector
               key={option.name}
               option={option}
-              value={selectedOptions?.[option.name] ?? option.values[0]}
+              value={selectedOptions?.[option.name] ?? option.default}
               disabled={isSoldOut}
               onChange={(value) => chooseOptionValue(option.name, value)}
             />

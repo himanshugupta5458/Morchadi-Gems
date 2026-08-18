@@ -37,8 +37,9 @@ describe("the em-dash sweep", () => {
     for (const product of getAllProducts()) {
       const shopperFacing = [
         product.name,
-        product.shortDescription,
-        ...Object.values(product.details),
+        product.description,
+        ...Object.keys(product.specs),
+        ...Object.values(product.specs),
         ...product.reviews.flatMap((review) => [review.name, review.text]),
         ...(product.options ?? []).flatMap((option) => [option.name, ...option.values]),
       ];

@@ -12,8 +12,31 @@ import {
   summarizeLineOptions,
 } from "@/lib/options";
 
-const LETTER: ProductOption = { name: "Letter", values: ["A", "B", "C"] };
-const COLOUR: ProductOption = { name: "Colour", values: ["Silver", "Golden"] };
+const LETTER: ProductOption = {
+  name: "Letter",
+  type: "dropdown",
+  values: ["A", "B", "C"],
+  default: "A",
+};
+
+const COLOUR: ProductOption = {
+  name: "Colour",
+  type: "swatch",
+  values: ["Silver", "Golden"],
+  default: "Silver",
+};
+
+/**
+ * A group whose stated default is not its first value, which is the only way to tell a
+ * resolver that reads `default` from one that reads `values[0]` and happens to agree.
+ */
+const SHAPE: ProductOption = {
+  name: "Shape",
+  type: "chips",
+  values: ["Oval", "Heart", "Round"],
+  default: "Heart",
+};
+
 const RING_OPTIONS: ProductOption[] = [LETTER, COLOUR];
 
 describe("lineKey", () => {
@@ -44,11 +67,15 @@ describe("lineKey", () => {
 });
 
 describe("defaultSelectedOptions", () => {
-  it("takes the first value of every group", () => {
+  it("takes the stated default of every group", () => {
     expect(defaultSelectedOptions(RING_OPTIONS)).toEqual({
       Letter: "A",
       Colour: "Silver",
     });
+  });
+
+  it("takes the stated default even when it is not the first value", () => {
+    expect(defaultSelectedOptions([SHAPE])).toEqual({ Shape: "Heart" });
   });
 
   it("is undefined for a product sold in one configuration", () => {
@@ -74,6 +101,13 @@ describe("resolveSelectedOptions", () => {
 
   it("falls back to the default for a value that is not offered", () => {
     expect(resolveSelectedOptions([LETTER], { Letter: "Z" })).toEqual({ Letter: "A" });
+  });
+
+  it("falls back to the stated default rather than the first value", () => {
+    expect(resolveSelectedOptions([SHAPE], { Shape: "Teardrop" })).toEqual({
+      Shape: "Heart",
+    });
+    expect(resolveSelectedOptions([SHAPE], undefined)).toEqual({ Shape: "Heart" });
   });
 
   it("drops a group the product does not have", () => {
@@ -111,7 +145,7 @@ describe("isSelectionStale", () => {
   });
 
   it("is true when the chosen value has been withdrawn", () => {
-    expect(isSelectionStale([{ name: "Letter", values: ["B", "C"] }], { Letter: "A" })).toBe(
+    expect(isSelectionStale([{ name: "Letter", type: "dropdown", values: ["B", "C"], default: "B" }], { Letter: "A" })).toBe(
       true,
     );
   });
@@ -178,7 +212,7 @@ describe("summarizeLineOptions", () => {
 });
 
 describe("hasProductOptions", () => {
-  it("separates the four personalized products from the ninety-six that are not", () => {
+  it("separates the five personalized products from the forty-four that are not", () => {
     expect(hasProductOptions(RING_OPTIONS)).toBe(true);
     expect(hasProductOptions([])).toBe(false);
     expect(hasProductOptions(undefined)).toBe(false);

@@ -78,6 +78,46 @@ function toTelHref(phoneDisplay: string): string {
 }
 
 /**
+ * The registered address as it prints: two street lines, then the city, state and PIN on one
+ * line. Assembled here rather than written out in `config/business.ts` so the address exists
+ * once, in parts, and both the printed form and the schema's `PostalAddress` are derived from
+ * the same six fields.
+ */
+const POSTAL_ADDRESS = BUSINESS.address;
+
+const ADDRESS_LINES: readonly string[] = [
+  POSTAL_ADDRESS.streetLine1,
+  POSTAL_ADDRESS.streetLine2,
+  `${POSTAL_ADDRESS.locality}, ${POSTAL_ADDRESS.region} ${POSTAL_ADDRESS.postalCode}`,
+];
+
+/**
+ * The address in the shape `schema.org/PostalAddress` asks for. `streetAddress` is the two
+ * street lines joined, because the vocabulary has one field where the envelope has two.
+ */
+export const POSTAL_ADDRESS_CONFIG = {
+  streetAddress: `${POSTAL_ADDRESS.streetLine1}, ${POSTAL_ADDRESS.streetLine2}`,
+  addressLocality: POSTAL_ADDRESS.locality,
+  addressRegion: POSTAL_ADDRESS.region,
+  postalCode: POSTAL_ADDRESS.postalCode,
+  addressCountry: POSTAL_ADDRESS.countryCode,
+} as const;
+
+/**
+ * The one country we ship to, as an ISO 3166-1 alpha-2 code. `LEGAL_CONFIG.shippingScope` is
+ * the same fact written for a shopper to read; this is the same fact written for a machine.
+ */
+export const SHIPPING_COUNTRY_CODE = POSTAL_ADDRESS.countryCode;
+
+/**
+ * The two fulfilment windows as numbers of business days. The policy sentences below are
+ * built from them, so the schema a search engine reads and the sentence a shopper reads
+ * cannot state different numbers.
+ */
+export const DISPATCH_BUSINESS_DAYS = 2;
+export const DELIVERY_BUSINESS_DAYS = 7;
+
+/**
  * Contact details as the site renders them. The business facts come from
  * `config/business.ts`; only the service commitments — when we are open, how quickly we
  * reply — are decided here, because they belong to the site rather than to the entity.
@@ -86,7 +126,7 @@ export const CONTACT_CONFIG = {
   supportEmail: BUSINESS.supportEmail,
   phoneDisplay: BUSINESS.phoneDisplay,
   phoneHref: toTelHref(BUSINESS.phoneDisplay),
-  addressLines: BUSINESS.addressLines,
+  addressLines: ADDRESS_LINES,
   hours: "Monday to Saturday, 10:00 – 18:00 IST",
   replyWindow: "one business day",
 } as const;
@@ -100,8 +140,8 @@ export const LEGAL_CONFIG = {
   jurisdictionCity: BUSINESS.jurisdictionCity,
   jurisdictionState: BUSINESS.jurisdictionState,
   policyLastUpdatedIso: "2026-08-18",
-  dispatchWindow: "2 business days",
-  deliveryWindow: "7 business days",
+  dispatchWindow: `${DISPATCH_BUSINESS_DAYS} business days`,
+  deliveryWindow: `${DELIVERY_BUSINESS_DAYS} business days`,
   refundProcessingWindow: "7–10 business days",
   damageReportWindow: "48 hours",
   replacementDispatchWindow: "7 working days",

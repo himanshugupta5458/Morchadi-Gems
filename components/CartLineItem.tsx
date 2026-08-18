@@ -32,7 +32,7 @@ export function CartLineItem({
   onQuantityChange,
   onRemove,
 }: CartLineItemProps): JSX.Element {
-  const { key, entry, selectedOptions, quantity, lineTotal, isPayable } = line;
+  const { key, entry, selectedOptions, image, quantity, lineTotal, isPayable } = line;
   const productHref = `/product/${entry.id}`;
   const isPersonalized = selectedOptions !== undefined;
   const removeLabel =
@@ -51,11 +51,11 @@ export function CartLineItem({
         tabIndex={-1}
         className="relative h-24 w-24 shrink-0 overflow-hidden border border-line bg-ivory sm:h-28 sm:w-28"
       >
-        {entry.image === null ? (
+        {image === null ? (
           <ProductImagePlaceholder />
         ) : (
           <Image
-            src={entry.image}
+            src={image}
             alt=""
             fill
             sizes="112px"

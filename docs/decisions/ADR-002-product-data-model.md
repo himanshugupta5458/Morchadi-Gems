@@ -1,6 +1,6 @@
 # ADR-002: Product data model
 
-- **Status:** Accepted
+- **Status:** Accepted — record shape superseded by [ADR-027](ADR-027-product-schema-migration.md)
 - **Date:** 2026-08-17
 - **Prompt:** 2
 

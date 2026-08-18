@@ -3,42 +3,19 @@
     "id": "P001",
     "name": "Wave Band Initial Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 299,
-    "images": [
-      "/products/P001.webp"
-    ],
-    "shortDescription": "A slim gold-tone band with a softly waved face carrying the single initial you choose.",
-    "details": {
-      "material": "18K gold plated stainless steel",
-      "type": "Adjustable open band",
-      "size": "Adjustable, free size"
+    "pricing": {
+      "price": 210,
+      "mrp": 299
     },
-    "rating": 4.7,
-    "reviewCount": 128,
-    "reviews": [
-      {
-        "name": "Kavya Menon",
-        "rating": 5,
-        "text": "Simple, elegant and does not overpower a plain outfit."
-      },
-      {
-        "name": "Namrata Kale",
-        "rating": 5,
-        "text": "It sits flat and does not spin around, which is my usual complaint."
-      },
-      {
-        "name": "Anupama Shetty",
-        "rating": 5,
-        "text": "Comfortable enough that I forgot I was wearing it."
-      }
-    ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true,
+    "media": {
+      "images": [
+        "/products/P001.webp"
+      ]
+    },
     "options": [
       {
         "name": "Letter",
+        "type": "dropdown",
         "values": [
           "A",
           "B",
@@ -65,27 +42,69 @@
           "W",
           "Y",
           "Z"
-        ]
+        ],
+        "default": "A"
       }
-    ]
+    ],
+    "specs": {
+      "material": "18K gold plated stainless steel",
+      "type": "Adjustable open band",
+      "size": "Adjustable, free size"
+    },
+    "description": "A slim gold-tone band with a softly waved face carrying the single initial you choose.",
+    "rating": {
+      "average": 4.7,
+      "count": 128
+    },
+    "reviews": [
+      {
+        "name": "Kavya Menon",
+        "rating": 5,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Namrata Kale",
+        "rating": 5,
+        "text": "It sits flat and does not spin around, which is my usual complaint."
+      },
+      {
+        "name": "Anupama Shetty",
+        "rating": 5,
+        "text": "Comfortable enough that I forgot I was wearing it."
+      }
+    ],
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P002",
     "name": "Teardrop Glass Locket Necklace",
     "category": "necklaces",
-    "price": 450,
-    "mrp": 999,
-    "images": [
-      "/products/P002.webp"
-    ],
-    "shortDescription": "A gold-tone teardrop locket in clear glass on a fine rolo chain, made to be opened and filled.",
-    "details": {
-      "material": "18K gold plated brass with a glass front",
-      "type": "Openable floating locket",
-      "closure": "Lobster clasp"
+    "pricing": {
+      "price": 450,
+      "mrp": 999
     },
-    "rating": 4.8,
-    "reviewCount": 96,
+    "media": {
+      "images": [
+        "/products/P002.webp",
+        "/products/P002-2.webp"
+      ]
+    },
+    "specs": {
+      "material": "18K gold plated brass with a glass front",
+      "closure": "Lobster clasp",
+      "type": "Openable floating locket"
+    },
+    "description": "A gold-tone teardrop locket in clear glass on a fine rolo chain, made to be opened and filled.",
+    "rating": {
+      "average": 4.8,
+      "count": 96
+    },
     "reviews": [
       {
         "name": "Aarti Deshmukh",
@@ -103,27 +122,37 @@
         "text": "Arrived well packed in a velvet pouch with a polishing cloth."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P003",
     "name": "Heart Floating Locket with Birthstone Charms",
     "category": "necklaces",
-    "price": 450,
-    "mrp": 999,
-    "images": [
-      "/products/P003.webp"
-    ],
-    "shortDescription": "An open heart locket on a satellite chain, supplied with twelve coloured birthstone charms to arrange as you like.",
-    "details": {
-      "material": "18K gold plated brass with crystal charms",
-      "type": "Floating locket with twelve charms",
-      "closure": "Lobster clasp"
+    "pricing": {
+      "price": 450,
+      "mrp": 999
     },
-    "rating": 4.9,
-    "reviewCount": 142,
+    "media": {
+      "images": [
+        "/products/P003.webp"
+      ]
+    },
+    "specs": {
+      "material": "18K gold plated brass with crystal charms",
+      "closure": "Lobster clasp",
+      "type": "Floating locket with twelve charms"
+    },
+    "description": "An open heart locket on a satellite chain, supplied with twelve coloured birthstone charms to arrange as you like.",
+    "rating": {
+      "average": 4.9,
+      "count": 142
+    },
     "reviews": [
       {
         "name": "Manasi Patil",
@@ -141,27 +170,37 @@
         "text": "Great for a bride's sister or a friend of the family."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P004",
     "name": "Heart Crystal Adjustable Ring",
     "category": "rings",
-    "price": 499,
-    "mrp": 799,
-    "images": [
-      "/products/P004.webp"
-    ],
-    "shortDescription": "A faceted clear heart held in a polished gold-tone frame on an open band that adjusts to the finger.",
-    "details": {
+    "pricing": {
+      "price": 499,
+      "mrp": 799
+    },
+    "media": {
+      "images": [
+        "/products/P004.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Faceted clear crystal heart",
       "size": "Adjustable, free size"
     },
-    "rating": 4.8,
-    "reviewCount": 211,
+    "description": "A faceted clear heart held in a polished gold-tone frame on an open band that adjusts to the finger.",
+    "rating": {
+      "average": 4.8,
+      "count": 211
+    },
     "reviews": [
       {
         "name": "Pooja Reddy",
@@ -179,50 +218,31 @@
         "text": "Understated enough for work, festive enough for evenings."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P005",
     "name": "Silver Initial Signet Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 299,
-    "images": [
-      "/products/P005.webp"
-    ],
-    "shortDescription": "A fine silver-tone band with a marquise signet face engraved with a single initial.",
-    "details": {
-      "material": "Rhodium plated brass",
-      "type": "Fixed band",
-      "size": "Free size"
+    "pricing": {
+      "price": 199,
+      "mrp": 299
     },
-    "rating": 4.6,
-    "reviewCount": 174,
-    "reviews": [
-      {
-        "name": "Sunita Kaur",
-        "rating": 4,
-        "text": "Silver has a nice matte finish rather than a mirror polish."
-      },
-      {
-        "name": "Aditya Pawar",
-        "rating": 4,
-        "text": "Simple, elegant and does not overpower a plain outfit."
-      },
-      {
-        "name": "Ipsita Panda",
-        "rating": 4,
-        "text": "The polish is even and there are no rough edges anywhere."
-      }
-    ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true,
+    "media": {
+      "images": [
+        "/products/P005.webp"
+      ]
+    },
     "options": [
       {
         "name": "Letter",
+        "type": "dropdown",
         "values": [
           "B",
           "C",
@@ -246,27 +266,81 @@
           "V",
           "W",
           "Z"
-        ]
+        ],
+        "default": "B"
       }
-    ]
+    ],
+    "specs": {
+      "material": "Rhodium plated brass",
+      "type": "Fixed band",
+      "size": "Free size"
+    },
+    "description": "A fine silver-tone band with a marquise signet face engraved with a single initial.",
+    "rating": {
+      "average": 4.6,
+      "count": 174
+    },
+    "reviews": [
+      {
+        "name": "Sunita Kaur",
+        "rating": 4,
+        "text": "Silver has a nice matte finish rather than a mirror polish."
+      },
+      {
+        "name": "Aditya Pawar",
+        "rating": 4,
+        "text": "Simple, elegant and does not overpower a plain outfit."
+      },
+      {
+        "name": "Ipsita Panda",
+        "rating": 4,
+        "text": "The polish is even and there are no rough edges anywhere."
+      }
+    ],
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P006",
     "name": "Floating Locket Pendant",
     "category": "pendants",
-    "price": 450,
-    "mrp": 450,
-    "images": [
-      "/products/P006.webp"
-    ],
-    "shortDescription": "A glass-front locket that opens to hold charms, in a choice of four shapes, on a matching rolo chain.",
-    "details": {
-      "material": "18K gold plated brass with a glass front",
-      "type": "Openable floating locket",
-      "closure": "Lobster clasp"
+    "pricing": {
+      "price": 450,
+      "mrp": 450
     },
-    "rating": 4.7,
-    "reviewCount": 63,
+    "media": {
+      "images": [
+        "/products/P006.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Shape",
+        "type": "chips",
+        "values": [
+          "Oval",
+          "Heart",
+          "Rectangle",
+          "Round"
+        ],
+        "default": "Oval"
+      }
+    ],
+    "specs": {
+      "material": "18K gold plated brass with a glass front",
+      "closure": "Lobster clasp",
+      "type": "Openable floating locket"
+    },
+    "description": "A glass-front locket that opens to hold charms, in a choice of four shapes, on a matching rolo chain.",
+    "rating": {
+      "average": 4.7,
+      "count": 63
+    },
     "reviews": [
       {
         "name": "Lakshmi Narayanan",
@@ -284,38 +358,37 @@
         "text": "Genuinely happy with this. Would order again."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false,
-    "options": [
-      {
-        "name": "Shape",
-        "values": [
-          "Oval",
-          "Heart",
-          "Rectangle",
-          "Round"
-        ]
-      }
-    ]
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P007",
     "name": "Hug Embrace Open Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 199,
-    "images": [
-      "/products/P007.webp"
-    ],
-    "shortDescription": "Two sculpted hands meeting in an embrace around an open gold-tone band.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P007.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "type": "Open cuff band",
       "size": "Adjustable, free size"
     },
-    "rating": 4.6,
-    "reviewCount": 245,
+    "description": "Two sculpted hands meeting in an embrace around an open gold-tone band.",
+    "rating": {
+      "average": 4.6,
+      "count": 245
+    },
     "reviews": [
       {
         "name": "Trisha Dutta",
@@ -333,27 +406,37 @@
         "text": "Good gifting option under budget. I bought three."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P008",
     "name": "Silver Bow Twist Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 210,
-    "images": [
-      "/products/P008.webp"
-    ],
-    "shortDescription": "A small crystal bow on a finely twisted band in a bright rhodium finish.",
-    "details": {
+    "pricing": {
+      "price": 210,
+      "mrp": 210
+    },
+    "media": {
+      "images": [
+        "/products/P008.webp"
+      ]
+    },
+    "specs": {
       "material": "Rhodium plated brass",
       "stone": "Cubic zirconia",
       "size": "Adjustable, free size"
     },
-    "rating": 4.5,
-    "reviewCount": 132,
+    "description": "A small crystal bow on a finely twisted band in a bright rhodium finish.",
+    "rating": {
+      "average": 4.5,
+      "count": 132
+    },
     "reviews": [
       {
         "name": "Pallavi Chandran",
@@ -371,27 +454,37 @@
         "text": "Simple packaging, but the piece itself is the real thing."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P009",
     "name": "Watch Dial Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 199,
-    "images": [
-      "/products/P009.webp"
-    ],
-    "shortDescription": "A black watch face on a bracelet-link band, a whole wristwatch shrunk down to a ring.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P009.webp"
+      ]
+    },
+    "specs": {
       "material": "Stainless steel",
       "type": "Decorative watch dial, not a working timepiece",
       "size": "Free size"
     },
-    "rating": 4.5,
-    "reviewCount": 188,
+    "description": "A black watch face on a bracelet-link band, a whole wristwatch shrunk down to a ring.",
+    "rating": {
+      "average": 4.5,
+      "count": 188
+    },
     "reviews": [
       {
         "name": "Harini Krishnan",
@@ -409,27 +502,51 @@
         "text": "Value for money. I have paid more for less at local shops."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P010",
     "name": "Mini Watch Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 420,
-    "images": [
-      "/products/P010.webp"
+    "pricing": {
+      "price": 199,
+      "mrp": 420
+    },
+    "media": {
+      "images": [
+        "/products/P010.webp"
+      ],
+      "variantImages": {
+        "Colour:Golden": "/products/P010-golden.webp"
+      }
+    },
+    "options": [
+      {
+        "name": "Colour",
+        "type": "swatch",
+        "values": [
+          "Silver",
+          "Golden"
+        ],
+        "default": "Silver"
+      }
     ],
-    "shortDescription": "A doll-sized watch ring with a pearl-white dial and a woven link band, in silver or golden.",
-    "details": {
+    "specs": {
       "material": "Stainless steel",
       "type": "Decorative watch dial, not a working timepiece",
       "size": "Free size"
     },
-    "rating": 4.7,
-    "reviewCount": 302,
+    "description": "A doll-sized watch ring with a pearl-white dial and a woven link band, in silver or golden.",
+    "rating": {
+      "average": 4.7,
+      "count": 302
+    },
     "reviews": [
       {
         "name": "Charulata Mishra",
@@ -447,36 +564,37 @@
         "text": "Comfortable for long wear, no pinching or pulling."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true,
-    "options": [
-      {
-        "name": "Colour",
-        "values": [
-          "Silver",
-          "Golden"
-        ]
-      }
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P011",
     "name": "Love Knot Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 599,
-    "images": [
-      "/products/P011.webp"
-    ],
-    "shortDescription": "A single fine wire tied into a soft knot on a slim gold-tone band.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 599
+    },
+    "media": {
+      "images": [
+        "/products/P011.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "type": "Fixed band",
       "size": "Free size"
     },
-    "rating": 4.7,
-    "reviewCount": 219,
+    "description": "A single fine wire tied into a soft knot on a slim gold-tone band.",
+    "rating": {
+      "average": 4.7,
+      "count": 219
+    },
     "reviews": [
       {
         "name": "Yamini Reddy",
@@ -494,27 +612,37 @@
         "text": "It has quickly become the piece I reach for by default."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P012",
     "name": "Clear Heart Statement Ring",
     "category": "rings",
-    "price": 499,
-    "mrp": 799,
-    "images": [
-      "/products/P012.webp"
-    ],
-    "shortDescription": "An oversized faceted heart in a scalloped gold-tone setting on an adjustable open band.",
-    "details": {
+    "pricing": {
+      "price": 499,
+      "mrp": 799
+    },
+    "media": {
+      "images": [
+        "/products/P012.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Faceted clear crystal heart",
       "size": "Adjustable, free size"
     },
-    "rating": 4.8,
-    "reviewCount": 167,
+    "description": "An oversized faceted heart in a scalloped gold-tone setting on an adjustable open band.",
+    "rating": {
+      "average": 4.8,
+      "count": 167
+    },
     "reviews": [
       {
         "name": "Payal Jain",
@@ -532,27 +660,37 @@
         "text": "It sits flat and does not spin around, which is my usual complaint."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P013",
     "name": "Pink Baguette Stacking Ring",
     "category": "rings",
-    "price": 349,
-    "mrp": 699,
-    "images": [
-      "/products/P013.webp"
-    ],
-    "shortDescription": "A single pink baguette set across a hand-textured rose gold-tone band, made to stack.",
-    "details": {
+    "pricing": {
+      "price": 349,
+      "mrp": 699
+    },
+    "media": {
+      "images": [
+        "/products/P013.webp"
+      ]
+    },
+    "specs": {
       "material": "Rose gold plated brass",
       "stone": "Pink cubic zirconia baguette",
       "size": "Free size"
     },
-    "rating": 4.8,
-    "reviewCount": 118,
+    "description": "A single pink baguette set across a hand-textured rose gold-tone band, made to stack.",
+    "rating": {
+      "average": 4.8,
+      "count": 118
+    },
     "reviews": [
       {
         "name": "Devika Warrier",
@@ -570,27 +708,37 @@
         "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P014",
     "name": "Emerald Baguette Stacking Ring",
     "category": "rings",
-    "price": 349,
-    "mrp": 699,
-    "images": [
-      "/products/P014.webp"
-    ],
-    "shortDescription": "A deep green baguette on a fine textured gold-tone band, slim enough to wear three at a time.",
-    "details": {
+    "pricing": {
+      "price": 349,
+      "mrp": 699
+    },
+    "media": {
+      "images": [
+        "/products/P014.webp"
+      ]
+    },
+    "specs": {
       "material": "Gold plated brass",
       "stone": "Green cubic zirconia baguette",
       "size": "Free size"
     },
-    "rating": 4.7,
-    "reviewCount": 104,
+    "description": "A deep green baguette on a fine textured gold-tone band, slim enough to wear three at a time.",
+    "rating": {
+      "average": 4.7,
+      "count": 104
+    },
     "reviews": [
       {
         "name": "Kalpana Iyengar",
@@ -608,27 +756,37 @@
         "text": "The stone setting is neat and nothing has come loose after a month of use."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P015",
     "name": "Red Solitaire Thread Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 399,
-    "images": [
-      "/products/P015.webp"
-    ],
-    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in deep garnet red.",
-    "details": {
+    "pricing": {
+      "price": 210,
+      "mrp": 399
+    },
+    "media": {
+      "images": [
+        "/products/P015.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Red cubic zirconia",
       "size": "Free size"
     },
-    "rating": 4.6,
-    "reviewCount": 156,
+    "description": "A hair-fine gold-tone band carrying one bezel-set stone in deep garnet red.",
+    "rating": {
+      "average": 4.6,
+      "count": 156
+    },
     "reviews": [
       {
         "name": "Zoya Ansari",
@@ -646,27 +804,37 @@
         "text": "Colour is exactly as shown. Packaging was sturdy and gift ready."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P016",
     "name": "Pink Solitaire Thread Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 399,
-    "images": [
-      "/products/P016.webp"
-    ],
-    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in soft pink.",
-    "details": {
+    "pricing": {
+      "price": 210,
+      "mrp": 399
+    },
+    "media": {
+      "images": [
+        "/products/P016.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Pink cubic zirconia",
       "size": "Free size"
     },
-    "rating": 4.6,
-    "reviewCount": 141,
+    "description": "A hair-fine gold-tone band carrying one bezel-set stone in soft pink.",
+    "rating": {
+      "average": 4.6,
+      "count": 141
+    },
     "reviews": [
       {
         "name": "Keerthi Balaji",
@@ -684,27 +852,37 @@
         "text": "Good gifting option under budget. I bought three."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P017",
     "name": "Clear Solitaire Thread Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 399,
-    "images": [
-      "/products/P017.webp"
-    ],
-    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set clear stone.",
-    "details": {
+    "pricing": {
+      "price": 210,
+      "mrp": 399
+    },
+    "media": {
+      "images": [
+        "/products/P017.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Clear cubic zirconia",
       "size": "Free size"
     },
-    "rating": 4.7,
-    "reviewCount": 193,
+    "description": "A hair-fine gold-tone band carrying one bezel-set clear stone.",
+    "rating": {
+      "average": 4.7,
+      "count": 193
+    },
     "reviews": [
       {
         "name": "Rashmi Kamath",
@@ -722,27 +900,37 @@
         "text": "Great everyday piece that does not need much care."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P018",
     "name": "Green Solitaire Thread Ring",
     "category": "rings",
-    "price": 210,
-    "mrp": 399,
-    "images": [
-      "/products/P018.webp"
-    ],
-    "shortDescription": "A hair-fine gold-tone band carrying one bezel-set stone in olive green.",
-    "details": {
+    "pricing": {
+      "price": 210,
+      "mrp": 399
+    },
+    "media": {
+      "images": [
+        "/products/P018.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Green cubic zirconia",
       "size": "Free size"
     },
-    "rating": 4.5,
-    "reviewCount": 127,
+    "description": "A hair-fine gold-tone band carrying one bezel-set stone in olive green.",
+    "rating": {
+      "average": 4.5,
+      "count": 127
+    },
     "reviews": [
       {
         "name": "Rimjhim Das",
@@ -760,27 +948,37 @@
         "text": "Comfortable enough that I forgot I was wearing it."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P019",
     "name": "Crystal Bow Adjustable Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 599,
-    "images": [
-      "/products/P019.webp"
-    ],
-    "shortDescription": "Two trillion-cut crystals meeting as a bow, pave-edged, on a bright open band.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 599
+    },
+    "media": {
+      "images": [
+        "/products/P019.webp"
+      ]
+    },
+    "specs": {
       "material": "Rhodium plated brass",
       "stone": "Cubic zirconia",
       "size": "Adjustable, free size"
     },
-    "rating": 4.6,
-    "reviewCount": 176,
+    "description": "Two trillion-cut crystals meeting as a bow, pave-edged, on a bright open band.",
+    "rating": {
+      "average": 4.6,
+      "count": 176
+    },
     "reviews": [
       {
         "name": "Ishita Sen",
@@ -798,27 +996,37 @@
         "text": "The mirror work catches light nicely under indoor lighting."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P020",
     "name": "Gold Ribbon Bow Ring",
     "category": "rings",
-    "price": 130,
-    "mrp": 599,
-    "images": [
-      "/products/P020.webp"
-    ],
-    "shortDescription": "A sculpted ribbon bow on an open gold-tone band, polished smooth and set with nothing at all.",
-    "details": {
+    "pricing": {
+      "price": 130,
+      "mrp": 599
+    },
+    "media": {
+      "images": [
+        "/products/P020.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "type": "Open cuff band",
       "size": "Adjustable, free size"
     },
-    "rating": 4.5,
-    "reviewCount": 264,
+    "description": "A sculpted ribbon bow on an open gold-tone band, polished smooth and set with nothing at all.",
+    "rating": {
+      "average": 4.5,
+      "count": 264
+    },
     "reviews": [
       {
         "name": "Vidya Ramesh",
@@ -836,27 +1044,37 @@
         "text": "It sits flat and does not spin around, which is my usual complaint."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P021",
     "name": "Rainbow Baguette Eternity Ring",
     "category": "rings",
-    "price": 199,
-    "mrp": 599,
-    "images": [
-      "/products/P021.webp"
-    ],
-    "shortDescription": "A full round of rainbow baguettes channel-set in gold tone, bright enough to wear on its own.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 599
+    },
+    "media": {
+      "images": [
+        "/products/P021.webp"
+      ]
+    },
+    "specs": {
       "material": "18K gold plated stainless steel",
       "stone": "Multicolour cubic zirconia baguettes",
       "size": "Free size"
     },
-    "rating": 4.7,
-    "reviewCount": 231,
+    "description": "A full round of rainbow baguettes channel-set in gold tone, bright enough to wear on its own.",
+    "rating": {
+      "average": 4.7,
+      "count": 231
+    },
     "reviews": [
       {
         "name": "Ipsita Panda",
@@ -874,27 +1092,40 @@
         "text": "I wear it with jeans as easily as with a saree."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P022",
     "name": "Vintage Gold Beaded Bracelet Watch",
     "category": "watches",
-    "price": 499,
-    "mrp": 499,
-    "images": [
-      "/products/P022.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A working quartz watch on a strand of polished gold-tone beads, with a slim oval dial that reads as jewellery first.",
-    "details": {
-      "material": "Anti-tarnish gold plated alloy",
-      "type": "Quartz analogue watch on a beaded bracelet band",
-      "closure": "Clasp fastening"
+    "pricing": {
+      "price": 499,
+      "mrp": 499
     },
-    "rating": 4.7,
-    "reviewCount": 74,
+    "media": {
+      "images": [
+        "/products/P022.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated alloy",
+      "closure": "Clasp fastening",
+      "type": "Quartz analogue watch on a beaded bracelet band"
+    },
+    "description": "A working quartz watch on a strand of polished gold-tone beads, with a slim oval dial that reads as jewellery first.",
+    "rating": {
+      "average": 4.7,
+      "count": 74
+    },
     "reviews": [
       {
         "name": "Sneha Rathod",
@@ -912,30 +1143,40 @@
         "text": "Sits a little loose on a small wrist but looks lovely."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P023",
     "name": "Traditional Meenakari Bracelet Watch",
     "category": "watches",
-    "price": 189,
-    "mrp": 189,
-    "images": [
-      "/products/P023.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A round quartz dial set between two hand-painted meenakari discs, hung with tiny ghungroo bells on an adjustable chain.",
-    "details": {
-      "material": "Anti-tarnish gold plated alloy with meenakari enamel",
-      "type": "Quartz analogue watch on a chain bracelet",
-      "closure": "Lobster clasp with an extension chain"
+    "pricing": {
+      "price": 189,
+      "mrp": 189
     },
-    "rating": 4.6,
-    "reviewCount": 58,
+    "media": {
+      "images": [
+        "/products/P023.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated alloy with meenakari enamel",
+      "closure": "Lobster clasp with an extension chain",
+      "type": "Quartz analogue watch on a chain bracelet"
+    },
+    "description": "A round quartz dial set between two hand-painted meenakari discs, hung with tiny ghungroo bells on an adjustable chain.",
+    "rating": {
+      "average": 4.6,
+      "count": 58
+    },
     "reviews": [
       {
         "name": "Rukmini Joshi",
@@ -953,30 +1194,37 @@
         "text": "The bells are quiet enough for work, which I was worried about."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P024",
     "name": "Multicolour Crystal Cluster Studs",
     "category": "earrings",
-    "price": 150,
-    "mrp": 250,
-    "images": [
-      "/products/P024.webp"
-    ],
-    "shortDescription": "A tight cluster of marquise and trillion cut stones in rose, mint, amber and clear, set close to the ear in gold tone.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Multicolour cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 250
     },
-    "rating": 4.6,
-    "reviewCount": 86,
+    "media": {
+      "images": [
+        "/products/P024.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "type": "Push-back studs",
+      "stone": "Multicolour cubic zirconia"
+    },
+    "description": "A tight cluster of marquise and trillion cut stones in rose, mint, amber and clear, set close to the ear in gold tone.",
+    "rating": {
+      "average": 4.6,
+      "count": 86
+    },
     "reviews": [
       {
         "name": "Ishita Nair",
@@ -994,27 +1242,37 @@
         "text": "The stones are properly set. Nothing rattles."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P025",
     "name": "Silver-Plated Pink Drop Earrings",
     "category": "earrings",
-    "price": 150,
-    "mrp": 350,
-    "images": [
-      "/products/P025.webp"
-    ],
-    "shortDescription": "A round solitaire above an open leaf frame filled with soft pink marquise stones and edged in pavé.",
-    "details": {
-      "material": "Silver plated brass",
-      "stone": "Pink and clear cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 350
     },
-    "rating": 4.7,
-    "reviewCount": 64,
+    "media": {
+      "images": [
+        "/products/P025.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver plated brass",
+      "type": "Push-back studs",
+      "stone": "Pink and clear cubic zirconia"
+    },
+    "description": "A round solitaire above an open leaf frame filled with soft pink marquise stones and edged in pavé.",
+    "rating": {
+      "average": 4.7,
+      "count": 64
+    },
     "reviews": [
       {
         "name": "Charvi Malhotra",
@@ -1032,27 +1290,37 @@
         "text": "Bigger than I pictured, but they carry it well."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P026",
     "name": "Silver-Plated Blue Floral Studs",
     "category": "earrings",
-    "price": 150,
-    "mrp": 350,
-    "images": [
-      "/products/P026.webp"
-    ],
-    "shortDescription": "Deep blue rounds set around a princess-cut centre in a bright silver-tone cluster.",
-    "details": {
-      "material": "Silver plated brass",
-      "stone": "Blue and clear cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 350
     },
-    "rating": 4.6,
-    "reviewCount": 71,
+    "media": {
+      "images": [
+        "/products/P026.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver plated brass",
+      "type": "Push-back studs",
+      "stone": "Blue and clear cubic zirconia"
+    },
+    "description": "Deep blue rounds set around a princess-cut centre in a bright silver-tone cluster.",
+    "rating": {
+      "average": 4.6,
+      "count": 71
+    },
     "reviews": [
       {
         "name": "Aditi Kulkarni",
@@ -1070,27 +1338,37 @@
         "text": "Bought a second pair for my sister the same week."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P027",
     "name": "Gold-Plated Mint Green Floral Studs",
     "category": "earrings",
-    "price": 150,
-    "mrp": 350,
-    "images": [
-      "/products/P027.webp"
-    ],
-    "shortDescription": "Frosted mint green stones alternating with clear trillions around a square-cut centre, in warm gold tone.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Mint green and clear cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 350
     },
-    "rating": 4.7,
-    "reviewCount": 59,
+    "media": {
+      "images": [
+        "/products/P027.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "type": "Push-back studs",
+      "stone": "Mint green and clear cubic zirconia"
+    },
+    "description": "Frosted mint green stones alternating with clear trillions around a square-cut centre, in warm gold tone.",
+    "rating": {
+      "average": 4.7,
+      "count": 59
+    },
     "reviews": [
       {
         "name": "Harini Subramanian",
@@ -1108,27 +1386,37 @@
         "text": "Took a chance on the colour and have worn them every week since."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P028",
     "name": "Gold-Plated Pink Crystal Flower Studs",
     "category": "earrings",
-    "price": 150,
-    "mrp": 350,
-    "images": [
-      "/products/P028.webp"
-    ],
-    "shortDescription": "Six pale pink marquise petals opening around a single clear round, in a fine gold-tone setting.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Pink and clear cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 350
     },
-    "rating": 4.8,
-    "reviewCount": 93,
+    "media": {
+      "images": [
+        "/products/P028.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "type": "Push-back studs",
+      "stone": "Pink and clear cubic zirconia"
+    },
+    "description": "Six pale pink marquise petals opening around a single clear round, in a fine gold-tone setting.",
+    "rating": {
+      "average": 4.8,
+      "count": 93
+    },
     "reviews": [
       {
         "name": "Shreya Kamath",
@@ -1146,27 +1434,37 @@
         "text": "Packed carefully and arrived without a single stone loose."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P029",
     "name": "Delicate Pink Petal Floral Earrings",
     "category": "earrings",
-    "price": 150,
-    "mrp": 250,
-    "images": [
-      "/products/P029.webp"
-    ],
-    "shortDescription": "Five soft pink petals in a milled silver-tone frame around a bright clear centre, small enough for every day.",
-    "details": {
-      "material": "Silver plated brass",
-      "stone": "Pink and clear cubic zirconia",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 150,
+      "mrp": 250
     },
-    "rating": 4.6,
-    "reviewCount": 77,
+    "media": {
+      "images": [
+        "/products/P029.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver plated brass",
+      "type": "Push-back studs",
+      "stone": "Pink and clear cubic zirconia"
+    },
+    "description": "Five soft pink petals in a milled silver-tone frame around a bright clear centre, small enough for every day.",
+    "rating": {
+      "average": 4.6,
+      "count": 77
+    },
     "reviews": [
       {
         "name": "Kritika Sood",
@@ -1184,27 +1482,37 @@
         "text": "Have not taken them off in a fortnight."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P030",
     "name": "Gold-Plated Round CZ Studs with Square Centre",
     "category": "earrings",
-    "price": 199,
-    "mrp": 350,
-    "images": [
-      "/products/P030.webp"
-    ],
-    "shortDescription": "A double pavé halo circling a square milky cat's-eye stone, held on fine gold-tone bridges.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Milky cat's-eye centre inside a cubic zirconia halo",
-      "type": "Push-back studs"
+    "pricing": {
+      "price": 199,
+      "mrp": 350
     },
-    "rating": 4.7,
-    "reviewCount": 68,
+    "media": {
+      "images": [
+        "/products/P030.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "type": "Push-back studs",
+      "stone": "Milky cat's-eye centre inside a cubic zirconia halo"
+    },
+    "description": "A double pavé halo circling a square milky cat's-eye stone, held on fine gold-tone bridges.",
+    "rating": {
+      "average": 4.7,
+      "count": 68
+    },
     "reviews": [
       {
         "name": "Farida Merchant",
@@ -1222,28 +1530,38 @@
         "text": "Formal enough for a wedding, plain enough for a workday."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P031",
     "name": "Silver Floral Teardrop Nath",
     "category": "nose-pins",
-    "price": 109,
-    "mrp": 249,
-    "images": [
-      "/products/P031.webp"
-    ],
-    "shortDescription": "A pavé-set hoop with a small flower at its base and a teardrop that swings below it.",
-    "details": {
-      "material": "Silver plated brass",
-      "stone": "Cubic zirconia",
-      "type": "Nath (nose ring)",
-      "closure": "Screw fastening"
+    "pricing": {
+      "price": 109,
+      "mrp": 249
     },
-    "rating": 4.5,
-    "reviewCount": 42,
+    "media": {
+      "images": [
+        "/products/P031.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver plated brass",
+      "closure": "Screw fastening",
+      "type": "Nath (nose ring)",
+      "stone": "Cubic zirconia"
+    },
+    "description": "A pavé-set hoop with a small flower at its base and a teardrop that swings below it.",
+    "rating": {
+      "average": 4.5,
+      "count": 42
+    },
     "reviews": [
       {
         "name": "Mansi Trivedi",
@@ -1261,28 +1579,38 @@
         "text": "The drop moves just enough to catch the eye."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P032",
     "name": "Gold Peacock Nath with Pearl Drop",
     "category": "nose-pins",
-    "price": 109,
-    "mrp": 249,
-    "images": [
-      "/products/P032.webp"
-    ],
-    "shortDescription": "A peacock curved along a pavé hoop, set with a deep pink-red stone and finished with a single hanging pearl.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Red and clear cubic zirconia with a faux pearl drop",
-      "type": "Nath (nose ring)",
-      "closure": "Screw fastening"
+    "pricing": {
+      "price": 109,
+      "mrp": 249
     },
-    "rating": 4.6,
-    "reviewCount": 51,
+    "media": {
+      "images": [
+        "/products/P032.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "closure": "Screw fastening",
+      "type": "Nath (nose ring)",
+      "stone": "Red and clear cubic zirconia with a faux pearl drop"
+    },
+    "description": "A peacock curved along a pavé hoop, set with a deep pink-red stone and finished with a single hanging pearl.",
+    "rating": {
+      "average": 4.6,
+      "count": 51
+    },
     "reviews": [
       {
         "name": "Snehal Gaikwad",
@@ -1300,28 +1628,38 @@
         "text": "Pearl is small, which I prefer for daily wear."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P033",
     "name": "Gold Peacock Nath with Clear Stones",
     "category": "nose-pins",
-    "price": 109,
-    "mrp": 249,
-    "images": [
-      "/products/P033.webp"
-    ],
-    "shortDescription": "The same peacock hoop in all clear stones, with a marquise at the base and a pearl drop below.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Clear cubic zirconia with a faux pearl drop",
-      "type": "Nath (nose ring)",
-      "closure": "Screw fastening"
+    "pricing": {
+      "price": 109,
+      "mrp": 249
     },
-    "rating": 4.5,
-    "reviewCount": 47,
+    "media": {
+      "images": [
+        "/products/P033.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "closure": "Screw fastening",
+      "type": "Nath (nose ring)",
+      "stone": "Clear cubic zirconia with a faux pearl drop"
+    },
+    "description": "The same peacock hoop in all clear stones, with a marquise at the base and a pearl drop below.",
+    "rating": {
+      "average": 4.5,
+      "count": 47
+    },
     "reviews": [
       {
         "name": "Yamini Reddy",
@@ -1339,28 +1677,38 @@
         "text": "Bought it for a wedding and have kept wearing it since."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P034",
     "name": "Gold Minimalist Stone Nath",
     "category": "nose-pins",
-    "price": 109,
-    "mrp": 249,
-    "images": [
-      "/products/P034.webp"
-    ],
-    "shortDescription": "A slim stone-set hoop with one pavé teardrop, the quiet end of the nath range.",
-    "details": {
-      "material": "Gold plated brass",
-      "stone": "Cubic zirconia",
-      "type": "Nath (nose ring)",
-      "closure": "Open pressure-fit hoop"
+    "pricing": {
+      "price": 109,
+      "mrp": 249
     },
-    "rating": 4.4,
-    "reviewCount": 39,
+    "media": {
+      "images": [
+        "/products/P034.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold plated brass",
+      "closure": "Open pressure-fit hoop",
+      "type": "Nath (nose ring)",
+      "stone": "Cubic zirconia"
+    },
+    "description": "A slim stone-set hoop with one pavé teardrop, the quiet end of the nath range.",
+    "rating": {
+      "average": 4.4,
+      "count": 39
+    },
     "reviews": [
       {
         "name": "Ritika Bansal",
@@ -1378,28 +1726,38 @@
         "text": "Very small. Worth knowing before you order."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P035",
     "name": "Silver Floral Cluster Nath",
     "category": "nose-pins",
-    "price": 129,
-    "mrp": 299,
-    "images": [
-      "/products/P035.webp"
-    ],
-    "shortDescription": "A hoop opening into a spray of marquise petals, with a pavé teardrop hanging from the cluster.",
-    "details": {
-      "material": "Silver plated brass",
-      "stone": "Cubic zirconia",
-      "type": "Nath (nose ring)",
-      "closure": "Screw fastening"
+    "pricing": {
+      "price": 129,
+      "mrp": 299
     },
-    "rating": 4.6,
-    "reviewCount": 55,
+    "media": {
+      "images": [
+        "/products/P035.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver plated brass",
+      "closure": "Screw fastening",
+      "type": "Nath (nose ring)",
+      "stone": "Cubic zirconia"
+    },
+    "description": "A hoop opening into a spray of marquise petals, with a pavé teardrop hanging from the cluster.",
+    "rating": {
+      "average": 4.6,
+      "count": 55
+    },
     "reviews": [
       {
         "name": "Trupti Deshpande",
@@ -1417,26 +1775,39 @@
         "text": "Takes a moment to fit the screw, then it is solid."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P036",
     "name": "Orange Enamel Floral Kada",
     "category": "bracelets",
-    "price": 299,
-    "mrp": 699,
-    "images": [
-      "/products/P036.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A domed kada in warm orange enamel, with gold-tone flowers and trailing leaves raised across the front.",
-    "details": {
+    "pricing": {
+      "price": 299,
+      "mrp": 699
+    },
+    "media": {
+      "images": [
+        "/products/P036.webp"
+      ]
+    },
+    "specs": {
       "material": "Anti-tarnish gold plated brass with enamel",
       "type": "Solid kada bangle bracelet"
     },
-    "rating": 4.7,
-    "reviewCount": 62,
+    "description": "A domed kada in warm orange enamel, with gold-tone flowers and trailing leaves raised across the front.",
+    "rating": {
+      "average": 4.7,
+      "count": 62
+    },
     "reviews": [
       {
         "name": "Bhoomi Thakkar",
@@ -1454,30 +1825,40 @@
         "text": "Runs slightly large, so check your usual kada size."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P037",
     "name": "Pink Flower Bracelet",
     "category": "bracelets",
-    "price": 299,
-    "mrp": 799,
-    "images": [
-      "/products/P037.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A gold-tone vine of leaves and small pink blooms with one open flower at the centre, on an adjustable chain.",
-    "details": {
-      "material": "Anti-tarnish gold plated brass",
-      "stone": "Pink cubic zirconia",
-      "closure": "Lobster clasp with an extension chain"
+    "pricing": {
+      "price": 299,
+      "mrp": 799
     },
-    "rating": 4.8,
-    "reviewCount": 104,
+    "media": {
+      "images": [
+        "/products/P037.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated brass",
+      "closure": "Lobster clasp with an extension chain",
+      "stone": "Pink cubic zirconia"
+    },
+    "description": "A gold-tone vine of leaves and small pink blooms with one open flower at the centre, on an adjustable chain.",
+    "rating": {
+      "average": 4.8,
+      "count": 104
+    },
     "reviews": [
       {
         "name": "Simran Ahluwalia",
@@ -1495,30 +1876,40 @@
         "text": "Delicate without feeling like it will snap."
       }
     ],
-    "featured": true,
-    "isNew": false,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": true,
+      "isNew": false
+    }
   },
   {
     "id": "P038",
     "name": "Multicolour Tulip Bracelet",
     "category": "bracelets",
-    "price": 299,
-    "mrp": 799,
-    "images": [
-      "/products/P038.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "Red, blue, green and violet stones set along a softly waved gold-tone bar chain.",
-    "details": {
-      "material": "Anti-tarnish gold plated brass",
-      "stone": "Multicolour cubic zirconia",
-      "closure": "Box clasp"
+    "pricing": {
+      "price": 299,
+      "mrp": 799
     },
-    "rating": 4.7,
-    "reviewCount": 81,
+    "media": {
+      "images": [
+        "/products/P038.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated brass",
+      "closure": "Box clasp",
+      "stone": "Multicolour cubic zirconia"
+    },
+    "description": "Red, blue, green and violet stones set along a softly waved gold-tone bar chain.",
+    "rating": {
+      "average": 4.7,
+      "count": 81
+    },
     "reviews": [
       {
         "name": "Kanika Grover",
@@ -1536,30 +1927,40 @@
         "text": "Looks like something from a far more expensive counter."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P039",
     "name": "Pink Tulip Bracelet",
     "category": "bracelets",
-    "price": 299,
-    "mrp": 799,
-    "images": [
-      "/products/P039.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A waved gold-tone chain set with oval and marquise stones in a single soft pink.",
-    "details": {
-      "material": "Anti-tarnish gold plated brass",
-      "stone": "Pink cubic zirconia",
-      "closure": "Box clasp"
+    "pricing": {
+      "price": 299,
+      "mrp": 799
     },
-    "rating": 4.7,
-    "reviewCount": 66,
+    "media": {
+      "images": [
+        "/products/P039.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated brass",
+      "closure": "Box clasp",
+      "stone": "Pink cubic zirconia"
+    },
+    "description": "A waved gold-tone chain set with oval and marquise stones in a single soft pink.",
+    "rating": {
+      "average": 4.7,
+      "count": 66
+    },
     "reviews": [
       {
         "name": "Ipsita Mohanty",
@@ -1577,30 +1978,40 @@
         "text": "Sat perfectly under a shirt cuff."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P040",
     "name": "Blue Tulip Bracelet",
     "category": "bracelets",
-    "price": 299,
-    "mrp": 799,
-    "images": [
-      "/products/P040.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "The same waved chain in deep blue ovals with green marquise leaves set between them.",
-    "details": {
-      "material": "Anti-tarnish gold plated brass",
-      "stone": "Blue and green cubic zirconia",
-      "closure": "Box clasp"
+    "pricing": {
+      "price": 299,
+      "mrp": 799
     },
-    "rating": 4.6,
-    "reviewCount": 58,
+    "media": {
+      "images": [
+        "/products/P040.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated brass",
+      "closure": "Box clasp",
+      "stone": "Blue and green cubic zirconia"
+    },
+    "description": "The same waved chain in deep blue ovals with green marquise leaves set between them.",
+    "rating": {
+      "average": 4.6,
+      "count": 58
+    },
     "reviews": [
       {
         "name": "Trisha Bakshi",
@@ -1618,30 +2029,37 @@
         "text": "Good weight to it. It does not feel hollow."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": false,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": false
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P041",
     "name": "Kashmiri Ghungroo Bangles",
     "category": "bangles",
-    "price": 199,
-    "mrp": 199,
-    "images": [
-      "/products/P041.webp"
-    ],
-    "shortDescription": "Fine gold-tone bangles hung with clusters of tiny ghungroo bells that sound softly as you move.",
-    "details": {
+    "pricing": {
+      "price": 199,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P041.webp"
+      ]
+    },
+    "specs": {
       "material": "Gold plated brass with ghungroo bells",
       "type": "Bangle set",
       "size": "Sizes 2.4, 2.6 and 2.8, supplied in packs of 4 or 8. Message us on WhatsApp with the pack and size you need"
     },
-    "rating": 4.5,
-    "reviewCount": 88,
+    "description": "Fine gold-tone bangles hung with clusters of tiny ghungroo bells that sound softly as you move.",
+    "rating": {
+      "average": 4.5,
+      "count": 88
+    },
     "reviews": [
       {
         "name": "Manjiri Apte",
@@ -1659,26 +2077,36 @@
         "text": "Sorting the size over WhatsApp took two minutes."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P042",
     "name": "Royal Purple Glass Bangle Set",
     "category": "bangles",
-    "price": 299,
-    "mrp": 499,
-    "images": [
-      "/products/P042.webp"
-    ],
-    "shortDescription": "Sixteen glass bangles in deep royal purple, dusted with gold-tone beadwork and hung with ghungroo clusters.",
-    "details": {
+    "pricing": {
+      "price": 299,
+      "mrp": 499
+    },
+    "media": {
+      "images": [
+        "/products/P042.webp"
+      ]
+    },
+    "specs": {
       "material": "Lacquered glass with gold-tone metal beadwork and ghungroo bells",
       "type": "Set of 16 bangles"
     },
-    "rating": 4.6,
-    "reviewCount": 73,
+    "description": "Sixteen glass bangles in deep royal purple, dusted with gold-tone beadwork and hung with ghungroo clusters.",
+    "rating": {
+      "average": 4.6,
+      "count": 73
+    },
     "reviews": [
       {
         "name": "Ketaki Wagle",
@@ -1696,26 +2124,36 @@
         "text": "Glass, so treat them gently, but they look wonderful stacked."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P043",
     "name": "Emerald Green Glass Bangle Set",
     "category": "bangles",
-    "price": 299,
-    "mrp": 499,
-    "images": [
-      "/products/P043.webp"
-    ],
-    "shortDescription": "Sixteen glass bangles in deep green, scattered with gold and bronze beadwork and finished with ghungroo clusters.",
-    "details": {
+    "pricing": {
+      "price": 299,
+      "mrp": 499
+    },
+    "media": {
+      "images": [
+        "/products/P043.webp"
+      ]
+    },
+    "specs": {
       "material": "Lacquered glass with gold-tone metal beadwork and ghungroo bells",
       "type": "Set of 16 bangles"
     },
-    "rating": 4.7,
-    "reviewCount": 69,
+    "description": "Sixteen glass bangles in deep green, scattered with gold and bronze beadwork and finished with ghungroo clusters.",
+    "rating": {
+      "average": 4.7,
+      "count": 69
+    },
     "reviews": [
       {
         "name": "Aishwarya Salunke",
@@ -1733,26 +2171,36 @@
         "text": "Sound lovely together, though sixteen is a lot of jingle."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P044",
     "name": "Silver Snake Chain Ball Anklet",
     "category": "anklets",
-    "price": 89,
-    "mrp": 199,
-    "images": [
-      "/products/P044.webp"
-    ],
-    "shortDescription": "A supple silver-tone snake chain carrying two finely textured ball beads. Supplied as a set of two.",
-    "details": {
+    "pricing": {
+      "price": 89,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P044.webp"
+      ]
+    },
+    "specs": {
       "material": "Silver plated brass",
       "type": "Set of two anklets"
     },
-    "rating": 4.5,
-    "reviewCount": 61,
+    "description": "A supple silver-tone snake chain carrying two finely textured ball beads. Supplied as a set of two.",
+    "rating": {
+      "average": 4.5,
+      "count": 61
+    },
     "reviews": [
       {
         "name": "Nupur Chatterjee",
@@ -1770,27 +2218,37 @@
         "text": "Two for this price is the reason I ordered."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P045",
     "name": "Black Evil Eye Spiral Charm Anklet",
     "category": "anklets",
-    "price": 120,
-    "mrp": 199,
-    "images": [
-      "/products/P045.webp"
-    ],
-    "shortDescription": "Faceted black beads strung with two blue evil-eye beads and a small silver-tone spiral charm. Supplied as a set of two.",
-    "details": {
-      "material": "Faceted glass beads with silver plated findings",
-      "type": "Set of two anklets",
-      "closure": "Lobster clasp with an extension chain"
+    "pricing": {
+      "price": 120,
+      "mrp": 199
     },
-    "rating": 4.6,
-    "reviewCount": 74,
+    "media": {
+      "images": [
+        "/products/P045.webp"
+      ]
+    },
+    "specs": {
+      "material": "Faceted glass beads with silver plated findings",
+      "closure": "Lobster clasp with an extension chain",
+      "type": "Set of two anklets"
+    },
+    "description": "Faceted black beads strung with two blue evil-eye beads and a small silver-tone spiral charm. Supplied as a set of two.",
+    "rating": {
+      "average": 4.6,
+      "count": 74
+    },
     "reviews": [
       {
         "name": "Mrinalini Saxena",
@@ -1808,27 +2266,40 @@
         "text": "Beads are small, so the pair reads as delicate rather than chunky."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P046",
     "name": "Clover Charm Gold Anklet",
     "category": "anklets",
-    "price": 220,
-    "mrp": 299,
-    "images": [
-      "/products/P046.webp"
+    "collections": [
+      "anti-tarnish"
     ],
-    "shortDescription": "A fine gold-tone cable chain carrying a four-leaf clover set with one clear stone, and a small flower charm beside it.",
-    "details": {
-      "material": "Anti-tarnish gold plated stainless steel",
-      "stone": "Cubic zirconia",
-      "closure": "Lobster clasp with an extension chain"
+    "pricing": {
+      "price": 220,
+      "mrp": 299
     },
-    "rating": 4.8,
-    "reviewCount": 57,
+    "media": {
+      "images": [
+        "/products/P046.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold plated stainless steel",
+      "closure": "Lobster clasp with an extension chain",
+      "stone": "Cubic zirconia"
+    },
+    "description": "A fine gold-tone cable chain carrying a four-leaf clover set with one clear stone, and a small flower charm beside it.",
+    "rating": {
+      "average": 4.8,
+      "count": 57
+    },
     "reviews": [
       {
         "name": "Kimaya Phadke",
@@ -1846,29 +2317,36 @@
         "text": "Fine chain, so it disappears under a hem, which is what I wanted."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true,
-    "collections": [
-      "anti-tarnish"
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P047",
     "name": "Pink Tulip Bow Hair Clip",
     "category": "hair-accessories",
-    "price": 49,
-    "mrp": 199,
-    "images": [
-      "/products/P047.webp"
-    ],
-    "shortDescription": "A pink organza bow on an alligator clip, with two satin tulips trailing from the knot on green ribbon stems.",
-    "details": {
+    "pricing": {
+      "price": 49,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P047.webp"
+      ]
+    },
+    "specs": {
       "material": "Organza and satin ribbon on a metal alligator clip",
       "type": "Hair clip"
     },
-    "rating": 4.5,
-    "reviewCount": 45,
+    "description": "A pink organza bow on an alligator clip, with two satin tulips trailing from the knot on green ribbon stems.",
+    "rating": {
+      "average": 4.5,
+      "count": 45
+    },
     "reviews": [
       {
         "name": "Tanushree Mitra",
@@ -1886,26 +2364,49 @@
         "text": "Bought three at this price and regret nothing."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   },
   {
     "id": "P048",
     "name": "Satin Long Tail Bow Hair Clip",
     "category": "hair-accessories",
-    "price": 129,
-    "mrp": 199,
-    "images": [
-      "/products/P048.webp"
+    "pricing": {
+      "price": 129,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P048.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Colour",
+        "type": "swatch",
+        "values": [
+          "Ivory White",
+          "Antique Gold",
+          "Lilac Shimmer",
+          "Cream Shimmer"
+        ],
+        "default": "Ivory White"
+      }
     ],
-    "shortDescription": "A wide satin bow with long tails that fall well past the knot, on a firm clip, in a choice of four finishes.",
-    "details": {
+    "specs": {
       "material": "Satin fabric on a metal hair clip",
       "type": "Long-tail bow clip"
     },
-    "rating": 4.8,
-    "reviewCount": 92,
+    "description": "A wide satin bow with long tails that fall well past the knot, on a firm clip, in a choice of four finishes.",
+    "rating": {
+      "average": 4.8,
+      "count": 92
+    },
     "reviews": [
       {
         "name": "Aarohi Deshmukh",
@@ -1923,38 +2424,37 @@
         "text": "Ordered the ivory and it is exactly the shade shown."
       }
     ],
-    "featured": false,
-    "isNew": true,
-    "inStock": true,
-    "options": [
-      {
-        "name": "Colour",
-        "values": [
-          "Ivory White",
-          "Antique Gold",
-          "Lilac Shimmer",
-          "Cream Shimmer"
-        ]
-      }
-    ]
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    }
   },
   {
     "id": "P049",
     "name": "Satin Scrunchies Set of Four",
     "category": "hair-accessories",
-    "price": 149,
-    "mrp": 199,
-    "images": [
-      "/products/P049.webp"
-    ],
-    "shortDescription": "Four full satin scrunchies in ivory, lilac, dusty rose and champagne, gathered on a soft covered elastic.",
-    "details": {
+    "pricing": {
+      "price": 149,
+      "mrp": 199
+    },
+    "media": {
+      "images": [
+        "/products/P049.webp"
+      ]
+    },
+    "specs": {
       "material": "Satin with a covered elastic",
       "type": "Set of four scrunchies",
       "size": "Available in small, medium and large. Message us on WhatsApp with the size you need"
     },
-    "rating": 4.7,
-    "reviewCount": 83,
+    "description": "Four full satin scrunchies in ivory, lilac, dusty rose and champagne, gathered on a soft covered elastic.",
+    "rating": {
+      "average": 4.7,
+      "count": 83
+    },
     "reviews": [
       {
         "name": "Myra Fernandes",
@@ -1972,8 +2472,12 @@
         "text": "Elastic is soft and has not stretched out after a month."
       }
     ],
-    "featured": false,
-    "isNew": false,
-    "inStock": true
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": false
+    }
   }
 ]

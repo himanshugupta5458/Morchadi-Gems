@@ -230,7 +230,9 @@ const INITIAL_RING: CatalogueEntry = {
   mrp: 600,
   image: "/products/P001.webp",
   inStock: true,
-  options: [{ name: "Letter", values: ["A", "B", "C"] }],
+  options: [
+    { name: "Letter", type: "dropdown", values: ["A", "B", "C"], default: "A" },
+  ],
 };
 
 const OPTIONED_CATALOGUE: CatalogueEntry[] = [INITIAL_RING, NECKLACE];

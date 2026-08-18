@@ -41,7 +41,7 @@ function collectEveryPage(params: ShopSearchParams): Product[] {
 }
 
 function pricesOf(products: Product[]): number[] {
-  return products.map((product) => product.price);
+  return products.map((product) => product.pricing.price);
 }
 
 function idsOf(products: Product[]): string[] {
@@ -58,17 +58,14 @@ function productFixture(overrides: Partial<Product> = {}): Product {
     id: "fx-001",
     name: "Fixture Piece",
     category: "rings",
-    price: 1499,
-    mrp: 1999,
-    images: [],
-    shortDescription: "A fixture.",
-    details: { material: "Brass" },
-    rating: 4.5,
-    reviewCount: 2,
+    pricing: { price: 1499, mrp: 1999 },
+    media: { images: [] },
+    specs: { material: "Brass" },
+    description: "A fixture.",
+    rating: { average: 4.5, count: 2 },
     reviews: [],
-    featured: false,
-    isNew: false,
-    inStock: true,
+    stock: { inStock: true },
+    flags: { featured: false, isNew: false },
     ...overrides,
   };
 }
@@ -143,7 +140,7 @@ describe("price bands", () => {
       returnedAcrossAllBands += everyItem.length;
 
       for (const product of everyItem) {
-        expect(isPriceInBand(product.price, band)).toBe(true);
+        expect(isPriceInBand(product.pricing.price, band)).toBe(true);
       }
     }
 
@@ -177,18 +174,20 @@ describe("sorting", () => {
 
   it("orders rating-desc non-increasing across every page", () => {
     const ratings = collectEveryPage({ sort: "rating-desc" }).map(
-      (product) => product.rating,
+      (product) => product.rating.average,
     );
     expect(ratings).toEqual([...ratings].sort((left, right) => right - left));
   });
 
   it("puts new arrivals first under the default sort", () => {
     const everyItem = collectEveryPage({ sort: "newest" });
-    const newCount = everyItem.filter((product) => product.isNew).length;
+    const newCount = everyItem.filter((product) => product.flags.isNew).length;
 
     expect(newCount).toBeGreaterThan(0);
-    expect(everyItem.slice(0, newCount).every((product) => product.isNew)).toBe(true);
-    expect(everyItem.slice(newCount).some((product) => product.isNew)).toBe(false);
+    expect(everyItem.slice(0, newCount).every((product) => product.flags.isNew)).toBe(
+      true,
+    );
+    expect(everyItem.slice(newCount).some((product) => product.flags.isNew)).toBe(false);
   });
 
   it("breaks price ties on id, so tied products keep a stable order", () => {
@@ -198,7 +197,7 @@ describe("sorting", () => {
     );
 
     expect(tiedPrice).toBeDefined();
-    const tied = everyItem.filter((product) => product.price === tiedPrice);
+    const tied = everyItem.filter((product) => product.pricing.price === tiedPrice);
 
     expect(tied.length).toBeGreaterThan(1);
     expect(idsOf(tied)).toEqual([...idsOf(tied)].sort());
@@ -210,12 +209,12 @@ describe("sorting", () => {
     for (let index = 1; index < everyItem.length; index += 1) {
       const previous = everyItem[index - 1];
       const current = everyItem[index];
-      if (previous.rating !== current.rating) continue;
+      if (previous.rating.average !== current.rating.average) continue;
 
-      if (previous.reviewCount === current.reviewCount) {
+      if (previous.rating.count === current.rating.count) {
         expect(previous.id.localeCompare(current.id)).toBeLessThan(0);
       } else {
-        expect(previous.reviewCount).toBeGreaterThan(current.reviewCount);
+        expect(previous.rating.count).toBeGreaterThan(current.rating.count);
       }
     }
   });
@@ -237,7 +236,7 @@ describe("filter combinations", () => {
     expect(result.total).toBeGreaterThan(0);
     for (const product of everyItem) {
       expect(product.category).toBe("necklaces");
-      expect(product.price).toBeLessThanOrEqual(999);
+      expect(product.pricing.price).toBeLessThanOrEqual(999);
     }
   });
 
@@ -403,7 +402,10 @@ describe("collections", () => {
   });
 
   it("reads best-sellers off the featured flag, not a tag", () => {
-    const featured = productFixture({ id: "fx-featured", featured: true });
+    const featured = productFixture({
+      id: "fx-featured",
+      flags: { featured: true, isNew: false },
+    });
 
     expect(isProductInCollection(featured, "best-sellers")).toBe(true);
     expect(isProductInCollection(untagged, "best-sellers")).toBe(false);
@@ -411,7 +413,10 @@ describe("collections", () => {
   });
 
   it("reads new-arrivals off the isNew flag, not a tag", () => {
-    const fresh = productFixture({ id: "fx-new", isNew: true });
+    const fresh = productFixture({
+      id: "fx-new",
+      flags: { featured: false, isNew: true },
+    });
 
     expect(isProductInCollection(fresh, "new-arrivals")).toBe(true);
     expect(isProductInCollection(untagged, "new-arrivals")).toBe(false);
@@ -446,13 +451,13 @@ describe("collections", () => {
 
     expect(
       matchesShopQuery(
-        productFixture({ price: 499, collections: ["gifting"] }),
+        productFixture({ pricing: { price: 499, mrp: 799 }, collections: ["gifting"] }),
         query,
       ),
     ).toBe(true);
     expect(
       matchesShopQuery(
-        productFixture({ price: 4999, collections: ["gifting"] }),
+        productFixture({ pricing: { price: 4999, mrp: 5999 }, collections: ["gifting"] }),
         query,
       ),
     ).toBe(false);
@@ -482,10 +487,10 @@ describe("collections", () => {
     const newArrivals = getShopResults({ collection: "new-arrivals" });
 
     expect(bestSellers.total).toBe(
-      getAllProducts().filter((product) => product.featured).length,
+      getAllProducts().filter((product) => product.flags.featured).length,
     );
     expect(newArrivals.total).toBe(
-      getAllProducts().filter((product) => product.isNew).length,
+      getAllProducts().filter((product) => product.flags.isNew).length,
     );
   });
 

@@ -23,7 +23,7 @@ import {
   parseOrderItems,
 } from "@/lib/order";
 import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
-import { getAllProducts } from "@/lib/products";
+import { getOrderOptionCatalogue, getOrderPricingCatalogue } from "@/lib/products";
 
 /**
  * Node, not Edge: this handler reads `node:crypto` for order identifiers and holds the
@@ -164,9 +164,10 @@ export async function POST(request: Request): Promise<NextResponse> {
     return malformed("REQUEST_MALFORMED", "We could not read the items in your cart.");
   }
 
-  const products = getAllProducts();
-
-  const order = buildOrderFromCart(mergeOrderItemsByProduct(items), products);
+  const order = buildOrderFromCart(
+    mergeOrderItemsByProduct(items),
+    getOrderPricingCatalogue(),
+  );
   if (!order.valid) {
     return errorResponse(400, {
       error: "ITEMS_INVALID",
@@ -176,7 +177,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     });
   }
 
-  const lineOptions = validateOrderLineOptions(items, products);
+  const lineOptions = validateOrderLineOptions(items, getOrderOptionCatalogue());
   if (lineOptions.errors.length > 0) {
     return errorResponse(400, {
       error: "ITEMS_INVALID",

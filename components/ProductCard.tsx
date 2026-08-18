@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/product";
-import { toCatalogueEntry } from "@/lib/products";
+import { getPrimaryImage, toCatalogueEntry } from "@/lib/products";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
@@ -28,7 +28,7 @@ export function ProductCard({
   product,
   priority = false,
 }: ProductCardProps): JSX.Element {
-  const primaryImage = product.images.length > 0 ? product.images[0] : null;
+  const primaryImage = getPrimaryImage(product);
 
   return (
     <article className="group relative flex h-full flex-col border border-line bg-white transition duration-250 hover:-translate-y-1 hover:shadow-card-hover">
@@ -46,13 +46,13 @@ export function ProductCard({
           />
         )}
 
-        {product.isNew && product.inStock ? (
+        {product.flags.isNew && product.stock.inStock ? (
           <span className="absolute left-3 top-3 bg-white px-2.5 py-1 text-eyebrow uppercase text-maroon ring-1 ring-line">
             New
           </span>
         ) : null}
 
-        {product.inStock ? null : (
+        {product.stock.inStock ? null : (
           <span className="absolute left-3 top-3 bg-charcoal px-2.5 py-1 text-eyebrow uppercase text-ivory">
             Sold out
           </span>
@@ -67,9 +67,9 @@ export function ProductCard({
           {product.name}
         </Link>
 
-        <StarRating value={product.rating} count={product.reviewCount} />
+        <StarRating value={product.rating.average} count={product.rating.count} />
 
-        <PriceDisplay mrp={product.mrp} price={product.price} />
+        <PriceDisplay mrp={product.pricing.mrp} price={product.pricing.price} />
 
         <div className="relative z-10 mt-auto pt-1">
           <AddToCartButton item={toCatalogueEntry(product)} fullWidth />

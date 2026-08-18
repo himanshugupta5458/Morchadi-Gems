@@ -29,6 +29,8 @@ gone off the convention.
 public/
 ├── logo.png                     — the brand logo, 642 x 388 RGBA, the owner's artwork
 ├── products/     {id}.webp      — one per product, 49 files (P001–P049, all real photography)
+│              {id}-{n}.webp    — additional views, 1 file (P002-2, a generated stand-in)
+│              {id}-{variant}.webp — per-finish photographs, 1 file (P010-golden, a generated stand-in)
 ├── categories/   {slug}.webp    — one per category, 10 files
 ├── hero/         home-hero.webp — the home page hero panel, 1 file
 └── og/           default.png    — the 1200 x 630 social share card, derived from the logo
@@ -42,12 +44,55 @@ app/
 | Asset | Path | Size | Fit |
 | --- | --- | --- | --- |
 | Product image | `/products/{id}.webp` | 1000 × 1000, square | `object-contain` on ivory |
+| Additional view | `/products/{id}-{n}.webp` | 1000 × 1000, square | `object-contain` on ivory |
+| Per-variant image | `/products/{id}-{variant}.webp` | 1000 × 1000, square | `object-contain` on ivory |
 | Category tile | `/categories/{slug}.webp` | 572 × 1024, portrait | `object-cover` in a 4:5 tile |
 | Home hero | `/hero/home-hero.webp` | 1024 × 572, landscape | `object-cover`, the hero's ground |
 
 The path is **derived from the id**, never stored. `data/products.json` holds
-`"images": ["/products/P022.webp"]` for `P022` and `validate:products` enforces that it
-matches exactly. You do not choose an image path; the id chooses it.
+`"media": { "images": ["/products/P022.webp"] }` for `P022` and `validate:products` enforces
+that `images[0]` matches exactly. You do not choose an image path; the id chooses it.
+
+### The naming convention beyond the first image
+
+Since [ADR-027](../decisions/ADR-027-product-schema-migration.md) a product can carry more
+than one picture, and both extra kinds stay id-keyed for the same reason the first one is:
+
+| Kind | Path | Where it is declared |
+| --- | --- | --- |
+| Primary | `/products/{id}.webp` | `media.images[0]`, required, checked exactly |
+| Additional view | `/products/{id}-{n}.webp`, `n` from 2 | `media.images[1..]`, in the order they should appear in the thumbnail strip |
+| Per-variant | `/products/{id}-{variant}.webp` | `media.variantImages`, keyed `"OptionName:value"` |
+
+Nothing derives the `-{n}` or `-{variant}` half of these paths: unlike the primary image,
+they are written out in the record, so the convention is a convention and the validator
+enforces what it can. It requires the `/products/{id}-` prefix and the `.webp` extension, so
+a picture cannot be filed under another product's id; the rest of the name is yours to write.
+Write `{variant}` as the option value in lower case with spaces as hyphens, so `"Colour:Golden"`
+is `/products/P010-golden.webp` and `"Colour:Antique Gold"` would be
+`/products/P010-antique-gold.webp`.
+
+The key names the value exactly as the catalogue spells it, and the validator checks that it
+names an option the product actually has and a value that option actually offers — so a
+mapping cannot point at a choice nobody can make.
+
+A variant image is display data. Selecting the value it is keyed to swaps the product page's
+main image and the cart line's thumbnail, and it changes no amount anywhere.
+
+### The two stand-in images
+
+Two files in `public/products/` are **not** the owner's photography:
+
+| File | Stands in for | Why it exists |
+| --- | --- | --- |
+| `/products/P002-2.webp` | A second view of the Teardrop Glass Locket Necklace | So the thumbnail strip renders against a real product rather than a fixture |
+| `/products/P010-golden.webp` | The Mini Watch Ring in its golden finish | So the per-variant swap fires against a real product rather than a fixture |
+
+Both are generated on-brand placeholders in the same style as the category tiles: the second
+view turns and shrinks the gem motif and is captioned `VIEW 2`; the variant is tinted toward
+its finish and captioned `COLOUR GOLDEN`. Replace either the same way you replace any other
+placeholder — drop the real photograph at the same path. The generator's skip-if-exists rule
+covers them, so a real photo at either path survives a re-run.
 
 ## Replacing a placeholder with a real photo
 
@@ -74,20 +119,23 @@ anything essential out of the far left. A light, uncluttered ground sits best. T
 `alt` text is descriptive, so swapping the file needs no code change here either.
 
 **The filename must match the product id exactly, and the extension must be `.webp`.** A
-photo saved as `nk-001.jpg` will not be found; `validate:products` fails with the path it
+photo saved as `P001.jpg` will not be found; `validate:products` fails with the path it
 expected. Convert first:
 
 ```bash
-npx sharp-cli --input photo.jpg --output public/products/nk-001.webp
+npx sharp-cli --input photo.jpg --output public/products/P001.webp
 ```
 
 ## Adding a new product
 
 ```bash
 # 1. append the product row to data/products.json
-npm run generate:placeholders   # writes only the new id, skips the other 100
-npm run validate:products       # confirms the path and the file on disk
+npm run generate:placeholders   # writes only the new paths, skips everything already on disk
+npm run validate:products       # confirms every path and its file on disk
 ```
+
+The generator reads the whole of `media`, so an additional view or a per-variant image
+declared in the record gets a stand-in on the same run and the same skip-if-exists rule.
 
 The generator needs the product's `category` to pick a tint, so a new category slug must be
 added to `CATEGORIES` in `scripts/generate-placeholders.mjs` as well as to
@@ -219,8 +267,13 @@ P-code file fails the gate loudly; leaving an orphan in place fails nothing.
 
 `npm run validate:products` asserts, for every product in the catalogue:
 
-- `images[0]` is exactly `/products/{id}.webp`
+- `media.images[0]` is exactly `/products/{id}.webp`
 - that file exists on disk
+- that every additional image is named `/products/{id}-{n}.webp` and exists on disk
+- that `media.images` repeats no path
+- that every `media.variantImages` key reads `OptionName:value`, names an option the product
+  has, and names a value that option offers
+- that every variant image is named `/products/{id}-{variant}.webp` and exists on disk
 - and that all 10 `public/categories/{slug}.webp` files exist
 - that every `id` is a P-code, so no invented product can rejoin the catalogue
 

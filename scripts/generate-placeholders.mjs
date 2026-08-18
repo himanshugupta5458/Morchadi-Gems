@@ -48,6 +48,26 @@ const CATEGORIES = [
 
 const categoryBySlug = new Map(CATEGORIES.map((category) => [category.slug, category]));
 
+/**
+ * Tints for the stand-in variant photographs, so "Golden" does not come out the same colour
+ * as "Silver". A small deliberate duplicate of `lib/swatches.ts`: this script is plain ESM
+ * and cannot import the app's TypeScript, and a build step to share ten hex codes with a
+ * generator that writes throwaway files would cost more than it saves. A variant with no
+ * entry falls back to its category tint. See ADR-027.
+ */
+const VARIANT_TINTS = {
+  silver: "#E4E7E9",
+  golden: "#F2E3BE",
+  gold: "#F2E3BE",
+  "rose gold": "#F5DEDA",
+  "antique gold": "#EBDCBB",
+  "ivory white": "#F7F3EA",
+  "cream shimmer": "#F4E9D5",
+  "lilac shimmer": "#E7DEF0",
+};
+
+const VARIANT_KEY_SEPARATOR = ":";
+
 function escapeXml(value) {
   return value
     .replace(/&/g, "&amp;")
@@ -131,6 +151,73 @@ function productPlaceholderSvg(product) {
   </svg>`;
 }
 
+/**
+ * A second view of the same piece, drawn so it cannot be mistaken for the first: the motif is
+ * smaller and turned, and the eyebrow says which view it is. The point of a stand-in is that
+ * a reviewer can tell at a glance that the thumbnail strip actually swapped the image.
+ */
+function additionalViewPlaceholderSvg(product, viewNumber) {
+  const category = categoryBySlug.get(product.category);
+  const nameLines = wrapIntoLines(escapeXml(product.name), 26, 2);
+  const nameStartY = 708;
+  const nameLineHeight = 48;
+
+  const nameMarkup = nameLines
+    .map(
+      (line, index) =>
+        `<text x="${PRODUCT_SIZE / 2}" y="${nameStartY + index * nameLineHeight}"
+          font-family="${SERIF_STACK}" font-size="38" fill="${INK}"
+          text-anchor="middle">${line}</text>`,
+    )
+    .join("");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${PRODUCT_SIZE}" height="${PRODUCT_SIZE}">
+    ${tintedField(PRODUCT_SIZE, PRODUCT_SIZE, category.tint)}
+    <g transform="rotate(-24 ${PRODUCT_SIZE / 2} 430)">
+      ${gemMotif({ centreX: PRODUCT_SIZE / 2, topY: 330, size: 200, strokeWidth: 0.8 })}
+    </g>
+    <rect x="${PRODUCT_SIZE / 2 - 40}" y="596" width="80" height="1.5" fill="${GOLD}" />
+    <text x="${PRODUCT_SIZE / 2}" y="644" font-family="${SANS_STACK}" font-size="19"
+      letter-spacing="5.5" fill="${GOLD_DEEP}" text-anchor="middle">
+      VIEW ${viewNumber}
+    </text>
+    ${nameMarkup}
+  </svg>`;
+}
+
+/** The same piece in one named finish, tinted so the swap is visible without reading. */
+function variantPlaceholderSvg(product, optionName, optionValue) {
+  const category = categoryBySlug.get(product.category);
+  const tint = VARIANT_TINTS[optionValue.trim().toLowerCase()] ?? category.tint;
+  const nameLines = wrapIntoLines(escapeXml(product.name), 26, 2);
+  const nameStartY = 708;
+  const nameLineHeight = 48;
+
+  const nameMarkup = nameLines
+    .map(
+      (line, index) =>
+        `<text x="${PRODUCT_SIZE / 2}" y="${nameStartY + index * nameLineHeight}"
+          font-family="${SERIF_STACK}" font-size="38" fill="${INK}"
+          text-anchor="middle">${line}</text>`,
+    )
+    .join("");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${PRODUCT_SIZE}" height="${PRODUCT_SIZE}">
+    ${tintedField(PRODUCT_SIZE, PRODUCT_SIZE, tint)}
+    ${gemMotif({ centreX: PRODUCT_SIZE / 2, topY: 300, size: 260, strokeWidth: 0.75 })}
+    <rect x="${PRODUCT_SIZE / 2 - 40}" y="596" width="80" height="1.5" fill="${GOLD}" />
+    <text x="${PRODUCT_SIZE / 2}" y="644" font-family="${SANS_STACK}" font-size="19"
+      letter-spacing="5.5" fill="${GOLD_DEEP}" text-anchor="middle">
+      ${escapeXml(`${optionName} ${optionValue}`.toUpperCase())}
+    </text>
+    ${nameMarkup}
+  </svg>`;
+}
+
+function toLocalImagePath(publicPath) {
+  return join(REPO_ROOT, "public", publicPath.replace(/^\//, ""));
+}
+
 function categoryPlaceholderSvg(category) {
   const centreX = CATEGORY_WIDTH / 2;
 
@@ -181,6 +268,10 @@ async function generatePlaceholders() {
   const tally = {
     productsWritten: 0,
     productsSkipped: 0,
+    extraViewsWritten: 0,
+    extraViewsSkipped: 0,
+    variantsWritten: 0,
+    variantsSkipped: 0,
     categoriesWritten: 0,
     categoriesSkipped: 0,
     heroWritten: 0,
@@ -202,6 +293,28 @@ async function generatePlaceholders() {
 
     if (outcome === "written") tally.productsWritten += 1;
     else tally.productsSkipped += 1;
+
+    const images = product.media?.images ?? [];
+    for (const [index, image] of images.slice(1).entries()) {
+      const viewOutcome = await writeWebpIfAbsent(
+        toLocalImagePath(image),
+        additionalViewPlaceholderSvg(product, index + 2),
+      );
+
+      if (viewOutcome === "written") tally.extraViewsWritten += 1;
+      else tally.extraViewsSkipped += 1;
+    }
+
+    for (const [key, image] of Object.entries(product.media?.variantImages ?? {})) {
+      const [optionName, optionValue] = key.split(VARIANT_KEY_SEPARATOR);
+      const variantOutcome = await writeWebpIfAbsent(
+        toLocalImagePath(image),
+        variantPlaceholderSvg(product, optionName, optionValue),
+      );
+
+      if (variantOutcome === "written") tally.variantsWritten += 1;
+      else tally.variantsSkipped += 1;
+    }
   }
 
   for (const category of CATEGORIES) {
@@ -224,6 +337,8 @@ async function generatePlaceholders() {
 
   console.log("Morchadi Gems — placeholder image generation\n");
   console.log(`Products    written ${tally.productsWritten}   skipped ${tally.productsSkipped}`);
+  console.log(`Extra views written ${tally.extraViewsWritten}   skipped ${tally.extraViewsSkipped}`);
+  console.log(`Variants    written ${tally.variantsWritten}   skipped ${tally.variantsSkipped}`);
   console.log(`Categories  written ${tally.categoriesWritten}   skipped ${tally.categoriesSkipped}`);
   console.log(`Hero        written ${tally.heroWritten}   skipped ${tally.heroSkipped}`);
   console.log("\nSkipped means a file already exists at that path. This script never");

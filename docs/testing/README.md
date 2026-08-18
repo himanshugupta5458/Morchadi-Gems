@@ -75,6 +75,8 @@ purpose.
 | *(no plan — regression guards)* | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) — funnel UI polish, 480/480 pass |
 | *(no plan — regression guard)* | [2026-08-18](RESULT-2026-08-18-button-padding.md) — button padding verified against the emitted CSS, 481/481 pass |
 | *(no plan — regression guard)* | [2026-08-18](RESULT-2026-08-18-hero-cta-equal-width.md) — hero paired CTAs equal width, 485/485 pass |
+| [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) | [2026-08-18](RESULT-2026-08-18-product-schema-migration.md) — 49/49 pass, 543/543 suite |
+| [PLAN-seo-foundations.md](PLAN-seo-foundations.md) | [2026-08-18](RESULT-2026-08-18-seo-foundations.md) — 58/58 pass, 601/601 suite |
 
 ## Runners
 
@@ -108,3 +110,7 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/button-styles.test.ts` | The two button scales by their literal padding and type classes, that only the box differs, and that no height or line-height class constrains them | [2026-08-18](RESULT-2026-08-18-button-padding.md) |
 | `lib/hero-cta.test.tsx` | The hero call-to-action pair — one grid parent of two equal columns, `fullWidth` on both, one box across the pair, and the gap between them | [2026-08-18](RESULT-2026-08-18-hero-cta-equal-width.md) |
 | `lib/copy-dashes.test.ts` | The em-dash sweep — catalogue strings, and every non-test source file with comments stripped | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) |
+| `lib/structured-data.test.ts` | The JSON-LD builders — Organization, WebSite, Product, Offer, the real return and shipping policies, aggregate rating, reviews, BreadcrumbList, and absolute URLs | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/sitemap.test.ts` | The sitemap — all 49 products, ten categories, populated collections, the excluded checkout and API paths, priorities and dates | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/robots.test.ts` | `robots.txt` — the allow rule, the disallow list shared with the sitemap, and the absolute sitemap link | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/json-ld.test.tsx` | The rendered `application/ld+json` block — every graph parses back, and a hostile product name cannot close the script tag | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |

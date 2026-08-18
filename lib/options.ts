@@ -60,15 +60,15 @@ export function defaultSelectedOptions(
   if (!hasProductOptions(options)) return undefined;
 
   return Object.fromEntries(
-    options.map((option) => [option.name, option.values[0]]),
+    options.map((option) => [option.name, option.default]),
   );
 }
 
 /**
  * What a line's choices actually are, given what was asked for and what the catalogue offers
  * now. Every group the product has gets a value — the requested one when the catalogue still
- * offers it, the group's first value otherwise — so a line always carries a complete, current
- * selection and a shopper who never touched a selector still gets the defaults.
+ * offers it, the group's stated default otherwise — so a line always carries a complete,
+ * current selection and a shopper who never touched a selector still gets the defaults.
  *
  * A product with no options resolves to `undefined`, never to an empty record, so its lines
  * key on the product id exactly as they did before options existed.
@@ -85,7 +85,7 @@ export function resolveSelectedOptions(
       const isOffered =
         requestedValue !== undefined && option.values.includes(requestedValue);
 
-      return [option.name, isOffered ? requestedValue : option.values[0]];
+      return [option.name, isOffered ? requestedValue : option.default];
     }),
   );
 }

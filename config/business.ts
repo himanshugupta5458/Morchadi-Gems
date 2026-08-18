@@ -46,10 +46,28 @@ export const BUSINESS = {
    */
   whatsappNumber: "919358358834",
 
-  /** Registered postal address, one line per line as it should be displayed. */
-  addressLines: [
-    "203, Sunpro Kedarnath, Mangyawas Road",
-    "Geetanjali Colony, Mansarovar",
-    "Jaipur, Rajasthan 302020",
-  ],
+  /**
+   * Registered postal address, in parts rather than as display lines. Structured because two
+   * consumers want it two different ways: the footer and the policies want lines to print,
+   * and the Organization schema wants a `PostalAddress` with a locality, a region and a
+   * postal code of its own. Splitting it here means neither has to parse the other's shape.
+   * `lib/config.ts` assembles the display lines from these fields.
+   */
+  address: {
+    streetLine1: "203, Sunpro Kedarnath, Mangyawas Road",
+    streetLine2: "Geetanjali Colony, Mansarovar",
+    locality: "Jaipur",
+    region: "Rajasthan",
+    postalCode: "302020",
+    /** ISO 3166-1 alpha-2. The only country we ship to. */
+    countryCode: "IN",
+  },
+
+  /**
+   * Public profiles the brand is the same entity on, as absolute URLs. Read into the
+   * Organization schema's `sameAs`, which is how a search engine links this site to those
+   * accounts. Empty until the accounts exist: an unverified profile URL is a claim, and a
+   * wrong one associates the brand with somebody else.
+   */
+  socialProfileUrls: [] as readonly string[],
 } as const;

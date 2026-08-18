@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/config";
+import { buildPageMetadata } from "@/lib/metadata";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactDetails } from "@/components/ContactDetails";
 import { ContactForm } from "@/components/ContactForm";
 import { SectionHeading } from "@/components/SectionHeading";
 
-/**
- * Deliberately lean: title, description and canonical only. With no `openGraph` block of its
- * own it inherits the layout's intact, which is the correct default for a page whose share
- * card should just be the brand ([ADR-007](/docs/decisions/ADR-007-home-composition.md)).
- */
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Contact Us",
-  description:
-    "Get in touch with Morchadi Gems about an order, sizing, or anything else, by email, phone or WhatsApp.",
-  alternates: { canonical: "/contact" },
-};
+  description: `Get in touch with ${SITE_CONFIG.brandName} about an order, sizing, or anything else, by email, phone or WhatsApp.`,
+  path: "/contact",
+});
 
 export default function ContactPage(): JSX.Element {
   return (

@@ -54,10 +54,10 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | ADR | Title | Status |
 | --- | --- | --- |
 | [001](ADR-001-tech-stack.md) | Tech stack | Accepted |
-| [002](ADR-002-product-data-model.md) | Product data model | Accepted |
+| [002](ADR-002-product-data-model.md) | Product data model | Accepted — record shape superseded by [027](ADR-027-product-schema-migration.md) |
 | [003](ADR-003-discount-display-pricing.md) | Discount display pricing | Accepted |
 | [004](ADR-004-design-system.md) | Design system | Accepted |
-| [005](ADR-005-navigation-and-chrome.md) | Navigation and global chrome | Accepted |
+| [005](ADR-005-navigation-and-chrome.md) | Navigation and global chrome | Accepted — announcement strip superseded by [028](ADR-028-header-restructure.md) |
 | [006](ADR-006-product-image-convention.md) | Product image convention and placeholders | Accepted |
 | [007](ADR-007-home-composition.md) | Home page composition | Accepted |
 | [008](ADR-008-shop-architecture.md) | Shop page architecture | Accepted |
@@ -78,3 +78,6 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [024](ADR-024-funnel-ui-polish.md) | Funnel UI polish — logo scale, two button scales, card alignment, one price facet, compact product details, em-dash sweep | Accepted |
 | [025](ADR-025-button-padding-tailwind-content.md) | Button padding never rendered — `lib/` was outside Tailwind's content globs | Accepted |
 | [026](ADR-026-paired-cta-equal-width.md) | A pair of calls to action is one grid, not two buttons | Accepted |
+| [027](ADR-027-product-schema-migration.md) | Product record grouped by purpose, four named option controls, per-variant images and a multi-image gallery | Accepted |
+| [028](ADR-028-header-restructure.md) | Two header bands, not three — the announcement moves into the logo row | Accepted |
+| [029](ADR-029-seo-foundations.md) | SEO foundations — a generated sitemap, robots rules, and structured data that repeats the real policies | Accepted |

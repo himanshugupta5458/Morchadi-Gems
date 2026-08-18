@@ -1,9 +1,7 @@
 import Link from "next/link";
+import type { BreadcrumbStep } from "@/lib/breadcrumbs";
 
-export interface BreadcrumbStep {
-  label: string;
-  href?: string;
-}
+export type { BreadcrumbStep };
 
 export interface BreadcrumbProps {
   trail: BreadcrumbStep[];

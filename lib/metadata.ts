@@ -8,8 +8,9 @@ export interface PageMetadataInput {
 }
 
 /**
- * A page's `openGraph` **replaces** the layout's rather than merging into it, so a page that
- * sets one field silently loses `type`, `siteName`, `locale` and `images`
+ * A page's `openGraph` and `twitter` blocks each **replace** the layout's rather than merging
+ * into them, so a page that sets one field silently loses `type`, `siteName`, `locale`, `card`
+ * and `images`
  * ([ADR-007](/docs/decisions/ADR-007-home-composition.md)). This restates the whole block
  * once so no page has to remember to.
  *
@@ -33,6 +34,12 @@ export function buildPageMetadata({
       title: `${title} · ${SITE_CONFIG.brandName}`,
       description,
       images: [SITE_CONFIG.ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} · ${SITE_CONFIG.brandName}`,
+      description,
+      images: [SITE_CONFIG.ogImage.url],
     },
   };
 }

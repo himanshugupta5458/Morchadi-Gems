@@ -8,6 +8,7 @@ import {
   resolveSelectedOptions,
 } from "@/lib/options";
 import { clampQuantity } from "@/lib/quantity";
+import { selectDisplayImage } from "@/lib/variant-images";
 
 export const CART_STORAGE_KEY = "morchadi-cart-v1";
 
@@ -21,6 +22,13 @@ export interface CartLine {
   key: string;
   entry: CatalogueEntry;
   selectedOptions?: SelectedOptions;
+  /**
+   * The photograph of the variant this line records, or the product's own when the catalogue
+   * maps none for the selection. Display only, and derived from the catalogue rather than
+   * from the stored item, so a line shows the current picture the way it charges the current
+   * price. See ADR-027.
+   */
+  image: string | null;
   quantity: number;
   unitPrice: number;
   lineTotal: number;
@@ -37,6 +45,10 @@ export interface CartTotals {
  * The selection is resolved against the entry's current options rather than taken as given,
  * so every line in the cart carries a complete, catalogue-valid choice — including a line
  * whose shopper never opened a selector, which gets the defaults.
+ *
+ * The stored `image` follows that selection, so the thumbnail a shopper carries through
+ * checkout and onto the receipt is the finish they chose. Like `price`, it is a snapshot
+ * refreshed on every reconcile; unlike `price`, nothing downstream computes with it.
  */
 function toCartItem(
   entry: CatalogueEntry,
@@ -49,7 +61,7 @@ function toCartItem(
     productId: entry.id,
     name: entry.name,
     price: entry.price,
-    image: entry.image ?? "",
+    image: selectDisplayImage(entry.image, entry.variantImages, selectedOptions) ?? "",
     qty: clampQuantity(quantity),
     ...(selectedOptions === undefined ? {} : { selectedOptions }),
   };
@@ -230,6 +242,7 @@ export function buildCartLines(
       ...(item.selectedOptions === undefined
         ? {}
         : { selectedOptions: item.selectedOptions }),
+      image: selectDisplayImage(entry.image, entry.variantImages, item.selectedOptions),
       quantity,
       unitPrice: entry.price,
       lineTotal: entry.price * quantity,

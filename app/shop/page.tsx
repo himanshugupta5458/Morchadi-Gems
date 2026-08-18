@@ -59,6 +59,12 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
       description,
       images: [SITE_CONFIG.ogImage],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} · ${SITE_CONFIG.brandName}`,
+      description,
+      images: [SITE_CONFIG.ogImage.url],
+    },
   };
 }
 

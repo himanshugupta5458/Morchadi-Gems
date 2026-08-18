@@ -4,12 +4,16 @@ import { getCategoryLabel } from "@/types/product";
 import { SITE_CONFIG } from "@/lib/config";
 import {
   getAllProducts,
+  getPrimaryImage,
   getProductById,
   getRelatedProducts,
   toCatalogueEntry,
 } from "@/lib/products";
-import { buildCategoryHref } from "@/lib/navigation";
+import { ProductSelectionProvider } from "@/lib/product-selection";
+import { buildProductBreadcrumb } from "@/lib/breadcrumbs";
+import { buildProductSchemaGraph } from "@/lib/structured-data";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { JsonLd } from "@/components/JsonLd";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductDetailsList } from "@/components/ProductDetailsList";
 import { ProductGallery } from "@/components/ProductGallery";
@@ -43,14 +47,15 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
   }
 
   const canonical = `/product/${product.id}`;
+  const primaryImage = getPrimaryImage(product);
   const openGraphImage =
-    product.images.length > 0
-      ? { url: product.images[0], width: 1000, height: 1000, alt: product.name }
-      : SITE_CONFIG.ogImage;
+    primaryImage === null
+      ? SITE_CONFIG.ogImage
+      : { url: primaryImage, width: 1000, height: 1000, alt: product.name };
 
   return {
     title: product.name,
-    description: product.shortDescription,
+    description: product.description,
     alternates: { canonical },
     openGraph: {
       type: "website",
@@ -58,8 +63,14 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
       locale: "en_IN",
       url: canonical,
       title: `${product.name} · ${SITE_CONFIG.brandName}`,
-      description: product.shortDescription,
+      description: product.description,
       images: [openGraphImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} · ${SITE_CONFIG.brandName}`,
+      description: product.description,
+      images: [openGraphImage.url],
     },
   };
 }
@@ -70,56 +81,65 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
 
   const categoryLabel = getCategoryLabel(product.category);
   const relatedProducts = getRelatedProducts(product, RELATED_PRODUCT_COUNT);
-  const primaryImage = product.images.length > 0 ? product.images[0] : null;
+  const primaryImage = getPrimaryImage(product);
+  const hasGallery =
+    product.media.images.length > 1 || product.media.variantImages !== undefined;
+  const breadcrumbTrail = buildProductBreadcrumb(product);
 
   return (
     <div className="container py-8 lg:py-12">
-      <Breadcrumb
-        trail={[
-          { label: "Home", href: "/" },
-          { label: "Shop", href: "/shop" },
-          { label: categoryLabel, href: buildCategoryHref(product.category) },
-          { label: product.name },
-        ]}
+      <JsonLd
+        id={`product-schema-${product.id}`}
+        graph={buildProductSchemaGraph(product, breadcrumbTrail)}
       />
 
-      <div className="mt-8 grid grid-cols-1 gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
-        {product.images.length > 1 ? (
-          <ProductGallery images={product.images} productName={product.name} />
-        ) : (
-          <ProductImagePanel src={primaryImage} alt={product.name} priority />
-        )}
+      <Breadcrumb trail={breadcrumbTrail} />
 
-        <div className="flex flex-col gap-6">
-          <span className="text-eyebrow uppercase text-gold-deep">
-            {categoryLabel}
-          </span>
+      <ProductSelectionProvider options={product.options}>
+        <div className="mt-8 grid grid-cols-1 gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
+          {hasGallery ? (
+            <ProductGallery
+              images={product.media.images}
+              variantImages={product.media.variantImages}
+              productName={product.name}
+            />
+          ) : (
+            <ProductImagePanel src={primaryImage} alt={product.name} priority />
+          )}
 
-          <h1 className="font-display text-heading sm:text-heading-lg">
-            {product.name}
-          </h1>
+          <div className="flex flex-col gap-6">
+            <span className="text-eyebrow uppercase text-gold-deep">
+              {categoryLabel}
+            </span>
 
-          <a
-            href={`#${REVIEWS_ANCHOR_ID}`}
-            className="inline-flex w-fit items-center gap-2 text-body-sm text-muted transition-colors duration-250 hover:text-ink"
-          >
-            <StarRating value={product.rating} />
-            <span>{product.reviewCount} reviews</span>
-          </a>
+            <h1 className="font-display text-heading sm:text-heading-lg">
+              {product.name}
+            </h1>
 
-          <PriceDisplay mrp={product.mrp} price={product.price} size="lg" />
+            <a
+              href={`#${REVIEWS_ANCHOR_ID}`}
+              className="inline-flex w-fit items-center gap-2 text-body-sm text-muted transition-colors duration-250 hover:text-ink"
+            >
+              <StarRating value={product.rating.average} />
+              <span>{product.rating.count} reviews</span>
+            </a>
 
-          <p className="max-w-prose text-body text-muted">
-            {product.shortDescription}
-          </p>
+            <PriceDisplay
+              mrp={product.pricing.mrp}
+              price={product.pricing.price}
+              size="lg"
+            />
 
-          <div className="border-t border-line pt-6">
-            <ProductPurchaseActions item={toCatalogueEntry(product)} />
+            <p className="max-w-prose text-body text-muted">{product.description}</p>
+
+            <div className="border-t border-line pt-6">
+              <ProductPurchaseActions item={toCatalogueEntry(product)} />
+            </div>
+
+            <ProductDetailsList specs={product.specs} />
           </div>
-
-          <ProductDetailsList details={product.details} />
         </div>
-      </div>
+      </ProductSelectionProvider>
 
       <section
         id={REVIEWS_ANCHOR_ID}
@@ -129,8 +149,8 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
           <SectionHeading as="h2" roman="Customer" accent="Reviews" align="left" />
           <ProductReviews
             reviews={product.reviews}
-            rating={product.rating}
-            reviewCount={product.reviewCount}
+            rating={product.rating.average}
+            reviewCount={product.rating.count}
           />
         </div>
       </section>

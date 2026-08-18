@@ -381,21 +381,53 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | --- | --- | --- |
 | `Breadcrumb` | Server | `trail: { label, href? }[]`; the last step has no `href` and gets `aria-current="page"` |
 | `ProductImagePanel` | Server | One square image, `object-contain` on `ivory`, or the placeholder |
-| `ProductGallery` | *Client* | `ProductImagePanel` plus a thumbnail strip. **Only rendered when `images.length > 1`** |
+| `ProductGallery` | *Client* | Main image plus a thumbnail strip; reads the selection for a per-variant swap. **Only rendered when `media.images.length > 1` or `media.variantImages` is present** |
+| `ProductSelectionProvider` | *Client* | Holds the selected options above the gallery and the buy panel; its `children` stay server-rendered |
 | `QuantityStepper` | *Client* | Controlled. `value` / `onChange` / `disabled` / `accessibleLabel` |
-| `ProductPurchasePanel` | *Client* | Owns quantity **and option** state; takes a `CatalogueEntry` and required `onAddToCart` / `onBuyNow` |
+| `ProductPurchasePanel` | *Client* | Owns quantity; reads and writes the selection through `useProductSelection()` |
 | `ProductPurchaseActions` | *Client* | Wraps the panel and supplies both handlers from `useCart()` |
-| `ProductOptionSelector` | *Client* | One option group. Chips up to six values, a select beyond |
+| `ProductOptionSelector` | *Client* | One option group, dispatched on `option.type` to one of the four controls below |
+| `OptionDropdown` | *Client* | `type: "dropdown"` — a labelled native `<select>` |
+| `OptionSwatchGroup` | *Client* | `type: "swatch"` — a colour dot beside its name |
+| `OptionPillGroup` | *Client* | `type: "pills"` — rounded pills in a row |
+| `OptionChipGroup` | *Client* | `type: "chips"` — square choice chips |
+| `OptionRadioGroup` | *Client* | The radio wiring the three non-dropdown controls compose |
 | `SelectedOptionsSummary` | Server | `Letter: A · Colour: Silver`; renders nothing when there is no selection |
 | `PersonalizedNote` | Server | &ldquo;Personalized · non-returnable&rdquo;, long form with a `/refund` link |
-| `ProductDetailsList` | Server | Compact spec list under the buy actions; renders only the `details` keys present, and `null` when there are none |
+| `ProductDetailsList` | Server | Compact spec list under the buy actions; renders every `specs` entry present, and `null` when there are none |
 | `ProductReviews` | Server | Aggregate plus the per-product review list |
 
-**The gallery is deliberately dormant.** Every catalogued product has exactly one image, so
-the product page renders `ProductImagePanel` directly and ships no client JS for it. With
-one image there is **no thumbnail row** — a one-thumbnail strip is decoration pretending to
-be a control. `/style-guide` renders the gallery against a synthetic two-image product so
-the branch is not shipped unseen.
+#### The gallery, and what changes the main image
+
+Two of the forty-nine products reach `ProductGallery`: P002 carries a second view, and P010
+maps a photograph to a plating colour. The other forty-seven render `ProductImagePanel` on the
+server and ship no client JS for their picture. With one image there is **no thumbnail row** —
+a one-thumbnail strip is decoration pretending to be a control.
+
+Two things can change the main image, and they are ranked:
+
+1. **Choosing an option wins.** If `media.variantImages` has an entry for the current
+   selection (`"Colour:Golden"`), that photograph becomes the main image. The shopper just
+   said which finish they want; showing them the other one would be a lie.
+2. **Clicking a thumbnail wins after that**, until the next option change — at which point the
+   manual pick is cleared and rule 1 applies again.
+3. **Otherwise it is `media.images[0]`.**
+
+The thumbnail strip lists `media.images` and only `media.images`. A variant photograph is not
+a view to browse between, it is what the current choice looks like, so it is reached by making
+the choice. Thumbnails are `<button>`s labelled &ldquo;Show image 2 of 2&rdquo;, carry
+`aria-current`, and have a visible focus ring.
+
+**The selection lives above both columns.** `ProductSelectionProvider` holds it, because the
+gallery and the buy panel sit in different grid columns and neither can be the other's parent.
+Everything passed to the provider as `children` stays server-rendered, so the title, price,
+description, specs and reviews are still not in the client bundle. See
+[ADR-027](../decisions/ADR-027-product-schema-migration.md).
+
+`/style-guide` renders both paths against the two real products, with the swatch control beside
+the variant one, so neither branch ships unseen. Its **Product Option Controls** panel adds a
+three-image gallery against a synthetic record, so a strip longer than any real product's is
+previewable too.
 
 **`QuantityStepper` never produces an invalid value.** Buttons, typing, and paste all route
 through `clampQuantity` in `lib/quantity.ts` (1–10, integer), which is unit-tested. Nothing
@@ -419,26 +451,57 @@ the item is still in the cart if the shopper backs out.
 
 | Prop | Type | Default | Notes |
 | --- | --- | --- | --- |
-| `option` | `ProductOption` | — | One group: `{ name, values }` |
+| `option` | `ProductOption` | — | One group: `{ name, type, values, default }` |
 | `value` | `string` | — | Always set — there is no empty state |
 | `disabled` | `boolean` | `false` | Sold-out products still render their selectors, inert |
 | `onChange` | `(value: string) => void` | — | |
 
-**The layout is chosen by list length, not by group name.** Six values or fewer render as
-chips; anything longer becomes a native select. Twenty-five engraving letters as chips are a
-wall to scan, and four locket shapes in a dropdown hide the choice behind a click.
+**The control is named by the catalogue, not guessed from the value count.** `option.type`
+picks it, because the shape of the question is a merchandising decision: four locket shapes
+and four ribbon finishes are the same length and are not the same question.
 
-**Chips are radio inputs, not buttons.** A visually-hidden `<input type="radio">` per value
-with a styled `<label>` gets arrow-key navigation, the checked state, the group's accessible
-name from the `<legend>`, and focus rings via `peer-focus-visible` — none of which a row of
-`<button>`s gets without re-implementing all of it. The select branch is a plain labelled
-`<select>` reusing `fieldControlClasses`, so it matches the address form's controls.
+| `type` | Control | Use it for | In the catalogue |
+| --- | --- | --- | --- |
+| `dropdown` | Labelled native `<select>` | A long list to find your place in | `Letter` on P001, P005 (25 and 22 values) |
+| `swatch` | Colour dot beside its name | A finish | `Colour` on P010, P048 |
+| `pills` | Rounded pills in a row | A point on a scale | `Size` — no catalogued product yet; shown on `/style-guide` |
+| `chips` | Square choice chips | A set to compare | `Shape` on P006 |
 
-**There is no &ldquo;please choose&rdquo; state.** `ProductPurchasePanel` seeds the selection
-with each group's first value, so a personalized piece is addable without touching a selector.
-The current selection is echoed under the selectors as &ldquo;Your choice — Letter: A&rdquo;,
-because a default the shopper never picked still has to be one they can see. See
-[ADR-019](../decisions/ADR-019-product-options.md).
+**Swatches always write the finish out as text.** &ldquo;Antique Gold&rdquo; and &ldquo;Cream
+Shimmer&rdquo; are finishes no flat hex code honestly stands in for, so the dot is a hint and
+the label is the answer. `lib/swatches.ts` maps the names it knows to ink; a finish with no
+entry simply shows no dot and still reads correctly.
+
+**The three non-dropdown controls are radio inputs, not buttons.** They compose
+`OptionRadioGroup`: a visually-hidden `<input type="radio">` per value with a styled
+`<label>`, which gets arrow-key navigation, the checked state, the group's accessible name
+from the `<legend>`, and focus rings via `peer-focus-visible` — none of which a row of
+`<button>`s gets without re-implementing all of it. The dropdown is a plain labelled
+`<select>` reusing `fieldControlClasses`, so it matches the address form's controls, and
+native means a phone gets its own picker.
+
+**`/style-guide` previews all four controls together.** Its **Product Option Controls** panel
+renders every type on one screen, which no catalogued product can do: the real catalogue
+spreads `dropdown`, `swatch` and `chips` across five products and uses `pills` nowhere. The
+piece driving it is a **synthetic record built inline in `app/style-guide/page.tsx`** and
+nowhere else — its id is deliberately not a P-code, so `validate:products` would refuse it if
+anyone pasted it into `data/products.json`, and it therefore cannot reach the shop, an id
+lookup, or a cart. Everything around it is real: the same `ProductSelectionProvider`, the same
+`ProductPurchasePanel`, the same controls at the same spacing as the product page's info
+column, with `onAddToCart` and `onBuyNow` supplied as no-ops so the panel is display-only
+there. A table under the panel reads each group's control type, stated default and current
+value apart, where the panel's own summary reads them together as a shopper sees them. The
+same panel renders a three-image gallery, so the thumbnail strip is previewable at a length
+no real product has.
+
+**There is no &ldquo;please choose&rdquo; state.** `ProductSelectionProvider` seeds the
+selection from each group's stated `default`, so a personalized piece is addable without
+touching a control. The default is written down rather than taken as `values[0]`, so
+reordering the values cannot silently change what an untouched control records. The current
+selection is echoed under the controls as &ldquo;Your choice — Letter: A&rdquo;, because a
+default the shopper never picked still has to be one they can see. See
+[ADR-019](../decisions/ADR-019-product-options.md) and
+[ADR-027](../decisions/ADR-027-product-schema-migration.md).
 
 #### `PersonalizedNote` and `SelectedOptionsSummary`
 
@@ -496,6 +559,16 @@ stored choice and fill in defaults.
 **A card's Add to cart works on a personalized product without a selector.** It passes no
 selection, and `addProductToCart` resolves that to each group's defaults, so the four optioned
 products behave on a shop card exactly as the other ninety-six do.
+
+#### A cart line shows the picture of what it records
+
+`CartLine.image` is `media.variantImages[selection]` when the catalogue maps one for that
+line's choices, and the product's own image otherwise. It is derived from the catalogue on
+every build of the lines, the same way `unitPrice` is, so a line shows the current picture the
+way it charges the current price — two lines of one product in two finishes carry two
+thumbnails. The same resolution runs when the item is written to `localStorage`, so the
+thumbnail survives into the checkout summary and the confirmation receipt. See
+[ADR-027](../decisions/ADR-027-product-schema-migration.md).
 
 #### Cart lines are keyed by choice, not by product
 
@@ -805,8 +878,7 @@ Rendered once by `app/layout.tsx`, so every route inherits it. Rationale in
 [ADR-005](../decisions/ADR-005-navigation-and-chrome.md).
 
 ```
-<AnnouncementBar />   charcoal strip, above the header, scrolls away
-<Header />            sticky; wordmark + cart, then the primary nav bar
+<Header />            sticky; logo + announcement + cart, then the primary nav bar
 <main>{children}</main>
 <Footer />            charcoal, four columns + copyright row
 <WhatsAppButton />    fixed bottom-right
@@ -814,19 +886,53 @@ Rendered once by `app/layout.tsx`, so every route inherits it. Rationale in
 
 A page never renders its own `<main>` — the layout owns it.
 
-#### `AnnouncementBar` — *Client Component*
-
-Charcoal strip, 36px, centred `text-eyebrow`. Three messages cross-fade every 4s — the
-shipping and returns lines are built from `FREE_SHIPPING_THRESHOLD` and
-`RETURN_WINDOW_DAYS` rather than written out. All three stay in the DOM so screen readers read them once rather than being interrupted
-on a timer; the fade is dropped under `prefers-reduced-motion`. No props, non-dismissible,
-no stored state.
-
 #### `Header`
 
-Server Component composing three clients. Top row: `MobileNav` (hamburger, below `lg`),
-`Wordmark`, and `CartLink`. Second row: `PrimaryNav`, hidden below `lg`.
-`sticky top-0 z-40`.
+**Two bands, not three.** A charcoal announcement strip used to sit above the header, which
+stacked charcoal, white and charcoal and left the widest part of the white row empty.
+[ADR-028](../decisions/ADR-028-header-restructure.md) folded the strip's messages into the
+middle of the logo row and deleted the band.
+
+```
+┌─ logo row (white) ─────────────────────────────────────────────┐
+│  ☰ logo            FREE SHIPPING OVER ₹799 …            cart 🛒 │   h-16, lg:h-24
+└────────────────────────────────────────────────────────────────┘
+┌─ PrimaryNav (charcoal) ────────────────────────────────────────┐   lg and up
+```
+
+Server Component composing four clients. `sticky top-0 z-40`, from the logo row down.
+
+| Breakpoint | Logo row layout | Announcement |
+| --- | --- | --- |
+| below `lg` | `flex justify-between` — `MobileNav` + `Wordmark`, then `CartLink` | `hidden` |
+| `lg` and up | `grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]` | centred in the middle column |
+
+**Equal outer columns, not `justify-between`.** A middle child in a `justify-between` row sits
+between its neighbours, which is the page's centre only if the logo and the cart are the same
+width. Two `1fr` columns put it on the actual centre line. `minmax(0, 1fr)` rather than `1fr`
+so the outer columns yield before the row can overflow.
+
+`PrimaryNav` is unchanged: same charcoal band, same dropdowns, hidden below `lg`.
+
+#### `HeaderAnnouncement` — *Client Component*
+
+The three promises, cross-fading every 4s in the middle of the logo row. `text-eyebrow`
+(11px, `0.22em` tracking), uppercase, `text-muted` — a tracked grey tagline on white, not a
+promo. `ink` would shout and `gold-deep` is the accent, which would set three rotating lines
+against the price and the CTA for the same attention. The shipping and returns lines are built
+from `FREE_SHIPPING_THRESHOLD` and `RETURN_WINDOW_DAYS` rather than written out. No props,
+non-dismissible, no stored state.
+
+**Nothing moves when the message changes.** All three are rendered in the flow and stacked
+into one grid cell (`col-start-1 row-start-1`, `whitespace-nowrap`), so the middle column is
+always as wide as the *longest* promise regardless of which is visible. The old strip could
+position its messages absolutely because it was a full-width band with nothing beside it; a
+content-sized middle column would have resized on every rotation and nudged the logo and cart
+every four seconds. Keeping all three in flow also keeps all three in the accessibility tree,
+so screen readers read them once rather than being interrupted on a timer.
+
+`hidden lg:grid` — a 360px row already holds a hamburger, a 44px logo and a cart badge, so the
+message is a desktop enhancement. The fade is dropped under `prefers-reduced-motion`.
 
 #### `Wordmark`
 

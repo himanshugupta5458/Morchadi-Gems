@@ -1,6 +1,6 @@
 # ADR-005: Navigation and global chrome
 
-- **Status:** Accepted
+- **Status:** Accepted — the announcement strip is superseded by [ADR-028](ADR-028-header-restructure.md)
 - **Date:** 2026-08-17
 - **Prompt:** 4
 
