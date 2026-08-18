@@ -1,4 +1,4 @@
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import { calculateShipping } from "@/lib/config";
 import { MAX_QUANTITY, MIN_QUANTITY } from "@/lib/quantity";
 import type { CreateOrderItem, OrderItemError } from "@/types/order";
 
@@ -57,7 +57,9 @@ function indexCatalogue(
  * Three properties matter more than the arithmetic:
  *
  * - **No amount arrives from outside.** The signature has nowhere to put one. Whatever a
- *   client claims a product costs is not an input to this function.
+ *   client claims a product costs is not an input to this function, and neither is shipping:
+ *   it is derived here from the catalogue-priced subtotal, so a client cannot claim to have
+ *   qualified for free delivery.
  * - **A rejected order carries no money.** Failure returns zeroed amounts and no line items,
  *   so a caller that ignores `valid` still cannot charge anything.
  * - **Every fault is reported, not just the first.** One round trip tells the shopper about
@@ -137,14 +139,15 @@ export function buildOrderFromCart(
   if (errors.length > 0) return rejectedOrder(errors);
 
   const subtotal = lineItems.reduce((sum, lineItem) => sum + lineItem.lineTotal, 0);
+  const shipping = calculateShipping(subtotal);
 
   return {
     valid: true,
     errors: [],
     lineItems,
     subtotal,
-    shipping: FLAT_SHIPPING_RATE,
-    total: subtotal + FLAT_SHIPPING_RATE,
+    shipping,
+    total: subtotal + shipping,
   };
 }
 

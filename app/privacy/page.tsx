@@ -130,8 +130,8 @@ export default function PrivacyPage(): JSX.Element {
       <p>
         You can ask us what we hold about you, ask for it to be corrected, or ask for it to
         be deleted where we are not required to keep it. Write to{" "}
-        <a href={`mailto:${CONTACT_CONFIG.privacyEmail}`}>
-          {CONTACT_CONFIG.privacyEmail}
+        <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>
+          {CONTACT_CONFIG.supportEmail}
         </a>
         . You can clear the cart and checkout data held in your browser at any time by
         clearing your browser storage for this site.
@@ -153,8 +153,8 @@ export default function PrivacyPage(): JSX.Element {
       <h2>11. Contact</h2>
       <p>
         For anything in this policy, write to{" "}
-        <a href={`mailto:${CONTACT_CONFIG.privacyEmail}`}>
-          {CONTACT_CONFIG.privacyEmail}
+        <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>
+          {CONTACT_CONFIG.supportEmail}
         </a>{" "}
         or use our <Link href="/contact">contact page</Link>. {SITE_CONFIG.brandName} is
         operated by {LEGAL_CONFIG.entityName}.

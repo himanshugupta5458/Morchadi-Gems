@@ -1,4 +1,7 @@
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import {
+  FREE_SHIPPING_THRESHOLD,
+  amountToFreeShipping,
+} from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 
 export interface OrderTotalsProps {
@@ -22,27 +25,40 @@ function TotalsRow({
   );
 }
 
+function shippingValueLabel(subtotal: number, shipping: number): string {
+  if (shipping > 0) return formatRupees(shipping);
+  return subtotal > 0 ? "FREE" : "—";
+}
+
 /**
  * Subtotal, shipping and total, rendered identically wherever an order is summarised. The
  * cart and the checkout steps share this rather than each formatting their own rows — two
  * implementations would eventually disagree about the one number that matters.
  *
- * No tax line and no coupon row. Shipping is the flat rate from `lib/config.ts` and shows an
- * amount only when there is something payable to ship.
+ * No tax line and no coupon row. Shipping is whatever the caller was given; the rule that
+ * produced it lives in `lib/config.ts` and the threshold shown here is the same constant, so
+ * the row can never advertise a threshold the arithmetic does not honour.
  */
 export function OrderTotals({
   subtotal,
   shipping,
   total,
 }: OrderTotalsProps): JSX.Element {
+  const shortfallToFreeShipping = amountToFreeShipping(subtotal);
+
   return (
     <>
       <div className="flex flex-col gap-3 border-b border-line pb-6">
         <TotalsRow label="Subtotal" value={formatRupees(subtotal)} />
         <TotalsRow
-          label={`Shipping (flat ${formatRupees(FLAT_SHIPPING_RATE)})`}
-          value={shipping > 0 ? formatRupees(shipping) : "—"}
+          label={`Shipping (free over ${formatRupees(FREE_SHIPPING_THRESHOLD)})`}
+          value={shippingValueLabel(subtotal, shipping)}
         />
+        {shortfallToFreeShipping > 0 ? (
+          <p className="text-body-sm text-gold-deep">
+            Add {formatRupees(shortfallToFreeShipping)} for free shipping.
+          </p>
+        ) : null}
       </div>
 
       <div className="flex items-baseline justify-between gap-4 pt-6">

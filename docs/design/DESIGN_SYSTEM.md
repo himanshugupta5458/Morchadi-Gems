@@ -364,19 +364,33 @@ and reviews to the browser. `toCatalogueEntry(product)` narrows it to six fields
 #### `OrderTotals`
 
 ```tsx
-<OrderTotals subtotal={2000} shipping={99} total={2099} />
+<OrderTotals subtotal={2000} shipping={0} total={2000} />     free — subtotal ≥ ₹799
+<OrderTotals subtotal={500} shipping={99} total={599} />      charged — subtotal < ₹799
 ```
 
 Subtotal, shipping and total, rendered identically wherever an order is summarised — `/cart`
 and every checkout step compose it rather than formatting their own rows, so the two cannot
-disagree about the one number that matters. Shipping is `FLAT_SHIPPING_RATE` from
-`lib/config.ts` and shows an amount only when there is something payable; otherwise the row
-reads &ldquo;&mdash;&rdquo;. No tax line, no coupon row.
+disagree about the one number that matters. No tax line, no coupon row.
+
+The shipping row reads `FREE_SHIPPING_THRESHOLD` from `lib/config.ts` for its label and
+takes its value from the caller:
+
+| Condition | Value shown |
+| --- | --- |
+| `shipping > 0` | the amount, e.g. `₹99` |
+| `shipping === 0` and `subtotal > 0` | `FREE` |
+| nothing payable | `—` |
+
+`FREE` and `—` are deliberately different: an empty cart has not earned free shipping, it
+has nothing to ship, and showing `FREE` there would read as a promise. Below the threshold
+a `gold-deep` hint line reads &ldquo;Add ₹X for free shipping&rdquo;, computed by
+`amountToFreeShipping` — display only, never part of a total. See
+[ADR-015](../decisions/ADR-015-business-config-and-shipping-threshold.md).
 
 #### `CartSummary`
 
 ```tsx
-<CartSummary subtotal={4200} shipping={99} total={4299} isCheckoutBlocked={false} />
+<CartSummary subtotal={4200} shipping={0} total={4200} isCheckoutBlocked={false} />
 ```
 
 `OrderTotals` plus the two CTAs. When `isCheckoutBlocked`, the primary CTA renders as a
@@ -463,7 +477,7 @@ Rationale in [ADR-012](../decisions/ADR-012-static-and-policy-pages.md).
 | `PolicyPage` | Server | The shell all four policy pages use |
 | `PolicyDisclaimer` | Server | The sample-template notice |
 | `TextAreaField` | *Client* | Multi-line sibling of `TextField`, same `FormField` shell |
-| `ContactDetails` | Server | Email, phone, WhatsApp and address, all from `CONTACT_CONFIG` |
+| `ContactDetails` | Server | Email, phone, a `wa.me` WhatsApp link and the registered address, all from `CONTACT_CONFIG` / `config/business.ts` |
 | `ContactForm` | *Client* | The only client island on the six content pages |
 
 #### `Prose`
@@ -588,8 +602,10 @@ what the page below it is called.
 ```
 
 `TrustBadge` takes `icon`, `label`, and an optional `detail`. `TrustStrip` takes no props
-and renders the fixed four — Secure Payments, Flat ₹99 Shipping, Easy 7-Day Returns,
-Certified Quality — 2-up on mobile, 4-up from `lg`.
+and renders the fixed four — Secure Payments, Free Shipping Over ₹799, Easy 7-Day Returns,
+Certified Quality — 2-up on mobile, 4-up from `lg`. The threshold and the returns window are
+`FREE_SHIPPING_THRESHOLD` and `RETURN_WINDOW_DAYS` from `lib/config.ts`, the same constants
+the cart charges from and the policies quote, so the badge cannot outlive the rule.
 
 ### `TestimonialCard`
 
@@ -630,8 +646,9 @@ A page never renders its own `<main>` — the layout owns it.
 
 #### `AnnouncementBar` — *Client Component*
 
-Charcoal strip, 36px, centred `text-eyebrow`. Three hard-coded messages cross-fade every
-4s. All three stay in the DOM so screen readers read them once rather than being interrupted
+Charcoal strip, 36px, centred `text-eyebrow`. Three messages cross-fade every 4s — the
+shipping and returns lines are built from `FREE_SHIPPING_THRESHOLD` and
+`RETURN_WINDOW_DAYS` rather than written out. All three stay in the DOM so screen readers read them once rather than being interrupted
 on a timer; the fade is dropped under `prefers-reduced-motion`. No props, non-dismissible,
 no stored state.
 
@@ -681,9 +698,12 @@ while open. Every link closes the drawer on click.
 
 #### `Footer`
 
-Charcoal, `ivory` text. Four columns — brand blurb, Shop (the eight categories), Company
-(About / Contact / Terms), Secure Payments (Cashfree) — over a copyright row. The year is
-build-time, since every route is prerendered.
+Charcoal, `ivory` text. Six columns at `lg` — brand (spanning two: blurb, registered
+address, support email, phone), Shop (the eight categories), Company (About / Contact /
+Terms), Policies, Secure Payments (Cashfree) — over a copyright row. The address and contact
+links come from `CONTACT_CONFIG`, which reads `config/business.ts`, so they match the contact
+page and the policies by construction. The year is build-time, since every route is
+prerendered.
 
 #### `WhatsAppButton`
 

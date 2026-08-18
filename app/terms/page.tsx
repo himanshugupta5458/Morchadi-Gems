@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   CONTACT_CONFIG,
   FLAT_SHIPPING_RATE,
+  FREE_SHIPPING_THRESHOLD,
   LEGAL_CONFIG,
   RETURN_WINDOW_DAYS,
   SITE_CONFIG,
@@ -67,10 +68,10 @@ export default function TermsPage(): JSX.Element {
       </p>
       <p>
         Where a struck-through price is shown alongside the selling price, it is a
-        compare-at reference price and is never the amount charged. Shipping is a flat{" "}
-        {formatRupees(FLAT_SHIPPING_RATE)} per order across India and is added once at
-        checkout, however many pieces are in the order. See our{" "}
-        <Link href="/shipping">Shipping Policy</Link>.
+        compare-at reference price and is never the amount charged. Shipping across India is
+        free on orders of {formatRupees(FREE_SHIPPING_THRESHOLD)} or more and a flat{" "}
+        {formatRupees(FLAT_SHIPPING_RATE)} below that, added once at checkout however many
+        pieces are in the order. See our <Link href="/shipping">Shipping Policy</Link>.
       </p>
       <p>
         We take care to price accurately. If an obvious pricing error is discovered before an

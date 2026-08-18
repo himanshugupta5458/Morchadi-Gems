@@ -70,6 +70,7 @@ purpose.
 | [PLAN-cart-logic.md](PLAN-cart-logic.md) | [2026-08-17](RESULT-2026-08-17-cart-logic.md) — 59/59 pass |
 | [PLAN-address-validation.md](PLAN-address-validation.md) | [2026-08-17](RESULT-2026-08-17-address-validation.md) — 83/83 pass |
 | [PLAN-order-pricing.md](PLAN-order-pricing.md) | [2026-08-17](RESULT-2026-08-17-order-pricing.md) — 36/36 pass |
+| [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) | [2026-08-18](RESULT-2026-08-18-shipping-threshold.md) — 20/20 pass |
 
 ## Runners
 
@@ -96,4 +97,4 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/address.test.ts` | Per-field and aggregate address validation, the Indian states list, focus order | [PLAN-address-validation.md](PLAN-address-validation.md) |
 | `lib/checkout.test.ts` | The `sessionStorage` checkout bundle — assembly from cart lines, and parsing hostile stored data | [PLAN-address-validation.md](PLAN-address-validation.md) |
 | `lib/address-checkout.test.tsx` | `/address` — the empty-cart guard, blur/submit validation, focus, the handoff to `/payment`, repopulation | [PLAN-address-validation.md](PLAN-address-validation.md) |
-| `lib/order.test.ts` | Server-side order pricing — catalogue-only totals, `mrp` exclusion, hostile items, per-item error collection, untrusted-body parsing | [PLAN-order-pricing.md](PLAN-order-pricing.md) |
+| `lib/order.test.ts` | Server-side order pricing — catalogue-only totals, `mrp` exclusion, hostile items, per-item error collection, untrusted-body parsing, the free-shipping boundary | [PLAN-order-pricing.md](PLAN-order-pricing.md), [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) |

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { getCategoryLabel } from "@/types/product";
-import { SITE_CONFIG } from "@/lib/config";
+import {
+  FREE_SHIPPING_THRESHOLD,
+  RETURN_WINDOW_DAYS,
+  SITE_CONFIG,
+} from "@/lib/config";
+import { formatRupees } from "@/lib/format";
 import { buildShopHref, getShopResults, withPage, type ShopQuery } from "@/lib/shop";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Pagination } from "@/components/Pagination";
@@ -25,7 +30,7 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
 
   const title = categoryLabel === null ? "Shop All Jewellery" : categoryLabel;
   const subject = categoryLabel === null ? "the full collection" : categoryLabel.toLowerCase();
-  const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — hallmarked, hand-finished jewellery with flat ₹99 shipping across India and easy 7-day returns.`;
+  const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — hallmarked, hand-finished jewellery with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
 
   return {
     title,

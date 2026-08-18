@@ -74,18 +74,26 @@ describe("buildCheckoutData", () => {
       ],
       address: ADDRESS,
       subtotal: 2000,
-      shipping: FLAT_SHIPPING_RATE,
-      total: 2000 + FLAT_SHIPPING_RATE,
+      shipping: 0,
+      total: 2000,
     });
   });
 
-  it("charges flat shipping once across several lines", () => {
+  it("carries the free shipping the subtotal has earned", () => {
     const bundle = buildCheckoutData(linesFor({ "nk-001": 2, "er-001": 4 }), ADDRESS);
 
     expect(bundle.cart).toHaveLength(2);
     expect(bundle.subtotal).toBe(2000 + 1000);
+    expect(bundle.shipping).toBe(0);
+    expect(bundle.total).toBe(3000);
+  });
+
+  it("charges flat shipping once across several below-threshold lines", () => {
+    const bundle = buildCheckoutData(linesFor({ "er-001": 2 }), ADDRESS);
+
+    expect(bundle.subtotal).toBe(500);
     expect(bundle.shipping).toBe(FLAT_SHIPPING_RATE);
-    expect(bundle.total).toBe(3000 + FLAT_SHIPPING_RATE);
+    expect(bundle.total).toBe(500 + FLAT_SHIPPING_RATE);
   });
 
   it("prices from the catalogue, not from the cart's stored snapshot", () => {

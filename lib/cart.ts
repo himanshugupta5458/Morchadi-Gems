@@ -1,6 +1,6 @@
 import type { CartItem } from "@/types/cart";
 import type { CatalogueEntry } from "@/types/product";
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import { calculateShipping } from "@/lib/config";
 import { clampQuantity } from "@/lib/quantity";
 
 export const CART_STORAGE_KEY = "morchadi-cart-v1";
@@ -203,11 +203,15 @@ export function hasUnavailableLine(lines: CartLine[]): boolean {
  * Money for the whole cart. Only payable lines contribute, so an item that went out of stock
  * while it sat in the cart charges nothing and does not on its own attract shipping. `mrp`
  * is absent from this file by design — the charged amount is always `price`.
+ *
+ * Shipping comes from `calculateShipping`, the same function `buildOrderFromCart` uses on the
+ * server. This total is what the shopper is shown; the server recomputes it independently and
+ * its answer is the one that is charged.
  */
 export function calculateCartTotals(lines: CartLine[]): CartTotals {
   const payableLines = selectPayableLines(lines);
   const subtotal = payableLines.reduce((sum, line) => sum + line.lineTotal, 0);
-  const shipping = payableLines.length > 0 ? FLAT_SHIPPING_RATE : 0;
+  const shipping = calculateShipping(subtotal);
 
   return { subtotal, shipping, total: subtotal + shipping };
 }

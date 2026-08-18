@@ -197,8 +197,8 @@ describe("cart page", () => {
 
     expect(consoleError).not.toHaveBeenCalled();
     expect(screen.getByText("Kundan Rani Haar")).toBeDefined();
-    expect(screen.getAllByText("₹2,000")).toHaveLength(2);
-    expect(screen.getByText("₹2,099")).toBeDefined();
+    expect(screen.getAllByText("₹2,000")).toHaveLength(3);
+    expect(screen.getByText("FREE")).toBeDefined();
     expect(
       screen.getByRole("link", { name: "Proceed to checkout" }).getAttribute("href"),
     ).toBe("/address");
@@ -224,7 +224,9 @@ describe("cart page", () => {
     await hydrate(<CartPage />);
 
     expect(screen.getByText("Out of stock")).toBeDefined();
-    expect(screen.getByText("₹1,099")).toBeDefined();
+    expect(screen.getAllByText("₹1,000").length).toBeGreaterThanOrEqual(3);
+    expect(screen.getByText("FREE")).toBeDefined();
+    expect(screen.queryByText("₹1,099")).toBeNull();
     const checkoutButton = screen.getByRole("button", { name: "Proceed to checkout" });
     expect(checkoutButton.hasAttribute("disabled")).toBe(true);
 
@@ -254,8 +256,8 @@ describe("cart page", () => {
       );
     });
 
-    expect(screen.getAllByText("₹2,000")).toHaveLength(2);
-    expect(screen.getByText("₹2,099")).toBeDefined();
+    expect(screen.getAllByText("₹2,000")).toHaveLength(3);
+    expect(screen.getByText("FREE")).toBeDefined();
     expect(readStoredQuantities()).toEqual({ "nk-001": 2 });
   });
 });

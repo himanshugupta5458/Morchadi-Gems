@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { COMPANY_LINKS, NAV_CATEGORIES, POLICY_LINKS } from "@/lib/navigation";
-import { SITE_CONFIG } from "@/lib/config";
+import { CONTACT_CONFIG, SITE_CONFIG } from "@/lib/config";
 import { Wordmark } from "@/components/Wordmark";
 import { ShieldCheckIcon } from "@/components/icons";
 
@@ -20,6 +20,19 @@ export function Footer(): JSX.Element {
             Hallmarked, hand-finished jewellery for everyday wear and the days that
             matter. Shipped across India from our workshop.
           </p>
+          <address className="flex flex-col gap-2.5 not-italic text-body-sm text-ivory/70">
+            <span className="flex flex-col">
+              {CONTACT_CONFIG.addressLines.map((addressLine) => (
+                <span key={addressLine}>{addressLine}</span>
+              ))}
+            </span>
+            <a href={`mailto:${CONTACT_CONFIG.supportEmail}`} className={footerLinkClasses}>
+              {CONTACT_CONFIG.supportEmail}
+            </a>
+            <a href={CONTACT_CONFIG.phoneHref} className={footerLinkClasses}>
+              {CONTACT_CONFIG.phoneDisplay}
+            </a>
+          </address>
         </div>
 
         <nav aria-label="Shop" className="flex flex-col gap-4">

@@ -5,7 +5,7 @@ import {
   getFeaturedProducts,
   toCatalogueEntry,
 } from "@/lib/products";
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { formatRupees, hasVisibleDiscount } from "@/lib/format";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { Button } from "@/components/Button";
@@ -434,13 +434,19 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="Cart summary"
-        note="Populated, and the blocked state an out-of-stock line produces. Shipping is the flat rate from lib/config.ts and shows an amount only when something payable is in the cart."
+        note="Three states: a subtotal at or over the free-shipping threshold, one below it showing the flat rate and the shortfall hint, and the blocked state an out-of-stock line produces. Both shipping numbers come from lib/config.ts."
       >
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <CartSummary
             subtotal={4200}
+            shipping={0}
+            total={4200}
+            isCheckoutBlocked={false}
+          />
+          <CartSummary
+            subtotal={FREE_SHIPPING_THRESHOLD - 300}
             shipping={FLAT_SHIPPING_RATE}
-            total={4200 + FLAT_SHIPPING_RATE}
+            total={FREE_SHIPPING_THRESHOLD - 300 + FLAT_SHIPPING_RATE}
             isCheckoutBlocked={false}
           />
           <CartSummary

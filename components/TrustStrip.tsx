@@ -1,4 +1,4 @@
-import { FLAT_SHIPPING_RATE, RETURN_WINDOW_DAYS } from "@/lib/config";
+import { FREE_SHIPPING_THRESHOLD, RETURN_WINDOW_DAYS } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { TrustBadge } from "@/components/TrustBadge";
 import {
@@ -11,9 +11,10 @@ import {
 const ICON_CLASS = "h-7 w-7";
 
 /**
- * The shipping rate and the returns window come from `lib/config.ts`, the same constants the
- * refund and shipping policies read. The promise made on the home page and the promise made
- * in the policy cannot drift apart.
+ * The free-shipping threshold and the returns window come from `lib/config.ts`, the same
+ * constants the refund and shipping policies read — and, for the threshold, the same one the
+ * cart and the server-side order pricing charge from. The promise made on the home page and
+ * the promise made in the policy cannot drift apart.
  */
 const TRUST_BADGES = [
   {
@@ -23,8 +24,8 @@ const TRUST_BADGES = [
     icon: <ShieldCheckIcon className={ICON_CLASS} />,
   },
   {
-    key: "flat-shipping",
-    label: `Flat ${formatRupees(FLAT_SHIPPING_RATE)} Shipping`,
+    key: "free-shipping",
+    label: `Free Shipping Over ${formatRupees(FREE_SHIPPING_THRESHOLD)}`,
     detail: "Delivered across India",
     icon: <TruckIcon className={ICON_CLASS} />,
   },

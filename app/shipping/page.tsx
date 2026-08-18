@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   CONTACT_CONFIG,
   FLAT_SHIPPING_RATE,
+  FREE_SHIPPING_THRESHOLD,
   LEGAL_CONFIG,
   RETURN_WINDOW_DAYS,
 } from "@/lib/config";
@@ -14,7 +15,7 @@ const PATH = "/shipping";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Shipping Policy",
-  description: `Flat ${formatRupees(FLAT_SHIPPING_RATE)} shipping across India on every Morchadi Gems order. Dispatch and delivery timelines, tracking, and our delivery area.`,
+  description: `Free shipping across India on Morchadi Gems orders of ${formatRupees(FREE_SHIPPING_THRESHOLD)} or more, ${formatRupees(FLAT_SHIPPING_RATE)} below that. Dispatch and delivery timelines, tracking, and our delivery area.`,
   path: PATH,
 });
 
@@ -23,19 +24,28 @@ export default function ShippingPage(): JSX.Element {
     <PolicyPage
       roman="Shipping"
       accent="Policy"
-      summary={`Flat ${formatRupees(FLAT_SHIPPING_RATE)} across India, however much you order.`}
+      summary={`Free across India over ${formatRupees(FREE_SHIPPING_THRESHOLD)}, ${formatRupees(FLAT_SHIPPING_RATE)} below it.`}
       currentHref={PATH}
     >
       <h2>1. What shipping costs</h2>
       <p>
-        <strong>A flat {formatRupees(FLAT_SHIPPING_RATE)} per order, anywhere in India.</strong>{" "}
-        It is charged once per order, not per piece — one piece or ten, the shipping line at
-        checkout reads {formatRupees(FLAT_SHIPPING_RATE)}.
+        <strong>
+          Free anywhere in India on orders of {formatRupees(FREE_SHIPPING_THRESHOLD)} or
+          more.
+        </strong>{" "}
+        Below that, a flat {formatRupees(FLAT_SHIPPING_RATE)} per order. The threshold is
+        inclusive — an order subtotal of exactly {formatRupees(FREE_SHIPPING_THRESHOLD)}{" "}
+        ships free.
       </p>
       <p>
-        The charge is added at checkout and shown on its own line before you pay. There are
-        no separate handling, packaging or fuel charges, and no surcharge for remote PIN
-        codes.
+        The subtotal that decides this is the value of the pieces themselves, before
+        shipping. Where shipping is charged it is charged once per order, not per piece — one
+        piece or ten, the shipping line reads {formatRupees(FLAT_SHIPPING_RATE)}.
+      </p>
+      <p>
+        Shipping is shown on its own line at checkout before you pay, and is calculated on
+        our server from the current catalogue rather than in your browser. There are no
+        separate handling, packaging or fuel charges, and no surcharge for remote PIN codes.
       </p>
 
       <h2>2. Where we ship</h2>
@@ -89,8 +99,8 @@ export default function ShippingPage(): JSX.Element {
       <p>
         Couriers generally attempt delivery more than once. If a parcel is returned to us as
         undelivered, we will contact you to arrange a re-send at the standard{" "}
-        {formatRupees(FLAT_SHIPPING_RATE)} charge, or refund the order less the original
-        shipping charge.
+        {formatRupees(FLAT_SHIPPING_RATE)} charge, or refund the order less any shipping
+        charge paid on it.
       </p>
 
       <h2>7. Packaging</h2>

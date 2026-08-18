@@ -1,4 +1,4 @@
-import { CONTACT_CONFIG } from "@/lib/config";
+import { CONTACT_CONFIG, buildWhatsAppLink } from "@/lib/config";
 import { WhatsAppIcon } from "@/components/icons";
 
 const detailHeadingClasses = "text-eyebrow uppercase text-muted";
@@ -6,9 +6,9 @@ const detailLinkClasses =
   "text-body text-ink underline decoration-gold underline-offset-4 transition-colors duration-250 hover:text-gold-deep";
 
 /**
- * Every value here comes from `CONTACT_CONFIG` in `lib/config.ts`, so replacing the
- * placeholders with the real business details is a one-file change that updates this page,
- * the policies and the footer at once.
+ * Every value here comes from `CONTACT_CONFIG` in `lib/config.ts`, which reads it from
+ * `config/business.ts` — so changing a business detail is a one-file edit that updates this
+ * page, the policies and the footer at once.
  */
 export function ContactDetails(): JSX.Element {
   return (
@@ -36,10 +36,15 @@ export function ContactDetails(): JSX.Element {
 
       <div className="flex flex-col gap-2">
         <h2 className={detailHeadingClasses}>WhatsApp</h2>
-        <p className="flex items-center gap-2 text-body text-ink">
+        <a
+          href={buildWhatsAppLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${detailLinkClasses}`}
+        >
           <WhatsAppIcon className="h-5 w-5 shrink-0 text-whatsapp" />
-          Use the chat button in the corner
-        </p>
+          {CONTACT_CONFIG.phoneDisplay}
+        </a>
         <p className="text-body-sm text-muted">
           Quickest for a question about sizing or an order in flight.
         </p>

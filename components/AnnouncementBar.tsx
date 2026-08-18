@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FREE_SHIPPING_THRESHOLD, RETURN_WINDOW_DAYS } from "@/lib/config";
+import { formatRupees } from "@/lib/format";
 
 const ANNOUNCEMENTS = [
-  "Flat ₹99 shipping across India",
+  `Free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India`,
   "Certified & hallmarked jewellery",
-  "Easy 7-day returns",
+  `Easy ${RETURN_WINDOW_DAYS}-day returns`,
 ];
 
 const ROTATION_INTERVAL_MS = 4000;

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { CartItem } from "@/types/cart";
 import type { CatalogueEntry } from "@/types/product";
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { MAX_QUANTITY, MIN_QUANTITY } from "@/lib/quantity";
 import {
   addProductToCart,
@@ -45,7 +45,15 @@ const SOLD_OUT_RING = makeEntry({
   inStock: false,
 });
 
-const CATALOGUE: CatalogueEntry[] = [NECKLACE, EARRING, SOLD_OUT_RING];
+const BANGLE = makeEntry({
+  id: "bg-001",
+  name: "Oxidised Silver Bangle",
+  price: 1,
+  mrp: 2,
+  image: "/products/bg-001.webp",
+});
+
+const CATALOGUE: CatalogueEntry[] = [NECKLACE, EARRING, SOLD_OUT_RING, BANGLE];
 
 function makeItem(entry: CatalogueEntry, qty: number): CartItem {
   return {
@@ -55,6 +63,16 @@ function makeItem(entry: CatalogueEntry, qty: number): CartItem {
     image: entry.image ?? "",
     qty,
   };
+}
+
+/**
+ * The cheapest way to say "a cart whose payable subtotal is exactly this much": one piece
+ * priced at the target, since `MAX_QUANTITY` puts the boundary amounts out of reach of the
+ * shared fixtures.
+ */
+function totalsForSubtotal(subtotal: number): ReturnType<typeof calculateCartTotals> {
+  const piece = makeEntry({ id: `boundary-${subtotal}`, price: subtotal });
+  return calculateCartTotals(buildCartLines([makeItem(piece, 1)], [piece]));
 }
 
 function totalsFor(items: CartItem[]): ReturnType<typeof calculateCartTotals> {
@@ -216,11 +234,35 @@ describe("cart totals", () => {
     expect(totalsFor([])).toEqual({ subtotal: 0, shipping: 0, total: 0 });
   });
 
-  it("charges flat shipping once for a single item", () => {
-    expect(totalsFor([makeItem(NECKLACE, 1)])).toEqual({
-      subtotal: 1000,
+  it("charges flat shipping on a subtotal one rupee below the threshold", () => {
+    expect(totalsForSubtotal(FREE_SHIPPING_THRESHOLD - 1)).toEqual({
+      subtotal: 798,
       shipping: FLAT_SHIPPING_RATE,
-      total: 1000 + FLAT_SHIPPING_RATE,
+      total: 798 + FLAT_SHIPPING_RATE,
+    });
+  });
+
+  it("ships free on a subtotal exactly at the threshold, which is inclusive", () => {
+    expect(totalsForSubtotal(FREE_SHIPPING_THRESHOLD)).toEqual({
+      subtotal: 799,
+      shipping: 0,
+      total: 799,
+    });
+  });
+
+  it("ships free on a subtotal one rupee above the threshold", () => {
+    expect(totalsForSubtotal(FREE_SHIPPING_THRESHOLD + 1)).toEqual({
+      subtotal: 800,
+      shipping: 0,
+      total: 800,
+    });
+  });
+
+  it("charges flat shipping once for a single below-threshold item", () => {
+    expect(totalsFor([makeItem(EARRING, 1)])).toEqual({
+      subtotal: 250,
+      shipping: FLAT_SHIPPING_RATE,
+      total: 250 + FLAT_SHIPPING_RATE,
     });
   });
 
@@ -228,19 +270,33 @@ describe("cart totals", () => {
     expect(totalsFor([makeItem(NECKLACE, 3)]).subtotal).toBe(3000);
   });
 
-  it("charges flat shipping once across several lines", () => {
-    const totals = totalsFor([makeItem(NECKLACE, 2), makeItem(EARRING, 4)]);
+  it("charges shipping once across several lines, on their combined subtotal", () => {
+    const belowThreshold = totalsFor([makeItem(EARRING, 2), makeItem(BANGLE, 5)]);
+    const aboveThreshold = totalsFor([makeItem(NECKLACE, 2), makeItem(EARRING, 4)]);
 
-    expect(totals.subtotal).toBe(2000 + 1000);
-    expect(totals.shipping).toBe(FLAT_SHIPPING_RATE);
-    expect(totals.total).toBe(3000 + FLAT_SHIPPING_RATE);
+    expect(belowThreshold.subtotal).toBe(500 + 5);
+    expect(belowThreshold.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(belowThreshold.total).toBe(505 + FLAT_SHIPPING_RATE);
+
+    expect(aboveThreshold.subtotal).toBe(2000 + 1000);
+    expect(aboveThreshold.shipping).toBe(0);
+    expect(aboveThreshold.total).toBe(3000);
   });
 
-  it("excludes an out-of-stock line from the payable totals", () => {
-    const totals = totalsFor([makeItem(NECKLACE, 1), makeItem(SOLD_OUT_RING, 2)]);
+  it("decides shipping on the payable subtotal, ignoring an out-of-stock line", () => {
+    const totals = totalsFor([makeItem(EARRING, 1), makeItem(SOLD_OUT_RING, 2)]);
 
-    expect(totals.subtotal).toBe(1000);
-    expect(totals.total).toBe(1000 + FLAT_SHIPPING_RATE);
+    expect(totals.subtotal).toBe(250);
+    expect(totals.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(totals.total).toBe(250 + FLAT_SHIPPING_RATE);
+  });
+
+  it("does not let a sold-out line buy its way past the free-shipping threshold", () => {
+    const totals = totalsFor([makeItem(EARRING, 1), makeItem(SOLD_OUT_RING, 10)]);
+
+    expect(totals.subtotal).toBe(250);
+    expect(totals.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(totals.total).toBe(250 + FLAT_SHIPPING_RATE);
   });
 
   it("charges nothing at all when every line is out of stock", () => {
@@ -261,7 +317,7 @@ describe("cart totals", () => {
     const totals = totalsFor([makeItem(NECKLACE, 1)]);
 
     expect(totals.subtotal).not.toBe(NECKLACE.mrp);
-    expect(totals.total).toBe(NECKLACE.price + FLAT_SHIPPING_RATE);
+    expect(totals.total).toBe(NECKLACE.price);
   });
 
   it("ignores an item whose product is not in the catalogue", () => {
@@ -435,14 +491,15 @@ describe("parsePersistedCart", () => {
     expect(items[0]).toMatchObject({ productId: "nk-001", qty: MAX_QUANTITY });
     expect(totalsFor(items)).toEqual({
       subtotal: MAX_QUANTITY * 1000,
-      shipping: FLAT_SHIPPING_RATE,
-      total: MAX_QUANTITY * 1000 + FLAT_SHIPPING_RATE,
+      shipping: 0,
+      total: MAX_QUANTITY * 1000,
     });
   });
 });
 
-describe("shipping rate", () => {
-  it("is the flat rate from config, not a number written into the cart math", () => {
+describe("shipping rule", () => {
+  it("reads both numbers from config rather than writing them into the cart math", () => {
     expect(FLAT_SHIPPING_RATE).toBe(99);
+    expect(FREE_SHIPPING_THRESHOLD).toBe(799);
   });
 });

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { CATEGORIES } from "@/types/product";
-import { FLAT_SHIPPING_RATE, RETURN_WINDOW_DAYS, SITE_CONFIG } from "@/lib/config";
+import {
+  FLAT_SHIPPING_RATE,
+  FREE_SHIPPING_THRESHOLD,
+  RETURN_WINDOW_DAYS,
+  SITE_CONFIG,
+} from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { buildPageMetadata } from "@/lib/metadata";
 import { getAllProducts } from "@/lib/products";
@@ -73,9 +78,10 @@ export default function AboutPage(): JSX.Element {
             <h3>Where we are today</h3>
             <p>
               {catalogueSize} pieces across {CATEGORIES.length} collections, shipped across
-              India for a flat {formatRupees(FLAT_SHIPPING_RATE)}, with{" "}
-              {RETURN_WINDOW_DAYS} days to change your mind. No membership, no account to
-              create, and no minimum order — you buy a piece, we send it.
+              India — free over {formatRupees(FREE_SHIPPING_THRESHOLD)} and a flat{" "}
+              {formatRupees(FLAT_SHIPPING_RATE)} below that — with {RETURN_WINDOW_DAYS} days
+              to change your mind. No membership, no account to create, and no minimum order
+              — you buy a piece, we send it.
             </p>
           </Prose>
         </div>

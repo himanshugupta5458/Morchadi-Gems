@@ -86,10 +86,10 @@ function SupportLine({ children }: { children: string }): JSX.Element {
     <>
       {children}{" "}
       <a
-        href={`mailto:${CONTACT_CONFIG.orderSupportEmail}`}
+        href={`mailto:${CONTACT_CONFIG.supportEmail}`}
         className="text-ink underline underline-offset-4 transition-colors duration-250 hover:text-gold"
       >
-        {CONTACT_CONFIG.orderSupportEmail}
+        {CONTACT_CONFIG.supportEmail}
       </a>
     </>
   );

@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   CONTACT_CONFIG,
-  FLAT_SHIPPING_RATE,
   LEGAL_CONFIG,
   RETURN_WINDOW_DAYS,
 } from "@/lib/config";
-import { formatRupees } from "@/lib/format";
 import { buildPageMetadata } from "@/lib/metadata";
 import { PolicyPage } from "@/components/PolicyPage";
 
@@ -52,12 +50,12 @@ export default function RefundPage(): JSX.Element {
 
       <h2>3. What cannot be returned</h2>
       <ul>
-        <li>Pieces made, engraved or resized to order [PLACEHOLDER — confirm]</li>
+        <li>Pieces made, engraved or resized to order</li>
         <li>
           Pierced jewellery where hygiene rules prevent resale, such as nose pins and
-          earrings, unless the piece is faulty [PLACEHOLDER — confirm]
+          earrings, unless the piece is faulty
         </li>
-        <li>Anything bought in a clearance or final-sale event [PLACEHOLDER — confirm]</li>
+        <li>Anything bought in a clearance or final-sale event</li>
       </ul>
       <p>
         These exclusions never limit your rights where a piece arrives faulty, damaged or not
@@ -68,16 +66,16 @@ export default function RefundPage(): JSX.Element {
       <p>
         If a piece arrives faulty, damaged or is not what you ordered, contact us within{" "}
         {RETURN_WINDOW_DAYS} days of delivery with photographs. We will arrange collection at
-        our cost and replace or refund it in full, including the{" "}
-        {formatRupees(FLAT_SHIPPING_RATE)} shipping charge.
+        our cost and replace or refund it in full, including any shipping charge paid on the
+        original order.
       </p>
 
       <h2>5. Return shipping costs</h2>
       <p>
-        For a change-of-mind return, the {formatRupees(FLAT_SHIPPING_RATE)} shipping charge
-        on the original order is not refunded, and return postage is at your cost unless we
-        arrange a pickup [PLACEHOLDER — confirm whether pickup is offered]. For a faulty or
-        incorrect piece, we cover shipping both ways.
+        For a change-of-mind return, any shipping charge paid on the original order is not
+        refunded, and return postage is at your cost — we do not arrange a pickup for
+        change-of-mind returns. For a faulty or incorrect piece, we cover shipping both ways
+        and arrange the collection ourselves.
       </p>
 
       <h2>6. Cancelling an order</h2>

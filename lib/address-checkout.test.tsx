@@ -156,7 +156,8 @@ describe("the empty-cart guard", () => {
     expect(serverHtml).not.toContain("There is nothing to check out");
     expect(screen.queryByText("There is nothing to check out")).toBeNull();
     expect(screen.getByLabelText("Full name")).toBeDefined();
-    expect(screen.getByText("₹2,099")).toBeDefined();
+    expect(screen.getAllByText("₹2,000").length).toBeGreaterThanOrEqual(2);
+    expect(screen.getByText("FREE")).toBeDefined();
   });
 
   it("blocks checkout when a line has sold out", async () => {
@@ -314,8 +315,8 @@ describe("handing off to /payment", () => {
         pincode: "400050",
       },
       subtotal: 2000,
-      shipping: 99,
-      total: 2099,
+      shipping: 0,
+      total: 2000,
     });
   });
 
@@ -358,8 +359,8 @@ describe("handing off to /payment", () => {
           pincode: "400050",
         },
         subtotal: 2000,
-        shipping: 99,
-        total: 2099,
+        shipping: 0,
+        total: 2000,
       }),
     );
 

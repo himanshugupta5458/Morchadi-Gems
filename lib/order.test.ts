@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { CatalogueEntry } from "@/types/product";
 import type { OrderItemErrorCode } from "@/types/order";
-import { FLAT_SHIPPING_RATE } from "@/lib/config";
+import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { MAX_QUANTITY, MIN_QUANTITY } from "@/lib/quantity";
 import { buildOrderFromCart, parseOrderItems } from "@/lib/order";
 
@@ -32,7 +32,24 @@ const SOLD_OUT_RING = makeEntry({
   inStock: false,
 });
 
-const CATALOGUE: CatalogueEntry[] = [NECKLACE, EARRING, SOLD_OUT_RING];
+const BANGLE = makeEntry({
+  id: "bg-001",
+  name: "Oxidised Silver Bangle",
+  price: 100,
+  mrp: 6666,
+});
+
+const CATALOGUE: CatalogueEntry[] = [NECKLACE, EARRING, SOLD_OUT_RING, BANGLE];
+
+/**
+ * A one-piece order priced at exactly this subtotal. `MAX_QUANTITY` puts the free-shipping
+ * boundary out of reach of the shared fixtures, so the boundary cases price a piece at the
+ * amount under test instead.
+ */
+function orderWithSubtotal(subtotal: number): ReturnType<typeof buildOrderFromCart> {
+  const piece = makeEntry({ id: `boundary-${subtotal}`, price: subtotal });
+  return buildOrderFromCart([{ productId: piece.id, qty: 1 }], [piece]);
+}
 
 function errorCodesFor(items: { productId: string; qty: number }[]): OrderItemErrorCode[] {
   return buildOrderFromCart(items, CATALOGUE).errors.map((error) => error.code);
@@ -51,8 +68,8 @@ describe("buildOrderFromCart — a valid order", () => {
     expect(result.valid).toBe(true);
     expect(result.errors).toEqual([]);
     expect(result.subtotal).toBe(2 * 1000 + 3 * 250);
-    expect(result.shipping).toBe(FLAT_SHIPPING_RATE);
-    expect(result.total).toBe(2750 + FLAT_SHIPPING_RATE);
+    expect(result.shipping).toBe(0);
+    expect(result.total).toBe(2750);
   });
 
   it("echoes line items with the catalogue's name, unit price and line total", () => {
@@ -70,17 +87,63 @@ describe("buildOrderFromCart — a valid order", () => {
   });
 
   it("charges shipping once per order, not once per line", () => {
-    const oneLine = buildOrderFromCart([{ productId: NECKLACE.id, qty: 1 }], CATALOGUE);
+    const oneLine = buildOrderFromCart([{ productId: EARRING.id, qty: 1 }], CATALOGUE);
     const twoLines = buildOrderFromCart(
       [
-        { productId: NECKLACE.id, qty: 1 },
         { productId: EARRING.id, qty: 1 },
+        { productId: BANGLE.id, qty: 1 },
       ],
       CATALOGUE,
     );
 
     expect(oneLine.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(twoLines.subtotal).toBe(350);
     expect(twoLines.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(twoLines.total).toBe(350 + FLAT_SHIPPING_RATE);
+  });
+
+  it("charges the flat rate on a subtotal one rupee below the threshold", () => {
+    const result = orderWithSubtotal(FREE_SHIPPING_THRESHOLD - 1);
+
+    expect(result.valid).toBe(true);
+    expect(result.subtotal).toBe(798);
+    expect(result.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(result.total).toBe(798 + FLAT_SHIPPING_RATE);
+  });
+
+  it("ships free on a subtotal exactly at the threshold, which is inclusive", () => {
+    const result = orderWithSubtotal(FREE_SHIPPING_THRESHOLD);
+
+    expect(result.valid).toBe(true);
+    expect(result.subtotal).toBe(799);
+    expect(result.shipping).toBe(0);
+    expect(result.total).toBe(799);
+  });
+
+  it("ships free on a subtotal one rupee above the threshold", () => {
+    const result = orderWithSubtotal(FREE_SHIPPING_THRESHOLD + 1);
+
+    expect(result.valid).toBe(true);
+    expect(result.subtotal).toBe(800);
+    expect(result.shipping).toBe(0);
+    expect(result.total).toBe(800);
+  });
+
+  it("decides shipping from the catalogue subtotal, not from the number of lines", () => {
+    const manyCheapLines = buildOrderFromCart(
+      [
+        { productId: EARRING.id, qty: 1 },
+        { productId: BANGLE.id, qty: 2 },
+      ],
+      CATALOGUE,
+    );
+    const oneExpensiveLine = buildOrderFromCart(
+      [{ productId: NECKLACE.id, qty: 1 }],
+      CATALOGUE,
+    );
+
+    expect(manyCheapLines.shipping).toBe(FLAT_SHIPPING_RATE);
+    expect(oneExpensiveLine.shipping).toBe(0);
   });
 
   it("accepts the quantity bounds themselves", () => {
@@ -110,7 +173,7 @@ describe("buildOrderFromCart — the server is the only source of prices", () =>
 
     expect(result.valid).toBe(true);
     expect(result.subtotal).toBe(1250);
-    expect(result.total).toBe(1250 + FLAT_SHIPPING_RATE);
+    expect(result.total).toBe(1250);
     expect(result.lineItems.map((lineItem) => lineItem.unitPrice)).toEqual([1000, 250]);
   });
 
@@ -120,7 +183,7 @@ describe("buildOrderFromCart — the server is the only source of prices", () =>
     const result = buildOrderFromCart([{ productId: "nk-002", qty: 2 }], [inflatedMrp]);
 
     expect(result.subtotal).toBe(1000);
-    expect(result.total).toBe(1000 + FLAT_SHIPPING_RATE);
+    expect(result.total).toBe(1000);
   });
 
   it("strips client-sent fields out of the line items it produces", () => {
