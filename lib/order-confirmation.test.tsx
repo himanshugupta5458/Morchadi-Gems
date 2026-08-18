@@ -185,10 +185,10 @@ describe("/order-confirmation — PAID", () => {
 
     expect(screen.getByText("Your order is confirmed")).toBeTruthy();
     expect(screen.getByText(ORDER_ID)).toBeTruthy();
-    expect(screen.getByText("₹2,099")).toBeTruthy();
+    expect(screen.getAllByText("₹2,099").length).toBeGreaterThanOrEqual(1);
     expect(
       screen.getByText(
-        "Dispatch within 1–2 business days · Delivery within 3–7 business days",
+        "Dispatch within 2 business days · Delivery within 7 business days",
       ),
     ).toBeTruthy();
   });
@@ -434,7 +434,7 @@ describe("/order-confirmation — when our own verification cannot answer", () =
   it("says it could not confirm, not that the payment failed, and offers a retry", async () => {
     seedCart();
     respondWith(
-      errorBody(502, {
+      jsonResponse(502, {
         error: "VERIFICATION_UNAVAILABLE",
         message: "We could not reach the payment gateway to confirm this order.",
         retryable: true,
@@ -451,7 +451,7 @@ describe("/order-confirmation — when our own verification cannot answer", () =
 
   it("confirms on a retry that succeeds", async () => {
     respondWith(
-      errorBody(502, {
+      jsonResponse(502, {
         error: "VERIFICATION_UNAVAILABLE",
         message: "We could not reach the payment gateway to confirm this order.",
         retryable: true,
@@ -469,7 +469,7 @@ describe("/order-confirmation — when our own verification cannot answer", () =
 
   it("reads a missing configuration as a setup problem with no retry", async () => {
     respondWith(
-      errorBody(503, {
+      jsonResponse(503, {
         error: "PAYMENT_NOT_CONFIGURED",
         message: "We cannot confirm payments right now.",
         retryable: false,

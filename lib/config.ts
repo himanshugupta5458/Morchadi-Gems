@@ -65,8 +65,8 @@ export const LEGAL_CONFIG = {
   jurisdictionCity: "[CITY]",
   jurisdictionState: "[STATE]",
   policyLastUpdatedIso: "2026-08-17",
-  dispatchWindow: "1–2 business days",
-  deliveryWindow: "3–7 business days",
+  dispatchWindow: "2 business days",
+  deliveryWindow: "7 business days",
   refundProcessingWindow: "5–7 business days",
   paymentProvider: "Cashfree Payments",
 } as const;
