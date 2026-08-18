@@ -1,4 +1,12 @@
-import { getCategoryLabel, type Category, type Product } from "@/types/product";
+import {
+  getCategoryLabel,
+  getCollection,
+  getCollectionLabel,
+  isCollectionTag,
+  type Category,
+  type CollectionFilterSlug,
+  type Product,
+} from "@/types/product";
 import { getAllProducts } from "@/lib/products";
 import {
   PER_PAGE,
@@ -20,6 +28,7 @@ export * from "@/lib/shop-query";
  */
 export type AppliedFilter =
   | { kind: "category"; slug: Category; label: string }
+  | { kind: "collection"; slug: CollectionFilterSlug; label: string }
   | { kind: "price"; slug: PriceBandSlug; label: string };
 
 export interface ShopResults {
@@ -58,9 +67,53 @@ function matchesCategories(product: Product, categories: ShopQuery["categories"]
   return categories.length === 0 || categories.includes(product.category);
 }
 
+/**
+ * A collection reads whichever field its `source` names — the hand-written tag list, one of
+ * the two flags, or a price band. Adding a collection is a row in `COLLECTIONS`; nothing
+ * here needs a new branch unless a genuinely new *kind* of source appears.
+ */
+export function isProductInCollection(
+  product: Product,
+  slug: CollectionFilterSlug,
+): boolean {
+  const { source } = getCollection(slug);
+
+  switch (source.kind) {
+    case "tag":
+      return isCollectionTag(slug) && (product.collections ?? []).includes(slug);
+    case "featured-flag":
+      return product.featured;
+    case "new-flag":
+      return product.isNew;
+    case "price-band":
+      return isPriceInBand(product.price, getPriceBand(source.band));
+  }
+}
+
+function matchesCollections(
+  product: Product,
+  collections: CollectionFilterSlug[],
+): boolean {
+  if (collections.length === 0) return true;
+  return collections.some((slug) => isProductInCollection(product, slug));
+}
+
 function matchesPriceBands(product: Product, priceBands: PriceBandSlug[]): boolean {
   if (priceBands.length === 0) return true;
   return priceBands.some((slug) => isPriceInBand(product.price, getPriceBand(slug)));
+}
+
+/**
+ * Selections within a facet are OR-ed; the three facets are AND-ed. Pure — it reads the
+ * product and the query and nothing else, which is what lets the tests drive it with
+ * fixtures instead of the real catalogue.
+ */
+export function matchesShopQuery(product: Product, query: ShopQuery): boolean {
+  return (
+    matchesCategories(product, query.categories) &&
+    matchesCollections(product, query.collections) &&
+    matchesPriceBands(product, query.priceBands)
+  );
 }
 
 function toAppliedFilters(query: ShopQuery): AppliedFilter[] {
@@ -70,27 +123,31 @@ function toAppliedFilters(query: ShopQuery): AppliedFilter[] {
     label: getCategoryLabel(slug),
   }));
 
+  const collectionFilters: AppliedFilter[] = query.collections.map((slug) => ({
+    kind: "collection",
+    slug,
+    label: getCollectionLabel(slug),
+  }));
+
   const priceFilters: AppliedFilter[] = query.priceBands.map((slug) => ({
     kind: "price",
     slug,
     label: getPriceBandLabel(slug),
   }));
 
-  return [...categoryFilters, ...priceFilters];
+  return [...categoryFilters, ...collectionFilters, ...priceFilters];
 }
 
 /**
  * Pure and side-effect-free: the same params always produce the same result, and nothing
- * outside this call is mutated. Selections within a facet are OR-ed, the two facets are
+ * outside this call is mutated. Selections within a facet are OR-ed, the facets are
  * AND-ed, and an out-of-range page is clamped rather than treated as an error.
  */
 export function getShopResults(params: ShopSearchParams): ShopResults {
   const requested = parseShopQuery(params);
 
-  const matched = getAllProducts().filter(
-    (product) =>
-      matchesCategories(product, requested.categories) &&
-      matchesPriceBands(product, requested.priceBands),
+  const matched = getAllProducts().filter((product) =>
+    matchesShopQuery(product, requested),
   );
 
   const total = matched.length;

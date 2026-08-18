@@ -283,13 +283,24 @@ listing should go through this rather than hand-rolling a grid.
 <CategoryTile category={category} />
 ```
 
-`CategoryGrid` takes no props and renders all eight `CATEGORIES` — 2 columns on mobile,
-4 from `lg`. `CategoryTile` is a portrait 4:5 tile off `/categories/{slug}.webp` with a
-bottom scrim for label legibility and a gentle zoom on hover; the whole tile links to
-`/shop?category={slug}`.
+`CategoryGrid` takes no props and renders all ten `CATEGORIES` — 2 columns on mobile, 3 from
+`sm`, 5 from `lg` (so the ten sit as 5×2). `CategoryTile` is a portrait 4:5 tile off
+`/categories/{slug}.webp` with a bottom scrim for label legibility and a gentle zoom on
+hover; the whole tile links to `/shop?category={slug}`.
 
 Labels and slugs come from `CATEGORIES`, and the image path from
 `buildCategoryImageSrc()` — never write either by hand.
+
+### `CollectionStrip`
+
+```tsx
+<CollectionStrip />
+```
+
+The second tier under the tiles on home: a wrapped row of bordered pill links, one per
+`COLLECTIONS` entry, each to `/shop?collection={slug}`. Links rather than tiles on purpose —
+a collection cuts across categories, so no single photograph could honestly stand for one
+([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)).
 
 ### Product page components
 
@@ -633,7 +644,7 @@ local filter state anywhere ([ADR-008](../decisions/ADR-008-shop-architecture.md
 
 | Component | Kind | Notes |
 | --- | --- | --- |
-| `ShopFilterPanel` | *Client* | Category and price checkboxes; pushes a new URL on change |
+| `ShopFilterPanel` | *Client* | Category, collection and price checkboxes; pushes a new URL on change |
 | `ShopFilterDrawer` | *Client* | Below `lg`: trigger with active-filter count, slide-over holding the panel. Focus trap, scroll lock, Escape to close |
 | `ShopSortSelect` | *Client* | Native `<select>` over `SORT_OPTIONS` |
 | `ShopActiveFilters` | Server | Removable chips plus "Clear all" |
@@ -708,7 +719,7 @@ Rendered once by `app/layout.tsx`, so every route inherits it. Rationale in
 
 ```
 <AnnouncementBar />   charcoal strip, above the header, scrolls away
-<Header />            sticky; wordmark + cart, then the category bar
+<Header />            sticky; wordmark + cart, then the primary nav bar
 <main>{children}</main>
 <Footer />            charcoal, four columns + copyright row
 <WhatsAppButton />    fixed bottom-right
@@ -727,7 +738,7 @@ no stored state.
 #### `Header`
 
 Server Component composing three clients. Top row: `MobileNav` (hamburger, below `lg`),
-`Wordmark`, and `CartLink`. Second row: `CategoryNavBar`, hidden below `lg`.
+`Wordmark`, and `CartLink`. Second row: `PrimaryNav`, hidden below `lg`.
 `sticky top-0 z-40`.
 
 #### `Wordmark`
@@ -747,10 +758,13 @@ mismatch on a component that sits on every page. There is nothing to hide at 0, 
 flashes. See [ADR-010](../decisions/ADR-010-cart-architecture.md); the empty-first render is
 covered by a test that fails if it is ever changed to read `localStorage` eagerly.
 
-#### `CategoryNavBar` — *Client Component*
+#### `PrimaryNav` — *Client Component*
 
-Charcoal bar, `lg` and up. The eight categories from `NAV_CATEGORIES`, uppercase
-`text-eyebrow` with a caret that rotates 180° when open. One panel open at a time.
+Charcoal bar, `lg` and up. **Two dropdowns, then two plain links:** "Shop by Category" (the
+ten `CATEGORIES`), "Collections" (the five `COLLECTIONS`), then About and Contact from
+`COMPANY_LINKS`. Uppercase `text-eyebrow` with a caret that rotates 180° when open. One
+panel open at a time. Both dropdowns render from the same `NavMenu` shape, so the menu
+markup exists once ([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)).
 
 Each trigger is a real `<button>` carrying `aria-expanded` and `aria-controls`. Opens on
 hover, on click, and on `ArrowDown`; closes on `Escape` (returning focus to its trigger), on
@@ -761,8 +775,8 @@ gold ring reads against the dark bar.
 #### `MobileNav` — *Client Component*
 
 Below `lg`. Hamburger opens a left drawer holding the wordmark, a labelled cart link, and an
-accordion of the eight categories, each expanding to the same four quick filters. No hover
-behaviour on this path.
+accordion of the two nav groups — Categories and Collections — each expanding to its own
+entries, with About and Contact as flat rows beneath. No hover behaviour on this path.
 
 `role="dialog" aria-modal="true"`, focus moves to the close button on open and back to the
 hamburger on close, Tab cycles within the panel, `Escape` closes, and body scroll is locked
@@ -770,9 +784,9 @@ while open. Every link closes the drawer on click.
 
 #### `Footer`
 
-Charcoal, `ivory` text. Six columns at `lg` — brand (spanning two: blurb, registered
-address, support email, phone), Shop (the eight categories), Company (About / Contact /
-Terms), Policies, Secure Payments (Cashfree) — over a copyright row. The address and contact
+Charcoal, `ivory` text. Seven columns at `lg` — brand (spanning two: blurb, registered
+address, support email, phone), Shop (the ten categories), Collections (the five), Company
+(About / Contact), Policies, Secure Payments (Cashfree) — over a copyright row. The address and contact
 links come from `CONTACT_CONFIG`, which reads `config/business.ts`, so they match the contact
 page and the policies by construction. The year is build-time, since every route is
 prerendered.
@@ -833,22 +847,29 @@ None of these convert `mrp` into an amount, and none should be made to.
 
 ## Navigation model
 
-`lib/navigation.ts` is the single source for what the chrome links to. `NAV_CATEGORIES`
-derives from `CATEGORIES` in `types/product.ts`, so the desktop nav, the mobile accordion,
-and the footer's Shop column cannot drift from each other or from the catalogue.
+`lib/navigation.ts` is the single source for what the chrome links to. Both menus derive
+from `CATEGORIES` and `COLLECTIONS` in `types/product.ts`, so the desktop nav, the mobile
+accordion, the footer columns and the shop facets cannot drift from each other or from the
+catalogue.
 
 | Export | Notes |
 | --- | --- |
-| `NAV_CATEGORIES` | The eight categories, each with its four `quickFilters` |
-| `buildCategoryQuickFilters(category)` | "All {Category}" plus the three price bands |
+| `CATEGORY_MENU` | "Shop by Category" — the ten categories |
+| `COLLECTION_MENU` | "Collections" — the five collections |
+| `NAV_MENUS` | The two menus in nav order; what `PrimaryNav` and `MobileNav` render |
 | `buildCategoryHref(slug)` | `/shop?category={slug}` |
+| `buildCollectionHref(slug)` | `/shop?collection={slug}` |
 | `buildCategoryImageSrc(slug)` | `/categories/{slug}.webp` |
-| `COMPANY_LINKS` | About, Contact, Terms & Conditions |
+| `COMPANY_LINKS` | About, Contact |
 
-The categories are flat — there are no sub-categories — so the mega-nav panels offer price
-bands (`under-999`, `1000-4999`, `5000-plus`) rather than an invented taxonomy. Those band
-keys are a public URL surface that `/shop` must honour; see
-[ADR-005](../decisions/ADR-005-navigation-and-chrome.md) before changing them.
+Both tiers are flat — no sub-categories, no nested collections — so a menu is a list of
+links and nothing more. **Every entry is a single query param**, including the three
+collections derived from flags and price: `?collection=new-arrivals`, never `?sort=newest`,
+so the nav and the shop sidebar always agree about what is selected
+([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)). The category slugs, the
+collection slugs and the price band keys (`under-999`, `1000-4999`, `5000-plus`) are all
+public URL surface that `/shop` must honour; see
+[ADR-005](../decisions/ADR-005-navigation-and-chrome.md) and ADR-020 before changing them.
 
 `lib/config.ts` holds `SITE_CONFIG` — brand name, SEO strings, WhatsApp number, greeting —
 and `buildWhatsAppLink()`. The number there is a placeholder pending the real business
@@ -861,13 +882,22 @@ number.
 `buildPaginationRange`. It imports **no product data**, which is what lets Client Components
 use it without shipping the catalogue.
 
-`lib/shop.ts` adds `getShopResults` — the pure filter/sort/paginate core, covered by 53 unit
-tests — and re-exports all of the above. Server code imports `@/lib/shop`; client code
-imports `@/lib/shop-query`.
+Three facets, three params — `category`, `collection`, `price` — each a comma-separated
+list, each OR-ed within itself and AND-ed against the others. Every mutator
+(`toggleCategory`, `toggleCollection`, `togglePriceBand`, `withSort`) resets to page 1, and
+`buildShopHref` emits the params in one canonical order with defaults omitted, so the same
+filter state always produces the same URL.
 
-Never hardcode a band label, a sort slug, or a page size in a component. The band keys and
-sort slugs are public URL surface — see
-[ADR-008](../decisions/ADR-008-shop-architecture.md) before changing one.
+`lib/shop.ts` adds `getShopResults` — the pure filter/sort/paginate core, covered by 71 unit
+tests — plus `matchesShopQuery(product, query)` and `isProductInCollection(product, slug)`
+as exported pure predicates, and re-exports all of the above. Server code imports
+`@/lib/shop`; client code imports `@/lib/shop-query`.
+
+Never hardcode a band label, a category, a collection, a sort slug, or a page size in a
+component — read `CATEGORIES`, `COLLECTIONS`, `PRICE_BANDS` and `SORT_OPTIONS`. Every one
+of those slugs is public URL surface; see
+[ADR-008](../decisions/ADR-008-shop-architecture.md) and
+[ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md) before changing one.
 
 ## Style guide
 

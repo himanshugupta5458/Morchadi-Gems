@@ -1,23 +1,27 @@
-import { CATEGORIES, type Category, type CategoryOption } from "@/types/product";
+import {
+  CATEGORIES,
+  COLLECTIONS,
+  type Category,
+  type CategoryOption,
+  type CollectionFilterSlug,
+  type CollectionOption,
+} from "@/types/product";
 
 export interface NavLink {
   label: string;
   href: string;
 }
 
-export interface CategoryQuickFilter extends NavLink {
+/** One entry in a nav dropdown — the two groups share a shape so the menu renders once. */
+export interface NavMenuItem extends NavLink {
   key: string;
 }
 
-export interface NavCategory extends CategoryOption {
-  quickFilters: readonly CategoryQuickFilter[];
+export interface NavMenu {
+  key: string;
+  label: string;
+  items: readonly NavMenuItem[];
 }
-
-const PRICE_BANDS = [
-  { key: "under-999", label: "Under ₹999" },
-  { key: "1000-4999", label: "₹1,000 – ₹4,999" },
-  { key: "5000-plus", label: "₹5,000 & above" },
-] as const;
 
 export const CART_PATH = "/cart";
 
@@ -48,33 +52,51 @@ export function buildCategoryHref(slug: Category): string {
   return `/shop?category=${slug}`;
 }
 
+/**
+ * Every collection resolves through the same `?collection=` param, including the three
+ * derived from flags and price. Routing `new-arrivals` to `?sort=newest` instead would put
+ * the nav and the shop's Collections facet out of step — the shopper would arrive with the
+ * box they just clicked left unchecked. See ADR-020.
+ */
+export function buildCollectionHref(slug: CollectionFilterSlug): string {
+  return `/shop?collection=${slug}`;
+}
+
 /** Path convention is fixed by ADR-006 — see docs/design/IMAGES.md. */
 export function buildCategoryImageSrc(slug: Category): string {
   return `/categories/${slug}.webp`;
 }
 
-export function buildCategoryQuickFilters(
-  category: CategoryOption,
-): CategoryQuickFilter[] {
-  const allOfCategory: CategoryQuickFilter = {
-    key: "all",
-    label: `All ${category.label}`,
+function toCategoryMenuItem(category: CategoryOption): NavMenuItem {
+  return {
+    key: category.slug,
+    label: category.label,
     href: buildCategoryHref(category.slug),
   };
-
-  const byPriceBand = PRICE_BANDS.map((band) => ({
-    key: band.key,
-    label: band.label,
-    href: `${buildCategoryHref(category.slug)}&price=${band.key}`,
-  }));
-
-  return [allOfCategory, ...byPriceBand];
 }
 
-export const NAV_CATEGORIES: readonly NavCategory[] = CATEGORIES.map((category) => ({
-  ...category,
-  quickFilters: buildCategoryQuickFilters(category),
-}));
+function toCollectionMenuItem(collection: CollectionOption): NavMenuItem {
+  return {
+    key: collection.slug,
+    label: collection.label,
+    href: buildCollectionHref(collection.slug),
+  };
+}
+
+export const CATEGORY_MENU: NavMenu = {
+  key: "categories",
+  label: "Shop by Category",
+  items: CATEGORIES.map(toCategoryMenuItem),
+};
+
+export const COLLECTION_MENU: NavMenu = {
+  key: "collections",
+  label: "Collections",
+  items: COLLECTIONS.map(toCollectionMenuItem),
+};
+
+/** The two dropdowns, in the order they appear in the header and the mobile drawer. */
+export const NAV_MENUS: readonly NavMenu[] = [CATEGORY_MENU, COLLECTION_MENU];
 
 export const COMPANY_LINKS: readonly NavLink[] = [
   { label: "About", href: "/about" },

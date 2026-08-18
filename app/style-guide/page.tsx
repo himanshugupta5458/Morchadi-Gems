@@ -33,7 +33,7 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { TrustBadge } from "@/components/TrustBadge";
 import { TrustStrip } from "@/components/TrustStrip";
 import { getTestimonials } from "@/lib/testimonials";
-import { NAV_CATEGORIES } from "@/lib/navigation";
+import { NAV_MENUS } from "@/lib/navigation";
 import { GemOutlineIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -98,7 +98,6 @@ function withoutDiscount(product: Product): Product {
 
 export default function StyleGuidePage(): JSX.Element {
   const testimonials = getTestimonials();
-  const sampleCategory = NAV_CATEGORIES[0];
   const catalogue = getAllProducts();
   const featured = getFeaturedProducts();
   const discountedProducts = featured.filter((product) =>
@@ -405,18 +404,27 @@ export default function StyleGuidePage(): JSX.Element {
       >
         <div className="flex flex-col gap-4">
           <p className="max-w-prose text-body-sm text-muted">
-            The mega-nav is flat: the eight categories have no sub-categories, so each
-            dropdown offers an &ldquo;All&rdquo; link plus three price bands, all
-            resolving to <code className="text-ink">/shop</code> query params.
+            The nav is two dropdowns over one flat tier each — the ten categories a
+            product belongs to, and the five collections that cut across them — plus
+            About and Contact as top-level links. Every entry resolves to a{" "}
+            <code className="text-ink">/shop</code> query param, so the nav, the filter
+            sidebar and a pasted URL all express the same state. Both groups come from{" "}
+            <code className="text-ink">CATEGORIES</code> and{" "}
+            <code className="text-ink">COLLECTIONS</code>; nothing here is written twice.
           </p>
-          <ul className="flex flex-col gap-1">
-            {sampleCategory.quickFilters.map((quickFilter) => (
-              <li key={quickFilter.key} className="text-body-sm text-muted">
-                <span className="text-ink">{quickFilter.label}</span> →{" "}
-                <code>{quickFilter.href}</code>
-              </li>
-            ))}
-          </ul>
+          {NAV_MENUS.map((menu) => (
+            <div key={menu.key} className="flex flex-col gap-1">
+              <h3 className="text-eyebrow uppercase text-gold-deep">{menu.label}</h3>
+              <ul className="flex flex-col gap-1">
+                {menu.items.map((item) => (
+                  <li key={item.key} className="text-body-sm text-muted">
+                    <span className="text-ink">{item.label}</span> →{" "}
+                    <code>{item.href}</code>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
           <p className="max-w-prose text-body-sm text-muted">
             The cart badge reads <code className="text-ink">itemCount</code> from{" "}
             <code className="text-ink">useCart()</code>. It renders nothing on the server

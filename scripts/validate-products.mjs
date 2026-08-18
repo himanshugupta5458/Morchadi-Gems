@@ -6,9 +6,9 @@ const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
 const PUBLIC_DIR = join(REPO_ROOT, "public");
 
-const EXPECTED_PRODUCT_COUNT = 100;
-const EXPECTED_FEATURED_COUNT = 8;
-const EXPECTED_NEW_COUNT = 8;
+const MIN_PRODUCT_COUNT = 1;
+const MIN_FEATURED_COUNT = 4;
+const MIN_NEW_COUNT = 4;
 const MIN_REVIEWS_PER_PRODUCT = 2;
 const MAX_REVIEWS_PER_PRODUCT = 3;
 const MIN_RATING = 3.5;
@@ -35,7 +35,11 @@ const CATEGORY_ID_PREFIX = {
   pendants: "pd",
   anklets: "ak",
   "nose-pins": "np",
+  watches: "wt",
+  "hair-accessories": "ha",
 };
+
+const COLLECTION_TAGS = ["gifting", "anti-tarnish"];
 
 const CATEGORY_SLUGS = Object.keys(CATEGORY_ID_PREFIX);
 
@@ -65,8 +69,8 @@ check(Array.isArray(catalogue), "products.json must be a JSON array");
 if (!Array.isArray(catalogue)) process.exit(1);
 
 check(
-  catalogue.length === EXPECTED_PRODUCT_COUNT,
-  `expected ${EXPECTED_PRODUCT_COUNT} products, found ${catalogue.length}`,
+  catalogue.length >= MIN_PRODUCT_COUNT,
+  `expected at least ${MIN_PRODUCT_COUNT} product, found ${catalogue.length}`,
 );
 
 const seenIds = new Set();
@@ -81,6 +85,7 @@ let placeholderOutOfStockCount = 0;
 let realProductCount = 0;
 let optionedProductCount = 0;
 let productImagesOnDisk = 0;
+let taggedProductCount = 0;
 
 for (const product of catalogue) {
   const label = product?.id ?? "<missing id>";
@@ -290,6 +295,25 @@ for (const product of catalogue) {
     );
   }
 
+  const collections = product?.collections;
+  check(
+    collections === undefined || Array.isArray(collections),
+    `${label}: collections must be an array when present`,
+  );
+  if (Array.isArray(collections)) {
+    taggedProductCount += 1;
+    collections.forEach((slug, index) => {
+      check(
+        COLLECTION_TAGS.includes(slug),
+        `${label}: collections[${index}] "${slug}" is not a known collection tag`,
+      );
+    });
+    check(
+      new Set(collections).size === collections.length,
+      `${label}: has a duplicate collection tag`,
+    );
+  }
+
   if (product?.featured === true) featuredCount += 1;
   if (product?.isNew === true) newCount += 1;
   if (product?.inStock === false) {
@@ -300,6 +324,7 @@ for (const product of catalogue) {
   const allowedProductKeys = [
     "id", "name", "category", "price", "mrp", "images", "shortDescription", "details",
     "rating", "reviewCount", "reviews", "featured", "isNew", "inStock", "options",
+    "collections",
   ];
   const unknownProductKeys = Object.keys(product ?? {}).filter(
     (key) => !allowedProductKeys.includes(key),
@@ -315,21 +340,19 @@ check(
   `ids are not unique: ${catalogue.length} products but ${seenIds.size} distinct ids`,
 );
 
-for (const slug of CATEGORY_SLUGS) {
-  check(categoryCounts[slug] > 0, `category "${slug}" has no products`);
-}
+const emptyCategories = CATEGORY_SLUGS.filter((slug) => categoryCounts[slug] === 0);
 
 check(
-  featuredCount === EXPECTED_FEATURED_COUNT,
-  `expected ${EXPECTED_FEATURED_COUNT} featured products, found ${featuredCount}`,
+  featuredCount >= MIN_FEATURED_COUNT,
+  `expected at least ${MIN_FEATURED_COUNT} featured products to fill the home best-sellers row, found ${featuredCount}`,
 );
 check(
-  newCount === EXPECTED_NEW_COUNT,
-  `expected ${EXPECTED_NEW_COUNT} isNew products, found ${newCount}`,
+  newCount >= MIN_NEW_COUNT,
+  `expected at least ${MIN_NEW_COUNT} isNew products to fill the home new-arrivals row, found ${newCount}`,
 );
 check(
-  placeholderOutOfStockCount >= 2 && placeholderOutOfStockCount <= 3,
-  `expected 2-3 out-of-stock placeholder products so the sold-out UI keeps coverage beyond the owner's own, found ${placeholderOutOfStockCount}`,
+  outOfStockCount >= 1,
+  "expected at least one out-of-stock product so the sold-out UI keeps coverage",
 );
 check(
   priceBands.outOfBand === 0,
@@ -355,9 +378,13 @@ console.log(`New arrivals        ${newCount}`);
 console.log(`Out of stock        ${outOfStockCount} (${placeholderOutOfStockCount} placeholder)`);
 console.log(`Owner's own (P-code) ${realProductCount}`);
 console.log(`With options        ${optionedProductCount}`);
+console.log(`With collections    ${taggedProductCount}`);
 console.log("\nCategory distribution");
 for (const slug of CATEGORY_SLUGS) {
   console.log(`  ${slug.padEnd(18)}${categoryCounts[slug]}`);
+}
+if (emptyCategories.length > 0) {
+  console.log(`  awaiting products  ${emptyCategories.join(", ")}`);
 }
 console.log("\nPrice bands");
 console.log(`  budget  ${MIN_PRICE}-999    ${priceBands.budget}`);

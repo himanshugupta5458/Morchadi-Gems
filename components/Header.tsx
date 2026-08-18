@@ -1,6 +1,6 @@
 import { CartLink } from "@/components/CartLink";
-import { CategoryNavBar } from "@/components/CategoryNavBar";
 import { MobileNav } from "@/components/MobileNav";
+import { PrimaryNav } from "@/components/PrimaryNav";
 import { Wordmark } from "@/components/Wordmark";
 
 export function Header(): JSX.Element {
@@ -13,7 +13,7 @@ export function Header(): JSX.Element {
         </div>
         <CartLink />
       </div>
-      <CategoryNavBar />
+      <PrimaryNav />
     </header>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getCategoryLabel } from "@/types/product";
+import { CATEGORIES, getCategoryLabel, getCollectionLabel } from "@/types/product";
 import {
   FREE_SHIPPING_THRESHOLD,
   PRODUCT_DESCRIPTOR,
@@ -21,16 +21,29 @@ interface ShopPageProps {
   searchParams: Record<string, string | string[] | undefined>;
 }
 
-function singleCategoryOf(query: ShopQuery): string | null {
-  return query.categories.length === 1 ? getCategoryLabel(query.categories[0]) : null;
+/**
+ * A single selection in exactly one facet is what earns a page its own name — the category
+ * it is, or the collection it is. Anything broader or narrower stays the generic shop
+ * listing, so no combination of filters can mint a title that misdescribes the results.
+ */
+function singleFacetLabelOf(query: ShopQuery): string | null {
+  const isSingleCategory =
+    query.categories.length === 1 && query.collections.length === 0;
+  if (isSingleCategory) return getCategoryLabel(query.categories[0]);
+
+  const isSingleCollection =
+    query.collections.length === 1 && query.categories.length === 0;
+  if (isSingleCollection) return getCollectionLabel(query.collections[0]);
+
+  return null;
 }
 
 export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
   const { query } = getShopResults(searchParams);
-  const categoryLabel = singleCategoryOf(query);
+  const facetLabel = singleFacetLabelOf(query);
 
-  const title = categoryLabel === null ? "Shop All Jewellery" : categoryLabel;
-  const subject = categoryLabel === null ? "the full collection" : categoryLabel.toLowerCase();
+  const title = facetLabel === null ? "Shop All Jewellery" : facetLabel;
+  const subject = facetLabel === null ? "the full collection" : facetLabel.toLowerCase();
   const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
 
   return {
@@ -72,7 +85,7 @@ function EmptyResults(): JSX.Element {
 export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
   const results = getShopResults(searchParams);
   const { query } = results;
-  const categoryLabel = singleCategoryOf(query);
+  const facetLabel = singleFacetLabelOf(query);
 
   return (
     <div className="container py-12 lg:py-16">
@@ -80,12 +93,12 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
         <SectionHeading
           as="h1"
           align="left"
-          roman={categoryLabel === null ? "The" : "Shop"}
-          accent={categoryLabel === null ? "Collection" : categoryLabel}
+          roman={facetLabel === null ? "The" : "Shop"}
+          accent={facetLabel === null ? "Collection" : facetLabel}
           subtitle={
-            categoryLabel === null
-              ? "One hundred pieces, anti-tarnish and hand-finished, across eight collections."
-              : `Every ${categoryLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
+            facetLabel === null
+              ? `Every piece we make, anti-tarnish and hand-finished, across ${CATEGORIES.length} categories.`
+              : `Every ${facetLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
           }
         />
       </header>

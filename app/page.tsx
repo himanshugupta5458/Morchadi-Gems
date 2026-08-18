@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/config";
+import { buildCollectionHref } from "@/lib/navigation";
 import { getFeaturedProducts, getNewArrivals } from "@/lib/products";
 import { CategoryGrid } from "@/components/CategoryGrid";
+import { CollectionStrip } from "@/components/CollectionStrip";
 import { Hero } from "@/components/Hero";
 import { ProductGrid } from "@/components/ProductGrid";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -46,9 +48,10 @@ export default function HomePage(): JSX.Element {
           <SectionHeading
             roman="Shop by"
             accent="Category"
-            subtitle="Eight collections, each finished in the same workshop and held to the same anti-tarnish standard."
+            subtitle="Ten categories, each finished in the same workshop and held to the same anti-tarnish standard."
           />
           <CategoryGrid />
+          <CollectionStrip />
         </div>
       </section>
 
@@ -61,7 +64,7 @@ export default function HomePage(): JSX.Element {
               align="left"
               subtitle="The most recent pieces off the bench, before they settle into the main collection."
             />
-            <ViewAllLink href="/shop?sort=newest" />
+            <ViewAllLink href={buildCollectionHref("new-arrivals")} />
           </div>
           <ProductGrid products={newArrivals} />
         </div>
@@ -76,7 +79,7 @@ export default function HomePage(): JSX.Element {
               align="left"
               subtitle="The pieces our customers keep coming back for, rated highest across the store."
             />
-            <ViewAllLink href="/shop?sort=rating-desc" />
+            <ViewAllLink href={buildCollectionHref("best-sellers")} />
           </div>
           <ProductGrid products={bestSellers} />
         </div>

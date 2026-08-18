@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import type { Category } from "@/types/product";
-import { NAV_CATEGORIES } from "@/lib/navigation";
+import { COMPANY_LINKS, NAV_MENUS } from "@/lib/navigation";
 import { CartLink } from "@/components/CartLink";
 import { Wordmark } from "@/components/Wordmark";
 import { CaretDownIcon, CloseIcon, MenuIcon } from "@/components/icons";
@@ -13,7 +12,7 @@ const FOCUSABLE_SELECTOR = "a[href], button:not([disabled])";
 
 export function MobileNav(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSlug, setExpandedSlug] = useState<Category | null>(null);
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -32,7 +31,7 @@ export function MobileNav(): JSX.Element {
 
   function dismiss(): void {
     setIsOpen(false);
-    setExpandedSlug(null);
+    setExpandedKey(null);
   }
 
   function dismissAndRestoreFocus(): void {
@@ -118,27 +117,22 @@ export function MobileNav(): JSX.Element {
               <CartLink withLabel onNavigate={dismiss} />
             </div>
 
-            <nav
-              aria-label="Product categories"
-              className="flex-1 overflow-y-auto px-2 py-2"
-            >
+            <nav aria-label="Primary" className="flex-1 overflow-y-auto px-2 py-2">
               <ul className="flex flex-col">
-                {NAV_CATEGORIES.map((category) => {
-                  const isExpanded = expandedSlug === category.slug;
-                  const sectionId = `mobile-category-${category.slug}`;
+                {NAV_MENUS.map((menu) => {
+                  const isExpanded = expandedKey === menu.key;
+                  const sectionId = `mobile-nav-${menu.key}`;
 
                   return (
-                    <li key={category.slug} className="border-b border-line/70">
+                    <li key={menu.key} className="border-b border-line/70">
                       <button
                         type="button"
                         aria-expanded={isExpanded}
                         aria-controls={sectionId}
-                        onClick={() =>
-                          setExpandedSlug(isExpanded ? null : category.slug)
-                        }
+                        onClick={() => setExpandedKey(isExpanded ? null : menu.key)}
                         className="flex w-full items-center justify-between gap-3 px-3 py-3.5 text-label uppercase tracking-caps text-ink"
                       >
-                        {category.label}
+                        {menu.label}
                         <CaretDownIcon
                           className={`h-4 w-4 text-muted transition-transform duration-250 ${
                             isExpanded ? "rotate-180" : ""
@@ -148,14 +142,14 @@ export function MobileNav(): JSX.Element {
 
                       {isExpanded ? (
                         <ul id={sectionId} className="flex flex-col pb-2">
-                          {category.quickFilters.map((quickFilter) => (
-                            <li key={quickFilter.key}>
+                          {menu.items.map((item) => (
+                            <li key={item.key}>
                               <Link
-                                href={quickFilter.href}
+                                href={item.href}
                                 onClick={dismiss}
                                 className="block bg-ivory px-5 py-2.5 text-body-sm text-muted transition-colors duration-250 hover:text-ink"
                               >
-                                {quickFilter.label}
+                                {item.label}
                               </Link>
                             </li>
                           ))}
@@ -164,6 +158,18 @@ export function MobileNav(): JSX.Element {
                     </li>
                   );
                 })}
+
+                {COMPANY_LINKS.map((companyLink) => (
+                  <li key={companyLink.href} className="border-b border-line/70">
+                    <Link
+                      href={companyLink.href}
+                      onClick={dismiss}
+                      className="block px-3 py-3.5 text-label uppercase tracking-caps text-ink"
+                    >
+                      {companyLink.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>

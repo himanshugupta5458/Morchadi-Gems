@@ -3,6 +3,7 @@ import {
   SHOP_PATH,
   buildShopHref,
   toggleCategory,
+  toggleCollection,
   togglePriceBand,
   type ShopQuery,
 } from "@/lib/shop-query";
@@ -15,9 +16,14 @@ export interface ShopActiveFiltersProps {
 }
 
 function buildRemovalHref(query: ShopQuery, filter: AppliedFilter): string {
-  return filter.kind === "category"
-    ? buildShopHref(toggleCategory(query, filter.slug))
-    : buildShopHref(togglePriceBand(query, filter.slug));
+  switch (filter.kind) {
+    case "category":
+      return buildShopHref(toggleCategory(query, filter.slug));
+    case "collection":
+      return buildShopHref(toggleCollection(query, filter.slug));
+    case "price":
+      return buildShopHref(togglePriceBand(query, filter.slug));
+  }
 }
 
 export function ShopActiveFilters({

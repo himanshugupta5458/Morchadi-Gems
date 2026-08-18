@@ -23,7 +23,9 @@ green.
    bands, unknown sorts, and unparseable pages are ignored, not fatal.
 3. **Clamped pagination.** `page` always lands in `[1, totalPages]`. `totalPages` is at least
    1, even when nothing matched.
-4. **Facet semantics.** Selections OR within a facet; the two facets AND together.
+4. **Facet semantics.** Selections OR within a facet; the facets AND together. The
+   third facet — collections — is planned separately in
+   [PLAN-catalogue-ia.md](PLAN-catalogue-ia.md).
 5. **Purity.** The catalogue is never mutated and identical params give identical results.
 6. **Band coverage.** The three price bands partition the catalogue — disjoint and
    exhaustive, so no product is unreachable through the filter UI.
@@ -32,10 +34,10 @@ green.
 
 | ID | Scenario | Expected result | Type |
 | --- | --- | --- | --- |
-| TC-01 | No params | Page 1, 12 items, total 100, totalPages 9, sort `newest`, no applied filters | Automated |
+| TC-01 | No params | Page 1, 12 items, total equal to the catalogue size, sort `newest`, no applied filters | Automated |
 | TC-02 | Display range, page 1 and page 2 | `rangeStart`/`rangeEnd` are 1–12 and 13–24 | Automated |
 | TC-03 | Last page | Holds only the remainder (4), `rangeEnd` equals the total | Automated |
-| TC-04 | Page through the whole catalogue | 100 items, 100 distinct ids — nothing dropped or repeated | Automated |
+| TC-04 | Page through the whole catalogue | Every product once, all ids distinct — nothing dropped or repeated | Automated |
 | TC-05 | Price band bounds | Inclusive both ends: 999 in `under-999`, 1000 not; 1000 and 4999 in mid, 999 and 5000 not; 5000 in `5000-plus`, 4999 not | Automated |
 | TC-06 | Premium band upper bound | `MAX_SAFE_INTEGER` is in `5000-plus` — unbounded above | Automated |
 | TC-07 | Each band's results | Every returned product satisfies its band predicate | Automated |

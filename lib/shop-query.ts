@@ -1,4 +1,11 @@
-import { CATEGORIES, isCategory, type Category } from "@/types/product";
+import {
+  CATEGORIES,
+  COLLECTIONS,
+  isCategory,
+  isCollectionFilterSlug,
+  type Category,
+  type CollectionFilterSlug,
+} from "@/types/product";
 
 export const SHOP_PATH = "/shop";
 export const PER_PAGE = 12;
@@ -67,6 +74,7 @@ export type RawSearchParam = string | string[] | undefined;
 
 export interface ShopSearchParams {
   category?: RawSearchParam;
+  collection?: RawSearchParam;
   price?: RawSearchParam;
   sort?: RawSearchParam;
   page?: RawSearchParam;
@@ -74,6 +82,7 @@ export interface ShopSearchParams {
 
 export interface ShopQuery {
   categories: Category[];
+  collections: CollectionFilterSlug[];
   priceBands: PriceBandSlug[];
   sort: SortSlug;
   page: number;
@@ -81,6 +90,10 @@ export interface ShopQuery {
 
 const CATEGORY_ORDER = new Map(
   CATEGORIES.map((category, index) => [category.slug, index] as const),
+);
+
+const COLLECTION_ORDER = new Map(
+  COLLECTIONS.map((collection, index) => [collection.slug, index] as const),
 );
 
 const PRICE_BAND_ORDER = new Map(
@@ -121,6 +134,10 @@ export function parseShopQuery(params: ShopSearchParams): ShopQuery {
     toTokens(params.category).filter(isCategory),
     CATEGORY_ORDER,
   );
+  const collections = uniqueInOrder(
+    toTokens(params.collection).filter(isCollectionFilterSlug),
+    COLLECTION_ORDER,
+  );
   const priceBands = uniqueInOrder(
     toTokens(params.price).filter(isPriceBandSlug),
     PRICE_BAND_ORDER,
@@ -132,6 +149,7 @@ export function parseShopQuery(params: ShopSearchParams): ShopQuery {
 
   return {
     categories,
+    collections,
     priceBands,
     sort,
     page: parsePageToken(toTokens(params.page)[0]),
@@ -139,7 +157,13 @@ export function parseShopQuery(params: ShopSearchParams): ShopQuery {
 }
 
 export function emptyShopQuery(): ShopQuery {
-  return { categories: [], priceBands: [], sort: DEFAULT_SORT, page: 1 };
+  return {
+    categories: [],
+    collections: [],
+    priceBands: [],
+    sort: DEFAULT_SORT,
+    page: 1,
+  };
 }
 
 /**
@@ -152,6 +176,9 @@ export function buildShopHref(query: ShopQuery): string {
 
   if (query.categories.length > 0) {
     parts.push(`category=${query.categories.join(",")}`);
+  }
+  if (query.collections.length > 0) {
+    parts.push(`collection=${query.collections.join(",")}`);
   }
   if (query.priceBands.length > 0) {
     parts.push(`price=${query.priceBands.join(",")}`);
@@ -181,6 +208,17 @@ export function toggleCategory(query: ShopQuery, slug: Category): ShopQuery {
   };
 }
 
+export function toggleCollection(
+  query: ShopQuery,
+  slug: CollectionFilterSlug,
+): ShopQuery {
+  return {
+    ...query,
+    collections: toggle(query.collections, slug, COLLECTION_ORDER),
+    page: 1,
+  };
+}
+
 export function togglePriceBand(query: ShopQuery, slug: PriceBandSlug): ShopQuery {
   return {
     ...query,
@@ -198,7 +236,9 @@ export function withPage(query: ShopQuery, page: number): ShopQuery {
 }
 
 export function countActiveFilters(query: ShopQuery): number {
-  return query.categories.length + query.priceBands.length;
+  return (
+    query.categories.length + query.collections.length + query.priceBands.length
+  );
 }
 
 export type PaginationSlot = number | "ellipsis";

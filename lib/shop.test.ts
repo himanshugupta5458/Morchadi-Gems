@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { Product } from "@/types/product";
+import { COLLECTIONS, type Product } from "@/types/product";
 import { getAllProducts } from "@/lib/products";
 import {
   DEFAULT_SORT,
@@ -8,15 +8,20 @@ import {
   SORT_OPTIONS,
   buildPaginationRange,
   buildShopHref,
+  countActiveFilters,
   emptyShopQuery,
   getPriceBand,
   getShopResults,
   isPriceInBand,
+  isProductInCollection,
+  matchesShopQuery,
   parseShopQuery,
   toggleCategory,
+  toggleCollection,
   togglePriceBand,
   withPage,
   withSort,
+  type ShopQuery,
   type ShopSearchParams,
   type SortSlug,
 } from "@/lib/shop";
@@ -41,6 +46,35 @@ function pricesOf(products: Product[]): number[] {
 
 function idsOf(products: Product[]): string[] {
   return products.map((product) => product.id);
+}
+
+/**
+ * Collection membership is being tested, and no product in the shipped catalogue carries a
+ * tag yet — the products arrive in the next prompt. Fixtures let the pure matcher be driven
+ * directly rather than waiting on data.
+ */
+function productFixture(overrides: Partial<Product> = {}): Product {
+  return {
+    id: "fx-001",
+    name: "Fixture Piece",
+    category: "rings",
+    price: 1499,
+    mrp: 1999,
+    images: [],
+    shortDescription: "A fixture.",
+    details: { material: "Brass" },
+    rating: 4.5,
+    reviewCount: 2,
+    reviews: [],
+    featured: false,
+    isNew: false,
+    inStock: true,
+    ...overrides,
+  };
+}
+
+function queryOf(params: ShopSearchParams): ShopQuery {
+  return parseShopQuery(params);
 }
 
 describe("getShopResults — defaults", () => {
@@ -323,6 +357,169 @@ describe("purity", () => {
   });
 });
 
+describe("collections", () => {
+  const gift = productFixture({ id: "fx-gift", collections: ["gifting"] });
+  const both = productFixture({
+    id: "fx-both",
+    collections: ["gifting", "anti-tarnish"],
+  });
+  const untagged = productFixture({ id: "fx-plain" });
+
+  it("matches a product carrying the tag", () => {
+    expect(matchesShopQuery(gift, queryOf({ collection: "gifting" }))).toBe(true);
+  });
+
+  it("does not match a product carrying no tags at all", () => {
+    expect(matchesShopQuery(untagged, queryOf({ collection: "gifting" }))).toBe(false);
+    expect(untagged.collections).toBeUndefined();
+  });
+
+  it("does not match a product tagged into a different collection", () => {
+    expect(matchesShopQuery(gift, queryOf({ collection: "anti-tarnish" }))).toBe(false);
+  });
+
+  it("matches a product that is in several collections at once, from either", () => {
+    expect(matchesShopQuery(both, queryOf({ collection: "gifting" }))).toBe(true);
+    expect(matchesShopQuery(both, queryOf({ collection: "anti-tarnish" }))).toBe(true);
+  });
+
+  it("ORs the selected collections together", () => {
+    const query = queryOf({ collection: "gifting,anti-tarnish" });
+
+    expect(matchesShopQuery(gift, query)).toBe(true);
+    expect(matchesShopQuery(both, query)).toBe(true);
+    expect(matchesShopQuery(untagged, query)).toBe(false);
+  });
+
+  it("reads best-sellers off the featured flag, not a tag", () => {
+    const featured = productFixture({ id: "fx-featured", featured: true });
+
+    expect(isProductInCollection(featured, "best-sellers")).toBe(true);
+    expect(isProductInCollection(untagged, "best-sellers")).toBe(false);
+    expect(featured.collections).toBeUndefined();
+  });
+
+  it("reads new-arrivals off the isNew flag, not a tag", () => {
+    const fresh = productFixture({ id: "fx-new", isNew: true });
+
+    expect(isProductInCollection(fresh, "new-arrivals")).toBe(true);
+    expect(isProductInCollection(untagged, "new-arrivals")).toBe(false);
+  });
+
+  it("computes under-999 from the price band, boundary included", () => {
+    expect(isProductInCollection(productFixture({ price: 998 }), "under-999")).toBe(true);
+    expect(isProductInCollection(productFixture({ price: 999 }), "under-999")).toBe(true);
+    expect(isProductInCollection(productFixture({ price: 1000 }), "under-999")).toBe(
+      false,
+    );
+  });
+
+  it("ANDs collection with category", () => {
+    const query = queryOf({ collection: "gifting", category: "rings" });
+    const giftedRing = productFixture({
+      id: "fx-ring",
+      category: "rings",
+      collections: ["gifting"],
+    });
+    const giftedEarring = productFixture({
+      id: "fx-earring",
+      category: "earrings",
+      collections: ["gifting"],
+    });
+    const plainRing = productFixture({ id: "fx-plain-ring", category: "rings" });
+
+    expect(matchesShopQuery(giftedRing, query)).toBe(true);
+    expect(matchesShopQuery(giftedEarring, query)).toBe(false);
+    expect(matchesShopQuery(plainRing, query)).toBe(false);
+  });
+
+  it("ANDs collection with price band", () => {
+    const query = queryOf({ collection: "gifting", price: "under-999" });
+
+    expect(
+      matchesShopQuery(
+        productFixture({ price: 499, collections: ["gifting"] }),
+        query,
+      ),
+    ).toBe(true);
+    expect(
+      matchesShopQuery(
+        productFixture({ price: 4999, collections: ["gifting"] }),
+        query,
+      ),
+    ).toBe(false);
+  });
+
+  it("drops an unknown collection instead of matching nothing", () => {
+    const query = queryOf({ collection: "wedding-season" });
+
+    expect(query.collections).toEqual([]);
+    expect(matchesShopQuery(untagged, query)).toBe(true);
+  });
+
+  it("keeps the valid half of a mixed collection list", () => {
+    expect(queryOf({ collection: "wedding-season,gifting" }).collections).toEqual([
+      "gifting",
+    ]);
+  });
+
+  it("normalises selection order to COLLECTIONS, not the URL order", () => {
+    expect(
+      queryOf({ collection: "under-999,gifting,best-sellers" }).collections,
+    ).toEqual(["gifting", "best-sellers", "under-999"]);
+  });
+
+  it("filters the real catalogue through the derived collections", () => {
+    const bestSellers = getShopResults({ collection: "best-sellers" });
+    const newArrivals = getShopResults({ collection: "new-arrivals" });
+    const budget = getShopResults({ collection: "under-999" });
+
+    expect(bestSellers.total).toBe(
+      getAllProducts().filter((product) => product.featured).length,
+    );
+    expect(newArrivals.total).toBe(
+      getAllProducts().filter((product) => product.isNew).length,
+    );
+    expect(budget.total).toBe(
+      getAllProducts().filter((product) => product.price <= 999).length,
+    );
+  });
+
+  it("reports an applied collection filter with its display label", () => {
+    const { appliedFilters } = getShopResults({ collection: "anti-tarnish" });
+
+    expect(appliedFilters).toEqual([
+      { kind: "collection", slug: "anti-tarnish", label: "Anti-Tarnish" },
+    ]);
+  });
+
+  it("resets to page 1 when a collection is toggled, keeping the other facets", () => {
+    const startingQuery = parseShopQuery({ category: "rings", page: "4" });
+    const toggled = toggleCollection(startingQuery, "gifting");
+
+    expect(toggled.page).toBe(1);
+    expect(toggled.collections).toEqual(["gifting"]);
+    expect(toggled.categories).toEqual(["rings"]);
+    expect(toggleCollection(toggled, "gifting").collections).toEqual([]);
+  });
+
+  it("counts collections among the active filters", () => {
+    expect(
+      countActiveFilters(
+        parseShopQuery({ category: "rings", collection: "gifting,under-999" }),
+      ),
+    ).toBe(3);
+  });
+
+  it("every collection in COLLECTIONS is a slug the parser accepts", () => {
+    for (const collection of COLLECTIONS) {
+      expect(queryOf({ collection: collection.slug }).collections).toEqual([
+        collection.slug,
+      ]);
+    }
+  });
+});
+
 describe("parseShopQuery", () => {
   it("normalises selection order to the constant tables, not the URL order", () => {
     expect(parseShopQuery({ category: "rings,earrings" }).categories).toEqual([
@@ -346,21 +543,23 @@ describe("buildShopHref", () => {
   });
 
   it("emits params in a canonical order", () => {
-    const query = {
+    const query: ShopQuery = {
       categories: ["earrings", "rings"],
+      collections: ["gifting"],
       priceBands: ["under-999"],
       sort: "price-asc",
       page: 3,
-    } as const;
+    };
 
-    expect(buildShopHref({ ...query, categories: [...query.categories], priceBands: [...query.priceBands] })).toBe(
-      "/shop?category=earrings,rings&price=under-999&sort=price-asc&page=3",
+    expect(buildShopHref(query)).toBe(
+      "/shop?category=earrings,rings&collection=gifting&price=under-999&sort=price-asc&page=3",
     );
   });
 
   it("round-trips through parseShopQuery", () => {
     const query = parseShopQuery({
       category: "rings,earrings",
+      collection: "anti-tarnish,gifting",
       price: "1000-4999",
       sort: "price-desc",
       page: "4",
@@ -374,6 +573,7 @@ function hrefToParams(href: string): ShopSearchParams {
   const search = new URLSearchParams(href.split("?")[1] ?? "");
   return {
     category: search.get("category") ?? undefined,
+    collection: search.get("collection") ?? undefined,
     price: search.get("price") ?? undefined,
     sort: search.get("sort") ?? undefined,
     page: search.get("page") ?? undefined,

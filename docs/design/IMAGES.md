@@ -28,7 +28,7 @@ gone off the convention.
 ```
 public/
 ├── products/     {id}.webp      — one per product, 100 files (P001–P021 real, 79 placeholder)
-├── categories/   {slug}.webp    — one per category, 8 files
+├── categories/   {slug}.webp    — one per category, 10 files
 └── hero/         home-hero.webp — the home page hero panel, 1 file
 ```
 
@@ -81,6 +81,13 @@ npm run validate:products       # confirms the path and the file on disk
 The generator needs the product's `category` to pick a tint, so a new category slug must be
 added to `CATEGORIES` in `scripts/generate-placeholders.mjs` as well as to
 `types/product.ts`. It exits 1 and names the slug if you forget.
+
+`watches` (`#E6E4DE`) and `hair-accessories` (`#EFE4EA`) were added this way in
+[ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md), which is also why their two tiles
+already exist while their categories are still empty — the tile is keyed on the slug, not
+on whether anything is filed under it. A category image is produced for every slug in the
+constant, so the two placeholders shipped on the same never-overwrite rule as the other
+eight: real photography dropped at either path survives every future run.
 
 ## Regenerating placeholders
 
@@ -143,12 +150,12 @@ authoring step; production only serves committed files.
 
 ## What validation checks
 
-`npm run validate:products` asserts, for all 100 products — the owner's 21 and the 79
-placeholders alike:
+`npm run validate:products` asserts, for every product in the catalogue — the owner's own
+and any remaining placeholders alike:
 
 - `images[0]` is exactly `/products/{id}.webp`
 - that file exists on disk
-- and that all 8 `public/categories/{slug}.webp` files exist
+- and that all 10 `public/categories/{slug}.webp` files exist
 
 A path that is right in the JSON but missing on disk is a 404 on a live product card, so
 both halves are checked. Failures name the file and point at

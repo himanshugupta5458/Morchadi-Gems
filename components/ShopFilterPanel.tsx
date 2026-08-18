@@ -1,11 +1,17 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { CATEGORIES, type Category } from "@/types/product";
+import {
+  CATEGORIES,
+  COLLECTIONS,
+  type Category,
+  type CollectionFilterSlug,
+} from "@/types/product";
 import {
   PRICE_BANDS,
   buildShopHref,
   toggleCategory,
+  toggleCollection,
   togglePriceBand,
   type PriceBandSlug,
   type ShopQuery,
@@ -36,6 +42,10 @@ export function ShopFilterPanel({
     navigateTo(toggleCategory(query, slug));
   }
 
+  function handleCollectionToggle(slug: CollectionFilterSlug): void {
+    navigateTo(toggleCollection(query, slug));
+  }
+
   function handlePriceBandToggle(slug: PriceBandSlug): void {
     navigateTo(togglePriceBand(query, slug));
   }
@@ -55,6 +65,25 @@ export function ShopFilterPanel({
                   onChange={() => handleCategoryToggle(category.slug)}
                 />
                 {category.label}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </fieldset>
+
+      <fieldset className="flex flex-col gap-3 border-t border-line pt-8">
+        <legend className={legendClasses}>Collection</legend>
+        <ul className="flex flex-col">
+          {COLLECTIONS.map((collection) => (
+            <li key={collection.slug}>
+              <label className={optionLabelClasses}>
+                <input
+                  type="checkbox"
+                  className={checkboxClasses}
+                  checked={query.collections.includes(collection.slug)}
+                  onChange={() => handleCollectionToggle(collection.slug)}
+                />
+                {collection.label}
               </label>
             </li>
           ))}

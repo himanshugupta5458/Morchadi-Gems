@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { COMPANY_LINKS, NAV_CATEGORIES, POLICY_LINKS } from "@/lib/navigation";
+import {
+  CATEGORY_MENU,
+  COLLECTION_MENU,
+  COMPANY_LINKS,
+  POLICY_LINKS,
+} from "@/lib/navigation";
 import { CONTACT_CONFIG, SITE_CONFIG } from "@/lib/config";
 import { Wordmark } from "@/components/Wordmark";
 import { ShieldCheckIcon } from "@/components/icons";
@@ -13,7 +18,7 @@ export function Footer(): JSX.Element {
 
   return (
     <footer className="bg-charcoal text-ivory">
-      <div className="container grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-6 lg:py-16">
+      <div className="container grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-7 lg:py-16">
         <div className="flex flex-col gap-4 lg:col-span-2">
           <Wordmark tone="ivory" />
           <p className="max-w-prose text-body-sm text-ivory/70">
@@ -35,16 +40,26 @@ export function Footer(): JSX.Element {
           </address>
         </div>
 
-        <nav aria-label="Shop" className="flex flex-col gap-4">
+        <nav aria-label="Shop by category" className="flex flex-col gap-4">
           <h2 className={columnHeadingClasses}>Shop</h2>
           <ul className="flex flex-col gap-2.5">
-            {NAV_CATEGORIES.map((category) => (
-              <li key={category.slug}>
-                <Link
-                  href={`/shop?category=${category.slug}`}
-                  className={footerLinkClasses}
-                >
-                  {category.label}
+            {CATEGORY_MENU.items.map((item) => (
+              <li key={item.key}>
+                <Link href={item.href} className={footerLinkClasses}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Collections" className="flex flex-col gap-4">
+          <h2 className={columnHeadingClasses}>Collections</h2>
+          <ul className="flex flex-col gap-2.5">
+            {COLLECTION_MENU.items.map((item) => (
+              <li key={item.key}>
+                <Link href={item.href} className={footerLinkClasses}>
+                  {item.label}
                 </Link>
               </li>
             ))}
