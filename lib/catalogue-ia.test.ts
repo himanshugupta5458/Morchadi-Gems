@@ -11,6 +11,8 @@ import {
   isCategory,
   isCollectionFilterSlug,
   isCollectionTag,
+  type CollectionSlug,
+  type Product,
 } from "@/types/product";
 import { getAllProducts } from "@/lib/products";
 import {
@@ -83,12 +85,29 @@ describe("the collection tier", () => {
     expect(() => getCollection("wedding-season" as never)).toThrow();
   });
 
-  it("tags no product yet — the catalogue import lands next", () => {
-    const tagged = getAllProducts().filter(
-      (product) => (product.collections ?? []).length > 0,
-    );
+  it("carries only known tags on the products that are tagged", () => {
+    for (const product of getAllProducts()) {
+      const tags = product.collections ?? [];
 
-    expect(tagged).toEqual([]);
+      for (const tag of tags) expect(isCollectionTag(tag)).toBe(true);
+      expect(new Set(tags).size).toBe(tags.length);
+    }
+  });
+
+  /**
+   * `gifting` is deliberately untagged as of ADR-021 — nothing in the owner's range is sold
+   * as a gift set, and inventing the tag to fill the facet would be the one thing a tag is
+   * not for. Its nav link and facet checkbox therefore resolve to an empty listing until a
+   * gift set is stocked. This pins that as a known state rather than letting it pass as an
+   * oversight.
+   */
+  it("populates anti-tarnish and leaves gifting deliberately empty", () => {
+    const membersOf = (tag: CollectionSlug): Product[] =>
+      getAllProducts().filter((product) => (product.collections ?? []).includes(tag));
+
+    expect(membersOf("anti-tarnish").length).toBeGreaterThan(0);
+    expect(membersOf("gifting")).toEqual([]);
+    expect(COLLECTION_TAGS).toContain("gifting");
   });
 });
 

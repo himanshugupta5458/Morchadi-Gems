@@ -27,7 +27,7 @@ gone off the convention.
 
 ```
 public/
-├── products/     {id}.webp      — one per product, 100 files (P001–P021 real, 79 placeholder)
+├── products/     {id}.webp      — one per product, 49 files (P001–P049, all real photography)
 ├── categories/   {slug}.webp    — one per category, 10 files
 └── hero/         home-hero.webp — the home page hero panel, 1 file
 ```
@@ -39,7 +39,7 @@ public/
 | Home hero panel | `/hero/home-hero.webp` | 1600 × 1200, landscape | `object-cover`, 4:3 panel |
 
 The path is **derived from the id**, never stored. `data/products.json` holds
-`"images": ["/products/nk-001.webp"]` for `nk-001` and `validate:products` enforces that it
+`"images": ["/products/P022.webp"]` for `P022` and `validate:products` enforces that it
 matches exactly. You do not choose an image path; the id chooses it.
 
 ## Replacing a placeholder with a real photo
@@ -83,9 +83,8 @@ added to `CATEGORIES` in `scripts/generate-placeholders.mjs` as well as to
 `types/product.ts`. It exits 1 and names the slug if you forget.
 
 `watches` (`#E6E4DE`) and `hair-accessories` (`#EFE4EA`) were added this way in
-[ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md), which is also why their two tiles
-already exist while their categories are still empty — the tile is keyed on the slug, not
-on whether anything is filed under it. A category image is produced for every slug in the
+[ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md), a prompt before either category
+held a product — the tile is keyed on the slug, not on whether anything is filed under it. A category image is produced for every slug in the
 constant, so the two placeholders shipped on the same never-overwrite rule as the other
 eight: real photography dropped at either path survives every future run.
 
@@ -98,10 +97,15 @@ npm run generate:placeholders
 **It never overwrites.** A file that exists is skipped, always — there is no `--force`
 flag, deliberately, because the thing at risk is photography that may exist nowhere else.
 
-To redo a placeholder you no longer want, delete that one file and re-run:
+No product in the catalogue is served by a generated placeholder any more — every one of
+the 49 resolves to the owner's own photograph ([ADR-021](../decisions/ADR-021-all-real-catalogue.md)).
+The generator earns its place on the next product added: give the new row a P-code, and it
+writes a placeholder at that path until the photograph arrives.
+
+To redo a generated image you no longer want, delete that one file and re-run:
 
 ```bash
-rm public/products/nk-001.webp && npm run generate:placeholders
+rm public/products/P050.webp && npm run generate:placeholders
 ```
 
 To redo all of them after changing the artwork in the generator, you would delete the
@@ -109,7 +113,7 @@ folders and regenerate. **That is no longer safe and the command is left here on
 recognisable when someone finds it in an old note:**
 
 ```bash
-# DO NOT RUN — deletes P001.webp … P021.webp, the owner's only copies
+# DO NOT RUN — deletes P001.webp … P049.webp, the owner's only copies
 rm -rf public/products public/categories && npm run generate:placeholders
 ```
 
@@ -150,12 +154,35 @@ authoring step; production only serves committed files.
 
 ## What validation checks
 
-`npm run validate:products` asserts, for every product in the catalogue — the owner's own
-and any remaining placeholders alike:
+## Orphaned placeholder images
+
+`public/products` holds 149 files: the 49 real photographs the catalogue references, and
+**100 orphaned placeholders** (`nk-001.webp`, `er-004.webp` and so on) left behind when
+[ADR-021](../decisions/ADR-021-all-real-catalogue.md) deleted the invented products. They
+are unreferenced — no product, no route and no component resolves to any of them — and they
+add about 1.2 MB to the deployed bundle.
+
+They are safe to delete, and deliberately were not deleted in that prompt. Anything matching
+`^P\d{3}\.webp$` is the owner's own photography and is **irreplaceable** — the delete has
+to be by pattern, never by wiping the directory:
+
+```bash
+# safe: removes only the orphans, keeps every P-code file
+cd public/products && ls | grep -vE '^P[0-9]{3}\.webp$' | xargs rm --
+```
+
+`npm run validate:products` will not catch a mistake here in the direction that matters: it
+checks that every *referenced* image exists, not that every file is referenced. Deleting a
+P-code file fails the gate loudly; leaving an orphan in place fails nothing.
+
+## What the validator checks
+
+`npm run validate:products` asserts, for every product in the catalogue:
 
 - `images[0]` is exactly `/products/{id}.webp`
 - that file exists on disk
 - and that all 10 `public/categories/{slug}.webp` files exist
+- that every `id` is a P-code, so no invented product can rejoin the catalogue
 
 A path that is right in the JSON but missing on disk is a 404 on a live product card, so
 both halves are checked. Failures name the file and point at

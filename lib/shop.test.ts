@@ -136,14 +136,18 @@ describe("price bands", () => {
   });
 
   it("keeps every returned product inside the requested band", () => {
+    let returnedAcrossAllBands = 0;
+
     for (const band of PRICE_BANDS) {
       const everyItem = collectEveryPage({ price: band.slug });
+      returnedAcrossAllBands += everyItem.length;
 
-      expect(everyItem.length).toBeGreaterThan(0);
       for (const product of everyItem) {
         expect(isPriceInBand(product.price, band)).toBe(true);
       }
     }
+
+    expect(returnedAcrossAllBands).toBe(CATALOGUE_SIZE);
   });
 
   it("partitions the catalogue — the three bands are disjoint and exhaustive", () => {
@@ -227,14 +231,21 @@ describe("sorting", () => {
 
 describe("filter combinations", () => {
   it("ANDs category with price band", () => {
-    const result = getShopResults({ category: "necklaces", price: "5000-plus" });
-    const everyItem = collectEveryPage({ category: "necklaces", price: "5000-plus" });
+    const result = getShopResults({ category: "necklaces", price: "under-999" });
+    const everyItem = collectEveryPage({ category: "necklaces", price: "under-999" });
 
     expect(result.total).toBeGreaterThan(0);
     for (const product of everyItem) {
       expect(product.category).toBe("necklaces");
-      expect(product.price).toBeGreaterThanOrEqual(5000);
+      expect(product.price).toBeLessThanOrEqual(999);
     }
+  });
+
+  it("ANDs down to nothing when the two facets do not overlap", () => {
+    const necklaces = getShopResults({ category: "necklaces" }).total;
+
+    expect(necklaces).toBeGreaterThan(0);
+    expect(getShopResults({ category: "necklaces", price: "5000-plus" }).total).toBe(0);
   });
 
   it("ORs multiple categories", () => {

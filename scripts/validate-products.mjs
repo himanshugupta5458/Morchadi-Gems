@@ -13,35 +13,32 @@ const MIN_REVIEWS_PER_PRODUCT = 2;
 const MAX_REVIEWS_PER_PRODUCT = 3;
 const MIN_RATING = 3.5;
 const MAX_RATING = 5.0;
-const MAX_IMPLIED_DISCOUNT_PERCENT = 60;
-const MAX_REAL_IMPLIED_DISCOUNT_PERCENT = 80;
-const MIN_PRICE = 100;
+const MAX_IMPLIED_DISCOUNT_PERCENT = 80;
+const MIN_PRICE = 25;
 const MAX_PRICE = 25000;
 
 /**
- * The owner's own products carry their P-code as their id and are priced and stocked from
- * the owner's list, so the conventions invented for the placeholder catalogue — the
- * category id prefix, the discount ceiling, a stated weight — are checked only on the
- * placeholders. Everything else is checked on every product alike. See ADR-016.
+ * Every product in the catalogue is one the owner actually stocks, and its id is the P-code
+ * they use on invoices, photo filenames and every message about stock. This regex is what
+ * keeps that true: an invented product cannot be added without either taking a P-code it has
+ * no right to or failing here. See ADR-021.
  */
-const REAL_PRODUCT_ID = /^P\d{3}$/;
+const PRODUCT_ID = /^P\d{3}$/;
 
-const CATEGORY_ID_PREFIX = {
-  necklaces: "nk",
-  earrings: "er",
-  rings: "rg",
-  bracelets: "br",
-  bangles: "bn",
-  pendants: "pd",
-  anklets: "ak",
-  "nose-pins": "np",
-  watches: "wt",
-  "hair-accessories": "ha",
-};
+const CATEGORY_SLUGS = [
+  "necklaces",
+  "earrings",
+  "rings",
+  "bracelets",
+  "bangles",
+  "pendants",
+  "anklets",
+  "nose-pins",
+  "watches",
+  "hair-accessories",
+];
 
 const COLLECTION_TAGS = ["gifting", "anti-tarnish"];
-
-const CATEGORY_SLUGS = Object.keys(CATEGORY_ID_PREFIX);
 
 const failures = [];
 
@@ -81,8 +78,6 @@ let discountedCount = 0;
 let featuredCount = 0;
 let newCount = 0;
 let outOfStockCount = 0;
-let placeholderOutOfStockCount = 0;
-let realProductCount = 0;
 let optionedProductCount = 0;
 let productImagesOnDisk = 0;
 let taggedProductCount = 0;
@@ -100,16 +95,13 @@ for (const product of catalogue) {
     `${label}: category "${product?.category}" is not a known slug`,
   );
 
-  const isRealProduct = REAL_PRODUCT_ID.test(product?.id ?? "");
-  if (isRealProduct) realProductCount += 1;
+  check(
+    PRODUCT_ID.test(product?.id ?? ""),
+    `${label}: id must be the owner's P-code in the form P001 — the catalogue holds no invented products`,
+  );
 
   if (CATEGORY_SLUGS.includes(product?.category)) {
     categoryCounts[product.category] += 1;
-    const prefix = CATEGORY_ID_PREFIX[product.category];
-    check(
-      isRealProduct || new RegExp(`^${prefix}-\\d{3}$`).test(product.id),
-      `${label}: id must be either a P-code or the ${prefix}-NNN convention for ${product.category}`,
-    );
   }
 
   check(
@@ -135,12 +127,9 @@ for (const product of catalogue) {
     if (product.mrp >= product.price && product.mrp > 0) {
       const impliedDiscountPercent =
         ((product.mrp - product.price) / product.mrp) * 100;
-      const discountCeiling = isRealProduct
-        ? MAX_REAL_IMPLIED_DISCOUNT_PERCENT
-        : MAX_IMPLIED_DISCOUNT_PERCENT;
       check(
-        impliedDiscountPercent <= discountCeiling,
-        `${label}: implied discount ${impliedDiscountPercent.toFixed(1)}% exceeds the ${discountCeiling}% ceiling`,
+        impliedDiscountPercent <= MAX_IMPLIED_DISCOUNT_PERCENT,
+        `${label}: implied discount ${impliedDiscountPercent.toFixed(1)}% exceeds the ${MAX_IMPLIED_DISCOUNT_PERCENT}% ceiling`,
       );
       impliedDiscounts.push(impliedDiscountPercent);
       if (product.mrp > product.price) discountedCount += 1;
@@ -191,10 +180,8 @@ for (const product of catalogue) {
   if (details && typeof details === "object") {
     check(isNonEmptyString(details.material), `${label}: details.material is required`);
     check(
-      isRealProduct
-        ? details.weight === undefined || isNonEmptyString(details.weight)
-        : isNonEmptyString(details.weight),
-      `${label}: details.weight is required`,
+      details.weight === undefined || isNonEmptyString(details.weight),
+      `${label}: details.weight must be a non-empty string when present`,
     );
     check(
       details.closure === undefined || isNonEmptyString(details.closure),
@@ -316,10 +303,7 @@ for (const product of catalogue) {
 
   if (product?.featured === true) featuredCount += 1;
   if (product?.isNew === true) newCount += 1;
-  if (product?.inStock === false) {
-    outOfStockCount += 1;
-    if (!isRealProduct) placeholderOutOfStockCount += 1;
-  }
+  if (product?.inStock === false) outOfStockCount += 1;
 
   const allowedProductKeys = [
     "id", "name", "category", "price", "mrp", "images", "shortDescription", "details",
@@ -340,7 +324,9 @@ check(
   `ids are not unique: ${catalogue.length} products but ${seenIds.size} distinct ids`,
 );
 
-const emptyCategories = CATEGORY_SLUGS.filter((slug) => categoryCounts[slug] === 0);
+for (const slug of CATEGORY_SLUGS) {
+  check(categoryCounts[slug] > 0, `category "${slug}" has no products`);
+}
 
 check(
   featuredCount >= MIN_FEATURED_COUNT,
@@ -375,19 +361,15 @@ console.log(`Products            ${catalogue.length}`);
 console.log(`Unique ids          ${seenIds.size}`);
 console.log(`Featured            ${featuredCount}`);
 console.log(`New arrivals        ${newCount}`);
-console.log(`Out of stock        ${outOfStockCount} (${placeholderOutOfStockCount} placeholder)`);
-console.log(`Owner's own (P-code) ${realProductCount}`);
+console.log(`Out of stock        ${outOfStockCount}`);
 console.log(`With options        ${optionedProductCount}`);
 console.log(`With collections    ${taggedProductCount}`);
 console.log("\nCategory distribution");
 for (const slug of CATEGORY_SLUGS) {
   console.log(`  ${slug.padEnd(18)}${categoryCounts[slug]}`);
 }
-if (emptyCategories.length > 0) {
-  console.log(`  awaiting products  ${emptyCategories.join(", ")}`);
-}
 console.log("\nPrice bands");
-console.log(`  budget  ${MIN_PRICE}-999    ${priceBands.budget}`);
+console.log(`  budget  ${MIN_PRICE}-999     ${priceBands.budget}`);
 console.log(`  mid     1000-4999  ${priceBands.mid}`);
 console.log(`  premium 5000-25000 ${priceBands.premium}`);
 console.log("\nImages (id-keyed, local under /public)");
