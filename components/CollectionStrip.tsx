@@ -8,13 +8,13 @@ import { COLLECTION_MENU } from "@/lib/navigation";
 export function CollectionStrip(): JSX.Element {
   return (
     <div className="flex flex-col items-center gap-4">
-      <h3 className="text-eyebrow uppercase text-muted">Or shop by collection</h3>
+      <h3 className="text-eyebrow uppercase text-charcoal">Or shop by collection</h3>
       <ul className="flex flex-wrap items-center justify-center gap-3">
         {COLLECTION_MENU.items.map((item) => (
           <li key={item.key}>
             <Link
               href={item.href}
-              className="inline-flex items-center border border-line bg-white px-4 py-2 text-label uppercase tracking-caps text-charcoal transition-colors duration-250 hover:border-charcoal hover:bg-charcoal hover:text-ivory"
+              className="inline-flex items-center border border-gold/45 bg-gold/10 px-6 py-3 text-label uppercase tracking-caps text-charcoal shadow-card transition-colors duration-250 hover:border-charcoal hover:bg-charcoal hover:text-ivory"
             >
               {item.label}
             </Link>

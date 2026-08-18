@@ -72,6 +72,7 @@ purpose.
 | [PLAN-order-pricing.md](PLAN-order-pricing.md) | [2026-08-17](RESULT-2026-08-17-order-pricing.md) — 36/36 pass |
 | [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) | [2026-08-18](RESULT-2026-08-18-shipping-threshold.md) — 20/20 pass |
 | [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) | [2026-08-18](RESULT-2026-08-18-cart-line-keys.md) — 85/85 pass |
+| *(no plan — regression guards)* | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) — funnel UI polish, 480/480 pass |
 
 ## Runners
 
@@ -102,3 +103,5 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/checkout.test.ts` | The `sessionStorage` checkout bundle — assembly from cart lines, the recorded choices it carries, and parsing hostile stored data | [PLAN-address-validation.md](PLAN-address-validation.md), [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) |
 | `lib/address-checkout.test.tsx` | `/address` — the empty-cart guard, blur/submit validation, focus, the handoff to `/payment`, repopulation | [PLAN-address-validation.md](PLAN-address-validation.md) |
 | `lib/order.test.ts` | Server-side order pricing — catalogue-only totals, `mrp` exclusion, hostile items, per-item error collection, untrusted-body parsing, the free-shipping boundary | [PLAN-order-pricing.md](PLAN-order-pricing.md), [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) |
+| `lib/button-styles.test.ts` | The two button scales by their literal padding and type classes, and that only the box differs between them | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) |
+| `lib/copy-dashes.test.ts` | The em-dash sweep — catalogue strings, and every non-test source file with comments stripped | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) |

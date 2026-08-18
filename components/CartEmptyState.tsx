@@ -20,7 +20,7 @@ export function CartEmptyState(): JSX.Element {
 
       <p className="max-w-prose text-body text-muted">
         Nothing chosen yet. The collection runs from everyday studs to statement pieces
-        made for the front row — start anywhere.
+        made for the front row. Start anywhere.
       </p>
 
       <ButtonLink href={SHOP_PATH}>Continue shopping</ButtonLink>

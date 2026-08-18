@@ -151,7 +151,7 @@ export interface VerificationFailure {
 export const UNREACHABLE_VERIFICATION: VerificationFailure = {
   title: "We could not confirm your payment just yet",
   message:
-    "This is a problem reaching our own confirmation service, not a problem with your payment. Nothing has been cancelled — please try again in a moment.",
+    "This is a problem reaching our own confirmation service, not a problem with your payment. Nothing has been cancelled, so please try again in a moment.",
   canRetry: true,
 };
 

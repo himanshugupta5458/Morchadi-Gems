@@ -31,7 +31,7 @@ const ICON_CLASS = "h-7 w-7";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "About Us",
-  description: `${SITE_CONFIG.brandName} has been making premium artificial jewellery in ${STORY_CONFIG.homeCity} since ${STORY_CONFIG.foundedYear} — ${formatMilestone(STORY_CONFIG.customersServed)} customers, ${formatMilestone(STORY_CONFIG.designsReleased)} designs, delivered ${STORY_CONFIG.deliveryCoverage.toLowerCase()}.`,
+  description: `${SITE_CONFIG.brandName} has been making premium artificial jewellery in ${STORY_CONFIG.homeCity} since ${STORY_CONFIG.foundedYear}: ${formatMilestone(STORY_CONFIG.customersServed)} customers, ${formatMilestone(STORY_CONFIG.designsReleased)} designs, delivered ${STORY_CONFIG.deliveryCoverage.toLowerCase()}.`,
   path: "/about",
 });
 
@@ -59,7 +59,7 @@ const JOURNEY_MILESTONES = [
     key: "beginning",
     marker: `${STORY_CONFIG.foundedYear}`,
     title: "The Beginning",
-    detail: `A small workbench in ${STORY_CONFIG.homeCity} and one conviction — that everyday jewellery deserves the finish reserved for occasion pieces.`,
+    detail: `A small workbench in ${STORY_CONFIG.homeCity} and one conviction, that everyday jewellery deserves the finish reserved for occasion pieces.`,
   },
   {
     key: "online",
@@ -145,7 +145,7 @@ export default function AboutPage(): JSX.Element {
           <span aria-hidden className="block h-px w-20 bg-gold" />
 
           <p className="max-w-prose text-body-lg text-muted">
-            Premium artificial jewelry that makes every woman feel extraordinary — without
+            Premium artificial jewelry that makes every woman feel extraordinary, without
             compromise.
           </p>
 
@@ -166,14 +166,14 @@ export default function AboutPage(): JSX.Element {
           <Prose>
             <p>
               {SITE_CONFIG.brandName} began in {STORY_CONFIG.foundedYear}, in{" "}
-              {STORY_CONFIG.homeCity} — a city that has been setting stones for four hundred
+              {STORY_CONFIG.homeCity}, a city that has been setting stones for four hundred
               years. We started with a plain frustration: the jewellery worth wearing was
               kept in a locker, and the jewellery you could wear every day was not worth
               keeping. One turned your skin green in a month. The other only came out twice a
               year.
             </p>
             <p>
-              So we set out to close that gap. Artificial jewellery, finished properly —
+              So we set out to close that gap. Artificial jewellery, finished properly:
               plated to last, set so nothing catches, and priced so a woman can buy the piece
               she actually wants rather than the one she can justify.
             </p>
@@ -273,7 +273,7 @@ export default function AboutPage(): JSX.Element {
             as="h2"
             roman="Find Your"
             accent="Perfect Piece"
-            subtitle="Start anywhere — the everyday pieces and the occasion pieces come off the same bench."
+            subtitle="Start anywhere. The everyday pieces and the occasion pieces come off the same bench."
           />
           <ButtonLink href="/shop">Shop Collection</ButtonLink>
           <p className="text-body-sm text-muted">

@@ -116,19 +116,14 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
           <div className="border-t border-line pt-6">
             <ProductPurchaseActions item={toCatalogueEntry(product)} />
           </div>
+
+          <ProductDetailsList details={product.details} />
         </div>
       </div>
 
-      <section className="mt-16 border-t border-line pt-12 lg:mt-24 lg:pt-16">
-        <div className="flex flex-col gap-8">
-          <SectionHeading as="h2" roman="The" accent="Details" align="left" />
-          <ProductDetailsList details={product.details} />
-        </div>
-      </section>
-
       <section
         id={REVIEWS_ANCHOR_ID}
-        className="mt-16 scroll-mt-24 border-t border-line pt-12 lg:mt-24 lg:scroll-mt-32 lg:pt-16"
+        className="mt-16 scroll-mt-24 border-t border-line pt-12 lg:mt-24 lg:scroll-mt-36 lg:pt-16"
       >
         <div className="flex flex-col gap-8">
           <SectionHeading as="h2" roman="Customer" accent="Reviews" align="left" />

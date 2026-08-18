@@ -28,7 +28,7 @@ export function CategoryTile({
         />
         <div
           aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/15 to-transparent"
+          className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-charcoal/90 via-charcoal/55 to-transparent"
         />
       </div>
 

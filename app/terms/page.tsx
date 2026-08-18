@@ -16,7 +16,7 @@ const PATH = "/terms";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Terms & Conditions",
-  description: `The terms that apply when you browse and order from ${SITE_CONFIG.brandName} — eligibility, order acceptance, pricing in INR, and governing law.`,
+  description: `The terms that apply when you browse and order from ${SITE_CONFIG.brandName}, covering eligibility, order acceptance, pricing in INR, and governing law.`,
   path: PATH,
 });
 
@@ -57,8 +57,8 @@ export default function TermsPage(): JSX.Element {
       <h2>3. Products</h2>
       <p>
         We sell handcrafted and curated artificial jewellery. Our pieces are fashion
-        jewellery — they are not precious metal or precious stone jewellery, and are not
-        sold as an investment.
+        jewellery. They are not precious metal or precious stone jewellery, and they are
+        not sold as an investment.
       </p>
       <p>
         Photography, weights, dimensions and finishes are described as accurately as we can
@@ -82,7 +82,7 @@ export default function TermsPage(): JSX.Element {
         accepted when we confirm dispatch.
       </p>
       <p>
-        We may decline or cancel an order before dispatch — for example if a piece is out of
+        We may decline or cancel an order before dispatch, for example if a piece is out of
         stock, if the delivery address is outside the area we ship to, if an obvious pricing
         error is discovered, or if we cannot verify the payment. Where we cancel an order
         that has already been paid for, we refund it in full.
@@ -97,7 +97,7 @@ export default function TermsPage(): JSX.Element {
       <p>
         All prices are shown in <strong>Indian Rupees (INR)</strong> and are{" "}
         <strong>inclusive of applicable taxes unless stated otherwise</strong>. There is no
-        separate tax line at checkout — the price you see on a product is the price of that
+        separate tax line at checkout. The price you see on a product is the price of that
         product.
       </p>
       <p>
@@ -113,7 +113,7 @@ export default function TermsPage(): JSX.Element {
       <p>
         Payments are processed by {LEGAL_CONFIG.paymentProvider} on their hosted checkout.
         You are redirected there to pay and returned here afterwards.{" "}
-        <strong>We never see or store your card, UPI or banking details</strong> — they are
+        <strong>We never see or store your card, UPI or banking details</strong>. They are
         handled entirely by the payment provider under their own terms and security
         standards.
       </p>
@@ -161,7 +161,7 @@ export default function TermsPage(): JSX.Element {
       <p>
         We provide this site and our products with reasonable care and skill. To the extent
         permitted by law, we are not liable for indirect or consequential loss, loss of
-        profit, or loss arising from circumstances outside our reasonable control — including
+        profit, or loss arising from circumstances outside our reasonable control, including
         courier delays, payment provider outages and events of force majeure.
       </p>
       <p>

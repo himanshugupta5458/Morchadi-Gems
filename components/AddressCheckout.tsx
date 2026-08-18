@@ -69,7 +69,7 @@ export function AddressCheckout(): JSX.Element {
         <div className="flex flex-col gap-2">
           <h2 className="font-display text-heading-sm text-ink">Delivery details</h2>
           <p className="max-w-prose text-body-sm text-muted">
-            We ship across India. No account needed — we use these details for this order
+            We ship across India. No account needed, and we use these details for this order
             only.
           </p>
         </div>

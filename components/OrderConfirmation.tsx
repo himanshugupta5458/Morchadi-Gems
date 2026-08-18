@@ -209,7 +209,7 @@ export function OrderConfirmation(): JSX.Element {
         isLiveRegion
         icon={<GemOutlineIcon className="h-12 w-12 text-gold" />}
         title="Confirming your payment"
-        message="We are checking with the payment gateway. This takes a moment — please do not close this tab."
+        message="We are checking with the payment gateway. This takes a moment, so please do not close this tab."
         footnote={`Order number ${orderId}`}
       />
     );
@@ -283,7 +283,7 @@ export function OrderConfirmation(): JSX.Element {
       <CenteredNotice
         icon={<GemOutlineIcon className="h-12 w-12 text-gold" />}
         title="Your payment is still processing"
-        message="The gateway has not confirmed this payment yet. Some banks and UPI apps take a few minutes. Nothing has been lost — check again in a moment, and if it was taken you will see it here."
+        message="The gateway has not confirmed this payment yet. Some banks and UPI apps take a few minutes. Nothing has been lost. Check again in a moment, and if it was taken you will see it here."
         actions={
           <>
             <Button onClick={checkAgain}>Check again</Button>
@@ -303,7 +303,7 @@ export function OrderConfirmation(): JSX.Element {
         isLiveRegion
         icon={<GemOutlineIcon className="h-12 w-12 text-gold" />}
         title="We are confirming your payment"
-        message="The gateway has not finished with this payment yet. We are re-checking every few seconds — please stay on this page."
+        message="The gateway has not finished with this payment yet. We are re-checking every few seconds, so please stay on this page."
         footnote={`Order number ${orderId}`}
       />
     );
@@ -317,7 +317,7 @@ export function OrderConfirmation(): JSX.Element {
       title={isUnknownOrder ? "We could not find that order" : "Your payment was not completed"}
       message={
         isUnknownOrder
-          ? "The payment gateway has no record of this order, so nothing has been charged. If you were part-way through paying, start again from your cart — it is still exactly as you left it."
+          ? "The payment gateway has no record of this order, so nothing has been charged. If you were part-way through paying, start again from your cart. It is still exactly as you left it."
           : "The payment did not go through, so nothing has been charged. Your cart and delivery details are untouched, so you can pick up where you left off."
       }
       actions={

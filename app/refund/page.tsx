@@ -63,8 +63,8 @@ export default function RefundPage(): JSX.Element {
           <strong>unless they arrive damaged or defective</strong>.
         </li>
         <li>
-          <strong>Pierced jewellery</strong> — nose pins and earrings — where hygiene rules
-          prevent resale, unless the piece is faulty
+          <strong>Pierced jewellery</strong>, meaning nose pins and earrings, where hygiene
+          rules prevent resale, unless the piece is faulty
         </li>
         <li>
           <strong>Clearance and final-sale pieces</strong>
@@ -115,7 +115,7 @@ export default function RefundPage(): JSX.Element {
       </p>
       <p>
         We may cancel an order ourselves if a piece turns out to be unavailable or a payment
-        cannot be verified. If we do, you are refunded in full and we tell you why — see our{" "}
+        cannot be verified. If we do, you are refunded in full and we tell you why. See our{" "}
         <Link href="/terms">Terms &amp; Conditions</Link>.
       </p>
 
@@ -123,7 +123,7 @@ export default function RefundPage(): JSX.Element {
       <p>
         Refunds go back <strong>to the original payment method</strong>, through{" "}
         {LEGAL_CONFIG.paymentProvider}. We cannot redirect a refund to a different card,
-        account or UPI ID — the payment provider returns it the way it came.
+        account or UPI ID, because the payment provider returns it the way it came.
       </p>
       <p>
         We start the refund once a returned piece has been received and inspected, or
@@ -135,7 +135,7 @@ export default function RefundPage(): JSX.Element {
       <h2>8. Exchanges</h2>
       <p>
         We do not process direct exchanges. Return the piece for a refund and place a new
-        order — it is faster and it keeps the {RETURN_WINDOW_DAYS}-day window clean on both
+        order. It is faster and it keeps the {RETURN_WINDOW_DAYS}-day window clean on both
         sides. Where a piece arrived damaged or incorrect, we will send a replacement
         instead if you prefer one.
       </p>
@@ -146,7 +146,7 @@ export default function RefundPage(): JSX.Element {
         <a href={`mailto:${CONTACT_CONFIG.supportEmail}`}>
           {CONTACT_CONFIG.supportEmail}
         </a>{" "}
-        with your order number and, for a return, a photograph of the piece — or reach us
+        with your order number and, for a return, a photograph of the piece, or reach us
         through the <Link href="/contact">contact page</Link>. We reply within{" "}
         {CONTACT_CONFIG.replyWindow}.
       </p>

@@ -25,7 +25,7 @@ import {
 } from "@/lib/navigation";
 
 const EXPECTED_CATEGORY_COUNT = 10;
-const EXPECTED_COLLECTION_COUNT = 5;
+const EXPECTED_COLLECTION_COUNT = 4;
 
 describe("the category tier", () => {
   it("holds ten categories with unique slugs and labels", () => {
@@ -55,7 +55,7 @@ describe("the category tier", () => {
 });
 
 describe("the collection tier", () => {
-  it("holds five collections, two of them hand-tagged", () => {
+  it("holds four collections, two of them hand-tagged", () => {
     expect(COLLECTIONS).toHaveLength(EXPECTED_COLLECTION_COUNT);
     expect(COLLECTION_TAGS).toEqual(["gifting", "anti-tarnish"]);
   });
@@ -68,7 +68,6 @@ describe("the collection tier", () => {
       ["anti-tarnish", "tag"],
       ["best-sellers", "featured-flag"],
       ["new-arrivals", "new-flag"],
-      ["under-999", "price-band"],
     ]);
   });
 
@@ -81,7 +80,7 @@ describe("the collection tier", () => {
 
   it("labels every collection and raises on an unknown one", () => {
     expect(getCollectionLabel("anti-tarnish")).toBe("Anti-Tarnish");
-    expect(getCollection("under-999").label).toBe("Under ₹999");
+    expect(getCollection("new-arrivals").label).toBe("New Arrivals");
     expect(() => getCollection("wedding-season" as never)).toThrow();
   });
 
@@ -127,7 +126,7 @@ describe("the two nav dropdowns", () => {
     expect(buildCategoryHref("watches")).toBe("/shop?category=watches");
   });
 
-  it("lists all five collections, each linking to its shop filter", () => {
+  it("lists all four collections, each linking to its shop filter", () => {
     expect(COLLECTION_MENU.items).toHaveLength(EXPECTED_COLLECTION_COUNT);
     expect(COLLECTION_MENU.items.map((item) => item.href)).toEqual(
       COLLECTION_SLUGS.map(buildCollectionHref),

@@ -13,7 +13,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Morchadi Gems about an order, sizing, or anything else — by email, phone or WhatsApp.",
+    "Get in touch with Morchadi Gems about an order, sizing, or anything else, by email, phone or WhatsApp.",
   alternates: { canonical: "/contact" },
 };
 
@@ -28,7 +28,7 @@ export default function ContactPage(): JSX.Element {
           roman="Contact"
           accent="Us"
           align="left"
-          subtitle="Questions about a piece, an order in flight, or a return — whichever is quickest for you."
+          subtitle="Questions about a piece, an order in flight, or a return. Use whichever is quickest for you."
         />
       </div>
 

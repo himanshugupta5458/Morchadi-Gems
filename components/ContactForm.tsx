@@ -115,7 +115,7 @@ export function ContactForm(): JSX.Element {
       <div className="border border-line bg-ivory px-6 py-10 text-center">
         <h3 className="font-display text-heading-sm text-ink">Message sent</h3>
         <p className="mx-auto mt-3 max-w-prose text-body text-muted">
-          Thank you — we have it. We reply within {CONTACT_CONFIG.replyWindow}.
+          Thank you, we have it. We reply within {CONTACT_CONFIG.replyWindow}.
         </p>
         <div className="mt-6">
           <Button variant="secondary" onClick={() => setSubmissionState("idle")}>

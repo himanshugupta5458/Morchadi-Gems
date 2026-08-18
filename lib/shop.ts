@@ -68,9 +68,9 @@ function matchesCategories(product: Product, categories: ShopQuery["categories"]
 }
 
 /**
- * A collection reads whichever field its `source` names — the hand-written tag list, one of
- * the two flags, or a price band. Adding a collection is a row in `COLLECTIONS`; nothing
- * here needs a new branch unless a genuinely new *kind* of source appears.
+ * A collection reads whichever field its `source` names: the hand-written tag list, or one
+ * of the two flags. Adding a collection is a row in `COLLECTIONS`; nothing here needs a new
+ * branch unless a genuinely new *kind* of source appears.
  */
 export function isProductInCollection(
   product: Product,
@@ -85,8 +85,6 @@ export function isProductInCollection(
       return product.featured;
     case "new-flag":
       return product.isNew;
-    case "price-band":
-      return isPriceInBand(product.price, getPriceBand(source.band));
   }
 }
 

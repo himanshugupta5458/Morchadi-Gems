@@ -146,9 +146,9 @@ function categoryPlaceholderSvg(category) {
 }
 
 /**
- * Deliberately wordless. The hero panel sits beside a headline that already says the
- * brand name, so text here would only repeat it — and a real photograph dropped in at
- * this path later would carry none of it anyway.
+ * Deliberately wordless. The hero sits behind a headline that already says the brand name,
+ * and the "FINE JEWELLERY" line this once carried was a precious-metal claim this catalogue
+ * cannot make (ADR-018). A real photograph dropped in at this path carries neither.
  */
 function heroPlaceholderSvg() {
   const centreX = HERO_WIDTH / 2;
@@ -158,8 +158,6 @@ function heroPlaceholderSvg() {
     <rect x="${centreX - 140}" y="392" width="280" height="1.5" fill="${GOLD}" opacity="0.55" />
     ${gemMotif({ centreX, topY: 456, size: 300, strokeWidth: 0.7 })}
     <rect x="${centreX - 140}" y="838" width="280" height="1.5" fill="${GOLD}" opacity="0.55" />
-    <text x="${centreX}" y="906" font-family="${SANS_STACK}" font-size="22"
-      letter-spacing="8" fill="${GOLD_DEEP}" text-anchor="middle">FINE JEWELLERY</text>
   </svg>`;
 }
 

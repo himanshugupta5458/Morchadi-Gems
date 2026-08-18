@@ -27,16 +27,23 @@ gone off the convention.
 
 ```
 public/
+├── logo.png                     — the brand logo, 642 x 388 RGBA, the owner's artwork
 ├── products/     {id}.webp      — one per product, 49 files (P001–P049, all real photography)
 ├── categories/   {slug}.webp    — one per category, 10 files
-└── hero/         home-hero.webp — the home page hero panel, 1 file
+├── hero/         home-hero.webp — the home page hero panel, 1 file
+└── og/           default.png    — the 1200 x 630 social share card, derived from the logo
+
+app/
+├── icon.png                     — 512 x 512 favicon, derived from the logo
+├── apple-icon.png               — 180 x 180 touch icon, derived from the logo
+└── favicon.ico                  — 16/32/48, derived from the logo
 ```
 
 | Asset | Path | Size | Fit |
 | --- | --- | --- | --- |
 | Product image | `/products/{id}.webp` | 1000 × 1000, square | `object-contain` on ivory |
-| Category tile | `/categories/{slug}.webp` | 1200 × 1500, portrait | cropped by the tile |
-| Home hero panel | `/hero/home-hero.webp` | 1600 × 1200, landscape | `object-cover`, 4:3 panel |
+| Category tile | `/categories/{slug}.webp` | 572 × 1024, portrait | `object-cover` in a 4:5 tile |
+| Home hero | `/hero/home-hero.webp` | 1024 × 572, landscape | `object-cover`, the hero's ground |
 
 The path is **derived from the id**, never stored. `data/products.json` holds
 `"images": ["/products/P022.webp"]` for `P022` and `validate:products` enforces that it
@@ -55,12 +62,16 @@ The generator will not touch it afterwards. It only ever writes where no file ex
 re-running it later reports the file as skipped and leaves it alone.
 
 Category tiles work the same way at `public/categories/{slug}.webp`, portrait. Keep the
-subject centred — tiles crop.
+subject centred — tiles crop to 4:5, trimming top and bottom. The label sits at the bottom
+edge under a `charcoal/90 → transparent` scrim confined to the tile's lower half, so a
+photo whose subject drifts into that band will fight it.
 
-The home hero is `public/hero/home-hero.webp`, landscape. It renders in a 4:3 panel beside
-the headline with `object-cover` and a soft ivory gradient over it, so a photo with a light,
-uncluttered background will sit best. The hero's `alt` text is already descriptive, so
-swapping the file needs no code change here either.
+The home hero is `public/hero/home-hero.webp`, landscape, and it is the hero **section's
+ground** rather than a panel inside it (ADR-023). Compose it with the **left third empty** —
+the headline, lede and CTAs sit in that gap from `lg` up, under a left-to-right ivory scrim.
+Below `lg` the image drops beneath the copy in a 16:10 frame cropped `object-right`, so keep
+anything essential out of the far left. A light, uncluttered ground sits best. The hero's
+`alt` text is descriptive, so swapping the file needs no code change here either.
 
 **The filename must match the product id exactly, and the extension must be `.webp`.** A
 photo saved as `nk-001.jpg` will not be found; `validate:products` fails with the path it
@@ -125,9 +136,10 @@ An ivory field with a per-category tint, the gold gem motif from `components/ico
 gold rule, an uppercase category eyebrow, and the product name. Each category has its own
 tint so a mixed grid does not read as one repeated image.
 
-The hero placeholder is the same visual language but **wordless** — a larger gem motif
-between two gold rules with a small `FINE JEWELLERY` eyebrow. It carries no brand name,
-because the headline immediately beside it already does.
+The hero placeholder is the same visual language but **genuinely wordless** — a larger gem
+motif between two gold rules, no text at all. It carried a `FINE JEWELLERY` eyebrow until
+ADR-023; that is a precious-metal term this catalogue cannot use (ADR-018), and it hid from
+the ADR-018 sweep by being drawn into an image rather than rendered as text.
 
 Two things about them are load-bearing rather than decorative:
 
@@ -153,6 +165,34 @@ what the browser necessarily receives.
 authoring step; production only serves committed files.
 
 ## What validation checks
+
+## Brand assets
+
+`public/logo.png` is the source. Everything else with the mark on it is generated from it:
+
+```bash
+npm run generate:brand-assets
+```
+
+| Output | Size | Ground | Contents |
+| --- | --- | --- | --- |
+| `app/icon.png` | 512 × 512 | transparent | the peacock feather's eye |
+| `app/apple-icon.png` | 180 × 180 | ivory | the same crop — iOS composites on its own ground, so transparency is not safe |
+| `app/favicon.ico` | 16, 32, 48 | transparent | the same crop, packed as a multi-size ICO |
+| `public/og/default.png` | 1200 × 630 | ivory | the full logo, a gold rule, and the product descriptor |
+
+The icons use a **150 × 140 crop at (240, 60)** rather than the whole logo: the full lockup
+is 1.65:1 wide and reduces to a smear at 32px, and the crop's bottom edge stops at y=200
+because below that it starts catching an ascender from the script. The numbers live in
+`FEATHER_CROP` in the script.
+
+**Unlike `generate:placeholders`, this script overwrites.** That is the point — every output
+is derived from `logo.png` with no hand-editing in between, so a stale copy is a bug rather
+than something to protect. Replace the logo, re-run, and the whole set follows. The
+reasoning is in [ADR-022](../decisions/ADR-022-logo-integration.md).
+
+Do not put the logo on a dark ground. Its script measures 1.65:1 against `charcoal`; the
+footer uses the type lockup instead, via `<Wordmark variant="text" />`.
 
 ## Orphaned placeholder images
 

@@ -71,3 +71,8 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [017](ADR-017-final-content-pass.md) | Final content pass on the policy set and the about page | Accepted |
 | [018](ADR-018-honest-product-description.md) | Honest product description — anti-tarnish, not hallmarked | Accepted |
 | [019](ADR-019-product-options.md) | Product options — a recorded choice, never a price | Accepted |
+| [020](ADR-020-two-tier-catalogue-ia.md) | Two-tier catalogue IA — categories and collections | Accepted |
+| [021](ADR-021-all-real-catalogue.md) | An all-real catalogue and the end of placeholder products | Accepted |
+| [022](ADR-022-logo-integration.md) | The real logo replaces the text wordmark | Accepted |
+| [023](ADR-023-home-polish.md) | Home polish — real imagery, everyday positioning, button spacing | Accepted |
+| [024](ADR-024-funnel-ui-polish.md) | Funnel UI polish — logo scale, two button scales, card alignment, one price facet, compact product details, em-dash sweep | Accepted |

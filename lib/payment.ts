@@ -34,7 +34,7 @@ const EDIT_ADDRESS: PaymentFailureAction = {
 export const UNREACHABLE_FAILURE: PaymentFailure = {
   title: "We could not start the payment",
   message:
-    "Something interrupted the connection. Your cart and delivery details are still here — please try again.",
+    "Something interrupted the connection. Your cart and delivery details are still here, so please try again.",
   details: [],
   canRetry: true,
 };

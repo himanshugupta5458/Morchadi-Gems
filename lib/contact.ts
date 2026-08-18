@@ -40,7 +40,7 @@ export function validateMessage(value: string): string | undefined {
   const message = value.trim();
   if (message.length === 0) return "Tell us how we can help";
   if (message.length < MESSAGE_MIN_LENGTH) {
-    return `Add a little more detail — at least ${MESSAGE_MIN_LENGTH} characters`;
+    return `Add a little more detail, at least ${MESSAGE_MIN_LENGTH} characters`;
   }
   if (message.length > MESSAGE_MAX_LENGTH) {
     return `Keep the message under ${MESSAGE_MAX_LENGTH} characters`;

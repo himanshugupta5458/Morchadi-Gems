@@ -42,7 +42,7 @@ export default function HomePage(): JSX.Element {
 
       <section
         id={CATEGORY_SECTION_ID}
-        className="scroll-mt-20 bg-white lg:scroll-mt-32"
+        className="scroll-mt-20 bg-white lg:scroll-mt-36"
       >
         <div className="container flex flex-col gap-10 py-16 lg:gap-14 lg:py-24">
           <SectionHeading

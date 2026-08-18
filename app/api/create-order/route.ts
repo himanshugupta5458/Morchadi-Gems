@@ -100,7 +100,7 @@ function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
   return errorResponse(502, {
     error: "PAYMENT_GATEWAY_UNAVAILABLE",
     message:
-      "We could not reach the payment gateway just now. Your cart and details are safe — please try again in a moment.",
+      "We could not reach the payment gateway just now. Your cart and details are safe, so please try again in a moment.",
     retryable: true,
   });
 }

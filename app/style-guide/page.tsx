@@ -112,7 +112,7 @@ export default function StyleGuidePage(): JSX.Element {
   const addToCartSamples = [
     { caption: "In stock", item: toCatalogueEntry(discountedProducts[0]) },
     ...(soldOutProduct
-      ? [{ caption: "Sold out — disabled", item: toCatalogueEntry(soldOutProduct) }]
+      ? [{ caption: "Sold out, disabled", item: toCatalogueEntry(soldOutProduct) }]
       : []),
   ];
 
@@ -122,24 +122,24 @@ export default function StyleGuidePage(): JSX.Element {
   const cardSamples: { caption: string; product: Product }[] = [
     { caption: "Discounted", product: discountedProducts[0] },
     {
-      caption: "No discount — price alone in ink",
+      caption: "No discount, price alone in ink",
       product: withoutDiscount(discountedProducts[1]),
     },
     {
-      caption: "Empty images[] — placeholder",
+      caption: "Empty images[], placeholder",
       product: withoutImages(discountedProducts[2]),
     },
   ];
 
   if (soldOutProduct) {
-    cardSamples.push({ caption: "Sold out — disabled button", product: soldOutProduct });
+    cardSamples.push({ caption: "Sold out, disabled button", product: soldOutProduct });
   }
 
   return (
     <div className="container flex max-w-6xl flex-col gap-14 py-16">
       <header className="flex flex-col gap-4">
         <span className="text-eyebrow uppercase tracking-caps-wide text-gold-deep">
-          Internal QA — not linked from the storefront
+          Internal QA, not linked from the storefront
         </span>
         <h1 className="font-display text-display">
           <span className="uppercase tracking-caps">Style</span>{" "}
@@ -181,12 +181,12 @@ export default function StyleGuidePage(): JSX.Element {
             </div>
           ))}
           <div className="flex flex-col gap-2 border-t border-line pt-5">
-            <p className="text-body-lg">Body large — Jost 17px, for lead paragraphs.</p>
-            <p className="text-body">Body — Jost 15px, the storefront default.</p>
-            <p className="text-body-sm text-muted">Body small — Jost 13px, muted.</p>
-            <p className="text-label uppercase tracking-caps">Label — uppercase, tracked</p>
+            <p className="text-body-lg">Body large: Jost 17px, for lead paragraphs.</p>
+            <p className="text-body">Body: Jost 15px, the storefront default.</p>
+            <p className="text-body-sm text-muted">Body small: Jost 13px, muted.</p>
+            <p className="text-label uppercase tracking-caps">Label: uppercase, tracked</p>
             <p className="text-eyebrow uppercase tracking-caps-wide text-gold-deep">
-              Eyebrow — uppercase, wide tracking
+              Eyebrow: uppercase, wide tracking
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="SectionHeading"
-        note="The signature two-tone lockup: uppercase roman, then an italic accent word. Two tones — gold on light grounds, maroon on the honey band, where gold on gold goes illegible."
+        note="The signature two-tone lockup: uppercase roman, then an italic accent word. Two tones: gold on light grounds, maroon on the honey band, where gold on gold goes illegible."
       >
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-3">
@@ -307,7 +307,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="ProductCard"
-        note="Real catalogue products. Cards rest flat on the hairline border with an ivory image area and no inner frame; the lift appears on hover only. The whole card links to /product/[id]; Add to cart sits above the stretched link and is the AddToCartButton island — the only part of the card that reaches the browser."
+        note="Real catalogue products. Cards rest flat on the hairline border with an ivory image area and no inner frame; the lift appears on hover only. The whole card links to /product/[id]; Add to cart sits above the stretched link and is the AddToCartButton island, the only part of the card that reaches the browser."
       >
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {cardSamples.map((sample) => (
@@ -334,7 +334,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="ProductGrid"
-        note="The reusable grid — 2 columns on mobile, 3 from md, 4 from lg. Page-agnostic: it renders whatever products it is handed. Home and the Shop page both compose it."
+        note="The reusable grid: 2 columns on mobile, 3 from md, 4 from lg. Page-agnostic: it renders whatever products it is handed. Home and the Shop page both compose it."
       >
         <ProductGrid products={featured.slice(0, 4)} />
       </Panel>
@@ -354,7 +354,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="ProductGallery"
-        note="Only rendered when a product carries more than one image. Every catalogued product currently has exactly one, so the product page renders ProductImagePanel directly and this path stays dormant — it is shown here against a synthetic two-image product so the swap logic is not shipped unseen."
+        note="Only rendered when a product carries more than one image. Every catalogued product currently has exactly one, so the product page renders ProductImagePanel directly and this path stays dormant. It is shown here against a synthetic two-image product so the swap logic is not shipped unseen."
       >
         <div className="max-w-sm">
           <ProductGallery
@@ -369,7 +369,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="QuantityStepper"
-        note="Min 1, max 10. Buttons disable at the bounds and every path — buttons, typing, paste — goes through clampQuantity, so an invalid value cannot exist. Second row is the sold-out (disabled) state."
+        note="Min 1, max 10. Buttons disable at the bounds and every path, whether buttons, typing or paste, goes through clampQuantity, so an invalid value cannot exist. Second row is the sold-out (disabled) state."
       >
         <QuantityStepperPreview />
       </Panel>
@@ -383,7 +383,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="TestimonialCard"
-        note="Store-level testimonials, distinct from the per-product reviews on a product page. Monogram avatar from initials — no photos — alternating gold and charcoal."
+        note="Store-level testimonials, distinct from the per-product reviews on a product page. Monogram avatar from initials, no photos, alternating gold and charcoal."
       >
         <div className="bg-honey p-8">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -400,12 +400,12 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="Global chrome"
-        note="AnnouncementBar, Header, Footer, and WhatsAppButton are rendered by app/layout.tsx, so they wrap this page too — scroll and check them in place rather than here."
+        note="AnnouncementBar, Header, Footer, and WhatsAppButton are rendered by app/layout.tsx, so they wrap this page too, so scroll and check them in place rather than here."
       >
         <div className="flex flex-col gap-4">
           <p className="max-w-prose text-body-sm text-muted">
-            The nav is two dropdowns over one flat tier each — the ten categories a
-            product belongs to, and the five collections that cut across them — plus
+            The nav is two dropdowns over one flat tier each: the ten categories a
+            product belongs to, and the four collections that cut across them, plus
             About and Contact as top-level links. Every entry resolves to a{" "}
             <code className="text-ink">/shop</code> query param, so the nav, the filter
             sidebar and a pasted URL all express the same state. Both groups come from{" "}
@@ -429,7 +429,7 @@ export default function StyleGuidePage(): JSX.Element {
             The cart badge reads <code className="text-ink">itemCount</code> from{" "}
             <code className="text-ink">useCart()</code>. It renders nothing on the server
             and nothing on the first client render, then fills in once the persisted cart
-            has been read — see ADR-010. The badge is hidden at 0.
+            has been read. See ADR-010. The badge is hidden at 0.
           </p>
         </div>
       </Panel>
@@ -490,7 +490,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="CheckoutSteps"
-        note="Presentational only — no step is clickable. Steps before the current one read as done; the current one is marked with aria-current."
+        note="Presentational only, no step is clickable. Steps before the current one read as done; the current one is marked with aria-current."
       >
         <div className="flex flex-col gap-6">
           <CheckoutSteps current={1} />
@@ -501,7 +501,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="CheckoutGuardNotice"
-        note="What a checkout step renders when it is reached with nothing payable behind it. Never a redirect — it explains and offers the way back."
+        note="What a checkout step renders when it is reached with nothing payable behind it. Never a redirect. It explains and offers the way back."
       >
         <CheckoutGuardNotice
           title="There is nothing to check out"

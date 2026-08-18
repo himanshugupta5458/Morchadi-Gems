@@ -41,7 +41,7 @@ function verificationUnavailable(): NextResponse<VerifyOrderErrorBody> {
   return errorResponse(502, {
     error: "VERIFICATION_UNAVAILABLE",
     message:
-      "We could not reach the payment gateway to confirm this order. Your payment is unaffected — please try again in a moment.",
+      "We could not reach the payment gateway to confirm this order. Your payment is unaffected, so please try again in a moment.",
     retryable: true,
   });
 }

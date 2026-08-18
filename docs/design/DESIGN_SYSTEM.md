@@ -140,6 +140,27 @@ ground means adding a third tone here rather than overriding colours at the call
 Both variants hover to `maroon`. `className` is excluded from the props so variants stay
 the only way to change a button's appearance.
 
+| Size | Padding | Type | Rendered height | Used by |
+| --- | --- | --- | --- | --- |
+| `md` | `px-12 py-[1.375rem]` | `text-label` — 12px on an 18px line | **64px** | Hero CTAs, Add to cart / Buy now, cart CTAs |
+| `sm` | `px-4 py-2.5` | `text-[0.6875rem] leading-4` — 11px on a 16px line | **38px** | `ProductCard` only |
+
+The scale is chosen by **what the button sits inside**, not by emphasis. `md` is the
+page-level call to action, and its 22px of vertical padding around an 18px line box is
+deliberate excess: at 12px uppercase tracked `0.14em`, anything less reads as a border drawn
+tightly around text rather than as something to press.
+
+The two are not the same shape scaled. `sm` is used almost always `fullWidth` inside a
+product card, where a 375px two-column grid leaves about 125px of content width — past about
+`px-6`, "Add to cart" wraps to two lines. It stays narrow for that reason, and `leading-4`
+pins its line box so 38px is a stated number rather than a browser default. **Widening `sm`
+past `px-4` is a regression;** check a two-column card grid at 375px before changing it.
+
+Both numbers are asserted in `lib/button-styles.test.ts`, because they are arbitrary values
+Tailwind cannot warn about if the type scale moves underneath them. See
+[ADR-024](../decisions/ADR-024-funnel-ui-polish.md), which supersedes the spacing set in
+[ADR-023](../decisions/ADR-023-home-polish.md).
+
 ### `ButtonLink`
 
 ```tsx
@@ -236,6 +257,12 @@ cart itself — so a grid of cards stays server-rendered and ships one small isl
 Behaviour:
 
 - The whole card links to `/product/[id]` via a stretched link; Add-to-cart sits above it
+- **The name area is `line-clamp-2 min-h-[2.75rem]`** — two lines of `text-body-sm` at its
+  22px line height, reserved whether the name needs them or not, so a one-line name and a
+  two-line name push the rating, price and button to the same offset and a row of cards
+  shares one baseline. `min-h` rather than `h`: if the type scale changes the name overflows
+  its reservation instead of being clipped inside it
+  ([ADR-024](../decisions/ADR-024-funnel-ui-polish.md))
 - Image uses `next/image` with `fill` and `object-contain` on an `ivory` image area,
   resolving `/products/{id}.webp` — see [IMAGES.md](IMAGES.md)
 - Empty `images[]` renders the in-component "Image coming soon" gem placeholder instead of a
@@ -285,8 +312,14 @@ listing should go through this rather than hand-rolling a grid.
 
 `CategoryGrid` takes no props and renders all ten `CATEGORIES` — 2 columns on mobile, 3 from
 `sm`, 5 from `lg` (so the ten sit as 5×2). `CategoryTile` is a portrait 4:5 tile off
-`/categories/{slug}.webp` with a bottom scrim for label legibility and a gentle zoom on
-hover; the whole tile links to `/shop?category={slug}`.
+`/categories/{slug}.webp` with a gentle zoom on hover; the whole tile links to
+`/shop?category={slug}`.
+
+The label sits at the bottom edge under a scrim confined to the tile's **lower half**
+(`from-charcoal/90 via-charcoal/55 to-transparent`), not one spanning the full height. The
+real photographs are all near-white cream, so ivory type needs the dense end of the gradient
+under it rather than its midpoint ([ADR-023](../decisions/ADR-023-home-polish.md)). The
+image takes `alt=""` on purpose — the link text already says the category name.
 
 Labels and slugs come from `CATEGORIES`, and the image path from
 `buildCategoryImageSrc()` — never write either by hand.
@@ -297,10 +330,16 @@ Labels and slugs come from `CATEGORIES`, and the image path from
 <CollectionStrip />
 ```
 
-The second tier under the tiles on home: a wrapped row of bordered pill links, one per
-`COLLECTIONS` entry, each to `/shop?collection={slug}`. Links rather than tiles on purpose —
-a collection cuts across categories, so no single photograph could honestly stand for one
+The second tier under the tiles on home: a wrapped row of pill links, one per `COLLECTIONS`
+entry, each to `/shop?collection={slug}`. Links rather than tiles on purpose — a collection
+cuts across categories, so no single photograph could honestly stand for one
 ([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)).
+
+The pills are **filled, not outlined**: `border-gold/45 bg-gold/10 px-6 py-3 shadow-card`,
+hovering to the charcoal fill. The original `border-line` outline on white was about 1.2:1
+and made the second tier of the IA effectively invisible. A solid `bg-gold` resting state
+was rejected — ivory on gold is roughly 2.3:1 at 12px, and dark on gold competes with the
+charcoal primary button ([ADR-023](../decisions/ADR-023-home-polish.md)).
 
 ### Product page components
 
@@ -317,7 +356,7 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | `ProductOptionSelector` | *Client* | One option group. Chips up to six values, a select beyond |
 | `SelectedOptionsSummary` | Server | `Letter: A · Colour: Silver`; renders nothing when there is no selection |
 | `PersonalizedNote` | Server | &ldquo;Personalized · non-returnable&rdquo;, long form with a `/refund` link |
-| `ProductDetailsList` | Server | Definition list; renders only the `details` keys present |
+| `ProductDetailsList` | Server | Compact spec list under the buy actions; renders only the `details` keys present, and `null` when there are none |
 | `ProductReviews` | Server | Aggregate plus the per-product review list |
 
 **The gallery is deliberately dormant.** Every catalogued product has exactly one image, so
@@ -644,7 +683,7 @@ local filter state anywhere ([ADR-008](../decisions/ADR-008-shop-architecture.md
 
 | Component | Kind | Notes |
 | --- | --- | --- |
-| `ShopFilterPanel` | *Client* | Category, collection and price checkboxes; pushes a new URL on change |
+| `ShopFilterPanel` | *Client* | Category, collection and price checkboxes; pushes a new URL on change. **A price boundary appears under Price and nowhere else** — see below |
 | `ShopFilterDrawer` | *Client* | Below `lg`: trigger with active-filter count, slide-over holding the panel. Focus trap, scroll lock, Escape to close |
 | `ShopSortSelect` | *Client* | Native `<select>` over `SORT_OPTIONS` |
 | `ShopActiveFilters` | Server | Removable chips plus "Clear all" |
@@ -652,19 +691,35 @@ local filter state anywhere ([ADR-008](../decisions/ADR-008-shop-architecture.md
 **These import from `@/lib/shop-query`, never `@/lib/shop`.** The latter pulls in
 `data/products.json`, which would ship the whole catalogue to the browser.
 
+**The Collection facet lists curated groups only:** Gifting, Anti-Tarnish, Best Sellers, New
+Arrivals. "Under ₹999" used to be a collection sourced from a price band, which put the same
+label, filtering identically, in two adjacent groups of the same sidebar. Price bands now
+live in `PRICE_BANDS` and render under **Price** alone
+([ADR-024](../decisions/ADR-024-funnel-ui-polish.md)).
+
 ### `Hero`
 
 ```tsx
 <Hero categoryAnchorId="shop-by-category" />
 ```
 
-The home hero: eyebrow, two-tone display headline, gold rule, positioning line, primary and
-secondary CTAs, and a catalogue count, beside a 4:3 image panel off `/hero/home-hero.webp`.
+The home hero: eyebrow, two-tone display headline (`EVERYDAY` roman + *Sparkle* gold
+italic), gold rule, lede, and primary + secondary CTAs, over the photograph at
+`/hero/home-hero.webp`.
 
-It is **typographic first** — the composition reads as finished with the image removed. That
-is deliberate and load-bearing, not a stylistic preference; see
-[ADR-007](../decisions/ADR-007-home-composition.md). Do not rebalance it toward the image
-while the image is still a placeholder.
+The photograph is the section's **ground**, not a panel beside the copy. One
+`<Image fill priority>` is declared once and repositioned by breakpoint: below `lg` it is an
+in-flow `aspect-[16/10]` frame that `flex-col-reverse` puts under the copy; from `lg` it is
+`absolute inset-0` with a left-to-right ivory scrim, and `lg:min-h-[36rem]` on the container
+sets the height. Neither state contributes an unmeasured height, so there is no layout shift.
+The scrim is `lg`-only — below that the copy is not over the image, so washing it would mute
+the photograph for nothing.
+
+This replaces the typographic-first hero of
+[ADR-007](../decisions/ADR-007-home-composition.md), which was correct only while the image
+was a placeholder. The catalogue count that sat under the CTAs is gone and is not to be
+replaced; see [ADR-023](../decisions/ADR-023-home-polish.md) for that and for the headline
+change off "THE EVERYDAY / *Heirloom*".
 
 `categoryAnchorId` is passed in rather than hard-coded so the hero does not have to know
 what the page below it is called.
@@ -743,9 +798,38 @@ Server Component composing three clients. Top row: `MobileNav` (hamburger, below
 
 #### `Wordmark`
 
-The brand lockup as a link to `/` — `Morchadi` roman, `Gems` gold italic, matching
-`SectionHeading`. `tone` is `"ink"` (default) or `"ivory"` for the footer; the gold italic is
-constant. `onNavigate` lets the mobile drawer close itself on click.
+The brand mark as a link to `/`, in two renderings
+([ADR-022](../decisions/ADR-022-logo-integration.md)):
+
+| Prop | Values | Notes |
+| --- | --- | --- |
+| `variant` | `"image"` (default), `"text"` | `image` is `public/logo.png`; `text` is the two-tone type lockup |
+| `tone` | `"ink"` (default), `"ivory"` | **`text` only** — the logo carries its own colour |
+| `priority` | `boolean` | Set on the header instance, which is above the fold on every route |
+| `onNavigate` | `() => void` | Lets the mobile drawer close itself on click |
+
+**`image` is the default and belongs on light grounds** — the header and the mobile drawer.
+It renders `h-11 w-auto lg:h-16` (44px, 64px from `lg`) inside header rows that are a fixed
+64px and 96px, so the logo can never be what makes the header taller. The artwork carries
+roughly 12% transparent margin top and bottom (294px of ink in 388px), so a 64px box renders
+about 48px of mark. Both dimensions are constrained in CSS — a fixed height *and* an explicit
+`w-auto` — which is what holds the box before the bitmap decodes and what stops next/image
+warning that only one was modified. `sizes` is pinned to the two rendered widths
+(`(min-width: 1024px) 106px, 73px`, the heights at the 642:388 ratio) so the srcset does not
+ship a 750px render into a 106px slot.
+
+The row was raised from `lg:h-20` to `lg:h-24` **before** the logo grew, so 64px of mark sits
+in 96px of chrome rather than filling it. The sticky header is that row plus `PrimaryNav`, so
+anchor targets under it use `lg:scroll-mt-36`
+([ADR-024](../decisions/ADR-024-funnel-ui-polish.md)).
+
+**`text` exists for the charcoal footer, and is not a style preference.** The logo's script
+is dark green and measures **1.65 : 1** against `charcoal` — the brand name disappears. On
+ivory the same script is 10.72 : 1. Never put `variant="image"` on a dark ground; a test
+asserts the footer's text variant renders no image at all.
+
+The type lockup is `Morchadi` roman beside `Gems` in gold italic, matching `SectionHeading`.
+The gold italic is constant across both tones.
 
 #### `CartLink` — *Client Component*
 
@@ -761,7 +845,7 @@ covered by a test that fails if it is ever changed to read `localStorage` eagerl
 #### `PrimaryNav` — *Client Component*
 
 Charcoal bar, `lg` and up. **Two dropdowns, then two plain links:** "Shop by Category" (the
-ten `CATEGORIES`), "Collections" (the five `COLLECTIONS`), then About and Contact from
+ten `CATEGORIES`), "Collections" (the four `COLLECTIONS`), then About and Contact from
 `COMPANY_LINKS`. Uppercase `text-eyebrow` with a caret that rotates 180° when open. One
 panel open at a time. Both dropdowns render from the same `NavMenu` shape, so the menu
 markup exists once ([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)).
@@ -784,8 +868,9 @@ while open. Every link closes the drawer on click.
 
 #### `Footer`
 
-Charcoal, `ivory` text. Seven columns at `lg` — brand (spanning two: blurb, registered
-address, support email, phone), Shop (the ten categories), Collections (the five), Company
+Charcoal, `ivory` text. The brand column opens with `<Wordmark variant="text" tone="ivory" />`
+rather than the logo — see `Wordmark` above for why. Seven columns at `lg` — brand (spanning two: blurb, registered
+address, support email, phone), Shop (the ten categories), Collections (the four), Company
 (About / Contact), Policies, Secure Payments (Cashfree) — over a copyright row. The address and contact
 links come from `CONTACT_CONFIG`, which reads `config/business.ts`, so they match the contact
 page and the policies by construction. The year is build-time, since every route is
@@ -855,7 +940,7 @@ catalogue.
 | Export | Notes |
 | --- | --- |
 | `CATEGORY_MENU` | "Shop by Category" — the ten categories |
-| `COLLECTION_MENU` | "Collections" — the five collections |
+| `COLLECTION_MENU` | "Collections" — the four collections |
 | `NAV_MENUS` | The two menus in nav order; what `PrimaryNav` and `MobileNav` render |
 | `buildCategoryHref(slug)` | `/shop?category={slug}` |
 | `buildCollectionHref(slug)` | `/shop?collection={slug}` |

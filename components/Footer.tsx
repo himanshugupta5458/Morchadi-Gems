@@ -20,7 +20,7 @@ export function Footer(): JSX.Element {
     <footer className="bg-charcoal text-ivory">
       <div className="container grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-7 lg:py-16">
         <div className="flex flex-col gap-4 lg:col-span-2">
-          <Wordmark tone="ivory" />
+          <Wordmark variant="text" tone="ivory" />
           <p className="max-w-prose text-body-sm text-ivory/70">
             Anti-tarnish, hand-finished artificial jewellery for everyday wear and the
             days that matter. Shipped across India from our workshop.

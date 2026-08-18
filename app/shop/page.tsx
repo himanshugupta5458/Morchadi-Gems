@@ -44,7 +44,7 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
 
   const title = facetLabel === null ? "Shop All Jewellery" : facetLabel;
   const subject = facetLabel === null ? "the full collection" : facetLabel.toLowerCase();
-  const description = `Shop ${subject} at ${SITE_CONFIG.brandName} — ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
+  const description = `Shop ${subject} at ${SITE_CONFIG.brandName}: ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
 
   return {
     title,

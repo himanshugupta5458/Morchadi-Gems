@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { COLLECTIONS, type Product } from "@/types/product";
+import { COLLECTIONS, COLLECTION_SLUGS, type Product } from "@/types/product";
 import { getAllProducts } from "@/lib/products";
 import {
   DEFAULT_SORT,
@@ -417,12 +417,9 @@ describe("collections", () => {
     expect(isProductInCollection(untagged, "new-arrivals")).toBe(false);
   });
 
-  it("computes under-999 from the price band, boundary included", () => {
-    expect(isProductInCollection(productFixture({ price: 998 }), "under-999")).toBe(true);
-    expect(isProductInCollection(productFixture({ price: 999 }), "under-999")).toBe(true);
-    expect(isProductInCollection(productFixture({ price: 1000 }), "under-999")).toBe(
-      false,
-    );
+  it("no longer accepts a price band as a collection", () => {
+    expect(COLLECTION_SLUGS).not.toContain("under-999");
+    expect(queryOf({ collection: "under-999" }).collections).toEqual([]);
   });
 
   it("ANDs collection with category", () => {
@@ -476,23 +473,19 @@ describe("collections", () => {
 
   it("normalises selection order to COLLECTIONS, not the URL order", () => {
     expect(
-      queryOf({ collection: "under-999,gifting,best-sellers" }).collections,
-    ).toEqual(["gifting", "best-sellers", "under-999"]);
+      queryOf({ collection: "new-arrivals,gifting,best-sellers" }).collections,
+    ).toEqual(["gifting", "best-sellers", "new-arrivals"]);
   });
 
   it("filters the real catalogue through the derived collections", () => {
     const bestSellers = getShopResults({ collection: "best-sellers" });
     const newArrivals = getShopResults({ collection: "new-arrivals" });
-    const budget = getShopResults({ collection: "under-999" });
 
     expect(bestSellers.total).toBe(
       getAllProducts().filter((product) => product.featured).length,
     );
     expect(newArrivals.total).toBe(
       getAllProducts().filter((product) => product.isNew).length,
-    );
-    expect(budget.total).toBe(
-      getAllProducts().filter((product) => product.price <= 999).length,
     );
   });
 
@@ -517,7 +510,7 @@ describe("collections", () => {
   it("counts collections among the active filters", () => {
     expect(
       countActiveFilters(
-        parseShopQuery({ category: "rings", collection: "gifting,under-999" }),
+        parseShopQuery({ category: "rings", collection: "gifting,best-sellers" }),
       ),
     ).toBe(3);
   });

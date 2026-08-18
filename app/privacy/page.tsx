@@ -8,7 +8,7 @@ const PATH = "/privacy";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Privacy Policy",
-  description: `What ${SITE_CONFIG.brandName} collects, why, and what we do not collect — no accounts, no stored card details, and no sale of your data.`,
+  description: `What ${SITE_CONFIG.brandName} collects, why, and what we do not collect: no accounts, no stored card details, and no sale of your data.`,
   path: PATH,
 });
 
@@ -27,9 +27,9 @@ export default function PrivacyPage(): JSX.Element {
         it, who we share it with, and what you can ask us to do with it.
       </p>
       <p>
-        We ask for the least we can. Checkout is guest-only — there is no sign-up, no
-        password and no profile held on our side — so the information below is collected to
-        fulfil an order or to answer a message, and for nothing else.
+        We ask for the least we can. Checkout is guest-only, with no sign-up, no password
+        and no profile held on our side, so the information below is collected to fulfil an
+        order or to answer a message, and for nothing else.
       </p>
 
       <h2>2. Information we collect</h2>
@@ -49,7 +49,7 @@ export default function PrivacyPage(): JSX.Element {
 
       <h3>Usage data</h3>
       <p>
-        Our hosting provider records standard technical information when a page is served —
+        Our hosting provider records standard technical information when a page is served:
         IP address, browser and device type, the pages requested and the time of the request.
         It is used for security, for diagnosing faults and for understanding which pages are
         used, not for building a profile of you.
@@ -77,8 +77,8 @@ export default function PrivacyPage(): JSX.Element {
         not ours.{" "}
         <strong>
           We do not receive, store or have any access to your card or banking details
-        </strong>{" "}
-        — they never reach our servers or our logs. {LEGAL_CONFIG.paymentProvider} handles
+        </strong>
+        . They never reach our servers or our logs. {LEGAL_CONFIG.paymentProvider} handles
         them under their own privacy policy and security standards, and returns only whether
         the payment succeeded.
       </p>
@@ -124,19 +124,19 @@ export default function PrivacyPage(): JSX.Element {
       </p>
       <ul>
         <li>
-          <strong>{LEGAL_CONFIG.paymentProvider}</strong> — our payment processor, to take
+          <strong>{LEGAL_CONFIG.paymentProvider}</strong>, our payment processor, to take
           payment and to process refunds, under their own privacy policy
         </li>
         <li>
-          <strong>Our delivery partners</strong> — the name, address and phone number needed
-          to deliver your parcel
+          <strong>Our delivery partners</strong>, who receive the name, address and phone
+          number needed to deliver your parcel
         </li>
         <li>
-          <strong>Our hosting and email providers</strong> — to run the site and send order
+          <strong>Our hosting and email providers</strong>, who run the site and send order
           messages
         </li>
         <li>
-          <strong>Legal authorities</strong> — where we are required to by law, or to
+          <strong>Legal authorities</strong>, where we are required to by law, or to
           establish or defend a legal claim
         </li>
       </ul>
@@ -153,8 +153,8 @@ export default function PrivacyPage(): JSX.Element {
         The site is served over HTTPS, and payment details are handled entirely by{" "}
         {LEGAL_CONFIG.paymentProvider} rather than by us. Access to order information is
         limited to the people who need it to fulfil an order. No transmission over the
-        internet is completely secure, but we take measures appropriate to the data we hold
-        — which is deliberately kept small.
+        internet is completely secure, but we take measures appropriate to the data we
+        hold, which is deliberately kept small.
       </p>
 
       <h2>9. Your rights</h2>

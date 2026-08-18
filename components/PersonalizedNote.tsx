@@ -23,8 +23,8 @@ export function PersonalizedNote({
       </span>
       {withExplanation ? (
         <>
-          {" — "}
-          this piece is made to your choice, so it cannot be returned or exchanged unless it
+          {". "}
+          This piece is made to your choice, so it cannot be returned or exchanged unless it
           arrives damaged or is not what you ordered.{" "}
           <Link
             href={REFUND_POLICY_PATH}

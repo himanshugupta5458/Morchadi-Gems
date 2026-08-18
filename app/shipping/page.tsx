@@ -35,9 +35,9 @@ export default function ShippingPage(): JSX.Element {
       </p>
       <p>
         Orders placed on a weekend or a public holiday are processed on the next business
-        day. Made-to-order and personalized pieces — letter rings and anything engraved to
-        your specification — may need a little longer to prepare; where that applies, it is
-        noted on the product page at the time of purchase.
+        day. Made-to-order and personalized pieces, such as letter rings and anything
+        engraved to your specification, may need a little longer to prepare; where that
+        applies, it is noted on the product page at the time of purchase.
       </p>
 
       <h2>2. Delivery timelines</h2>
@@ -58,13 +58,13 @@ export default function ShippingPage(): JSX.Element {
           {formatRupees(FREE_SHIPPING_THRESHOLD)} or more.
         </strong>{" "}
         Below that, a flat {formatRupees(FLAT_SHIPPING_RATE)} per order. The threshold is
-        inclusive — an order subtotal of exactly {formatRupees(FREE_SHIPPING_THRESHOLD)}{" "}
-        ships free.
+        inclusive, so an order subtotal of exactly{" "}
+        {formatRupees(FREE_SHIPPING_THRESHOLD)} ships free.
       </p>
       <p>
         The subtotal that decides this is the value of the pieces themselves, before
-        shipping. Where shipping is charged it is charged once per order, not per piece — one
-        piece or ten, the shipping line reads {formatRupees(FLAT_SHIPPING_RATE)}.
+        shipping. Where shipping is charged it is charged once per order, not per piece.
+        One piece or ten, the shipping line reads {formatRupees(FLAT_SHIPPING_RATE)}.
       </p>
       <p>
         Shipping is shown on its own line at checkout before you pay, and is calculated on
@@ -82,8 +82,8 @@ export default function ShippingPage(): JSX.Element {
       <h2>4. Order tracking</h2>
       <p>
         When your order is dispatched we email you a tracking number and the courier it has
-        gone with. Tracking can take up to 24 hours to start updating after you receive it —
-        that gap is normal and not a sign of a problem.
+        gone with. Tracking can take up to 24 hours to start updating after you receive it.
+        That gap is normal and not a sign of a problem.
       </p>
       <p>
         Please check your delivery address and mobile number before paying. We dispatch to
@@ -106,7 +106,8 @@ export default function ShippingPage(): JSX.Element {
       </p>
       <p>
         Every piece ships in its box and pouch inside a tamper-evident outer. Please keep the
-        packaging until you are sure you are keeping the piece — it is needed for a return.
+        packaging until you are sure you are keeping the piece, because it is needed for a
+        return.
       </p>
 
       <h2>6. Damaged or incorrect deliveries</h2>

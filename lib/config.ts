@@ -55,13 +55,19 @@ export const PRODUCT_DESCRIPTOR = "anti-tarnish, skin-friendly artificial jewell
 
 export const SITE_CONFIG = {
   brandName: BUSINESS.brandName,
-  title: `${BUSINESS.brandName} — Artificial Jewellery Online`,
-  description: `Premium ${PRODUCT_DESCRIPTOR} from ${BUSINESS.brandName} — hand-finished, quality-checked, and priced to be worn. Free shipping over ₹${FREE_SHIPPING_THRESHOLD} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`,
+  title: `${BUSINESS.brandName} · Artificial Jewellery Online`,
+  description: `Premium ${PRODUCT_DESCRIPTOR} from ${BUSINESS.brandName}. Hand-finished, quality-checked, and priced to be worn. Free shipping over ₹${FREE_SHIPPING_THRESHOLD} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`,
+  /**
+   * The branded share card — the logo on ivory, generated from `public/logo.png` by
+   * `npm run generate:brand-assets`. Every page that sets `openGraph` restates this rather
+   * than inheriting it (a page's block replaces the layout's), so the constant is the one
+   * place the share image is chosen. See ADR-022.
+   */
   ogImage: {
-    url: "/hero/home-hero.webp",
-    width: 1600,
-    height: 1200,
-    alt: `${BUSINESS.brandName} artificial jewellery`,
+    url: "/og/default.png",
+    width: 1200,
+    height: 630,
+    alt: `${BUSINESS.brandName}: ${PRODUCT_DESCRIPTOR}`,
   },
   whatsappNumber: BUSINESS.whatsappNumber,
   whatsappGreeting: `Hi ${BUSINESS.brandName}, I would like to know more about your jewellery.`,

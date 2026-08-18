@@ -103,7 +103,7 @@ export function ProductPurchasePanel({
 
       {isSoldOut ? (
         <p className="text-body-sm text-muted">
-          This piece is sold out. It is made in small batches, so it may return — the
+          This piece is sold out. It is made in small batches, so it may return. The
           rest of the collection is on the{" "}
           <span className="text-ink">Shop</span> page.
         </p>

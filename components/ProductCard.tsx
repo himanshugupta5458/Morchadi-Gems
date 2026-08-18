@@ -7,6 +7,14 @@ import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { StarRating } from "@/components/StarRating";
 
+/**
+ * Two lines of `text-body-sm` at its 22px line height, reserved whether the name needs them
+ * or not. A one-line name and a two-line name therefore push the rating, the price and the
+ * button to the same offset, so a row of cards shares one baseline. Names longer than two
+ * lines are clamped rather than allowed to reflow the row.
+ */
+const NAME_HEIGHT_CLASSES = "line-clamp-2 min-h-[2.75rem]";
+
 export interface ProductCardProps {
   product: Product;
   priority?: boolean;
@@ -54,7 +62,7 @@ export function ProductCard({
       <div className="flex flex-1 flex-col gap-3 p-4">
         <Link
           href={`/product/${product.id}`}
-          className="text-body-sm text-muted transition-colors duration-250 after:absolute after:inset-0 after:content-[''] hover:text-ink"
+          className={`${NAME_HEIGHT_CLASSES} text-body-sm text-muted transition-colors duration-250 after:absolute after:inset-0 after:content-[''] hover:text-ink`}
         >
           {product.name}
         </Link>

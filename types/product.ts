@@ -54,27 +54,22 @@ export function isCategory(value: string): value is Category {
 export type CollectionSlug = "gifting" | "anti-tarnish";
 
 /**
- * Every collection in the second tier — the two hand-tagged ones plus the three derived
- * from data the product record already carries. This is what the `?collection=` param
- * accepts and what the nav and the shop facet render.
+ * Every collection in the second tier — the two hand-tagged ones plus the two derived from
+ * data the product record already carries. This is what the `?collection=` param accepts
+ * and what the nav and the shop facet render. A price band is not a collection: it is the
+ * Price facet's job, and listing it in both places put the same checkbox on screen twice.
+ * See [ADR-024](/docs/decisions/ADR-024-funnel-ui-polish.md).
  */
-export type CollectionFilterSlug =
-  | CollectionSlug
-  | "best-sellers"
-  | "new-arrivals"
-  | "under-999";
+export type CollectionFilterSlug = CollectionSlug | "best-sellers" | "new-arrivals";
 
 /**
- * How a collection decides its membership. `tag` reads `product.collections`; the other
- * three read fields that already exist, so no product data is duplicated to support them.
- * `price-band` names a band in `PRICE_BANDS`, so the collection and the price facet can
- * never disagree about where the boundary sits.
+ * How a collection decides its membership. `tag` reads `product.collections`; the other two
+ * read fields that already exist, so no product data is duplicated to support them.
  */
 export type CollectionSource =
   | { kind: "tag" }
   | { kind: "featured-flag" }
-  | { kind: "new-flag" }
-  | { kind: "price-band"; band: "under-999" };
+  | { kind: "new-flag" };
 
 export interface CollectionOption {
   slug: CollectionFilterSlug;
@@ -87,11 +82,6 @@ export const COLLECTIONS: readonly CollectionOption[] = [
   { slug: "anti-tarnish", label: "Anti-Tarnish", source: { kind: "tag" } },
   { slug: "best-sellers", label: "Best Sellers", source: { kind: "featured-flag" } },
   { slug: "new-arrivals", label: "New Arrivals", source: { kind: "new-flag" } },
-  {
-    slug: "under-999",
-    label: "Under ₹999",
-    source: { kind: "price-band", band: "under-999" },
-  },
 ] as const;
 
 export const COLLECTION_SLUGS: readonly CollectionFilterSlug[] = COLLECTIONS.map(
