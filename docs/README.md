@@ -15,6 +15,13 @@ before finishing. See [`CLAUDE.md`](../CLAUDE.md) for the full rule.
 Each folder has its own `README.md` with its file-naming convention. Read it before adding
 a file.
 
+One file sits outside the folders: [`CATALOGUE-DATA-TODO.md`](CATALOGUE-DATA-TODO.md) is the
+owner's open list of real product values the catalogue is still missing — measurements, size
+options and stock facts that cannot be answered from inside the repository and must never be
+invented. It belongs to no folder because it is a working list rather than a record, and it
+shrinks as the owner supplies values. See
+[`decisions/ADR-035-catalogue-content-pass.md`](decisions/ADR-035-catalogue-content-pass.md).
+
 Deployment lives outside this tree: [`DEPLOY.md`](../DEPLOY.md) at the repo root is the
 Coolify procedure, and [`decisions/ADR-032-coolify-docker-deploy.md`](decisions/ADR-032-coolify-docker-deploy.md)
 is the reasoning behind the container.

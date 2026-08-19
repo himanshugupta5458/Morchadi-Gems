@@ -8,6 +8,8 @@ import { ProductPurchasePanel } from "@/components/ProductPurchasePanel";
 export interface ProductOptionControlsPreviewProps {
   item: CatalogueEntry;
   galleryImages: string[];
+  /** One alt per entry in `galleryImages`, in the same order. */
+  galleryImageAlts: string[];
 }
 
 /**
@@ -23,12 +25,13 @@ export interface ProductOptionControlsPreviewProps {
 export function ProductOptionControlsPreview({
   item,
   galleryImages,
+  galleryImageAlts,
 }: ProductOptionControlsPreviewProps): JSX.Element {
   return (
     <div className="flex flex-col gap-10">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="max-w-sm">
-          <ProductGallery images={galleryImages} productName={item.name} />
+          <ProductGallery images={galleryImages} imageAlts={galleryImageAlts} />
         </div>
 
         <ProductPurchasePanel

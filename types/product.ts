@@ -179,6 +179,37 @@ export interface ProductMedia {
  */
 export type ProductSpecs = Record<string, string>;
 
+/**
+ * The search and social metadata a product page publishes, written per product by the
+ * `morchadi-product-meta` skill rather than derived from the description at render time. A
+ * meta description and an opening paragraph do different jobs, and clipping the second into
+ * the first produced a sentence that read as prose cut off mid-thought. See
+ * [ADR-036](/docs/decisions/ADR-036-product-seo-metadata-pass.md).
+ *
+ * Every field is verified against a measured character count by
+ * `scripts/validate-products.mjs`, so a rewrite that pushes a title past what a search result
+ * renders fails the gate rather than shipping truncated.
+ */
+export interface ProductSeo {
+  /** Internal targeting only. Never emitted as a `<meta name="keywords">` tag. */
+  primaryKeyword: string;
+  /** Internal targeting only, same as `primaryKeyword`. */
+  secondaryKeywords: string[];
+  metaTitle: string;
+  metaDescription: string;
+  /** The alternative text for `media.images[0]`, which is also every listing's photograph. */
+  imageAlt: string;
+  /**
+   * One alt per image in `media.images` beyond the first, in the same order. Absent on a
+   * product photographed once, which is all but one of them.
+   */
+  additionalImageAlts?: string[];
+  ogTitle: string;
+  ogDescription: string;
+  /** The share card's image. The product's own photograph rather than the brand card. */
+  ogImage: string;
+}
+
 export interface ProductStock {
   inStock: boolean;
 }
@@ -244,6 +275,7 @@ export interface Product {
   options?: ProductOption[];
   specs: ProductSpecs;
   description: string;
+  seo: ProductSeo;
   stock: ProductStock;
   flags: ProductFlags;
 }

@@ -37,7 +37,7 @@ export function ProductCard({
         ) : (
           <Image
             src={primaryImage}
-            alt={product.name}
+            alt={product.seo.imageAlt}
             fill
             priority={priority}
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"

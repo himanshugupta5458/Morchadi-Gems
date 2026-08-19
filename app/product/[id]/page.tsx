@@ -5,6 +5,8 @@ import { SITE_CONFIG } from "@/lib/config";
 import { buildProductOpenGraphTypeMeta } from "@/lib/metadata";
 import {
   getAllProducts,
+  getDescriptionParagraphs,
+  getImageAlts,
   getPrimaryImage,
   getProductById,
   getRelatedProducts,
@@ -29,6 +31,16 @@ interface ProductPageProps {
 
 const RELATED_PRODUCT_COUNT = 4;
 
+/**
+ * The dimensions a share card is declared at. The product photographs are square rather than
+ * 1.91:1, so this is what the card is rendered *into* rather than the file's own size, and
+ * the crop is the unfurler's to make. Stated because a card with no declared size is the one
+ * WhatsApp is most likely to drop, and its preview cache makes a first miss expensive. See
+ * ADR-036.
+ */
+const OPEN_GRAPH_IMAGE_WIDTH = 1200;
+const OPEN_GRAPH_IMAGE_HEIGHT = 630;
+
 /** The catalogue is fixed and ships as code, so every product prerenders. */
 export function generateStaticParams(): { id: string }[] {
   return getAllProducts().map((product) => ({ id: product.id }));
@@ -45,29 +57,36 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
   }
 
   const canonical = `/product/${product.id}`;
-  const primaryImage = getPrimaryImage(product);
-  const openGraphImage =
-    primaryImage === null
-      ? SITE_CONFIG.ogImage
-      : { url: primaryImage, width: 1000, height: 1000, alt: product.name };
+  const { seo } = product;
+  const openGraphImage = {
+    url: seo.ogImage,
+    width: OPEN_GRAPH_IMAGE_WIDTH,
+    height: OPEN_GRAPH_IMAGE_HEIGHT,
+    alt: seo.imageAlt,
+  };
 
   return {
-    title: product.name,
-    description: product.description,
+    /**
+     * Absolute so the layout's `%s · Morchadi Gems` template does not append a second brand
+     * to a title that was already sized against the pixel budget a search result renders.
+     * `seo.metaTitle` is the whole title, brand included where it earned the space.
+     */
+    title: { absolute: seo.metaTitle },
+    description: seo.metaDescription,
     alternates: { canonical },
     other: buildProductOpenGraphTypeMeta(),
     openGraph: {
       siteName: SITE_CONFIG.brandName,
       locale: "en_IN",
       url: canonical,
-      title: `${product.name} · ${SITE_CONFIG.brandName}`,
-      description: product.description,
+      title: seo.ogTitle,
+      description: seo.ogDescription,
       images: [openGraphImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${product.name} · ${SITE_CONFIG.brandName}`,
-      description: product.description,
+      title: seo.ogTitle,
+      description: seo.ogDescription,
       images: [openGraphImage.url],
     },
   };
@@ -83,6 +102,8 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
   const hasGallery =
     product.media.images.length > 1 || product.media.variantImages !== undefined;
   const breadcrumbTrail = buildProductBreadcrumb(product);
+  const descriptionParagraphs = getDescriptionParagraphs(product.description);
+  const imageAlts = getImageAlts(product);
 
   return (
     <div className="container py-6 sm:py-8 lg:py-12">
@@ -98,11 +119,11 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
           {hasGallery ? (
             <ProductGallery
               images={product.media.images}
+              imageAlts={imageAlts}
               variantImages={product.media.variantImages}
-              productName={product.name}
             />
           ) : (
-            <ProductImagePanel src={primaryImage} alt={product.name} priority />
+            <ProductImagePanel src={primaryImage} alt={product.seo.imageAlt} priority />
           )}
 
           <div className="flex flex-col gap-4 sm:gap-6">
@@ -120,7 +141,11 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
               size="lg"
             />
 
-            <p className="max-w-prose text-body text-muted">{product.description}</p>
+            <div className="flex max-w-prose flex-col gap-3 text-body text-muted">
+              {descriptionParagraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
 
             <div className="border-t border-line pt-5 sm:pt-6">
               <ProductPurchaseActions item={toCatalogueEntry(product)} />

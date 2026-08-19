@@ -20,6 +20,20 @@ export function getPrimaryImage(product: Product): string | null {
 }
 
 /**
+ * One alt string per entry in `media.images`, in the same order, so a gallery can label each
+ * thumbnail with what that photograph actually shows. `seo.imageAlt` covers the first image
+ * and `seo.additionalImageAlts` the rest; a product whose extra images have no alt written
+ * yet falls back to the main one rather than to an empty string, because a missing alt is
+ * worse for a screen reader than an approximate one.
+ */
+export function getImageAlts(product: Product): string[] {
+  const additional = product.seo.additionalImageAlts ?? [];
+  return product.media.images.map(
+    (_image, index) => (index === 0 ? product.seo.imageAlt : additional[index - 1]) ?? product.seo.imageAlt,
+  );
+}
+
+/**
  * Narrows a product to the fields a cart line needs. Server Components call this before
  * handing anything to a client cart component, so a full product record — description,
  * specs, reviews — never crosses the boundary.
@@ -103,4 +117,17 @@ export function getOrderOptionCatalogue(): OrderOptionEntry[] {
     name: product.name,
     ...(hasProductOptions(product.options) ? { options: product.options } : {}),
   }));
+}
+
+/**
+ * A catalogue description is written as prose in several paragraphs, stored in one JSON
+ * string with a blank line between them. Splitting here rather than in the page keeps the
+ * storage convention in one place, and tolerates a record that runs two paragraphs together
+ * or leaves a stray blank line at the end.
+ */
+export function getDescriptionParagraphs(description: string): string[] {
+  return description
+    .split(/\n{2,}/)
+    .map((paragraph) => paragraph.trim())
+    .filter((paragraph) => paragraph.length > 0);
 }

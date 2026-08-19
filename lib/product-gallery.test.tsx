@@ -82,14 +82,16 @@ function Gallery({
   item: CatalogueEntry;
   images: string[];
 }): JSX.Element {
+  const imageAlts = images.map((_image, index) => `${item.name}, view ${index + 1}`);
+
   return (
     <CartProvider catalogue={CATALOGUE}>
       <ToastProvider>
         <ProductSelectionProvider options={item.options}>
           <ProductGallery
             images={images}
+            imageAlts={imageAlts}
             variantImages={item.variantImages}
-            productName={item.name}
           />
           <ProductPurchaseActions item={item} />
         </ProductSelectionProvider>

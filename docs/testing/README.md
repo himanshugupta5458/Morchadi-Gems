@@ -79,6 +79,8 @@ purpose.
 | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) | [2026-08-18](RESULT-2026-08-18-seo-foundations.md) — 58/58 pass, 601/601 suite |
 | *(no plan — deployment verification)* | [2026-08-19](RESULT-2026-08-19-container-build.md) — containerised production build, 43/43 as expected, 653/653 suite |
 | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) | [2026-08-19](RESULT-2026-08-19-seo-audit-remediation.md) — 70/70 pass, 735/735 suite |
+| *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-followup.md) — post-remediation SEO audit, 66/100, 3 criticals live, no code changed |
+| *(no plan — content and data correction)* | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) — catalogue content pass, 15/15 pass, 747/747 suite |
 
 ## Runners
 
@@ -117,5 +119,7 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/robots.test.ts` | `robots.txt` — the allow rule, the disallow list shared with the sitemap, and the absolute sitemap link | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
 | `lib/json-ld.test.tsx` | The rendered `application/ld+json` block — every graph parses back, and a hostile product name cannot close the script tag | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
 | `lib/no-fabricated-reviews.test.tsx` | That no rating or review survives anywhere — the catalogue file, the schema, the rendered `ld+json`, a product card, and every source file under `app/` and `components/` — plus the product page's `og:type` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
+| `lib/product-copy.test.ts` | The approved descriptions — word range, paragraph storage, no copy-pass review metadata — plus the catalogue's material honesty (no karat, hallmark, 916 or sterling claim; no cubic zirconia called crystal; every "Silver" name qualified), now swept across the `seo` strings as well | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) |
+| `lib/product-seo.test.ts` | The per-product `seo` block — every field measured in code points against the bound for its surface, no duplicate `metaTitle` or primary keyword, one alt per photograph, the honesty rules applied to the metadata, and what `generateMetadata` actually publishes including the Twitter mirror and the absolute title | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) |
 | `lib/security-headers.test.ts` | The six response headers and every CSP directive, including the five Cashfree origins the checkout needs and the development-only `unsafe-eval` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
 | `lib/shop-indexing.test.ts` | Canonical URLs with the sort stripped, and `noindex, follow` on a facet that matches nothing | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |

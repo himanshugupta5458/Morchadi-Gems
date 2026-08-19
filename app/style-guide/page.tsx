@@ -3,6 +3,7 @@ import type { Product, ProductOption } from "@/types/product";
 import {
   getAllProducts,
   getFeaturedProducts,
+  getImageAlts,
   getPrimaryImage,
   toCatalogueEntry,
 } from "@/lib/products";
@@ -132,6 +133,16 @@ function buildOptionControlsShowcase(images: string[]): Product {
     options: SHOWCASE_OPTIONS,
     specs: { material: "Not a real piece", type: "Style guide fixture" },
     description: "A synthetic record that exists to render every option control at once.",
+    seo: {
+      primaryKeyword: "style guide fixture",
+      secondaryKeywords: [],
+      metaTitle: "Option Controls Showcase",
+      metaDescription: "A synthetic record that exists to render every option control at once.",
+      imageAlt: "Style guide fixture standing in for a product photograph",
+      ogTitle: "Option Controls Showcase",
+      ogDescription: "A synthetic record that exists to render every option control at once.",
+      ogImage: images[0] ?? "",
+    },
     stock: { inStock: true },
     flags: { featured: false, isNew: false },
   };
@@ -430,7 +441,7 @@ export default function StyleGuidePage(): JSX.Element {
               <ProductSelectionProvider>
                 <ProductGallery
                   images={multiImageProduct.media.images}
-                  productName={multiImageProduct.name}
+                  imageAlts={getImageAlts(multiImageProduct)}
                 />
               </ProductSelectionProvider>
             </div>
@@ -444,8 +455,8 @@ export default function StyleGuidePage(): JSX.Element {
               <ProductSelectionProvider options={variantImageProduct.options}>
                 <ProductGallery
                   images={variantImageProduct.media.images}
+                  imageAlts={getImageAlts(variantImageProduct)}
                   variantImages={variantImageProduct.media.variantImages}
-                  productName={variantImageProduct.name}
                 />
                 <ProductPurchaseActions
                   item={toCatalogueEntry(variantImageProduct)}
@@ -471,6 +482,7 @@ export default function StyleGuidePage(): JSX.Element {
           <ProductOptionControlsPreview
             item={toCatalogueEntry(optionControlsShowcase)}
             galleryImages={optionControlsShowcase.media.images}
+            galleryImageAlts={getImageAlts(optionControlsShowcase)}
           />
         </ProductSelectionProvider>
       </Panel>

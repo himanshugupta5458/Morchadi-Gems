@@ -41,6 +41,12 @@ describe("the em-dash sweep", () => {
         ...Object.keys(product.specs),
         ...Object.values(product.specs),
         ...(product.options ?? []).flatMap((option) => [option.name, ...option.values]),
+        product.seo.metaTitle,
+        product.seo.metaDescription,
+        product.seo.imageAlt,
+        ...(product.seo.additionalImageAlts ?? []),
+        product.seo.ogTitle,
+        product.seo.ogDescription,
       ];
 
       for (const text of shopperFacing.filter(

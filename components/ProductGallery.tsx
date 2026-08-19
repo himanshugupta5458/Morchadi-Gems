@@ -9,8 +9,9 @@ import { ProductImagePanel } from "@/components/ProductImagePanel";
 
 export interface ProductGalleryProps {
   images: string[];
+  /** One alt per entry in `images`, in the same order. Built by `getImageAlts`. */
+  imageAlts: string[];
   variantImages?: VariantImages;
-  productName: string;
 }
 
 /**
@@ -28,11 +29,14 @@ export interface ProductGalleryProps {
  * The thumbnail strip lists `images` and only `images`. A variant photograph is not a view of
  * the piece to browse between, it is what the current choice looks like, so it is reached by
  * making the choice.
+ *
+ * Alt text follows the photograph. A variant image has no alt written for it, so it falls back
+ * to the product's main alt rather than describing the wrong finish. See ADR-036.
  */
 export function ProductGallery({
   images,
+  imageAlts,
   variantImages,
-  productName,
 }: ProductGalleryProps): JSX.Element {
   const { selectedOptions } = useProductSelection();
   const variantImage = resolveVariantImage(variantImages, selectedOptions);
@@ -46,10 +50,12 @@ export function ProductGallery({
   }
 
   const mainImage = manualImage ?? variantImage ?? images[0];
+  const mainImageIndex = images.indexOf(mainImage);
+  const mainImageAlt = mainImageIndex === -1 ? imageAlts[0] : imageAlts[mainImageIndex];
 
   return (
     <div className="flex flex-col gap-4">
-      <ProductImagePanel src={mainImage} alt={productName} priority />
+      <ProductImagePanel src={mainImage} alt={mainImageAlt} priority />
 
       {images.length > 1 ? (
         <ul className="grid grid-cols-5 gap-3">
