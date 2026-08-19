@@ -73,9 +73,9 @@ function verifiedResponse(
  *
  * The gateway call itself lives in `lib/cashfree-order.ts`, shared with `/api/notify-admin` so
  * the two routes cannot come to different conclusions about the same order. See
- * [ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md),
- * [ADR-031](/docs/decisions/ADR-031-admin-whatsapp-notification.md) and
- * [the contract](/docs/api/verify-order.md).
+ * [the contract](/docs/api/verify-order.md) and
+ * [the notify-admin contract](/docs/api/notify-admin.md). Payment verification shipped in a
+ * prompt that produced no ADR, so the contract file is its decision record.
  */
 export async function GET(request: Request): Promise<NextResponse> {
   const requestedOrderId =

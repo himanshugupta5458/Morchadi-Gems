@@ -109,7 +109,7 @@ function SupportLine({ children }: { children: string }): JSX.Element {
  * The stored bundle decorates a confirmed order with its items and address. It is never
  * consulted about whether the order was paid or about what it cost, and it is only shown when
  * it can be reconciled with the order the server verified. See
- * [ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md).
+ * [the verify-order contract](/docs/api/verify-order.md).
  */
 export function OrderConfirmation(): JSX.Element {
   const searchParams = useSearchParams();

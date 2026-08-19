@@ -47,7 +47,7 @@ export const VERIFY_ORDER_API_PATH = "/api/verify-order";
 /**
  * Where the confirmation page reports a paid order so the owner gets a WhatsApp. Fire and
  * forget: the browser never reads the reply, and the route is off the payment critical path.
- * See [ADR-031](/docs/decisions/ADR-031-admin-whatsapp-notification.md).
+ * See [the notify-admin contract](/docs/api/notify-admin.md).
  */
 export const NOTIFY_ADMIN_API_PATH = "/api/notify-admin";
 

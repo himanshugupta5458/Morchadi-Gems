@@ -198,7 +198,7 @@ export function describeVerificationFailure(payload: unknown): VerificationFailu
 /**
  * Whether the `sessionStorage` checkout bundle may be used to decorate this order's success
  * screen. It answers a display question only — the paid status and the amount never come from
- * here ([ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md)).
+ * here ([the verify-order contract](/docs/api/verify-order.md)).
  *
  * The bundle survives a redirect and is only cleared on a confirmed payment, so a leftover
  * one from an abandoned checkout can outlive the order it was written for. Showing its items

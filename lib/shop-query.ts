@@ -64,11 +64,6 @@ export function getPriceBandLabel(slug: PriceBandSlug): string {
   return getPriceBand(slug).label;
 }
 
-export function getSortLabel(slug: SortSlug): string {
-  const match = SORT_OPTIONS.find((option) => option.slug === slug);
-  return match ? match.label : slug;
-}
-
 export function isPriceInBand(price: number, band: PriceBand): boolean {
   if (price < band.min) return false;
   return band.max === null || price <= band.max;

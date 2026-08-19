@@ -68,7 +68,7 @@ async function readRequestBody(request: Request): Promise<Record<string, unknown
  * The amount printed is always Cashfree's, never the client's total.
  *
  * Nothing in this route is on the critical path of a payment. See
- * [ADR-031](/docs/decisions/ADR-031-admin-whatsapp-notification.md).
+ * [the contract](/docs/api/notify-admin.md).
  */
 export async function POST(request: Request): Promise<NextResponse<NotifyAdminResponseBody>> {
   const body = await readRequestBody(request);

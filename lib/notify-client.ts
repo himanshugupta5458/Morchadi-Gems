@@ -46,7 +46,7 @@ export function markAdminNotified(orderId: string): void {
  * which the message itself points at.
  *
  * A different tab, a cleared session or a second device will notify again. That is accepted.
- * See [ADR-031](/docs/decisions/ADR-031-admin-whatsapp-notification.md).
+ * See [the notify-admin contract](/docs/api/notify-admin.md).
  */
 export function notifyAdminOfPaidOrder(
   verified: VerifyOrderResult,

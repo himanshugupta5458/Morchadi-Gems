@@ -93,7 +93,8 @@ export interface CheckoutData {
    *
    * Display-only, like the amounts: `/order-confirmation` uses it to tell "this bundle belongs
    * to the order I am confirming" from "this is a leftover from an abandoned checkout", and it
-   * decides *whether* to show stored items — never whether the order was paid. See ADR-014.
+   * decides *whether* to show stored items — never whether the order was paid. See the
+   * [verify-order contract](/docs/api/verify-order.md).
    */
   orderId?: string;
 }

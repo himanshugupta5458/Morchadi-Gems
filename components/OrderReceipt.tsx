@@ -18,7 +18,7 @@ export interface OrderReceiptProps {
  * across the redirect. It is a reminder, not a receipt of record: the amount that was actually
  * charged comes from the server's verification of the order, and `/order-confirmation` only
  * renders this at all once that amount and this bundle agree
- * ([ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md)).
+ * ([the verify-order contract](/docs/api/verify-order.md)).
  *
  * It takes `CartItem[]` rather than `CartLine[]` because the cart is cleared the moment a
  * payment is confirmed — by the time this renders there is no live cart left to price from.

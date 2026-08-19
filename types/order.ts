@@ -58,7 +58,7 @@ export interface OrderItemError {
  *
  * `PAID` is the only one of these that may drive a success screen, and it can only ever be
  * produced by `lib/verify.ts` from a Cashfree response. Nothing in the browser can construct
- * it. See [ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md).
+ * it. See [the verify-order contract](/docs/api/verify-order.md).
  */
 export type CashfreeOrderState = "PAID" | "PENDING" | "FAILED";
 

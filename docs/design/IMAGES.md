@@ -6,18 +6,31 @@ products. The reasoning behind all of it is in
 
 ## Which files are real photography
 
-`public/products/P001.webp` … `P021.webp` are **the owner's own product photographs**, not
+`public/products/P001.webp` … `P049.webp` are **the owner's own product photographs**, not
 generated placeholders. They exist nowhere else in this repository and are not reproducible
-by any script here. The other 79 files are generated placeholders.
+by any script here. Every one of the 49 products in the catalogue resolves to one of them
+([ADR-021](../decisions/ADR-021-all-real-catalogue.md)).
 
-Nothing in the tooling can tell them apart. `generate:placeholders` never overwrites an
-existing file, which is what protects them — but the `rm -rf public/products` recipe further
-down this page would delete them, so **do not run it**. It was written when every file in
-that folder was regenerable, and it no longer is.
+`public/products/` holds **55 files** in total:
 
-The 21 products they belong to are the owner's real catalogue, imported in prompt 15; the
-id-is-the-P-code decision is in
-[ADR-016](../decisions/ADR-016-real-product-import.md).
+| Group | Count | What it is |
+| --- | --- | --- |
+| `P001.webp` … `P049.webp` | 49 | The owner's photography, one per product. Irreplaceable. |
+| `P002-2.webp`, `P010-golden.webp` | 2 | Generated stand-ins, described below |
+| `er-001`, `er-004`, `nk-001`, `rg-001` | 4 | Pre-ADR-021 placeholders kept only because test fixtures reference their paths |
+
+The 96 other pre-ADR-021 placeholders that used to sit alongside them were deleted in the
+dead-code cleanup ([ADR-038](../decisions/ADR-038-dead-code-and-doc-accuracy-cleanup.md)).
+The four that remain are named above and are not orphans — removing them breaks the test
+suite.
+
+Nothing in the tooling can tell a photograph from a placeholder. `generate:placeholders`
+never overwrites an existing file, which is what protects them — but the
+`rm -rf public/products` recipe further down this page would delete them, so **do not run
+it**. It was written when every file in that folder was regenerable, and it no longer is.
+
+The products they belong to are the owner's real catalogue; the id-is-the-P-code decision is
+in [ADR-016](../decisions/ADR-016-real-product-import.md).
 
 ## Where images live
 
@@ -33,7 +46,7 @@ public/
 │              {id}-{variant}.webp — per-finish photographs, 1 file (P010-golden, a generated stand-in)
 ├── categories/   {slug}.webp    — one per category, 10 files
 ├── hero/         home-hero.webp — the home page hero panel, 1 file
-└── og/           default.png    — the 1200 x 630 social share card, derived from the logo
+└── og/           default.webp   — the 1200 x 630 social share card, derived from the logo
 
 app/
 ├── icon.png                     — 512 x 512 favicon, derived from the logo
@@ -209,10 +222,12 @@ area, so a photo on any background sits correctly without being cropped. Next.js
 and serves modern formats from `/_next/image` — the committed `.webp` is the source, not
 what the browser necessarily receives.
 
-`sharp` is a **devDependency** and never runs on Vercel. Placeholder generation is a local
-authoring step; production only serves committed files.
-
-## What validation checks
+`sharp` is a **devDependency**, and placeholder generation is a local authoring step —
+production only ever serves committed files. It does not follow that `sharp` is absent in
+production: the site is deployed as a standalone Docker image on Coolify
+([ADR-032](../decisions/ADR-032-coolify-docker-deploy.md)), and Next traces `sharp` into that
+image so `/_next/image` can re-encode. The Dockerfile's deps stage therefore runs a full
+`npm ci`; switching it to `npm ci --omit=dev` builds green and breaks every optimised image.
 
 ## Brand assets
 
@@ -227,7 +242,7 @@ npm run generate:brand-assets
 | `app/icon.png` | 512 × 512 | transparent | the peacock feather's eye |
 | `app/apple-icon.png` | 180 × 180 | ivory | the same crop — iOS composites on its own ground, so transparency is not safe |
 | `app/favicon.ico` | 16, 32, 48 | transparent | the same crop, packed as a multi-size ICO |
-| `public/og/default.png` | 1200 × 630 | ivory | the full logo, a gold rule, and the product descriptor |
+| `public/og/default.webp` | 1200 × 630 | ivory | the full logo, a gold rule, and the product descriptor |
 
 The icons use a **150 × 140 crop at (240, 60)** rather than the whole logo: the full lockup
 is 1.65:1 wide and reduces to a smear at 32px, and the crop's bottom edge stops at y=200
@@ -242,21 +257,34 @@ reasoning is in [ADR-022](../decisions/ADR-022-logo-integration.md).
 Do not put the logo on a dark ground. Its script measures 1.65:1 against `charcoal`; the
 footer uses the type lockup instead, via `<Wordmark variant="text" />`.
 
-## Orphaned placeholder images
+## Orphaned placeholder images — removed
 
-`public/products` holds 149 files: the 49 real photographs the catalogue references, and
-**100 orphaned placeholders** (`nk-001.webp`, `er-004.webp` and so on) left behind when
-[ADR-021](../decisions/ADR-021-all-real-catalogue.md) deleted the invented products. They
-are unreferenced — no product, no route and no component resolves to any of them — and they
-add about 1.2 MB to the deployed bundle.
+`public/products` used to hold 100 pre-P-code placeholders (`nk-001.webp`, `er-004.webp` and
+so on) left behind when [ADR-021](../decisions/ADR-021-all-real-catalogue.md) deleted the
+invented products they belonged to. **96 of them were deleted** in
+[ADR-038](../decisions/ADR-038-dead-code-and-doc-accuracy-cleanup.md), each re-confirmed to
+have no product, route, component or fixture resolving to it.
 
-They are safe to delete, and deliberately were not deleted in that prompt. Anything matching
-`^P\d{3}\.webp$` is the owner's own photography and is **irreplaceable** — the delete has
-to be by pattern, never by wiping the directory:
+Four were kept, and they are not orphans:
+
+| File | Referenced by |
+| --- | --- |
+| `nk-001.webp` | `lib/cart.test.ts`, `lib/checkout.test.ts`, `lib/order.test.ts`, `lib/verify.test.ts`, and six more suites |
+| `rg-001.webp` | `lib/cart.test.ts`, `lib/checkout.test.ts`, `lib/cart-context.test.tsx`, `lib/address-checkout.test.tsx` |
+| `er-001.webp` | `lib/cart.test.ts`, `lib/checkout.test.ts`, `lib/order.test.ts` |
+| `er-004.webp` | Documentation only; kept with the other three so the fixture set stays coherent |
+
+Should those fixtures ever be repointed at P-codes, the four become deletable. Until then,
+leave them.
+
+Anything matching `^P\d{3}` — including the two stand-ins — is either the owner's own
+photography or a generated file at a path a product record points at, and the photographs are
+**irreplaceable**. Any future delete has to be by explicit file list, never by wiping the
+directory:
 
 ```bash
-# safe: removes only the orphans, keeps every P-code file
-cd public/products && ls | grep -vE '^P[0-9]{3}\.webp$' | xargs rm --
+# what ADR-038 ran: an explicit list, not a pattern that could sweep a P-code
+cd public/products && xargs rm -- < /path/to/reviewed-list.txt
 ```
 
 `npm run validate:products` will not catch a mistake here in the direction that matters: it

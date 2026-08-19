@@ -64,4 +64,9 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | Route | Contract |
 | --- | --- |
 | `POST /api/create-order` | [create-order.md](create-order.md) |
+| `GET /api/verify-order` | [verify-order.md](verify-order.md) |
 | `POST /api/notify-admin` | [notify-admin.md](notify-admin.md) |
+
+All three route handlers under `app/api/` are documented. `verify-order` is also the only one
+without a backing ADR — payment verification shipped in prompt 13, which produced no decision
+record — so its contract file carries the reasoning that would otherwise live in an ADR.

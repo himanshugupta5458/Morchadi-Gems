@@ -45,7 +45,7 @@ Include negative and adversarial cases, not only the happy path.
 
 - **Plan:** [PLAN-area.md](PLAN-area.md)
 - **Commit:** short SHA
-- **Environment:** local / Vercel preview, Cashfree sandbox or production
+- **Environment:** local / container build, Cashfree sandbox or production
 
 | ID | Result | Notes |
 | --- | --- | --- |
@@ -72,15 +72,22 @@ purpose.
 | [PLAN-order-pricing.md](PLAN-order-pricing.md) | [2026-08-17](RESULT-2026-08-17-order-pricing.md) — 36/36 pass |
 | [PLAN-shipping-threshold.md](PLAN-shipping-threshold.md) | [2026-08-18](RESULT-2026-08-18-shipping-threshold.md) — 20/20 pass |
 | [PLAN-cart-line-keys.md](PLAN-cart-line-keys.md) | [2026-08-18](RESULT-2026-08-18-cart-line-keys.md) — 85/85 pass |
+| [PLAN-catalogue-ia.md](PLAN-catalogue-ia.md) | [2026-08-18](RESULT-2026-08-18-catalogue-ia.md) — two-tier catalogue IA |
+| *(no plan — data import verification)* | [2026-08-18](RESULT-2026-08-18-product-catalogue-real-import.md) — the owner's real catalogue imported under P-code ids |
+| *(no plan — data correction)* | [2026-08-18](RESULT-2026-08-18-all-real-catalogue.md) — the last invented products removed, all 49 real |
 | *(no plan — regression guards)* | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) — funnel UI polish, 480/480 pass |
 | *(no plan — regression guard)* | [2026-08-18](RESULT-2026-08-18-button-padding.md) — button padding verified against the emitted CSS, 481/481 pass |
 | *(no plan — regression guard)* | [2026-08-18](RESULT-2026-08-18-hero-cta-equal-width.md) — hero paired CTAs equal width, 485/485 pass |
 | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) | [2026-08-18](RESULT-2026-08-18-product-schema-migration.md) — 49/49 pass, 543/543 suite |
 | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) | [2026-08-18](RESULT-2026-08-18-seo-foundations.md) — 58/58 pass, 601/601 suite |
+| *(no plan — regression guard)* | [2026-08-19](RESULT-2026-08-19-mobile-scale.md) — the mobile type and spacing scale, desktop verified unchanged, 676/676 suite |
 | *(no plan — deployment verification)* | [2026-08-19](RESULT-2026-08-19-container-build.md) — containerised production build, 43/43 as expected, 653/653 suite |
+| *(no plan — regression guard)* | [2026-08-19](RESULT-2026-08-19-mobile-layout.md) — four mobile layouts differing in kind, plus a pre-existing overflow bug, 690/690 suite |
 | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) | [2026-08-19](RESULT-2026-08-19-seo-audit-remediation.md) — 70/70 pass, 735/735 suite |
 | *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-followup.md) — post-remediation SEO audit, 66/100, 3 criticals live, no code changed |
 | *(no plan — content and data correction)* | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) — catalogue content pass, 15/15 pass, 747/747 suite |
+| *(no plan — metadata pass)* | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) — per-product search and social metadata for all 49, 762/762 suite |
+| *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-round-three.md) — third-round SEO audit, no code changed |
 
 ## Runners
 
@@ -123,3 +130,18 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/product-seo.test.ts` | The per-product `seo` block — every field measured in code points against the bound for its surface, no duplicate `metaTitle` or primary keyword, one alt per photograph, the honesty rules applied to the metadata, and what `generateMetadata` actually publishes including the Twitter mirror and the absolute title | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) |
 | `lib/security-headers.test.ts` | The six response headers and every CSP directive, including the five Cashfree origins the checkout needs and the development-only `unsafe-eval` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
 | `lib/shop-indexing.test.ts` | Canonical URLs with the sort stripped, and `noindex, follow` on a facet that matches nothing | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
+| `lib/catalogue-ia.test.ts` | The two-tier IA — the category tier, the collection tier, and the two nav dropdowns built from them | [PLAN-catalogue-ia.md](PLAN-catalogue-ia.md) |
+| `lib/product-schema.test.ts` | The migrated record shape — grouped fields, option groups, per-variant images, multi-image products, and `toCatalogueEntry` | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) |
+| `lib/product-gallery.test.tsx` | The thumbnail strip, `resolveVariantImage`, the per-variant swap, and the cart line's thumbnail | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) |
+| `lib/option-controls.test.tsx` | The four named option controls — dropdown, swatch, pills, chips — and the contract every one of them keeps | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) |
+| `lib/money-path.test.ts` | The money path end to end — what the pricing catalogue may carry, a tampered request, and that a recorded choice, a variant image or a second gallery image changes no amount | [PLAN-order-pricing.md](PLAN-order-pricing.md), [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) |
+| `lib/verify.test.ts` | Payment verification — Cashfree status normalisation and its fail-closed default, `order_amount` reading, order-id shape, response parsing, the stale-bundle guard, and failure descriptions | [verify-order contract](../api/verify-order.md) |
+| `lib/order-confirmation.test.tsx` | `/order-confirmation` in every state — unusable link, verification in flight, PAID, PENDING, FAILED, NOT_FOUND, and when our own verification cannot answer | [verify-order contract](../api/verify-order.md) |
+| `lib/notify.test.ts` | The admin order message, the CallMeBot URL, credential reading, and dispatch | [notify-admin contract](../api/notify-admin.md) |
+| `lib/notify-client.test.tsx` | The notified flag, notifying on a paid order, and that the notification never reaches the customer | [notify-admin contract](../api/notify-admin.md) |
+| `lib/notify-boundary.test.ts` | That the CallMeBot key never crosses into the browser bundle | [notify-admin contract](../api/notify-admin.md) |
+| `lib/contact.test.ts` | Contact-form validation — the reused checkout validators, subject and message bounds, the aggregate validator, and the Web3Forms payload | — |
+| `lib/contact-form.test.tsx` | `/contact` — validation, and the two branches with and without a Web3Forms key | — |
+| `lib/wordmark.test.tsx` | `Wordmark`, including the text variant used on dark grounds | — |
+| `lib/responsive-scale.test.ts` | The mobile scale's class pairs, and that no desktop breakpoint value moved | [2026-08-19](RESULT-2026-08-19-mobile-scale.md) |
+| `lib/mobile-layout.test.tsx` | The mobile product cap and the four layouts that differ in kind from desktop | [2026-08-19](RESULT-2026-08-19-mobile-layout.md) |

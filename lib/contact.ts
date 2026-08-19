@@ -140,7 +140,3 @@ export function buildWeb3FormsPayload(
 export function getContactAccessKey(): string {
   return process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
 }
-
-export function isContactDeliveryConfigured(): boolean {
-  return getContactAccessKey().length > 0;
-}

@@ -15,10 +15,12 @@ Morchadi Gems is a production-grade ecommerce website for jewelry.
 | Database | None — product catalogue is a static `data/products.json` |
 | Admin panel | None — catalogue changes ship as code |
 | Accounts | None — guest checkout only, no login, no user records |
-| Hosting | Vercel |
+| Hosting | Coolify (self-hosted on a Hostinger VPS) |
 
 The absence of a database and an admin panel is deliberate, not a shortcut. See
-[ADR-001](docs/decisions/ADR-001-tech-stack.md).
+[ADR-001](docs/decisions/ADR-001-tech-stack.md). ADR-001 named Vercel as the host; that one
+row was superseded by [ADR-032](docs/decisions/ADR-032-coolify-docker-deploy.md), and the
+deployment shape is in [DEPLOY.md](DEPLOY.md).
 
 ## Autonomy directive
 

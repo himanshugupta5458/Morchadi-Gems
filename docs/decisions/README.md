@@ -66,6 +66,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [011](ADR-011-checkout-address-step.md) | Checkout step 1 — the address page | Accepted |
 | [012](ADR-012-static-and-policy-pages.md) | Static content and the policy set | Accepted — `PolicyDisclaimer` superseded by [037](ADR-037-policy-disclaimer-removal.md) |
 | [013](ADR-013-order-creation-and-payment.md) | Order creation and the payment step | Accepted |
+| 014 | *Never written — see Numbering gaps below* | — |
 | [015](ADR-015-business-config-and-shipping-threshold.md) | Single-source business config and a free-shipping threshold | Accepted |
 | [016](ADR-016-real-product-import.md) | Real product import and the P-code id scheme | Accepted |
 | [017](ADR-017-final-content-pass.md) | Final content pass on the policy set and the about page | Accepted |
@@ -89,3 +90,32 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [035](ADR-035-catalogue-content-pass.md) | The catalogue content pass — approved copy in, false claims out, missing values deferred to the owner | Accepted — extends the honesty sweep of [018](ADR-018-honest-product-description.md) into `data/products.json` |
 | [036](ADR-036-product-seo-metadata-pass.md) | Per-product search and social metadata, written into the catalogue rather than derived from the description | Accepted — retires `buildProductMetaDescription` and decision 3 of [035](ADR-035-catalogue-content-pass.md) |
 | [037](ADR-037-policy-disclaimer-removal.md) | Policy pages stop disclaiming themselves | Accepted |
+| [038](ADR-038-dead-code-and-doc-accuracy-cleanup.md) | Verified-dead code removed, and the documentation corrected to match the repository | Accepted |
+
+## Numbering gaps and known drift
+
+Two numbers do not mean what a reader would assume, and one convention changed partway
+through. All three are recorded here rather than repaired in the ADR bodies, because an
+accepted ADR is immutable.
+
+**014 was never written.** [ADR-013](ADR-013-order-creation-and-payment.md) closes by naming
+payment verification and the confirmation page as the next prompt's work. That prompt shipped
+the code but produced no ADR, and the following prompt chose to leave the slot empty rather
+than renumber an accepted record (see row 14 of the
+[build log](../progress/BUILD_LOG.md)). There is no
+`ADR-014-payment-verification-and-confirmation.md` and there never was; source files that
+linked to that filename now point at [`docs/api/verify-order.md`](../api/verify-order.md),
+which carries the reasoning an ADR would have held.
+
+**031 was claimed twice.** The admin WhatsApp-notification work was in flight and had already
+been referenced as `ADR-031-admin-whatsapp-notification.md` from several source files, but no
+such file was ever committed, and slot 031 was subsequently taken by
+[ADR-031](ADR-031-mobile-scale.md) (the mobile scale). `/api/notify-admin` therefore has no
+ADR; its reference document is [`docs/api/notify-admin.md`](../api/notify-admin.md), and the
+stale links have been repointed there.
+
+**ADR-015 through ADR-028 omit the `Prompt:` metadata field** required by the structure above, and
+several of them use an em-dash subtitle in the `# ADR-NNN: Title` line rather than a plain
+title. ADR-029 onward follows the convention again. The omission is left in place: these are
+accepted records, and back-filling a metadata field into fourteen immutable documents would
+rewrite history to fix a cosmetic inconsistency. New ADRs must include the field.

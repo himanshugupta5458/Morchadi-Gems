@@ -7,7 +7,12 @@ This route exists because there is no database
 ([ADR-001](../decisions/ADR-001-tech-stack.md)). The message it sends, together with the
 Cashfree dashboard, **is** the order record: Cashfree knows the amount and the payer, and this
 message carries what Cashfree does not — which pieces, how many, and which letter or colour was
-chosen on each. See [ADR-031](../decisions/ADR-031-admin-whatsapp-notification.md).
+chosen on each.
+
+**There is no ADR for this route.** The admin-notification work was in flight when slot 031
+was taken by [ADR-031](../decisions/ADR-031-mobile-scale.md), and no record was ever written
+for it — see the numbering note on row 32 of the
+[build log](../progress/BUILD_LOG.md). This contract is the reference document for the route.
 
 ## Request
 
