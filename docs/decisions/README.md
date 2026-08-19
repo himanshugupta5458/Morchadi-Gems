@@ -64,7 +64,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [009](ADR-009-product-page.md) | Product detail page | Accepted |
 | [010](ADR-010-cart-architecture.md) | Cart architecture | Accepted |
 | [011](ADR-011-checkout-address-step.md) | Checkout step 1 — the address page | Accepted |
-| [012](ADR-012-static-and-policy-pages.md) | Static content and the policy set | Accepted |
+| [012](ADR-012-static-and-policy-pages.md) | Static content and the policy set | Accepted — `PolicyDisclaimer` superseded by [037](ADR-037-policy-disclaimer-removal.md) |
 | [013](ADR-013-order-creation-and-payment.md) | Order creation and the payment step | Accepted |
 | [015](ADR-015-business-config-and-shipping-threshold.md) | Single-source business config and a free-shipping threshold | Accepted |
 | [016](ADR-016-real-product-import.md) | Real product import and the P-code id scheme | Accepted |
@@ -88,3 +88,4 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [034](ADR-034-seo-audit-remediation.md) | SEO audit remediation — fabricated reviews removed, security headers added | Accepted — retires the `aggregateRating` and `review` of [029](ADR-029-seo-foundations.md) and the `amber` star token of [004](ADR-004-design-system.md) |
 | [035](ADR-035-catalogue-content-pass.md) | The catalogue content pass — approved copy in, false claims out, missing values deferred to the owner | Accepted — extends the honesty sweep of [018](ADR-018-honest-product-description.md) into `data/products.json` |
 | [036](ADR-036-product-seo-metadata-pass.md) | Per-product search and social metadata, written into the catalogue rather than derived from the description | Accepted — retires `buildProductMetaDescription` and decision 3 of [035](ADR-035-catalogue-content-pass.md) |
+| [037](ADR-037-policy-disclaimer-removal.md) | Policy pages stop disclaiming themselves | Accepted |

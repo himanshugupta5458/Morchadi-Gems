@@ -16,7 +16,6 @@ import { CartSummary } from "@/components/CartSummary";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
 import { FormFieldPreview } from "@/components/FormFieldPreview";
-import { PolicyDisclaimer } from "@/components/PolicyDisclaimer";
 import { Prose } from "@/components/Prose";
 import { TextAreaFieldPreview } from "@/components/TextAreaFieldPreview";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -620,13 +619,6 @@ export default function StyleGuidePage(): JSX.Element {
             </li>
           </ul>
         </Prose>
-      </Panel>
-
-      <Panel
-        title="PolicyDisclaimer"
-        note="Carried visibly above the content on all four policy pages. The sample copy matches how the store actually works but has not been reviewed by a lawyer, and this notice says so."
-      >
-        <PolicyDisclaimer />
       </Panel>
 
       <Panel

@@ -1,6 +1,6 @@
 # ADR-012: Static content and the policy set
 
-- **Status:** Accepted
+- **Status:** Accepted — the `PolicyDisclaimer` decision is superseded by [ADR-037](ADR-037-policy-disclaimer-removal.md); the rest stands
 - **Date:** 2026-08-17
 - **Prompt:** 11
 

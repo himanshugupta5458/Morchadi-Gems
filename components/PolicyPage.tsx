@@ -4,7 +4,6 @@ import { LEGAL_CONFIG } from "@/lib/config";
 import { formatPolicyDate } from "@/lib/format";
 import { POLICY_LINKS } from "@/lib/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { PolicyDisclaimer } from "@/components/PolicyDisclaimer";
 import { Prose } from "@/components/Prose";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -43,8 +42,8 @@ function PolicyCrossLinks({ currentHref }: { currentHref: string }): JSX.Element
 
 /**
  * The shared shell for all four policy pages: breadcrumb, two-tone heading, the last-updated
- * line, the sample-template disclaimer, the prose body, and links to the sibling policies. A
- * policy page therefore contains only its own words.
+ * line, the prose body, and links to the sibling policies. A policy page therefore contains
+ * only its own words.
  */
 export function PolicyPage({
   roman,
@@ -74,8 +73,6 @@ export function PolicyPage({
             {formatPolicyDate(LEGAL_CONFIG.policyLastUpdatedIso)}
           </time>
         </p>
-
-        <PolicyDisclaimer />
       </div>
 
       <div className="mt-10 lg:mt-12">

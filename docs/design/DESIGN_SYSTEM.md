@@ -758,7 +758,6 @@ Rationale in [ADR-012](../decisions/ADR-012-static-and-policy-pages.md).
 | --- | --- | --- |
 | `Prose` | Server | Long-form typography; styles descendants by element |
 | `PolicyPage` | Server | The shell all four policy pages use |
-| `PolicyDisclaimer` | Server | The sample-template notice |
 | `TextAreaField` | *Client* | Multi-line sibling of `TextField`, same `FormField` shell |
 | `ContactDetails` | Server | Email, phone, a `wa.me` WhatsApp link and the registered address, all from `CONTACT_CONFIG` / `config/business.ts` |
 | `ContactForm` | *Client* | The only client island on the six content pages |
@@ -793,8 +792,8 @@ directly.
 
 Owns the breadcrumb, two-tone heading, the `Last updated` line (from
 `LEGAL_CONFIG.policyLastUpdatedIso`, rendered through `formatPolicyDate` in a `<time>`), the
-`PolicyDisclaimer`, the `Prose` wrapper, and the cross-links to sibling policies. A policy
-page therefore contains **only its own words**.
+`Prose` wrapper, and the cross-links to sibling policies. A policy page therefore contains
+**only its own words**.
 
 Cross-links come from `POLICY_LINKS` filtered by `currentHref`, so adding a fifth policy is
 one array entry in `lib/navigation.ts` and it appears in the footer and on every existing
@@ -1165,7 +1164,7 @@ tones on their actual grounds, the testimonial cards on `honey`, and the cart pi
 would otherwise only be visible with something in a cart: `AddToCartButton` in both states,
 `CartSummary` populated and blocked, `CartEmptyState`, the form fields in default, optional and
 errored states, all three `CheckoutSteps` positions, `CheckoutGuardNotice`, the `Prose` element set,
-`PolicyDisclaimer`, `TextAreaField` in its errored state, and both `ProductOptionSelector`
+`TextAreaField` in its errored state, and both `ProductOptionSelector`
 layouts with the `PersonalizedNote` in both of its forms. The global chrome wraps
 it like any other route, so the header, footer, announcement bar, and WhatsApp button are
 checked in place rather than mocked in a panel.
