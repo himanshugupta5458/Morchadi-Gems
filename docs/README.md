@@ -14,3 +14,7 @@ before finishing. See [`CLAUDE.md`](../CLAUDE.md) for the full rule.
 
 Each folder has its own `README.md` with its file-naming convention. Read it before adding
 a file.
+
+Deployment lives outside this tree: [`DEPLOY.md`](../DEPLOY.md) at the repo root is the
+Coolify procedure, and [`decisions/ADR-032-coolify-docker-deploy.md`](decisions/ADR-032-coolify-docker-deploy.md)
+is the reasoning behind the container.

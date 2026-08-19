@@ -1,0 +1,44 @@
+# Keep the build context lean. Everything `next build` needs is NOT listed here:
+# app/ components/ lib/ data/ config/ types/ public/ package*.json next.config.mjs
+# tsconfig.json tailwind.config.ts postcss.config.mjs .eslintrc.json
+
+# installed inside the image
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# build output — always rebuilt in the builder stage, never copied in
+.next
+out
+build
+*.tsbuildinfo
+
+# secrets must never enter the build context or the image
+.env
+.env.*
+
+# version control and editor state
+.git
+.gitignore
+.github
+.vscode
+.idea
+.claude
+
+# not read by the production build
+docs
+scripts
+coverage
+**/*.test.ts
+**/*.test.tsx
+vitest.config.mts
+Dockerfile
+.dockerignore
+DEPLOY.md
+README.md
+CLAUDE.md
+
+# platform leftovers
+.vercel
+.DS_Store

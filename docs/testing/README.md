@@ -77,6 +77,7 @@ purpose.
 | *(no plan — regression guard)* | [2026-08-18](RESULT-2026-08-18-hero-cta-equal-width.md) — hero paired CTAs equal width, 485/485 pass |
 | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) | [2026-08-18](RESULT-2026-08-18-product-schema-migration.md) — 49/49 pass, 543/543 suite |
 | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) | [2026-08-18](RESULT-2026-08-18-seo-foundations.md) — 58/58 pass, 601/601 suite |
+| *(no plan — deployment verification)* | [2026-08-19](RESULT-2026-08-19-container-build.md) — containerised production build, 43/43 as expected, 653/653 suite |
 
 ## Runners
 
