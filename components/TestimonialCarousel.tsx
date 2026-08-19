@@ -64,7 +64,7 @@ export function TestimonialCarousel({
       <ul
         ref={trackRef}
         onScroll={handleTrackScroll}
-        className="scrollbar-none -mr-6 flex snap-x snap-mandatory overflow-x-auto lg:mr-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible"
+        className="scrollbar-none -mr-5 flex snap-x snap-mandatory overflow-x-auto sm:-mr-6 lg:mr-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible"
       >
         {testimonials.map((testimonial, index) => (
           <li

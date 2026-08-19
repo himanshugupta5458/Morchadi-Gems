@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/config";
 import { buildCollectionHref } from "@/lib/navigation";
+import { ButtonLink } from "@/components/ButtonLink";
 import { getFeaturedProducts, getNewArrivals } from "@/lib/products";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { CollectionStrip } from "@/components/CollectionStrip";
@@ -12,6 +13,14 @@ import { TrustStrip } from "@/components/TrustStrip";
 import { ViewAllLink } from "@/components/ViewAllLink";
 
 const CATEGORY_SECTION_ID = "shop-by-category";
+
+/**
+ * How many pieces each home strip shows on a phone. Both strips hold eight, which is four
+ * rows of two on a phone and one row of four from `lg` — the same set reads as a browsable
+ * row on a laptop and as a scroll on a phone. Half of it, plus the link to the rest, is the
+ * amount that still reads as a taste of the collection. See ADR-033.
+ */
+const MOBILE_PRODUCT_COUNT = 4;
 
 /**
  * `openGraph` is replaced wholesale by a page, never merged into the layout's — so a page
@@ -70,9 +79,16 @@ export default function HomePage(): JSX.Element {
               align="left"
               subtitle="The most recent pieces off the bench, before they settle into the main collection."
             />
-            <ViewAllLink href={buildCollectionHref("new-arrivals")} />
+            <div className="hidden shrink-0 sm:flex">
+              <ViewAllLink href={buildCollectionHref("new-arrivals")} />
+            </div>
           </div>
-          <ProductGrid products={newArrivals} />
+          <ProductGrid products={newArrivals} mobileLimit={MOBILE_PRODUCT_COUNT} />
+          <div className="sm:hidden">
+            <ButtonLink href={buildCollectionHref("new-arrivals")} variant="secondary" fullWidth>
+              View all new arrivals
+            </ButtonLink>
+          </div>
         </div>
       </section>
 
@@ -85,9 +101,16 @@ export default function HomePage(): JSX.Element {
               align="left"
               subtitle="The pieces our customers keep coming back for, rated highest across the store."
             />
-            <ViewAllLink href={buildCollectionHref("best-sellers")} />
+            <div className="hidden shrink-0 sm:flex">
+              <ViewAllLink href={buildCollectionHref("best-sellers")} />
+            </div>
           </div>
-          <ProductGrid products={bestSellers} />
+          <ProductGrid products={bestSellers} mobileLimit={MOBILE_PRODUCT_COUNT} />
+          <div className="sm:hidden">
+            <ButtonLink href={buildCollectionHref("best-sellers")} variant="secondary" fullWidth>
+              View all best sellers
+            </ButtonLink>
+          </div>
         </div>
       </section>
 

@@ -16,7 +16,8 @@ const MOBILE_TO_DESKTOP_PAIRS: ReadonlyArray<{
   desktop: string;
 }> = [
   { file: "components/Hero.tsx", what: "hero image aspect", mobile: "aspect-[2/1]", desktop: "sm:aspect-[16/7]" },
-  { file: "components/Hero.tsx", what: "hero band padding", mobile: "py-8", desktop: "sm:py-14" },
+  { file: "components/Hero.tsx", what: "hero band padding", mobile: "py-12", desktop: "sm:py-14" },
+  { file: "components/Hero.tsx", what: "hero photograph", mobile: "hidden", desktop: "sm:block" },
   { file: "components/Hero.tsx", what: "hero copy stack gap", mobile: "gap-4", desktop: "sm:gap-7" },
   { file: "components/Hero.tsx", what: "hero headline", mobile: "text-display-sm", desktop: "sm:text-display-lg" },
   { file: "components/Hero.tsx", what: "hero subtext", mobile: "text-body", desktop: "sm:text-body-lg" },

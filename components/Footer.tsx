@@ -11,15 +11,15 @@ import { ShieldCheckIcon } from "@/components/icons";
 
 const columnHeadingClasses = "text-eyebrow uppercase text-gold";
 const footerLinkClasses =
-  "text-body-sm text-ivory/70 transition-colors duration-250 hover:text-ivory";
+  "block py-1 text-body-sm text-ivory/70 transition-colors duration-250 hover:text-ivory sm:inline sm:py-0";
 
 export function Footer(): JSX.Element {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-charcoal text-ivory">
-      <div className="container grid grid-cols-1 gap-8 pb-24 pt-10 sm:grid-cols-2 sm:gap-10 sm:pb-14 sm:pt-14 lg:grid-cols-7 lg:pb-16 lg:pt-16">
-        <div className="flex flex-col gap-4 lg:col-span-2">
+      <div className="container grid grid-cols-2 gap-x-4 gap-y-8 pb-24 pt-10 sm:grid-cols-2 sm:gap-10 sm:pb-14 sm:pt-14 lg:grid-cols-7 lg:pb-16 lg:pt-16">
+        <div className="col-span-2 flex flex-col gap-4 sm:col-span-1 lg:col-span-2">
           <Wordmark variant="text" tone="ivory" />
           <p className="max-w-prose text-body-sm text-ivory/70">
             Anti-tarnish, hand-finished artificial jewellery for everyday wear and the
@@ -42,7 +42,7 @@ export function Footer(): JSX.Element {
 
         <nav aria-label="Shop by category" className="flex flex-col gap-4">
           <h2 className={columnHeadingClasses}>Shop</h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-1.5 sm:gap-2.5">
             {CATEGORY_MENU.items.map((item) => (
               <li key={item.key}>
                 <Link href={item.href} className={footerLinkClasses}>
@@ -55,7 +55,7 @@ export function Footer(): JSX.Element {
 
         <nav aria-label="Collections" className="flex flex-col gap-4">
           <h2 className={columnHeadingClasses}>Collections</h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-1.5 sm:gap-2.5">
             {COLLECTION_MENU.items.map((item) => (
               <li key={item.key}>
                 <Link href={item.href} className={footerLinkClasses}>
@@ -68,7 +68,7 @@ export function Footer(): JSX.Element {
 
         <nav aria-label="Company" className="flex flex-col gap-4">
           <h2 className={columnHeadingClasses}>Company</h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-1.5 sm:gap-2.5">
             {COMPANY_LINKS.map((companyLink) => (
               <li key={companyLink.href}>
                 <Link href={companyLink.href} className={footerLinkClasses}>
@@ -81,7 +81,7 @@ export function Footer(): JSX.Element {
 
         <nav aria-label="Policies" className="flex flex-col gap-4">
           <h2 className={columnHeadingClasses}>Policies</h2>
-          <ul className="flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-1.5 sm:gap-2.5">
             {POLICY_LINKS.map((policyLink) => (
               <li key={policyLink.href}>
                 <Link href={policyLink.href} className={footerLinkClasses}>
@@ -92,7 +92,7 @@ export function Footer(): JSX.Element {
           </ul>
         </nav>
 
-        <div className="flex flex-col gap-4">
+        <div className="col-span-2 flex flex-col gap-4 sm:col-span-1">
           <h2 className={columnHeadingClasses}>Secure Payments</h2>
           <div className="flex items-start gap-3">
             <ShieldCheckIcon className="mt-0.5 h-6 w-6 shrink-0 text-gold" />

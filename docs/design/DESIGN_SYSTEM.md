@@ -116,6 +116,22 @@ What differs below `sm`:
 control. Inputs stay `px-4 py-3` (~50px), collection chips stay `py-3` (42px), and the
 in-card button keeps its `sm` scale. Compact spacing, full-size controls.
 
+Four layouts differ below `sm` in **shape**, not just scale
+([ADR-033](../decisions/ADR-033-mobile-layout-round-two.md)):
+
+| Element | Phone | `sm` and up |
+| --- | --- | --- |
+| Hero photograph | not rendered (`hidden`) | `sm:block`, then `lg` ground |
+| Category tiles | scroll-snap carousel, 2.3 tiles visible | 3-up grid, then 5-up at `lg` |
+| Home product strips | first 4 only, then a full-width *View all* | all 8, *View all* beside the heading |
+| Footer | 2 columns, brand and payments full-width | unchanged |
+
+**A right-hand bleed must match the container padding at its own breakpoint.** Container
+padding is 20px below `sm`, 24px from `sm`, 40px from `lg`. A carousel that bleeds its track
+to the screen edge pairs the two — `-mr-5 sm:-mr-6` — because a flat `-mr-6` overhangs a
+phone by 4px and gives the whole page a horizontal scrollbar. Both carousels do this; check
+it on any new one.
+
 **The bottom 64px of a phone viewport belongs to the WhatsApp button.** It is `fixed
 bottom-4 right-4` and 48px tall, so `main` carries `pb-16 sm:pb-0` and the footer carries
 `pb-24`. Anything else that can end a scroll needs the same clearance, or the button will
@@ -362,6 +378,14 @@ resting elevations, that is a bug.
 
 ### `ProductGrid`
 
+`mobileLimit` caps how many cards are **shown** below `sm`; the rest stay in the markup and
+are revealed at the breakpoint by `hidden sm:list-item`. It hides rather than slices because
+a Server Component has no viewport — slicing would need a client component that renders the
+wrong count until it hydrates, or one count shared with desktop. A hidden card is
+`display:none`, so its lazily-loaded image is never fetched. The home strips pass 4; pair the
+cap with a `sm:hidden` full-width *View all* under the grid so the rest is one tap away
+([ADR-033](../decisions/ADR-033-mobile-layout-round-two.md)).
+
 ```tsx
 <ProductGrid products={newArrivals} />
 <ProductGrid products={results} priorityCount={4} />
@@ -384,18 +408,30 @@ listing should go through this rather than hand-rolling a grid.
 <CategoryTile category={category} />
 ```
 
-`CategoryGrid` takes no props and renders all ten `CATEGORIES` — 2 columns on mobile, 3 from
-`sm`, 5 from `lg` (so the ten sit as 5×2). `CategoryTile` is a portrait 4:5 tile off
+`CategoryGrid` takes no props and renders all ten `CATEGORIES`. Below `sm` it is a
+**scroll-snap carousel** — `flex snap-x snap-mandatory overflow-x-auto`, tiles at `w-[40%]
+shrink-0 snap-start`, track bled right by `-mr-5` to the screen edge. 40% puts 2.3 tiles in
+view at 360/390/414px, and the 44–55px peek of the third tile *is* the scroll affordance, so
+there is no dot row; narrowing the tile would break it. From `sm` every one of those
+properties is restated (`sm:grid sm:snap-none sm:overflow-x-visible sm:mr-0`, tiles
+`sm:w-auto sm:shrink sm:snap-align-none`) and it is 3 columns, 5 from `lg` (so the ten sit as
+5×2). `CategoryTile` is a portrait 4:5 tile off
 `/categories/{slug}.webp` with a gentle zoom on hover; the whole tile links to
 `/shop?category={slug}`. Below `sm` the tile is **square** rather than portrait, which takes
 ~216px off the ten-tile grid on a phone.
 
 The label is `text-label` with `px-4` from `sm`, and `text-eyebrow` with `px-2` below it.
 That is not a taste call: `HAIR ACCESSORIES` measures 133.1px in Jost at 12px/0.14em, and a
-two-column tile at a 360px viewport leaves 120px inside `px-4`, so the longest label broke
-mid-word. At 11px inside `px-2` it needs 122.0px against 138px and fits on one line at every
-common phone width. Check this measurement before enlarging either value or adding a longer
-category ([ADR-031](../decisions/ADR-031-mobile-scale.md)).
+two-column tile at a 360px viewport left 120px inside `px-4`, so the longest label broke
+mid-word ([ADR-031](../decisions/ADR-031-mobile-scale.md)).
+
+Since the carousel ([ADR-033](../decisions/ADR-033-mobile-layout-round-two.md)) the tile is
+40% of the track, so the governing measurement is the longest **word**, not the longest
+label: `ACCESSORIES` is 87.0px against 120–142px of inner width. `HAIR ACCESSORIES` (122.0px)
+therefore sits on one line at 390px and above and wraps at the space to two clean lines at
+360px, which is 56px inside a 64–72px scrim. Every other label fits on one line everywhere
+(longest: `NECKLACES`, 74.0px). Re-measure the longest word before adding a longer category
+or narrowing the tile.
 
 The label sits at the bottom edge under a scrim confined to the tile's **lower half**
 (`from-charcoal/90 via-charcoal/55 to-transparent`), not one spanning the full height. The
