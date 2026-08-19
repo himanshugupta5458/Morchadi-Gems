@@ -15,7 +15,12 @@ before finishing. See [`CLAUDE.md`](../CLAUDE.md) for the full rule.
 Each folder has its own `README.md` with its file-naming convention. Read it before adding
 a file.
 
-One file sits outside the folders: [`CATALOGUE-DATA-TODO.md`](CATALOGUE-DATA-TODO.md) is the
+Two files sit outside the folders. [`PROJECT-STATE.md`](PROJECT-STATE.md) is the context
+handoff — the single briefing a new conversation reads before touching the repository, stating
+what is verified in the code and marking everything that can only be answered by the owner. It
+is rewritten as the project moves rather than appended to.
+
+The other: [`CATALOGUE-DATA-TODO.md`](CATALOGUE-DATA-TODO.md) is the
 owner's open list of real product values the catalogue is still missing — measurements, size
 options and stock facts that cannot be answered from inside the repository and must never be
 invented. It belongs to no folder because it is a working list rather than a record, and it
