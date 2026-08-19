@@ -67,7 +67,7 @@ export default function RootLayout({
         <CartProvider catalogue={getCatalogueIndex()}>
           <ToastProvider>
             <Header />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pb-16 sm:pb-0">{children}</main>
             <Footer />
             <WhatsAppButton />
           </ToastProvider>

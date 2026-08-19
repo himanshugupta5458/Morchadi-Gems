@@ -48,8 +48,8 @@ export function SectionHeading({
   const palette = toneClasses[tone];
 
   return (
-    <div className={`flex flex-col gap-3 ${alignmentClasses[align]}`}>
-      <HeadingTag className="font-display text-heading sm:text-heading-lg">
+    <div className={`flex flex-col gap-2 sm:gap-3 ${alignmentClasses[align]}`}>
+      <HeadingTag className="font-display text-heading-sm sm:text-heading-lg">
         <span className={`uppercase tracking-caps ${palette.roman}`}>{roman}</span>{" "}
         <span className={`italic ${palette.accent}`}>{accent}</span>
       </HeadingTag>

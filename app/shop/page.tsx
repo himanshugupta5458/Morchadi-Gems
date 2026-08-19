@@ -70,7 +70,7 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
 
 function EmptyResults(): JSX.Element {
   return (
-    <div className="flex flex-col items-center gap-6 border border-line bg-ivory px-6 py-20 text-center">
+    <div className="flex flex-col items-center gap-4 border border-line bg-ivory px-4 py-12 text-center sm:gap-6 sm:px-6 sm:py-20">
       <h2 className="font-display text-heading-sm text-ink">
         Nothing matches those filters
       </h2>
@@ -94,7 +94,7 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
   const facetLabel = singleFacetLabelOf(query);
 
   return (
-    <div className="container py-12 lg:py-16">
+    <div className="container py-8 sm:py-12 lg:py-16">
       <header className="flex flex-col gap-4">
         <SectionHeading
           as="h1"
@@ -109,14 +109,14 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
         />
       </header>
 
-      <div className="mt-10 grid grid-cols-1 gap-10 lg:mt-14 lg:grid-cols-[15rem_1fr] lg:gap-14">
+      <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-10 lg:mt-14 lg:grid-cols-[15rem_1fr] lg:gap-14">
         <aside className="hidden lg:block">
           <h2 className="sr-only">Filters</h2>
           <ShopFilterPanel query={query} />
         </aside>
 
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-5">
+        <div className="flex flex-col gap-6 sm:gap-8">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-4 sm:pb-5">
             <div className="flex items-center gap-4">
               <ShopFilterDrawer query={query} />
               <p className="text-body-sm text-muted">

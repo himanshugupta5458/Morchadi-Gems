@@ -32,7 +32,7 @@ export function ProductCard({
 
   return (
     <article className="group relative flex h-full flex-col border border-line bg-white transition duration-250 hover:-translate-y-1 hover:shadow-card-hover">
-      <div className="relative aspect-square w-full overflow-hidden bg-ivory">
+      <div className="relative aspect-[5/4] w-full overflow-hidden bg-ivory sm:aspect-square">
         {primaryImage === null ? (
           <ProductImagePlaceholder />
         ) : (
@@ -59,7 +59,7 @@ export function ProductCard({
         )}
       </div>
 
-      <div className="flex flex-1 flex-col gap-3 p-4">
+      <div className="flex flex-1 flex-col gap-2 p-3 sm:gap-3 sm:p-4">
         <Link
           href={`/product/${product.id}`}
           className={`${NAME_HEIGHT_CLASSES} text-body-sm text-muted transition-colors duration-250 after:absolute after:inset-0 after:content-[''] hover:text-ink`}

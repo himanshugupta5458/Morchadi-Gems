@@ -14,14 +14,14 @@ export function TestimonialCard({
   accent = "gold",
 }: TestimonialCardProps): JSX.Element {
   return (
-    <figure className="flex h-full flex-col gap-4 border border-line bg-white p-6">
+    <figure className="flex h-full flex-col gap-3 border border-line bg-white p-4 sm:gap-4 sm:p-6">
       <StarRating value={testimonial.rating} size="md" />
 
       <blockquote className="flex-1 text-body-sm text-muted">
         {testimonial.text}
       </blockquote>
 
-      <figcaption className="flex items-center gap-3 border-t border-line pt-4">
+      <figcaption className="flex items-center gap-3 border-t border-line pt-3 sm:pt-4">
         <Monogram name={testimonial.name} accent={accent} />
         <span className="font-display text-body font-semibold text-ink">
           {testimonial.name}

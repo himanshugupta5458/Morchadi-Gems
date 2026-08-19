@@ -8,7 +8,7 @@ export interface TrustBadgeProps {
 
 export function TrustBadge({ icon, label, detail }: TrustBadgeProps): JSX.Element {
   return (
-    <div className="flex flex-col items-center gap-3 rounded-card border border-line bg-white px-5 py-7 text-center">
+    <div className="flex flex-col items-center gap-2 rounded-card border border-line bg-white px-3 py-5 text-center sm:gap-3 sm:px-5 sm:py-7">
       <span className="text-gold-deep">{icon}</span>
       <span className="font-display text-label uppercase tracking-caps text-maroon">
         {label}

@@ -56,9 +56,10 @@ spelled out unless it is on a non-heading element.
 | --- | --- | --- | --- |
 | `text-display-lg` | 68px | −0.03em | Hero, one per page at most |
 | `text-display` | 52px | −0.025em | Page titles |
+| `text-display-sm` | 36px | −0.02em | Hero headline below `sm` (ADR-031) |
 | `text-heading-lg` | 40px | −0.02em | Section headings (desktop) |
-| `text-heading` | 30px | −0.015em | Section headings (mobile), product title |
-| `text-heading-sm` | 22px | −0.01em | Card and panel titles |
+| `text-heading` | 30px | −0.015em | Page titles below `sm`, general headings |
+| `text-heading-sm` | 22px | −0.01em | Card and panel titles; section headings and product title below `sm` |
 | `text-body-lg` | 17px | — | Lead paragraphs, price |
 | `text-body` | 15px | — | Default body |
 | `text-body-sm` | 13px | — | Secondary text, product names |
@@ -78,6 +79,47 @@ caps read as cramped at every size.
   `shadow-card-hover`; it is what a surface lifts *to* (hovered card, open nav panel,
   mobile drawer, WhatsApp button)
 - `duration-250` — the standard transition
+
+### Responsive scale
+
+The storefront carries **two scales, not one**: a compact scale below `sm` (640px) and the
+desktop scale from `sm` up. They are written mobile-first, so the rule when editing is:
+
+> An unprefixed spacing, type or aspect utility is the **phone** value. If it also has to
+> hold at 640px and above, restate the desktop value at `sm:` in the same `className`.
+
+```
+py-14 lg:py-32                     →  py-8 sm:py-14 lg:py-32
+aspect-square                      →  aspect-[5/4] sm:aspect-square
+text-heading sm:text-heading-lg    →  text-heading-sm sm:text-heading-lg
+```
+
+Forgetting the `sm:` half does not look like a bug on a phone — it silently rescales the
+desktop layout. `lib/responsive-scale.test.ts` asserts every pair; add a row to it when you
+add a pair. Full reasoning in [ADR-031](../decisions/ADR-031-mobile-scale.md).
+
+What differs below `sm`:
+
+| Element | Phone | `sm` and up |
+| --- | --- | --- |
+| Hero image | `aspect-[2/1]` | `aspect-[16/7]`, then `lg` ground |
+| Hero headline | `text-display-sm` (36px) | `text-display-lg` (68px) |
+| Hero band | `py-8`, stack `gap-4` | `py-14` / `lg:py-32`, `gap-7` |
+| Section heading | `text-heading-sm` (22px) | `text-heading-lg` (40px) |
+| Product card image | `aspect-[5/4]` | `aspect-square` |
+| Product card body | `p-3`, `gap-2` | `p-4`, `gap-3` |
+| Product grid | `gap-x-3 gap-y-5` | `gap-x-4 gap-y-8` |
+| Category tile | `aspect-square`, label `text-eyebrow` / `px-2` | `aspect-[4/5]`, `text-label` / `px-4` |
+| Section bands | `py-10`, `gap-6` | `py-16` / `lg:py-24`, `gap-10` |
+
+**Tap targets are exempt.** Padding comes out of containers and stacks, never out of a
+control. Inputs stay `px-4 py-3` (~50px), collection chips stay `py-3` (42px), and the
+in-card button keeps its `sm` scale. Compact spacing, full-size controls.
+
+**The bottom 64px of a phone viewport belongs to the WhatsApp button.** It is `fixed
+bottom-4 right-4` and 48px tall, so `main` carries `pb-16 sm:pb-0` and the footer carries
+`pb-24`. Anything else that can end a scroll needs the same clearance, or the button will
+come to rest on top of it.
 
 ## Components
 
@@ -345,7 +387,15 @@ listing should go through this rather than hand-rolling a grid.
 `CategoryGrid` takes no props and renders all ten `CATEGORIES` — 2 columns on mobile, 3 from
 `sm`, 5 from `lg` (so the ten sit as 5×2). `CategoryTile` is a portrait 4:5 tile off
 `/categories/{slug}.webp` with a gentle zoom on hover; the whole tile links to
-`/shop?category={slug}`.
+`/shop?category={slug}`. Below `sm` the tile is **square** rather than portrait, which takes
+~216px off the ten-tile grid on a phone.
+
+The label is `text-label` with `px-4` from `sm`, and `text-eyebrow` with `px-2` below it.
+That is not a taste call: `HAIR ACCESSORIES` measures 133.1px in Jost at 12px/0.14em, and a
+two-column tile at a 360px viewport leaves 120px inside `px-4`, so the longest label broke
+mid-word. At 11px inside `px-2` it needs 122.0px against 138px and fits on one line at every
+common phone width. Check this measurement before enlarging either value or adding a longer
+category ([ADR-031](../decisions/ADR-031-mobile-scale.md)).
 
 The label sits at the bottom edge under a scrim confined to the tile's **lower half**
 (`from-charcoal/90 via-charcoal/55 to-transparent`), not one spanning the full height. The
@@ -814,7 +864,8 @@ italic), gold rule, lede, and primary + secondary CTAs, over the photograph at
 
 The photograph is the section's **ground**, not a panel beside the copy. One
 `<Image fill priority>` is declared once and repositioned by breakpoint: below `lg` it is an
-in-flow `aspect-[16/10]` frame that `flex-col-reverse` puts under the copy; from `lg` it is
+in-flow frame that `flex-col-reverse` puts under the copy — `aspect-[2/1]` on a phone and
+`aspect-[16/7]` from `sm` ([ADR-031](../decisions/ADR-031-mobile-scale.md)); from `lg` it is
 `absolute inset-0` with a left-to-right ivory scrim, and `lg:min-h-[36rem]` on the container
 sets the height. Neither state contributes an unmeasured height, so there is no layout shift.
 The scrim is `lg`-only — below that the copy is not over the image, so washing it would mute

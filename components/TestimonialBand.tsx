@@ -21,8 +21,8 @@ export function TestimonialBand({
   const testimonials = getTestimonials();
 
   return (
-    <section className="bg-honey py-16 lg:py-20">
-      <div className="container flex flex-col gap-10">
+    <section className="bg-honey py-10 sm:py-16 lg:py-20">
+      <div className="container flex flex-col gap-6 sm:gap-10">
         <SectionHeading
           roman={roman}
           accent={accent}

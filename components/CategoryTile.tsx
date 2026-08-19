@@ -17,7 +17,7 @@ export function CategoryTile({
       href={buildCategoryHref(category.slug)}
       className="group relative block overflow-hidden bg-ivory"
     >
-      <div className="relative aspect-[4/5] w-full overflow-hidden">
+      <div className="relative aspect-square w-full overflow-hidden sm:aspect-[4/5]">
         <Image
           src={buildCategoryImageSrc(category.slug)}
           alt=""
@@ -32,7 +32,7 @@ export function CategoryTile({
         />
       </div>
 
-      <span className="absolute inset-x-0 bottom-0 px-4 py-5 text-center text-label uppercase tracking-caps text-ivory">
+      <span className="absolute inset-x-0 bottom-0 px-2 py-3 text-center text-eyebrow uppercase tracking-caps text-ivory sm:px-4 sm:py-5 sm:text-label">
         {category.label}
       </span>
     </Link>

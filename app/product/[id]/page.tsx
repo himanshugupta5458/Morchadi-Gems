@@ -87,7 +87,7 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
   const breadcrumbTrail = buildProductBreadcrumb(product);
 
   return (
-    <div className="container py-8 lg:py-12">
+    <div className="container py-6 sm:py-8 lg:py-12">
       <JsonLd
         id={`product-schema-${product.id}`}
         graph={buildProductSchemaGraph(product, breadcrumbTrail)}
@@ -96,7 +96,7 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
       <Breadcrumb trail={breadcrumbTrail} />
 
       <ProductSelectionProvider options={product.options}>
-        <div className="mt-8 grid grid-cols-1 gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
           {hasGallery ? (
             <ProductGallery
               images={product.media.images}
@@ -107,12 +107,12 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
             <ProductImagePanel src={primaryImage} alt={product.name} priority />
           )}
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <span className="text-eyebrow uppercase text-gold-deep">
               {categoryLabel}
             </span>
 
-            <h1 className="font-display text-heading sm:text-heading-lg">
+            <h1 className="font-display text-heading-sm sm:text-heading-lg">
               {product.name}
             </h1>
 
@@ -132,7 +132,7 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
 
             <p className="max-w-prose text-body text-muted">{product.description}</p>
 
-            <div className="border-t border-line pt-6">
+            <div className="border-t border-line pt-5 sm:pt-6">
               <ProductPurchaseActions item={toCatalogueEntry(product)} />
             </div>
 
@@ -143,9 +143,9 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
 
       <section
         id={REVIEWS_ANCHOR_ID}
-        className="mt-16 scroll-mt-24 border-t border-line pt-12 lg:mt-24 lg:scroll-mt-36 lg:pt-16"
+        className="mt-10 scroll-mt-24 border-t border-line pt-8 sm:mt-16 sm:pt-12 lg:mt-24 lg:scroll-mt-36 lg:pt-16"
       >
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6 sm:gap-8">
           <SectionHeading as="h2" roman="Customer" accent="Reviews" align="left" />
           <ProductReviews
             reviews={product.reviews}
@@ -156,8 +156,8 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
       </section>
 
       {relatedProducts.length > 0 ? (
-        <section className="mt-16 border-t border-line pt-12 lg:mt-24 lg:pt-16">
-          <div className="flex flex-col gap-10">
+        <section className="mt-10 border-t border-line pt-8 sm:mt-16 sm:pt-12 lg:mt-24 lg:pt-16">
+          <div className="flex flex-col gap-6 sm:gap-10">
             <SectionHeading as="h2" roman="You May Also" accent="Like" align="left" />
             <ProductGrid products={relatedProducts} />
           </div>

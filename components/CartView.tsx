@@ -30,7 +30,7 @@ export function CartView(): JSX.Element {
   if (lines.length === 0) return <CartEmptyState />;
 
   return (
-    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_22rem] lg:gap-16">
+    <div className="grid grid-cols-1 gap-6 sm:gap-10 lg:grid-cols-[1fr_22rem] lg:gap-16">
       <div className="flex flex-col">
         <p className="border-b border-line pb-4 text-body-sm text-muted">
           {itemCount === 1 ? "1 piece" : `${itemCount} pieces`} in your cart

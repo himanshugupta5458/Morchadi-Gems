@@ -81,7 +81,7 @@ export function AddressForm({
   }
 
   return (
-    <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-6">
+    <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6">
       <TextField
         id={addressFieldId("name")}
         label="Full name"
@@ -93,7 +93,7 @@ export function AddressForm({
         onBlur={() => handleBlur("name")}
       />
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
         <TextField
           id={addressFieldId("phone")}
           label="Mobile number"
@@ -143,7 +143,7 @@ export function AddressForm({
         onBlur={() => handleBlur("line2")}
       />
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
         <TextField
           id={addressFieldId("city")}
           label="City or town"

@@ -50,7 +50,7 @@ export default function HomePage(): JSX.Element {
         id={CATEGORY_SECTION_ID}
         className="scroll-mt-20 bg-white lg:scroll-mt-36"
       >
-        <div className="container flex flex-col gap-10 py-16 lg:gap-14 lg:py-24">
+        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
           <SectionHeading
             roman="Shop by"
             accent="Category"
@@ -62,8 +62,8 @@ export default function HomePage(): JSX.Element {
       </section>
 
       <section className="border-t border-line bg-white">
-        <div className="container flex flex-col gap-10 py-16 lg:gap-14 lg:py-24">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
+        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
             <SectionHeading
               roman="New Arrivals"
               accent="Collection"
@@ -77,8 +77,8 @@ export default function HomePage(): JSX.Element {
       </section>
 
       <section className="border-t border-line bg-white">
-        <div className="container flex flex-col gap-10 py-16 lg:gap-14 lg:py-24">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
+        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
             <SectionHeading
               roman="Shop"
               accent="Best Sellers"
@@ -92,7 +92,7 @@ export default function HomePage(): JSX.Element {
       </section>
 
       <section className="bg-ivory">
-        <div className="container flex flex-col gap-10 py-16 lg:gap-14 lg:py-24">
+        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
           <SectionHeading
             roman="The Morchadi"
             accent="Promise"

@@ -52,6 +52,7 @@ const config: Config = {
         "heading-sm": ["1.375rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em" }],
         "heading": ["1.875rem", { lineHeight: "2.25rem", letterSpacing: "-0.015em" }],
         "heading-lg": ["2.5rem", { lineHeight: "2.875rem", letterSpacing: "-0.02em" }],
+        "display-sm": ["2.25rem", { lineHeight: "2.375rem", letterSpacing: "-0.02em" }],
         "display": ["3.25rem", { lineHeight: "3.5rem", letterSpacing: "-0.025em" }],
         "display-lg": ["4.25rem", { lineHeight: "4.5rem", letterSpacing: "-0.03em" }],
       },

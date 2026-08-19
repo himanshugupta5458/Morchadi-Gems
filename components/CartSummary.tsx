@@ -20,14 +20,14 @@ export function CartSummary({
   isCheckoutBlocked,
 }: CartSummaryProps): JSX.Element {
   return (
-    <div className="border border-line bg-ivory p-6 lg:sticky lg:top-32">
+    <div className="border border-line bg-ivory p-4 sm:p-6 lg:sticky lg:top-32">
       <h2 className="font-display text-heading-sm text-ink">Order summary</h2>
 
-      <div className="mt-6">
+      <div className="mt-5 sm:mt-6">
         <OrderTotals subtotal={subtotal} shipping={shipping} total={total} />
       </div>
 
-      <div className="mt-6 flex flex-col gap-3">
+      <div className="mt-5 flex flex-col gap-3 sm:mt-6">
         {isCheckoutBlocked ? (
           <Button fullWidth disabled>
             Proceed to checkout

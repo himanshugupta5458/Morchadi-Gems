@@ -48,7 +48,7 @@ export function OrderTotals({
 
   return (
     <>
-      <div className="flex flex-col gap-3 border-b border-line pb-6">
+      <div className="flex flex-col gap-2.5 border-b border-line pb-4 sm:gap-3 sm:pb-6">
         <TotalsRow label="Subtotal" value={formatRupees(subtotal)} />
         <TotalsRow
           label={`Shipping (free over ${formatRupees(FREE_SHIPPING_THRESHOLD)})`}
@@ -61,7 +61,7 @@ export function OrderTotals({
         ) : null}
       </div>
 
-      <div className="flex items-baseline justify-between gap-4 pt-6">
+      <div className="flex items-baseline justify-between gap-4 pt-4 sm:pt-6">
         <span className="text-label uppercase tracking-caps text-ink">Total</span>
         <span className="font-sans text-heading-sm font-medium text-ink">
           {formatRupees(total)}

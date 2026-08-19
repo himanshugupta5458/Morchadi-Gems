@@ -18,7 +18,7 @@ export function Footer(): JSX.Element {
 
   return (
     <footer className="bg-charcoal text-ivory">
-      <div className="container grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-7 lg:py-16">
+      <div className="container grid grid-cols-1 gap-8 pb-24 pt-10 sm:grid-cols-2 sm:gap-10 sm:pb-14 sm:pt-14 lg:grid-cols-7 lg:pb-16 lg:pt-16">
         <div className="flex flex-col gap-4 lg:col-span-2">
           <Wordmark variant="text" tone="ivory" />
           <p className="max-w-prose text-body-sm text-ivory/70">

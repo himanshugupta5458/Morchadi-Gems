@@ -8,7 +8,7 @@ import {
   TruckIcon,
 } from "@/components/icons";
 
-const ICON_CLASS = "h-7 w-7";
+const ICON_CLASS = "h-6 w-6 sm:h-7 sm:w-7";
 
 /**
  * The free-shipping threshold and the returns window come from `lib/config.ts`, the same
@@ -45,7 +45,7 @@ const TRUST_BADGES = [
 
 export function TrustStrip(): JSX.Element {
   return (
-    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
       {TRUST_BADGES.map((badge) => (
         <TrustBadge
           key={badge.key}

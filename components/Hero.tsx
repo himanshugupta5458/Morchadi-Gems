@@ -18,7 +18,7 @@ export interface HeroProps {
 export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
   return (
     <section className="relative isolate flex flex-col-reverse overflow-hidden bg-ivory lg:block">
-      <div className="relative aspect-[16/10] w-full sm:aspect-[16/7] lg:absolute lg:inset-0 lg:aspect-auto">
+      <div className="relative aspect-[2/1] w-full sm:aspect-[16/7] lg:absolute lg:inset-0 lg:aspect-auto">
         <Image
           src={HERO_IMAGE_SRC}
           alt={HERO_IMAGE_ALT}
@@ -33,20 +33,20 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
         />
       </div>
 
-      <div className="container relative z-10 py-14 lg:min-h-[36rem] lg:py-32">
-        <div className="flex max-w-xl flex-col items-start gap-7">
+      <div className="container relative z-10 py-8 sm:py-14 lg:min-h-[36rem] lg:py-32">
+        <div className="flex max-w-xl flex-col items-start gap-4 sm:gap-7">
           <span className="text-eyebrow uppercase text-gold-deep">
             Anti-tarnish · Hand-finished · Shipped across India
           </span>
 
-          <h1 className="font-display text-display leading-[1.06] sm:text-display-lg">
+          <h1 className="font-display text-display-sm leading-[1.06] sm:text-display-lg">
             <span className="uppercase tracking-caps text-ink">Everyday</span>{" "}
             <span className="italic text-gold">Sparkle</span>
           </h1>
 
           <span aria-hidden className="block h-px w-20 bg-gold" />
 
-          <p className="max-w-prose text-body-lg text-muted">
+          <p className="max-w-prose text-body text-muted sm:text-body-lg">
             Anti-tarnish jewellery made to wear every day, priced so you actually
             can.
           </p>
