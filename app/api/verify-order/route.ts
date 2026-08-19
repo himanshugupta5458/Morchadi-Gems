@@ -4,12 +4,8 @@ import type {
   VerifyOrderErrorCode,
   VerifyOrderResult,
 } from "@/types/order";
-import {
-  CASHFREE_API_VERSION,
-  getCashfreeOrderUrl,
-  readCashfreeCredentials,
-} from "@/lib/cashfree-config";
-import { isMorchadiOrderId, normaliseCashfreeOrder } from "@/lib/verify";
+import { lookupCashfreeOrder } from "@/lib/cashfree-order";
+import { isMorchadiOrderId } from "@/lib/verify";
 
 /**
  * Node, not Edge: this handler holds the Cashfree secret in memory. It is also the only place
@@ -25,7 +21,7 @@ export const runtime = "nodejs";
  */
 export const dynamic = "force-dynamic";
 
-const CASHFREE_TIMEOUT_MS = 15_000;
+const LOG_PREFIX = "[verify-order]";
 
 function errorResponse(
   status: number,
@@ -75,7 +71,10 @@ function verifiedResponse(
  * single fact the confirmation page is allowed to celebrate, and `amount` is Cashfree's
  * `order_amount` rather than any number the client held.
  *
- * See [ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md) and
+ * The gateway call itself lives in `lib/cashfree-order.ts`, shared with `/api/notify-admin` so
+ * the two routes cannot come to different conclusions about the same order. See
+ * [ADR-014](/docs/decisions/ADR-014-payment-verification-and-confirmation.md),
+ * [ADR-031](/docs/decisions/ADR-031-admin-whatsapp-notification.md) and
  * [the contract](/docs/api/verify-order.md).
  */
 export async function GET(request: Request): Promise<NextResponse> {
@@ -84,9 +83,9 @@ export async function GET(request: Request): Promise<NextResponse> {
 
   if (!isMorchadiOrderId(requestedOrderId)) return malformedOrderId();
 
-  const credentials = readCashfreeCredentials();
-  if (credentials === null) {
-    console.error("[verify-order] CASHFREE_APP_ID or CASHFREE_SECRET_KEY is not set");
+  const lookup = await lookupCashfreeOrder(requestedOrderId, LOG_PREFIX);
+
+  if (lookup.kind === "not-configured") {
     return errorResponse(503, {
       error: "PAYMENT_NOT_CONFIGURED",
       message:
@@ -95,74 +94,7 @@ export async function GET(request: Request): Promise<NextResponse> {
     });
   }
 
-  let cashfreeResponse: Response;
-  try {
-    cashfreeResponse = await fetch(getCashfreeOrderUrl(requestedOrderId), {
-      method: "GET",
-      headers: {
-        "X-Client-Id": credentials.appId,
-        "X-Client-Secret": credentials.secretKey,
-        "x-api-version": CASHFREE_API_VERSION,
-        Accept: "application/json",
-      },
-      cache: "no-store",
-      signal: AbortSignal.timeout(CASHFREE_TIMEOUT_MS),
-    });
-  } catch (networkError) {
-    console.error(
-      `[verify-order] ${requestedOrderId} could not reach Cashfree`,
-      networkError,
-    );
-    return verificationUnavailable();
-  }
+  if (lookup.kind === "unreachable") return verificationUnavailable();
 
-  const responseText = await cashfreeResponse.text();
-
-  /**
-   * Cashfree does not know this order. That is an answer, not a fault: the id was never
-   * created, or it was invented by hand. The page can render it, so it comes back as a 200
-   * with a state rather than as a 500.
-   */
-  if (cashfreeResponse.status === 404) {
-    console.error(`[verify-order] ${requestedOrderId} is unknown to Cashfree`);
-    return verifiedResponse({
-      orderId: requestedOrderId,
-      status: "NOT_FOUND",
-      amount: null,
-    });
-  }
-
-  if (!cashfreeResponse.ok) {
-    console.error(
-      `[verify-order] ${requestedOrderId} lookup rejected by Cashfree with ${cashfreeResponse.status}: ${responseText}`,
-    );
-    return verificationUnavailable();
-  }
-
-  let cashfreePayload: unknown;
-  try {
-    cashfreePayload = JSON.parse(responseText);
-  } catch {
-    console.error(
-      `[verify-order] ${requestedOrderId} came back from Cashfree unparseable: ${responseText}`,
-    );
-    return verificationUnavailable();
-  }
-
-  const result = normaliseCashfreeOrder(cashfreePayload, requestedOrderId);
-
-  /**
-   * `PENDING` is not logged — the page polls, and a shopper on a slow bank page would otherwise
-   * write ten lines per checkout. `FAILED` is, because an unrecognised `order_status` also
-   * lands here and that is worth seeing.
-   */
-  if (result.status === "FAILED") {
-    console.error(
-      `[verify-order] ${requestedOrderId} normalised to FAILED from order_status ${JSON.stringify(
-        (cashfreePayload as Record<string, unknown> | null)?.order_status,
-      )}`,
-    );
-  }
-
-  return verifiedResponse(result);
+  return verifiedResponse(lookup.result);
 }

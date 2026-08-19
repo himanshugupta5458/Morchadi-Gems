@@ -81,17 +81,13 @@ function isAddress(value: unknown): value is Address {
 /**
  * Shape validation only. It answers "is this bundle renderable?", never "are these amounts
  * correct?" — nothing downstream is allowed to trust the numbers it lets through.
+ *
+ * Takes an already-parsed value rather than a string, because two callers hand it one from
+ * different places: `parseCheckoutData` below unwraps `sessionStorage`, and the admin
+ * notification route unwraps a POST body. Both sources are equally untrusted, so both go
+ * through this one validator rather than each writing its own.
  */
-export function parseCheckoutData(rawValue: string | null): CheckoutData | null {
-  if (rawValue === null) return null;
-
-  let parsedValue: unknown;
-  try {
-    parsedValue = JSON.parse(rawValue);
-  } catch {
-    return null;
-  }
-
+export function parseCheckoutValue(parsedValue: unknown): CheckoutData | null {
   if (typeof parsedValue !== "object" || parsedValue === null) return null;
   const candidate = parsedValue as Record<string, unknown>;
 
@@ -119,6 +115,17 @@ export function parseCheckoutData(rawValue: string | null): CheckoutData | null 
     total: candidate.total,
     ...(stampedOrderId === undefined ? {} : { orderId: stampedOrderId }),
   };
+}
+
+/** The `sessionStorage` bundle, unwrapped from its JSON and validated. */
+export function parseCheckoutData(rawValue: string | null): CheckoutData | null {
+  if (rawValue === null) return null;
+
+  try {
+    return parseCheckoutValue(JSON.parse(rawValue));
+  } catch {
+    return null;
+  }
 }
 
 /**

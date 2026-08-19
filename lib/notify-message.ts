@@ -1,0 +1,103 @@
+import type { Address, CartItem, CheckoutData } from "@/types/cart";
+import { LEGAL_CONFIG, SITE_CONFIG } from "@/lib/config";
+import { formatRupees } from "@/lib/format";
+import { formatSelectedOptions } from "@/lib/options";
+
+/**
+ * WhatsApp reads a single asterisk pair as bold. Written once here so the markup and the text
+ * that uses it stay in one file.
+ */
+function bold(text: string): string {
+  return `*${text}*`;
+}
+
+function formatAddressLines(address: Address): string[] {
+  return [
+    address.name,
+    address.line1,
+    ...(address.line2 === undefined || address.line2.trim().length === 0
+      ? []
+      : [address.line2]),
+    `${address.city}, ${address.state} ${address.pincode}`,
+    `Phone: ${address.phone}`,
+    `Email: ${address.email}`,
+  ];
+}
+
+/**
+ * One numbered line per item, with its recorded choices indented underneath.
+ *
+ * The choices are the reason this message exists in the form it does. There is no database
+ * ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so this message and the Cashfree
+ * dashboard are together the whole order record — and Cashfree knows the amount but not that
+ * the ring is the letter A. An item line without its selection is an order that cannot be
+ * packed.
+ */
+function formatItemLines(items: CartItem[]): string[] {
+  return items.flatMap((item, index) => {
+    const heading = `${index + 1}. ${item.name} x${item.qty}`;
+    const selection = formatSelectedOptions(item.selectedOptions);
+
+    return selection.length === 0 ? [heading] : [heading, `   ${selection}`];
+  });
+}
+
+export interface AdminOrderMessageInput {
+  orderId: string;
+  /** Cashfree's `order_amount`, the only amount that is authoritative. Null when unreadable. */
+  amountPaid: number | null;
+  /**
+   * The shopper's own summary of what they bought and where it goes. Display and fulfilment
+   * information only, and null when it could not be validated — the message degrades to the
+   * order id and the amount rather than being withheld.
+   */
+  bundle: CheckoutData | null;
+}
+
+/**
+ * The WhatsApp message an admin receives for a paid order, as plain text with real newlines.
+ * URL encoding happens later in `buildCallMeBotUrl`, so this stays readable and assertable.
+ *
+ * Every amount that carries weight comes from `amountPaid`, which is Cashfree's. The bundle's
+ * own subtotal and shipping are shown as a breakdown because they help whoever packs the
+ * parcel, and they are labelled as the shopper's summary so a mismatch reads as a discrepancy
+ * to investigate rather than as the truth.
+ */
+export function composeAdminOrderMessage({
+  orderId,
+  amountPaid,
+  bundle,
+}: AdminOrderMessageInput): string {
+  const sections: string[] = [
+    bold(`New Order - ${SITE_CONFIG.brandName}`),
+    [
+      `${bold("Order:")} ${orderId}`,
+      `${bold("Paid:")} ${amountPaid === null ? "amount unavailable" : formatRupees(amountPaid)}`,
+    ].join("\n"),
+  ];
+
+  if (bundle === null) {
+    sections.push(
+      "No item or delivery summary reached this notification. Open the Cashfree dashboard for the customer details on this order.",
+    );
+    return sections.join("\n\n");
+  }
+
+  sections.push([bold("Items"), ...formatItemLines(bundle.cart)].join("\n"));
+
+  sections.push(
+    [
+      `${bold("Subtotal:")} ${formatRupees(bundle.subtotal)}`,
+      `${bold("Shipping:")} ${formatRupees(bundle.shipping)}`,
+      `${bold("Total:")} ${formatRupees(bundle.total)}`,
+    ].join("\n"),
+  );
+
+  sections.push([bold("Deliver to"), ...formatAddressLines(bundle.address)].join("\n"));
+
+  sections.push(
+    `Dispatch within ${LEGAL_CONFIG.dispatchWindow}. Check the Cashfree dashboard to confirm the payment.`,
+  );
+
+  return sections.join("\n\n");
+}

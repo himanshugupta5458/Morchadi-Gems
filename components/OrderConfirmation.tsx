@@ -13,6 +13,7 @@ import {
   CHECKOUT_PAYMENT_PATH,
   buildVerifyOrderPath,
 } from "@/lib/navigation";
+import { notifyAdminOfPaidOrder } from "@/lib/notify-client";
 import { SHOP_PATH } from "@/lib/shop-query";
 import {
   MAX_VERIFY_ATTEMPTS,
@@ -173,12 +174,22 @@ export function OrderConfirmation(): JSX.Element {
     view.kind === "settled" && view.result.status === "PAID" ? view.result : null;
 
   /**
-   * The one side effect of a confirmed payment, and the only place either store is emptied.
+   * The side effects of a confirmed payment, and the only place either store is emptied.
    * Idempotent by construction: a refresh re-verifies, arrives at `PAID` again, and clears an
    * already-empty cart and an already-absent bundle.
+   *
+   * The bundle is re-read here rather than taken from state, because this is the last moment
+   * it exists — `clearCheckoutData` two lines below removes it — and the admin notification is
+   * the one consumer that needs the items and the address rather than a rendering of them.
+   *
+   * `notifyAdminOfPaidOrder` returns nothing and is not awaited. It cannot delay the success
+   * screen, and it cannot stop the cart being cleared: whatever happens to the WhatsApp
+   * message, the two lines after it run.
    */
   useEffect(() => {
     if (paidResult === null) return;
+
+    notifyAdminOfPaidOrder(paidResult, readCheckoutData());
 
     clearCart();
     clearCheckoutData();

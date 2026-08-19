@@ -7,6 +7,7 @@ import type { CatalogueEntry } from "@/types/product";
 import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY } from "@/lib/checkout";
+import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
 import { MAX_VERIFY_ATTEMPTS, PENDING_POLL_INTERVAL_MS } from "@/lib/verify";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 
@@ -111,6 +112,21 @@ function jsonResponse(status: number, body: unknown): FakeResponse {
 
 function verified(status: string, amount: number | null, orderId = ORDER_ID): FakeResponse {
   return jsonResponse(200, { orderId, status, amount });
+}
+
+/**
+ * A confirmed order makes the page talk to two routes: it verifies, and then it reports the
+ * paid order for the admin WhatsApp. Counting them apart keeps the polling assertions about
+ * polling — the notification is fire-and-forget and its own tests cover it.
+ */
+function verifyCalls(): unknown[][] {
+  return fetchMock.mock.calls.filter((call) =>
+    String(call[0]).startsWith("/api/verify-order"),
+  );
+}
+
+function notifyCalls(): unknown[][] {
+  return fetchMock.mock.calls.filter((call) => String(call[0]) === NOTIFY_ADMIN_API_PATH);
 }
 
 async function renderConfirmation(search: string): Promise<void> {
@@ -316,6 +332,101 @@ describe("/order-confirmation — PAID", () => {
   });
 });
 
+describe("/order-confirmation — telling the owner about a paid order", () => {
+  function notifiedBody(): Record<string, unknown> {
+    const requestInit = notifyCalls()[0][1] as RequestInit;
+    return JSON.parse(String(requestInit.body)) as Record<string, unknown>;
+  }
+
+  it("reports the paid order with the items, their choices and the address", async () => {
+    seedCart();
+    seedBundle(
+      makeBundle({
+        orderId: ORDER_ID,
+        cart: [{ ...CART_ITEM, selectedOptions: { Letter: "A" } }],
+      }),
+    );
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifyCalls()).toHaveLength(1);
+
+    const body = notifiedBody();
+    const summary = body.summary as CheckoutData;
+    expect(body.orderId).toBe(ORDER_ID);
+    expect(summary.cart[0].selectedOptions).toEqual({ Letter: "A" });
+    expect(summary.address.name).toBe("Ananya Iyer");
+    expect(summary.address.pincode).toBe("302001");
+  });
+
+  it("catches the bundle before it is cleared, not after", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifiedBody().summary).toBeDefined();
+    expect(window.sessionStorage.getItem(CHECKOUT_STORAGE_KEY)).toBeNull();
+  });
+
+  it("tells nobody about an order that was not paid", async () => {
+    for (const status of ["PENDING", "FAILED", "NOT_FOUND"]) {
+      cleanup();
+      fetchMock.mockReset();
+      respondWith(verified(status, 2099));
+
+      await renderConfirmation(`order_id=${ORDER_ID}`);
+
+      expect(notifyCalls(), status).toHaveLength(0);
+    }
+  });
+
+  it("does not report the same order twice on a refresh", async () => {
+    respondWith(verified("PAID", 2099));
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+    expect(notifyCalls()).toHaveLength(1);
+
+    cleanup();
+    fetchMock.mockReset();
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifyCalls()).toHaveLength(0);
+  });
+
+  it("still confirms the order, and still clears the cart, when the notification fails", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PAID", 2099));
+    fetchMock.mockImplementation(() => Promise.reject(new Error("offline")));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText("Your order is confirmed")).toBeTruthy();
+    expect(screen.getByText(ORDER_ID)).toBeTruthy();
+    expect(screen.getByText("What you ordered")).toBeTruthy();
+    expect(storedCartItemCount()).toBe(0);
+    expect(window.sessionStorage.getItem(CHECKOUT_STORAGE_KEY)).toBeNull();
+  });
+
+  it("still confirms the order when the notification route itself errors", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PAID", 2099));
+    fetchMock.mockImplementation(() =>
+      Promise.resolve(jsonResponse(500, { error: "boom" })),
+    );
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText("Your order is confirmed")).toBeTruthy();
+    expect(storedCartItemCount()).toBe(0);
+  });
+});
+
 describe("/order-confirmation — PENDING", () => {
   it("waits rather than declaring failure, and keeps the cart", async () => {
     seedCart();
@@ -350,7 +461,7 @@ describe("/order-confirmation — PENDING", () => {
     });
 
     expect(screen.getByText("Your order is confirmed")).toBeTruthy();
-    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect(verifyCalls()).toHaveLength(3);
     expect(storedCartItemCount()).toBe(0);
     expect(window.sessionStorage.getItem(CHECKOUT_STORAGE_KEY)).toBeNull();
   });
@@ -521,12 +632,17 @@ describe("/order-confirmation — when our own verification cannot answer", () =
     expect(screen.getByText("We could not confirm your payment just yet")).toBeTruthy();
   });
 
-  it("asks only its own route, and only for the order in the URL", async () => {
+  it("asks only its own routes, and only about the order in the URL", async () => {
     respondWith(verified("PAID", 2099));
 
     await renderConfirmation(`order_id=${ORDER_ID}`);
 
-    expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock.mock.calls[0][0]).toBe(`/api/verify-order?order_id=${ORDER_ID}`);
+    for (const call of fetchMock.mock.calls) {
+      expect(String(call[0]).startsWith("/api/")).toBe(true);
+    }
+
+    expect(verifyCalls()).toHaveLength(1);
+    expect(verifyCalls()[0][0]).toBe(`/api/verify-order?order_id=${ORDER_ID}`);
+    expect(notifyCalls()).toHaveLength(1);
   });
 });
