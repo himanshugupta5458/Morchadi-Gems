@@ -44,18 +44,16 @@ export interface ShopResults {
 }
 
 /**
- * The catalogue carries no timestamp, so "newest" is the `isNew` flag with rating as the
- * tiebreak rather than a true recency order — see ADR-008. Every comparator ends on `id`
- * so ordering is total and pagination cannot drop or repeat a product across pages.
+ * The catalogue carries no timestamp, so "newest" is the `isNew` flag with the featured flag
+ * as the tiebreak rather than a true recency order — see ADR-008. It used to break ties on
+ * rating; the catalogue no longer carries one (ADR-034), and featured is the other field
+ * that says which pieces the owner is pushing. Every comparator ends on `id` so ordering is
+ * total and pagination cannot drop or repeat a product across pages.
  */
 const sortComparators: Record<SortSlug, (left: Product, right: Product) => number> = {
   newest: (left, right) =>
     Number(right.flags.isNew) - Number(left.flags.isNew) ||
-    right.rating.average - left.rating.average ||
-    left.id.localeCompare(right.id),
-  "rating-desc": (left, right) =>
-    right.rating.average - left.rating.average ||
-    right.rating.count - left.rating.count ||
+    Number(right.flags.featured) - Number(left.flags.featured) ||
     left.id.localeCompare(right.id),
   "price-asc": (left, right) =>
     left.pricing.price - right.pricing.price || left.id.localeCompare(right.id),

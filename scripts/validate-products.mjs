@@ -14,10 +14,6 @@ const EXPECTED_PRODUCT_COUNT = 49;
 
 const MIN_FEATURED_COUNT = 4;
 const MIN_NEW_COUNT = 4;
-const MIN_REVIEWS_PER_PRODUCT = 2;
-const MAX_REVIEWS_PER_PRODUCT = 3;
-const MIN_RATING = 3.5;
-const MAX_RATING = 5.0;
 
 /**
  * Two ceilings, because the catalogue's real prices and the discount policy disagree. Sixty
@@ -71,8 +67,6 @@ const PRODUCT_KEYS = [
   "options",
   "specs",
   "description",
-  "rating",
-  "reviews",
   "stock",
   "flags",
 ];
@@ -94,10 +88,6 @@ function isPlainObject(value) {
 
 function isPositiveInteger(value) {
   return typeof value === "number" && Number.isInteger(value) && value > 0;
-}
-
-function hasOneDecimalPlace(value) {
-  return Math.round(value * 10) === Number((value * 10).toFixed(4));
 }
 
 function existsUnderPublic(publicPath) {
@@ -341,47 +331,22 @@ function validateSpecs(product, label) {
   }
 }
 
-function validateRating(product, label) {
-  const rating = product?.rating;
-  check(isPlainObject(rating), `${label}: rating must be an object`);
-  if (!isPlainObject(rating)) return;
-
+/**
+ * The catalogue holds no ratings and no reviews, and the `unknownProductKeys` check below is
+ * what keeps it that way: `rating` and `reviews` are off `PRODUCT_KEYS`, so a record carrying
+ * either fails here rather than reaching a Product schema. Reviews come back when there are
+ * real ones to publish, and this validator gains the shape checks again at that point. See
+ * ADR-034.
+ */
+function validateNoFabricatedReception(product, label) {
   check(
-    typeof rating.average === "number" &&
-      rating.average >= MIN_RATING &&
-      rating.average <= MAX_RATING &&
-      hasOneDecimalPlace(rating.average),
-    `${label}: rating.average must be one decimal between ${MIN_RATING} and ${MAX_RATING}`,
+    product?.rating === undefined,
+    `${label}: rating must not be present — this store publishes no ratings it has not collected`,
   );
   check(
-    typeof rating.count === "number" &&
-      Number.isInteger(rating.count) &&
-      rating.count >= 0,
-    `${label}: rating.count must be a non-negative integer`,
+    product?.reviews === undefined,
+    `${label}: reviews must not be present — this store publishes no reviews it has not collected`,
   );
-}
-
-function validateReviews(product, label) {
-  const reviews = product?.reviews;
-  check(
-    Array.isArray(reviews) &&
-      reviews.length >= MIN_REVIEWS_PER_PRODUCT &&
-      reviews.length <= MAX_REVIEWS_PER_PRODUCT,
-    `${label}: expected ${MIN_REVIEWS_PER_PRODUCT}-${MAX_REVIEWS_PER_PRODUCT} reviews, found ${reviews?.length}`,
-  );
-  if (!Array.isArray(reviews)) return;
-
-  reviews.forEach((review, index) => {
-    check(isNonEmptyString(review?.name), `${label}: reviews[${index}].name is required`);
-    check(isNonEmptyString(review?.text), `${label}: reviews[${index}].text is required`);
-    check(
-      typeof review?.rating === "number" && review.rating >= 1 && review.rating <= 5,
-      `${label}: reviews[${index}].rating must be between 1 and 5`,
-    );
-  });
-
-  const reviewTexts = new Set(reviews.map((review) => review.text));
-  check(reviewTexts.size === reviews.length, `${label}: has duplicate review text`);
 }
 
 function validateStockAndFlags(product, label) {
@@ -458,8 +423,7 @@ for (const product of catalogue) {
   validateOptions(product, label);
   validateMedia(product, label);
   validateSpecs(product, label);
-  validateRating(product, label);
-  validateReviews(product, label);
+  validateNoFabricatedReception(product, label);
   validateStockAndFlags(product, label);
   validateCollections(product, label);
 

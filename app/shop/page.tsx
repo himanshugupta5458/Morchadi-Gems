@@ -7,8 +7,17 @@ import {
   SITE_CONFIG,
 } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
-import { buildShopHref, getShopResults, withPage, type ShopQuery } from "@/lib/shop";
+import {
+  buildCanonicalShopHref,
+  buildShopHref,
+  getShopResults,
+  withPage,
+  type ShopQuery,
+  type ShopResults,
+} from "@/lib/shop";
+import { buildCollectionPageSchemaGraph } from "@/lib/structured-data";
 import { ButtonLink } from "@/components/ButtonLink";
+import { JsonLd } from "@/components/JsonLd";
 import { Pagination } from "@/components/Pagination";
 import { ProductGrid } from "@/components/ProductGrid";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -38,23 +47,43 @@ function singleFacetLabelOf(query: ShopQuery): string | null {
   return null;
 }
 
-export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
-  const { query } = getShopResults(searchParams);
+function listingTitleOf(query: ShopQuery): string {
   const facetLabel = singleFacetLabelOf(query);
+  return facetLabel === null ? "Shop All Jewellery" : facetLabel;
+}
 
-  const title = facetLabel === null ? "Shop All Jewellery" : facetLabel;
+function listingDescriptionOf(query: ShopQuery): string {
+  const facetLabel = singleFacetLabelOf(query);
   const subject = facetLabel === null ? "the full collection" : facetLabel.toLowerCase();
-  const description = `Shop ${subject} at ${SITE_CONFIG.brandName}: ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
+
+  return `Shop ${subject} at ${SITE_CONFIG.brandName}: ${PRODUCT_DESCRIPTOR}, hand-finished and quality-checked, with free shipping over ${formatRupees(FREE_SHIPPING_THRESHOLD)} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`;
+}
+
+/**
+ * A filter combination that matches nothing still renders — a shopper who lands on it gets
+ * the empty state and a way out — but it is not a page worth putting in an index. Left
+ * indexable, an empty facet is a thin page a crawler spends budget on and a searcher lands
+ * on to find nothing, which is what a soft 404 is. `follow` stays on so the links out of it
+ * are still crawled. See
+ * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md).
+ */
+export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
+  const { query, total } = getShopResults(searchParams);
+
+  const title = listingTitleOf(query);
+  const description = listingDescriptionOf(query);
+  const canonical = buildCanonicalShopHref(query);
 
   return {
     title,
     description,
-    alternates: { canonical: buildShopHref(query) },
+    alternates: { canonical },
+    ...(total === 0 ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type: "website",
       siteName: SITE_CONFIG.brandName,
       locale: "en_IN",
-      url: buildShopHref(query),
+      url: canonical,
       title: `${title} · ${SITE_CONFIG.brandName}`,
       description,
       images: [SITE_CONFIG.ogImage],
@@ -66,6 +95,28 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
       images: [SITE_CONFIG.ogImage.url],
     },
   };
+}
+
+/**
+ * No `ItemList` for a page with nothing on it: an empty list is not a smaller list, it is a
+ * claim about a collection that has no members, on a page already marked `noindex`.
+ */
+function ListingSchema({ results }: { results: ShopResults }): JSX.Element | null {
+  if (results.total === 0) return null;
+
+  return (
+    <JsonLd
+      id="shop-collection-schema"
+      graph={buildCollectionPageSchemaGraph({
+        path: buildCanonicalShopHref(results.query),
+        name: listingTitleOf(results.query),
+        description: listingDescriptionOf(results.query),
+        products: results.items,
+        total: results.total,
+        rangeStart: results.rangeStart,
+      })}
+    />
+  );
 }
 
 function EmptyResults(): JSX.Element {
@@ -95,6 +146,8 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
 
   return (
     <div className="container py-8 sm:py-12 lg:py-16">
+      <ListingSchema results={results} />
+
       <header className="flex flex-col gap-4">
         <SectionHeading
           as="h1"

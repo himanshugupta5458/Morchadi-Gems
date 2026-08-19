@@ -148,11 +148,10 @@ describe("ADR-033 mobile layout", () => {
   /**
    * A right-hand bleed only reaches the viewport edge if it matches the container's padding,
    * and that padding is 20px below `sm` and 24px from `sm`. A single -24px bleed overhangs a
-   * phone by 4px, which is a horizontally scrolling page. Both carousels pair the two.
+   * phone by 4px, which is a horizontally scrolling page. The category carousel pairs the two.
    */
   it.each([
     ["components/CategoryGrid.tsx", "-mr-5", "sm:mr-0"],
-    ["components/TestimonialCarousel.tsx", "-mr-5", "sm:-mr-6"],
   ])("matches %s's bleed to the container padding at each width", (file, base, up) => {
     const source = readFileSync(file, "utf8");
 

@@ -30,16 +30,6 @@ export function formatMilestone(count: number): string {
   return `${wholeNumberFormatter.format(count)}+`;
 }
 
-/** "Ananya Iyer" → "AI". Used for monogram avatars where no photo exists. */
-export function getInitials(fullName: string): string {
-  return fullName
-    .split(" ")
-    .filter((namePart) => namePart.length > 0)
-    .slice(0, 2)
-    .map((namePart) => namePart.charAt(0).toUpperCase())
-    .join("");
-}
-
 /**
  * "2026-08-17" → "17 August 2026". Pinned to UTC so a policy's last-updated line reads the
  * same date wherever it is rendered.

@@ -21,17 +21,21 @@ literal.** Available as `bg-*`, `text-*`, `border-*`, `fill-*`, `ring-*`.
 | `gold-deep` | `#A9863A` | Icons and eyebrow text on white | Large fills |
 | `maroon` | `#4A1621` | Trust labels, button hover fill | Body text |
 | `honey` | `#CBA96C` | Tertiary warm accent | Text |
-| `amber` | `#F5A623` | Star fill — **nothing else** | Any non-rating element |
 | `muted` | `#6B6B6B` | Product names, secondary text, struck-through `mrp` | Anything load-bearing |
 | `sale` | `#E23A2E` | Discounted price and `% off` chip — **nothing else** | Errors, warnings, decoration |
-| `line` | `#E8E4DC` | Every hairline border, empty star fill | Text |
+| `line` | `#E8E4DC` | Every hairline border | Text |
 | `whatsapp` | `#25D366` | The floating WhatsApp button — **nothing else** | Any brand surface |
 
 `whatsapp` is a vendor colour, not a brand colour. It exists so `WhatsAppButton` does not
 write a hex literal; it is off-palette by design and must not spread.
 
-`amber` and `sale` are reserved. On this storefront red always means a discounted price and
-amber always means a rating star. Borrowing either for decoration makes both meaningless.
+`sale` is reserved. On this storefront red always means a discounted price; borrowing it for
+decoration makes it mean nothing.
+
+There was a tenth colour, `amber` (`#F5A623`), reserved for star fill. It was retired with the
+ratings themselves in [ADR-034](../decisions/ADR-034-seo-audit-remediation.md) — a reserved
+colour with nothing left to reserve it for is an invitation to misuse it. It comes back with
+the stars if real reviews are ever collected.
 
 `charcoal` and `ink` currently share a value: `charcoal` names a surface, `ink` names text.
 Use the one that matches intent — they are expected to diverge before they merge.
@@ -280,21 +284,6 @@ See [ADR-026](../decisions/ADR-026-paired-cta-equal-width.md).
 The shelf action that sits opposite a left-aligned `SectionHeading`. Arrow nudges right on
 hover.
 
-### `StarRating`
-
-```tsx
-<StarRating value={4.5} count={128} />
-```
-
-| Prop | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `value` | `number` | — | 0–5, clamped. Fractions render as partial fill |
-| `count` | `number?` | — | Renders as `(128)` and enters the accessible label |
-| `size` | `"sm" \| "md"` | `"sm"` | 12px / 16px |
-
-Fill is a clipped overlay, not a glyph swap, so any fraction renders — not just halves.
-The whole group is one `role="img"` with a text label; individual stars are `aria-hidden`.
-
 ### `PriceDisplay`
 
 ```tsx
@@ -312,16 +301,6 @@ The whole group is one `role="img"` with a text label; individual stars are `ari
 display rules.** `mrp > price` → struck `mrp` in muted, `price` in `sale`, a `% off` chip.
 `mrp === price` → `price` alone in `ink`. Used by `ProductCard`, the product page, and
 `/style-guide` — never hand-roll this markup again.
-
-### `Monogram`
-
-```tsx
-<Monogram name="Ananya Iyer" accent="gold" />
-```
-
-An initials avatar (`getInitials`) in a `gold` or `charcoal` circle. Shared by
-`TestimonialCard` and `ProductReviews`. Sharing the treatment does **not** merge the
-concepts — store testimonials and per-product reviews stay separate types and components.
 
 ### `ProductImagePlaceholder`
 
@@ -349,7 +328,7 @@ Behaviour:
 - The whole card links to `/product/[id]` via a stretched link; Add-to-cart sits above it
 - **The name area is `line-clamp-2 min-h-[2.75rem]`** — two lines of `text-body-sm` at its
   22px line height, reserved whether the name needs them or not, so a one-line name and a
-  two-line name push the rating, price and button to the same offset and a row of cards
+  two-line name push the price and the button to the same offset and a row of cards
   shares one baseline. `min-h` rather than `h`: if the type scale changes the name overflows
   its reservation instead of being clipped inside it
   ([ADR-024](../decisions/ADR-024-funnel-ui-polish.md))
@@ -481,7 +460,6 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | `SelectedOptionsSummary` | Server | `Letter: A · Colour: Silver`; renders nothing when there is no selection |
 | `PersonalizedNote` | Server | &ldquo;Personalized · non-returnable&rdquo;, long form with a `/refund` link |
 | `ProductDetailsList` | Server | Compact spec list under the buy actions; renders every `specs` entry present, and `null` when there are none |
-| `ProductReviews` | Server | Aggregate plus the per-product review list |
 
 #### The gallery, and what changes the main image
 
@@ -507,7 +485,7 @@ the choice. Thumbnails are `<button>`s labelled &ldquo;Show image 2 of 2&rdquo;,
 **The selection lives above both columns.** `ProductSelectionProvider` holds it, because the
 gallery and the buy panel sit in different grid columns and neither can be the other's parent.
 Everything passed to the provider as `children` stays server-rendered, so the title, price,
-description, specs and reviews are still not in the client bundle. See
+description and specs are still not in the client bundle. See
 [ADR-027](../decisions/ADR-027-product-schema-migration.md).
 
 `/style-guide` renders both paths against the two real products, with the swatch control beside
@@ -637,8 +615,8 @@ Adds one unit and raises the toast. Disabled and relabelled &ldquo;Sold out&rdqu
 attribute is the courtesy and the pure function is the rule.
 
 **It takes a `CatalogueEntry`, never a `Product`.** Props crossing into a Client Component are
-serialised into the page, so handing a card the full record would ship its description, details
-and reviews to the browser. `toCatalogueEntry(product)` narrows it to six fields — seven for
+serialised into the page, so handing a card the full record would ship its description and
+details to the browser. `toCatalogueEntry(product)` narrows it to six fields — seven for
 the four products that carry `options`, which the client cart needs in order to re-validate a
 stored choice and fill in defaults.
 
@@ -937,27 +915,21 @@ catalogue belongs to the same rule as copy that quotes a number — say what is 
 once. `PRODUCT_DESCRIPTOR` in `lib/config.ts` is the single definition of how the catalogue is
 described in metadata, read by `SITE_CONFIG.description` and by the shop's `generateMetadata`.
 
-### `TestimonialCard`
+### Social proof: none, deliberately
 
-```tsx
-<TestimonialCard testimonial={testimonial} accent="gold" />
-```
+There is no `TestimonialCard`, no `TestimonialBand`, no `TestimonialCarousel`, no
+`StarRating`, no `ProductReviews` and no `Monogram`. All six were deleted in
+[ADR-034](../decisions/ADR-034-seo-audit-remediation.md), along with the fabricated data they
+rendered: 49 product ratings, 147 product reviews and six store testimonials, none of which any
+customer wrote.
 
-| Prop | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `testimonial` | `Testimonial` | — | `{ name, rating, text }` |
-| `accent` | `"gold" \| "charcoal"` | `"gold"` | Monogram circle fill |
+The home page now closes on the Morchadi Promise trust strip and `/about` on its call to
+action, rather than on a band of invented quotes. `ProductCard` and the product page carry a
+name and a price where a star row used to sit.
 
-A white card with a `StarRating`, the quote, and a `figcaption` carrying a monogram avatar
-built from the initials (`getInitials`) — never a photo. Callers alternate `accent` by index
-so a row does not read as a single block of gold.
-
-Stars stay `amber`, matching `ProductCard`. `amber` is the reserved rating colour; a
-gold-starred testimonial next to an amber-starred product card would make two ratings on the
-same page look like two different scales.
-
-These are **store-level** testimonials, a different thing from the per-product
-`Product.reviews` that render on a product page.
+Nothing here is a styling decision waiting to be reversed. Reviews come back as components
+when there are real reviews to put in them — with the reviewer's own words, a date per review
+and a genuine distribution — and the `amber` token and this section come back with them.
 
 ### Global chrome
 
@@ -1108,29 +1080,6 @@ drawer, over page content. A `whatsapp`-green pill with the glyph plus a "Chat w
 label that collapses to an icon-only circle below `sm`, so it does not sit on top of mobile
 content. A plain `<a>` to `wa.me` built by `buildWhatsAppLink()`; no widget, no script.
 
-### `TestimonialBand` / `TestimonialCarousel`
-
-`TestimonialBand` is the section: `honey` ground, a `tone="honey"` `SectionHeading` and the
-carousel. It reads `getTestimonials()` and passes the data down, so the JSON import stays
-server-side.
-
-| Prop | Type | Default | Notes |
-| --- | --- | --- | --- |
-| `roman` | `string` | `"Customer"` | Heading, roman half |
-| `accent` | `string` | `"Speak"` | Heading, italic half |
-| `subtitle` | `string` | `"What people tell us after the box arrives."` | |
-
-The home page takes the defaults; `/about` runs the same band as "Customer / Love"
-([ADR-017](../decisions/ADR-017-final-content-pass.md)). The data source is deliberately not
-a prop — the JSON import belongs inside the band.
-
-`TestimonialCarousel` is the Client Component. One DOM, two layouts: a snap-scrolling
-carousel with dot pagination below `lg`, a 3-column grid from `lg` where the dots are hidden.
-Scroll position is the single source of truth for the active dot — dots and auto-advance both
-scroll the track rather than setting an index, so the two can never disagree. Auto-advance
-runs at 6s, only below `lg`, and is skipped entirely on hover, on focus within the band, and
-under `prefers-reduced-motion`.
-
 ### `icons.tsx`
 
 `GemOutlineIcon`, `ShieldCheckIcon`, `TruckIcon`, `ReturnArrowIcon`, `CertificateIcon`,
@@ -1149,7 +1098,6 @@ In `lib/format.ts` — components stay presentational, so this logic does not li
 | `formatRupees(amount)` | `"₹18,500"` | `en-IN`, no decimals |
 | `calculateDiscountPercent(mrp, price)` | `number` | `0` when there is no discount |
 | `hasVisibleDiscount(mrp, price)` | `boolean` | Branch on this, not on `mrp > price` |
-| `getInitials(fullName)` | `"AI"` | First letter of the first two words; monogram avatars |
 | `formatMilestone(count)` | `"10,000+"` | `en-IN`, no decimals; about-page stat band and journey |
 | `clampQuantity(value)` | `1`–`10` | In `lib/quantity.ts`. The only definition of a valid quantity |
 

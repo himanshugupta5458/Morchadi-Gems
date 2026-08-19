@@ -26,16 +26,20 @@ export const PRICE_BANDS: readonly PriceBand[] = [
   { slug: "5000-plus", label: "₹5,000 & above", min: 5000, max: null },
 ];
 
-export type SortSlug = "newest" | "rating-desc" | "price-asc" | "price-desc";
+export type SortSlug = "newest" | "price-asc" | "price-desc";
 
 export interface SortOption {
   slug: SortSlug;
   label: string;
 }
 
+/**
+ * No "Top rated". The catalogue carries no ratings — see
+ * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md) — and a sort control is a
+ * claim that the data behind it exists.
+ */
 export const SORT_OPTIONS: readonly SortOption[] = [
   { slug: "newest", label: "Newest first" },
-  { slug: "rating-desc", label: "Top rated" },
   { slug: "price-asc", label: "Price: low to high" },
   { slug: "price-desc", label: "Price: high to low" },
 ];
@@ -191,6 +195,19 @@ export function buildShopHref(query: ShopQuery): string {
   }
 
   return parts.length === 0 ? SHOP_PATH : `${SHOP_PATH}?${parts.join("&")}`;
+}
+
+/**
+ * The URL a listing should declare as its own, which is not always the URL it was reached by.
+ * Sort order rearranges a set of results without changing which results they are, so
+ * `?sort=price-asc` is the same page as the unsorted one and must not compete with it in an
+ * index. Filters and page number are not stripped: each of those genuinely selects a
+ * different set of products, and folding them together would point a crawler at a page that
+ * does not contain what it just read. See
+ * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md).
+ */
+export function buildCanonicalShopHref(query: ShopQuery): string {
+  return buildShopHref({ ...query, sort: DEFAULT_SORT });
 }
 
 function toggle<T>(values: T[], value: T, rank: Map<T, number>): T[] {

@@ -62,9 +62,15 @@ export const SITE_CONFIG = {
    * `npm run generate:brand-assets`. Every page that sets `openGraph` restates this rather
    * than inheriting it (a page's block replaces the layout's), so the constant is the one
    * place the share image is chosen. See ADR-022.
+   *
+   * WebP rather than PNG: the same render costs 25KB instead of 159KB, and this file is
+   * fetched by every crawler and link unfurler that meets the site. `type` is stated because
+   * a consumer that cannot decode WebP should be able to tell before downloading it. See
+   * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md).
    */
   ogImage: {
-    url: "/og/default.png",
+    url: "/og/default.webp",
+    type: "image/webp",
     width: 1200,
     height: 630,
     alt: `${BUSINESS.brandName}: ${PRODUCT_DESCRIPTOR}`,
@@ -118,18 +124,49 @@ export const DISPATCH_BUSINESS_DAYS = 2;
 export const DELIVERY_BUSINESS_DAYS = 7;
 
 /**
+ * The opening hours in the shape `schema.org/OpeningHoursSpecification` asks for: the days as
+ * `DayOfWeek` names, and the two times as 24-hour `HH:MM`. The same three fields the sentence
+ * below is written from, so a crawler and a shopper are told the same thing.
+ */
+export const OPENING_HOURS_CONFIG = {
+  dayOfWeek: BUSINESS.businessHours.days,
+  opens: BUSINESS.businessHours.opens,
+  closes: BUSINESS.businessHours.closes,
+} as const;
+
+/**
+ * The opening hours as a sentence — "Monday to Saturday, 10:00 – 18:00 IST". Assembled from
+ * the same fields the schema reads, so changing the hours in `config/business.ts` moves the
+ * contact page and the structured data together.
+ */
+function toOpeningHoursSentence(): string {
+  const { days, opens, closes, timeZoneLabel } = BUSINESS.businessHours;
+  const [firstDay] = days;
+  const lastDay = days[days.length - 1];
+  const dayRange = days.length === 1 ? firstDay : `${firstDay} to ${lastDay}`;
+
+  return `${dayRange}, ${opens} – ${closes} ${timeZoneLabel}`;
+}
+
+/**
  * Contact details as the site renders them. The business facts come from
- * `config/business.ts`; only the service commitments — when we are open, how quickly we
- * reply — are decided here, because they belong to the site rather than to the entity.
+ * `config/business.ts`; only the service commitments — how quickly we reply — are decided
+ * here, because they belong to the site rather than to the entity.
  */
 export const CONTACT_CONFIG = {
   supportEmail: BUSINESS.supportEmail,
   phoneDisplay: BUSINESS.phoneDisplay,
   phoneHref: toTelHref(BUSINESS.phoneDisplay),
   addressLines: ADDRESS_LINES,
-  hours: "Monday to Saturday, 10:00 – 18:00 IST",
+  hours: toOpeningHoursSentence(),
   replyWindow: "one business day",
 } as const;
+
+/**
+ * Where the registered address sits on a map. Read only by the store schema's `geo`; nothing
+ * the site renders uses it, because the site shows an address rather than a map.
+ */
+export const GEO_CONFIG = BUSINESS.geoCoordinates;
 
 /**
  * Legal and fulfilment details. The entity name and the jurisdiction come from

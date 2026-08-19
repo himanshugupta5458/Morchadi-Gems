@@ -35,8 +35,6 @@ const MOBILE_TO_DESKTOP_PAIRS: ReadonlyArray<{
 
   { file: "components/TrustBadge.tsx", what: "badge padding", mobile: "py-5", desktop: "sm:py-7" },
   { file: "components/TrustStrip.tsx", what: "badge icon", mobile: "h-6 w-6", desktop: "sm:h-7 sm:w-7" },
-  { file: "components/TestimonialCard.tsx", what: "testimonial padding", mobile: "p-4", desktop: "sm:p-6" },
-  { file: "components/TestimonialBand.tsx", what: "testimonial band padding", mobile: "py-10", desktop: "sm:py-16" },
 
   { file: "components/SectionHeading.tsx", what: "section heading type", mobile: "text-heading-sm", desktop: "sm:text-heading-lg" },
   { file: "components/SectionHeading.tsx", what: "section heading gap", mobile: "gap-2", desktop: "sm:gap-3" },

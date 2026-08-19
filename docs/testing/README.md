@@ -78,6 +78,7 @@ purpose.
 | [PLAN-product-schema-migration.md](PLAN-product-schema-migration.md) | [2026-08-18](RESULT-2026-08-18-product-schema-migration.md) — 49/49 pass, 543/543 suite |
 | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) | [2026-08-18](RESULT-2026-08-18-seo-foundations.md) — 58/58 pass, 601/601 suite |
 | *(no plan — deployment verification)* | [2026-08-19](RESULT-2026-08-19-container-build.md) — containerised production build, 43/43 as expected, 653/653 suite |
+| [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) | [2026-08-19](RESULT-2026-08-19-seo-audit-remediation.md) — 70/70 pass, 735/735 suite |
 
 ## Runners
 
@@ -111,7 +112,10 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/button-styles.test.ts` | The two button scales by their literal padding and type classes, that only the box differs, and that no height or line-height class constrains them | [2026-08-18](RESULT-2026-08-18-button-padding.md) |
 | `lib/hero-cta.test.tsx` | The hero call-to-action pair — one grid parent of two equal columns, `fullWidth` on both, one box across the pair, and the gap between them | [2026-08-18](RESULT-2026-08-18-hero-cta-equal-width.md) |
 | `lib/copy-dashes.test.ts` | The em-dash sweep — catalogue strings, and every non-test source file with comments stripped | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) |
-| `lib/structured-data.test.ts` | The JSON-LD builders — Organization, WebSite, Product, Offer, the real return and shipping policies, aggregate rating, reviews, BreadcrumbList, and absolute URLs | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/structured-data.test.ts` | The JSON-LD builders — Organization, the OnlineStore/LocalBusiness node, WebSite, Product, Offer, the real return and shipping policies, the derived price validity, CollectionPage and ItemList, BreadcrumbList, and absolute URLs | [PLAN-seo-foundations.md](PLAN-seo-foundations.md), [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
 | `lib/sitemap.test.ts` | The sitemap — all 49 products, ten categories, populated collections, the excluded checkout and API paths, priorities and dates | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
 | `lib/robots.test.ts` | `robots.txt` — the allow rule, the disallow list shared with the sitemap, and the absolute sitemap link | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
 | `lib/json-ld.test.tsx` | The rendered `application/ld+json` block — every graph parses back, and a hostile product name cannot close the script tag | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/no-fabricated-reviews.test.tsx` | That no rating or review survives anywhere — the catalogue file, the schema, the rendered `ld+json`, a product card, and every source file under `app/` and `components/` — plus the product page's `og:type` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
+| `lib/security-headers.test.ts` | The six response headers and every CSP directive, including the five Cashfree origins the checkout needs and the development-only `unsafe-eval` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
+| `lib/shop-indexing.test.ts` | Canonical URLs with the sort stripped, and `noindex, follow` on a facet that matches nothing | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |

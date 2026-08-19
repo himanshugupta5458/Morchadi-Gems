@@ -29,13 +29,10 @@ import { ProductOptionControlsPreview } from "@/components/ProductOptionControls
 import { QuantityStepperPreview } from "@/components/QuantityStepperPreview";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ViewAllLink } from "@/components/ViewAllLink";
-import { CATEGORIES } from "@/types/product";
+import { CATEGORIES, getCategoryLabel } from "@/types/product";
 import { SectionHeading } from "@/components/SectionHeading";
-import { StarRating } from "@/components/StarRating";
-import { TestimonialCard } from "@/components/TestimonialCard";
 import { TrustBadge } from "@/components/TrustBadge";
 import { TrustStrip } from "@/components/TrustStrip";
-import { getTestimonials } from "@/lib/testimonials";
 import { NAV_MENUS } from "@/lib/navigation";
 import { GemOutlineIcon } from "@/components/icons";
 
@@ -53,7 +50,6 @@ const PALETTE = [
   { name: "gold-deep", hex: "#A9863A", className: "bg-gold-deep" },
   { name: "maroon", hex: "#4A1621", className: "bg-maroon" },
   { name: "honey", hex: "#CBA96C", className: "bg-honey" },
-  { name: "amber", hex: "#F5A623", className: "bg-amber" },
   { name: "muted", hex: "#6B6B6B", className: "bg-muted" },
   { name: "sale", hex: "#E23A2E", className: "bg-sale" },
   { name: "line", hex: "#E8E4DC", className: "bg-line" },
@@ -67,7 +63,6 @@ const TYPE_SCALE = [
   { token: "heading-sm", className: "text-heading-sm" },
 ];
 
-const RATING_SAMPLES = [5, 4.5, 4.2, 3.5, 0];
 
 function Panel({
   title,
@@ -137,8 +132,6 @@ function buildOptionControlsShowcase(images: string[]): Product {
     options: SHOWCASE_OPTIONS,
     specs: { material: "Not a real piece", type: "Style guide fixture" },
     description: "A synthetic record that exists to render every option control at once.",
-    rating: { average: 5, count: 0 },
-    reviews: [],
     stock: { inStock: true },
     flags: { featured: false, isNew: false },
   };
@@ -153,7 +146,6 @@ function withoutDiscount(product: Product): Product {
 }
 
 export default function StyleGuidePage(): JSX.Element {
-  const testimonials = getTestimonials();
   const catalogue = getAllProducts();
   const featured = getFeaturedProducts();
   const discountedProducts = featured.filter((product) =>
@@ -359,18 +351,6 @@ export default function StyleGuidePage(): JSX.Element {
         <ViewAllLink href="/shop?sort=newest" />
       </Panel>
 
-      <Panel title="StarRating" note="Halves render as a partially filled star.">
-        <div className="flex flex-col gap-3">
-          {RATING_SAMPLES.map((rating) => (
-            <div key={rating} className="flex items-center gap-4">
-              <span className="w-10 text-body-sm text-muted">{rating.toFixed(1)}</span>
-              <StarRating value={rating} count={128} />
-              <StarRating value={rating} size="md" />
-            </div>
-          ))}
-        </div>
-      </Panel>
-
       <Panel
         title="Price treatment"
         note="mrp is display-only. Every charged amount is computed on the server from price."
@@ -493,23 +473,6 @@ export default function StyleGuidePage(): JSX.Element {
             galleryImages={optionControlsShowcase.media.images}
           />
         </ProductSelectionProvider>
-      </Panel>
-
-      <Panel
-        title="TestimonialCard"
-        note="Store-level testimonials, distinct from the per-product reviews on a product page. Monogram avatar from initials, no photos, alternating gold and charcoal."
-      >
-        <div className="bg-honey p-8">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {testimonials.slice(0, 3).map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.name}
-                testimonial={testimonial}
-                accent={index % 2 === 0 ? "gold" : "charcoal"}
-              />
-            ))}
-          </div>
-        </div>
       </Panel>
 
       <Panel
@@ -671,10 +634,8 @@ export default function StyleGuidePage(): JSX.Element {
           <dd className="text-ink">{formatRupees(sampleProduct.pricing.price)}</dd>
           <dt className="text-muted">mrp (display only)</dt>
           <dd className="text-ink">{formatRupees(sampleProduct.pricing.mrp)}</dd>
-          <dt className="text-muted">rating</dt>
-          <dd className="text-ink">
-            {sampleProduct.rating.average} from {sampleProduct.rating.count} reviews
-          </dd>
+          <dt className="text-muted">category</dt>
+          <dd className="text-ink">{getCategoryLabel(sampleProduct.category)}</dd>
         </dl>
       </Panel>
     </div>

@@ -12,7 +12,6 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Prose } from "@/components/Prose";
 import { SectionHeading } from "@/components/SectionHeading";
-import { TestimonialBand } from "@/components/TestimonialBand";
 import { TrustBadge } from "@/components/TrustBadge";
 import {
   CertificateIcon,
@@ -260,12 +259,6 @@ export default function AboutPage(): JSX.Element {
           </div>
         </div>
       </section>
-
-      <TestimonialBand
-        roman="Customer"
-        accent="Love"
-        subtitle="What people tell us after the box arrives."
-      />
 
       <section className="border-t border-line bg-white">
         <div className="container flex flex-col items-center gap-7 py-16 text-center lg:py-24">

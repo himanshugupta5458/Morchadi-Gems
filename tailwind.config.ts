@@ -33,7 +33,6 @@ const config: Config = {
         "gold-deep": "#A9863A",
         maroon: "#4A1621",
         honey: "#CBA96C",
-        amber: "#F5A623",
         muted: "#6B6B6B",
         sale: "#E23A2E",
         line: "#E8E4DC",

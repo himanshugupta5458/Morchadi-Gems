@@ -31,6 +31,17 @@ const OG_WIDTH = 1200;
 const OG_HEIGHT = 630;
 const OG_LOGO_WIDTH = 640;
 
+/**
+ * The share card ships as WebP. The same 1200x630 render as a PNG is about 159KB; at this
+ * quality WebP lands under a fifth of that, and the card is fetched by every crawler and every
+ * chat client that unfurls a link to this site.
+ *
+ * Quality rather than lossless: the card is a flat ivory ground with a logo and one line of
+ * letter-spaced text, and lossless WebP saves almost nothing on that. 90 keeps the type edges
+ * clean at the sizes a share card is actually rendered.
+ */
+const OG_WEBP_QUALITY = 90;
+
 async function renderFeather(size, background) {
   const cropped = await sharp(LOGO_PATH).extract(FEATHER_CROP).png().toBuffer();
   const inner = Math.round(size * (1 - 2 * ICON_PADDING_RATIO));
@@ -107,7 +118,7 @@ async function renderOgImage() {
       },
       { input: ogCaptionSvg(), left: 0, top: 0 },
     ])
-    .png()
+    .webp({ quality: OG_WEBP_QUALITY })
     .toBuffer();
 }
 
@@ -132,7 +143,7 @@ async function generateBrandAssets() {
   writeFileSync(join(APP_DIR, "favicon.ico"), packIco(faviconPngs));
 
   const ogImage = await renderOgImage();
-  writeFileSync(join(OG_DIR, "default.png"), ogImage);
+  writeFileSync(join(OG_DIR, "default.webp"), ogImage);
 
   console.log("Morchadi Gems — brand asset generation\n");
   console.log(`Source            public/logo.png`);
@@ -140,7 +151,7 @@ async function generateBrandAssets() {
   console.log(`app/icon.png      ${ICON_SIZE}x${ICON_SIZE}, transparent`);
   console.log(`app/apple-icon.png ${APPLE_ICON_SIZE}x${APPLE_ICON_SIZE}, ivory ground`);
   console.log(`app/favicon.ico   ${FAVICON_SIZES.join(", ")}px`);
-  console.log(`public/og/default.png ${OG_WIDTH}x${OG_HEIGHT}`);
+  console.log(`public/og/default.webp ${OG_WIDTH}x${OG_HEIGHT}, quality ${OG_WEBP_QUALITY}`);
   console.log("\nThis script overwrites. Every output is derived from the logo alone.");
 }
 

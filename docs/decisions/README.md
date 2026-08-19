@@ -82,4 +82,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [028](ADR-028-header-restructure.md) | Two header bands, not three — the announcement moves into the logo row | Accepted |
 | [029](ADR-029-seo-foundations.md) | SEO foundations — a generated sitemap, robots rules, and structured data that repeats the real policies | Accepted |
 | [030](ADR-030-dependency-security-bump.md) | Dependency security — what a patch bump could fix, and why Next.js was not one of them | Accepted |
+| [031](ADR-031-mobile-scale.md) | A mobile scale of its own, added under the desktop layout rather than beside it | Accepted |
 | [032](ADR-032-coolify-docker-deploy.md) | Containerised deploy on Coolify — standalone output and a three-stage Dockerfile | Accepted — narrows the hosting row of [001](ADR-001-tech-stack.md) |
+| [033](ADR-033-mobile-layout-round-two.md) | Four mobile layouts that differ in kind from their desktop counterparts, not just in scale | Accepted |
+| [034](ADR-034-seo-audit-remediation.md) | SEO audit remediation — fabricated reviews removed, security headers added | Accepted — retires the `aggregateRating` and `review` of [029](ADR-029-seo-foundations.md) and the `amber` star token of [004](ADR-004-design-system.md) |

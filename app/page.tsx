@@ -8,7 +8,6 @@ import { CollectionStrip } from "@/components/CollectionStrip";
 import { Hero } from "@/components/Hero";
 import { ProductGrid } from "@/components/ProductGrid";
 import { SectionHeading } from "@/components/SectionHeading";
-import { TestimonialBand } from "@/components/TestimonialBand";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ViewAllLink } from "@/components/ViewAllLink";
 
@@ -99,7 +98,7 @@ export default function HomePage(): JSX.Element {
               roman="Shop"
               accent="Best Sellers"
               align="left"
-              subtitle="The pieces our customers keep coming back for, rated highest across the store."
+              subtitle="The pieces we make most often, and the ones we restock first."
             />
             <div className="hidden shrink-0 sm:flex">
               <ViewAllLink href={buildCollectionHref("best-sellers")} />
@@ -124,8 +123,6 @@ export default function HomePage(): JSX.Element {
           <TrustStrip />
         </div>
       </section>
-
-      <TestimonialBand />
     </>
   );
 }

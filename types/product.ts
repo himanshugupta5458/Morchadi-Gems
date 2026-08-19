@@ -113,12 +113,6 @@ export function isCollectionTag(value: string): value is CollectionSlug {
   return COLLECTION_TAGS.some((slug) => slug === value);
 }
 
-export interface Review {
-  name: string;
-  rating: number;
-  text: string;
-}
-
 /**
  * Which control a choice is made with. It is catalogue data rather than a guess made from
  * the number of values, because two groups of the same size are not the same kind of
@@ -185,11 +179,6 @@ export interface ProductMedia {
  */
 export type ProductSpecs = Record<string, string>;
 
-export interface ProductRating {
-  average: number;
-  count: number;
-}
-
 export interface ProductStock {
   inStock: boolean;
 }
@@ -201,7 +190,7 @@ export interface ProductFlags {
 
 /**
  * The projection of a product the browser is allowed to hold. It carries what a cart line
- * has to render and price and nothing else — no description, specs, or reviews — so the
+ * has to render and price and nothing else — no description and no specs — so the
  * client cart can prune stale ids and read a trusted price without the full catalogue
  * crossing the server boundary. See ADR-010.
  *
@@ -231,9 +220,13 @@ export interface CatalogueEntry {
 
 /**
  * The catalogue record, grouped by what each field is *for* — money, media, specification,
- * reception, availability, merchandising — rather than kept as one flat list of sixteen
- * keys. The grouping is what lets `pricing` be the single named place an amount lives, and
- * lets `specs` and `media` grow without the record's top level growing with them. See
+ * availability, merchandising — rather than kept as one flat list of keys. There is no
+ * reception group: this store has collected no reviews and no ratings, and the record holds
+ * nothing it cannot substantiate. See
+ * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md).
+ *
+ * The grouping is what lets `pricing` be the single named place an amount lives, and lets
+ * `specs` and `media` grow without the record's top level growing with them. See
  * [ADR-027](/docs/decisions/ADR-027-product-schema-migration.md).
  */
 export interface Product {
@@ -251,8 +244,6 @@ export interface Product {
   options?: ProductOption[];
   specs: ProductSpecs;
   description: string;
-  rating: ProductRating;
-  reviews: Review[];
   stock: ProductStock;
   flags: ProductFlags;
 }

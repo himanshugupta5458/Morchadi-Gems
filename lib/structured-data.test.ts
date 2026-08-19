@@ -1,18 +1,23 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { getCategoryLabel, type Product } from "@/types/product";
+import { BUSINESS } from "@/config/business";
 import {
+  CONTACT_CONFIG,
   FLAT_SHIPPING_RATE,
   FREE_SHIPPING_THRESHOLD,
   LEGAL_CONFIG,
+  OPENING_HOURS_CONFIG,
   RETURN_WINDOW_DAYS,
   SITE_CONFIG,
 } from "@/lib/config";
+import { formatRupees } from "@/lib/format";
 import { buildProductBreadcrumb } from "@/lib/breadcrumbs";
 import { getAllProducts, getProductById } from "@/lib/products";
 import {
-  OFFER_PRICE_VALID_UNTIL,
   buildBreadcrumbSchema,
+  buildCollectionPageSchemaGraph,
   buildOfferSchema,
+  buildOnlineStoreSchema,
   buildOrganizationSchema,
   buildProductSchema,
   buildProductSchemaGraph,
@@ -20,7 +25,10 @@ import {
   buildShippingDetailsSchema,
   buildSiteSchemaGraph,
   buildWebSiteSchema,
+  getOfferPriceValidUntil,
   getOrganizationId,
+  getStoreId,
+  getWebSiteId,
   isReturnable,
 } from "@/lib/structured-data";
 
@@ -111,14 +119,146 @@ describe("the WebSite schema", () => {
     expect(JSON.stringify(buildWebSiteSchema())).not.toContain("SearchAction");
   });
 
-  it("ships both site-wide nodes in one graph", () => {
+  it("ships all three site-wide nodes in one graph", () => {
     const graph = buildSiteSchemaGraph();
 
     expect(graph["@context"]).toBe("https://schema.org");
     expect(graph["@graph"].map((node) => node["@type"])).toEqual([
       "Organization",
+      ["OnlineStore", "LocalBusiness"],
       "WebSite",
     ]);
+  });
+});
+
+describe("the store schema", () => {
+  it("is both an online store and a local business, at its own id", () => {
+    const store = buildOnlineStoreSchema();
+
+    expect(store["@type"]).toEqual(["OnlineStore", "LocalBusiness"]);
+    expect(store["@id"]).toBe(`${PRODUCTION_ORIGIN}/#store`);
+    expect(store["@id"]).toBe(getStoreId());
+    expect(store["@id"]).not.toBe(getOrganizationId());
+  });
+
+  it("hangs off the Organization rather than duplicating it as a second business", () => {
+    expect(buildOnlineStoreSchema().parentOrganization["@id"]).toBe(getOrganizationId());
+  });
+
+  it("places the business at the Jaipur address, with coordinates", () => {
+    const store = buildOnlineStoreSchema();
+
+    expect(store.address).toEqual(buildOrganizationSchema().address);
+    expect(store.geo["@type"]).toBe("GeoCoordinates");
+    expect(store.geo.latitude).toBeGreaterThan(26);
+    expect(store.geo.latitude).toBeLessThan(27);
+    expect(store.geo.longitude).toBeGreaterThan(75);
+    expect(store.geo.longitude).toBeLessThan(76);
+  });
+
+  it("states the same opening hours the contact page prints", () => {
+    const [hours] = buildOnlineStoreSchema().openingHoursSpecification;
+
+    expect(hours["@type"]).toBe("OpeningHoursSpecification");
+    expect(hours.dayOfWeek).toEqual([...OPENING_HOURS_CONFIG.dayOfWeek]);
+    expect(hours.opens).toBe(OPENING_HOURS_CONFIG.opens);
+    expect(hours.closes).toBe(OPENING_HOURS_CONFIG.closes);
+    expect(CONTACT_CONFIG.hours).toContain(hours.opens);
+    expect(CONTACT_CONFIG.hours).toContain(hours.closes);
+  });
+
+  it("quotes a price range that spans the real catalogue", () => {
+    const prices = getAllProducts().map((product) => product.pricing.price);
+    const { priceRange } = buildOnlineStoreSchema();
+
+    expect(priceRange).toContain(formatRupees(Math.min(...prices)));
+    expect(priceRange).toContain(formatRupees(Math.max(...prices)));
+  });
+
+  it("carries the contact details and the currency it charges in", () => {
+    const store = buildOnlineStoreSchema();
+
+    expect(store.email).toBe(CONTACT_CONFIG.supportEmail);
+    expect(store.telephone).toBe(CONTACT_CONFIG.phoneDisplay);
+    expect(store.currenciesAccepted).toBe("INR");
+    expect(store.areaServed).toBe("IN");
+  });
+
+  it("takes sameAs from config, claiming no profile the owner has not named", () => {
+    expect(buildOnlineStoreSchema().sameAs).toEqual([...BUSINESS.socialProfileUrls]);
+    expect(buildOnlineStoreSchema().sameAs).toEqual(buildOrganizationSchema().sameAs);
+  });
+});
+
+describe("the price validity date", () => {
+  it("is exactly one year past the day it is derived from", () => {
+    expect(getOfferPriceValidUntil(new Date("2026-08-19T00:00:00Z"))).toBe("2027-08-19");
+    expect(getOfferPriceValidUntil(new Date("2030-01-01T00:00:00Z"))).toBe("2031-01-01");
+  });
+
+  it("is always in the future, which a hardcoded date could not promise", () => {
+    expect(Date.parse(`${getOfferPriceValidUntil()}T00:00:00Z`)).toBeGreaterThan(
+      Date.now(),
+    );
+  });
+});
+
+describe("the collection page schema", () => {
+  const listedProducts = getAllProducts().slice(0, 3);
+
+  function buildFixtureGraph(rangeStart = 1) {
+    return buildCollectionPageSchemaGraph({
+      path: "/shop?category=rings",
+      name: "Rings",
+      description: "Every ring in the collection.",
+      products: listedProducts,
+      total: 20,
+      rangeStart,
+    });
+  }
+
+  it("pairs a CollectionPage with the ItemList it points at", () => {
+    const graph = buildFixtureGraph();
+    const [collectionPage, itemList] = graph["@graph"];
+
+    expect(graph["@graph"].map((node) => node["@type"])).toEqual([
+      "CollectionPage",
+      "ItemList",
+    ]);
+    expect(collectionPage).toHaveProperty(
+      "mainEntity",
+      { "@id": `${PRODUCTION_ORIGIN}/shop?category=rings#itemlist` },
+    );
+    expect(itemList["@id"]).toBe(`${PRODUCTION_ORIGIN}/shop?category=rings#itemlist`);
+  });
+
+  it("belongs to the WebSite the layout publishes", () => {
+    const [collectionPage] = buildFixtureGraph()["@graph"];
+    expect(collectionPage).toHaveProperty("isPartOf", { "@id": getWebSiteId() });
+  });
+
+  it("lists each product shown, by name and absolute url", () => {
+    const [, itemList] = buildFixtureGraph()["@graph"];
+
+    expect(itemList).toHaveProperty("numberOfItems", 20);
+    expect(itemList).toHaveProperty("itemListElement");
+    const elements = "itemListElement" in itemList ? itemList.itemListElement : [];
+
+    expect(elements).toHaveLength(listedProducts.length);
+    elements.forEach((element, index) => {
+      expect(element["@type"]).toBe("ListItem");
+      expect(element.name).toBe(listedProducts[index].name);
+      expect(element.item).toBe(
+        `${PRODUCTION_ORIGIN}/product/${listedProducts[index].id}`,
+      );
+    });
+  });
+
+  it("numbers positions from where the page starts in the whole result set", () => {
+    const [, itemList] = buildFixtureGraph(13)["@graph"];
+    const elements = "itemListElement" in itemList ? itemList.itemListElement : [];
+
+    expect(elements.map((element) => element.position)).toEqual([13, 14, 15]);
   });
 });
 
@@ -145,10 +285,8 @@ describe("the Product offer", () => {
     const offer = buildOfferSchema(requireProduct("P001"));
 
     expect(offer.itemCondition).toBe("https://schema.org/NewCondition");
-    expect(offer.priceValidUntil).toBe(OFFER_PRICE_VALID_UNTIL);
-    expect(Date.parse(`${OFFER_PRICE_VALID_UNTIL}T00:00:00Z`)).toBeGreaterThan(
-      Date.parse("2026-08-18T00:00:00Z"),
-    );
+    expect(offer.priceValidUntil).toBe(getOfferPriceValidUntil());
+    expect(Date.parse(`${offer.priceValidUntil}T00:00:00Z`)).toBeGreaterThan(Date.now());
     expect(offer.seller["@id"]).toBe(getOrganizationId());
   });
 
@@ -310,28 +448,27 @@ describe("the Product schema", () => {
     }
   });
 
-  it("carries an aggregate rating and the reviews behind it on every product", () => {
+  it("claims no rating and no review on any of the 49 products", () => {
     for (const product of getAllProducts()) {
       const schema = buildProductSchema(product);
 
-      expect(product.rating.count).toBeGreaterThan(0);
-      expect(schema.aggregateRating).toBeDefined();
-      expect(schema.aggregateRating?.ratingValue).toBe(product.rating.average);
-      expect(schema.aggregateRating?.reviewCount).toBe(product.rating.count);
-      expect(schema.aggregateRating?.bestRating).toBe(5);
-      expect(schema.review).toHaveLength(product.reviews.length);
+      expect(schema, product.id).not.toHaveProperty("aggregateRating");
+      expect(schema, product.id).not.toHaveProperty("review");
     }
   });
 
-  it("renders a review as an author, a rating and the body they wrote", () => {
-    const product = requireProduct("P001");
-    const [firstReview] = buildProductSchema(product).review ?? [];
-    const [source] = product.reviews;
+  it("emits nothing a review-spam manual action could read, anywhere in the graph", () => {
+    for (const product of getAllProducts()) {
+      const serialised = JSON.stringify(
+        buildProductSchemaGraph(product, buildProductBreadcrumb(product)),
+      );
 
-    expect(firstReview.author).toEqual({ "@type": "Person", name: source.name });
-    expect(firstReview.reviewRating.ratingValue).toBe(source.rating);
-    expect(firstReview.reviewRating.bestRating).toBe(5);
-    expect(firstReview.reviewBody).toBe(source.text);
+      expect(serialised, product.id).not.toContain("aggregateRating");
+      expect(serialised, product.id).not.toContain("AggregateRating");
+      expect(serialised, product.id).not.toContain('"review"');
+      expect(serialised, product.id).not.toContain('"@type":"Review"');
+      expect(serialised, product.id).not.toContain('"@type":"Rating"');
+    }
   });
 
   it("publishes the specs as additional properties", () => {

@@ -64,10 +64,44 @@ export const BUSINESS = {
   },
 
   /**
+   * Where the registered address sits on a map, to four decimal places — roughly a ten-metre
+   * square, which is as precise as a street address deserves to be. Read into the store
+   * schema's `geo`. Approximated to the Mansarovar locality rather than surveyed; replace
+   * both numbers with the pin from the Google Business Profile once that listing exists.
+   */
+  geoCoordinates: {
+    latitude: 26.8505,
+    longitude: 75.7628,
+  },
+
+  /**
+   * When the business answers the phone and the inbox, as a machine can read it. The sentence
+   * the contact page prints is assembled from these three fields in `lib/config.ts`, so the
+   * hours a shopper reads and the hours a search engine reads cannot drift apart. Days use the
+   * schema.org `DayOfWeek` names because that is the one consumer with a fixed vocabulary.
+   */
+  businessHours: {
+    days: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ] as readonly string[],
+    opens: "10:00",
+    closes: "18:00",
+    timeZoneLabel: "IST",
+  },
+
+  /**
    * Public profiles the brand is the same entity on, as absolute URLs. Read into the
-   * Organization schema's `sameAs`, which is how a search engine links this site to those
-   * accounts. Empty until the accounts exist: an unverified profile URL is a claim, and a
-   * wrong one associates the brand with somebody else.
+   * `sameAs` of both the Organization and the store schema, which is how a search engine
+   * links this site to those accounts. Empty until the accounts exist: an unverified profile
+   * URL is a claim, and a wrong one associates the brand with somebody else.
+   *
+   * To populate, paste the profile URLs in — nothing else has to change:
+   * `["https://www.instagram.com/…", "https://www.facebook.com/…"]`.
    */
   socialProfileUrls: [] as readonly string[],
 } as const;

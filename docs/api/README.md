@@ -51,8 +51,17 @@ External calls made, in order (e.g. Cashfree order creation).
 Which secrets this route reads and why they cannot leak to the client.
 ```
 
+## Response headers
+
+Every response this site serves — page, asset and API route alike — carries the six security
+headers defined in `config/security-headers.mjs` and applied by `next.config.mjs` at
+`/:path*`. They are not restated per route because no route varies them. The policy, and the
+five Cashfree origins the Content-Security-Policy has to allow for checkout to work, are in
+[ADR-034](../decisions/ADR-034-seo-audit-remediation.md).
+
 ## Index
 
 | Route | Contract |
 | --- | --- |
 | `POST /api/create-order` | [create-order.md](create-order.md) |
+| `POST /api/notify-admin` | [notify-admin.md](notify-admin.md) |

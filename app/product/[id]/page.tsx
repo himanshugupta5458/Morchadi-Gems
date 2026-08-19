@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCategoryLabel } from "@/types/product";
 import { SITE_CONFIG } from "@/lib/config";
+import { buildProductOpenGraphTypeMeta } from "@/lib/metadata";
 import {
   getAllProducts,
   getPrimaryImage,
@@ -20,15 +21,12 @@ import { ProductGallery } from "@/components/ProductGallery";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ProductImagePanel } from "@/components/ProductImagePanel";
 import { ProductPurchaseActions } from "@/components/ProductPurchaseActions";
-import { ProductReviews } from "@/components/ProductReviews";
 import { SectionHeading } from "@/components/SectionHeading";
-import { StarRating } from "@/components/StarRating";
 
 interface ProductPageProps {
   params: { id: string };
 }
 
-const REVIEWS_ANCHOR_ID = "reviews";
 const RELATED_PRODUCT_COUNT = 4;
 
 /** The catalogue is fixed and ships as code, so every product prerenders. */
@@ -57,8 +55,8 @@ export function generateMetadata({ params }: ProductPageProps): Metadata {
     title: product.name,
     description: product.description,
     alternates: { canonical },
+    other: buildProductOpenGraphTypeMeta(),
     openGraph: {
-      type: "website",
       siteName: SITE_CONFIG.brandName,
       locale: "en_IN",
       url: canonical,
@@ -116,14 +114,6 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
               {product.name}
             </h1>
 
-            <a
-              href={`#${REVIEWS_ANCHOR_ID}`}
-              className="inline-flex w-fit items-center gap-2 text-body-sm text-muted transition-colors duration-250 hover:text-ink"
-            >
-              <StarRating value={product.rating.average} />
-              <span>{product.rating.count} reviews</span>
-            </a>
-
             <PriceDisplay
               mrp={product.pricing.mrp}
               price={product.pricing.price}
@@ -140,20 +130,6 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
           </div>
         </div>
       </ProductSelectionProvider>
-
-      <section
-        id={REVIEWS_ANCHOR_ID}
-        className="mt-10 scroll-mt-24 border-t border-line pt-8 sm:mt-16 sm:pt-12 lg:mt-24 lg:scroll-mt-36 lg:pt-16"
-      >
-        <div className="flex flex-col gap-6 sm:gap-8">
-          <SectionHeading as="h2" roman="Customer" accent="Reviews" align="left" />
-          <ProductReviews
-            reviews={product.reviews}
-            rating={product.rating.average}
-            reviewCount={product.rating.count}
-          />
-        </div>
-      </section>
 
       {relatedProducts.length > 0 ? (
         <section className="mt-10 border-t border-line pt-8 sm:mt-16 sm:pt-12 lg:mt-24 lg:pt-16">

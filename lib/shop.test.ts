@@ -14,6 +14,7 @@ import {
   getShopResults,
   isPriceInBand,
   isProductInCollection,
+  isSortSlug,
   matchesShopQuery,
   parseShopQuery,
   toggleCategory,
@@ -62,8 +63,6 @@ function productFixture(overrides: Partial<Product> = {}): Product {
     media: { images: [] },
     specs: { material: "Brass" },
     description: "A fixture.",
-    rating: { average: 4.5, count: 2 },
-    reviews: [],
     stock: { inStock: true },
     flags: { featured: false, isNew: false },
     ...overrides,
@@ -172,11 +171,13 @@ describe("sorting", () => {
     expect(prices).toEqual([...prices].sort((left, right) => right - left));
   });
 
-  it("orders rating-desc non-increasing across every page", () => {
-    const ratings = collectEveryPage({ sort: "rating-desc" }).map(
-      (product) => product.rating.average,
-    );
-    expect(ratings).toEqual([...ratings].sort((left, right) => right - left));
+  it("offers no rating sort, because the catalogue carries no ratings", () => {
+    expect(SORT_OPTIONS.map((option) => option.slug)).not.toContain("rating-desc");
+    expect(isSortSlug("rating-desc")).toBe(false);
+  });
+
+  it("falls back to the default sort when an unknown sort is asked for", () => {
+    expect(getShopResults({ sort: "rating-desc" }).query.sort).toBe(DEFAULT_SORT);
   });
 
   it("puts new arrivals first under the default sort", () => {
@@ -203,18 +204,19 @@ describe("sorting", () => {
     expect(idsOf(tied)).toEqual([...idsOf(tied)].sort());
   });
 
-  it("breaks rating ties on reviewCount, then id", () => {
-    const everyItem = collectEveryPage({ sort: "rating-desc" });
+  it("breaks newest ties on the featured flag, then id", () => {
+    const everyItem = collectEveryPage({ sort: "newest" });
 
     for (let index = 1; index < everyItem.length; index += 1) {
       const previous = everyItem[index - 1];
       const current = everyItem[index];
-      if (previous.rating.average !== current.rating.average) continue;
+      if (previous.flags.isNew !== current.flags.isNew) continue;
 
-      if (previous.rating.count === current.rating.count) {
+      if (previous.flags.featured === current.flags.featured) {
         expect(previous.id.localeCompare(current.id)).toBeLessThan(0);
       } else {
-        expect(previous.rating.count).toBeGreaterThan(current.rating.count);
+        expect(previous.flags.featured).toBe(true);
+        expect(current.flags.featured).toBe(false);
       }
     }
   });
@@ -356,7 +358,7 @@ describe("purity", () => {
   it("does not mutate the underlying catalogue order", () => {
     const before = idsOf(getAllProducts());
     getShopResults({ sort: "price-desc" });
-    getShopResults({ sort: "rating-desc", category: "rings" });
+    getShopResults({ sort: "price-asc", category: "rings" });
 
     expect(idsOf(getAllProducts())).toEqual(before);
   });
@@ -601,7 +603,7 @@ describe("query mutators reset pagination", () => {
   });
 
   it("resets to page 1 when the sort changes", () => {
-    expect(withSort(startingQuery, "rating-desc" as SortSlug).page).toBe(1);
+    expect(withSort(startingQuery, "price-desc" as SortSlug).page).toBe(1);
   });
 
   it("keeps the page when only the page changes", () => {

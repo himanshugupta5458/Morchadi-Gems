@@ -1,15 +1,12 @@
-import {
-  getCategoryLabel,
-  type Category,
-  type Product,
-  type Review,
-} from "@/types/product";
+import { getCategoryLabel, type Category, type Product } from "@/types/product";
 import { BUSINESS } from "@/config/business";
 import {
   CONTACT_CONFIG,
   DELIVERY_BUSINESS_DAYS,
   DISPATCH_BUSINESS_DAYS,
+  GEO_CONFIG,
   LEGAL_CONFIG,
+  OPENING_HOURS_CONFIG,
   POSTAL_ADDRESS_CONFIG,
   RETURN_WINDOW_DAYS,
   SHIPPING_COUNTRY_CODE,
@@ -17,25 +14,39 @@ import {
   STORY_CONFIG,
   calculateShipping,
 } from "@/lib/config";
+import { formatRupees } from "@/lib/format";
+import { getAllProducts } from "@/lib/products";
 import { toSpecRows } from "@/lib/specs";
 import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
 import type { BreadcrumbStep } from "@/lib/breadcrumbs";
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
-/** Ratings in this catalogue are out of five, with one the lowest a review can give. */
-const BEST_RATING = 5;
-const WORST_RATING = 1;
-
 const CURRENCY = "INR";
 
 /**
- * How long the published price is stated to hold. The catalogue ships as code and has no
- * price calendar, so this is a commitment rather than a lookup: a date far enough out that a
- * crawler does not treat the offer as expired, near enough that it is revisited. Bump it when
- * the catalogue is repriced.
+ * How long the published price is stated to hold, as an offset from the day the page is
+ * built rather than a date written down. A hardcoded date is correct exactly once and then
+ * decays silently into a stale offer; a rolling year is always a plausible commitment for a
+ * catalogue that ships as code and is redeployed whenever it changes.
  */
-export const OFFER_PRICE_VALID_UNTIL = "2027-12-31";
+const PRICE_VALIDITY_YEARS = 1;
+
+/**
+ * The date the published price is stated to hold until, in `YYYY-MM-DD`. Derived from the
+ * build date, so it can never go stale the way a literal did.
+ */
+export function getOfferPriceValidUntil(from: Date = new Date()): string {
+  const validUntil = new Date(
+    Date.UTC(
+      from.getUTCFullYear() + PRICE_VALIDITY_YEARS,
+      from.getUTCMonth(),
+      from.getUTCDate(),
+    ),
+  );
+
+  return validUntil.toISOString().slice(0, 10);
+}
 
 /**
  * Which categories the refund policy calls pierced jewellery, where hygiene rules prevent
@@ -86,6 +97,10 @@ export function getWebSiteId(): string {
   return `${getSiteUrl()}/#website`;
 }
 
+export function getStoreId(): string {
+  return `${getSiteUrl()}/#store`;
+}
+
 export function getProductId(productId: string): string {
   return `${absoluteUrl(`/product/${productId}`)}#product`;
 }
@@ -132,6 +147,46 @@ export interface OrganizationSchema {
   telephone: string;
   address: PostalAddressSchema;
   contactPoint: ContactPointSchema[];
+  sameAs: string[];
+}
+
+export interface GeoCoordinatesSchema {
+  "@type": "GeoCoordinates";
+  latitude: number;
+  longitude: number;
+}
+
+export interface OpeningHoursSpecificationSchema {
+  "@type": "OpeningHoursSpecification";
+  dayOfWeek: string[];
+  opens: string;
+  closes: string;
+}
+
+/**
+ * Two types on one node, and both are true: the entity is a real business at a Jaipur
+ * address, and the only counter it sells over is this website. `LocalBusiness` is what makes
+ * `geo`, `priceRange` and `openingHoursSpecification` legal properties rather than invented
+ * ones; `OnlineStore` is what stops a reader assuming a shop floor. See ADR-034.
+ */
+export interface OnlineStoreSchema {
+  "@type": ["OnlineStore", "LocalBusiness"];
+  "@id": string;
+  name: string;
+  legalName: string;
+  url: string;
+  image: string;
+  description: string;
+  telephone: string;
+  email: string;
+  address: PostalAddressSchema;
+  geo: GeoCoordinatesSchema;
+  openingHoursSpecification: OpeningHoursSpecificationSchema[];
+  priceRange: string;
+  currenciesAccepted: string;
+  paymentAccepted: string;
+  areaServed: string;
+  parentOrganization: SchemaReference;
   sameAs: string[];
 }
 
@@ -201,28 +256,6 @@ export interface OfferSchema {
   shippingDetails: OfferShippingDetailsSchema;
 }
 
-export interface RatingSchema {
-  "@type": "Rating";
-  ratingValue: number;
-  bestRating: number;
-  worstRating: number;
-}
-
-export interface AggregateRatingSchema {
-  "@type": "AggregateRating";
-  ratingValue: number;
-  reviewCount: number;
-  bestRating: number;
-  worstRating: number;
-}
-
-export interface ReviewSchema {
-  "@type": "Review";
-  author: { "@type": "Person"; name: string };
-  reviewRating: RatingSchema;
-  reviewBody: string;
-}
-
 export interface PropertyValueSchema {
   "@type": "PropertyValue";
   name: string;
@@ -241,8 +274,6 @@ export interface ProductSchema {
   url: string;
   offers: OfferSchema;
   additionalProperty: PropertyValueSchema[];
-  aggregateRating?: AggregateRatingSchema;
-  review?: ReviewSchema[];
 }
 
 export interface ListItemSchema {
@@ -258,11 +289,38 @@ export interface BreadcrumbListSchema {
   itemListElement: ListItemSchema[];
 }
 
+/**
+ * An `ItemList` of products, so a listing page tells a crawler which pieces it shows and in
+ * what order rather than leaving it to infer them from the markup. Positions are absolute
+ * across the whole result set, not per page, so page two starts at thirteen.
+ */
+export interface ItemListSchema {
+  "@type": "ItemList";
+  "@id": string;
+  name: string;
+  numberOfItems: number;
+  itemListOrder: string;
+  itemListElement: ListItemSchema[];
+}
+
+export interface CollectionPageSchema {
+  "@type": "CollectionPage";
+  "@id": string;
+  name: string;
+  description: string;
+  url: string;
+  isPartOf: SchemaReference;
+  mainEntity: SchemaReference;
+}
+
 export type SchemaNode =
   | OrganizationSchema
+  | OnlineStoreSchema
   | WebSiteSchema
   | ProductSchema
-  | BreadcrumbListSchema;
+  | BreadcrumbListSchema
+  | CollectionPageSchema
+  | ItemListSchema;
 
 export interface SchemaGraph {
   "@context": typeof SCHEMA_CONTEXT;
@@ -306,6 +364,61 @@ export function buildOrganizationSchema(): OrganizationSchema {
 }
 
 /**
+ * The band the catalogue actually spans, read from the catalogue rather than written down.
+ * `priceRange` is a free-text field, and the honest thing to put in it is the real cheapest
+ * and dearest piece on sale today.
+ */
+function buildPriceRange(): string {
+  const prices = getAllProducts().map((product) => product.pricing.price);
+  return `${formatRupees(Math.min(...prices))} – ${formatRupees(Math.max(...prices))}`;
+}
+
+/**
+ * The selling entity as a place and a shopfront. It is a separate node from the
+ * `Organization` rather than more properties on it: the Organization is who publishes this
+ * site, and this is where and when and at what prices that organization trades. The two are
+ * joined by `parentOrganization`, so a crawler reads one entity described twice rather than
+ * two businesses.
+ *
+ * `sameAs` comes from `config/business.ts` and is empty until the owner has profiles to name.
+ * An empty array is the honest state — it claims no accounts — and populating it is a
+ * one-line edit in that file. See ADR-034.
+ */
+export function buildOnlineStoreSchema(): OnlineStoreSchema {
+  return {
+    "@type": ["OnlineStore", "LocalBusiness"],
+    "@id": getStoreId(),
+    name: SITE_CONFIG.brandName,
+    legalName: LEGAL_CONFIG.entityName,
+    url: `${getSiteUrl()}/`,
+    image: absoluteUrl(SITE_CONFIG.ogImage.url),
+    description: SITE_CONFIG.description,
+    telephone: BUSINESS.phoneDisplay,
+    email: CONTACT_CONFIG.supportEmail,
+    address: buildPostalAddress(),
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: GEO_CONFIG.latitude,
+      longitude: GEO_CONFIG.longitude,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [...OPENING_HOURS_CONFIG.dayOfWeek],
+        opens: OPENING_HOURS_CONFIG.opens,
+        closes: OPENING_HOURS_CONFIG.closes,
+      },
+    ],
+    priceRange: buildPriceRange(),
+    currenciesAccepted: CURRENCY,
+    paymentAccepted: LEGAL_CONFIG.paymentProvider,
+    areaServed: SHIPPING_COUNTRY_CODE,
+    parentOrganization: { "@id": getOrganizationId() },
+    sameAs: [...BUSINESS.socialProfileUrls],
+  };
+}
+
+/**
  * No `SearchAction`. The site has no search endpoint, and a `potentialAction` pointing at a
  * URL that does not resolve is a claim a crawler will follow and find broken.
  */
@@ -324,7 +437,11 @@ export function buildWebSiteSchema(): WebSiteSchema {
 export function buildSiteSchemaGraph(): SchemaGraph {
   return {
     "@context": SCHEMA_CONTEXT,
-    "@graph": [buildOrganizationSchema(), buildWebSiteSchema()],
+    "@graph": [
+      buildOrganizationSchema(),
+      buildOnlineStoreSchema(),
+      buildWebSiteSchema(),
+    ],
   };
 }
 
@@ -407,7 +524,7 @@ export function buildOfferSchema(product: Product): OfferSchema {
     url,
     price: product.pricing.price,
     priceCurrency: CURRENCY,
-    priceValidUntil: OFFER_PRICE_VALID_UNTIL,
+    priceValidUntil: getOfferPriceValidUntil(),
     availability: product.stock.inStock
       ? `${SCHEMA_CONTEXT}/InStock`
       : `${SCHEMA_CONTEXT}/OutOfStock`,
@@ -415,20 +532,6 @@ export function buildOfferSchema(product: Product): OfferSchema {
     seller: { "@id": getOrganizationId() },
     hasMerchantReturnPolicy: buildReturnPolicySchema(product),
     shippingDetails: buildShippingDetailsSchema(product),
-  };
-}
-
-function toReviewSchema(review: Review): ReviewSchema {
-  return {
-    "@type": "Review",
-    author: { "@type": "Person", name: review.name },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: review.rating,
-      bestRating: BEST_RATING,
-      worstRating: WORST_RATING,
-    },
-    reviewBody: review.text,
   };
 }
 
@@ -450,10 +553,14 @@ function collectProductImages(product: Product): string[] {
     .map(absoluteUrl);
 }
 
+/**
+ * No `aggregateRating` and no `review`. This store has collected no reviews, and a rating a
+ * shopper cannot verify is a claim rather than a fact — the one kind of structured data that
+ * earns a manual action rather than a rich result. The properties come back when real
+ * reviews exist, with the reviewers' own words and dates. See
+ * [ADR-034](/docs/decisions/ADR-034-seo-audit-remediation.md).
+ */
 export function buildProductSchema(product: Product): ProductSchema {
-  const hasRatings = product.rating.count > 0;
-  const hasReviews = product.reviews.length > 0;
-
   return {
     "@type": "Product",
     "@id": getProductId(product.id),
@@ -470,18 +577,6 @@ export function buildProductSchema(product: Product): ProductSchema {
       name: spec.label,
       value: spec.value,
     })),
-    ...(hasRatings
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: product.rating.average,
-            reviewCount: product.rating.count,
-            bestRating: BEST_RATING,
-            worstRating: WORST_RATING,
-          } satisfies AggregateRatingSchema,
-        }
-      : {}),
-    ...(hasReviews ? { review: product.reviews.map(toReviewSchema) } : {}),
   };
 }
 
@@ -502,6 +597,64 @@ export function buildBreadcrumbSchema(
       name: step.label,
       ...(step.href === undefined ? {} : { item: absoluteUrl(step.href) }),
     })),
+  };
+}
+
+export interface CollectionPageInput {
+  /** The canonical path of the listing, sort stripped — what both nodes call themselves. */
+  path: string;
+  name: string;
+  description: string;
+  products: Product[];
+  /** How many products match the filters in total, not just on this page. */
+  total: number;
+  /** 1-based position of the first product on this page within the whole result set. */
+  rangeStart: number;
+}
+
+/**
+ * What a filtered listing is and what is on it: a `CollectionPage` naming the page, and the
+ * `ItemList` of the pieces it actually shows, in the order it shows them. Only the products
+ * rendered on this page are listed — claiming the other pages' products would describe a
+ * page the crawler is not looking at.
+ */
+export function buildCollectionPageSchemaGraph({
+  path,
+  name,
+  description,
+  products,
+  total,
+  rangeStart,
+}: CollectionPageInput): SchemaGraph {
+  const url = absoluteUrl(path);
+  const itemListId = `${url}#itemlist`;
+
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${url}#collectionpage`,
+        name,
+        description,
+        url,
+        isPartOf: { "@id": getWebSiteId() },
+        mainEntity: { "@id": itemListId },
+      },
+      {
+        "@type": "ItemList",
+        "@id": itemListId,
+        name,
+        numberOfItems: total,
+        itemListOrder: `${SCHEMA_CONTEXT}/ItemListOrderAscending`,
+        itemListElement: products.map((product, index) => ({
+          "@type": "ListItem",
+          position: rangeStart + index,
+          name: product.name,
+          item: absoluteUrl(`/product/${product.id}`),
+        })),
+      },
+    ],
   };
 }
 

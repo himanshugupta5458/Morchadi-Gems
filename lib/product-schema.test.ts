@@ -10,8 +10,6 @@ import { getAllProducts, getPrimaryImage, toCatalogueEntry } from "@/lib/product
 import { variantImageKey } from "@/lib/variant-images";
 
 const CATALOGUE_SIZE = 49;
-const MIN_RATING = 3.5;
-const MAX_RATING = 5;
 
 const catalogue = getAllProducts();
 
@@ -58,14 +56,18 @@ describe("the migrated catalogue", () => {
     }
   });
 
-  it("groups reception under rating and availability under stock and flags", () => {
+  it("groups availability under stock and flags", () => {
     for (const product of catalogue) {
-      expect(product.rating.average, product.id).toBeGreaterThanOrEqual(MIN_RATING);
-      expect(product.rating.average, product.id).toBeLessThanOrEqual(MAX_RATING);
-      expect(Number.isInteger(product.rating.count), product.id).toBe(true);
       expect(typeof product.stock.inStock, product.id).toBe("boolean");
       expect(typeof product.flags.featured, product.id).toBe("boolean");
       expect(typeof product.flags.isNew, product.id).toBe("boolean");
+    }
+  });
+
+  it("carries no rating and no review on any record", () => {
+    for (const product of catalogue) {
+      expect(product, product.id).not.toHaveProperty("rating");
+      expect(product, product.id).not.toHaveProperty("reviews");
     }
   });
 

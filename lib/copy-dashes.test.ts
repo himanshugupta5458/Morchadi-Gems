@@ -40,7 +40,6 @@ describe("the em-dash sweep", () => {
         product.description,
         ...Object.keys(product.specs),
         ...Object.values(product.specs),
-        ...product.reviews.flatMap((review) => [review.name, review.text]),
         ...(product.options ?? []).flatMap((option) => [option.name, ...option.values]),
       ];
 
