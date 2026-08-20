@@ -1,5 +1,13 @@
+import { headers } from "next/headers";
 import type { ReactNode } from "react";
+import {
+  resolveAdminLoginHref,
+  resolveAdminLogoutHref,
+  resolveAdminOrdersHref,
+  resolveRequestHostname,
+} from "@/lib/admin-routing";
 import { requireAdminSession } from "@/lib/admin-session";
+import { AdminNav } from "@/components/AdminNav";
 
 /**
  * Never prerendered: the answer depends on a cookie, and a cached one would be somebody
@@ -20,13 +28,30 @@ export const dynamic = "force-dynamic";
  * the check by being here; the group adds no URL segment, so `app/admin/(protected)/page.tsx`
  * is still served at `/admin`. See
  * [ADR-041](/docs/decisions/ADR-041-admin-subdomain-and-auth.md).
+ *
+ * It also carries the panel's nav, so the sections and the way out are present on every
+ * protected page rather than on whichever one remembered to render them. The identity the
+ * check already resolved is what the nav names, so this costs no extra query.
  */
 export default async function ProtectedAdminLayout({
   children,
 }: {
   children: ReactNode;
 }): Promise<JSX.Element> {
-  await requireAdminSession();
+  const admin = await requireAdminSession();
+  const hostname = resolveRequestHostname((name) => headers().get(name));
 
-  return <>{children}</>;
+  return (
+    <div className="flex flex-col gap-8">
+      <AdminNav
+        username={admin.username}
+        links={[
+          { label: "Orders", href: resolveAdminOrdersHref(hostname), isCurrent: true },
+        ]}
+        logoutApiHref={resolveAdminLogoutHref(hostname)}
+        signedOutHref={resolveAdminLoginHref(hostname)}
+      />
+      {children}
+    </div>
+  );
 }

@@ -120,7 +120,7 @@ export function PaymentCheckout(): JSX.Element {
     }
 
     setStatus("redirecting");
-    stampCheckoutDataOrder(body.orderId);
+    stampCheckoutDataOrder(body.cashfreeOrderId, body.trackingId);
 
     try {
       const { load } = await import("@cashfreepayments/cashfree-js");

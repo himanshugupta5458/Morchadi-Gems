@@ -34,6 +34,8 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { TrustBadge } from "@/components/TrustBadge";
 import { TrustStrip } from "@/components/TrustStrip";
 import { NAV_MENUS } from "@/lib/navigation";
+import { ORDER_STATUSES } from "@/lib/order-status";
+import { OrderStatusBadge } from "@/components/OrderStatusBadge";
 import { GemOutlineIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -626,6 +628,17 @@ export default function StyleGuidePage(): JSX.Element {
         note="The multi-line sibling of TextField, composing the same FormField shell so the label, error line and aria wiring are identical. Used by the contact form."
       >
         <TextAreaFieldPreview />
+      </Panel>
+
+      <Panel
+        title="Order status badges"
+        note="Admin-only, and the one part of this page a shopper never sees. Seven fulfilment statuses, each with its own hue from the status-* token group, all sharing one shape so the colour is the only variable. The label is always written out: the hue makes a fifty-row list scannable, it is never what makes a row readable."
+      >
+        <div className="flex flex-wrap gap-3">
+          {ORDER_STATUSES.map((status) => (
+            <OrderStatusBadge key={status} status={status} />
+          ))}
+        </div>
       </Panel>
 
       <Panel title="Sample product record">

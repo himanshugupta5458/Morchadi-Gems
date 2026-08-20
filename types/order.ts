@@ -37,8 +37,23 @@ export interface CreateOrderRequest {
   utm?: UtmParams;
 }
 
+/**
+ * The 200 body of `/api/create-order`, carrying **two** order identifiers that are not
+ * interchangeable, which is why neither is called `orderId`.
+ *
+ * `cashfreeOrderId` is the payment gateway's `MG_…` reference. It is what the return URL
+ * carries, what `/api/verify-order` looks a payment up by, and what a refund is issued
+ * against — machinery, not something anyone reads aloud.
+ *
+ * `trackingId` is `orders.id`, the ten-character code from `lib/order-id.ts`. It is the
+ * customer-facing order number: the one shown on the confirmation page, quoted over WhatsApp
+ * and typed into the tracking box. It is `null` when the Postgres capture failed — that write
+ * is deliberately allowed to fail without failing checkout (ADR-042), so a shopper can reach
+ * a confirmed payment with no order number, and every consumer here must handle it.
+ */
 export interface CreateOrderSuccess {
-  orderId: string;
+  cashfreeOrderId: string;
+  trackingId: string | null;
   paymentSessionId: string;
   mode: CashfreeMode;
 }

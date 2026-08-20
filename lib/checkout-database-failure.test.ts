@@ -94,11 +94,42 @@ describe("POST /api/create-order with Postgres unreachable", () => {
     expect(response.status).toBe(200);
     expect(response.headers.get("Cache-Control")).toBe("no-store");
     expect(body.paymentSessionId).toBe("session_database_down");
-    expect(body.orderId).toMatch(/^MG_\d{13}_[0-9a-z]{8}$/);
+    expect(body.cashfreeOrderId).toMatch(/^MG_\d{13}_[0-9a-z]{8}$/);
     expect(body.mode).toBe("sandbox");
-    expect(Object.keys(body).sort()).toEqual(["mode", "orderId", "paymentSessionId"]);
+    expect(Object.keys(body).sort()).toEqual([
+      "cashfreeOrderId",
+      "mode",
+      "paymentSessionId",
+      "trackingId",
+    ]);
 
     expect(cashfreeCalls).toBe(1);
+  });
+
+  it("returns a null order number rather than inventing one the database never issued", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(
+        async (_url: string, init: RequestInit) =>
+          new Response(
+            JSON.stringify({
+              order_id: JSON.parse(String(init.body)).order_id,
+              order_status: "ACTIVE",
+              payment_session_id: "session_database_down",
+            }),
+            { status: 200, headers: { "Content-Type": "application/json" } },
+          ),
+      ),
+    );
+
+    const body = await (
+      await postCreateOrder({
+        items: [{ productId: "P001", qty: 1 }],
+        address: FAILURE_TEST_ADDRESS,
+      })
+    ).json();
+
+    expect(body.trackingId).toBeNull();
   });
 
   it("says nothing about the database in the response, and everything about it in the log", async () => {

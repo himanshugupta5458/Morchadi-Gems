@@ -163,6 +163,12 @@ function readPaymentSessionId(payload: unknown): string | null {
  * recorded in the order's metadata, and an order carrying neither sends the request it always
  * sent.
  *
+ * The 200 body names both of the order's identifiers and calls neither of them `orderId`:
+ * `cashfreeOrderId` is the gateway's reference that the return URL and `/api/verify-order`
+ * are keyed on, and `trackingId` is the ten-character order number the shopper is shown.
+ * `trackingId` is null when the Postgres capture failed, because that write may fail without
+ * failing the checkout ([ADR-043](/docs/decisions/ADR-043-order-id-as-primary-identifier.md)).
+ *
  * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md),
  * [ADR-019](/docs/decisions/ADR-019-product-options.md) and
  * [the contract](/docs/api/create-order.md).
@@ -331,7 +337,12 @@ export async function POST(request: Request): Promise<NextResponse> {
     );
   }
 
-  const success: CreateOrderSuccess = { orderId, paymentSessionId, mode };
+  const success: CreateOrderSuccess = {
+    cashfreeOrderId: orderId,
+    trackingId: capture.kind === "CAPTURED" ? capture.orderId : null,
+    paymentSessionId,
+    mode,
+  };
 
   return NextResponse.json(success, {
     status: 200,

@@ -36,6 +36,10 @@ vi.mock("next/link", () => ({
 const ORDER_ID = "MG_1786968394909_v8j3wggq";
 const OTHER_ORDER_ID = "MG_1786968300000_aaaaaaaa";
 
+/** The ten-character `orders.id` the shopper is shown, and one belonging to another order. */
+const TRACKING_ID = "W2ACEHACUU";
+const OTHER_TRACKING_ID = "4KQPMR7TDX";
+
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
@@ -195,13 +199,14 @@ describe("/order-confirmation — while verification is in flight", () => {
 describe("/order-confirmation — PAID", () => {
   it("shows the order number, the server's amount, and the delivery estimate", async () => {
     seedCart();
-    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    seedBundle(makeBundle({ orderId: ORDER_ID, trackingId: TRACKING_ID }));
     respondWith(verified("PAID", 2099));
 
     await renderConfirmation(`order_id=${ORDER_ID}`);
 
     expect(screen.getByText("Your order is confirmed")).toBeTruthy();
-    expect(screen.getByText(ORDER_ID)).toBeTruthy();
+    expect(screen.getByText("Your order number")).toBeTruthy();
+    expect(screen.getByText(TRACKING_ID)).toBeTruthy();
     expect(screen.getAllByText("₹2,099").length).toBeGreaterThanOrEqual(1);
     expect(
       screen.getByText(
@@ -279,6 +284,7 @@ describe("/order-confirmation — PAID", () => {
 
     expect(screen.getByText("Your order is confirmed")).toBeTruthy();
     expect(screen.getByText(ORDER_ID)).toBeTruthy();
+    expect(screen.getByText("Payment reference")).toBeTruthy();
     expect(screen.getByText("₹2,099")).toBeTruthy();
     expect(screen.queryByText("What you ordered")).toBeNull();
     expect(storedCartItemCount()).toBe(0);
@@ -473,6 +479,86 @@ describe("/order-confirmation — telling the owner about a paid order", () => {
 
     expect(screen.getByText("Your order is confirmed")).toBeTruthy();
     expect(storedCartItemCount()).toBe(0);
+  });
+});
+
+describe("/order-confirmation — the ten-character order number", () => {
+  it("is the prominent identifier on a confirmed order", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID, trackingId: TRACKING_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    const heading = screen.getByText("Your order number");
+    const shownNumber = screen.getByText(TRACKING_ID);
+
+    expect(heading).toBeTruthy();
+    expect(shownNumber.tagName).toBe("STRONG");
+    expect(shownNumber.className).toContain("text-heading");
+  });
+
+  it("keeps the Cashfree reference, in fine print rather than as the order's name", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID, trackingId: TRACKING_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText(`Payment reference ${ORDER_ID}`)).toBeTruthy();
+    expect(screen.queryByText("Order number")).toBeNull();
+  });
+
+  it("names the order on a pending payment too, which is when it is most worth quoting", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID, trackingId: TRACKING_ID }));
+    respondWith(verified("PENDING", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText(`Order number ${TRACKING_ID}`)).toBeTruthy();
+  });
+
+  it("names it on a failed payment as well", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID, trackingId: TRACKING_ID }));
+    respondWith(verified("FAILED", null));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(
+      screen.getByText(
+        `Order number ${TRACKING_ID}. If your bank shows a charge against it, email us at`,
+        { exact: false },
+      ),
+    ).toBeTruthy();
+  });
+
+  it("refuses an order number carried by a bundle from a different checkout", async () => {
+    seedBundle(makeBundle({ orderId: OTHER_ORDER_ID, trackingId: OTHER_TRACKING_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.queryByText(OTHER_TRACKING_ID)).toBeNull();
+    expect(screen.queryByText("Your order number")).toBeNull();
+  });
+
+  it("falls back to the Cashfree reference when there is no order number to show", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText("Your order is confirmed")).toBeTruthy();
+    expect(screen.getByText("Payment reference")).toBeTruthy();
+    expect(screen.getByText(ORDER_ID)).toBeTruthy();
+    expect(screen.queryByText("Your order number")).toBeNull();
+  });
+
+  it("does the same in a footnote when the payment is still settling", async () => {
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PENDING", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(screen.getByText(`Payment reference ${ORDER_ID}`)).toBeTruthy();
   });
 });
 

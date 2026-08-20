@@ -5,6 +5,7 @@ import {
   MAX_VERIFY_ATTEMPTS,
   PENDING_POLL_INTERVAL_MS,
   canDisplayBundleForOrder,
+  readBundleTrackingId,
   describeVerificationFailure,
   isMorchadiOrderId,
   normaliseCashfreeOrder,
@@ -291,6 +292,47 @@ describe("canDisplayBundleForOrder — the stale-bundle guard", () => {
         ),
       ).toBe(false);
     }
+  });
+});
+
+describe("readBundleTrackingId — which order number may be shown", () => {
+  const TRACKING_ID = "W2ACEHACUU";
+
+  it("returns the order number of the order actually being confirmed", () => {
+    expect(
+      readBundleTrackingId(
+        makeBundle({ orderId: PAID_ORDER_ID, trackingId: TRACKING_ID }),
+        PAID_ORDER_ID,
+      ),
+    ).toBe(TRACKING_ID);
+  });
+
+  it("refuses one carried by a bundle stamped with a different Cashfree order", () => {
+    expect(
+      readBundleTrackingId(
+        makeBundle({ orderId: "MG_1786968300000_aaaaaaaa", trackingId: TRACKING_ID }),
+        PAID_ORDER_ID,
+      ),
+    ).toBeNull();
+  });
+
+  it("refuses an unstamped bundle, which cannot say which order it belongs to", () => {
+    expect(readBundleTrackingId(makeBundle({ trackingId: TRACKING_ID }), PAID_ORDER_ID)).toBeNull();
+  });
+
+  it("has nothing to return for a bundle written before the order was captured", () => {
+    expect(readBundleTrackingId(makeBundle({ orderId: PAID_ORDER_ID }), PAID_ORDER_ID)).toBeNull();
+  });
+
+  it("has nothing to return when the bundle is gone", () => {
+    expect(readBundleTrackingId(null, PAID_ORDER_ID)).toBeNull();
+  });
+
+  it("does not require the payment to have succeeded, unlike the bundle guard", () => {
+    const bundle = makeBundle({ orderId: PAID_ORDER_ID, trackingId: TRACKING_ID });
+
+    expect(readBundleTrackingId(bundle, PAID_ORDER_ID)).toBe(TRACKING_ID);
+    expect(canDisplayBundleForOrder(bundle, makeVerified({ status: "FAILED" }))).toBe(false);
   });
 });
 

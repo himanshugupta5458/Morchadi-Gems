@@ -29,6 +29,40 @@ literal.** Available as `bg-*`, `text-*`, `border-*`, `fill-*`, `ring-*`.
 `whatsapp` is a vendor colour, not a brand colour. It exists so `WhatsAppButton` does not
 write a hex literal; it is off-palette by design and must not spread.
 
+### `status-*` — operational colour, admin only
+
+Seven hues, one per `OrderStatus`, added in prompt 49 for the admin order list
+([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)). **No storefront surface
+uses them and none may start.** They are deliberately outside the palette above: a status badge
+has to be scannable down a column of fifty rows, which is a different job from anything the shop
+front asks of colour.
+
+| Token | Hex | Status |
+| --- | --- | --- |
+| `status-placed` | `#6B6B6B` | Placed — neutral, nothing has happened yet |
+| `status-packed` | `#A9863A` | Packed |
+| `status-shipped` | `#2F6E8F` | Shipped |
+| `status-delivered` | `#2E7D5B` | Delivered |
+| `status-rto` | `#4A1621` | RTO |
+| `status-returned` | `#7A4E86` | Returned |
+| `status-cancelled` | `#E23A2E` | Cancelled |
+
+One recipe, applied identically to all seven, so the hue is the only variable:
+`bg-{hue}/10 border-{hue}/35 text-{hue}`. It is written once, in
+`orderStatusBadgeClasses` in `lib/order-status.ts`, and rendered by `OrderStatusBadge`. The
+style guide shows all seven side by side, which is the only way to check that they are actually
+distinguishable.
+
+`rto` and `returned` get different hues on purpose. They are the two statuses the person
+deciding whether to refund has to tell apart, and a badge that groups them is worse than no
+badge. `status-rto` reuses `maroon`'s value and `status-cancelled` reuses `sale`'s; they are
+named separately because they are a different vocabulary, and the storefront values are free to
+move without dragging the admin panel with them.
+
+**Colour is never the only signal.** Every badge writes its label out. A monochrome printout, a
+screenshot in a WhatsApp thread and an operator who cannot separate two of these hues all read
+the same list.
+
 `sale` is reserved. On this storefront red always means a discounted price; borrowing it for
 decoration makes it mean nothing.
 

@@ -319,3 +319,40 @@ describe("the checkout bundle carries recorded choices", () => {
     expect(parsed?.cart[0]).not.toHaveProperty("selectedOptions");
   });
 });
+
+describe("the two order identifiers stamped onto a bundle", () => {
+  const CASHFREE_ORDER_ID = "MG_1786968394909_v8j3wggq";
+  const TRACKING_ID = "W2ACEHACUU";
+
+  function stamped(overrides: Record<string, unknown>): CheckoutData | null {
+    const bundle = buildCheckoutData(linesFor({ "nk-001": 1 }), ADDRESS);
+    return parseCheckoutData(JSON.stringify({ ...bundle, ...overrides }));
+  }
+
+  it("survives the round trip through sessionStorage", () => {
+    const parsed = stamped({ orderId: CASHFREE_ORDER_ID, trackingId: TRACKING_ID });
+
+    expect(parsed?.orderId).toBe(CASHFREE_ORDER_ID);
+    expect(parsed?.trackingId).toBe(TRACKING_ID);
+  });
+
+  it("is simply absent on a bundle that has not reached payment", () => {
+    const parsed = stamped({});
+
+    expect(parsed).not.toHaveProperty("orderId");
+    expect(parsed).not.toHaveProperty("trackingId");
+  });
+
+  it("drops an order number that is not a usable string, rather than the bundle", () => {
+    for (const unusable of ["", 12345, null, { id: TRACKING_ID }]) {
+      const parsed = stamped({ orderId: CASHFREE_ORDER_ID, trackingId: unusable });
+
+      expect(parsed?.orderId).toBe(CASHFREE_ORDER_ID);
+      expect(parsed).not.toHaveProperty("trackingId");
+    }
+  });
+
+  it("keeps the Cashfree stamp readable when the order number is missing", () => {
+    expect(stamped({ orderId: CASHFREE_ORDER_ID })?.orderId).toBe(CASHFREE_ORDER_ID);
+  });
+});

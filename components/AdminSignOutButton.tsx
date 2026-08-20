@@ -17,6 +17,9 @@ export interface AdminSignOutButtonProps {
  *
  * The navigation afterwards is a full page load, so the browser re-enters through middleware
  * without the cookie it has just been told to discard.
+ *
+ * It sits in the panel's nav bar, so it is the in-card `sm` scale rather than the page-level
+ * `md` one: signing out is always available and never the thing an operator came to do.
  */
 export function AdminSignOutButton({
   logoutApiHref,
@@ -35,15 +38,13 @@ export function AdminSignOutButton({
   }
 
   return (
-    <div className="mx-auto w-full sm:max-w-[14rem]">
-      <Button
-        variant="secondary"
-        fullWidth
-        disabled={isSigningOut}
-        onClick={() => void signOut()}
-      >
-        {isSigningOut ? "Signing out…" : "Sign out"}
-      </Button>
-    </div>
+    <Button
+      variant="secondary"
+      size="sm"
+      disabled={isSigningOut}
+      onClick={() => void signOut()}
+    >
+      {isSigningOut ? "Signing out…" : "Sign out"}
+    </Button>
   );
 }

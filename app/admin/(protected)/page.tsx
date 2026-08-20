@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import {
-  resolveAdminLoginHref,
-  resolveAdminLogoutHref,
-  resolveRequestHostname,
-} from "@/lib/admin-routing";
-import { requireAdminSession } from "@/lib/admin-session";
-import { AdminSignOutButton } from "@/components/AdminSignOutButton";
+import { redirect } from "next/navigation";
+import { resolveAdminOrdersHref, resolveRequestHostname } from "@/lib/admin-routing";
 
 export const dynamic = "force-dynamic";
 
@@ -16,33 +11,14 @@ export const metadata: Metadata = {
 };
 
 /**
- * The placeholder the authentication foundation exists to protect. It proves a session
- * resolves to a named admin and that signing out works; the order-management screens that
- * will replace it are a later prompt.
+ * The panel's root, which is not a page.
+ *
+ * This was the "Logged in as …" placeholder that the authentication prompt shipped to prove a
+ * session resolves to a named admin. That proof now lives in the nav bar, which names the
+ * signed-in operator on every protected page, so keeping a second screen to say the same thing
+ * would put a menu between signing in and the only work there is to do. The order list is the
+ * panel's home; `/admin` is the address that takes you there.
  */
-export default async function AdminDashboardPage(): Promise<JSX.Element> {
-  const admin = await requireAdminSession();
-  const hostname = resolveRequestHostname((name) => headers().get(name));
-
-  return (
-    <div className="mx-auto flex w-full max-w-md flex-col gap-8 text-center">
-      <div className="flex flex-col gap-3">
-        <span className="text-eyebrow uppercase tracking-caps text-muted">Signed in</span>
-        <h1 className="font-display text-heading text-ink">
-          Logged in as <span className="italic text-gold">{admin.username}</span>
-        </h1>
-        <span aria-hidden className="mx-auto block h-px w-12 bg-gold" />
-      </div>
-
-      <p className="text-body text-muted">
-        Order management lands here in a later prompt. For now this page only confirms that a
-        session was issued, stored and read back.
-      </p>
-
-      <AdminSignOutButton
-        logoutApiHref={resolveAdminLogoutHref(hostname)}
-        signedOutHref={resolveAdminLoginHref(hostname)}
-      />
-    </div>
-  );
+export default function AdminRootPage(): never {
+  redirect(resolveAdminOrdersHref(resolveRequestHostname((name) => headers().get(name))));
 }

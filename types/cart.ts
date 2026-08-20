@@ -88,8 +88,8 @@ export interface CheckoutData {
   shipping: number;
   total: number;
   /**
-   * The order `/payment` created for this bundle, stamped just before the browser leaves for
-   * Cashfree. Absent on a bundle that has not reached payment yet.
+   * The **Cashfree** order id `/payment` created for this bundle, stamped just before the
+   * browser leaves for the gateway. Absent on a bundle that has not reached payment yet.
    *
    * Display-only, like the amounts: `/order-confirmation` uses it to tell "this bundle belongs
    * to the order I am confirming" from "this is a leftover from an abandoned checkout", and it
@@ -97,4 +97,16 @@ export interface CheckoutData {
    * [verify-order contract](/docs/api/verify-order.md).
    */
   orderId?: string;
+  /**
+   * The ten-character customer-facing order number for the same order, stamped alongside
+   * `orderId` from the create-order response. Absent when the bundle has not reached payment,
+   * and absent when the Postgres capture failed and there is no order number to show
+   * ([ADR-043](/docs/decisions/ADR-043-order-id-as-primary-identifier.md)).
+   *
+   * This is the only route by which `/order-confirmation` learns the order number: Cashfree
+   * returns the browser with its own id in the URL, and the confirmation page is not allowed
+   * to trust anything it is handed about a payment. It is shown only when `orderId` names the
+   * order actually being confirmed, so a leftover bundle cannot label somebody else's payment.
+   */
+  trackingId?: string;
 }

@@ -161,6 +161,22 @@ export function resolveAdminHomeHref(hostname: string): string {
   return resolveAdminPublicPrefix(hostname) || "/";
 }
 
+/**
+ * The public URL of the order list on this hostname — `/orders` or `/admin/orders`.
+ *
+ * The list is the panel's landing page: signing in lands on the work, not on a menu. It is
+ * still resolved through the same prefix as everything else rather than being written down,
+ * because `/orders` and `/admin/orders` are one page reached from two domains.
+ */
+export function resolveAdminOrdersHref(hostname: string): string {
+  return `${resolveAdminPublicPrefix(hostname)}/orders`;
+}
+
+/** The public URL of one order's detail page. Built in the next prompt; linked to from now. */
+export function resolveAdminOrderHref(hostname: string, orderId: string): string {
+  return `${resolveAdminOrdersHref(hostname)}/${encodeURIComponent(orderId)}`;
+}
+
 /** The public URL of the logout endpoint on this hostname. */
 export function resolveAdminLogoutHref(hostname: string): string {
   return `${resolveAdminPublicPrefix(hostname)}/api/logout`;

@@ -141,6 +141,49 @@ export function parseVerifyOrderResult(payload: unknown): VerifyOrderResult | nu
   };
 }
 
+/**
+ * How the confirmation page names the order to the shopper.
+ *
+ * `trackingId` is the ten-character order number, and it is what a shopper quotes over
+ * WhatsApp and will type into the tracking page. `cashfreeOrderId` is the gateway's own
+ * reference, kept beside it in fine print because a bank dispute or a Cashfree dashboard
+ * lookup is keyed on that and on nothing else.
+ */
+export interface OrderReference {
+  trackingId: string | null;
+  cashfreeOrderId: string;
+}
+
+/**
+ * The order number for the order actually being confirmed, or null.
+ *
+ * The stamp is what makes this safe. `/payment` writes both ids into the bundle together, so
+ * a bundle whose `orderId` names this Cashfree order is a bundle written by the checkout that
+ * created it, and its `trackingId` belongs to the same order. A leftover bundle from an
+ * abandoned checkout names a different Cashfree order and is refused — showing its order
+ * number here would label somebody's payment with an order they did not place.
+ *
+ * Unlike `canDisplayBundleForOrder` this does not require the payment to have succeeded. An
+ * order number is the order's name whether the payment is paid, pending or failed, and it is
+ * most useful to quote in exactly the cases that are not `PAID`.
+ *
+ * It returns null rather than falling back to the Cashfree id: the two are different things
+ * and the page renders them differently, so the choice belongs there and not here. A shopper
+ * whose bundle is gone — a refresh after the cart was cleared, a browser that refuses
+ * `sessionStorage` — sees the Cashfree reference instead of an order number, which is the
+ * known cost of carrying the id in the bundle rather than in the URL. See
+ * [ADR-043](/docs/decisions/ADR-043-order-id-as-primary-identifier.md).
+ */
+export function readBundleTrackingId(
+  bundle: CheckoutData | null,
+  cashfreeOrderId: string,
+): string | null {
+  if (bundle === null) return null;
+  if (bundle.orderId !== cashfreeOrderId) return null;
+
+  return bundle.trackingId ?? null;
+}
+
 export interface VerificationFailure {
   title: string;
   message: string;

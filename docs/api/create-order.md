@@ -9,9 +9,13 @@ the option fields [ADR-019](../decisions/ADR-019-product-options.md), for the `u
 [ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md), and for the Postgres write
 [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
 
-**Nothing in the request or the response changed when order capture was added.** The body this
-route accepts, every validation below, the amount sent to Cashfree and all six response shapes
-are exactly what they were. The database write is a side effect layered beside them.
+**Nothing in the request changed when order capture was added, and nothing in it has changed
+since.** The body this route accepts, every validation below and the amount sent to Cashfree
+are exactly what they were.
+
+**The 200 response shape changed in prompt 49**
+([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)) and is the only breaking
+change this contract has taken. See [200 OK](#200-ok). The five error shapes are untouched.
 
 ## Request
 
@@ -147,7 +151,8 @@ Every response, success or failure, is sent with `Cache-Control: no-store`.
 
 ```ts
 interface CreateOrderSuccess {
-  orderId: string;           // MG_{epoch ms}_{8 base36}
+  cashfreeOrderId: string;      // MG_{epoch ms}_{8 base36} — the payment's reference
+  trackingId: string | null;    // orders.id, the 10-char customer-facing order number
   paymentSessionId: string;
   mode: "sandbox" | "production";
 }
@@ -155,14 +160,50 @@ interface CreateOrderSuccess {
 
 ```json
 {
-  "orderId": "MG_1786968394909_v8j3wggq",
+  "cashfreeOrderId": "MG_1786968394909_v8j3wggq",
+  "trackingId": "W2ACEHACUU",
   "paymentSessionId": "session_xxxxxxxxxxxxxxxxxxxxx",
   "mode": "sandbox"
 }
 ```
 
+#### Two ids, and neither is called `orderId`
+
+| Field | What it is | Who uses it |
+| --- | --- | --- |
+| `cashfreeOrderId` | Cashfree's own `order_id`, as returned, falling back to the one sent | The return URL, [`/api/verify-order`](verify-order.md), `orders.cashfree_order_id`, a refund |
+| `trackingId` | `orders.id` — ten characters over the unambiguous alphabet of [ADR-040](../decisions/ADR-040-postgres-for-orders.md) | The confirmation page, the admin order list, WhatsApp, the future tracking page |
+
+**Breaking change, prompt 49.** Through prompt 48 the Cashfree id was returned as `orderId`
+with nothing beside it. It is now `cashfreeOrderId`, and `trackingId` is new. Both names are
+qualified so that no reader has to guess which id it is holding — see
+[ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md) for why the rename was
+preferred to adding a second key next to `orderId`.
+
+| Prompt 48 | Prompt 49 |
+| --- | --- |
+| `orderId` | `cashfreeOrderId` — same value |
+| — | `trackingId` |
+| `paymentSessionId` | unchanged |
+| `mode` | unchanged |
+
+**`trackingId` is null when the Postgres capture failed.** That write is deliberately allowed
+to fail without failing the checkout ([ADR-042](../decisions/ADR-042-order-capture-in-postgres.md)),
+so an order can have a payment session and no row — and therefore no order number. Every
+consumer handles the null; `isCreateOrderSuccess` in `lib/payment.ts` accepts `null` and rejects
+a missing key or an empty string.
+
 `mode` is echoed because the browser SDK must be initialised against the same environment the
 session was minted in, and the client cannot read `CASHFREE_ENV`.
+
+#### What the client does with each
+
+`/payment` stamps **both** ids onto the `sessionStorage` checkout bundle immediately before
+handing the browser to Cashfree. `/order-confirmation` is returned by Cashfree with only
+`cashfreeOrderId` in the URL, matches it against the bundle's stamp, and on a match shows the
+bundle's `trackingId` as "Your order number". The Cashfree id stays on the page as "Payment
+reference" in fine print. A bundle that is missing, corrupt, or stamped with a different order
+falls back to showing the Cashfree reference — the known limitation recorded in ADR-043.
 
 ### Error body
 
@@ -330,9 +371,10 @@ unaffected, and no error body ever mentions the database. This mirrors `/api/not
 the trade-off — a paid order with no row, recoverable only from the Cashfree dashboard — is
 argued in [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
 
-> **Two ids per order.** The `orderId` in the response is the Cashfree one and is what the
-> confirmation page, the return URL and `/api/verify-order` use. The 10-character
-> `orders.id` is not yet shown anywhere outside the database.
+> **Two ids per order.** `cashfreeOrderId` is what the return URL and `/api/verify-order` are
+> keyed on. `orders.id` is returned as `trackingId` and is the order's public name — shown on
+> the confirmation page and used as the primary identifier throughout the admin panel
+> ([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)).
 
 ## Security notes
 

@@ -145,17 +145,18 @@ describe("POST /api/create-order, once there is somewhere to put an order", () =
     const body = await response.json();
 
     expect(response.status).toBe(200);
-    expect(body.orderId).toMatch(/^MG_\d{13}_[0-9a-z]{8}$/);
+    expect(body.cashfreeOrderId).toMatch(/^MG_\d{13}_[0-9a-z]{8}$/);
     expect(body.paymentSessionId).toBe("session_route_capture_test");
     expect(body.mode).toBe("sandbox");
 
     const written = await prisma.order.findUniqueOrThrow({
-      where: { cashfreeOrderId: body.orderId },
+      where: { cashfreeOrderId: body.cashfreeOrderId },
       include: { lineItems: true, statusHistory: true, customer: true },
     });
 
     expect(written.id).toMatch(/^[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{10}$/);
-    expect(written.id).not.toBe(body.orderId);
+    expect(written.id).not.toBe(body.cashfreeOrderId);
+    expect(body.trackingId).toBe(written.id);
     expect(written.status).toBe("placed");
     expect(written.paymentType).toBe("prepaid");
     expect(written.cashfreePaymentStatus).toBe("PENDING");
@@ -190,7 +191,7 @@ describe("POST /api/create-order, once there is somewhere to put an order", () =
     expect(written.statusHistory[0].reason).toBeNull();
 
     expect(captureLog).toHaveBeenCalledWith(
-      `[create-order] ${body.orderId} captured as order ${written.id} for a new customer`,
+      `[create-order] ${body.cashfreeOrderId} captured as order ${written.id} for a new customer`,
     );
   });
 
@@ -220,7 +221,8 @@ describe("POST /api/create-order, once there is somewhere to put an order", () =
       })
     ).json();
 
-    expect(first.orderId).not.toBe(second.orderId);
+    expect(first.cashfreeOrderId).not.toBe(second.cashfreeOrderId);
+    expect(first.trackingId).not.toBe(second.trackingId);
     expect(await prisma.customer.count({ where: { phone: ROUTE_TEST_PHONE } })).toBe(1);
 
     const customer = await prisma.customer.findUniqueOrThrow({
@@ -245,7 +247,7 @@ describe("POST /api/create-order, once there is somewhere to put an order", () =
       ),
     );
 
-    const { orderId } = await (
+    const { cashfreeOrderId } = await (
       await postCreateOrder({
         items: [{ productId: WATCH_RING_ID, qty: 1 }],
         address: ROUTE_TEST_ADDRESS,
@@ -256,7 +258,7 @@ describe("POST /api/create-order, once there is somewhere to put an order", () =
     const catalogueProduct = getProductById(WATCH_RING_ID);
 
     const line = await prisma.orderLineItem.findFirstOrThrow({
-      where: { order: { cashfreeOrderId: orderId } },
+      where: { order: { cashfreeOrderId } },
     });
 
     expect(line.productName).toBe(catalogueProduct?.name);
@@ -277,7 +279,7 @@ describe("GET /api/verify-order, once there is an order to update", () => {
       ),
     );
 
-    const { orderId } = await (
+    const { cashfreeOrderId, trackingId } = await (
       await postCreateOrder({
         items: [{ productId: INITIAL_RING_ID, qty: 1 }],
         address: ROUTE_TEST_ADDRESS,
@@ -285,20 +287,21 @@ describe("GET /api/verify-order, once there is an order to update", () => {
     ).json();
 
     const beforeVerification = await prisma.order.findUniqueOrThrow({
-      where: { cashfreeOrderId: orderId },
+      where: { cashfreeOrderId },
     });
+    expect(beforeVerification.id).toBe(trackingId);
     expect(beforeVerification.cashfreePaymentStatus).toBe("PENDING");
 
-    vi.stubGlobal("fetch", vi.fn(async () => cashfreeLookup(orderId, "PAID", 259)));
+    vi.stubGlobal("fetch", vi.fn(async () => cashfreeLookup(cashfreeOrderId, "PAID", 259)));
 
-    const response = await getVerifyOrder(orderId);
+    const response = await getVerifyOrder(cashfreeOrderId);
     const body = await response.json();
 
     expect(response.status).toBe(200);
-    expect(body).toEqual({ orderId, status: "PAID", amount: 259 });
+    expect(body).toEqual({ orderId: cashfreeOrderId, status: "PAID", amount: 259 });
 
     const afterVerification = await prisma.order.findUniqueOrThrow({
-      where: { cashfreeOrderId: orderId },
+      where: { cashfreeOrderId },
     });
 
     expect(afterVerification.cashfreePaymentStatus).toBe("PAID");

@@ -45,11 +45,25 @@ function isCreateOrderErrorBody(payload: unknown): payload is CreateOrderErrorBo
   return typeof candidate.error === "string" && typeof candidate.message === "string";
 }
 
+/**
+ * Validates the create-order 200 body before the browser acts on it.
+ *
+ * `trackingId` is checked as strictly as the rest and is allowed to be `null`, because the
+ * capture that produces it may fail without failing the checkout (ADR-042). A missing key,
+ * or one carrying an empty string, is a body this page does not recognise — the alternative
+ * is stamping the checkout bundle with an order number that is not one.
+ */
 export function isCreateOrderSuccess(payload: unknown): payload is CreateOrderSuccess {
   if (typeof payload !== "object" || payload === null) return false;
   const candidate = payload as Record<string, unknown>;
+  const hasTrackingId =
+    candidate.trackingId === null ||
+    (typeof candidate.trackingId === "string" && candidate.trackingId.length > 0);
+
   return (
-    typeof candidate.orderId === "string" &&
+    typeof candidate.cashfreeOrderId === "string" &&
+    candidate.cashfreeOrderId.length > 0 &&
+    hasTrackingId &&
     typeof candidate.paymentSessionId === "string" &&
     candidate.paymentSessionId.length > 0 &&
     (candidate.mode === "sandbox" || candidate.mode === "production")

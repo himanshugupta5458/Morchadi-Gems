@@ -23,6 +23,8 @@ import {
   describeVerificationFailure,
   isMorchadiOrderId,
   parseVerifyOrderResult,
+  readBundleTrackingId,
+  type OrderReference,
   type VerificationFailure,
 } from "@/lib/verify";
 import { AddressRecap } from "@/components/AddressRecap";
@@ -71,6 +73,40 @@ async function requestVerification(orderId: string): Promise<VerifyOutcome> {
   if (result === null) return { ok: false, failure: UNREACHABLE_VERIFICATION };
 
   return { ok: true, result };
+}
+
+/**
+ * How the page refers to the order in a single line of running text, used in every footnote.
+ *
+ * The ten-character order number wins whenever there is one, because it is the reference a
+ * shopper can actually read back to us. The Cashfree id is the fallback rather than a second
+ * line: a footnote that offers two identifiers invites the wrong one to be quoted.
+ */
+function describeOrderReference(reference: OrderReference): string {
+  return reference.trackingId === null
+    ? `Payment reference ${reference.cashfreeOrderId}`
+    : `Order number ${reference.trackingId}`;
+}
+
+/**
+ * The order number, given the weight it is worth. It is the one thing on a confirmation
+ * screen a shopper may need to copy down, and it is set at heading size and spaced so the
+ * unambiguous alphabet `lib/order-id.ts` chose survives being read off a phone screen.
+ */
+function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.Element {
+  return (
+    <div className="flex w-full max-w-sm flex-col items-center gap-2 border border-gold/40 bg-gold/5 px-6 py-6">
+      <span className="text-eyebrow uppercase tracking-caps-wide text-muted">
+        Your order number
+      </span>
+      <strong className="font-display text-heading tracking-caps text-ink">
+        {trackingId}
+      </strong>
+      <span className="text-body-sm text-muted">
+        Keep this. It is what we will ask for if you message us about this order.
+      </span>
+    </div>
+  );
 }
 
 function OrderFact({ label, value }: { label: string; value: string }): JSX.Element {
@@ -174,6 +210,17 @@ export function OrderConfirmation(): JSX.Element {
     view.kind === "settled" && view.result.status === "PAID" ? view.result : null;
 
   /**
+   * Held in the same state as the bundle it comes from, so it survives the bundle being
+   * cleared on a confirmed payment two effects below. A refresh after that clear has no
+   * bundle to read and falls back to the Cashfree reference — the known limit of carrying the
+   * order number in `sessionStorage`, argued in ADR-043.
+   */
+  const orderReference: OrderReference = {
+    trackingId: readBundleTrackingId(bundle, orderId ?? ""),
+    cashfreeOrderId: orderId ?? "",
+  };
+
+  /**
    * The side effects of a confirmed payment, and the only place either store is emptied.
    * Idempotent by construction: a refresh re-verifies, arrives at `PAID` again, and clears an
    * already-empty cart and an already-absent bundle.
@@ -221,7 +268,7 @@ export function OrderConfirmation(): JSX.Element {
         icon={<GemOutlineIcon className="h-12 w-12 text-gold" />}
         title="Confirming your payment"
         message="We are checking with the payment gateway. This takes a moment, so please do not close this tab."
-        footnote={`Order number ${orderId}`}
+        footnote={describeOrderReference(orderReference)}
       />
     );
   }
@@ -237,7 +284,7 @@ export function OrderConfirmation(): JSX.Element {
         }
         footnote={
           <SupportLine>
-            {`Order number ${orderId}. Quote it if you need to reach us at`}
+            {`${describeOrderReference(orderReference)}. Quote it if you need to reach us at`}
           </SupportLine>
         }
       />
@@ -264,14 +311,26 @@ export function OrderConfirmation(): JSX.Element {
             <SupportLine>Keep your order number. Questions about this order go to</SupportLine>
           }
         >
+          {orderReference.trackingId === null ? null : (
+            <OrderNumberCallout trackingId={orderReference.trackingId} />
+          )}
+
           <dl className="flex w-full max-w-sm flex-col gap-3 border-y border-line py-6">
-            <OrderFact label="Order number" value={result.orderId} />
+            {orderReference.trackingId === null ? (
+              <OrderFact label="Payment reference" value={result.orderId} />
+            ) : null}
             {result.amount === null ? null : (
               <OrderFact label="Amount paid" value={formatRupees(result.amount)} />
             )}
           </dl>
 
           <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+
+          {orderReference.trackingId === null ? null : (
+            <p className="text-body-sm text-muted">
+              Payment reference {result.orderId}
+            </p>
+          )}
         </CenteredNotice>
 
         {displayableBundle === null ? null : (
@@ -305,7 +364,7 @@ export function OrderConfirmation(): JSX.Element {
         }
         footnote={
           <SupportLine>
-            {`Order number ${orderId}. If your bank shows the payment but this page does not, email us at`}
+            {`${describeOrderReference(orderReference)}. If your bank shows the payment but this page does not, email us at`}
           </SupportLine>
         }
       />
@@ -315,7 +374,7 @@ export function OrderConfirmation(): JSX.Element {
         icon={<GemOutlineIcon className="h-12 w-12 text-gold" />}
         title="We are confirming your payment"
         message="The gateway has not finished with this payment yet. We are re-checking every few seconds, so please stay on this page."
-        footnote={`Order number ${orderId}`}
+        footnote={describeOrderReference(orderReference)}
       />
     );
   }
@@ -341,7 +400,7 @@ export function OrderConfirmation(): JSX.Element {
       }
       footnote={
         <SupportLine>
-          {`Order number ${orderId}. If your bank shows a charge against it, email us at`}
+          {`${describeOrderReference(orderReference)}. If your bank shows a charge against it, email us at`}
         </SupportLine>
       }
     />

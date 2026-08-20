@@ -65,6 +65,11 @@ function withParsedSelection(item: CartItem): CartItem {
   return selectedOptions === undefined ? line : { ...line, selectedOptions };
 }
 
+/** A stamped identifier survives only as a non-empty string; anything else is simply absent. */
+function readStampedString(value: unknown): string | undefined {
+  return typeof value === "string" && value.length > 0 ? value : undefined;
+}
+
 function isAddress(value: unknown): value is Address {
   if (typeof value !== "object" || value === null) return false;
   const candidate = value as Record<string, unknown>;
@@ -102,10 +107,8 @@ export function parseCheckoutValue(parsedValue: unknown): CheckoutData | null {
     return null;
   }
 
-  const stampedOrderId =
-    typeof candidate.orderId === "string" && candidate.orderId.length > 0
-      ? candidate.orderId
-      : undefined;
+  const stampedOrderId = readStampedString(candidate.orderId);
+  const stampedTrackingId = readStampedString(candidate.trackingId);
 
   return {
     cart: candidate.cart.map(withParsedSelection),
@@ -114,6 +117,7 @@ export function parseCheckoutValue(parsedValue: unknown): CheckoutData | null {
     shipping: candidate.shipping,
     total: candidate.total,
     ...(stampedOrderId === undefined ? {} : { orderId: stampedOrderId }),
+    ...(stampedTrackingId === undefined ? {} : { trackingId: stampedTrackingId }),
   };
 }
 
@@ -154,18 +158,33 @@ export function readCheckoutData(): CheckoutData | null {
 
 /**
  * Records which order the stored bundle was paid against, called on `/payment` once the server
- * has minted an order id and immediately before the browser leaves for Cashfree.
+ * has answered and immediately before the browser leaves for Cashfree.
  *
- * It writes nothing new — no amount, no item, no address changes — so it cannot make the
- * bundle any more trusted than it already was. Its only purpose is to let the confirmation
- * page reject a bundle that belongs to some other checkout. A failed write is not an error
- * worth reporting: the guard on the other side falls back to matching the amount.
+ * Both of the order's identifiers are stamped: the Cashfree one, which the confirmation page
+ * matches the bundle against, and the ten-character order number, which is the only thing the
+ * bundle exists to *carry* rather than to be checked by. Cashfree returns the browser with its
+ * own id in the URL and knows nothing about ours, so without this stamp the confirmation page
+ * would have no way to name the order the way the shopper will
+ * ([ADR-043](/docs/decisions/ADR-043-order-id-as-primary-identifier.md)).
+ *
+ * It writes no amount, no item and no address, so it cannot make the bundle any more trusted
+ * than it already was — and the order number it stores is shown only after the Cashfree id
+ * beside it has been matched against the order being confirmed. A failed write is not an error
+ * worth reporting: the guard on the other side falls back to matching the amount, and the
+ * confirmation page falls back to the Cashfree reference.
  */
-export function stampCheckoutDataOrder(orderId: string): void {
+export function stampCheckoutDataOrder(
+  cashfreeOrderId: string,
+  trackingId: string | null,
+): void {
   const storedData = readCheckoutData();
   if (storedData === null) return;
 
-  writeCheckoutData({ ...storedData, orderId });
+  writeCheckoutData({
+    ...storedData,
+    orderId: cashfreeOrderId,
+    ...(trackingId === null ? {} : { trackingId }),
+  });
 }
 
 export function clearCheckoutData(): void {

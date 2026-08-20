@@ -37,6 +37,22 @@ const config: Config = {
         sale: "#E23A2E",
         line: "#E8E4DC",
         whatsapp: "#25D366",
+        /**
+         * One hue per fulfilment status, for the admin order list's badges. Operational
+         * colour, deliberately outside the storefront palette above: nothing a shopper sees
+         * uses these, and a status badge must be scannable rather than on-brand. Every one is
+         * used at 10% as a wash, 35% as a border and full strength as text — see
+         * `lib/order-status.ts`.
+         */
+        status: {
+          placed: "#6B6B6B",
+          packed: "#A9863A",
+          shipped: "#2F6E8F",
+          delivered: "#2E7D5B",
+          rto: "#4A1621",
+          returned: "#7A4E86",
+          cancelled: "#E23A2E",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
