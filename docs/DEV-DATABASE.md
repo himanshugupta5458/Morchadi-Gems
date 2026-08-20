@@ -94,14 +94,74 @@ out of the build context entirely.
 If you change the credentials in `docker-compose.yml`, change them in all three places or the
 CLI and the app will disagree about which database they are talking to.
 
+## Migrations
+
+The schema lives in [`prisma/schema.prisma`](../prisma/schema.prisma). The tables it describes —
+`orders`, `order_status_history`, `order_line_items`, `customers`, `admins` — are created by the
+migrations in `prisma/migrations/`, which **are committed to git**: they are the ordered history
+of how the database got its shape, and production will replay exactly this list.
+
+### After editing the schema
+
+```bash
+npx prisma migrate dev --name what_you_changed
+```
+
+This diffs your edit against the database, writes a new timestamped folder under
+`prisma/migrations/` holding the SQL, applies it, and regenerates the Prisma client. Name it for
+the change, in `snake_case` — `add_order_notes`, not `update`. Commit the generated folder with
+the schema edit; a schema change without its migration is an incomplete commit.
+
+### Checking where you are
+
+```bash
+npx prisma migrate status
+```
+
+Says whether the database has every migration in the folder applied. `Database schema is up to
+date!` is the answer you want.
+
+### Reset — wipes all data, replays every migration
+
+```bash
+npx prisma migrate reset
+```
+
+Drops the schema, re-runs every migration from the first, and regenerates the client. This is
+the fix when the database and the migration history have diverged — a migration edited by hand,
+a branch switch, a half-applied change. **It destroys all data and does not ask twice beyond its
+own prompt.** That is safe here and only here: local data is scratch, and there is no seed script
+for it to run.
+
+`prisma migrate reset` and `docker compose down -v` both give you an empty start. The difference:
+`reset` keeps the container and leaves you with every table created, `down -v` destroys the
+volume and leaves you with no database at all until `up -d` and a `migrate dev`.
+
+**Never run either against anything but this local container.** Production gets
+`prisma migrate deploy`, which only applies pending migrations and never resets — and production
+Postgres does not exist yet ([ADR-040](decisions/ADR-040-postgres-for-orders.md)).
+
+### Regenerating the client on its own
+
+```bash
+npx prisma generate
+```
+
+`migrate dev` and `migrate reset` both do this for you. Run it by hand after a `git pull` that
+brought in a schema change, or whenever TypeScript claims a model that is plainly in the schema
+does not exist on `prisma`.
+
 ## Verify the connection
 
 ```bash
-npm run test:run -- lib/prisma-connection.test.ts
+npm run test:run -- lib/prisma-connection.test.ts lib/prisma-schema.test.ts
 ```
 
-With the container healthy, this opens a real connection through the singleton client in
-[`lib/prisma.ts`](../lib/prisma.ts), runs `SELECT 1`, and disconnects.
+With the container healthy, the first file opens a real connection through the singleton client
+in [`lib/prisma.ts`](../lib/prisma.ts), runs `SELECT 1`, and disconnects. The second writes a
+customer, an order, a line item and a status-history row through the generated client, checks
+the schema accepted its own shape, and rolls the transaction back so the database is left exactly
+as it was found.
 
 **With no database running it skips rather than fails**, printing the reason:
 
@@ -121,8 +181,9 @@ npx prisma studio
 ```
 
 A browser GUI over the data, and one of the two reasons Prisma was chosen over Drizzle
-([ADR-040](decisions/ADR-040-postgres-for-orders.md)). It shows nothing useful yet — there are no
-models. Schema design is a later prompt.
+([ADR-040](decisions/ADR-040-postgres-for-orders.md)). It lists every model in the schema and
+lets rows be read and edited by hand. The tables are empty until an order is captured — no
+application code writes to them yet.
 
 ## Troubleshooting
 

@@ -1,12 +1,15 @@
-// Phase 2 order and CRM domain — see docs/decisions/ADR-040-postgres-for-orders.md.
+// The Phase 2 order and CRM domain — see docs/decisions/ADR-040-postgres-for-orders.md.
 //
-// No models are defined yet, deliberately. This prompt is plumbing: a local Postgres, a
-// generated client and a verified connection. Table design (orders, order_status_history,
-// customers, admins) is its own prompt and its own ADR.
+// The product catalogue is NOT here. It stays in data/products.json, in git, per an explicit
+// owner decision recorded in ADR-040. An order row records the price and the cost that applied
+// when it was placed; it is never the source consulted to decide what something costs.
 //
-// The product catalogue is NOT moving here. It stays in data/products.json, in git, per an
-// explicit owner decision recorded in ADR-040. Prices are still read from that file on every
-// request, and that remains the only authority on what anything costs.
+// Naming convention for this file: Prisma models and fields are PascalCase and camelCase, and
+// every one of them is @map'd to the snake_case table and column name ADR-040 uses when it
+// talks about this schema in prose. TypeScript reads camelCase, psql reads snake_case, and
+// neither has to learn the other's spelling.
+//
+// Money is Decimal(10, 2) rather than Float. Rupee amounts are exact and a binary float is not.
 
 generator client {
   provider = "prisma-client-js"
@@ -15,4 +18,129 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+/// Where an order currently is. The terminal states — rto, returned, cancelled — are mutually
+/// exclusive by construction, which is why no boolean mirrors them. See ADR-040.
+enum OrderStatus {
+  placed
+  packed
+  shipped
+  delivered
+  rto
+  returned
+  cancelled
+
+  @@map("order_status")
+}
+
+model Order {
+  /// A 10-character unambiguous alphanumeric code, generated in application code at capture
+  /// time. Deliberately not a uuid and deliberately without a database default: it is read
+  /// aloud over WhatsApp and typed into a tracking box, so it is ours to shape, not Postgres'.
+  id                    String               @id
+  createdAt             DateTime             @default(now()) @map("created_at")
+  updatedAt             DateTime             @updatedAt @map("updated_at")
+  customerId            String               @map("customer_id")
+  customer              Customer             @relation(fields: [customerId], references: [id])
+  status                OrderStatus          @default(placed)
+  subtotal              Decimal              @db.Decimal(10, 2)
+  shippingFee           Decimal              @map("shipping_fee") @db.Decimal(10, 2)
+  total                 Decimal              @db.Decimal(10, 2)
+  /// Sum of the line items' unitCost × quantity, snapshotted at capture time so profit stays
+  /// answerable after the catalogue's cost figures move.
+  totalCost             Decimal              @map("total_cost") @db.Decimal(10, 2)
+  cashfreeOrderId       String               @map("cashfree_order_id")
+  cashfreePaymentStatus String               @map("cashfree_payment_status")
+  utmSource             String?              @map("utm_source")
+  utmMedium             String?              @map("utm_medium")
+  utmCampaign           String?              @map("utm_campaign")
+  shippingAddress       Json                 @map("shipping_address")
+  /// A refund is orthogonal to which terminal status was reached — an order can be returned
+  /// and refunded, returned and not refunded, or refunded without having been returned at all.
+  /// That is why these three survive where the terminal-state booleans did not. See ADR-040.
+  isRefunded            Boolean              @default(false) @map("is_refunded")
+  refundedAt            DateTime?            @map("refunded_at")
+  refundAmount          Decimal?             @map("refund_amount") @db.Decimal(10, 2)
+  lineItems             OrderLineItem[]
+  statusHistory         OrderStatusHistory[]
+
+  @@index([customerId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([cashfreeOrderId])
+  @@map("orders")
+}
+
+/// The append-only audit of who moved an order where, and when. This table is the only record
+/// of when a status was reached and why, which is why Order carries no rtoAt, returnedAt or
+/// cancelledAt of its own.
+model OrderStatusHistory {
+  id        String      @id @default(uuid())
+  orderId   String      @map("order_id")
+  order     Order       @relation(fields: [orderId], references: [id])
+  status    OrderStatus
+  changedAt DateTime    @default(now()) @map("changed_at")
+  /// The admin who made the change. A free string rather than a foreign key to Admin, so the
+  /// audit survives an operator being removed.
+  changedBy String      @map("changed_by")
+  /// Nullable here and required at the application level when the status is rto, returned or
+  /// cancelled. Neither Prisma nor a plain Postgres column can express a constraint that is
+  /// conditional on another column's value, so the rule lives in the code that writes the row.
+  reason    String?
+
+  @@index([orderId])
+  @@map("order_status_history")
+}
+
+model OrderLineItem {
+  id              String  @id @default(uuid())
+  orderId         String  @map("order_id")
+  order           Order   @relation(fields: [orderId], references: [id])
+  /// The P-code from data/products.json. Not a foreign key: the catalogue is not in this
+  /// database and is not going to be. See ADR-040.
+  productId       String  @map("product_id")
+  productName     String  @map("product_name")
+  productImage    String  @map("product_image")
+  /// The recorded choice, as { "Letter": "A" }. Display and fulfilment only — no amount has
+  /// ever read it. See ADR-019.
+  selectedOptions Json?   @map("selected_options")
+  quantity        Int
+  /// What the customer was charged per unit, snapshotted from pricing.price at capture time.
+  unitPrice       Decimal @map("unit_price") @db.Decimal(10, 2)
+  /// What the unit cost the shop, snapshotted from pricing.cost at capture time. Margin data:
+  /// it belongs to the admin dashboard and never to a shopper-facing response.
+  unitCost        Decimal @map("unit_cost") @db.Decimal(10, 2)
+
+  @@index([orderId])
+  @@index([productId])
+  @@map("order_line_items")
+}
+
+/// A buyer, keyed by phone because that is the one identifier a guest checkout always collects
+/// and the one the owner already uses to recognise a repeat customer. There are still no
+/// accounts and no login: this is a CRM record, not a credential.
+model Customer {
+  id               String   @id @default(uuid())
+  phone            String   @unique
+  name             String
+  email            String?
+  createdAt        DateTime @default(now()) @map("created_at")
+  /// First-touch attribution, kept on the customer rather than only on the order so the
+  /// campaign that won someone survives every later purchase. See ADR-039.
+  firstUtmSource   String?  @map("first_utm_source")
+  firstUtmMedium   String?  @map("first_utm_medium")
+  firstUtmCampaign String?  @map("first_utm_campaign")
+  orders           Order[]
+
+  @@map("customers")
+}
+
+model Admin {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("admins")
 }

@@ -88,6 +88,7 @@ purpose.
 | *(no plan — content and data correction)* | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) — catalogue content pass, 15/15 pass, 747/747 suite |
 | *(no plan — metadata pass)* | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) — per-product search and social metadata for all 49, 762/762 suite |
 | *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-round-three.md) — third-round SEO audit, no code changed |
+| *(no plan — schema verification)* | [2026-08-20](RESULT-2026-08-20-orders-crm-schema.md) — the orders/CRM migration applied and inspected in Postgres, `pricing.cost` proven absent from the built bundle, 814/814 suite |
 
 ## Runners
 
@@ -103,7 +104,7 @@ Vitest is configured in `vitest.config.mts` and picks up `lib/**/*.test.{ts,tsx}
 `vitest.config.mts` aliases `server-only` to that package's own `empty.js`. Next.js does the same
 thing through the `react-server` export condition; plain Node resolution does not, so without the
 alias importing any server-only module from a test throws on import. It is what lets
-`lib/prisma-connection.test.ts` import [`lib/prisma.ts`](../../lib/prisma.ts) at all.
+the two Prisma suites import [`lib/prisma.ts`](../../lib/prisma.ts) at all.
 
 Most suites run in the default `node` environment. A `.test.tsx` file that needs a DOM opts in
 per file with a `/** @vitest-environment jsdom */` docblock on its first line — the environment
@@ -151,3 +152,4 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/responsive-scale.test.ts` | The mobile scale's class pairs, and that no desktop breakpoint value moved | [2026-08-19](RESULT-2026-08-19-mobile-scale.md) |
 | `lib/mobile-layout.test.tsx` | The mobile product cap and the four layouts that differ in kind from desktop | [2026-08-19](RESULT-2026-08-19-mobile-layout.md) |
 | `lib/prisma-connection.test.ts` | That the Prisma singleton opens a real connection to the local Postgres and answers `SELECT 1`, and that one client survives a module re-evaluation. **Skips rather than fails when no database is reachable** — a fresh clone and CI have no Docker Postgres, and a connectivity check must not become a gate they cannot pass | [ADR-040](../decisions/ADR-040-postgres-for-orders.md), [DEV-DATABASE.md](../DEV-DATABASE.md) |
+| `lib/prisma-schema.test.ts` | That the orders/CRM schema accepts writes matching its own shape — a customer, order, line item and status-history row through the generated client, the declared defaults, `Json` round-trips, and a `returned` order with an orthogonal refund. Each case runs inside an interactive transaction unwound by a thrown sentinel, so it leaves the database exactly as it found it. Skips with no database, like its sibling | [ADR-040](../decisions/ADR-040-postgres-for-orders.md), [2026-08-20](RESULT-2026-08-20-orders-crm-schema.md) |

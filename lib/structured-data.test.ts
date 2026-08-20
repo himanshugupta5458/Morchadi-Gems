@@ -380,7 +380,11 @@ describe("the shipping details in the offer", () => {
   it("charges nothing once a piece does reach the threshold on its own", () => {
     const atThreshold: Product = {
       ...requireProduct("P001"),
-      pricing: { price: FREE_SHIPPING_THRESHOLD, mrp: FREE_SHIPPING_THRESHOLD },
+      pricing: {
+        price: FREE_SHIPPING_THRESHOLD,
+        mrp: FREE_SHIPPING_THRESHOLD,
+        cost: Math.round(FREE_SHIPPING_THRESHOLD * 0.6),
+      },
     };
 
     expect(buildShippingDetailsSchema(atThreshold).shippingRate.value).toBe(0);

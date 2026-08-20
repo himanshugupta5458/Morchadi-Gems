@@ -158,6 +158,14 @@ export interface ProductPricing {
   price: number;
   /** Display-only compare-at price. Never used in any amount calculation. */
   mrp: number;
+  /**
+   * What the piece costs the shop, in whole rupees. Margin data: server-only and
+   * admin-only, never narrowed into a `CatalogueEntry` and never rendered to a shopper.
+   * Held to the same seal as `mrp` — it is absent from the pricing catalogue rather than
+   * merely unread by it. See [ADR-011](/docs/decisions/ADR-011-checkout-address-step.md)
+   * and [ADR-040](/docs/decisions/ADR-040-postgres-for-orders.md).
+   */
+  cost: number;
 }
 
 /**

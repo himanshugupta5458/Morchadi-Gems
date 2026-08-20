@@ -156,6 +156,15 @@ const failures = [];
 const advisories = [];
 const descriptionAdvisories = [];
 
+/**
+ * A piece selling at or below what it cost is a business problem, not a build problem. The
+ * cost figures in the catalogue are placeholders until the owner supplies real ones, and real
+ * ones will occasionally carry a thin or negative margin that wants the owner's attention
+ * rather than a red gate. So the presence and the shape of `pricing.cost` are hard checks, and
+ * cost-against-price is an advisory. See ADR-040.
+ */
+const marginAdvisories = [];
+
 function check(condition, message) {
   if (!condition) failures.push(message);
 }
@@ -197,6 +206,8 @@ const categoryCounts = Object.fromEntries(CATEGORY_SLUGS.map((slug) => [slug, 0]
 const priceBands = { budget: 0, mid: 0, premium: 0, outOfBand: 0 };
 const optionTypeCounts = Object.fromEntries(OPTION_TYPES.map((type) => [type, 0]));
 const impliedDiscounts = [];
+const grossMargins = [];
+let costedCount = 0;
 let discountedCount = 0;
 let featuredCount = 0;
 let newCount = 0;
@@ -230,6 +241,20 @@ function validatePricing(product, label) {
     isPositiveInteger(pricing.mrp),
     `${label}: pricing.mrp must be a positive whole number of rupees`,
   );
+  check(
+    isPositiveInteger(pricing.cost),
+    `${label}: pricing.cost must be a positive whole number of rupees`,
+  );
+
+  if (isPositiveInteger(pricing.cost) && isPositiveInteger(pricing.price)) {
+    costedCount += 1;
+    grossMargins.push(((pricing.price - pricing.cost) / pricing.price) * 100);
+    if (pricing.cost >= pricing.price) {
+      marginAdvisories.push(
+        `${label}: pricing.cost ${pricing.cost} is not below pricing.price ${pricing.price} — the piece sells at or under what it cost`,
+      );
+    }
+  }
 
   if (isPositiveInteger(pricing.price)) {
     if (pricing.price >= MIN_PRICE && pricing.price <= 999) priceBands.budget += 1;
@@ -799,6 +824,14 @@ console.log(`  with seo block     ${catalogue.filter((product) => isPlainObject(
 console.log(`  unique metaTitles  ${seenMetaTitles.size}`);
 console.log(`  unique keywords    ${seenPrimaryKeywords.size}`);
 console.log(`  price-dated copy   ${pricedMetadataIds.length}`);
+console.log("\nMargin (cost is server-only, never shipped to a browser)");
+console.log(`  with cost          ${costedCount}/${catalogue.length}`);
+if (grossMargins.length > 0) {
+  const lowest = Math.min(...grossMargins);
+  const average = grossMargins.reduce((sum, value) => sum + value, 0) / grossMargins.length;
+  console.log(`  lowest gross       ${lowest.toFixed(1)}%`);
+  console.log(`  average gross      ${average.toFixed(1)}%`);
+}
 console.log("\nDiscount display (mrp is never charged)");
 console.log(`  discounted         ${discountedCount}`);
 console.log(`  at full price      ${catalogue.length - discountedCount}`);
@@ -815,6 +848,13 @@ if (advisories.length > 0) {
     `\nADVISORY — ${advisories.length} product(s) above the ${ADVISORY_DISCOUNT_PERCENT}% house style. Real owner prices; changing them is a business call, not a code fix:`,
   );
   for (const advisory of advisories) console.warn(`  - ${advisory}`);
+}
+
+if (marginAdvisories.length > 0) {
+  console.warn(
+    `\nADVISORY — ${marginAdvisories.length} product(s) priced at or below cost. Margin is the owner's call, not a code fix:`,
+  );
+  for (const advisory of marginAdvisories) console.warn(`  - ${advisory}`);
 }
 
 if (descriptionAdvisories.length > 0) {

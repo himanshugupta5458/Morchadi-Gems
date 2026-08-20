@@ -5,7 +5,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 299
+      "mrp": 299,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -81,7 +82,8 @@
     "category": "necklaces",
     "pricing": {
       "price": 450,
-      "mrp": 999
+      "mrp": 999,
+      "cost": 270
     },
     "media": {
       "images": [
@@ -127,7 +129,8 @@
     "category": "necklaces",
     "pricing": {
       "price": 450,
-      "mrp": 999
+      "mrp": 999,
+      "cost": 270
     },
     "media": {
       "images": [
@@ -169,7 +172,8 @@
     "category": "rings",
     "pricing": {
       "price": 499,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 299
     },
     "media": {
       "images": [
@@ -211,7 +215,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 299
+      "mrp": 299,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -284,7 +289,8 @@
     "category": "pendants",
     "pricing": {
       "price": 450,
-      "mrp": 450
+      "mrp": 450,
+      "cost": 270
     },
     "media": {
       "images": [
@@ -339,7 +345,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -381,7 +388,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 210
+      "mrp": 210,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -423,7 +431,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -465,7 +474,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 420
+      "mrp": 420,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -521,7 +531,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 599
+      "mrp": 599,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -563,7 +574,8 @@
     "category": "rings",
     "pricing": {
       "price": 499,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 299
     },
     "media": {
       "images": [
@@ -605,7 +617,8 @@
     "category": "rings",
     "pricing": {
       "price": 349,
-      "mrp": 699
+      "mrp": 699,
+      "cost": 209
     },
     "media": {
       "images": [
@@ -647,7 +660,8 @@
     "category": "rings",
     "pricing": {
       "price": 349,
-      "mrp": 699
+      "mrp": 699,
+      "cost": 209
     },
     "media": {
       "images": [
@@ -689,7 +703,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 399
+      "mrp": 399,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -731,7 +746,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 399
+      "mrp": 399,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -773,7 +789,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 399
+      "mrp": 399,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -815,7 +832,8 @@
     "category": "rings",
     "pricing": {
       "price": 210,
-      "mrp": 399
+      "mrp": 399,
+      "cost": 126
     },
     "media": {
       "images": [
@@ -857,7 +875,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 599
+      "mrp": 599,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -899,7 +918,8 @@
     "category": "rings",
     "pricing": {
       "price": 130,
-      "mrp": 599
+      "mrp": 599,
+      "cost": 78
     },
     "media": {
       "images": [
@@ -941,7 +961,8 @@
     "category": "rings",
     "pricing": {
       "price": 199,
-      "mrp": 599
+      "mrp": 599,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -986,7 +1007,8 @@
     ],
     "pricing": {
       "price": 499,
-      "mrp": 499
+      "mrp": 499,
+      "cost": 299
     },
     "media": {
       "images": [
@@ -1031,7 +1053,8 @@
     ],
     "pricing": {
       "price": 189,
-      "mrp": 189
+      "mrp": 189,
+      "cost": 113
     },
     "media": {
       "images": [
@@ -1073,7 +1096,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 250
+      "mrp": 250,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1115,7 +1139,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 350
+      "mrp": 350,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1157,7 +1182,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 350
+      "mrp": 350,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1199,7 +1225,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 350
+      "mrp": 350,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1241,7 +1268,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 350
+      "mrp": 350,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1283,7 +1311,8 @@
     "category": "earrings",
     "pricing": {
       "price": 150,
-      "mrp": 250
+      "mrp": 250,
+      "cost": 90
     },
     "media": {
       "images": [
@@ -1325,7 +1354,8 @@
     "category": "earrings",
     "pricing": {
       "price": 199,
-      "mrp": 350
+      "mrp": 350,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -1367,7 +1397,8 @@
     "category": "nose-pins",
     "pricing": {
       "price": 109,
-      "mrp": 249
+      "mrp": 249,
+      "cost": 65
     },
     "media": {
       "images": [
@@ -1410,7 +1441,8 @@
     "category": "nose-pins",
     "pricing": {
       "price": 109,
-      "mrp": 249
+      "mrp": 249,
+      "cost": 65
     },
     "media": {
       "images": [
@@ -1453,7 +1485,8 @@
     "category": "nose-pins",
     "pricing": {
       "price": 109,
-      "mrp": 249
+      "mrp": 249,
+      "cost": 65
     },
     "media": {
       "images": [
@@ -1496,7 +1529,8 @@
     "category": "nose-pins",
     "pricing": {
       "price": 109,
-      "mrp": 249
+      "mrp": 249,
+      "cost": 65
     },
     "media": {
       "images": [
@@ -1539,7 +1573,8 @@
     "category": "nose-pins",
     "pricing": {
       "price": 129,
-      "mrp": 299
+      "mrp": 299,
+      "cost": 77
     },
     "media": {
       "images": [
@@ -1585,7 +1620,8 @@
     ],
     "pricing": {
       "price": 299,
-      "mrp": 699
+      "mrp": 699,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1629,7 +1665,8 @@
     ],
     "pricing": {
       "price": 299,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1674,7 +1711,8 @@
     ],
     "pricing": {
       "price": 299,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1719,7 +1757,8 @@
     ],
     "pricing": {
       "price": 299,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1764,7 +1803,8 @@
     ],
     "pricing": {
       "price": 299,
-      "mrp": 799
+      "mrp": 799,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1806,7 +1846,8 @@
     "category": "bangles",
     "pricing": {
       "price": 199,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 119
     },
     "media": {
       "images": [
@@ -1848,7 +1889,8 @@
     "category": "bangles",
     "pricing": {
       "price": 299,
-      "mrp": 499
+      "mrp": 499,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1889,7 +1931,8 @@
     "category": "bangles",
     "pricing": {
       "price": 299,
-      "mrp": 499
+      "mrp": 499,
+      "cost": 179
     },
     "media": {
       "images": [
@@ -1930,7 +1973,8 @@
     "category": "anklets",
     "pricing": {
       "price": 89,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 53
     },
     "media": {
       "images": [
@@ -1971,7 +2015,8 @@
     "category": "anklets",
     "pricing": {
       "price": 120,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 72
     },
     "media": {
       "images": [
@@ -2016,7 +2061,8 @@
     ],
     "pricing": {
       "price": 220,
-      "mrp": 299
+      "mrp": 299,
+      "cost": 132
     },
     "media": {
       "images": [
@@ -2058,7 +2104,8 @@
     "category": "hair-accessories",
     "pricing": {
       "price": 49,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 29
     },
     "media": {
       "images": [
@@ -2099,7 +2146,8 @@
     "category": "hair-accessories",
     "pricing": {
       "price": 129,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 77
     },
     "media": {
       "images": [
@@ -2153,7 +2201,8 @@
     "category": "hair-accessories",
     "pricing": {
       "price": 149,
-      "mrp": 199
+      "mrp": 199,
+      "cost": 89
     },
     "media": {
       "images": [

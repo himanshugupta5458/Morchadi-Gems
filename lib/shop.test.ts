@@ -59,7 +59,7 @@ function productFixture(overrides: Partial<Product> = {}): Product {
     id: "fx-001",
     name: "Fixture Piece",
     category: "rings",
-    pricing: { price: 1499, mrp: 1999 },
+    pricing: { price: 1499, mrp: 1999, cost: 899 },
     media: { images: [] },
     specs: { material: "Brass" },
     description: "A fixture.",
@@ -463,13 +463,19 @@ describe("collections", () => {
 
     expect(
       matchesShopQuery(
-        productFixture({ pricing: { price: 499, mrp: 799 }, collections: ["gifting"] }),
+        productFixture({
+          pricing: { price: 499, mrp: 799, cost: 299 },
+          collections: ["gifting"],
+        }),
         query,
       ),
     ).toBe(true);
     expect(
       matchesShopQuery(
-        productFixture({ pricing: { price: 4999, mrp: 5999 }, collections: ["gifting"] }),
+        productFixture({
+          pricing: { price: 4999, mrp: 5999, cost: 2999 },
+          collections: ["gifting"],
+        }),
         query,
       ),
     ).toBe(false);

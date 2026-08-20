@@ -185,3 +185,76 @@ ADR-001 rather than narrow it. A second application needing the same data, which
 database a shared contract rather than an implementation detail. Or the operational cost of
 running Postgres in Coolify proving higher than a managed provider, which is a hosting decision
 and belongs in the production-provisioning ADR, not this one.
+
+## Addendum — prompt 44: a terminal status is stated once, and `pricing.cost` joins the catalogue
+
+**Status:** Accepted
+**Date:** 2026-08-20
+
+This refines the decision above rather than reversing any part of it. The schema this ADR
+described in prose now exists in [`prisma/schema.prisma`](../../prisma/schema.prisma), applied
+by migration `20260820062848_init_orders_crm_schema`. Two things were settled while writing it.
+
+### RTO, return and cancellation are the `status` enum and nothing else
+
+The design handed to this prompt gave `Order` three booleans and three timestamps —
+`isRto`/`rtoAt`, `isReturned`/`returnedAt`, `isCancelled`/`cancelledAt` — *alongside* an
+`OrderStatus` enum whose values already include `rto`, `returned` and `cancelled`. **All six
+were dropped.** An order's terminal state is `status`, and only `status`.
+
+The booleans carry zero information the enum does not: `isRto` is exactly `status = 'rto'`. What
+they add is the ability to write down a state that cannot exist — `is_rto` and `is_returned`
+both true, or `is_cancelled` true beside `status = 'delivered'`. A column whose only power is to
+contradict another column is a bug with a schema migration behind it. The enum makes the three
+outcomes mutually exclusive by construction, which is what they are in the world.
+
+The three timestamps went with them for a different reason. *When* a status was reached is real
+information, but it is already recorded, and recorded better, in `order_status_history`: that
+table holds `changed_at` next to `changed_by` and `reason`, and `reason` is **only** there.
+Every screen that shows "returned on 12 August" must show why and by whom beside it, so it is
+reading the history row regardless. Copying one of that row's three columns onto `orders` would
+put the same fact in two places that can drift, and buy nothing the join does not already give.
+
+`status` itself stays denormalised on `orders` — derivable from the history table, kept anyway,
+because "every order still unshipped after five days" is the query this CRM exists to answer and
+it should not need a window function. That is a deliberate exception, not an inconsistency: one
+cheap column for the hot read, and the audit table for everything else.
+
+**`isRefunded`, `refundedAt` and `refundAmount` stay**, per the owner's explicit design. They are
+genuinely independent of `status`: an order can be returned and refunded, returned and not
+refunded, cancelled and refunded, or refunded without ever having left `delivered`. No enum
+value implies them, so nothing here is duplicated. (`isRefunded` is strictly derivable from
+`refundedAt IS NOT NULL`; it is kept because the owner asked for the flag by name, and it costs
+one byte rather than a whole outcome dimension.)
+
+**What would force a revisit.** An outcome that genuinely overlaps another — a partial return on
+a multi-item order, say, which is a per-line-item state rather than a per-order one. That wants a
+column on `order_line_items`, not a boolean back on `orders`.
+
+### `pricing.cost` is catalogue data, and it is the most sensitive field in the catalogue
+
+The owner's cost price now sits in `data/products.json` as `pricing.cost`, in git, beside
+`price` and `mrp` — **not** in Postgres. The reasoning of this ADR applies unchanged: it is a
+product fact that changes when someone ships a commit, and a diff is the best audit trail a cost
+figure can have. The 49 values currently in the file are placeholders at 60% of price, pending
+real owner figures.
+
+An order snapshots it. `order_line_items.unit_cost` and `orders.total_cost` record what the
+goods cost *at capture time*, so profit stays answerable after the catalogue moves — the same
+relationship `unit_price` has to `pricing.price`, and subject to the same rule: an order row
+records what a cost *was*, and is never the source consulted to decide what it *is*.
+
+**It is server-only, and held to a stricter seal than `mrp`.** `mrp` reaches the browser by
+design, because a compare-at price is rendered to the shopper
+([ADR-003](ADR-003-discount-display-pricing.md)); it is barred only from the pricing path, where
+`getOrderPricingCatalogue` omits it from the object entirely so no cast can reach it
+([ADR-011](ADR-011-checkout-address-step.md), [ADR-027](ADR-027-product-schema-migration.md)).
+`cost` is barred from both. It is real margin data, it has no shopper-facing use whatsoever, and
+the admin dashboard is the only thing that will ever read it.
+
+Nothing enforces that with a new mechanism, because the existing one already does: the only
+catalogue data that crosses into the client bundle is `CatalogueEntry`, built by
+`toCatalogueEntry` in [`lib/products.ts`](../../lib/products.ts), which is an explicit field
+whitelist. A field is invisible to the browser unless someone adds it there by name. `cost` is
+not, and `lib/money-path.test.ts` now fails if it ever is — in both the client index and the
+pricing catalogue.

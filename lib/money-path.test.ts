@@ -9,6 +9,7 @@ import {
 import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
 import {
   getAllProducts,
+  getCatalogueIndex,
   getOrderOptionCatalogue,
   getOrderPricingCatalogue,
 } from "@/lib/products";
@@ -61,6 +62,15 @@ describe("what the pricing catalogue is allowed to carry", () => {
     expect(marked?.price).toBe(productById(WATCH_RING_ID).pricing.price);
   });
 
+  it("does not carry cost, which is margin data and more sensitive than mrp", () => {
+    const serialised = JSON.stringify(getOrderPricingCatalogue());
+
+    expect(serialised).not.toContain("cost");
+    for (const entry of getOrderPricingCatalogue()) {
+      expect(entry).not.toHaveProperty("cost");
+    }
+  });
+
   it("does not carry options, variant images, specs or reviews", () => {
     const serialised = JSON.stringify(getOrderPricingCatalogue());
 
@@ -80,6 +90,24 @@ describe("what the pricing catalogue is allowed to carry", () => {
     for (const entry of getOrderOptionCatalogue()) {
       expect(entry).not.toHaveProperty("price");
       expect(entry).not.toHaveProperty("pricing");
+    }
+  });
+});
+
+describe("what crosses into the browser", () => {
+  it("hands the client cart no cost, so margin data never reaches a bundle", () => {
+    const serialised = JSON.stringify(getCatalogueIndex());
+
+    expect(serialised).not.toContain("cost");
+    for (const entry of getCatalogueIndex()) {
+      expect(entry).not.toHaveProperty("cost");
+    }
+  });
+
+  it("still carries a cost on every product it was narrowed from", () => {
+    for (const product of getAllProducts()) {
+      expect(product.pricing.cost).toBeGreaterThan(0);
+      expect(product.pricing.cost).toBeLessThan(product.pricing.price);
     }
   });
 });
