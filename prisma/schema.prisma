@@ -34,6 +34,18 @@ enum OrderStatus {
   @@map("order_status")
 }
 
+/// How the money for an order arrives. Every order captured through today's checkout is
+/// `prepaid` — the storefront offers no other choice, and this enum does not add one. It exists
+/// so the *schema* can already describe an order taken over WhatsApp or created by an operator,
+/// which is the shape the RTO problem of ADR-040 will eventually be answered in. See ADR-042.
+enum PaymentType {
+  prepaid
+  cod
+  partial_cod
+
+  @@map("payment_type")
+}
+
 model Order {
   /// A 10-character unambiguous alphanumeric code, generated in application code at capture
   /// time. Deliberately not a uuid and deliberately without a database default: it is read
@@ -50,7 +62,27 @@ model Order {
   /// Sum of the line items' unitCost × quantity, snapshotted at capture time so profit stays
   /// answerable after the catalogue's cost figures move.
   totalCost             Decimal              @map("total_cost") @db.Decimal(10, 2)
-  cashfreeOrderId       String               @map("cashfree_order_id")
+  paymentType           PaymentType          @default(prepaid) @map("payment_type")
+  /// What was actually collected before dispatch, and what is still owed on delivery. For a
+  /// prepaid order these are `total` and `0`; the invariant `amountPrepaid + amountDue = total`
+  /// holds for all three payment types, which is what makes "money outstanding" one query
+  /// rather than three cases. No default on `amountPrepaid`: a row that forgot to say what was
+  /// collected should fail to insert rather than quietly claim nothing was.
+  amountPrepaid         Decimal              @map("amount_prepaid") @db.Decimal(10, 2)
+  amountDue             Decimal              @default(0) @map("amount_due") @db.Decimal(10, 2)
+  /// Set by an operator when the courier's cash-on-delivery remittance is reconciled. Both stay
+  /// at their defaults for every prepaid order and no checkout path writes them.
+  codAmountCollected    Boolean              @default(false) @map("cod_amount_collected")
+  codCollectedAt        DateTime?            @map("cod_collected_at")
+  /// Whether the goods came back on an RTO or a return, and when they were physically received.
+  /// Distinct from `status = 'rto'`, which says the courier turned the parcel around: the parcel
+  /// being back on the shelf is a separate later fact, and it is the one a refund waits on.
+  itemReceivedBack      Boolean              @default(false) @map("item_received_back")
+  itemReceivedBackAt    DateTime?            @map("item_received_back_at")
+  /// Unique, not merely indexed. Cashfree mints one payment order per checkout and this column
+  /// is the join between their record and ours, so it is also the key `/api/verify-order` looks
+  /// an order up by. A duplicate here would mean two of our orders claiming one payment.
+  cashfreeOrderId       String               @unique @map("cashfree_order_id")
   cashfreePaymentStatus String               @map("cashfree_payment_status")
   utmSource             String?              @map("utm_source")
   utmMedium             String?              @map("utm_medium")
@@ -68,7 +100,6 @@ model Order {
   @@index([customerId])
   @@index([status])
   @@index([createdAt])
-  @@index([cashfreeOrderId])
   @@map("orders")
 }
 
@@ -137,12 +168,12 @@ model Customer {
 }
 
 model Admin {
-  id           String   @id @default(uuid())
-  username     String   @unique
+  id           String         @id @default(uuid())
+  username     String         @unique
   /// A bcrypt hash, written only by scripts/seed-admin.mjs and by lib/admin-auth.ts. The
   /// plaintext is never stored, never logged and never leaves the request that carried it.
-  passwordHash String   @map("password_hash")
-  createdAt    DateTime @default(now()) @map("created_at")
+  passwordHash String         @map("password_hash")
+  createdAt    DateTime       @default(now()) @map("created_at")
   sessions     AdminSession[]
 
   @@map("admins")

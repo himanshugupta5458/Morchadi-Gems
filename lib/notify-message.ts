@@ -28,11 +28,14 @@ function formatAddressLines(address: Address): string[] {
 /**
  * One numbered line per item, with its recorded choices indented underneath.
  *
- * The choices are the reason this message exists in the form it does. There is no database
- * ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so this message and the Cashfree
- * dashboard are together the whole order record — and Cashfree knows the amount but not that
- * the ring is the letter A. An item line without its selection is an order that cannot be
- * packed.
+ * The choices are the reason this message exists in the form it does. Cashfree knows the amount
+ * but not that the ring is the letter A, and an item line without its selection is an order
+ * that cannot be packed.
+ *
+ * Orders are now captured in Postgres too
+ * ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)), which makes this message a
+ * notification rather than the archive — and the fallback that makes a failed capture
+ * recoverable, since that write is not allowed to fail a checkout.
  */
 function formatItemLines(items: CartItem[]): string[] {
   return items.flatMap((item, index) => {

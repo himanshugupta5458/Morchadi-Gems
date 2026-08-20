@@ -145,9 +145,11 @@ export function formatSelectedOptions(
 }
 
 /**
- * `P001:Letter=A` — how a selection reads to whoever is packing the order. Compact because
- * it travels in Cashfree order metadata, which is the only place an order's choices are
- * recorded: there is no database ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)).
+ * `P001:Letter=A` — how a selection reads to whoever is packing the order. Compact because it
+ * travels in Cashfree order metadata, which is capped at 255 characters per value. Choices are
+ * also recorded in `order_line_items.selected_options`
+ * ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)); this string is the copy
+ * that rides with the payment.
  */
 export function summarizeLineOptions(
   productId: string,

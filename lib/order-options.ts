@@ -101,9 +101,12 @@ function packSummaryChunks(lineSummaries: string[]): string[] {
 }
 
 /**
- * The order's choices as Cashfree `order_tags`. There is no database
- * ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so the payment record is the order
- * record, and this is where a packer reads what to engrave.
+ * The order's choices as Cashfree `order_tags` — where a packer reads what to engrave.
+ *
+ * These are now also written to `order_line_items.selected_options`
+ * ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)), and the tags are kept
+ * rather than retired: that database write is deliberately allowed to fail without failing a
+ * checkout, so this remains the copy that travels with the payment itself.
  *
  * The summary is split across at most three tag values rather than truncated at the first
  * 255 characters, and if even that overflows the last value says how many lines were left

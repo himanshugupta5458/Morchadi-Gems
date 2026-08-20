@@ -5,6 +5,7 @@ import type {
   VerifyOrderResult,
 } from "@/types/order";
 import { lookupCashfreeOrder } from "@/lib/cashfree-order";
+import { recordVerifiedPaymentStatus } from "@/lib/order-capture";
 import { isMorchadiOrderId } from "@/lib/verify";
 
 /**
@@ -71,6 +72,13 @@ function verifiedResponse(
  * single fact the confirmation page is allowed to celebrate, and `amount` is Cashfree's
  * `order_amount` rather than any number the client held.
  *
+ * Once Cashfree has answered, the order's `cashfree_payment_status` in Postgres is brought into
+ * line with that answer. It is the only column this route writes: `status` stays `placed` on a
+ * confirmed payment, because fulfilment moves when an operator packs the order and not when the
+ * money arrives. The write is off the critical path in the same way the database write in
+ * `/api/create-order` is — `recordVerifiedPaymentStatus` never throws, and the response above is
+ * identical whether Postgres answered, failed, or has no row for this order at all.
+ *
  * The gateway call itself lives in `lib/cashfree-order.ts`, shared with `/api/notify-admin` so
  * the two routes cannot come to different conclusions about the same order. See
  * [the contract](/docs/api/verify-order.md) and
@@ -95,6 +103,8 @@ export async function GET(request: Request): Promise<NextResponse> {
   }
 
   if (lookup.kind === "unreachable") return verificationUnavailable();
+
+  await recordVerifiedPaymentStatus(requestedOrderId, lookup.result.status);
 
   return verifiedResponse(lookup.result);
 }

@@ -3,11 +3,19 @@
 Sends the shop owner a WhatsApp message describing an order, but only after re-confirming
 with Cashfree that the order was genuinely paid.
 
-This route exists because there is no database
-([ADR-001](../decisions/ADR-001-tech-stack.md)). The message it sends, together with the
-Cashfree dashboard, **is** the order record: Cashfree knows the amount and the payer, and this
+This route was written when there was no database
+([ADR-001](../decisions/ADR-001-tech-stack.md)), and the message it sends, together with the
+Cashfree dashboard, **was** the order record: Cashfree knows the amount and the payer, and this
 message carries what Cashfree does not — which pieces, how many, and which letter or colour was
 chosen on each.
+
+**As of [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md) that is no longer the only
+record** — `/api/create-order` writes the order to Postgres, and this message is now a
+notification rather than the archive. **Nothing about this route changed.** It still reads no
+table, writes no table, and derives every fact it prints from Cashfree and from the client
+summary exactly as described below. It also becomes the fallback that makes the capture write
+safe to fail: an order whose Postgres write failed still reaches the owner as a WhatsApp
+message.
 
 **There is no ADR for this route.** The admin-notification work was in flight when slot 031
 was taken by [ADR-031](../decisions/ADR-031-mobile-scale.md), and no record was ever written
@@ -96,7 +104,9 @@ with the `[notify-admin]` prefix.
 The short timeout is deliberate. CallMeBot is a free hobby service with no uptime commitment,
 and this request happens while a shopper is looking at their confirmation screen.
 
-Nothing here writes any state. Duplicate suppression lives in the browser, as a
+Nothing here writes any state — not even now that there is a database to write to; the only
+checkout routes that touch Postgres are [`/api/create-order`](create-order.md) and
+[`/api/verify-order`](verify-order.md). Duplicate suppression lives in the browser, as a
 `sessionStorage` flag keyed `morchadi-notified:{orderId}`, and is best-effort: a second tab or
 a cleared session will notify twice. A duplicate WhatsApp is harmless; a blocked confirmation
 is not.

@@ -23,9 +23,15 @@ import {
   mergeOrderItemsByProduct,
   parseOrderItems,
 } from "@/lib/order";
+import { buildOrderCaptureLines, captureOrder } from "@/lib/order-capture";
 import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
-import { getOrderOptionCatalogue, getOrderPricingCatalogue } from "@/lib/products";
+import {
+  getOrderCaptureCatalogue,
+  getOrderOptionCatalogue,
+  getOrderPricingCatalogue,
+} from "@/lib/products";
 import { parseUtmParams, toUtmOrderTags } from "@/lib/utm";
+import { normaliseCashfreeOrder } from "@/lib/verify";
 
 /**
  * Node, not Edge: this handler reads `node:crypto` for order identifiers and holds the
@@ -108,10 +114,14 @@ function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
 }
 
 /**
- * There is no database ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so the payment
- * record *is* the order record and the shopper's engraving choice has to travel with it.
- * `order_tags` is where it goes — a compact `P001:Letter=A; P010:Colour=Golden`, never an
- * amount. Orders with nothing to record send the request they always sent.
+ * The shopper's engraving choice, travelling with the payment record. `order_tags` is where it
+ * goes — a compact `P001:Letter=A; P010:Colour=Golden`, never an amount. Orders with nothing to
+ * record send the request they always sent.
+ *
+ * This predates the database and survives it. The order is now also written to Postgres by
+ * `captureOrder` below ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)), but
+ * that write is allowed to fail without failing the checkout, so the tags stay the copy of the
+ * fulfilment detail that lives wherever the money does.
  *
  * The campaign a shopper arrived on rides in the same map, under `utm_source`, `utm_medium`
  * and `utm_campaign` ([ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md)).
@@ -236,7 +246,8 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const orderId = generateOrderId();
   const mode = resolveCashfreeMode();
-  const orderTags = buildOrderTags(lineOptions.summary, parseUtmParams(rawUtm));
+  const utm = parseUtmParams(rawUtm);
+  const orderTags = buildOrderTags(lineOptions.summary, utm);
 
   let cashfreeResponse: Response;
   try {
@@ -281,18 +292,43 @@ export async function POST(request: Request): Promise<NextResponse> {
     return gatewayUnavailable();
   }
 
-  let paymentSessionId: string | null = null;
+  let cashfreePayload: unknown = null;
   try {
-    paymentSessionId = readPaymentSessionId(JSON.parse(responseText));
+    cashfreePayload = JSON.parse(responseText);
   } catch {
-    paymentSessionId = null;
+    cashfreePayload = null;
   }
+
+  const paymentSessionId = readPaymentSessionId(cashfreePayload);
 
   if (paymentSessionId === null) {
     console.error(
       `[create-order] ${orderId} came back from Cashfree without a payment_session_id: ${responseText}`,
     );
     return gatewayUnavailable();
+  }
+
+  const cashfreeOrder = normaliseCashfreeOrder(cashfreePayload, orderId);
+
+  const capture = await captureOrder({
+    cashfreeOrderId: cashfreeOrder.orderId,
+    cashfreePaymentStatus: cashfreeOrder.status,
+    address,
+    utm,
+    pricing: {
+      subtotal: order.subtotal,
+      shippingFee: order.shipping,
+      total: order.total,
+    },
+    lines: buildOrderCaptureLines(items, order.lineItems, getOrderCaptureCatalogue()),
+  });
+
+  if (capture.kind === "CAPTURED") {
+    console.log(
+      `[create-order] ${orderId} captured as order ${capture.orderId} for ${
+        capture.customerCreated ? "a new" : "a returning"
+      } customer`,
+    );
   }
 
   const success: CreateOrderSuccess = { orderId, paymentSessionId, mode };

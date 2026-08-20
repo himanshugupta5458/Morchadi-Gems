@@ -202,10 +202,13 @@ export function getStoredUtmParams(): UtmParams | null {
 }
 
 /**
- * The campaign, as tags on the Cashfree order. There is no database
- * ([ADR-001](/docs/decisions/ADR-001-tech-stack.md)), so the payment record is where an order
- * keeps what it knows about itself — this rides alongside the engraving choices already
+ * The campaign, as tags on the Cashfree order. It rides alongside the engraving choices already
  * written there by `toOrderOptionTags`, and like them it is never an amount.
+ *
+ * The same three values are now also columns on `orders`, and a new customer's first touch is
+ * kept on `customers` ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)). The
+ * tags stay because that database write may fail without failing the checkout, and because
+ * attribution is worth reading from the payment record itself.
  *
  * An order with no attribution produces an empty map, which the route drops entirely: a
  * shopper who arrived with no campaign sends Cashfree exactly the request it always sent.

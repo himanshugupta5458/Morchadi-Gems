@@ -9,7 +9,9 @@ neither the landing nor anything in `sessionStorage` is ever treated as success.
 status returned here, derived from Cashfree's own `order_status`, is the single fact the
 confirmation page is allowed to celebrate.
 
-**There is no ADR for this route.** Payment verification and the confirmation page shipped in
+**There is no ADR for this route**, though
+[ADR-042](../decisions/ADR-042-order-capture-in-postgres.md) now covers the one thing it writes.
+Payment verification and the confirmation page shipped in
 prompt 13, which produced no decision record;
 [ADR-013](../decisions/ADR-013-order-creation-and-payment.md) closes by naming them as the
 next prompt's work, and the [ADR index](../decisions/README.md) leaves slot 014 empty rather
@@ -108,8 +110,27 @@ same treatment of a malformed body. Failures are logged under `[verify-order]`, 
 attributes them to the calling route; `PENDING` is not logged, because the confirmation page
 polls and a shopper on a slow bank page would otherwise write ten lines per checkout.
 
-Nothing is written anywhere. There is no database, so a verification leaves no trace beyond
-the server log.
+### The Postgres write
+
+After Cashfree answers — and only when it answers cleanly — the order's
+`orders.cashfree_payment_status` is brought into line with that answer, by
+`recordVerifiedPaymentStatus` in `lib/order-capture.ts`.
+
+| | |
+| --- | --- |
+| Looked up by | `orders.cashfree_order_id`, which is unique as of [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md) |
+| Written | `cashfree_payment_status` only — `PAID`, `PENDING`, `FAILED` or `NOT_FOUND`, the same four states this response carries |
+| Not written | **`orders.status`.** A confirmed payment leaves the order at `placed`; fulfilment moves when an operator packs it, not when money arrives |
+| Skipped when | The stored status already matches, so a page polling a pending payment ten times performs at most one write |
+| No such order | A silent no-op. An order placed before capture existed, or one whose capture failed, matches nothing and is not an error |
+
+**This write cannot affect the response.** `recordVerifiedPaymentStatus` never throws: a
+database that is down, slow or refusing produces a log line prefixed `[order-capture]`, and the
+200 body above, its `Cache-Control` header and the confirmation page are all identical to a run
+against a healthy database. Same principle as the capture in
+[`/api/create-order`](create-order.md), argued in
+[ADR-042](../decisions/ADR-042-order-capture-in-postgres.md), and asserted by
+`lib/checkout-database-failure.test.ts`.
 
 ## Polling
 

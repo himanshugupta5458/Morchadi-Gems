@@ -5,8 +5,13 @@ Prices a cart server-side and creates a Cashfree payment session for it. Returns
 
 Handler: `app/api/create-order/route.ts`. Runtime: **Node** (`export const runtime = "nodejs"`).
 Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md), for
-the option fields [ADR-019](../decisions/ADR-019-product-options.md), and for the `utm` field
-[ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md).
+the option fields [ADR-019](../decisions/ADR-019-product-options.md), for the `utm` field
+[ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md), and for the Postgres write
+[ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
+
+**Nothing in the request or the response changed when order capture was added.** The body this
+route accepts, every validation below, the amount sent to Cashfree and all six response shapes
+are exactly what they were. The database write is a side effect layered beside them.
 
 ## Request
 
@@ -292,11 +297,42 @@ enough the last one ends `; +N more`. No amount is ever written to it.
 links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,
 then `NEXT_PUBLIC_BASE_URL`, then the request's own origin.
 
-Nothing is persisted. There is no database, so the `order_id` is generated, sent, and
-forgotten until Cashfree names it again on the return.
+### The Postgres write
 
-> **`/order-confirmation` does not exist yet.** A completed sandbox payment currently lands on
-> a 404. That page and server-side verification are the next prompt's work.
+Once Cashfree has returned a `payment_session_id`, and only then, the order is captured in
+Postgres by `captureOrder` in `lib/order-capture.ts`. One `Customer` (found or created by
+phone), one `Order`, one `OrderLineItem` per distinct product-and-choice, and the first
+`OrderStatusHistory` row.
+
+| Column | Value |
+| --- | --- |
+| `orders.id` | A fresh 10-character code from `lib/order-id.ts` — **not** the `MG_` id in the response |
+| `orders.status` | `placed` |
+| `orders.payment_type` | `prepaid`, always. This checkout offers no other choice |
+| `orders.amount_prepaid` / `amount_due` | The computed total / `0` |
+| `orders.subtotal`, `shipping_fee`, `total` | The server's own computed amounts, never the client's |
+| `orders.total_cost` | Σ `pricing.cost × quantity`, from `getOrderCaptureCatalogue()`. Margin data; never in any response |
+| `orders.cashfree_order_id` | The `order_id` Cashfree returned, falling back to the one that was sent. **Unique** |
+| `orders.cashfree_payment_status` | Cashfree's `order_status` through `normaliseCashfreeOrderStatus` — `PENDING` for a newly-minted session |
+| `orders.utm_*` | The same validated `utm` written to `order_tags` |
+| `orders.shipping_address` | The validated address, as JSON |
+| `order_line_items.product_name` / `product_image` | **Snapshotted from the catalogue at this moment**, not referenced |
+| `order_status_history` | One row: `placed`, `changed_by = "system"`, `reason = null` |
+
+`customers` is keyed on phone. A repeat shopper reuses their row, and
+`first_utm_source`/`_medium`/`_campaign` are written **only when the row is created** — a later
+order records its own campaign on the order and never rewrites the customer's first touch.
+
+**This write can fail without the shopper noticing, by design.** `captureOrder` never throws.
+A database that is down, slow, or refusing a constraint produces a server-side log line prefixed
+`[order-capture]` and nothing else: the 200 above is returned unchanged, the Cashfree session is
+unaffected, and no error body ever mentions the database. This mirrors `/api/notify-admin`, and
+the trade-off — a paid order with no row, recoverable only from the Cashfree dashboard — is
+argued in [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
+
+> **Two ids per order.** The `orderId` in the response is the Cashfree one and is what the
+> confirmation page, the return URL and `/api/verify-order` use. The 10-character
+> `orders.id` is not yet shown anywhere outside the database.
 
 ## Security notes
 
@@ -305,8 +341,10 @@ forgotten until Cashfree names it again on the return.
 | `CASHFREE_APP_ID` | `lib/cashfree-config.ts` | `import "server-only"` at the top of that module makes importing it from a `"use client"` file a **build error**, verified by deliberately doing it |
 | `CASHFREE_SECRET_KEY` | same | same; never logged, never in any response body |
 
-Neither is prefixed `NEXT_PUBLIC_`, so Next.js would not inline them into a client bundle
-even without the guard. The Cashfree config lives in its own module rather than in
+| `DATABASE_URL` | `lib/prisma.ts` | same — that module opens with `import "server-only"`, and the capture code that uses it is only ever reached from this route handler |
+
+Neither Cashfree credential is prefixed `NEXT_PUBLIC_`, so Next.js would not inline them into a
+client bundle even without the guard, and nor is `DATABASE_URL`. The Cashfree config lives in its own module rather than in
 `lib/config.ts` precisely because that file *is* imported by client components.
 
 The payment page holds no credential and knows no Cashfree endpoint. It calls exactly one

@@ -94,6 +94,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [039](ADR-039-analytics-and-utm-attribution.md) | GA4 as the analytics tool, and first-touch UTM attribution stored in the browser | Accepted — widens the CSP of [034](ADR-034-seo-audit-remediation.md) by three Google origins |
 | [040](ADR-040-postgres-for-orders.md) | Postgres for orders and CRM, alongside the JSON catalogue rather than replacing it | Accepted — narrows the no-database row of [001](ADR-001-tech-stack.md); the catalogue stays in `data/products.json`. **Addendum (prompt 44):** a terminal status is the `OrderStatus` enum and nothing else — no mirroring booleans or timestamps; `pricing.cost` joins the catalogue as server-only margin data |
 | [041](ADR-041-admin-subdomain-and-auth.md) | The admin panel is a subdomain of one deployment, behind a database-backed session | Accepted — introduces an authenticated operator, as [040](ADR-040-postgres-for-orders.md) said it would. **DNS and Coolify wiring for `admin.morchadigems.com` are explicitly deferred** to a later deployment prompt |
+| [042](ADR-042-order-capture-in-postgres.md) | Orders are captured in Postgres at checkout, and the write is not allowed to break checkout | Accepted — the first real traffic to write to the tables [040](ADR-040-postgres-for-orders.md) created. Adds the payment-type fields **without** any customer-facing COD choice, and makes the database write off-critical-path on the [notify-admin](../api/notify-admin.md) precedent |
 
 ## Numbering gaps and known drift
 

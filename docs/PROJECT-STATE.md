@@ -63,9 +63,10 @@ may pin higher patches).
 | Tests | Vitest ^4.1.10 + @testing-library/react ^16.3.2 + jsdom |
 | Images | `sharp` ^0.35.3 (dev dep, required inside the container for `next/image`) |
 | Payments | `@cashfreepayments/cashfree-js` ^1.0.7, hosted-checkout **redirect** (`redirectTarget: "_self"`) |
-| Database | **Postgres, for orders/CRM/admins only** (ADR-040, prompt 43). Local `docker compose` today; **production Postgres is not provisioned yet**. The catalogue is still `data/products.json`, shipped inside the image, and is the sole authority on price |
+| Database | **Postgres, for orders/CRM/admins only** (ADR-040, prompt 43). Checkout now writes to it: `/api/create-order` captures the customer, order, line items and first status-history row, and `/api/verify-order` updates the payment status (ADR-042, prompt 48). Both writes are **off the critical path** — a dead database cannot fail a checkout. Local `docker compose` today; **production Postgres is not provisioned yet**. The catalogue is still `data/products.json`, shipped inside the image, and is the sole authority on price |
 | Admin panel | **Authentication foundation only** (ADR-041, prompt 45) — a login page, a session and a placeholder dashboard on `admin.morchadigems.com`, served by this same deployment via hostname rewriting in `middleware.ts`. No order-management UI yet. **The subdomain does not resolve: DNS and Coolify are a later prompt.** Catalogue changes still ship as code |
-| Accounts | **none for shoppers.** Guest checkout only; each order mints a throwaway `guest_*` customer id. One operator account exists, created by `npm run seed:admin` |
+| Accounts | **none for shoppers.** Guest checkout only, no login; each order mints a throwaway `guest_*` id for Cashfree. A `customers` row keyed on phone is a CRM record, not a credential (ADR-042). One operator account exists, created by `npm run seed:admin` |
+| Payment types | **prepaid only.** The `payment_type` enum and the COD amount/return-receipt columns exist on `orders` (ADR-042) but **no checkout offers a choice and no route writes anything but `prepaid`** |
 | Output | `output: "standalone"`, `poweredByHeader: false` (`next.config.mjs`) |
 | Deploy | Coolify on a Hostinger VPS, single image from the root `Dockerfile` (ADR-032, `DEPLOY.md`) |
 | DNS / CDN | Cloudflare is documented as a supported front in `DEPLOY.md` §4, with **Full (strict)** required and Flexible called out as breaking the payment flow. Whether the record is currently proxied is **[VERIFY WITH OWNER]** |
@@ -325,11 +326,16 @@ carried here so a new conversation knows the intended direction — every item i
    the decision and narrowed ADR-001's no-database row; the schema landed in prompt 44 and admin
    sessions in prompt 45. What remains is the production half — provisioning Postgres in Coolify,
    a real `DATABASE_URL`, `prisma migrate deploy` in the image, and a backup policy.
-2. **CRM** — orders, enquiries, customers, analytics. **Started:** the tables exist and the
-   admin panel can be signed into (ADR-041); no screen reads an order yet.
-3. **Transactional emails and order tracking.** Today the order record is the CallMeBot
-   WhatsApp message plus the Cashfree dashboard, which is why `docs/api/notify-admin.md`
-   insists that message carry everything needed to pack the parcel.
+2. **CRM** — orders, enquiries, customers, analytics. **Started:** the tables exist, real
+   checkout traffic fills them (ADR-042, prompt 48) and the admin panel can be signed into
+   (ADR-041); **no screen reads an order yet** — the order list and the status-change screen
+   are the next prompts.
+3. **Transactional emails and order tracking.** The order record is now the `orders` table,
+   with the CallMeBot WhatsApp message and the Cashfree dashboard behind it as the fallback
+   that makes a failed capture recoverable — which is why `docs/api/notify-admin.md` still
+   insists that message carry everything needed to pack the parcel. **Two ids per order:**
+   `orders.id` is a 10-character unambiguous code and `orders.cashfree_order_id` is the `MG_`
+   string; only the `MG_` one is shown to a shopper today, and surfacing the other is unbuilt.
 4. **S3 or MinIO for media, plus a catalogue admin** — which retires "catalogue changes ship as
    code."
 

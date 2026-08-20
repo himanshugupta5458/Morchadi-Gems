@@ -2,6 +2,7 @@ import catalogue from "@/data/products.json";
 import type { CatalogueEntry, Category, Product } from "@/types/product";
 import { hasProductOptions } from "@/lib/options";
 import type { OrderPricingEntry } from "@/lib/order";
+import type { OrderCaptureEntry } from "@/lib/order-capture";
 import type { OrderOptionEntry } from "@/lib/order-options";
 
 /**
@@ -104,6 +105,30 @@ export function getOrderPricingCatalogue(): OrderPricingEntry[] {
     name: product.name,
     price: product.pricing.price,
     inStock: product.stock.inStock,
+  }));
+}
+
+/**
+ * The catalogue as *capture* is allowed to see it: the name and photograph an order line
+ * snapshots, and `pricing.cost` — which is why this is a third accessor rather than two fields
+ * added to `getOrderPricingCatalogue`.
+ *
+ * Cost is margin data. It is barred from the pricing core, where an amount is decided, and it
+ * is barred from `toCatalogueEntry`, which is the only catalogue shape that crosses into a
+ * client bundle. Its one legitimate reader is the code that writes `order_line_items.unit_cost`
+ * at the moment an order is captured, so that profit stays answerable after the catalogue's
+ * figures move. Keeping it in an object of its own means no caller acquires it by accident.
+ * See ADR-040 and ADR-042.
+ *
+ * `image` cannot in practice be empty: `scripts/validate-products.mjs` requires at least one
+ * photograph per product and runs in the gate.
+ */
+export function getOrderCaptureCatalogue(): OrderCaptureEntry[] {
+  return products.map((product) => ({
+    id: product.id,
+    name: product.name,
+    image: getPrimaryImage(product) ?? "",
+    cost: product.pricing.cost,
   }));
 }
 

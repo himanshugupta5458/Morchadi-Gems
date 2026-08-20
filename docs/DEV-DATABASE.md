@@ -44,7 +44,7 @@ npm run dev:all
   healthy — accepting connections
 
 ▸ Applying pending migrations (prisma migrate deploy)
-2 migrations found in prisma/migrations
+3 migrations found in prisma/migrations
 No pending migrations to apply.
 
 ▸ Starting the Next.js dev server (npm run dev)
@@ -188,6 +188,17 @@ The schema lives in [`prisma/schema.prisma`](../prisma/schema.prisma). The table
 are created by the migrations in `prisma/migrations/`, which **are committed to git**: they are the ordered history
 of how the database got its shape, and production will replay exactly this list.
 
+| Migration | What it did |
+| --- | --- |
+| `20260820062848_init_orders_crm_schema` | The five order and CRM tables and the `order_status` enum ([ADR-040](decisions/ADR-040-postgres-for-orders.md)) |
+| `20260820064646_add_admin_sessions` | `admin_sessions` ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)) |
+| `20260820085000_add_payment_type_and_order_id_uniqueness` | The `payment_type` enum, seven payment and return-receipt columns on `orders`, and `cashfree_order_id` from indexed to **unique** ([ADR-042](decisions/ADR-042-order-capture-in-postgres.md)) |
+
+The third one adds `amount_prepaid` as `NOT NULL` with **no default**, which is only safe
+against an empty table — `orders` held zero rows when it was written, checked before it ran. A
+database with real orders would need that column back-filled first, and the unique index would
+fail outright on duplicate `cashfree_order_id` values rather than dedupe them.
+
 ### After editing the schema
 
 ```bash
@@ -288,8 +299,11 @@ npx prisma studio
 A browser GUI over the data, and one of the two reasons Prisma was chosen over Drizzle
 ([ADR-040](decisions/ADR-040-postgres-for-orders.md)). It lists every model in the schema and
 lets rows be read and edited by hand. `admins` and `admin_sessions` fill up as soon as you seed
-an account and sign in ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)); the order
-tables stay empty until a later prompt wires checkout to write to them.
+an account and sign in ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)), and
+`customers`, `orders`, `order_line_items` and `order_status_history` fill up as soon as a
+checkout completes — `/api/create-order` writes them
+([ADR-042](decisions/ADR-042-order-capture-in-postgres.md)). Local order data is throwaway like
+everything else here; `npx prisma migrate reset` clears it.
 
 ## Creating the admin account
 

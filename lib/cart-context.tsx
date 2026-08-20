@@ -78,8 +78,10 @@ function writeStoredCart(items: CartItem[]): void {
 }
 
 /**
- * The cart lives entirely in the browser — there is no database and no account to attach it
- * to ([ADR-010](/docs/decisions/ADR-010-cart-architecture.md)). `catalogue` is the lean
+ * The cart lives entirely in the browser — there is no account to attach it to, and the
+ * database holds orders rather than carts
+ * ([ADR-010](/docs/decisions/ADR-010-cart-architecture.md),
+ * [ADR-040](/docs/decisions/ADR-040-postgres-for-orders.md)). `catalogue` is the lean
  * index a Server Component passes in; every price shown or summed comes from it rather than
  * from the persisted snapshot.
  */
