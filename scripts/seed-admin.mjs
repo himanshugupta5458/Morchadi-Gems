@@ -1,8 +1,8 @@
-import { createInterface } from "node:readline";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { hash } from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
+import { createTerminalPrompt, PromptCancelledError } from "./tty-prompt.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -50,47 +50,19 @@ function loadEnvironment() {
 }
 
 /**
- * A readline interface that can stop echoing.
+ * The prompt this script asks its questions through.
  *
- * `askSecret` writes the question itself, then silences readline's own echo before reading the
- * line, so the password never appears on screen, never reaches a scrollback buffer and never
- * lands in a terminal recording. It is asked for twice for the same reason: nothing was shown,
- * so nothing could be checked by eye.
+ * `askSecret` never writes the password anywhere: the characters are collected without being
+ * echoed, so nothing appears on screen, nothing reaches a scrollback buffer and nothing lands in
+ * a terminal recording. It is asked for twice for that same reason — nothing was shown, so
+ * nothing could be checked by eye.
+ *
+ * The reading itself lives in `tty-prompt.mjs`, which replaced an earlier `node:readline`
+ * interface whose muted echo also swallowed its own prompts. See
+ * [docs/logs/2026-08-20-password-prompt-never-appears.md](/docs/logs/2026-08-20-password-prompt-never-appears.md).
  */
 function createPrompt() {
-  const readline = createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    terminal: true,
-  });
-
-  let isMuted = false;
-
-  readline._writeToOutput = (chunk) => {
-    if (!isMuted) readline.output.write(chunk);
-  };
-
-  return {
-    ask(question) {
-      return new Promise((resolve) => {
-        readline.question(question, (answer) => resolve(answer));
-      });
-    },
-    askSecret(question) {
-      return new Promise((resolve) => {
-        process.stdout.write(question);
-        isMuted = true;
-        readline.question("", (answer) => {
-          isMuted = false;
-          process.stdout.write("\n");
-          resolve(answer);
-        });
-      });
-    },
-    close() {
-      readline.close();
-    },
-  };
+  return createTerminalPrompt({ input: process.stdin, output: process.stdout });
 }
 
 function describeUsernameProblem(username) {
@@ -209,5 +181,5 @@ async function main() {
 main().catch((error) => {
   console.error("");
   console.error(error instanceof Error ? error.message : String(error));
-  process.exitCode = 1;
+  process.exitCode = error instanceof PromptCancelledError ? 130 : 1;
 });

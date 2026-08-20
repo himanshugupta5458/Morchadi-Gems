@@ -59,3 +59,4 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 | Date | Symptom | Severity | Status |
 | --- | --- | --- | --- |
 | [2026-08-18](2026-08-18-buttons-render-with-no-padding.md) | Buttons render as thin labels with the text hugging the top and bottom edges | Major | Resolved |
+| [2026-08-20](2026-08-20-password-prompt-never-appears.md) | `npm run seed:admin` looks stuck after the username — the password prompt never appears | Major | Resolved |

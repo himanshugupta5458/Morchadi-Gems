@@ -126,6 +126,30 @@
 | TC-69 | Not a terminal | Pipe stdin | Refuses to run rather than reading an unhidden password | Manual |
 | TC-70 | Only the hash is stored | Inspect the row | `password_hash` begins `$2b$12$`; no plaintext column exists | Manual |
 
+### Seed script prompts
+
+Added after the password and confirm-password prompts were found never to appear
+([log](../logs/2026-08-20-password-prompt-never-appears.md)). Every case is driven through a real
+pty and asserted against the **captured bytes**, not against how the screen looked — the original
+bug was invisible in a rendered transcript and obvious in the raw stream.
+
+| ID | Scenario | Steps | Expected result | Type |
+| --- | --- | --- | --- | --- |
+| TC-74 | Every prompt is visible | Fresh run, answer all three questions | `Username: `, `Password (not shown): ` and `Confirm password: ` each appear and each capture input | Manual |
+| TC-75 | Nothing erases a prompt | Inspect the captured byte stream of a full run | No cursor-positioning or erase sequence anywhere in it | Automated + Manual |
+| TC-76 | Too-short password retry | Enter a password under 12 characters | The message shows **and the next password prompt is visible** | Manual |
+| TC-77 | Mismatch retry | Enter a valid password, then a different confirmation | The message shows **and the next password prompt is visible** | Manual |
+| TC-78 | Attempts exhausted | Fail three times | `No matching password after 3 attempts.`, exit 1, no row created | Manual |
+| TC-79 | Existing admin, accepted | Run with an admin present, answer `y` | Proceeds to the username prompt and creates the row | Manual |
+| TC-80 | Existing admin, declined | Run with an admin present, press Enter | `Nothing was created.`, exit 0 | Manual |
+| TC-81 | The password is byte-exact | Verify the typed password against the stored hash | `compare` returns true for it and false for a near miss | Manual |
+| TC-82 | Backspace, visible prompt | Type a username with extra characters and delete them | The echoed characters are erased; the corrected value is used | Automated + Manual |
+| TC-83 | Backspace, hidden prompt | Delete characters while entering a password | Nothing is written at all — the length cannot be counted from the screen | Automated |
+| TC-84 | Arrow keys | Press arrow keys mid-answer | Dropped, not appended as their escape sequence | Automated + Manual |
+| TC-85 | Ctrl-C | Press Ctrl-C at a prompt | `Cancelled.`, exit 130, no row created — raw mode raises no signal, so the script must do this itself | Manual |
+| TC-86 | Pasted CRLF | Paste an answer ending in carriage return and line feed | The line feed does not satisfy the following prompt | Automated |
+| TC-87 | Type-ahead before a secret | Type past the Enter of a password | The extra characters do not reach the confirmation prompt | Automated |
+
 ### Regression
 
 | ID | Scenario | Steps | Expected result | Type |
