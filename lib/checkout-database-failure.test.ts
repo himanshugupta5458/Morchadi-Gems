@@ -227,7 +227,7 @@ describe("GET /api/verify-order with Postgres unreachable", () => {
 
     expect(response.status).toBe(200);
     expect(response.headers.get("Cache-Control")).toBe("no-store");
-    expect(body).toEqual({ orderId, status: "PAID", amount: 419 });
+    expect(body).toEqual({ orderId, status: "PAID", amount: 419, trackingId: null });
 
     const loggedText = silencedErrors.mock.calls.flat().map(String).join(" ");
     expect(loggedText).toContain("the Postgres update failed");

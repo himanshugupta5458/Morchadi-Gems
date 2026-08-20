@@ -1,5 +1,5 @@
 import "server-only";
-import type { VerifyOrderResult } from "@/types/order";
+import type { CashfreePaymentSummary } from "@/types/order";
 import {
   CASHFREE_API_VERSION,
   getCashfreeOrderUrl,
@@ -19,7 +19,7 @@ const CASHFREE_TIMEOUT_MS = 15_000;
  * not fix, while an unreachable gateway is worth asking about again.
  */
 export type CashfreeOrderLookup =
-  | { kind: "ok"; result: VerifyOrderResult }
+  | { kind: "ok"; result: CashfreePaymentSummary }
   | { kind: "not-configured" }
   | { kind: "unreachable" };
 

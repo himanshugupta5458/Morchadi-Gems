@@ -7,6 +7,7 @@ import { toAddressFormValues, type AddressFormValues } from "@/lib/address";
 import { useCart } from "@/lib/cart-context";
 import { buildCheckoutData, readCheckoutData, writeCheckoutData } from "@/lib/checkout";
 import { CHECKOUT_PAYMENT_PATH } from "@/lib/navigation";
+import { clearSavedAddress, readSavedAddress } from "@/lib/saved-address";
 import { AddressForm } from "@/components/AddressForm";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSummary } from "@/components/CheckoutSummary";
@@ -17,6 +18,12 @@ import { PanelNotice } from "@/components/PanelNotice";
  * server render. The page waits for both before deciding what to show — otherwise a reload
  * with a full cart would flash the empty-cart guard, and a shopper returning to edit would
  * see their details appear a frame after the empty fields. See ADR-011.
+ *
+ * There are two places a pre-fill can come from and they are consulted in that order. The
+ * `sessionStorage` checkout bundle is this checkout, a step or two ago — somebody who reached
+ * `/payment` and pressed back. The `localStorage` saved address is a previous *completed*
+ * order. The in-progress one wins wherever both exist, because it is the more recent statement
+ * of where this parcel is going.
  */
 export function AddressCheckout(): JSX.Element {
   const { lines, subtotal, shipping, total, hasUnavailableItems, isHydrated } =
@@ -26,15 +33,42 @@ export function AddressCheckout(): JSX.Element {
   const [savedValues, setSavedValues] = useState<AddressFormValues | undefined>(
     undefined,
   );
+  const [isPrefilledFromLastOrder, setIsPrefilledFromLastOrder] = useState(false);
   const [isRestoreAttempted, setIsRestoreAttempted] = useState(false);
 
   useEffect(() => {
     const savedCheckout = readCheckoutData();
     if (savedCheckout !== null) {
       setSavedValues(toAddressFormValues(savedCheckout.address));
+      setIsRestoreAttempted(true);
+      return;
+    }
+
+    const addressFromLastOrder = readSavedAddress();
+    if (addressFromLastOrder !== null) {
+      setSavedValues(addressFromLastOrder);
+      setIsPrefilledFromLastOrder(true);
     }
     setIsRestoreAttempted(true);
   }, []);
+
+  /**
+   * Forgetting the saved address empties the form in the same act, so the shopper sending this
+   * order somewhere else sees the blank boxes they asked for rather than the details they have
+   * just discarded still sitting there.
+   *
+   * `formInstance` is the form's React key. `AddressForm` reads `initialValues` once, into
+   * `useState` — which is what keeps the stored copy untouched while somebody types — so a new
+   * key is how it is asked to start again from a different set of values.
+   */
+  const [formInstance, setFormInstance] = useState(0);
+
+  function handleForgetSavedAddress(): void {
+    clearSavedAddress();
+    setSavedValues(undefined);
+    setIsPrefilledFromLastOrder(false);
+    setFormInstance((instance) => instance + 1);
+  }
 
   function handleValidAddress(address: Address): void {
     writeCheckoutData(buildCheckoutData(lines, address));
@@ -74,7 +108,24 @@ export function AddressCheckout(): JSX.Element {
           </p>
         </div>
 
-        <AddressForm initialValues={savedValues} onSubmit={handleValidAddress} />
+        {isPrefilledFromLastOrder ? (
+          <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1 border border-line bg-ivory px-4 py-3 text-body-sm text-muted">
+            <span>Filled in from your last order. Change anything that has moved.</span>
+            <button
+              type="button"
+              onClick={handleForgetSavedAddress}
+              className="text-ink underline decoration-gold underline-offset-4 transition-colors duration-250 hover:text-gold-deep"
+            >
+              Use a different address
+            </button>
+          </p>
+        ) : null}
+
+        <AddressForm
+          key={formInstance}
+          initialValues={savedValues}
+          onSubmit={handleValidAddress}
+        />
       </div>
 
       <CheckoutSummary

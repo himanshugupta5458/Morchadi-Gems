@@ -298,10 +298,16 @@ describe("GET /api/verify-order, once there is an order to update", () => {
     const body = await response.json();
 
     expect(response.status).toBe(200);
-    expect(body).toEqual({ orderId: cashfreeOrderId, status: "PAID", amount: 259 });
 
     const afterVerification = await prisma.order.findUniqueOrThrow({
       where: { cashfreeOrderId },
+    });
+
+    expect(body).toEqual({
+      orderId: cashfreeOrderId,
+      status: "PAID",
+      amount: 259,
+      trackingId: afterVerification.id,
     });
 
     expect(afterVerification.cashfreePaymentStatus).toBe("PAID");
@@ -322,6 +328,162 @@ describe("GET /api/verify-order, once there is an order to update", () => {
       orderId: strangerOrderId,
       status: "PAID",
       amount: 999,
+      trackingId: null,
     });
+  });
+});
+
+/**
+ * The regression these cover is a real one, diagnosed from order `PQS8PSSGBC` in the local
+ * development database. That order was placed under the name "Test user", which is exactly what
+ * somebody typed into it — the address beside it reads `line1: "43t5yt"`, `city: "675"` — so it
+ * is not itself a bug. What *was* a bug is what happened next: a later order from the same phone
+ * submitted a real name, and the `customers` row went on saying "Test user", because the row was
+ * written once at first sight and never revisited.
+ *
+ * That is the discrepancy an operator actually sees. Both the admin list and the detail header
+ * render `customer.name`, and the admin search matches on it, while the address panel on the
+ * same screen renders the order's own `shipping_address` — so one screen showed two different
+ * names for one order, and the real one was not searchable.
+ */
+describe("the name a repeat customer is known by", () => {
+  const PLACEHOLDER_NAME = "Test user";
+  const REAL_NAME = "Himanshu Gupta";
+
+  function addressNamed(name: string, email = "route.capture@example.com") {
+    return { ...ROUTE_TEST_ADDRESS, name, email };
+  }
+
+  async function placeOrderWith(address: Record<string, unknown>): Promise<string> {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) =>
+        cashfreeCreated(String(JSON.parse(String(init.body)).order_id)),
+      ),
+    );
+
+    const body = await (
+      await postCreateOrder({ items: [{ productId: INITIAL_RING_ID, qty: 1 }], address })
+    ).json();
+
+    return String(body.trackingId);
+  }
+
+  function storedCustomer() {
+    return prisma.customer.findUniqueOrThrow({ where: { phone: ROUTE_TEST_PHONE } });
+  }
+
+  it("is the exact name submitted, on a first order", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await placeOrderWith(addressNamed(REAL_NAME));
+
+    const customer = await storedCustomer();
+
+    expect(customer.name).toBe(REAL_NAME);
+    expect(customer.name).not.toBe(PLACEHOLDER_NAME);
+    expect(customer.name).not.toBe("Ananya Iyer");
+    expect(customer.name).not.toBe("");
+  });
+
+  /**
+   * The failing case. Before the fix this second assertion read `"Test user"`.
+   */
+  it("is corrected by a later order rather than frozen at the first one", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await placeOrderWith(addressNamed(PLACEHOLDER_NAME));
+    expect((await storedCustomer()).name).toBe(PLACEHOLDER_NAME);
+
+    const secondOrderId = await placeOrderWith(addressNamed(REAL_NAME));
+
+    expect((await storedCustomer()).name).toBe(REAL_NAME);
+    expect(await prisma.customer.count({ where: { phone: ROUTE_TEST_PHONE } })).toBe(1);
+
+    const secondOrder = await prisma.order.findUniqueOrThrow({
+      where: { id: secondOrderId },
+      include: { customer: true },
+    });
+
+    expect(secondOrder.customer.name).toBe(REAL_NAME);
+    expect(secondOrder.shippingAddress).toMatchObject({ name: REAL_NAME });
+  });
+
+  /**
+   * The `customers` row is brought up to date; the orders are not. Each order's
+   * `shipping_address` is a snapshot of what was submitted for that parcel, and a later order
+   * must not rewrite an earlier one's label.
+   */
+  it("leaves every earlier order's own shipping address alone", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const firstOrderId = await placeOrderWith(addressNamed(PLACEHOLDER_NAME));
+    await placeOrderWith(addressNamed(REAL_NAME));
+
+    const firstOrder = await prisma.order.findUniqueOrThrow({ where: { id: firstOrderId } });
+
+    expect(firstOrder.shippingAddress).toMatchObject({ name: PLACEHOLDER_NAME });
+  });
+
+  it("takes a corrected email too, and never forgets one it already has", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await placeOrderWith(addressNamed(REAL_NAME, "typo@example.com"));
+    expect((await storedCustomer()).email).toBe("typo@example.com");
+
+    await placeOrderWith(addressNamed(REAL_NAME, "correct@example.com"));
+    expect((await storedCustomer()).email).toBe("correct@example.com");
+
+    await placeOrderWith({ ...ROUTE_TEST_ADDRESS, name: REAL_NAME, email: "" });
+    expect((await storedCustomer()).email).toBe("correct@example.com");
+  });
+
+  /**
+   * First-touch attribution is the opposite kind of fact and must not follow the name.
+   */
+  it("does not disturb the campaign that won the customer", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) =>
+        cashfreeCreated(String(JSON.parse(String(init.body)).order_id)),
+      ),
+    );
+
+    await postCreateOrder({
+      items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+      address: addressNamed(PLACEHOLDER_NAME),
+      utm: { source: "instagram", campaign: "rakhi_2026" },
+    });
+
+    await postCreateOrder({
+      items: [{ productId: WATCH_RING_ID, qty: 1 }],
+      address: addressNamed(REAL_NAME),
+      utm: { source: "google", campaign: "diwali_2026" },
+    });
+
+    const customer = await storedCustomer();
+
+    expect(customer.name).toBe(REAL_NAME);
+    expect(customer.firstUtmSource).toBe("instagram");
+    expect(customer.firstUtmCampaign).toBe("rakhi_2026");
+  });
+
+  /**
+   * A repeat order carrying exactly the details already stored must not touch the row. The
+   * `customers` table is what an operator scans to recognise a returning buyer, and an
+   * `updated_at` that moves every time somebody orders again is noise in it.
+   */
+  it("writes nothing at all when neither the name nor the email has moved", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await placeOrderWith(addressNamed(REAL_NAME));
+    const afterFirst = await storedCustomer();
+
+    await placeOrderWith(addressNamed(REAL_NAME));
+    const afterSecond = await storedCustomer();
+
+    expect(afterSecond).toEqual(afterFirst);
   });
 });

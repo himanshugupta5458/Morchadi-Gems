@@ -212,6 +212,47 @@ export function sumOrderCost(lines: readonly OrderCaptureLine[]): number {
   return lines.reduce((total, line) => total + line.unitCost * line.quantity, 0);
 }
 
+/** What a `customers` row holds that a later order can correct. */
+interface StoredCustomerContactDetails {
+  id: string;
+  name: string;
+  email: string | null;
+}
+
+/**
+ * Brings a returning customer's name and email into line with the order being placed, and
+ * writes nothing when neither has moved.
+ *
+ * The guard is not an optimisation. Most repeat orders carry exactly the details already
+ * stored, and an unconditional update would touch `updated_at` on a row nothing about which
+ * changed — noise in the one table an operator scans to recognise a repeat buyer.
+ *
+ * An email is only ever *upgraded*: a submitted address with no email leaves a stored one
+ * alone, because the customer supplying less this time is not a reason to forget what they
+ * supplied last time. A name has no equivalent case — `validateAddressForm` has already refused
+ * an empty one, so every value reaching here is a real name.
+ */
+async function refreshCustomerContactDetails(
+  client: OrderCaptureClient,
+  storedCustomer: StoredCustomerContactDetails,
+  submittedAddress: Address,
+): Promise<void> {
+  const submittedEmail = submittedAddress.email.length > 0 ? submittedAddress.email : null;
+
+  const nameHasMoved = storedCustomer.name !== submittedAddress.name;
+  const emailHasMoved = submittedEmail !== null && storedCustomer.email !== submittedEmail;
+
+  if (!nameHasMoved && !emailHasMoved) return;
+
+  await client.customer.update({
+    where: { id: storedCustomer.id },
+    data: {
+      ...(nameHasMoved ? { name: submittedAddress.name } : {}),
+      ...(emailHasMoved ? { email: submittedEmail } : {}),
+    },
+  });
+}
+
 /**
  * Writes one captured order — the customer, the order, its line items and the first status
  * history row — and **never throws**.
@@ -230,6 +271,19 @@ export function sumOrderCost(lines: readonly OrderCaptureLine[]): number {
  * that won someone survives every later purchase and a repeat order never overwrites it
  * (ADR-039).
  *
+ * **A returning customer's name and email are refreshed from the order being placed**, which
+ * first-touch attribution deliberately is not. The two are opposite kinds of fact: the campaign
+ * that won somebody is a historical event and the latest one would be the wrong answer, while a
+ * name is a current description of a person and the *oldest* one is the wrong answer. Writing
+ * the name once and never again is what let a placeholder typed into a test checkout keep
+ * appearing as the buyer on every later order from that phone, on the admin list, on the detail
+ * header, and in the operator's search results — while the address panel on the same screen
+ * showed the real name that order was actually placed under.
+ *
+ * The order's own `shipping_address` is untouched by this: it is a snapshot of what was
+ * submitted and each order keeps its own. Only the `customers` row, which has no history and is
+ * meant to say who this phone belongs to now, is brought up to date.
+ *
  * `paymentType` is `prepaid` and `amountDue` is zero, unconditionally. This route is the only
  * thing that creates orders, and the storefront it serves collects the full amount up front.
  */
@@ -240,8 +294,12 @@ export async function captureOrder(
   try {
     const existingCustomer = await client.customer.findUnique({
       where: { phone: input.address.phone },
-      select: { id: true },
+      select: { id: true, name: true, email: true },
     });
+
+    if (existingCustomer !== null) {
+      await refreshCustomerContactDetails(client, existingCustomer, input.address);
+    }
 
     const customerId =
       existingCustomer?.id ??
@@ -312,6 +370,41 @@ export async function captureOrder(
       captureError,
     );
     return { kind: "FAILED" };
+  }
+}
+
+/**
+ * The ten-character order number for one Cashfree payment, or null — and **never throws**, for
+ * the same reason nothing else on this path does.
+ *
+ * Keyed on `orders.cashfree_order_id`, the unique column ADR-042 made the join between
+ * Cashfree's record and ours, and the same column `recordVerifiedPaymentStatus` below writes
+ * through. It is a separate read rather than a value returned by that update because the two
+ * answer different questions and only one of them writes: an order whose stored status already
+ * matches performs no update at all, and it still has an order number.
+ *
+ * Null covers a payment this shop never captured — one whose write failed (ADR-042), one placed
+ * before capture existed — and a database that is unreachable. `/api/verify-order` renders all
+ * three the same way, by falling back to the payment reference, so distinguishing them here
+ * would buy the caller nothing.
+ */
+export async function findTrackingIdForCashfreeOrder(
+  cashfreeOrderId: string,
+  client: Pick<PrismaClient, "order"> = prisma,
+): Promise<string | null> {
+  try {
+    const order = await client.order.findUnique({
+      where: { cashfreeOrderId },
+      select: { id: true },
+    });
+
+    return order?.id ?? null;
+  } catch (lookupError) {
+    console.error(
+      `${LOG_PREFIX} ${cashfreeOrderId} could not be looked up for its order number`,
+      lookupError,
+    );
+    return null;
   }
 }
 

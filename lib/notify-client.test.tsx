@@ -2,7 +2,7 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { CheckoutData } from "@/types/cart";
-import type { VerifyOrderResult } from "@/types/order";
+import type { CashfreePaymentSummary } from "@/types/order";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
 import {
   buildNotifiedFlagKey,
@@ -14,7 +14,7 @@ import {
 const ORDER_ID = "MG_1786968394909_v8j3wggq";
 const OTHER_ORDER_ID = "MG_1786968300000_aaaaaaaa";
 
-const PAID: VerifyOrderResult = { orderId: ORDER_ID, status: "PAID", amount: 746 };
+const PAID: CashfreePaymentSummary = { orderId: ORDER_ID, status: "PAID", amount: 746 };
 
 const BUNDLE: CheckoutData = {
   cart: [

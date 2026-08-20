@@ -9,6 +9,7 @@ import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY } from "@/lib/checkout";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
 import { UTM_STORAGE_KEY } from "@/lib/utm";
+import { readSavedAddress } from "@/lib/saved-address";
 import { MAX_VERIFY_ATTEMPTS, PENDING_POLL_INTERVAL_MS } from "@/lib/verify";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 
@@ -779,5 +780,102 @@ describe("/order-confirmation — when our own verification cannot answer", () =
     expect(verifyCalls()).toHaveLength(1);
     expect(verifyCalls()[0][0]).toBe(`/api/verify-order?order_id=${ORDER_ID}`);
     expect(notifyCalls()).toHaveLength(1);
+  });
+});
+
+/**
+ * A confirmed payment is the only thing that makes an address worth remembering, and it is the
+ * last moment the address exists in the browser — `clearCheckoutData` removes the bundle in the
+ * same effect. See `lib/saved-address.ts`.
+ */
+describe("/order-confirmation — remembering the address for next time", () => {
+  it("saves the delivery address once the payment is confirmed", async () => {
+    seedCart();
+    seedBundle(makeBundle());
+    respondWith(verified("PAID", 2099));
+
+    expect(readSavedAddress()).toBeNull();
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(readSavedAddress()).toEqual({
+      name: "Ananya Iyer",
+      phone: "9876543210",
+      email: "ananya@example.com",
+      line1: "12 Rani Bagh",
+      line2: "",
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: "302001",
+    });
+  });
+
+  it("saves nothing while the payment is still pending", async () => {
+    seedCart();
+    seedBundle(makeBundle());
+    respondWith(verified("PENDING", 2099));
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(readSavedAddress()).toBeNull();
+    expect(storedCartItemCount()).toBe(1);
+  });
+
+  it("saves nothing when the payment failed", async () => {
+    seedCart();
+    seedBundle(makeBundle());
+    respondWith(verified("FAILED", null));
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(readSavedAddress()).toBeNull();
+  });
+
+  it("saves nothing when there is no bundle to save", async () => {
+    seedCart();
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(readSavedAddress()).toBeNull();
+  });
+
+  /**
+   * The saved address outlives the bundle deliberately: one is cleared so a completed checkout
+   * cannot be re-entered, the other is kept so the next one is shorter.
+   */
+  it("survives the bundle and the cart being cleared", async () => {
+    seedCart();
+    seedBundle(makeBundle());
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(window.sessionStorage.getItem(CHECKOUT_STORAGE_KEY)).toBeNull();
+    expect(storedCartItemCount()).toBe(0);
+    expect(readSavedAddress()).not.toBeNull();
+  });
+
+  it("replaces an older saved address with the one just paid for", async () => {
+    seedCart();
+    seedBundle(
+      makeBundle({
+        address: {
+          name: "Rohit Malhotra",
+          phone: "9822200022",
+          email: "rohit@example.com",
+          line1: "8 Cubbon Road",
+          city: "Bengaluru",
+          state: "Karnataka",
+          pincode: "560001",
+        },
+      }),
+    );
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`?order_id=${ORDER_ID}`);
+
+    expect(readSavedAddress()?.name).toBe("Rohit Malhotra");
+    expect(readSavedAddress()?.city).toBe("Bengaluru");
   });
 });

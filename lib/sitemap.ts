@@ -22,12 +22,18 @@ export const CONTENT_LAST_MODIFIED_ISO = "2026-08-18";
  * The routes that exist to move an order along rather than to be found. They are `noindex`
  * in their own metadata and disallowed in `robots.txt`; listing them here as well would ask a
  * crawler to fetch a page we have just told it to ignore.
+ *
+ * `/track` joins them for the same reason `/order-confirmation` is here and then some: with an
+ * order number in the query string it renders the state of one person's order, and an indexed
+ * copy of that is somebody else's order status sitting in a search result. Without one it is a
+ * single empty input box, which is nothing to rank.
  */
 export const NON_INDEXABLE_PATHS: readonly string[] = [
   "/cart",
   "/address",
   "/payment",
   "/order-confirmation",
+  "/track",
   "/style-guide",
 ];
 

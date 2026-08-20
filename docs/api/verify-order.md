@@ -1,7 +1,7 @@
 # GET /api/verify-order
 
 Asks Cashfree what happened to one order and reduces the answer to
-`{ orderId, status, amount }`.
+`{ orderId, status, amount }`, plus the `trackingId` this shop knows the same order by.
 
 This is the only source of truth for a completed payment. A shopper arriving on
 `/order-confirmation` proves only that a browser reached a URL — a URL anyone can type — so
@@ -59,21 +59,43 @@ on a spinner; a cached `PAID` would be a receipt served to whoever asked next.
 ### 200 OK
 
 ```ts
-interface VerifyOrderResult {
+interface CashfreePaymentSummary {
   orderId: string;
   status: "PAID" | "PENDING" | "FAILED" | "NOT_FOUND";
   amount: number | null;
 }
+
+interface VerifyOrderResult extends CashfreePaymentSummary {
+  trackingId: string | null;
+}
 ```
 
 ```json
-{ "orderId": "MG_1755400000000_a1b2c3d4", "status": "PAID", "amount": 2099 }
+{
+  "orderId": "MG_1755400000000_a1b2c3d4",
+  "status": "PAID",
+  "amount": 2099,
+  "trackingId": "W2ACEHACUU"
+}
 ```
+
+The split is deliberate. `CashfreePaymentSummary` is the whole of what the gateway is able to
+say, and it is what `lib/cashfree-order.ts` and [`/api/notify-admin`](notify-admin.md) take —
+neither talks to Postgres, so neither has a `trackingId` field to leave structurally null. Only
+this route's own body carries both.
 
 `NOT_FOUND` is not a Cashfree `order_status` — it is what a 404 from Cashfree becomes, kept
 distinct from `FAILED` because the causes differ (an invented order id, versus a payment that
 genuinely did not complete). `amount` is null when Cashfree has no such order, or when its
 response carried no readable amount.
+
+`trackingId` is `orders.id` — the ten-character order number of
+[ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md) — read from Postgres by this
+request's `order_id`. It is null when there is no such row, which is exactly the case
+[ADR-042](../decisions/ADR-042-order-capture-in-postgres.md) allows: a capture that failed
+leaves a paid order with no order number, and this says so rather than inventing one. A body
+that omits the key entirely is read as null by `parseVerifyOrderResult`; a value that is neither
+a string nor null is a body that function does not recognise, and it refuses the whole response.
 
 A `200` is returned for all four statuses: the route succeeded in *asking*. That is a
 different thing from the payment having succeeded.
@@ -124,6 +146,25 @@ After Cashfree answers — and only when it answers cleanly — the order's
 | Skipped when | The stored status already matches, so a page polling a pending payment ten times performs at most one write |
 | No such order | A silent no-op. An order placed before capture existed, or one whose capture failed, matches nothing and is not an error |
 
+### The Postgres read
+
+`findTrackingIdForCashfreeOrder` (`lib/order-capture.ts`) then reads `orders.id` by the same
+`orders.cashfree_order_id`, for the one fact Cashfree cannot supply. It is a separate query
+rather than a value returned by the write above, because the two answer different questions and
+only one of them writes — an order whose stored status already matches performs no update at
+all, and it still has an order number.
+
+Like the write, **it never throws**: a database that is down, slow or refusing produces a log
+line and `trackingId: null`, and the rest of the body is identical. Null therefore covers three
+cases the caller does not need to tell apart — no such order, a capture that failed, and an
+unreachable database — because the confirmation page renders all three the same way, by falling
+back to the payment reference.
+
+This read exists so the order number survives a refresh of `/order-confirmation`. The `order_id`
+in that page's URL persists; the `sessionStorage` bundle that used to carry the order number
+does not, because a confirmed payment clears it. That was the stated limitation of ADR-043, and
+it is closed by [ADR-045](../decisions/ADR-045-public-order-tracking.md).
+
 **This write cannot affect the response.** `recordVerifiedPaymentStatus` never throws: a
 database that is down, slow or refusing produces a log line prefixed `[order-capture]`, and the
 200 body above, its `Cache-Control` header and the confirmation page are all identical to a run
@@ -149,6 +190,9 @@ which carries `import "server-only"`. Neither appears in a `"use client"` file, 
 
 The route is unauthenticated, which is deliberate and safe: there are no accounts
 ([ADR-001](../decisions/ADR-001-tech-stack.md)), and the only thing a caller can learn is the
-status and amount of an order whose full id they already hold. The id embeds 8 random base36
+status, amount and order number of an order whose full Cashfree id they already hold. The order
+number is itself a low-value capability — everything it opens is the deliberately narrow
+`/track` page of [ADR-045](../decisions/ADR-045-public-order-tracking.md) — and handing it to
+somebody who already holds the payment id grants nothing they did not have. The id embeds 8 random base36
 characters, so it is not enumerable from the timestamp alone, and no address, contact detail,
 or line item is ever returned.

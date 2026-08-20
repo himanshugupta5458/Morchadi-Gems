@@ -5,7 +5,10 @@ import type {
   VerifyOrderResult,
 } from "@/types/order";
 import { lookupCashfreeOrder } from "@/lib/cashfree-order";
-import { recordVerifiedPaymentStatus } from "@/lib/order-capture";
+import {
+  findTrackingIdForCashfreeOrder,
+  recordVerifiedPaymentStatus,
+} from "@/lib/order-capture";
 import { isMorchadiOrderId } from "@/lib/verify";
 
 /**
@@ -63,7 +66,7 @@ function verifiedResponse(
 
 /**
  * Asks Cashfree what happened to one order and reduces the answer to
- * `{ orderId, status, amount }`.
+ * `{ orderId, status, amount, trackingId }`.
  *
  * This is the only source of truth for a completed payment. The shopper arriving on
  * `/order-confirmation` proves only that Cashfree redirected a browser to a URL — a URL anyone
@@ -78,6 +81,16 @@ function verifiedResponse(
  * money arrives. The write is off the critical path in the same way the database write in
  * `/api/create-order` is — `recordVerifiedPaymentStatus` never throws, and the response above is
  * identical whether Postgres answered, failed, or has no row for this order at all.
+ *
+ * The same row is also *read*, for the one fact Cashfree cannot supply: `trackingId`, the
+ * ten-character order number this shop knows the order by. It travels in the response so the
+ * confirmation page can name the order from the `order_id` in its own URL rather than from a
+ * `sessionStorage` bundle that a confirmed payment has already cleared — which is what made
+ * that page lose the order number on a refresh
+ * ([ADR-045](/docs/decisions/ADR-045-public-order-tracking.md)). Like the write, this read
+ * never throws and never changes the rest of the body: a database that is down yields
+ * `trackingId: null`, which the page renders exactly as it renders an order that has no
+ * number.
  *
  * The gateway call itself lives in `lib/cashfree-order.ts`, shared with `/api/notify-admin` so
  * the two routes cannot come to different conclusions about the same order. See
@@ -105,6 +118,7 @@ export async function GET(request: Request): Promise<NextResponse> {
   if (lookup.kind === "unreachable") return verificationUnavailable();
 
   await recordVerifiedPaymentStatus(requestedOrderId, lookup.result.status);
+  const trackingId = await findTrackingIdForCashfreeOrder(requestedOrderId);
 
-  return verifiedResponse(lookup.result);
+  return verifiedResponse({ ...lookup.result, trackingId });
 }

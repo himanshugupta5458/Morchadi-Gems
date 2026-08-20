@@ -34,6 +34,31 @@ export const CHECKOUT_PAYMENT_PATH = "/payment";
 /** Step three — where Cashfree returns the shopper, with `?order_id=` appended. */
 export const CHECKOUT_CONFIRMATION_PATH = "/order-confirmation";
 
+/**
+ * The public order tracking page. Not a checkout step — it is where a customer comes back to
+ * days later with the ten-character order number in hand, which is why it is reachable without
+ * a cart, an address or a session. Kept out of the index all the same
+ * ([ADR-045](/docs/decisions/ADR-045-public-order-tracking.md)).
+ */
+export const TRACK_ORDER_PATH = "/track";
+
+/**
+ * The query parameter the tracking form submits under. Named for the thing a customer types
+ * rather than for the column it matches, and read straight off the URL so a lookup survives a
+ * refresh and can be linked to with the number already filled in.
+ */
+export const TRACK_ORDER_QUERY_PARAM = "order_id";
+
+/**
+ * `/track`, optionally with an order number already in the box. The confirmation page links
+ * here with the number it has just shown, so the first lookup costs a click rather than a
+ * transcription.
+ */
+export function buildTrackOrderHref(trackingId?: string): string {
+  if (trackingId === undefined) return TRACK_ORDER_PATH;
+  return `${TRACK_ORDER_PATH}?${TRACK_ORDER_QUERY_PARAM}=${encodeURIComponent(trackingId)}`;
+}
+
 /** The only endpoint the payment page talks to. It never calls Cashfree directly. */
 export const CREATE_ORDER_API_PATH = "/api/create-order";
 

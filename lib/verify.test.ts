@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { CheckoutData, CartItem } from "@/types/cart";
-import type { VerifyOrderResult } from "@/types/order";
+import type { CashfreePaymentSummary } from "@/types/order";
 import {
   MAX_VERIFY_ATTEMPTS,
   PENDING_POLL_INTERVAL_MS,
@@ -15,6 +15,9 @@ import {
 } from "@/lib/verify";
 
 const PAID_ORDER_ID = "MG_1786968394909_v8j3wggq";
+
+/** The ten-character `orders.id` the same order is known by. */
+const ORDER_NUMBER = "W2ACEHACUU";
 
 function makeBundle(overrides: Partial<CheckoutData> = {}): CheckoutData {
   const item: CartItem = {
@@ -43,7 +46,9 @@ function makeBundle(overrides: Partial<CheckoutData> = {}): CheckoutData {
   };
 }
 
-function makeVerified(overrides: Partial<VerifyOrderResult> = {}): VerifyOrderResult {
+function makeVerified(
+  overrides: Partial<CashfreePaymentSummary> = {},
+): CashfreePaymentSummary {
   return { orderId: PAID_ORDER_ID, status: "PAID", amount: 2099, ...overrides };
 }
 
@@ -218,18 +223,58 @@ describe("isMorchadiOrderId", () => {
 describe("parseVerifyOrderResult", () => {
   it("accepts every state the route can return", () => {
     for (const status of ["PAID", "PENDING", "FAILED", "NOT_FOUND"] as const) {
-      expect(parseVerifyOrderResult({ orderId: PAID_ORDER_ID, status, amount: 2099 })).toEqual({
+      expect(
+        parseVerifyOrderResult({
+          orderId: PAID_ORDER_ID,
+          status,
+          amount: 2099,
+          trackingId: ORDER_NUMBER,
+        }),
+      ).toEqual({
         orderId: PAID_ORDER_ID,
         status,
         amount: 2099,
+        trackingId: ORDER_NUMBER,
       });
     }
   });
 
   it("accepts a null amount", () => {
     expect(
-      parseVerifyOrderResult({ orderId: PAID_ORDER_ID, status: "NOT_FOUND", amount: null }),
-    ).toEqual({ orderId: PAID_ORDER_ID, status: "NOT_FOUND", amount: null });
+      parseVerifyOrderResult({
+        orderId: PAID_ORDER_ID,
+        status: "NOT_FOUND",
+        amount: null,
+        trackingId: null,
+      }),
+    ).toEqual({
+      orderId: PAID_ORDER_ID,
+      status: "NOT_FOUND",
+      amount: null,
+      trackingId: null,
+    });
+  });
+
+  /**
+   * The one field this reads leniently, and the reason is in `lib/verify.ts`: a body with no
+   * order number and an order that has none are the same thing to the confirmation page.
+   */
+  it("reads an absent, null or empty order number as no order number", () => {
+    for (const trackingId of [undefined, null, ""]) {
+      expect(
+        parseVerifyOrderResult({
+          orderId: PAID_ORDER_ID,
+          status: "PAID",
+          amount: 2099,
+          ...(trackingId === undefined ? {} : { trackingId }),
+        }),
+      ).toEqual({
+        orderId: PAID_ORDER_ID,
+        status: "PAID",
+        amount: 2099,
+        trackingId: null,
+      });
+    }
   });
 
   it("rejects a body it cannot fully recognise", () => {
@@ -246,6 +291,14 @@ describe("parseVerifyOrderResult", () => {
     ).toBeNull();
     expect(
       parseVerifyOrderResult({ orderId: PAID_ORDER_ID, status: "PAID", amount: "2099" }),
+    ).toBeNull();
+    expect(
+      parseVerifyOrderResult({
+        orderId: PAID_ORDER_ID,
+        status: "PAID",
+        amount: 2099,
+        trackingId: 12345,
+      }),
     ).toBeNull();
   });
 });

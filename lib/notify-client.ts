@@ -1,5 +1,5 @@
 import type { CheckoutData } from "@/types/cart";
-import type { VerifyOrderResult } from "@/types/order";
+import type { CashfreePaymentSummary } from "@/types/order";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
 import { getStoredUtmParams } from "@/lib/utm";
 
@@ -50,7 +50,7 @@ export function markAdminNotified(orderId: string): void {
  * See [the notify-admin contract](/docs/api/notify-admin.md).
  */
 export function notifyAdminOfPaidOrder(
-  verified: VerifyOrderResult,
+  verified: CashfreePaymentSummary,
   bundle: CheckoutData | null,
 ): void {
   if (verified.status !== "PAID") return;

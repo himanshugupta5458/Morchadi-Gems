@@ -60,3 +60,4 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 | --- | --- | --- | --- |
 | [2026-08-18](2026-08-18-buttons-render-with-no-padding.md) | Buttons render as thin labels with the text hugging the top and bottom edges | Major | Resolved |
 | [2026-08-20](2026-08-20-password-prompt-never-appears.md) | `npm run seed:admin` looks stuck after the username — the password prompt never appears | Major | Resolved |
+| [2026-08-20](2026-08-20-admin-shows-the-wrong-customer-name.md) | The admin panel shows a different customer name from the shipping address on the same order | Major | Resolved |

@@ -93,15 +93,38 @@ export type CashfreeOrderState = "PAID" | "PENDING" | "FAILED";
 export type VerifiedOrderState = CashfreeOrderState | "NOT_FOUND";
 
 /**
- * The whole 200 body of `GET /api/verify-order`. `amount` is Cashfree's `order_amount` and
- * nothing else — never the `sessionStorage` bundle's total, never a number from the client.
- * It is null when Cashfree has no such order, or when its response carried no readable
- * amount.
+ * What Cashfree said about one payment, and the whole of what Cashfree is able to say.
+ * `amount` is its `order_amount` and nothing else — never the `sessionStorage` bundle's
+ * total, never a number from the client. It is null when Cashfree has no such order, or when
+ * its response carried no readable amount.
+ *
+ * Separate from `VerifyOrderResult` below because the gateway has no idea what this shop
+ * calls the order. A layer that only ever talks to Cashfree — `lib/cashfree-order.ts`, the
+ * admin notification — takes this shape, so it has no `trackingId` field to leave
+ * structurally null.
  */
-export interface VerifyOrderResult {
+export interface CashfreePaymentSummary {
   orderId: string;
   status: VerifiedOrderState;
   amount: number | null;
+}
+
+/**
+ * The whole 200 body of `GET /api/verify-order`: what Cashfree said, plus the order number
+ * this shop knows the same order by.
+ *
+ * `trackingId` is `orders.id`, read from Postgres by the payment's `cashfree_order_id` — the
+ * same column this route already writes the verified payment status to. It is null when there
+ * is no such row, which is exactly the case ADR-042 allows: a capture that failed leaves a
+ * paid order with no order number, and this says so rather than inventing one.
+ *
+ * It is here so that the order number survives a refresh of the confirmation page. The
+ * `order_id` in that page's URL persists; the `sessionStorage` bundle that used to carry the
+ * order number does not, because a confirmed payment clears it. See
+ * [ADR-045](/docs/decisions/ADR-045-public-order-tracking.md).
+ */
+export interface VerifyOrderResult extends CashfreePaymentSummary {
+  trackingId: string | null;
 }
 
 export type VerifyOrderErrorCode =

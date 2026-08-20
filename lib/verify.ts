@@ -1,6 +1,7 @@
 import type { CheckoutData } from "@/types/cart";
 import type {
   CashfreeOrderState,
+  CashfreePaymentSummary,
   VerifiedOrderState,
   VerifyOrderErrorBody,
   VerifyOrderResult,
@@ -96,7 +97,7 @@ function readCashfreeOrderId(payload: unknown): string | null {
 export function normaliseCashfreeOrder(
   payload: unknown,
   requestedOrderId: string,
-): VerifyOrderResult {
+): CashfreePaymentSummary {
   const rawStatus =
     typeof payload === "object" && payload !== null
       ? (payload as Record<string, unknown>).order_status
@@ -125,6 +126,12 @@ function isVerifiedOrderState(value: unknown): value is VerifiedOrderState {
  * success from a response it cannot fully recognise: a body missing its `status`, or carrying
  * one outside the four known states, is treated as a failure to verify rather than coerced
  * into something renderable.
+ *
+ * `trackingId` is held to the same standard — a value that is neither a string nor null is a
+ * body this function does not recognise. A body that omits the key entirely reads as `null`
+ * rather than as a fault, which is the one concession here: an order number that never arrived
+ * and an order that has none are the same thing to the page, and both are handled by showing
+ * the payment reference instead.
  */
 export function parseVerifyOrderResult(payload: unknown): VerifyOrderResult | null {
   if (typeof payload !== "object" || payload === null) return null;
@@ -134,10 +141,16 @@ export function parseVerifyOrderResult(payload: unknown): VerifyOrderResult | nu
   if (!isVerifiedOrderState(candidate.status)) return null;
   if (candidate.amount !== null && typeof candidate.amount !== "number") return null;
 
+  const trackingId = candidate.trackingId;
+  if (trackingId !== undefined && trackingId !== null && typeof trackingId !== "string") {
+    return null;
+  }
+
   return {
     orderId: candidate.orderId,
     status: candidate.status,
     amount: candidate.amount,
+    trackingId: typeof trackingId === "string" && trackingId.length > 0 ? trackingId : null,
   };
 }
 
@@ -253,7 +266,7 @@ export function describeVerificationFailure(payload: unknown): VerificationFailu
  */
 export function canDisplayBundleForOrder(
   bundle: CheckoutData | null,
-  verified: VerifyOrderResult,
+  verified: CashfreePaymentSummary,
 ): boolean {
   if (bundle === null) return false;
   if (verified.status !== "PAID") return false;

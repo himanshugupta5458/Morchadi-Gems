@@ -6,6 +6,7 @@ import { getFeaturedProducts, getNewArrivals } from "@/lib/products";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { CollectionStrip } from "@/components/CollectionStrip";
 import { Hero } from "@/components/Hero";
+import { OrderTrackingForm } from "@/components/OrderTrackingForm";
 import { ProductGrid } from "@/components/ProductGrid";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -121,6 +122,19 @@ export default function HomePage(): JSX.Element {
             subtitle="Every order is inspected, insured in transit, and returnable for seven days."
           />
           <TrustStrip />
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-white">
+        <div className="container flex flex-col items-center gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-12 lg:py-20">
+          <SectionHeading
+            roman="Already"
+            accent="Ordered?"
+            subtitle="Enter the ten-character order number from your confirmation and we will tell you where your parcel has got to. No account, no password."
+          />
+          <div className="w-full max-w-xl">
+            <OrderTrackingForm submittedOrderId="" />
+          </div>
         </div>
       </section>
     </>

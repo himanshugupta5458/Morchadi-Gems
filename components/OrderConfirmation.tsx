@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import type { CheckoutData } from "@/types/cart";
@@ -11,9 +12,11 @@ import { formatRupees } from "@/lib/format";
 import {
   CART_PATH,
   CHECKOUT_PAYMENT_PATH,
+  buildTrackOrderHref,
   buildVerifyOrderPath,
 } from "@/lib/navigation";
 import { notifyAdminOfPaidOrder } from "@/lib/notify-client";
+import { saveAddressForNextTime } from "@/lib/saved-address";
 import { SHOP_PATH } from "@/lib/shop-query";
 import {
   MAX_VERIFY_ATTEMPTS,
@@ -92,6 +95,10 @@ function describeOrderReference(reference: OrderReference): string {
  * The order number, given the weight it is worth. It is the one thing on a confirmation
  * screen a shopper may need to copy down, and it is set at heading size and spaced so the
  * unambiguous alphabet `lib/order-id.ts` chose survives being read off a phone screen.
+ *
+ * The tracking link carries the number with it, so the shopper who follows it now sees their
+ * order immediately, and the one who bookmarks it has the number in the URL rather than only
+ * on this screen.
  */
 function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.Element {
   return (
@@ -103,7 +110,15 @@ function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.Element
         {trackingId}
       </strong>
       <span className="text-body-sm text-muted">
-        Keep this. It is what we will ask for if you message us about this order.
+        Keep this. It is what we will ask for if you message us about this order, and what you
+        type in to{" "}
+        <Link
+          href={buildTrackOrderHref(trackingId)}
+          className="text-ink underline decoration-gold underline-offset-4 transition-colors duration-250 hover:text-gold-deep"
+        >
+          check where it has got to
+        </Link>
+        .
       </span>
     </div>
   );
@@ -210,13 +225,23 @@ export function OrderConfirmation(): JSX.Element {
     view.kind === "settled" && view.result.status === "PAID" ? view.result : null;
 
   /**
-   * Held in the same state as the bundle it comes from, so it survives the bundle being
-   * cleared on a confirmed payment two effects below. A refresh after that clear has no
-   * bundle to read and falls back to the Cashfree reference — the known limit of carrying the
-   * order number in `sessionStorage`, argued in ADR-043.
+   * The order number, from the server first and the browser second.
+   *
+   * `/api/verify-order` reads it out of Postgres by the Cashfree id in this page's URL, so it
+   * survives a refresh, a second device and a browser that refuses session storage — the
+   * limitation ADR-043 shipped with and [ADR-045](/docs/decisions/ADR-045-public-order-tracking.md)
+   * closes. The stamped bundle stays as the fallback because it is available on the very first
+   * paint, before the round trip to Cashfree has returned, and it is checked against the order
+   * being confirmed before it is believed.
+   *
+   * The two cannot disagree about a live order: both are written from the same create-order
+   * response. When the capture failed there is no order number anywhere, both are null, and the
+   * page names the payment reference instead.
    */
+  const verifiedTrackingId = view.kind === "settled" ? view.result.trackingId : null;
+
   const orderReference: OrderReference = {
-    trackingId: readBundleTrackingId(bundle, orderId ?? ""),
+    trackingId: verifiedTrackingId ?? readBundleTrackingId(bundle, orderId ?? ""),
     cashfreeOrderId: orderId ?? "",
   };
 
@@ -226,17 +251,25 @@ export function OrderConfirmation(): JSX.Element {
    * already-empty cart and an already-absent bundle.
    *
    * The bundle is re-read here rather than taken from state, because this is the last moment
-   * it exists — `clearCheckoutData` two lines below removes it — and the admin notification is
-   * the one consumer that needs the items and the address rather than a rendering of them.
+   * it exists — `clearCheckoutData` below removes it — and its two consumers here need the
+   * items and the address themselves rather than a rendering of them.
    *
    * `notifyAdminOfPaidOrder` returns nothing and is not awaited. It cannot delay the success
    * screen, and it cannot stop the cart being cleared: whatever happens to the WhatsApp
-   * message, the two lines after it run.
+   * message, the lines after it run.
+   *
+   * The address is copied out to `localStorage` in the same breath, and this is the only moment
+   * it could be: a confirmed payment is what makes an address worth remembering, and the bundle
+   * holding it is removed on the next line. Saving at `/address` instead would remember details
+   * from a checkout that was abandoned at the payment page.
    */
   useEffect(() => {
     if (paidResult === null) return;
 
-    notifyAdminOfPaidOrder(paidResult, readCheckoutData());
+    const paidBundle = readCheckoutData();
+
+    notifyAdminOfPaidOrder(paidResult, paidBundle);
+    if (paidBundle !== null) saveAddressForNextTime(paidBundle.address);
 
     clearCart();
     clearCheckoutData();
