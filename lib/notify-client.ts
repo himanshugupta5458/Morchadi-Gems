@@ -1,6 +1,7 @@
 import type { CheckoutData } from "@/types/cart";
 import type { VerifyOrderResult } from "@/types/order";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
+import { getStoredUtmParams } from "@/lib/utm";
 
 /**
  * One key per order, so two different orders in one tab both notify. `sessionStorage` rather
@@ -57,6 +58,8 @@ export function notifyAdminOfPaidOrder(
 
   markAdminNotified(verified.orderId);
 
+  const utm = getStoredUtmParams();
+
   try {
     void fetch(NOTIFY_ADMIN_API_PATH, {
       method: "POST",
@@ -66,6 +69,7 @@ export function notifyAdminOfPaidOrder(
       body: JSON.stringify({
         orderId: verified.orderId,
         ...(bundle === null ? {} : { summary: bundle }),
+        ...(utm === null ? {} : { utm }),
       }),
     }).catch(() => undefined);
   } catch {

@@ -27,6 +27,11 @@ interface NotifyAdminRequest {
    * validated for shape only. Same object as the `sessionStorage` checkout bundle.
    */
   summary?: CheckoutData;
+  /**
+   * The campaign the browser recorded as its first touch, when it has one. Optional,
+   * untrusted, validated for shape only, and present on a minority of orders.
+   */
+  utm?: UtmParams;
 }
 ```
 
@@ -56,6 +61,7 @@ In order:
 | The amount printed | Cashfree `order_amount` | The only authoritative amount, as everywhere else in this project. |
 | Order id printed | Cashfree, falling back to the requested id | |
 | Items, quantities, chosen options, delivery address | The client `summary` | Fulfilment detail the server has no record of. It is display text in a message to the owner: it decides nothing, prices nothing, and is validated for shape by `parseCheckoutValue`. |
+| The campaign the order came from | The client `utm` | Marketing detail the server has no record of either. Validated for shape by `parseUtmParams`, printed as a `*Came from*` section, and consulted for nothing. Absent means no section is printed at all. See [ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md). |
 
 A `summary` that fails validation is dropped, not rejected — the message degrades to the order
 id and the amount, and tells the owner to open the Cashfree dashboard.

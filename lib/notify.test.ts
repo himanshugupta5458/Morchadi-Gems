@@ -185,6 +185,76 @@ describe("the admin order message", () => {
     expect(message).toContain("*Total:* ₹746");
   });
 
+  it("names the campaign an order came from, under the order it belongs to", () => {
+    const message = composeAdminOrderMessage({
+      orderId: ORDER_ID,
+      amountPaid: 746,
+      bundle: makeBundle(),
+      utm: {
+        source: "instagram",
+        medium: "paid_social",
+        campaign: "rakhi_2026",
+        term: "anti tarnish rings",
+        content: "carousel_2",
+      },
+    });
+
+    const lines = message.split("\n");
+    const headingIndex = lines.indexOf("*Came from*");
+
+    expect(headingIndex).toBeGreaterThan(lines.indexOf(`*Order:* ${ORDER_ID}`));
+    expect(headingIndex).toBeLessThan(lines.indexOf("*Items*"));
+    expect(lines[headingIndex + 1]).toBe("Source: instagram");
+    expect(lines[headingIndex + 2]).toBe("Medium: paid_social");
+    expect(lines[headingIndex + 3]).toBe("Campaign: rakhi_2026");
+  });
+
+  it("prints only the campaign fields that are there", () => {
+    const message = composeAdminOrderMessage({
+      orderId: ORDER_ID,
+      amountPaid: 746,
+      bundle: makeBundle(),
+      utm: { source: "whatsapp" },
+    });
+
+    expect(message).toContain("Source: whatsapp");
+    expect(message).not.toContain("Medium:");
+    expect(message).not.toContain("Campaign:");
+  });
+
+  it("says nothing about a campaign on the ordinary order that has none", () => {
+    for (const utm of [undefined, null, { term: "rings" }]) {
+      const message = composeAdminOrderMessage({
+        orderId: ORDER_ID,
+        amountPaid: 746,
+        bundle: makeBundle(),
+        utm,
+      });
+
+      expect(message, JSON.stringify(utm)).not.toContain("Came from");
+      expect(message).toBe(
+        composeAdminOrderMessage({
+          orderId: ORDER_ID,
+          amountPaid: 746,
+          bundle: makeBundle(),
+        }),
+      );
+    }
+  });
+
+  it("still names the campaign when no summary survived the trip", () => {
+    const message = composeAdminOrderMessage({
+      orderId: ORDER_ID,
+      amountPaid: 746,
+      bundle: null,
+      utm: { source: "instagram" },
+    });
+
+    expect(message).toContain("*Came from*");
+    expect(message).toContain("Source: instagram");
+    expect(message).toContain("No item or delivery summary");
+  });
+
   it("points at the Cashfree dashboard and states the dispatch window", () => {
     const message = composeAdminOrderMessage({
       orderId: ORDER_ID,

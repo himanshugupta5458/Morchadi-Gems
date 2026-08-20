@@ -7,6 +7,7 @@ import {
   readCallMeBotCredentials,
   type NotifyOutcome,
 } from "@/lib/notify";
+import { parseUtmParams } from "@/lib/utm";
 import { isMorchadiOrderId } from "@/lib/verify";
 
 /** Node, not Edge: this handler reads the Cashfree secret and the CallMeBot key. */
@@ -62,6 +63,9 @@ async function readRequestBody(request: Request): Promise<Record<string, unknown
  * that, `/api/notify-admin` would be an open endpoint for sending the owner arbitrary
  * WhatsApp messages by naming any order id.
  *
+ * The campaign, when the browser sends one, is treated exactly like the summary: validated
+ * for shape by `parseUtmParams`, printed, and consulted for nothing. See ADR-039.
+ *
  * The summary is trusted only to describe, never to decide. It is validated for shape by
  * `parseCheckoutValue` — the same validator the `sessionStorage` bundle goes through — and if
  * it fails, the message degrades to the order id and the amount rather than being abandoned.
@@ -93,6 +97,7 @@ export async function POST(request: Request): Promise<NextResponse<NotifyAdminRe
     orderId: lookup.result.orderId,
     amountPaid: lookup.result.amount,
     bundle: parseCheckoutValue(body?.summary),
+    utm: parseUtmParams(body?.utm),
   });
 
   const outcome = await dispatchAdminNotification({

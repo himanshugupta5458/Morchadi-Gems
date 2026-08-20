@@ -6,12 +6,13 @@ import {
   mergeOrderItemsByProduct,
   parseOrderItems,
 } from "@/lib/order";
-import { validateOrderLineOptions } from "@/lib/order-options";
+import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
 import {
   getAllProducts,
   getOrderOptionCatalogue,
   getOrderPricingCatalogue,
 } from "@/lib/products";
+import { parseUtmParams, toUtmOrderTags } from "@/lib/utm";
 
 const WATCH_RING_ID = "P010";
 const INITIAL_RING_ID = "P001";
@@ -191,5 +192,87 @@ describe("the single-image products", () => {
         product.pricing.price,
       );
     }
+  });
+});
+
+describe("a campaign attached to the request", () => {
+  const CAMPAIGN_BODY = {
+    items: [{ productId: WATCH_RING_ID, qty: 2 }],
+    utm: {
+      source: "instagram",
+      medium: "paid_social",
+      campaign: "rakhi_2026",
+      term: "anti tarnish rings",
+      content: "carousel_2",
+    },
+  };
+
+  it("does not reach the pricing core, which has no parameter for it", () => {
+    const items = parseOrderItems(CAMPAIGN_BODY.items);
+
+    expect(items).not.toBeNull();
+    expect(items?.[0]).toEqual({ productId: WATCH_RING_ID, qty: 2 });
+    expect(totalFor(items ?? [])).toBe(
+      totalFor([{ productId: WATCH_RING_ID, qty: 2 }]),
+    );
+  });
+
+  it("prices an order identically whether it is present, absent or nonsense", () => {
+    const priced = totalFor([{ productId: WATCH_RING_ID, qty: 2 }]);
+
+    for (const utm of [
+      undefined,
+      null,
+      { source: "instagram" },
+      { source: "instagram", campaign: "rakhi_2026" },
+      { price: 1, total: 1, shipping: 0 },
+    ]) {
+      const items = parseOrderItems([
+        { productId: WATCH_RING_ID, qty: 2, utm },
+      ]);
+
+      expect(totalFor(items ?? []), JSON.stringify(utm)).toBe(priced);
+      expect(parseUtmParams(utm) ?? {}).not.toHaveProperty("price");
+    }
+  });
+
+  it("cannot smuggle an amount in through a utm field", () => {
+    expect(parseUtmParams({ price: 1, total: 999, shipping: 0 })).toBeNull();
+    expect(toUtmOrderTags(parseUtmParams({ price: 1 }))).toEqual({});
+  });
+
+  it("rides on the order tags beside the recorded choices, never instead of them", () => {
+    const { summary } = validateOrderLineOptions(
+      [{ productId: INITIAL_RING_ID, qty: 1, selectedOptions: { Letter: "A" } }],
+      getOrderOptionCatalogue(),
+    );
+    const tags = {
+      ...toOrderOptionTags(summary),
+      ...toUtmOrderTags(parseUtmParams(CAMPAIGN_BODY.utm)),
+    };
+
+    expect(tags.options).toContain("Letter=A");
+    expect(tags.utm_source).toBe("instagram");
+    expect(Object.keys(tags).length).toBeLessThanOrEqual(10);
+    expect(JSON.stringify(tags)).not.toContain(
+      String(productById(INITIAL_RING_ID).pricing.price),
+    );
+  });
+
+  it("leaves an untagged order sending exactly the tags it always sent", () => {
+    const { summary } = validateOrderLineOptions(
+      [{ productId: INITIAL_RING_ID, qty: 1, selectedOptions: { Letter: "A" } }],
+      getOrderOptionCatalogue(),
+    );
+
+    expect({
+      ...toOrderOptionTags(summary),
+      ...toUtmOrderTags(null),
+    }).toEqual(toOrderOptionTags(summary));
+
+    expect({
+      ...toOrderOptionTags(""),
+      ...toUtmOrderTags(null),
+    }).toEqual({});
   });
 });

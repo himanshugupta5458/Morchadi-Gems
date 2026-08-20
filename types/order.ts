@@ -1,6 +1,7 @@
 import type { AddressErrors } from "@/lib/address";
 import type { Address } from "@/types/cart";
 import type { SelectedOptions } from "@/types/product";
+import type { UtmParams } from "@/types/utm";
 
 /**
  * Which Cashfree environment an order was created against. It travels back to the browser in
@@ -28,6 +29,12 @@ export interface CreateOrderItem {
 export interface CreateOrderRequest {
   items: CreateOrderItem[];
   address: Address;
+  /**
+   * The campaign this visitor first arrived on, when the browser has one stored. Marketing
+   * metadata: it is written onto the Cashfree order as tags and never read by any amount.
+   * Absent on the ordinary order, which is most of them. See ADR-039.
+   */
+  utm?: UtmParams;
 }
 
 export interface CreateOrderSuccess {

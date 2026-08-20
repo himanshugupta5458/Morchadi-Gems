@@ -80,6 +80,21 @@ describe("the content security policy", () => {
     expect(directive("connect-src")).toContain("https://api.cashfree.com");
   });
 
+  it("lets the GA4 tag load, which is what makes analytics report anything", () => {
+    expect(directive("script-src")).toContain("https://www.googletagmanager.com");
+  });
+
+  it("lets GA4 send its measurement beacons, including from the EU endpoint", () => {
+    expect(directive("connect-src")).toContain("https://www.google-analytics.com");
+    expect(directive("connect-src")).toContain("https://region1.google-analytics.com");
+  });
+
+  it("keeps the Google hosts out of every directive that does not need them", () => {
+    for (const name of ["form-action", "frame-src", "img-src", "default-src"]) {
+      expect(directive(name)).not.toContain("google");
+    }
+  });
+
   it("allows the inline forms next/image and next/font need, and no remote asset host", () => {
     expect(directive("img-src")).toBe("img-src 'self' data: blob:");
     expect(directive("font-src")).toBe("font-src 'self' data:");

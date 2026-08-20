@@ -4,8 +4,9 @@ Prices a cart server-side and creates a Cashfree payment session for it. Returns
 `payment_session_id` the browser SDK needs to redirect to hosted checkout.
 
 Handler: `app/api/create-order/route.ts`. Runtime: **Node** (`export const runtime = "nodejs"`).
-Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md) and,
-for the option fields, [ADR-019](../decisions/ADR-019-product-options.md).
+Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md), for
+the option fields [ADR-019](../decisions/ADR-019-product-options.md), and for the `utm` field
+[ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md).
 
 ## Request
 
@@ -31,6 +32,13 @@ interface CreateOrderRequest {
     state: string;      // must be one of INDIAN_STATES
     pincode: string;    // 6 digits, first digit not 0
   };
+  utm?: {               // optional, absent on most orders — recorded, never priced
+    source?: string;
+    medium?: string;
+    campaign?: string;
+    term?: string;
+    content?: string;
+  };
 }
 ```
 
@@ -38,6 +46,25 @@ One entry per **cart line**, not per product: a product with options can appear 
 once with different `selectedOptions`, and both entries are recorded. They are summed into a
 single priced item before pricing, so the per-product quantity cap applies to the total across
 a product's lines.
+
+### `utm` — optional, and never a pricing input
+
+The campaign the browser recorded as its first touch, read from `localStorage` by
+`getStoredUtmParams()` in `lib/utm.ts` and sent only when there is one. Most orders carry none,
+and an order without it produces the byte-identical Cashfree request it produced before this
+field existed.
+
+It is validated for **shape only**, by `parseUtmParams`: every field must be a usable string or
+it is dropped, each surviving value is stripped of control characters, whitespace-collapsed and
+truncated at 120 characters, and an object with nothing usable left in it becomes `null`. A
+malformed or hostile `utm` therefore costs the order its attribution, never the order itself —
+there is no validation failure it can cause and no error code it can produce.
+
+`utm_source`, `utm_medium` and `utm_campaign` are written onto the Cashfree order as
+`order_tags`, merged into the same map that already carries the recorded option choices
+(at most six tags, against Cashfree's ten). `term` and `content` are accepted and stored in the
+browser but not tagged; GA4 reports on them natively. Nothing in the pricing path can read any
+of it. See [ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md).
 
 There is **no amount field, and adding one has no effect**. `price`, `mrp`, `lineTotal`,
 `subtotal`, `shipping` and `total` are all discarded by `parseOrderItems` before the body
@@ -99,6 +126,7 @@ was valid" is not a fact the server has.
 | `name`, `image` on an item | Discarded; line item names come from the catalogue |
 | `productId`, `qty` | The only pricing inputs, and both are validated above |
 | `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
+| `utm` | Validated for shape, bounded, and written to `order_tags` alongside the options. Not an input to any amount; `buildOrderTags` has no access to one |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
 
 `mrp` is never read on any path. The `catalogue` parameter of `buildOrderFromCart` is typed

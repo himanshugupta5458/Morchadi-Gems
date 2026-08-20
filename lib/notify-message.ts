@@ -1,4 +1,5 @@
 import type { Address, CartItem, CheckoutData } from "@/types/cart";
+import type { UtmParams } from "@/types/utm";
 import { LEGAL_CONFIG, SITE_CONFIG } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { formatSelectedOptions } from "@/lib/options";
@@ -42,10 +43,29 @@ function formatItemLines(items: CartItem[]): string[] {
   });
 }
 
+/**
+ * Where the order came from, when the browser knew. Source, medium and campaign only: the
+ * other two `utm_` fields are reporting detail rather than something the owner acts on while
+ * packing a parcel, and they stay in GA4. An order with none of the three prints no section at
+ * all, so an untagged order reads exactly as it did before attribution existed.
+ */
+function formatUtmLines(utm: UtmParams): string[] {
+  return [
+    ...(utm.source === undefined ? [] : [`Source: ${utm.source}`]),
+    ...(utm.medium === undefined ? [] : [`Medium: ${utm.medium}`]),
+    ...(utm.campaign === undefined ? [] : [`Campaign: ${utm.campaign}`]),
+  ];
+}
+
 export interface AdminOrderMessageInput {
   orderId: string;
   /** Cashfree's `order_amount`, the only amount that is authoritative. Null when unreadable. */
   amountPaid: number | null;
+  /**
+   * The campaign this order's browser first arrived on, or null for the ordinary order that
+   * carries none. See [ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md).
+   */
+  utm?: UtmParams | null;
   /**
    * The shopper's own summary of what they bought and where it goes. Display and fulfilment
    * information only, and null when it could not be validated — the message degrades to the
@@ -58,6 +78,9 @@ export interface AdminOrderMessageInput {
  * The WhatsApp message an admin receives for a paid order, as plain text with real newlines.
  * URL encoding happens later in `buildCallMeBotUrl`, so this stays readable and assertable.
  *
+ * The campaign section, when there is one, sits directly under the order so it is read before
+ * the packing detail rather than after it. It describes the visit and never the payment.
+ *
  * Every amount that carries weight comes from `amountPaid`, which is Cashfree's. The bundle's
  * own subtotal and shipping are shown as a breakdown because they help whoever packs the
  * parcel, and they are labelled as the shopper's summary so a mismatch reads as a discrepancy
@@ -67,6 +90,7 @@ export function composeAdminOrderMessage({
   orderId,
   amountPaid,
   bundle,
+  utm = null,
 }: AdminOrderMessageInput): string {
   const sections: string[] = [
     bold(`New Order - ${SITE_CONFIG.brandName}`),
@@ -75,6 +99,11 @@ export function composeAdminOrderMessage({
       `${bold("Paid:")} ${amountPaid === null ? "amount unavailable" : formatRupees(amountPaid)}`,
     ].join("\n"),
   ];
+
+  const utmLines = utm === null ? [] : formatUtmLines(utm);
+  if (utmLines.length > 0) {
+    sections.push([bold("Came from"), ...utmLines].join("\n"));
+  }
 
   if (bundle === null) {
     sections.push(

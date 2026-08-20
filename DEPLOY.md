@@ -60,6 +60,7 @@ Next inlines these at compile time. Setting them only at runtime does nothing at
 | `APP_BASE_URL` | `https://www.morchadigems.com` | **Also needed at runtime — set it in both columns.** |
 | `NEXT_PUBLIC_BASE_URL` | `https://www.morchadigems.com` | Same origin. Inlined into the client bundle. |
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | your Web3Forms key, or leave unset | Public by design. Unset means the contact form validates and then honestly says delivery is not connected. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | your GA4 measurement id (`G-…`), or leave unset | Public by design. Unset means no analytics tag is rendered at all and the site behaves exactly as it does without it. The CSP already allows the Google hosts it needs ([ADR-039](docs/decisions/ADR-039-analytics-and-utm-attribution.md)). **Build-time only** — Next inlines it, so a value set at runtime does nothing. |
 
 Never put a secret in this column. Build variables are passed as Docker build ARGs and remain
 readable in the image history.

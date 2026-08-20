@@ -19,6 +19,7 @@ import {
   isCreateOrderSuccess,
   type PaymentFailure,
 } from "@/lib/payment";
+import { getStoredUtmParams } from "@/lib/utm";
 import { AddressRecap } from "@/components/AddressRecap";
 import { Button } from "@/components/Button";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
@@ -40,9 +41,10 @@ async function readResponseBody(response: Response): Promise<unknown> {
  * Step two of checkout. It shows what is about to be charged and hands the browser to
  * Cashfree, and it is deliberately incapable of doing anything else: it holds no credentials,
  * knows no Cashfree endpoint, and sends only product ids, quantities, the recorded option
- * choices and the address to our own route. The amount below the button is what the *server*
- * will independently arrive at from the same ids — it is a rendering of the order, not an
- * instruction about its price, and a recorded choice is not an input to it at all.
+ * choices, the address and the stored campaign to our own route. The amount below the button
+ * is what the *server* will independently arrive at from the same ids — it is a rendering of
+ * the order, not an instruction about its price, and neither a recorded choice nor a campaign
+ * is an input to it at all.
  * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md) and
  * [ADR-019](/docs/decisions/ADR-019-product-options.md).
  */
@@ -87,12 +89,18 @@ export function PaymentCheckout(): JSX.Element {
         : { selectedOptions: line.selectedOptions }),
     }));
 
+    const utm = getStoredUtmParams();
+
     let response: Response;
     try {
       response = await fetch(CREATE_ORDER_API_PATH, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items, address: checkoutData.address }),
+        body: JSON.stringify({
+          items,
+          address: checkoutData.address,
+          ...(utm === null ? {} : { utm }),
+        }),
       });
     } catch {
       abandonAttempt(UNREACHABLE_FAILURE);

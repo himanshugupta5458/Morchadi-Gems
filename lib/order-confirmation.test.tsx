@@ -8,6 +8,7 @@ import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY } from "@/lib/checkout";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
+import { UTM_STORAGE_KEY } from "@/lib/utm";
 import { MAX_VERIFY_ATTEMPTS, PENDING_POLL_INTERVAL_MS } from "@/lib/verify";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 
@@ -337,6 +338,54 @@ describe("/order-confirmation — telling the owner about a paid order", () => {
     const requestInit = notifyCalls()[0][1] as RequestInit;
     return JSON.parse(String(requestInit.body)) as Record<string, unknown>;
   }
+
+  function seedFirstTouch(capturedAt: string): void {
+    window.localStorage.setItem(
+      UTM_STORAGE_KEY,
+      JSON.stringify({
+        source: "instagram",
+        medium: "paid_social",
+        campaign: "rakhi_2026",
+        capturedAt,
+      }),
+    );
+  }
+
+  it("carries the stored campaign so the owner sees where the order came from", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    seedFirstTouch(new Date().toISOString());
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifiedBody().utm).toEqual({
+      source: "instagram",
+      medium: "paid_social",
+      campaign: "rakhi_2026",
+    });
+  });
+
+  it("sends no campaign field at all when the browser has no first touch", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifiedBody()).not.toHaveProperty("utm");
+  });
+
+  it("sends no campaign once the attribution window has passed", async () => {
+    seedCart();
+    seedBundle(makeBundle({ orderId: ORDER_ID }));
+    seedFirstTouch(new Date(Date.now() - 91 * 86_400_000).toISOString());
+    respondWith(verified("PAID", 2099));
+
+    await renderConfirmation(`order_id=${ORDER_ID}`);
+
+    expect(notifiedBody()).not.toHaveProperty("utm");
+  });
 
   it("reports the paid order with the items, their choices and the address", async () => {
     seedCart();

@@ -45,6 +45,31 @@ const CASHFREE_HOSTS = [
 ];
 
 /**
+ * What GA4 needs, and nothing wider.
+ *
+ * `gtag.js` is served from `googletagmanager.com`, so that host has to be a script source or
+ * the tag is blocked while still appearing installed in the page source. The measurement
+ * beacons it then sends go to `google-analytics.com`, or to the regional endpoint
+ * `region1.google-analytics.com` for a visitor Google routes through the EU; both are listed
+ * for `connect-src` because `gtag.js` chooses between them at runtime.
+ *
+ * Neither host is listed anywhere else. No `img-src` entry is included: GA4 sends its hits
+ * with `fetch` and `sendBeacon`, and adding an image origin on the chance of a fallback would
+ * widen the policy for a case this site has not seen. If a beacon is ever found blocked, the
+ * browser console names the directive that stopped it.
+ *
+ * Both are empty of effect until `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set: with no id there is
+ * no tag, so a deployment without analytics allows two origins it never contacts. See
+ * [ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md).
+ */
+const GOOGLE_ANALYTICS_SCRIPT_HOSTS = ["https://www.googletagmanager.com"];
+
+const GOOGLE_ANALYTICS_BEACON_HOSTS = [
+  "https://www.google-analytics.com",
+  "https://region1.google-analytics.com",
+];
+
+/**
  * Both inline allowances are Next's, not ours.
  *
  * `script-src 'unsafe-inline'`: Next serves an inline bootstrap script on every page that
@@ -74,6 +99,7 @@ function scriptSources(isDevelopment) {
     UNSAFE_INLINE,
     ...(isDevelopment ? ["'unsafe-eval'"] : []),
     ...CASHFREE_HOSTS,
+    ...GOOGLE_ANALYTICS_SCRIPT_HOSTS,
   ];
 }
 
@@ -96,7 +122,7 @@ export function buildContentSecurityPolicy(isDevelopment = false) {
     ["style-src", [SELF, UNSAFE_INLINE]],
     ["img-src", [SELF, "data:", "blob:"]],
     ["font-src", [SELF, "data:"]],
-    ["connect-src", [SELF, ...CASHFREE_HOSTS]],
+    ["connect-src", [SELF, ...CASHFREE_HOSTS, ...GOOGLE_ANALYTICS_BEACON_HOSTS]],
     ["frame-src", [SELF, ...CASHFREE_HOSTS]],
     ["worker-src", [SELF, "blob:"]],
     ["manifest-src", [SELF]],

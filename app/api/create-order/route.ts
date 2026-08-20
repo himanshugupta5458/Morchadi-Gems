@@ -5,6 +5,7 @@ import type {
   CreateOrderErrorCode,
   CreateOrderSuccess,
 } from "@/types/order";
+import type { UtmParams } from "@/types/utm";
 import {
   ADDRESS_FIELDS,
   validateAddressForm,
@@ -24,6 +25,7 @@ import {
 } from "@/lib/order";
 import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
 import { getOrderOptionCatalogue, getOrderPricingCatalogue } from "@/lib/products";
+import { parseUtmParams, toUtmOrderTags } from "@/lib/utm";
 
 /**
  * Node, not Edge: this handler reads `node:crypto` for order identifiers and holds the
@@ -110,9 +112,18 @@ function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
  * record *is* the order record and the shopper's engraving choice has to travel with it.
  * `order_tags` is where it goes — a compact `P001:Letter=A; P010:Colour=Golden`, never an
  * amount. Orders with nothing to record send the request they always sent.
+ *
+ * The campaign a shopper arrived on rides in the same map, under `utm_source`, `utm_medium`
+ * and `utm_campaign` ([ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md)).
+ * It is descriptive metadata exactly as the options are: it is bounded and normalised by
+ * `lib/utm.ts` before it gets here, and no amount on any path reads it. Six tags is the
+ * ceiling this can reach, inside Cashfree's ten.
  */
-function buildOptionTags(summary: string): Record<string, string> | null {
-  const tags = toOrderOptionTags(summary);
+function buildOrderTags(
+  summary: string,
+  utm: UtmParams | null,
+): Record<string, string> | null {
+  const tags = { ...toOrderOptionTags(summary), ...toUtmOrderTags(utm) };
   return Object.keys(tags).length === 0 ? null : tags;
 }
 
@@ -134,12 +145,13 @@ function readPaymentSessionId(payload: unknown): string | null {
 /**
  * Creates a Cashfree payment session for a cart.
  *
- * The client sends product ids, quantities, any recorded option choices, and a delivery
- * address. It does not send — and could not usefully send — a price, a line total, or an
- * order total: the amount charged is recomputed here from `data/products.json` on every
- * call, and the request body is not consulted for it. Options do not enter that calculation
- * at any point; they are validated against the catalogue and recorded in the order's
- * metadata.
+ * The client sends product ids, quantities, any recorded option choices, a delivery address,
+ * and optionally the campaign it first arrived on. It does not send — and could not usefully
+ * send — a price, a line total, or an order total: the amount charged is recomputed here from
+ * `data/products.json` on every call, and the request body is not consulted for it. Neither
+ * options nor `utm` enter that calculation at any point; both are validated for shape and
+ * recorded in the order's metadata, and an order carrying neither sends the request it always
+ * sent.
  *
  * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md),
  * [ADR-019](/docs/decisions/ADR-019-product-options.md) and
@@ -157,7 +169,11 @@ export async function POST(request: Request): Promise<NextResponse> {
     return malformed("REQUEST_MALFORMED", "We could not read that request.");
   }
 
-  const { items: rawItems, address: rawAddress } = body as Record<string, unknown>;
+  const {
+    items: rawItems,
+    address: rawAddress,
+    utm: rawUtm,
+  } = body as Record<string, unknown>;
 
   const items = parseOrderItems(rawItems);
   if (items === null) {
@@ -220,7 +236,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const orderId = generateOrderId();
   const mode = resolveCashfreeMode();
-  const optionTags = buildOptionTags(lineOptions.summary);
+  const orderTags = buildOrderTags(lineOptions.summary, parseUtmParams(rawUtm));
 
   let cashfreeResponse: Response;
   try {
@@ -246,7 +262,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         order_meta: {
           return_url: buildReturnUrl(request.url, orderId),
         },
-        ...(optionTags === null ? {} : { order_tags: optionTags }),
+        ...(orderTags === null ? {} : { order_tags: orderTags }),
       }),
       cache: "no-store",
       signal: AbortSignal.timeout(CASHFREE_TIMEOUT_MS),

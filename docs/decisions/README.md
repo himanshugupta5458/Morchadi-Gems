@@ -91,6 +91,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [036](ADR-036-product-seo-metadata-pass.md) | Per-product search and social metadata, written into the catalogue rather than derived from the description | Accepted — retires `buildProductMetaDescription` and decision 3 of [035](ADR-035-catalogue-content-pass.md) |
 | [037](ADR-037-policy-disclaimer-removal.md) | Policy pages stop disclaiming themselves | Accepted |
 | [038](ADR-038-dead-code-and-doc-accuracy-cleanup.md) | Verified-dead code removed, and the documentation corrected to match the repository | Accepted |
+| [039](ADR-039-analytics-and-utm-attribution.md) | GA4 as the analytics tool, and first-touch UTM attribution stored in the browser | Accepted — widens the CSP of [034](ADR-034-seo-audit-remediation.md) by three Google origins |
 
 ## Numbering gaps and known drift
 

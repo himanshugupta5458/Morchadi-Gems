@@ -8,8 +8,10 @@ import { getCatalogueIndex } from "@/lib/products";
 import { CartProvider } from "@/lib/cart-context";
 import { ToastProvider } from "@/lib/toast-context";
 import { Footer } from "@/components/Footer";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { UtmCapture } from "@/components/UtmCapture";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const displaySerif = Fraunces({
@@ -64,6 +66,8 @@ export default function RootLayout({
     <html lang="en" className={`${displaySerif.variable} ${bodySans.variable}`}>
       <body className="flex min-h-screen flex-col bg-white font-sans text-ink antialiased">
         <JsonLd id="site-schema" graph={buildSiteSchemaGraph()} />
+        <GoogleAnalytics />
+        <UtmCapture />
         <CartProvider catalogue={getCatalogueIndex()}>
           <ToastProvider>
             <Header />
