@@ -26,7 +26,93 @@ listens on your machine only. There is nothing in it worth protecting, and a pla
 everyone shares beats a secret nobody can find. Never reuse this password anywhere reachable
 from outside your machine.
 
-## Start it
+## One command: `npm run dev:all`
+
+The three steps below — start Postgres, apply migrations, run the app — behind one command.
+
+```bash
+npm run dev:all
+```
+
+```
+▸ Starting Postgres (compose service "postgres")
+ Container morchadi-gems-postgres  Created
+ Container morchadi-gems-postgres  Started
+
+▸ Waiting for "postgres" to report healthy
+  starting…
+  healthy — accepting connections
+
+▸ Applying pending migrations (prisma migrate deploy)
+2 migrations found in prisma/migrations
+No pending migrations to apply.
+
+▸ Starting the Next.js dev server (npm run dev)
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+ ✓ Ready in 4.3s
+```
+
+| It does | Which by hand is |
+| --- | --- |
+| Starts the compose service that publishes `DATABASE_URL`'s port | `docker compose up -d` |
+| Polls until that container reports **healthy** | watching `docker compose ps` |
+| Brings the schema up to date | `npx prisma migrate deploy` |
+| Starts the app | `npm run dev` |
+
+Ctrl-C stops the dev server, exactly as `npm run dev` does. The container is left running, which
+is what you want between restarts; `docker compose stop` puts it away.
+
+**It waits for health, it does not sleep.** The wait polls `docker compose ps` for the
+`pg_isready` healthcheck defined in `docker-compose.yml` — every second, for up to 60 seconds —
+and only `healthy` lets it move on. `Up` is not enough: Postgres refuses connections for a few
+seconds after the container starts, and a migration run in that gap fails. If the container never
+becomes healthy, exits, or reports `unhealthy`, the command stops with the reason and the command
+to look at, and **runs nothing against the database** rather than proceeding blind.
+
+**It is additive. Every step still works on its own** — `docker compose up -d`, `npx prisma
+migrate deploy` and `npm run dev`, run separately, are unchanged and remain the right thing to
+reach for when you are debugging one of them in particular. `npm run dev:all` starts nothing you
+could not start yourself; it only saves typing the sequence.
+
+**Nothing about the database is written down twice.** The host and port come from
+`DATABASE_URL`; the service name, container name and healthcheck come from `docker-compose.yml`,
+read through `docker compose config`. The script names no container, no port and no password, so
+changing one of those in the file that owns it is the whole change — there is no copy in
+`scripts/dev-stack.mjs` to drift out of step.
+
+**When `DATABASE_URL` is not local, Docker is skipped entirely.** A host that is not
+`localhost`, `127.0.0.1`, `::1` or `0.0.0.0` — the Coolify-hosted database this project will
+have one day, or any other remote server — is not ours to start, so no container is started and
+nothing is waited for:
+
+```
+▸ Skipping the local Postgres container
+  DATABASE_URL host db.morchadigems.invalid is not this machine, so there is no local container to start.
+  Nothing local to start or wait for; going straight to migrations.
+```
+
+A `?host=/var/run/postgresql` Unix-socket URL is treated the same way, for the same reason.
+`DATABASE_URL` is read from the environment first, then `.env`, then `.env.local`, matching
+`npm run seed:admin`.
+
+### This command is for local development only
+
+**`npm run dev:all` must never be wired into deployment.** It is not referenced by the
+[`Dockerfile`](../Dockerfile), by any production start command, or by `npm run build`, and it
+must stay that way — `lib/dev-stack-plan.test.ts` asserts all three.
+
+Production is started by Coolify's own process manager ([ADR-032](decisions/ADR-032-coolify-docker-deploy.md)),
+and **production migrations are a deliberate, separate release step**, not something a developer
+convenience runs on the way past. Two of the four things this command does are actively wrong in
+production anyway: `docker compose up -d` refers to a throwaway database with committed
+credentials, and `next dev` is not a production server.
+
+## Start it by hand
+
+`npm run dev:all` above does this for you, but every step it wraps is still a first-class
+way to work — and the right one when the thing you are debugging *is* the container, the
+migration or the dev server. Nothing below has changed.
 
 ```bash
 docker compose up -d
@@ -137,11 +223,23 @@ run a seed automatically, so your admin account goes with it — recreate it wit
 
 `prisma migrate reset` and `docker compose down -v` both give you an empty start. The difference:
 `reset` keeps the container and leaves you with every table created, `down -v` destroys the
-volume and leaves you with no database at all until `up -d` and a `migrate dev`.
+volume and leaves you with no database at all until something recreates it — `npm run dev:all`
+is the shortest route back, since it starts the container and applies every migration to the new
+volume in one go.
 
-**Never run either against anything but this local container.** Production gets
+**Never run either reset against anything but this local container.** Production gets
 `prisma migrate deploy`, which only applies pending migrations and never resets — and production
 Postgres does not exist yet ([ADR-040](decisions/ADR-040-postgres-for-orders.md)).
+
+### Applying pending migrations without changing the schema
+
+```bash
+npx prisma migrate deploy
+```
+
+Applies every migration the database has not seen yet and writes none. This is what a fresh
+clone or a fresh volume needs, and it is the step `npm run dev:all` runs for you — on an
+up-to-date database it prints `No pending migrations to apply.` and costs a second.
 
 ### Regenerating the client on its own
 
@@ -256,6 +354,16 @@ Deleting the row deletes that admin's sessions with it — `admin_sessions.admin
 every browser signed in as them is signed out at once.
 
 ## Troubleshooting
+
+**`npm run dev:all` says Postgres never reported healthy.** It waited 60 seconds and stopped
+without running anything against the database. `docker compose logs postgres` says why; a volume
+created with different credentials is the usual cause, and the last entry on this page is the
+fix. Nothing was migrated, so there is nothing to undo.
+
+**`npm run dev:all` skipped Docker when you expected it not to.** It skips whenever
+`DATABASE_URL`’s host is not `localhost`, `127.0.0.1`, `::1` or `0.0.0.0`. An exported
+`DATABASE_URL` in your shell wins over both `.env` and `.env.local` — `echo $DATABASE_URL` is
+the first thing to check.
 
 **`bind: address already in use` on 5432.** Something else already holds the port — often a
 previously started copy of this same container. Check with `docker ps -a`, and `ss -ltn | grep
