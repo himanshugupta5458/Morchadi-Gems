@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import nextRobots from "@/app/robots";
-import { SITEMAP_PATH, buildRobots } from "@/lib/robots";
+import { GET as adminRobotsRoute } from "@/app/admin/robots.txt/route";
+import { ADMIN_DISALLOW_PATH, SITEMAP_PATH, buildAdminRobotsTxt, buildRobots } from "@/lib/robots";
 import { NON_INDEXABLE_PATHS } from "@/lib/sitemap";
 
 const PRODUCTION_ORIGIN = "https://www.morchadigems.com";
@@ -56,8 +57,14 @@ describe("robots.txt", () => {
     expect(disallowList()).toContain("/api/");
   });
 
-  it("disallows exactly what the sitemap refuses to publish, plus the API", () => {
-    expect(disallowList()).toEqual([...NON_INDEXABLE_PATHS, "/api/"]);
+  it("disallows the admin panel, without a trailing slash so /admin itself is covered", () => {
+    expect(disallowList()).toContain("/admin");
+    expect(ADMIN_DISALLOW_PATH).toBe("/admin");
+    expect(disallowList()).not.toContain("/admin/");
+  });
+
+  it("disallows exactly what the sitemap refuses to publish, plus the API and the panel", () => {
+    expect(disallowList()).toEqual([...NON_INDEXABLE_PATHS, "/api/", ADMIN_DISALLOW_PATH]);
   });
 
   it("does not disallow anything a shopper is meant to find", () => {
@@ -70,5 +77,28 @@ describe("robots.txt", () => {
 
   it("points at the sitemap by absolute url", () => {
     expect(buildRobots().sitemap).toBe(`${PRODUCTION_ORIGIN}${SITEMAP_PATH}`);
+  });
+});
+
+describe("robots.txt on the admin subdomain", () => {
+  it("refuses the whole host rather than repeating the storefront's rules", () => {
+    expect(buildAdminRobotsTxt()).toBe("User-agent: *\nDisallow: /\n");
+  });
+
+  it("names no sitemap, since pointing at one would invite a crawler onto that host", () => {
+    expect(buildAdminRobotsTxt()).not.toContain("Sitemap");
+    expect(buildAdminRobotsTxt()).not.toContain(PRODUCTION_ORIGIN);
+  });
+
+  it("allows nothing — the storefront's Allow: / must not leak onto the panel's host", () => {
+    expect(buildAdminRobotsTxt()).not.toContain("Allow:");
+  });
+
+  it("is what the route serves, as plain text", async () => {
+    const response = adminRobotsRoute();
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get("content-type")).toBe("text/plain; charset=utf-8");
+    await expect(response.text()).resolves.toBe(buildAdminRobotsTxt());
   });
 });

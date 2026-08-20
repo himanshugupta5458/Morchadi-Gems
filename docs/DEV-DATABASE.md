@@ -65,9 +65,10 @@ docker compose up -d
 ```
 
 `-v` removes the named volume, which destroys everything in the database. That is the intended
-way to get back to a clean state, and it is safe: **local data here is scratch.** There is no
-seed script yet, nothing important is stored, and the Codespace this runs in is itself temporary.
-Never run `-v` against anything else.
+way to get back to a clean state, and it is safe: **local data here is scratch.** Nothing
+important is stored and the Codespace this runs in is itself temporary. The one thing you will
+have to redo is the admin account — see [Creating the admin account](#creating-the-admin-account)
+below, and `npm run seed:admin` takes a few seconds. Never run `-v` against anything else.
 
 ## Connect to it
 
@@ -97,8 +98,8 @@ CLI and the app will disagree about which database they are talking to.
 ## Migrations
 
 The schema lives in [`prisma/schema.prisma`](../prisma/schema.prisma). The tables it describes —
-`orders`, `order_status_history`, `order_line_items`, `customers`, `admins` — are created by the
-migrations in `prisma/migrations/`, which **are committed to git**: they are the ordered history
+`orders`, `order_status_history`, `order_line_items`, `customers`, `admins`, `admin_sessions` —
+are created by the migrations in `prisma/migrations/`, which **are committed to git**: they are the ordered history
 of how the database got its shape, and production will replay exactly this list.
 
 ### After editing the schema
@@ -130,8 +131,9 @@ npx prisma migrate reset
 Drops the schema, re-runs every migration from the first, and regenerates the client. This is
 the fix when the database and the migration history have diverged — a migration edited by hand,
 a branch switch, a half-applied change. **It destroys all data and does not ask twice beyond its
-own prompt.** That is safe here and only here: local data is scratch, and there is no seed script
-for it to run.
+own prompt.** That is safe here and only here: local data is scratch. Prisma is not configured to
+run a seed automatically, so your admin account goes with it — recreate it with
+`npm run seed:admin`.
 
 `prisma migrate reset` and `docker compose down -v` both give you an empty start. The difference:
 `reset` keeps the container and leaves you with every table created, `down -v` destroys the
@@ -174,6 +176,11 @@ That is deliberate. A fresh clone and a CI runner have no Docker Postgres, and a
 smoke test must not turn into a gate that everyone without a local database fails. The suite
 still exits 0.
 
+Two more suites need the database and skip the same way — `lib/admin-session.test.ts` and
+`lib/admin-auth.test.ts`, which create a throwaway admin, exercise login, sessions and logout
+against it, and delete it again. They leave no rows behind
+([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)).
+
 ## Prisma Studio
 
 ```bash
@@ -182,8 +189,71 @@ npx prisma studio
 
 A browser GUI over the data, and one of the two reasons Prisma was chosen over Drizzle
 ([ADR-040](decisions/ADR-040-postgres-for-orders.md)). It lists every model in the schema and
-lets rows be read and edited by hand. The tables are empty until an order is captured — no
-application code writes to them yet.
+lets rows be read and edited by hand. `admins` and `admin_sessions` fill up as soon as you seed
+an account and sign in ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)); the order
+tables stay empty until a later prompt wires checkout to write to them.
+
+## Creating the admin account
+
+The admin panel signs in against a row in the `admins` table, and there is no sign-up page —
+there is exactly one operator, and the account is created deliberately. See
+[ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md).
+
+```bash
+npm run seed:admin
+```
+
+```
+Morchadi Gems — create an admin account
+
+Username: yourname
+Password (not shown):
+Confirm password:
+
+Created admin "yourname".
+Sign in at http://localhost:3000/admin/login while developing.
+```
+
+**It must be run in a terminal.** The script refuses to start when stdin is not a TTY, because
+it hides the password as you type it and a pipe cannot do that.
+
+**Credentials are typed, never passed as arguments.** There is deliberately no
+`--username`/`--password`: an argument lands in your shell's history file, is visible in `ps` to
+anyone else on the machine while the process runs, and is captured by anything that logs the
+command it ran. The plaintext exists only inside the process, goes to bcrypt, and is never
+printed, written to disk or sent anywhere. Only the hash reaches Postgres.
+
+| Rule | Why |
+| --- | --- |
+| Username 3–32 characters, `a-z0-9._-`, starting with a letter or digit | Lowercased on the way in **and** on the way to a login lookup, so `Admin` and `admin` are one account |
+| Password at least 12 characters, typed twice | Length is what defends a stolen hash; it is typed twice because it was never shown |
+| An existing admin prompts for confirmation | The panel is built around one operator, so a second row is more likely a slip than an intention |
+| A duplicate username is refused outright | Never silently overwrites an existing account's password |
+
+The script finds `DATABASE_URL` in your environment, then in `.env`, then in `.env.local` — so
+it works with whichever of the two files you keep current, and an already-exported variable wins
+over both if you ever need to point it at a different database.
+
+### Signing in
+
+With the container healthy and an admin created, `npm run dev` and open
+**http://localhost:3000/admin/login**. In production the same page is
+`admin.morchadigems.com/login` — the `/admin` prefix is removed by a middleware rewrite on that
+hostname, and the path form is the local-development fallback because no such subdomain exists
+on your machine. **That subdomain does not resolve yet**; DNS and Coolify are a later prompt
+(ADR-041, "Pending deployment").
+
+### Removing or resetting an admin
+
+There is no "change password" screen yet. `npx prisma studio` edits the row by hand, or:
+
+```bash
+docker exec -it morchadi-gems-postgres psql -U morchadi_dev -d morchadi_gems_dev \
+  -c "DELETE FROM admins WHERE username = 'yourname';"
+```
+
+Deleting the row deletes that admin's sessions with it — `admin_sessions.admin_id` cascades — so
+every browser signed in as them is signed out at once.
 
 ## Troubleshooting
 

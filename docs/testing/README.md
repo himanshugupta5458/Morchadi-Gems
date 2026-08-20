@@ -89,6 +89,7 @@ purpose.
 | *(no plan — metadata pass)* | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) — per-product search and social metadata for all 49, 762/762 suite |
 | *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-round-three.md) — third-round SEO audit, no code changed |
 | *(no plan — schema verification)* | [2026-08-20](RESULT-2026-08-20-orders-crm-schema.md) — the orders/CRM migration applied and inspected in Postgres, `pricing.cost` proven absent from the built bundle, 814/814 suite |
+| [PLAN-admin-auth.md](PLAN-admin-auth.md) | [2026-08-20](RESULT-2026-08-20-admin-auth.md) — admin login, sessions and subdomain routing, 73/73 pass, two defects found live and fixed, 895/895 suite |
 
 ## Runners
 
@@ -103,8 +104,14 @@ Vitest is configured in `vitest.config.mts` and picks up `lib/**/*.test.{ts,tsx}
 
 `vitest.config.mts` aliases `server-only` to that package's own `empty.js`. Next.js does the same
 thing through the `react-server` export condition; plain Node resolution does not, so without the
-alias importing any server-only module from a test throws on import. It is what lets
-the two Prisma suites import [`lib/prisma.ts`](../../lib/prisma.ts) at all.
+alias importing any server-only module from a test throws on import. It is what lets the two
+Prisma suites and the two admin suites import [`lib/prisma.ts`](../../lib/prisma.ts) at all.
+
+Four suites need a reachable Postgres — `lib/prisma-connection.test.ts`, `lib/prisma-schema.test.ts`,
+`lib/admin-session.test.ts` and `lib/admin-auth.test.ts` — and every one of them **skips with a
+printed reason rather than failing** when there is none, so a fresh clone and a CI runner still
+exit 0. Each cleans up after itself: the schema suite rolls its transaction back, and the two
+admin suites delete the throwaway admin they created.
 
 Most suites run in the default `node` environment. A `.test.tsx` file that needs a DOM opts in
 per file with a `/** @vitest-environment jsdom */` docblock on its first line — the environment
@@ -129,7 +136,7 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/copy-dashes.test.ts` | The em-dash sweep — catalogue strings, and every non-test source file with comments stripped | [2026-08-18](RESULT-2026-08-18-funnel-ui-polish.md) |
 | `lib/structured-data.test.ts` | The JSON-LD builders — Organization, the OnlineStore/LocalBusiness node, WebSite, Product, Offer, the real return and shipping policies, the derived price validity, CollectionPage and ItemList, BreadcrumbList, and absolute URLs | [PLAN-seo-foundations.md](PLAN-seo-foundations.md), [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
 | `lib/sitemap.test.ts` | The sitemap — all 49 products, ten categories, populated collections, the excluded checkout and API paths, priorities and dates | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
-| `lib/robots.test.ts` | `robots.txt` — the allow rule, the disallow list shared with the sitemap, and the absolute sitemap link | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
+| `lib/robots.test.ts` | `robots.txt` — the allow rule, the disallow list shared with the sitemap, the absolute sitemap link, and the admin subdomain's own deny-all file | [PLAN-seo-foundations.md](PLAN-seo-foundations.md), [PLAN-admin-auth.md](PLAN-admin-auth.md) |
 | `lib/json-ld.test.tsx` | The rendered `application/ld+json` block — every graph parses back, and a hostile product name cannot close the script tag | [PLAN-seo-foundations.md](PLAN-seo-foundations.md) |
 | `lib/no-fabricated-reviews.test.tsx` | That no rating or review survives anywhere — the catalogue file, the schema, the rendered `ld+json`, a product card, and every source file under `app/` and `components/` — plus the product page's `og:type` | [PLAN-seo-audit-remediation.md](PLAN-seo-audit-remediation.md) |
 | `lib/product-copy.test.ts` | The approved descriptions — word range, paragraph storage, no copy-pass review metadata — plus the catalogue's material honesty (no karat, hallmark, 916 or sterling claim; no cubic zirconia called crystal; every "Silver" name qualified), now swept across the `seo` strings as well | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) |
@@ -152,4 +159,7 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/responsive-scale.test.ts` | The mobile scale's class pairs, and that no desktop breakpoint value moved | [2026-08-19](RESULT-2026-08-19-mobile-scale.md) |
 | `lib/mobile-layout.test.tsx` | The mobile product cap and the four layouts that differ in kind from desktop | [2026-08-19](RESULT-2026-08-19-mobile-layout.md) |
 | `lib/prisma-connection.test.ts` | That the Prisma singleton opens a real connection to the local Postgres and answers `SELECT 1`, and that one client survives a module re-evaluation. **Skips rather than fails when no database is reachable** — a fresh clone and CI have no Docker Postgres, and a connectivity check must not become a gate they cannot pass | [ADR-040](../decisions/ADR-040-postgres-for-orders.md), [DEV-DATABASE.md](../DEV-DATABASE.md) |
+| `lib/admin-routing.test.ts` | The admin panel's address — `ADMIN_HOSTNAME` resolution, `Host` and `X-Forwarded-Host` parsing, which hostnames count as a development machine, the public URL of every admin page on both, and `decideAdminRoute` across the admin subdomain, the storefront domain and localhost. Also drives `middleware.ts` itself with real `NextRequest`s and asserts the rewrite, redirect and pass-through headers it emits | [PLAN-admin-auth.md](PLAN-admin-auth.md), [ADR-041](../decisions/ADR-041-admin-subdomain-and-auth.md) |
+| `lib/admin-session.test.ts` | Sessions — creation, the seven-day expiry, that the token is stored only as a SHA-256 digest, validation of unknown/empty/expired tokens, destruction of one session and of all of an admin's, the expiry sweep, and the cookie attributes including `Secure` following the environment. **Skips with no database**, like the Prisma suites | [PLAN-admin-auth.md](PLAN-admin-auth.md), [admin-login contract](../api/admin-login.md) |
+| `lib/admin-auth.test.ts` | Login and logout end to end through the real route handlers — bcrypt hashing and salting, correct credentials, and the anti-enumeration contract: wrong password and unknown username answered with **byte-identical** bodies at the same status, above the same timing floor. **Skips with no database** | [PLAN-admin-auth.md](PLAN-admin-auth.md), [admin-login contract](../api/admin-login.md), [admin-logout contract](../api/admin-logout.md) |
 | `lib/prisma-schema.test.ts` | That the orders/CRM schema accepts writes matching its own shape — a customer, order, line item and status-history row through the generated client, the declared defaults, `Json` round-trips, and a `returned` order with an orthogonal refund. Each case runs inside an interactive transaction unwound by a thrown sentinel, so it leaves the database exactly as it found it. Skips with no database, like its sibling | [ADR-040](../decisions/ADR-040-postgres-for-orders.md), [2026-08-20](RESULT-2026-08-20-orders-crm-schema.md) |

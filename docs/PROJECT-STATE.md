@@ -63,9 +63,9 @@ may pin higher patches).
 | Tests | Vitest ^4.1.10 + @testing-library/react ^16.3.2 + jsdom |
 | Images | `sharp` ^0.35.3 (dev dep, required inside the container for `next/image`) |
 | Payments | `@cashfreepayments/cashfree-js` ^1.0.7, hosted-checkout **redirect** (`redirectTarget: "_self"`) |
-| Database | **none.** The catalogue is `data/products.json`, shipped inside the image |
-| Admin panel | **none.** Catalogue changes ship as code |
-| Accounts | **none.** Guest checkout only; each order mints a throwaway `guest_*` customer id |
+| Database | **Postgres, for orders/CRM/admins only** (ADR-040, prompt 43). Local `docker compose` today; **production Postgres is not provisioned yet**. The catalogue is still `data/products.json`, shipped inside the image, and is the sole authority on price |
+| Admin panel | **Authentication foundation only** (ADR-041, prompt 45) — a login page, a session and a placeholder dashboard on `admin.morchadigems.com`, served by this same deployment via hostname rewriting in `middleware.ts`. No order-management UI yet. **The subdomain does not resolve: DNS and Coolify are a later prompt.** Catalogue changes still ship as code |
+| Accounts | **none for shoppers.** Guest checkout only; each order mints a throwaway `guest_*` customer id. One operator account exists, created by `npm run seed:admin` |
 | Output | `output: "standalone"`, `poweredByHeader: false` (`next.config.mjs`) |
 | Deploy | Coolify on a Hostinger VPS, single image from the root `Dockerfile` (ADR-032, `DEPLOY.md`) |
 | DNS / CDN | Cloudflare is documented as a supported front in `DEPLOY.md` §4, with **Full (strict)** required and Flexible called out as breaking the payment flow. Whether the record is currently proxied is **[VERIFY WITH OWNER]** |
@@ -321,10 +321,12 @@ ADRs record only decisions already taken. The sequence below is the owner's stat
 carried here so a new conversation knows the intended direction — every item is
 **[VERIFY WITH OWNER]** and none of it is designed yet.
 
-1. **Database first** — Postgres running in Coolify. This reverses the central choice of
-   ADR-001, so it needs a new ADR that supersedes it, in the manner ADR-032 superseded the
-   hosting row.
-2. **CRM** — orders, enquiries, customers, analytics.
+1. **Database first** — Postgres running in Coolify. **Partly done:** ADR-040 (prompt 43) took
+   the decision and narrowed ADR-001's no-database row; the schema landed in prompt 44 and admin
+   sessions in prompt 45. What remains is the production half — provisioning Postgres in Coolify,
+   a real `DATABASE_URL`, `prisma migrate deploy` in the image, and a backup policy.
+2. **CRM** — orders, enquiries, customers, analytics. **Started:** the tables exist and the
+   admin panel can be signed into (ADR-041); no screen reads an order yet.
 3. **Transactional emails and order tracking.** Today the order record is the CallMeBot
    WhatsApp message plus the Cashfree dashboard, which is why `docs/api/notify-admin.md`
    insists that message carry everything needed to pack the parcel.

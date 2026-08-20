@@ -100,6 +100,10 @@ describe("the sitemap", () => {
     expect(urlsOf().some((url) => url.includes("/api/"))).toBe(false);
   });
 
+  it("excludes the admin panel, on any hostname", () => {
+    expect(urlsOf().some((url) => url.includes("/admin"))).toBe(false);
+  });
+
   it("gives every url absolutely, against the configured origin", () => {
     for (const url of urlsOf()) {
       expect(url.startsWith(`${PRODUCTION_ORIGIN}/`)).toBe(true);
