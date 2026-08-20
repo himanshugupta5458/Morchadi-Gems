@@ -1,0 +1,33 @@
+# Local development database only. Never used in production — production Postgres is
+# provisioned in Coolify and is a separate, later piece of work (ADR-040).
+#
+# The credentials below are deliberately in git. They grant access to an empty throwaway
+# database that listens on this machine only; there is nothing here to protect, and a
+# placeholder that everyone shares beats a secret nobody can find. Never reuse them anywhere
+# that is reachable from outside this machine.
+#
+# See docs/DEV-DATABASE.md for start, stop, reset and troubleshooting.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: morchadi-gems-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: morchadi_dev
+      POSTGRES_PASSWORD: dev_local_only
+      POSTGRES_DB: morchadi_gems_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - morchadi_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U morchadi_dev -d morchadi_gems_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  morchadi_pg_data:
+    name: morchadi_gems_pg_data

@@ -100,6 +100,11 @@ Two, answering different questions. Both must be green; neither replaces the oth
 
 Vitest is configured in `vitest.config.mts` and picks up `lib/**/*.test.{ts,tsx}`.
 
+`vitest.config.mts` aliases `server-only` to that package's own `empty.js`. Next.js does the same
+thing through the `react-server` export condition; plain Node resolution does not, so without the
+alias importing any server-only module from a test throws on import. It is what lets
+`lib/prisma-connection.test.ts` import [`lib/prisma.ts`](../../lib/prisma.ts) at all.
+
 Most suites run in the default `node` environment. A `.test.tsx` file that needs a DOM opts in
 per file with a `/** @vitest-environment jsdom */` docblock on its first line — the environment
 is a property of the file, so it is declared in the file rather than pattern-matched in config.
@@ -145,3 +150,4 @@ is a property of the file, so it is declared in the file rather than pattern-mat
 | `lib/wordmark.test.tsx` | `Wordmark`, including the text variant used on dark grounds | — |
 | `lib/responsive-scale.test.ts` | The mobile scale's class pairs, and that no desktop breakpoint value moved | [2026-08-19](RESULT-2026-08-19-mobile-scale.md) |
 | `lib/mobile-layout.test.tsx` | The mobile product cap and the four layouts that differ in kind from desktop | [2026-08-19](RESULT-2026-08-19-mobile-layout.md) |
+| `lib/prisma-connection.test.ts` | That the Prisma singleton opens a real connection to the local Postgres and answers `SELECT 1`, and that one client survives a module re-evaluation. **Skips rather than fails when no database is reachable** — a fresh clone and CI have no Docker Postgres, and a connectivity check must not become a gate they cannot pass | [ADR-040](../decisions/ADR-040-postgres-for-orders.md), [DEV-DATABASE.md](../DEV-DATABASE.md) |

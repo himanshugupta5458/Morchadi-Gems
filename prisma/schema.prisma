@@ -1,0 +1,18 @@
+// Phase 2 order and CRM domain — see docs/decisions/ADR-040-postgres-for-orders.md.
+//
+// No models are defined yet, deliberately. This prompt is plumbing: a local Postgres, a
+// generated client and a verified connection. Table design (orders, order_status_history,
+// customers, admins) is its own prompt and its own ADR.
+//
+// The product catalogue is NOT moving here. It stays in data/products.json, in git, per an
+// explicit owner decision recorded in ADR-040. Prices are still read from that file on every
+// request, and that remains the only authority on what anything costs.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
