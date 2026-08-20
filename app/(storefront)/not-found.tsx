@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+/**
+ * The shop's 404. It sits inside the storefront route group, so it renders within the shop's
+ * own layout and inherits the header, the footer and the rest of the chrome rather than
+ * reassembling them.
+ *
+ * Reaching it for a *completely* unmatched address takes `[...unmatched]/page.tsx` beside this
+ * file — see the note there.
+ */
 export default function NotFound(): JSX.Element {
   return (
     <div className="container flex flex-col items-center gap-7 py-24 text-center lg:py-32">

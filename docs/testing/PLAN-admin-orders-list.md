@@ -84,7 +84,7 @@
 | TC-51 | Statuses are visually distinguishable | Same page across both tabs | One hue per status, label always written out | Manual |
 | TC-52 | Both tabs partition the real rows | Active and Resolved | Active + Resolved = every order, none in both | Manual |
 | TC-53 | Filters, search and sort behave on real data | Exercise each through the URL | As the automated cases predict | Manual |
-| TC-54 | A row links to the detail page | Inspect the anchor | `/admin/orders/{10-char id}` — **404 until the next prompt, expected** | Manual |
+| TC-54 | A row links to the detail page | Inspect the anchor | `/admin/orders/{10-char id}` — 404 at the time this plan ran; the detail page it points at was built in prompt 50 ([ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md)) | Manual |
 | TC-55 | An empty result explains itself | Date range with no orders | "No orders match these filters" | Manual |
 
 ## Gate

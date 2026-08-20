@@ -17,6 +17,13 @@ import { TextField } from "@/components/TextField";
 
 export interface AddressFormProps {
   initialValues?: AddressFormValues;
+  /**
+   * What the submit button says. Checkout's wording is the default because that is where this
+   * form was born; the admin panel corrects an address on an existing order and says so.
+   */
+  submitLabel?: string;
+  /** Disables the submit button while a caller's own save is in flight. */
+  isSubmitting?: boolean;
   onSubmit: (address: Address) => void;
 }
 
@@ -38,6 +45,8 @@ const PINCODE_MAX_LENGTH = 6;
  */
 export function AddressForm({
   initialValues,
+  submitLabel = "Continue to payment",
+  isSubmitting = false,
   onSubmit,
 }: AddressFormProps): JSX.Element {
   const [values, setValues] = useState<AddressFormValues>(
@@ -183,8 +192,8 @@ export function AddressForm({
       </div>
 
       <div className="pt-2">
-        <Button type="submit" fullWidth>
-          Continue to payment
+        <Button type="submit" fullWidth disabled={isSubmitting}>
+          {submitLabel}
         </Button>
       </div>
     </form>

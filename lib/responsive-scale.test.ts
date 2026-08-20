@@ -57,7 +57,7 @@ describe("ADR-031 mobile scale", () => {
    * off a call to action. See ADR-031.
    */
   it("reserves the floating button's lane at the end of a mobile scroll", () => {
-    expect(readFileSync("app/layout.tsx", "utf8")).toContain('pb-16 sm:pb-0"');
+    expect(readFileSync("app/(storefront)/layout.tsx", "utf8")).toContain('pb-16 sm:pb-0"');
     expect(readFileSync("components/Footer.tsx", "utf8")).toContain("pb-24");
   });
 

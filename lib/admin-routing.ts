@@ -172,9 +172,37 @@ export function resolveAdminOrdersHref(hostname: string): string {
   return `${resolveAdminPublicPrefix(hostname)}/orders`;
 }
 
-/** The public URL of one order's detail page. Built in the next prompt; linked to from now. */
+/** The public URL of one order's detail page — `/orders/W2ACEHACUU` or `/admin/orders/…`. */
 export function resolveAdminOrderHref(hostname: string, orderId: string): string {
   return `${resolveAdminOrdersHref(hostname)}/${encodeURIComponent(orderId)}`;
+}
+
+/**
+ * The three things an operator can change about one order, and the endpoint that does each.
+ *
+ * They are separate routes rather than one endpoint taking an `intent`, because they validate
+ * different things and refuse for different reasons: a status change asks the lifecycle, an
+ * address edit asks whether the parcel has left, and a receipt toggle asks what kind of order
+ * this is. One handler switching on a discriminator would be three handlers sharing a door.
+ */
+export const ADMIN_ORDER_ACTIONS = ["status", "address", "receipt"] as const;
+
+export type AdminOrderAction = (typeof ADMIN_ORDER_ACTIONS)[number];
+
+/**
+ * The public URL of one of those endpoints on this hostname — `/api/orders/{id}/status` on the
+ * admin subdomain, `/admin/api/orders/{id}/status` on a development machine.
+ *
+ * Not listed in `PUBLIC_ADMIN_PATHS`: these change data, so a request without a session cookie
+ * is turned away by middleware before it reaches the handler, and the handler resolves the
+ * cookie against Postgres regardless.
+ */
+export function resolveAdminOrderActionHref(
+  hostname: string,
+  orderId: string,
+  action: AdminOrderAction,
+): string {
+  return `${resolveAdminPublicPrefix(hostname)}/api/orders/${encodeURIComponent(orderId)}/${action}`;
 }
 
 /** The public URL of the logout endpoint on this hostname. */

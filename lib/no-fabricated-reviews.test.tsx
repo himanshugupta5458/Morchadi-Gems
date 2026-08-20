@@ -4,7 +4,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { cleanup, render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { generateMetadata } from "@/app/product/[id]/page";
+import { generateMetadata } from "@/app/(storefront)/product/[id]/page";
 import { getAllProducts, getCatalogueIndex, getProductById } from "@/lib/products";
 import { CartProvider } from "@/lib/cart-context";
 import { ToastProvider } from "@/lib/toast-context";

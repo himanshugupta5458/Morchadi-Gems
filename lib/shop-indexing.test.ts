@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { generateMetadata } from "@/app/shop/page";
+import { generateMetadata } from "@/app/(storefront)/shop/page";
 import {
   DEFAULT_SORT,
   SORT_OPTIONS,

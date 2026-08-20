@@ -106,7 +106,7 @@ describe("ADR-033 mobile product cap", () => {
    * twice for the same destination.
    */
   it("gives each capped strip a mobile call to action to the full collection", () => {
-    const home = readFileSync("app/page.tsx", "utf8");
+    const home = readFileSync("app/(storefront)/page.tsx", "utf8");
 
     for (const collection of ["new-arrivals", "best-sellers"]) {
       expect(home).toContain(`<ButtonLink href={buildCollectionHref("${collection}")}`);

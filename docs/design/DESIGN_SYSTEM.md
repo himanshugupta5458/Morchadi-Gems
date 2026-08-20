@@ -842,7 +842,7 @@ the others. Taking it off is a decision for whoever commissions the legal review
 | --- | --- | --- |
 | `CheckoutSteps` | Server | Address / Payment / Confirmation. `current: 1 \| 2 \| 3` |
 | `AddressCheckout` | *Client* | `/address` below the heading: waits, guards, then form + summary |
-| `AddressForm` | *Client* | Owns form values and errors; calls back with a validated `Address` |
+| `AddressForm` | *Client* | Owns form values and errors; calls back with a validated `Address`. `submitLabel` and `isSubmitting` let the admin panel reuse it to correct an order's address |
 | `CheckoutSummary` | *Client* | Read-only line list plus `OrderTotals`, with an Edit cart link |
 | `CheckoutGuardNotice` | Server | Shown when a checkout step is reached with nothing payable |
 | `PanelNotice` | Server | One-line bordered panel for a loading or waiting state |
@@ -858,6 +858,32 @@ relocates you unannounced reads as a fault. It offers Back to cart and Continue 
 **`CheckoutSummary` is the read-only twin of `CartSummary`.** It lists what is being bought
 with a quantity pip on each thumbnail, but offers no stepper and no remove — quantity edits
 belong on `/cart`, which the Edit cart link goes to.
+
+### Admin panel components
+
+The panel has its own shell (`app/admin/layout.tsx`) and therefore its own small vocabulary.
+None of it is shopper-facing, and none of it is on `/style-guide`, which is a storefront page.
+
+| Component | Kind | Notes |
+| --- | --- | --- |
+| `AdminNav` | Server | The panel's one piece of chrome: sections, who you are, and the way out |
+| `AdminOrderTabs` / `AdminOrderFilters` / `AdminOrderPagination` / `AdminOrderTable` | Server | The order list. Links and a `<form method="get">`; ships no JavaScript |
+| `AdminPanelSection` | Server | One bordered block of the detail page: ivory header strip, title, optional description, content |
+| `AdminFactRow` | Server | A label and its value on one line, so every fact on the page aligns down one column |
+| `AdminOrderLineItems` | Server | What was bought, from the order's snapshot columns. No cost figure |
+| `AdminOrderTimeline` | Server | Every `order_status_history` row, oldest first, badge + moment + operator + reason |
+| `AdminOrderStatusForm` | *Client* | The status control, and the only place a refund decision is made |
+| `AdminOrderAddressPanel` | *Client* | Read-only text, or the storefront's `AddressForm` when the order is still `placed` or `packed` |
+| `AdminOrderReceiptToggles` | *Client* | "Item received back" and "COD amount collected", each posting only its own field |
+
+**Every status is a colour and a word, never a colour alone** — `OrderStatusBadge` and the
+`status-*` tokens above.
+
+**The detail page's four client components are the panel's only JavaScript.** The list is
+deliberately JavaScript-free; the detail page is not, because the reason and refund fields have
+to appear the moment an unhappy status is chosen and the address form validates as it is typed.
+Every one of them submits to a route handler that re-validates the whole change. See
+[ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md).
 
 **`PanelNotice` is shared by `/cart` and `/address`** so the two waiting states are the same
 size and the page does not visibly collapse when one replaces real content.
@@ -966,8 +992,8 @@ and a genuine distribution — and the `amber` token and this section come back 
 
 ### Global chrome
 
-Rendered once by `app/layout.tsx`, so every route inherits it. Rationale in
-[ADR-005](../decisions/ADR-005-navigation-and-chrome.md).
+Rendered once by `app/(storefront)/layout.tsx`, so every **shop** route inherits it. Rationale
+in [ADR-005](../decisions/ADR-005-navigation-and-chrome.md).
 
 ```
 <Header />            sticky; logo + announcement + cart, then the primary nav bar
@@ -977,6 +1003,13 @@ Rendered once by `app/layout.tsx`, so every route inherits it. Rationale in
 ```
 
 A page never renders its own `<main>` — the layout owns it.
+
+**It is the storefront's layout, not the root's.** It used to be `app/layout.tsx`, which meant
+the admin panel inherited all four pieces: a shop header above the panel, a footer below it, and
+the WhatsApp button floating over the bottom-right corner of whatever control happened to be
+there. `app/layout.tsx` is now the document alone — one `<html>`, one `<body>`, the two
+typefaces, `globals.css` and `metadataBase` — and the two shells are siblings beneath it. See
+[ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md).
 
 #### `Header`
 

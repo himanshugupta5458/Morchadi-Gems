@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Jost } from "next/font/google";
 import "./globals.css";
-import { SITE_CONFIG } from "@/lib/config";
 import { getSiteUrl } from "@/lib/site-url";
-import { buildSiteSchemaGraph } from "@/lib/structured-data";
-import { getCatalogueIndex } from "@/lib/products";
-import { CartProvider } from "@/lib/cart-context";
-import { ToastProvider } from "@/lib/toast-context";
-import { Footer } from "@/components/Footer";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
-import { Header } from "@/components/Header";
-import { JsonLd } from "@/components/JsonLd";
-import { UtmCapture } from "@/components/UtmCapture";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const displaySerif = Fraunces({
   subsets: ["latin"],
@@ -35,28 +24,22 @@ const BASE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: {
-    default: SITE_CONFIG.title,
-    template: `%s · ${SITE_CONFIG.brandName}`,
-  },
-  description: SITE_CONFIG.description,
-  openGraph: {
-    type: "website",
-    siteName: SITE_CONFIG.brandName,
-    locale: "en_IN",
-    url: "/",
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.description,
-    images: [SITE_CONFIG.ogImage],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.description,
-    images: [SITE_CONFIG.ogImage.url],
-  },
 };
 
+/**
+ * The document, and nothing else.
+ *
+ * This layout used to be the storefront: it rendered the header, the footer, the floating
+ * WhatsApp button, the cart provider and the site's schema graph, and because a nested layout
+ * cannot opt out of an ancestor, every admin page inherited all of it. The panel came with a
+ * shop header above it and a WhatsApp bubble floating over its controls.
+ *
+ * The two shells are now siblings — `app/(storefront)/layout.tsx` and `app/admin/layout.tsx` —
+ * and what is left here is the part they genuinely share: one `<html>`, one `<body>`, the two
+ * typefaces and the stylesheet. `metadataBase` stays because canonical resolution is a
+ * property of the deployment rather than of either shell. See
+ * [ADR-044](/docs/decisions/ADR-044-admin-order-detail-and-layout-split.md).
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,17 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${displaySerif.variable} ${bodySans.variable}`}>
       <body className="flex min-h-screen flex-col bg-white font-sans text-ink antialiased">
-        <JsonLd id="site-schema" graph={buildSiteSchemaGraph()} />
-        <GoogleAnalytics />
-        <UtmCapture />
-        <CartProvider catalogue={getCatalogueIndex()}>
-          <ToastProvider>
-            <Header />
-            <main className="flex-1 pb-16 sm:pb-0">{children}</main>
-            <Footer />
-            <WhatsAppButton />
-          </ToastProvider>
-        </CartProvider>
+        {children}
       </body>
     </html>
   );

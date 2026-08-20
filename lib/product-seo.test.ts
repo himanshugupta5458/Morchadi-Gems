@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { generateMetadata } from "@/app/product/[id]/page";
+import { generateMetadata } from "@/app/(storefront)/product/[id]/page";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { getAllProducts, getImageAlts } from "@/lib/products";
 

@@ -20,7 +20,8 @@ ignored.
 Mirror the route path, kebab-cased, dropping the `route.ts` filename and the `app/api/` prefix.
 Route handlers that live outside `app/api/` — the admin panel keeps its own under
 `app/admin/api/` so the subdomain rewrite can reach them — drop `app/` and `api/` instead,
-keeping the segment that says which surface they belong to:
+keeping the segment that says which surface they belong to. A dynamic segment keeps its name
+and loses its brackets:
 
 | Route handler | Doc file |
 | --- | --- |
@@ -28,6 +29,7 @@ keeping the segment that says which surface they belong to:
 | `app/api/orders/verify/route.ts` | `orders-verify.md` |
 | `app/api/webhooks/cashfree/route.ts` | `webhooks-cashfree.md` |
 | `app/admin/api/login/route.ts` | `admin-login.md` |
+| `app/admin/api/orders/[id]/status/route.ts` | `admin-orders-id-status.md` |
 
 ## Required structure
 
@@ -73,13 +75,23 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `POST /api/notify-admin` | [notify-admin.md](notify-admin.md) |
 | `POST /admin/api/login` | [admin-login.md](admin-login.md) |
 | `POST /admin/api/logout` | [admin-logout.md](admin-logout.md) |
+| `POST /admin/api/orders/{id}/status` | [admin-orders-id-status.md](admin-orders-id-status.md) |
+| `POST /admin/api/orders/{id}/address` | [admin-orders-id-address.md](admin-orders-id-address.md) |
+| `POST /admin/api/orders/{id}/receipt` | [admin-orders-id-receipt.md](admin-orders-id-receipt.md) |
 
-Every route handler in the repository is documented — the three under `app/api/` and the two
+Every route handler in the repository is documented — the three under `app/api/` and the five
 under `app/admin/api/`. `verify-order` is the only one without a backing ADR — payment
 verification shipped in prompt 13, which produced no decision record — so its contract file
 carries the reasoning that would otherwise live in an ADR.
 
-**The two admin routes have a second public URL each.** They are served on the admin subdomain
-with the `/admin` prefix removed by a middleware rewrite, so `POST /admin/api/login` is
-`POST https://admin.morchadigems.com/api/login` in production. Both contracts state both
+**Every admin route has a second public URL.** They are served on the admin subdomain with the
+`/admin` prefix removed by a middleware rewrite, so `POST /admin/api/login` is
+`POST https://admin.morchadigems.com/api/login` in production. Each contract states both
 addresses; the mechanism is [ADR-041](../decisions/ADR-041-admin-subdomain-and-auth.md).
+
+**Login and logout are public paths; the three order actions are not.** Middleware lets a
+request with no session cookie reach the first two — a login has to be reachable, and a stale
+cookie has to be clearable — and redirects it away from the others before a handler runs. That
+gate is not the authentication: every one of the five resolves the session itself, on the Node
+runtime, against Postgres. See
+[ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md).
