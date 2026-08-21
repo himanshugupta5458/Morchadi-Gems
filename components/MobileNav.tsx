@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { COMPANY_LINKS, NAV_MENUS } from "@/lib/navigation";
 import { CartLink } from "@/components/CartLink";
+import { TrackOrderLink } from "@/components/TrackOrderLink";
 import { Wordmark } from "@/components/Wordmark";
 import { CaretDownIcon, CloseIcon, MenuIcon } from "@/components/icons";
 
@@ -113,8 +114,9 @@ export function MobileNav(): JSX.Element {
               </button>
             </div>
 
-            <div className="border-b border-line px-5 py-4">
+            <div className="flex items-center justify-between gap-4 border-b border-line px-5 py-4">
               <CartLink withLabel onNavigate={dismiss} />
+              <TrackOrderLink onNavigate={dismiss} />
             </div>
 
             <nav aria-label="Primary" className="flex-1 overflow-y-auto px-2 py-2">

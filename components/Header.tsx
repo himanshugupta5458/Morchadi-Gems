@@ -2,6 +2,7 @@ import { CartLink } from "@/components/CartLink";
 import { HeaderAnnouncement } from "@/components/HeaderAnnouncement";
 import { MobileNav } from "@/components/MobileNav";
 import { PrimaryNav } from "@/components/PrimaryNav";
+import { TrackOrderLink } from "@/components/TrackOrderLink";
 import { Wordmark } from "@/components/Wordmark";
 
 /**
@@ -25,7 +26,8 @@ export function Header(): JSX.Element {
 
         <HeaderAnnouncement />
 
-        <div className="flex justify-end">
+        <div className="flex items-center justify-end gap-4 lg:gap-6">
+          <TrackOrderLink />
           <CartLink />
         </div>
       </div>

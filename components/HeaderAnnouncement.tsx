@@ -23,8 +23,8 @@ const ROTATION_INTERVAL_MS = 4000;
  * whichever one is currently visible, so a rotation cannot move the logo or the cart by a
  * pixel — and it keeps all three in the accessibility tree, as the strip did.
  *
- * Hidden below `lg`: the mobile row holds a hamburger, a logo and a cart, and there is no
- * middle left to put a tagline in.
+ * Hidden below `lg`: the mobile row holds a hamburger, a logo, a track-order link and a
+ * cart, and there is no middle left to put a tagline in.
  */
 export function HeaderAnnouncement(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState(0);
