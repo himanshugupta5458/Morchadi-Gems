@@ -185,6 +185,7 @@ If the box has 2 GB or less total, do both. A third option is building the image
 | Symptom | Cause | Fix |
 | --- | --- | --- |
 | Page loads but every image and stylesheet 404s | `public/` or `.next/static` not copied into the runner stage | The three `COPY --from=builder` lines in the Dockerfile. Standalone output includes neither — see [ADR-032](docs/decisions/ADR-032-coolify-docker-deploy.md). |
+| Build fails: `Module '"@prisma/client"' has no exported member 'OrderStatus'` | The Prisma Client was never generated | The builder stage must run `npx prisma generate` before `npm run build`. The deps stage cannot do it — it carries no schema — and it fails silently there. See [ADR-047](docs/decisions/ADR-047-prisma-generate-in-docker-build.md). |
 | HTML and CSS fine, but `/_next/image?...` 500s | `sharp` missing from the traced output | The deps stage must run a full `npm ci`. `npm ci --omit=dev` builds green and breaks every optimised image. |
 | Coolify says unhealthy, container logs look fine | Server bound to localhost inside the container | `HOSTNAME=0.0.0.0` in the runner stage. Do not remove it. |
 | Sitemap and canonicals say `localhost:3000` | `APP_BASE_URL` set at runtime only | Add it as a build variable too, then **redeploy** — a restart will not fix it, the values are baked in. |

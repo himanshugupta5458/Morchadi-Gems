@@ -29,6 +29,14 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
+# The generated Prisma Client, without which `npm run build` fails type-checking on the first
+# `import type { OrderStatus } from "@prisma/client"`. It cannot happen in the deps stage: that
+# stage carries only the lockfile, so @prisma/client's own postinstall finds no schema and
+# silently generates nothing. Here prisma/schema.prisma has arrived with `COPY . .` above, and
+# generate reads that file alone — no DATABASE_URL, no migrations, no database. DATABASE_URL is
+# runtime-only by deliberate choice (ADR-047) and stays absent from this stage.
+RUN npx prisma generate
+
 # Build-time only. Next inlines every NEXT_PUBLIC_* into the client bundle, and the sitemap,
 # robots.txt, canonical tags and JSON-LD @ids are prerendered here — so the base URL has to be
 # correct at build time, not just at runtime. No secret is ever passed as a build ARG: an ARG
@@ -60,7 +68,9 @@ RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 --ingroup nodejs nextjs
 
 # The three copies, in the order the layout requires. `public` and `.next/static` are the
-# standalone gotcha: the build output contains neither.
+# standalone gotcha: the build output contains neither. The generated Prisma Client is NOT a
+# fourth: Next's build trace resolves node_modules/.prisma/client and copies it into
+# .next/standalone itself, query-engine binary included. Verified, not assumed — see ADR-047.
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static

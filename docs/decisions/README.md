@@ -99,6 +99,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [044](ADR-044-admin-order-detail-and-layout-split.md) | The order detail screen, and the layout split that let it have one | Accepted — states the order lifecycle once and enforces it in the UI **and** the route handler, forces a reason and a refund decision into the same transaction as an `rto`/`returned`/`cancelled` change, opens the address only before dispatch, and moves the storefront into `app/(storefront)` so the panel stops inheriting the shop's header, footer and WhatsApp button |
 | [045](ADR-045-public-order-tracking.md) | Public order tracking — the order number is the whole credential, and the page is told almost nothing | Accepted — clears the `sessionStorage` limitation [043](ADR-043-order-id-as-primary-identifier.md) shipped with, and draws the customer-facing half of the boundary [044](ADR-044-admin-order-detail-and-layout-split.md) drew for the operator |
 | [046](ADR-046-saved-address-in-local-storage.md) | The browser remembers the delivery address; the shop still does not remember the shopper | Accepted — removes repeat-checkout friction without reopening the no-accounts row of [001](ADR-001-tech-stack.md) |
+| [047](ADR-047-prisma-generate-in-docker-build.md) | The production image generates the Prisma Client itself | Accepted — narrows the *no database* premise [032](ADR-032-coolify-docker-deploy.md) was written under, and delivers the first of the two build steps [040](ADR-040-postgres-for-orders.md) deferred |
 
 ## Numbering gaps and known drift
 

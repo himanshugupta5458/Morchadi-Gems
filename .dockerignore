@@ -1,6 +1,9 @@
 # Keep the build context lean. Everything `next build` needs is NOT listed here:
-# app/ components/ lib/ data/ config/ types/ public/ package*.json next.config.mjs
+# app/ components/ lib/ data/ config/ types/ public/ prisma/ package*.json next.config.mjs
 # tsconfig.json tailwind.config.ts postcss.config.mjs .eslintrc.json
+#
+# prisma/ is on that list because the builder runs `prisma generate` before `next build`, and
+# generate reads prisma/schema.prisma. Ignoring prisma/ here breaks the build. See ADR-047.
 
 # installed inside the image
 node_modules
