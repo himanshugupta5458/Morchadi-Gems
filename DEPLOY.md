@@ -148,6 +148,47 @@ have a history of breaking hydration.
 If Coolify's certificate request fails while the orange cloud is on, grey-cloud the record,
 let the certificate issue, then turn it back on.
 
+#### ⚠️ Do not enable "Cache Everything" on this site
+
+**Leave Cloudflare's caching at its default. Do not add a Cache Rule — or a legacy Page Rule —
+that caches full pages, HTML, or any extensionless path on `morchadigems.com`.** This is not a
+performance preference. Turning it on with the current Next.js version can serve visitors raw
+React internals instead of the page.
+
+The reason is a property of the App Router rather than anything this repository chose. **The
+same URL returns two different documents depending on one request header.** `/about` and every
+product page answer `text/html` to a browser, and answer `text/x-component` — a React Server
+Component payload, which is machine data, not a page — to a request carrying `RSC: 1`. Next
+declares the difference honestly in the response:
+
+```
+Cache-Control: s-maxage=31536000, stale-while-revalidate
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding
+```
+
+`Vary: RSC` is the instruction that keeps those two documents in separate cache entries, and
+**Cloudflare does not honour it by default** — it varies on `Accept-Encoding` and nothing else
+unless a Cache Rule is explicitly configured to do more. `s-maxage=31536000` is meanwhile a
+year-long instruction addressed to shared caches specifically.
+
+Put those together and a cache that stores full pages without partitioning on `RSC` can file a
+component payload under the ordinary page URL. Every subsequent visitor is served that payload
+— for up to a year — and it is a public storefront, so "every visitor" means every shopper.
+Today nothing happens, because Cloudflare does not cache HTML by default and the year-long
+`s-maxage` is shouted into a void. Enabling full-page caching is what wakes it up.
+
+Related, and for the same reason: **do not add 307 to Cloudflare's cacheable status codes, and
+do not change `middleware.ts`'s redirects away from 307.** The admin-subdomain redirects
+([ADR-041](docs/decisions/ADR-041-admin-subdomain-and-auth.md)) can be made to drop their
+`Location` header by an injected request header; 307's absence from Cloudflare's default
+cacheable set (200, 206, 301, 302, 303, 404, 410) is what currently stops that from being
+cached and served to other people.
+
+**When this restriction lifts:** upgrading Next.js past 14.2.35 fixes all of it at the origin —
+the relevant advisories are patched in 15.5.16 and 15.5.21. Until that upgrade lands, the
+setting is the mitigation. Full detail, including the reproduction, is in
+[ADR-049](docs/decisions/ADR-049-next-14-advisory-triage-and-upgrade-scope.md).
+
 ---
 
 ## 5. Deploy and verify
