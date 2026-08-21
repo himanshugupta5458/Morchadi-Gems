@@ -431,7 +431,7 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="ProductGallery"
-        note="Rendered instead of ProductImagePanel when a product carries more than one image or maps a photograph to an option value. A single-image product with no mapping never reaches it, so the common case still ships no client JavaScript for its picture. Left: the thumbnail strip, which appears only when there is more than one image to strip. Right: the same component driven by a selector, where choosing a finish swaps the main image and clicking a thumbnail wins until the next choice."
+        note="Rendered instead of ProductImagePanel when a product carries more than one image or maps a photograph to an option value. A single-image product with no mapping never reaches it, so the common case still ships no client JavaScript for its picture. The strip lists every photograph the product has, its own images first and then each mapped one, de-duplicated by path, so a mapped finish is reachable by clicking its thumbnail rather than only by working the selector. Clicking a mapped thumbnail also records that option value, so the swatch and the picture cannot disagree about which finish is on screen. Past five photographs the strip becomes a window with arrows either side, and the left and right arrow keys step through the whole set with focus following. Left: two images, no mapping, so no arrows. Right: the same component driven by a selector."
       >
         <div className="grid gap-10 lg:grid-cols-2">
           {multiImageProduct ? (

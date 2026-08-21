@@ -45,3 +45,69 @@ export function selectDisplayImage(
 ): string | null {
   return resolveVariantImage(variantImages, selectedOptions) ?? defaultImage;
 }
+
+/** The option group and value a mapped photograph belongs to. */
+export interface VariantImageOwner {
+  optionName: string;
+  value: string;
+}
+
+/**
+ * The inverse of `variantImageKey`. Returns null for a key that does not carry a separator
+ * in a usable position, so a malformed record degrades to "this image belongs to no value"
+ * rather than to a group named after half a key.
+ */
+export function parseVariantImageKey(key: string): VariantImageOwner | null {
+  const separatorIndex = key.indexOf(VARIANT_KEY_SEPARATOR);
+  if (separatorIndex <= 0 || separatorIndex >= key.length - 1) return null;
+
+  return {
+    optionName: key.slice(0, separatorIndex),
+    value: key.slice(separatorIndex + 1),
+  };
+}
+
+/** One entry in the gallery strip, and which option value it stands for if it stands for one. */
+export interface GalleryImage {
+  src: string;
+  variant: VariantImageOwner | null;
+}
+
+/**
+ * Every photograph a product has, in one ordered list: its own images first, in record
+ * order, then each mapped variant photograph the list does not already contain.
+ *
+ * De-duplication is by path, so a product that maps a value to a photograph already in
+ * `images` gets one thumbnail rather than two identical ones. The master entry wins that
+ * collision and keeps its `variant: null`, because a photograph listed in `images` is a view
+ * of the piece that happens to also serve a value, not a value's own portrait.
+ *
+ * See [ADR-050](/docs/decisions/ADR-050-unified-gallery-strip.md).
+ */
+export function buildGalleryImages(
+  images: string[],
+  variantImages: VariantImages | undefined,
+): GalleryImage[] {
+  const gallery: GalleryImage[] = [];
+  const seen = new Set<string>();
+
+  for (const src of images) {
+    if (seen.has(src)) continue;
+    seen.add(src);
+    gallery.push({ src, variant: null });
+  }
+
+  for (const [key, src] of Object.entries(variantImages ?? {})) {
+    if (typeof src !== "string" || src.length === 0 || seen.has(src)) continue;
+    seen.add(src);
+    gallery.push({ src, variant: parseVariantImageKey(key) });
+  }
+
+  return gallery;
+}
+
+/** Where `src` sits in the gallery strip, or 0 when it is not in it at all. */
+export function galleryIndexOf(gallery: GalleryImage[], src: string): number {
+  const index = gallery.findIndex((entry) => entry.src === src);
+  return index === -1 ? 0 : index;
+}
