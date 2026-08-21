@@ -7,6 +7,7 @@ import {
   hasActiveAdminOrderFilters,
   parseAdminOrderQuery,
   statusesForView,
+  type AdminOrderPage,
   type AdminOrderSearchParams,
   type AdminOrderView,
 } from "@/lib/admin-orders";
@@ -15,6 +16,7 @@ import {
   resolveAdminOrdersHref,
   resolveRequestHostname,
 } from "@/lib/admin-routing";
+import { AdminDatabaseError } from "@/components/AdminDatabaseError";
 import { AdminOrderFilters } from "@/components/AdminOrderFilters";
 import { AdminOrderPagination } from "@/components/AdminOrderPagination";
 import { AdminOrderTable } from "@/components/AdminOrderTable";
@@ -53,6 +55,11 @@ const VIEW_LABELS: Record<AdminOrderView, string> = {
  *
  * The whole of the list's state — view, filters, sort, page — is in the URL, and nothing on
  * this page ships JavaScript to the browser.
+ *
+ * A failed read is shown, never absorbed. The empty state below is a sentence about the shop
+ * ("No active orders yet") and it must never be shown for a reason that is about the database:
+ * an outage that rendered as an empty list would tell the owner their quiet morning was quiet
+ * ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
  */
 export default async function AdminOrdersPage({
   searchParams,
@@ -63,7 +70,17 @@ export default async function AdminOrdersPage({
   const ordersHref = resolveAdminOrdersHref(hostname);
 
   const query = parseAdminOrderQuery(searchParams);
-  const { rows, totalCount, page, pageCount, pageSize } = await findAdminOrderPage(query);
+
+  let orderPage: AdminOrderPage;
+
+  try {
+    orderPage = await findAdminOrderPage(query);
+  } catch (listError) {
+    console.error("[admin-panel] the order list could not be read from Postgres", listError);
+    return <AdminDatabaseError what="The order list" />;
+  }
+
+  const { rows, totalCount, page, pageCount, pageSize } = orderPage;
 
   const rangeStart = totalCount === 0 ? 0 : (page - 1) * pageSize + 1;
   const rangeEnd = Math.min(page * pageSize, totalCount);

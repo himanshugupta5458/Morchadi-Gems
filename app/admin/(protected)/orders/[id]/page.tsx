@@ -3,7 +3,11 @@ import type { OrderStatus } from "@prisma/client";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
-import { findAdminOrderDetail, normaliseOrderId } from "@/lib/admin-order-detail";
+import {
+  findAdminOrderDetail,
+  normaliseOrderId,
+  type AdminOrderDetail,
+} from "@/lib/admin-order-detail";
 import { formatAdminOrderDate } from "@/lib/admin-orders";
 import {
   resolveAdminOrderActionHref,
@@ -17,6 +21,7 @@ import {
   acceptsItemReceivedBack,
   isShippingAddressEditable,
 } from "@/lib/order-transitions";
+import { AdminDatabaseError } from "@/components/AdminDatabaseError";
 import { AdminFactRow, AdminPanelSection } from "@/components/AdminPanelSection";
 import { AdminOrderAddressPanel } from "@/components/AdminOrderAddressPanel";
 import { AdminOrderLineItems } from "@/components/AdminOrderLineItems";
@@ -110,6 +115,11 @@ function buildReceiptToggles(
  * name and the same value the list's first column links on. The Cashfree id appears far down
  * this page in fine print, because it names the payment and not the order, and the one place a
  * mistake between the two is expensive is a conversation with a customer.
+ *
+ * A database fault and a missing order are different answers and are given as different pages.
+ * `notFound()` stays outside the `try` for exactly that reason — it works by throwing, and a
+ * boundary that swallowed it would tell an operator the database was down every time they
+ * mistyped an order number ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
  */
 export default async function AdminOrderDetailPage({
   params,
@@ -117,7 +127,18 @@ export default async function AdminOrderDetailPage({
   params: { id: string };
 }): Promise<JSX.Element> {
   const hostname = resolveRequestHostname((name) => headers().get(name));
-  const order = await findAdminOrderDetail(params.id);
+
+  let order: AdminOrderDetail | null;
+
+  try {
+    order = await findAdminOrderDetail(params.id);
+  } catch (detailError) {
+    console.error(
+      `[admin-panel] order ${normaliseOrderId(params.id)} could not be read from Postgres`,
+      detailError,
+    );
+    return <AdminDatabaseError what={`Order ${normaliseOrderId(params.id)}`} />;
+  }
 
   if (order === null) notFound();
 

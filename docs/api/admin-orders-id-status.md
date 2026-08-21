@@ -141,6 +141,42 @@ Every validation failure, each with a sentence the panel shows verbatim.
 }
 ```
 
+### 503 Service Unavailable
+
+The database could not be reached — a Prisma connectivity, initialisation or pool-timeout
+fault. Answered in the same shape as every other rejection rather than as a bare 500, and it
+covers the **session read** as well as the write: the cookie is resolved against Postgres, so an
+outage fails there before the handler body runs.
+
+```json
+{
+  "status": "REJECTED",
+  "error": "DATABASE_UNAVAILABLE",
+  "message": "The order database did not answer, so nothing about this order was changed. Try again in a moment. If it keeps failing, the database itself is down."
+}
+```
+
+### 500 Internal Server Error
+
+Any other unexpected failure. Kept distinct from the 503 so an operator is not sent to restart a
+database that is running.
+
+```json
+{
+  "status": "REJECTED",
+  "error": "SERVER_ERROR",
+  "message": "Something went wrong on the server, so nothing about this order was changed. Try again. If it keeps failing, the server log has the detail."
+}
+```
+
+**"Nothing was changed" is a guarantee, not a reassurance.** The status and address writes run
+inside one `prisma.$transaction`, and the receipt write is a single statement. There is no path
+here that half-changes an order.
+
+The exception itself is never in the body. It is logged under `[admin-order-action]` with the
+action and the order id. See
+[ADR-048](../decisions/ADR-048-database-health-and-failure-surfaces.md).
+
 ## Security notes
 
 - **Reads no secret from the environment.** Its only credential path is `DATABASE_URL`, which is

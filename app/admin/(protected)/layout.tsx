@@ -7,6 +7,7 @@ import {
   resolveRequestHostname,
 } from "@/lib/admin-routing";
 import { requireAdminSession } from "@/lib/admin-session";
+import { AdminDatabaseError } from "@/components/AdminDatabaseError";
 import { AdminNav } from "@/components/AdminNav";
 
 /**
@@ -32,13 +33,25 @@ export const dynamic = "force-dynamic";
  * It also carries the panel's nav, so the sections and the way out are present on every
  * protected page rather than on whichever one remembered to render them. The identity the
  * check already resolved is what the nav names, so this costs no extra query.
+ *
+ * **The database failing is handled here and not only in the pages.** This check runs before
+ * any of them, against the same Postgres they read, so a layout that let the fault escape
+ * would turn every carefully written error state below it into Next's generic 500 — and would
+ * do it first. Nothing of the panel renders in that case, not even the nav: an unresolved
+ * session is not a session ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
  */
 export default async function ProtectedAdminLayout({
   children,
 }: {
   children: ReactNode;
 }): Promise<JSX.Element> {
-  const admin = await requireAdminSession();
+  const session = await requireAdminSession();
+
+  if (session.kind === "DATABASE_UNAVAILABLE") {
+    return <AdminDatabaseError what="Your session, and everything behind it," />;
+  }
+
+  const admin = session.admin;
   const hostname = resolveRequestHostname((name) => headers().get(name));
 
   return (

@@ -1,11 +1,9 @@
 import type { NextResponse } from "next/server";
 import { EMPTY_ADDRESS_FORM, type AddressFormValues } from "@/lib/address";
 import {
-  readAdminForOrderAction,
   readJsonObject,
   readJsonString,
-  respondToAdminOrderOutcome,
-  unauthorisedAdminOrderResponse,
+  runAdminOrderAction,
   type AdminOrderActionResponseBody,
 } from "@/lib/admin-order-api";
 import { updateAdminOrderShippingAddress } from "@/lib/admin-order-updates";
@@ -35,26 +33,26 @@ function readAddressFormValues(body: Record<string, unknown>): AddressFormValues
  *
  * A successful edit writes an `order_status_history` row carrying the order's *unchanged*
  * status — see `updateAdminOrderShippingAddress` for why that table is the right home for it.
+ *
+ * The session check and the error boundary are `runAdminOrderAction`'s, shared with the other
+ * two order actions (ADR-048).
  */
 export async function POST(
   request: Request,
   { params }: { params: { id: string } },
 ): Promise<NextResponse<AdminOrderActionResponseBody>> {
-  const admin = await readAdminForOrderAction();
-  if (admin === null) return unauthorisedAdminOrderResponse();
+  return runAdminOrderAction("address", params.id, async (admin) => {
+    const body = await readJsonObject(request);
 
-  const body = await readJsonObject(request);
-
-  const outcome = await prisma.$transaction((transaction) =>
-    updateAdminOrderShippingAddress(
-      {
-        orderId: params.id,
-        changedBy: admin.username,
-        values: readAddressFormValues(body),
-      },
-      transaction,
-    ),
-  );
-
-  return respondToAdminOrderOutcome(outcome);
+    return prisma.$transaction((transaction) =>
+      updateAdminOrderShippingAddress(
+        {
+          orderId: params.id,
+          changedBy: admin.username,
+          values: readAddressFormValues(body),
+        },
+        transaction,
+      ),
+    );
+  });
 }

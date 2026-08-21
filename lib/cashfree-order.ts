@@ -2,12 +2,11 @@ import "server-only";
 import type { CashfreePaymentSummary } from "@/types/order";
 import {
   CASHFREE_API_VERSION,
+  CASHFREE_TIMEOUT_MS,
   getCashfreeOrderUrl,
   readCashfreeCredentials,
 } from "@/lib/cashfree-config";
 import { normaliseCashfreeOrder } from "@/lib/verify";
-
-const CASHFREE_TIMEOUT_MS = 15_000;
 
 /**
  * What asking Cashfree about one order can produce.

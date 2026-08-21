@@ -7,6 +7,7 @@ import {
   findChangedAddressFields,
   updateAdminOrderReceipt,
   updateAdminOrderShippingAddress,
+  type AdminOrderWriteClient,
 } from "@/lib/admin-order-updates";
 import { prisma } from "@/lib/prisma";
 
@@ -499,5 +500,58 @@ describe("the two receipt flags", () => {
       expect(whenTheParcelArrives?.itemReceivedBack).toBe(true);
       expect(whenTheParcelArrives?.status).toBe("rto");
     });
+  });
+});
+
+/**
+ * The race the two other writers already handled and this one did not.
+ *
+ * `updateAdminOrderReceipt` read the order, decided from its status whether the toggle was even
+ * a question, and then wrote with a bare `update` — which throws `P2025` if the row has gone,
+ * and writes regardless if the row has *moved*. A stub client is what makes the window between
+ * the read and the write observable at all: no real transaction can be held open across it.
+ * ADR-048 aligns it with its siblings.
+ */
+function receiptRaceClient(updatedRowCount: number): {
+  client: AdminOrderWriteClient;
+  updates: Array<Record<string, unknown>>;
+} {
+  const updates: Array<Record<string, unknown>> = [];
+
+  const client = {
+    order: {
+      findUnique: async () => ({ status: "rto", paymentType: "prepaid" }),
+      updateMany: async (args: Record<string, unknown>) => {
+        updates.push(args);
+        return { count: updatedRowCount };
+      },
+    },
+  } as unknown as AdminOrderWriteClient;
+
+  return { client, updates };
+}
+
+describe("a receipt toggle that loses a race", () => {
+  it("says CONCURRENT_CHANGE rather than throwing P2025 at the operator", async () => {
+    const { client } = receiptRaceClient(0);
+
+    expect(
+      await updateAdminOrderReceipt({ orderId: "W2ACEHACUU", itemReceivedBack: true }, client),
+    ).toEqual({
+      kind: "REJECTED",
+      error: "CONCURRENT_CHANGE",
+      message: "This order moved while the page was open. Reload it and try again.",
+    });
+  });
+
+  it("guards the write on the status the two receipt checks were made against", async () => {
+    const { client, updates } = receiptRaceClient(1);
+
+    expect(
+      await updateAdminOrderReceipt({ orderId: "W2ACEHACUU", itemReceivedBack: true }, client),
+    ).toEqual({ kind: "UPDATED" });
+
+    expect(updates).toHaveLength(1);
+    expect(updates[0].where).toEqual({ id: "W2ACEHACUU", status: "rto" });
   });
 });

@@ -77,6 +77,31 @@ export function collapseRepeatedStatuses(
 
 export type PublicOrderTrackingClient = Pick<PrismaClient, "order">;
 
+const LOG_PREFIX = "[order-tracking]";
+
+async function findTrackedOrderRow(client: PublicOrderTrackingClient, orderId: string) {
+  try {
+    return await client.order.findUnique({
+      where: { id: orderId },
+      select: {
+        id: true,
+        createdAt: true,
+        status: true,
+        isRefunded: true,
+        refundedAt: true,
+        refundAmount: true,
+        statusHistory: {
+          orderBy: [{ changedAt: "asc" }, { id: "asc" }],
+          select: { status: true, changedAt: true },
+        },
+      },
+    });
+  } catch (lookupError) {
+    console.error(`${LOG_PREFIX} ${orderId} could not be looked up in Postgres`, lookupError);
+    return null;
+  }
+}
+
 /**
  * One order as a customer may see it, or null.
  *
@@ -87,8 +112,17 @@ export type PublicOrderTrackingClient = Pick<PrismaClient, "order">;
  * typed with a stray space either side.
  *
  * Null covers every way this can fail to find something: a malformed id, a well-formed id
- * nobody was ever given, and an id belonging to an order whose Postgres capture failed. The
- * caller renders one message for all three ([`ORDER_NOT_FOUND_MESSAGE`](./order-tracking-copy.ts)).
+ * nobody was ever given, an id belonging to an order whose Postgres capture failed, and a
+ * database that did not answer at all. The caller renders one message for all four
+ * ([`ORDER_NOT_FOUND_MESSAGE`](./order-tracking-copy.ts)).
+ *
+ * That last case is why this **never throws**, the same discipline and for the same reason as
+ * [`findTrackingIdForCashfreeOrder`](./order-capture.ts): `/track` is a public page, the person
+ * on it is a customer holding a parcel number, and an outage in a database they have never
+ * heard of is not their problem to read a stack trace about. They are told the lookup did not
+ * work in the words the page already uses for a number that names nothing — which is all they
+ * can act on either way — and the reason goes to the log, where the person who can fix it is
+ * looking. See [ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md).
  */
 export async function findPublicOrderTracking(
   submittedOrderId: string,
@@ -97,21 +131,7 @@ export async function findPublicOrderTracking(
   const orderId = normaliseOrderId(submittedOrderId);
   if (!isPlausibleOrderId(orderId)) return null;
 
-  const order = await client.order.findUnique({
-    where: { id: orderId },
-    select: {
-      id: true,
-      createdAt: true,
-      status: true,
-      isRefunded: true,
-      refundedAt: true,
-      refundAmount: true,
-      statusHistory: {
-        orderBy: [{ changedAt: "asc" }, { id: "asc" }],
-        select: { status: true, changedAt: true },
-      },
-    },
-  });
+  const order = await findTrackedOrderRow(client, orderId);
 
   if (order === null) return null;
 

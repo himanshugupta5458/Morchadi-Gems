@@ -125,7 +125,7 @@ was valid" is not a fact the server has.
 | Unit price | `data/products.json` → `product.price`, at request time |
 | Line total | `product.price × qty`, computed here |
 | Subtotal | Sum of the computed line totals |
-| Shipping | `FLAT_SHIPPING_RATE` from `lib/config.ts` — once per order, never per line |
+| Shipping | `calculateShipping(subtotal)` from `lib/config.ts` — once per order, never per line. Zero at or above `FREE_SHIPPING_THRESHOLD` (₹799, inclusive) and on an empty order, `FLAT_SHIPPING_RATE` (₹99) otherwise. Derived from the catalogue-priced subtotal, so a client cannot claim to have qualified |
 | Total | `subtotal + shipping` |
 | `order_amount` sent to Cashfree | That computed total, and only that |
 
@@ -286,7 +286,7 @@ are never returned.
 ```json
 {
   "error": "PAYMENT_GATEWAY_UNAVAILABLE",
-  "message": "We could not reach the payment gateway just now. Your cart and details are safe — please try again in a moment.",
+  "message": "We could not reach the payment gateway just now. Your cart and details are safe, so please try again in a moment.",
   "retryable": true
 }
 ```
@@ -305,7 +305,9 @@ Accept:          application/json
 ```
 
 `{base}` is `https://sandbox.cashfree.com` unless `CASHFREE_ENV` is exactly `production`, in
-which case `https://api.cashfree.com`. Timeout 15s, `cache: "no-store"`.
+which case `https://api.cashfree.com`. Timeout `CASHFREE_TIMEOUT_MS` (15s), defined once in
+`lib/cashfree-config.ts` and shared with the read-back call
+[`/api/verify-order`](verify-order.md) makes. `cache: "no-store"`.
 
 ```json
 {
@@ -328,7 +330,7 @@ which case `https://api.cashfree.com`. Timeout 15s, `cache: "no-store"`.
 ```
 
 `order_tags` is present **only when something in the order has options**; an order of the
-ninety-six plain products sends exactly the body it sent before ADR-019. It is the fulfilment
+forty-four plain products sends exactly the body it sent before ADR-019. It is the fulfilment
 record — with no database, the payment record is the order record, and this is where a packer
 reads what to engrave. Values are capped at 255 characters, so a long summary is split across
 `options`, `options_2` and `options_3` rather than truncated, and if even three values are not
@@ -382,7 +384,6 @@ argued in [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
 | --- | --- | --- |
 | `CASHFREE_APP_ID` | `lib/cashfree-config.ts` | `import "server-only"` at the top of that module makes importing it from a `"use client"` file a **build error**, verified by deliberately doing it |
 | `CASHFREE_SECRET_KEY` | same | same; never logged, never in any response body |
-
 | `DATABASE_URL` | `lib/prisma.ts` | same — that module opens with `import "server-only"`, and the capture code that uses it is only ever reached from this route handler |
 
 Neither Cashfree credential is prefixed `NEXT_PUBLIC_`, so Next.js would not inline them into a

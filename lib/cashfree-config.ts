@@ -14,6 +14,14 @@ import { CHECKOUT_CONFIRMATION_PATH } from "@/lib/navigation";
  */
 export const CASHFREE_API_VERSION = "2025-01-01";
 
+/**
+ * How long either Cashfree call may take before it is abandoned. Shared by the order-creating
+ * `POST` and the read-back `GET` so the two cannot drift into waiting different lengths on the
+ * same gateway; fifteen seconds against the five `CALLMEBOT_TIMEOUT_MS` allows, because this is
+ * the money path and giving up on it is a failed checkout rather than a skipped notification.
+ */
+export const CASHFREE_TIMEOUT_MS = 15_000;
+
 const CASHFREE_BASE_URLS: Record<CashfreeMode, string> = {
   sandbox: "https://sandbox.cashfree.com",
   production: "https://api.cashfree.com",

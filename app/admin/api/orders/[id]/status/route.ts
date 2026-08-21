@@ -1,10 +1,8 @@
 import type { NextResponse } from "next/server";
 import {
-  readAdminForOrderAction,
   readJsonObject,
   readJsonString,
-  respondToAdminOrderOutcome,
-  unauthorisedAdminOrderResponse,
+  runAdminOrderAction,
   type AdminOrderActionResponseBody,
 } from "@/lib/admin-order-api";
 import { applyAdminOrderStatusChange } from "@/lib/admin-order-updates";
@@ -29,31 +27,32 @@ export const dynamic = "force-dynamic";
  * ceiling are both re-derived from the row itself. The one field that is never read from the
  * body is `changedBy`: the audit trail names the session's admin, not whoever the request
  * claims to be.
+ *
+ * `runAdminOrderAction` carries the session check and the error boundary, so a database that
+ * is down leaves this endpoint answering the typed rejection its contract describes rather
+ * than crashing into a bare 500 (ADR-048).
  */
 export async function POST(
   request: Request,
   { params }: { params: { id: string } },
 ): Promise<NextResponse<AdminOrderActionResponseBody>> {
-  const admin = await readAdminForOrderAction();
-  if (admin === null) return unauthorisedAdminOrderResponse();
+  return runAdminOrderAction("status", params.id, async (admin) => {
+    const body = await readJsonObject(request);
 
-  const body = await readJsonObject(request);
-
-  const outcome = await prisma.$transaction((transaction) =>
-    applyAdminOrderStatusChange(
-      {
-        orderId: params.id,
-        changedBy: admin.username,
-        submission: {
-          status: readJsonString(body, "status"),
-          reason: readJsonString(body, "reason"),
-          refundAmount: readJsonString(body, "refundAmount"),
-          refundAcknowledged: body.refundAcknowledged === true,
+    return prisma.$transaction((transaction) =>
+      applyAdminOrderStatusChange(
+        {
+          orderId: params.id,
+          changedBy: admin.username,
+          submission: {
+            status: readJsonString(body, "status"),
+            reason: readJsonString(body, "reason"),
+            refundAmount: readJsonString(body, "refundAmount"),
+            refundAcknowledged: body.refundAcknowledged === true,
+          },
         },
-      },
-      transaction,
-    ),
-  );
-
-  return respondToAdminOrderOutcome(outcome);
+        transaction,
+      ),
+    );
+  });
 }

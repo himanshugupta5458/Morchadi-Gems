@@ -152,6 +152,34 @@ export async function deleteExpiredAdminSessions(): Promise<number> {
   return count;
 }
 
+/**
+ * The same sweep, for the login route, and it **never throws**.
+ *
+ * Deleting rows that expired days ago is the one thing on the login path that nobody is
+ * waiting for. Awaited bare, it put a `deleteMany` between a correct password and the cookie
+ * that acts on it, so a fault in the housekeeping turned a valid login into a 500 and locked
+ * the owner out of the panel for a reason that had nothing to do with their credentials.
+ *
+ * Null means the sweep did not run. Nothing reads that value except a test: the caller
+ * continues either way, which is the whole point, and the reason is in the log rather than in
+ * the response. This is the storefront's off-the-critical-path discipline
+ * ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)) applied to the one piece of
+ * the admin panel that genuinely is housekeeping — see
+ * [ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md) for why the rest
+ * of the panel is deliberately the opposite.
+ */
+export async function sweepExpiredAdminSessions(): Promise<number | null> {
+  try {
+    return await deleteExpiredAdminSessions();
+  } catch (sweepError) {
+    console.error(
+      "[admin-session] expired sessions could not be swept; the login continues regardless",
+      sweepError,
+    );
+    return null;
+  }
+}
+
 /** Every session belonging to one admin, ended at once. */
 export async function destroyAllSessionsForAdmin(adminId: string): Promise<number> {
   const { count } = await prisma.adminSession.deleteMany({ where: { adminId } });
@@ -171,6 +199,19 @@ export async function readAdminSessionFromRequest(): Promise<AdminIdentity | nul
 }
 
 /**
+ * The three things that can come of asking who is signed in, where the third used to be an
+ * exception.
+ *
+ * A cookie that names nobody still redirects, because that is not an error — it is a stranger,
+ * or an owner whose week is up. `DATABASE_UNAVAILABLE` is the case that has no honest redirect:
+ * the panel does not know whether this person is signed in, and sending them to a login page
+ * that cannot check a password either would be a lie told twice.
+ */
+export type AdminSessionResolution =
+  | { kind: "SIGNED_IN"; admin: AdminIdentity }
+  | { kind: "DATABASE_UNAVAILABLE" };
+
+/**
  * The logged-in admin, or a redirect to the login page — the guard every protected admin
  * render goes through.
  *
@@ -181,10 +222,26 @@ export async function readAdminSessionFromRequest(): Promise<AdminIdentity | nul
  *
  * The login URL is derived from the request's own hostname, because `/login` and
  * `/admin/login` are the same page reached from two different domains.
+ *
+ * A Postgres fault is returned rather than thrown, and it **fails closed**: nothing about the
+ * panel is rendered on a request whose session could not be resolved. What the caller shows
+ * instead is the panel's own error state, because the person it happens to is the person who
+ * fixes databases ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
  */
-export async function requireAdminSession(): Promise<AdminIdentity> {
-  const admin = await readAdminSessionFromRequest();
-  if (admin !== null) return admin;
+export async function requireAdminSession(): Promise<AdminSessionResolution> {
+  let admin: AdminIdentity | null;
+
+  try {
+    admin = await readAdminSessionFromRequest();
+  } catch (sessionError) {
+    console.error(
+      "[admin-session] the session cookie could not be resolved against Postgres",
+      sessionError,
+    );
+    return { kind: "DATABASE_UNAVAILABLE" };
+  }
+
+  if (admin !== null) return { kind: "SIGNED_IN", admin };
 
   redirect(resolveAdminLoginHref(resolveRequestHostname((name) => headers().get(name))));
 }

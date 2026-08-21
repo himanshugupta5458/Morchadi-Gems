@@ -13,7 +13,7 @@ Morchadi Gems is a production-grade ecommerce website for jewelry.
 | Styling | Tailwind CSS |
 | Payments | Cashfree, hosted checkout redirect |
 | Database | Postgres, for orders, customers and admins only — the product catalogue stays a static `data/products.json` |
-| Admin panel | Auth foundation on `admin.morchadigems.com` — catalogue changes still ship as code |
+| Admin panel | Order management on `admin.morchadigems.com` — login, the order list, and per-order status, refund, address and receipt actions. **Catalogue changes still ship as code** |
 | Accounts | None for shoppers — guest checkout only, no login, no customer records created by choice |
 | Hosting | Coolify (self-hosted on a Hostinger VPS) |
 
@@ -26,7 +26,7 @@ left untouched in every case:
 
 | Row | Narrowed by |
 | --- | --- |
-| Hosting — Vercel | [ADR-032](docs/decisions/ADR-032-coolify-docker-deploy.md) — Coolify on a VPS. The deployment shape is in [DEPLOY.md](DEPLOY.md) |
+| Hosting — Vercel | [ADR-032](docs/decisions/ADR-032-coolify-docker-deploy.md) — Coolify on a VPS, itself narrowed by [ADR-047](docs/decisions/ADR-047-prisma-generate-in-docker-build.md) once the image had a Prisma Client to generate. The deployment shape is in [DEPLOY.md](DEPLOY.md) |
 | No database | [ADR-040](docs/decisions/ADR-040-postgres-for-orders.md) — Postgres for orders, customers and admins. **Never for the catalogue** |
 | No admin panel | [ADR-041](docs/decisions/ADR-041-admin-subdomain-and-auth.md) — an authenticated operator on `admin.morchadigems.com`, served by this same deployment. **Not a catalogue admin** |
 
@@ -68,6 +68,21 @@ total, or item amount arriving from the client is treated as untrusted input and
 used to create a payment order. The client sends product IDs and quantities; the server
 decides what those cost. Any code path that skips this is a bug, regardless of tests
 passing.
+
+**Server-side validation is not optional in the admin panel either.** A control the panel does
+not render is still a field an authenticated `curl` can name. Every admin write re-derives its
+rule from the order row — the lifecycle table, the address-editable window, the refund ceiling,
+the receipt-toggle preconditions — and `changedBy` always comes from the session, never from the
+body. See [ADR-044](docs/decisions/ADR-044-admin-order-detail-and-layout-split.md).
+
+**How a surface fails is a decision, not an accident.** Anything that reads or writes Postgres
+must have a deliberate answer to "what happens when the database is not there", and the answer
+differs by who is looking. A shopper mid-payment is shielded from it; the operator who would
+restart the database is told plainly, in the panel's own words rather than a generic 500. Never
+let a database fault render as an empty list, a "not signed in", or an unhandled rejection. Each
+surface's current decision is the table in
+[ADR-048](docs/decisions/ADR-048-database-health-and-failure-surfaces.md); adding a new one means
+adding a row.
 
 **Secrets never reach the client bundle.** `CASHFREE_APP_ID`, `CASHFREE_SECRET_KEY` and
 `DATABASE_URL` are read only inside route handlers and server-only modules. Only `NEXT_PUBLIC_*` variables may
@@ -113,10 +128,15 @@ that README before adding a file there.
 ## Project structure
 
 ```
+middleware.ts The one middleware Next 14 permits, and it must live here. It classifies the
+              request hostname and rewrites the admin subdomain into app/admin/* (ADR-041)
 app/          Routes, layouts, and API route handlers (App Router)
-              app/admin/ is the panel; it is served on its own hostname (ADR-041)
+              app/(storefront)/ is the shop and app/admin/ is the panel — sibling route
+              groups with sibling layouts, so panel screens carry no shop chrome (ADR-044)
 components/   Reusable presentational UI
-lib/          Utilities, cart context, Cashfree client, server-side pricing
+lib/          Utilities, cart context, Cashfree client, server-side pricing, the order
+              lifecycle, admin auth and sessions. Tests live beside what they test
+config/       business.ts (owner-editable facts) and security-headers.mjs (the CSP)
 data/         products.json — the static catalogue, the single source of truth for prices
 prisma/       schema.prisma and the committed migration history (ADR-040)
 scripts/      One-off and maintenance scripts, plain .mjs

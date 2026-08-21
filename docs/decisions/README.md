@@ -100,6 +100,7 @@ What this makes easy, what it makes hard, and what would force us to revisit it.
 | [045](ADR-045-public-order-tracking.md) | Public order tracking — the order number is the whole credential, and the page is told almost nothing | Accepted — clears the `sessionStorage` limitation [043](ADR-043-order-id-as-primary-identifier.md) shipped with, and draws the customer-facing half of the boundary [044](ADR-044-admin-order-detail-and-layout-split.md) drew for the operator |
 | [046](ADR-046-saved-address-in-local-storage.md) | The browser remembers the delivery address; the shop still does not remember the shopper | Accepted — removes repeat-checkout friction without reopening the no-accounts row of [001](ADR-001-tech-stack.md) |
 | [047](ADR-047-prisma-generate-in-docker-build.md) | The production image generates the Prisma Client itself | Accepted — narrows the *no database* premise [032](ADR-032-coolify-docker-deploy.md) was written under, and delivers the first of the two build steps [040](ADR-040-postgres-for-orders.md) deferred |
+| [048](ADR-048-database-health-and-failure-surfaces.md) | Database health is made visible, and each surface decides for itself how to fail | Accepted — closes the silent-failure gap [042](ADR-042-order-capture-in-postgres.md) created by design, and decides the second of the two steps [040](ADR-040-postgres-for-orders.md) deferred by leaving it manual and visible rather than automated |
 
 ## Numbering gaps and known drift
 

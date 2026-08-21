@@ -122,7 +122,9 @@ them as "we could not confirm this yet", never as "your payment failed".
 ## Side effects
 
 One outbound `GET` to the Cashfree order endpoint, through `lookupCashfreeOrder`
-(`lib/cashfree-order.ts`), with a 15-second `AbortSignal.timeout` and `cache: "no-store"`.
+(`lib/cashfree-order.ts`), with an `AbortSignal.timeout` of `CASHFREE_TIMEOUT_MS` (15 seconds,
+defined once in `lib/cashfree-config.ts` and shared with the order-creating call) and
+`cache: "no-store"`.
 
 That helper is shared with [`/api/notify-admin`](notify-admin.md) deliberately: the
 notification route has to answer the same question the confirmation page asks — "was this

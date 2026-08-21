@@ -82,14 +82,39 @@ a word is an enumeration oracle just the same.
 There is no 400, no 422 and no 429. A shape error is a failed login, and rate limiting is
 deliberately not implemented here — see ADR-041.
 
+### 503 Service Unavailable — could not be checked
+
+```json
+{
+  "status": "UNAVAILABLE",
+  "error": "The admin database did not answer, so this sign-in could not be checked. It is not your password. Try again in a moment."
+}
+```
+
+Returned when Postgres could not be reached at all, so the credentials were never compared. No
+`Set-Cookie` is sent, and the reason is logged under `[admin-login]`.
+
+**This does not weaken the one-message rule above.** That rule exists to stop the endpoint
+telling a stranger which usernames exist; a 503 is returned identically for every username,
+including ones that do not, so it discloses nothing an attacker could not learn by noticing the
+outage. What it buys is the owner not retyping a password that was correct all along. See
+[ADR-048](../decisions/ADR-048-database-health-and-failure-surfaces.md).
+
 ## Side effects
 
-1. `deleteExpiredAdminSessions()` — one indexed `DELETE` sweeping rows past their expiry, so the
-   table is kept by the traffic rather than by a scheduled job. Runs only on a successful login.
+1. `sweepExpiredAdminSessions()` — one indexed `DELETE` sweeping rows past their expiry, so the
+   table is kept by the traffic rather than by a scheduled job. Runs only on a successful login,
+   and **cannot fail the login**: it catches, logs under `[admin-session]` and returns `null`.
+   Awaited bare it sat between a verified password and the cookie that acts on it, so a fault in
+   the tidying turned a correct sign-in into a 500
+   ([ADR-048](../decisions/ADR-048-database-health-and-failure-surfaces.md)).
 2. `createAdminSession(adminId)` — inserts one `admin_sessions` row holding the token's digest,
-   the admin id and an expiry seven days out.
+   the admin id and an expiry seven days out. This one *is* load-bearing: a failure here means no
+   session exists, and the response is the 503 above rather than a cookie for a session that was
+   never created.
 
-Neither runs on a rejected login. Nothing is written, and nothing is logged, when a login fails.
+Neither runs on a rejected login. Nothing is written, and nothing is logged, when a login fails
+on its credentials.
 
 ## Security notes
 

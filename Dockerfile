@@ -44,9 +44,15 @@ RUN npx prisma generate
 ARG APP_BASE_URL
 ARG NEXT_PUBLIC_BASE_URL
 ARG NEXT_PUBLIC_WEB3FORMS_KEY
+ARG NEXT_PUBLIC_GA_MEASUREMENT_ID
 ENV APP_BASE_URL=$APP_BASE_URL
 ENV NEXT_PUBLIC_BASE_URL=$NEXT_PUBLIC_BASE_URL
 ENV NEXT_PUBLIC_WEB3FORMS_KEY=$NEXT_PUBLIC_WEB3FORMS_KEY
+# The GA4 measurement id, listed as a build variable in DEPLOY.md §3 since ADR-039 but never
+# declared here, so Coolify passed a --build-arg this file did not accept and Docker discarded
+# it. Unset it inlines as an empty string and GoogleAnalytics renders nothing, which is the
+# behaviour the image already had; declared, a configured id now actually reaches the bundle.
+ENV NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN npm run build
@@ -79,6 +85,16 @@ USER nextjs
 
 EXPOSE 3000
 
+# A liveness probe, and deliberately only that: it asks whether this process is serving, not
+# whether the shop is well. `/` renders from data/products.json and needs no database, which is
+# exactly why it is the right target — Postgres going away for thirty seconds must not stop a
+# container that can still serve every page and take every payment.
+#
+# The question this cannot answer — can the deployment actually reach and use its database —
+# is answered by /api/health, which returns 503 when it cannot. That route is for a human and
+# for an uptime monitor, and must NOT be wired up here or in Coolify's own health check
+# setting: doing so couples the storefront's uptime to Postgres and takes the shop down for a
+# fault it was designed to survive. See ADR-048 and §5b of DEPLOY.md.
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
   CMD wget --quiet --spider "http://127.0.0.1:${PORT}/" || exit 1
 

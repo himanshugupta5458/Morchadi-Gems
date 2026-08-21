@@ -4,10 +4,21 @@ The production target is **Coolify**, self-hosted on a Hostinger VPS (Ubuntu 24.
 Not Vercel. The reasoning behind the container shape is in
 [ADR-032](docs/decisions/ADR-032-coolify-docker-deploy.md); this file is the procedure.
 
-Everything ships in one image built from the [`Dockerfile`](Dockerfile) at the repo root.
-There is no database, no volume, and no migration step — the catalogue is
-`data/products.json` and travels inside the image ([ADR-001](docs/decisions/ADR-001-tech-stack.md)).
-A restart loses nothing. A rollback is a previous image tag.
+The application ships in one image built from the [`Dockerfile`](Dockerfile) at the repo root.
+The **catalogue** travels inside that image as `data/products.json`
+([ADR-001](docs/decisions/ADR-001-tech-stack.md)), so a catalogue change is a redeploy and a
+rollback is a previous image tag.
+
+**There is also a Postgres**, holding orders, customers and the admin account
+([ADR-040](docs/decisions/ADR-040-postgres-for-orders.md)). It is a separate Coolify resource
+with its own volume, it is *not* in this image, and it is the one piece of this deployment that
+a restart must not lose. Two steps go with it and neither is automated:
+**`prisma migrate deploy`** after a schema change, and **`npm run seed:admin`** once, to create
+the operator account. Both are in section 5a.
+
+This file was rewritten on 2026-08-21 to match what the deployment actually does. Anything it
+still cannot see from inside the repository — the live Coolify settings, the production
+`DATABASE_URL` — is called out where it appears rather than asserted.
 
 ---
 
@@ -16,7 +27,11 @@ A restart loses nothing. A rollback is a previous image tag.
 You need:
 
 - A VPS with Docker, running Coolify, reachable over SSH.
-- The domain, with DNS you can edit.
+- The domain, with DNS you can edit — an `A` record for the storefront **and one for
+  `admin`**, because the admin panel is a second hostname served by this same deployment
+  ([ADR-041](docs/decisions/ADR-041-admin-subdomain-and-auth.md)).
+- A **Postgres resource in Coolify**, and its connection string. Postgres 16 matches the local
+  `docker-compose.yml`.
 - **Live Cashfree credentials** — app ID and secret key from the Cashfree dashboard under
   *Developers → API Keys*, on the **production** tab. The sandbox pair will not charge real
   cards.
@@ -60,7 +75,7 @@ Next inlines these at compile time. Setting them only at runtime does nothing at
 | `APP_BASE_URL` | `https://www.morchadigems.com` | **Also needed at runtime — set it in both columns.** |
 | `NEXT_PUBLIC_BASE_URL` | `https://www.morchadigems.com` | Same origin. Inlined into the client bundle. |
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | your Web3Forms key, or leave unset | Public by design. Unset means the contact form validates and then honestly says delivery is not connected. |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | your GA4 measurement id (`G-…`), or leave unset | Public by design. Unset means no analytics tag is rendered at all and the site behaves exactly as it does without it. The CSP already allows the Google hosts it needs ([ADR-039](docs/decisions/ADR-039-analytics-and-utm-attribution.md)). **Build-time only** — Next inlines it, so a value set at runtime does nothing. |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | your GA4 measurement id (`G-…`), or leave unset | Public by design. Unset means no analytics tag is rendered at all and the site behaves exactly as it does without it. The CSP already allows the Google hosts it needs ([ADR-039](docs/decisions/ADR-039-analytics-and-utm-attribution.md)). **Build-time only** — Next inlines it, so a value set at runtime does nothing. **A `Dockerfile` `ARG` for this was missing until 2026-08-21**; an image built before then discarded whatever Coolify passed, so if analytics has never reported, rebuild rather than re-checking the id. |
 
 Never put a secret in this column. Build variables are passed as Docker build ARGs and remain
 readable in the image history.
@@ -75,6 +90,14 @@ readable in the image history.
 | `CASHFREE_ENV` | `production` | `sandbox` moves no real money. Must match the credential pair. |
 | `CALLMEBOT_PHONE` | `919358358834` | Optional. Country code first, digits only, no `+`. |
 | `CALLMEBOT_APIKEY` | the key CallMeBot issued | Optional. Both must be set or the notification is skipped. |
+| `DATABASE_URL` | `postgresql://user:pass@host:5432/db` | **Required.** Server-only, and the second most sensitive value here — mark it a secret in Coolify. Runtime only: `prisma generate` reads the schema file and never this, so it is deliberately not a build ARG ([ADR-047](docs/decisions/ADR-047-prisma-generate-in-docker-build.md)). Use Coolify's internal service hostname, not a public address. |
+| `ADMIN_HOSTNAME` | `admin.morchadigems.com` | Optional. Unset falls back to exactly this value (`lib/admin-routing.ts`); set it explicitly if the panel lives anywhere else, or the middleware will not recognise its own hostname and will bounce every admin request to the storefront home. |
+
+**Nothing breaks loudly when `DATABASE_URL` is missing**, which is the trap. Checkout still
+takes money — the Postgres write is deliberately off the critical path
+([ADR-042](docs/decisions/ADR-042-order-capture-in-postgres.md)) — and the only symptom is
+`[order-capture]` lines in the container log, an admin panel that cannot log in, and orders that
+exist at Cashfree and nowhere else. Set it before the first real payment, not after.
 
 `PORT` and `HOSTNAME` are set in the image (`3000`, `0.0.0.0`) and need no entry. Coolify may
 override `PORT`; the app follows it.
@@ -101,7 +124,12 @@ Set it in both columns, to the same value, with `https://` and **no trailing sla
    certificate.
 2. Point DNS at the VPS: an `A` record for `www` (and the apex, if you are redirecting it) to
    the server's IP.
-3. Deploy, then load the domain over https and confirm the padlock.
+3. **Add the admin hostname to the same application.** `admin.morchadigems.com` needs its own
+   `A` record and its own entry in Coolify's domain field, because it is a second hostname on
+   one deployment rather than a second application — `middleware.ts` rewrites every path on it
+   into `/admin/*` ([ADR-041](docs/decisions/ADR-041-admin-subdomain-and-auth.md)). Coolify
+   issues a certificate per hostname, so both need one.
+4. Deploy, then load both domains over https and confirm the padlock on each.
 
 ### Cloudflare
 
@@ -141,9 +169,193 @@ curl -s $BASE/robots.txt                                             # Sitemap: 
 curl -s $BASE/sitemap.xml | head -20                                 # <loc> must not say localhost
 ```
 
+```bash
+ADMIN=https://admin.morchadigems.com
+
+curl -s $ADMIN/robots.txt                                            # must be the deny-all file,
+                                                                     # not the storefront's
+curl -s -o /dev/null -w '%{http_code}\n' $ADMIN/orders               # 307 to /login when signed out
+```
+
 Then in a browser: load a product page and confirm photographs and styling render, add to
 cart, and run one real payment end to end. Cashfree production is the only way to know the
 live credentials and the return URL work together.
+
+**Then check the database, which a green build and a 200 on `/` say nothing about.** Start with
+the one command that answers it directly:
+
+```bash
+curl -s -o /dev/null -w '%{http_code}\n' $BASE/api/health   # 200. Anything else is a problem.
+curl -s $BASE/api/health                                    # {"status":"healthy","database":"reachable",...}
+```
+
+| What it says | What it means | What to do |
+| --- | --- | --- |
+| `200` `"database":"reachable"` | The deployment can reach Postgres and its schema matches this image | Carry on |
+| `503` `"database":"unreachable"` | Wrong or missing `DATABASE_URL`, Postgres not running, or not on this network | §3 for the variable, then Coolify's database resource |
+| `503` `"database":"schema-mismatch"` | Postgres answered, but `orders` is not the table this image expects | **Migrations were not applied.** §5a |
+
+The 503 body never says which host or which column; the container log does. `/api/health` is
+the only surface in this deployment that answers this question, and §5b explains why it is not
+wired to anything that can restart the container.
+
+**Then check the two things only a real order can answer**, because a checkout that succeeded
+proves nothing about the write behind it:
+
+1. Sign in at `$ADMIN/login` and confirm the order you just placed appears in the list, with the
+   right total and the right address.
+2. Take its ten-character order number to `$BASE/track` and confirm the customer-facing page
+   finds it.
+
+If checkout succeeded and the order is not in the list, the write failed silently and section 3
+is where to look. That is by design, and it is why this check is here.
+
+---
+
+## 5a. The database steps, which nothing runs for you
+
+Neither of these is in the image, in an entrypoint, or in any Coolify hook. **They are manual,
+and a deploy that needed them and did not get them starts cleanly and fails at the first
+query.** ADR-047 recorded this gap; [ADR-048](docs/decisions/ADR-048-database-health-and-failure-surfaces.md)
+decided to leave it manual and to make it *visible* instead, which is what the `/api/health`
+check in §5 above is for. Run that check after every deploy that carries a migration, and the
+window in which an unapplied one is invisible is one curl wide.
+
+**Why it is not automated**, so the question does not get reopened every six months:
+`prisma migrate deploy` needs the `prisma` CLI and the `prisma/migrations` directory, and the
+runtime image has neither. `output: "standalone"` traces only what the server imports, which is
+`@prisma/client` and its query engine; the CLI and the schema engine it drives are another
+~115 MB of build tooling that `standalone` exists to leave behind. Shipping them so an entrypoint
+could run migrations would also put Postgres on the container's boot path, so a database blip
+during a restart would turn into a crash loop and take down a storefront that does not need a
+database to serve a page or take a payment. ADR-047 rejected an entrypoint `prisma generate` for
+the first of those reasons and ADR-048 rejects an entrypoint `migrate deploy` for both.
+
+### Reaching production Postgres from a machine with the Prisma CLI
+
+The runtime container has no `prisma` binary — `output: "standalone"` exists to leave build
+tooling behind — so migrations are run from somewhere else pointed at the production database.
+Coolify's Postgres is normally reachable only on the server's internal Docker network, so one of
+two things has to happen first:
+
+- **An SSH tunnel from your machine to the VPS**, forwarding a local port at the database's
+  internal address. This is the better option: nothing about the server's exposure changes, and
+  the tunnel dies when you close it.
+
+  ```bash
+  ssh -L 55432:<postgres-internal-host>:5432 <user>@<vps-ip>
+  # then, in another shell, from a checkout of this repo at the deployed commit:
+  DATABASE_URL='postgresql://<user>:<pass>@localhost:55432/<db>' npx prisma migrate status
+  ```
+
+- **Temporarily publishing the Postgres port** in Coolify, running the command against the
+  public address, and **unpublishing it again**. Faster, and it puts the shop's order database
+  on the open internet for the duration. If you do it, use it for the length of one command.
+
+Whichever route, `prisma migrate status` first. It is read-only and it tells you whether there
+is anything to do.
+
+### Applying migrations
+
+```bash
+DATABASE_URL='<production url>' npx prisma migrate deploy
+```
+
+`migrate deploy` only applies migrations the database has not seen. It never resets and never
+generates a new migration. **Never run `migrate dev` or `migrate reset` against production** —
+`reset` drops the schema, and `dev` will happily invent a migration from whatever your local
+schema happens to say.
+
+Run it **after** the new image is built and **before** or immediately as it starts, and keep the
+migration backward-compatible with the image already running if there is any overlap. The three
+committed migrations are listed in [`docs/DEV-DATABASE.md`](docs/DEV-DATABASE.md); note that
+`20260820085000` adds `amount_prepaid` as `NOT NULL` with no default and makes
+`cashfree_order_id` unique, neither of which is safe against a table that already holds rows.
+
+Then confirm it from the outside, which needs no tunnel and no credentials:
+
+```bash
+curl -s https://www.morchadigems.com/api/health   # "database":"reachable", not "schema-mismatch"
+```
+
+`schema-mismatch` there is the running deployment telling you it reached Postgres and did not
+recognise the `orders` table it found. It is the same query Prisma emits for a real order read,
+so if that route is happy the write path will be too.
+
+### Creating the operator account
+
+Once, on a fresh database:
+
+```bash
+DATABASE_URL='<production url>' npm run seed:admin
+```
+
+It prompts for a username and a password twice, echoes neither, enforces a 12-character minimum,
+and writes one bcrypt hash to `admins`. The plaintext is never stored, logged or displayed. Then
+sign in at `https://admin.morchadigems.com/login` to confirm it took.
+
+The script reads an already-set `DATABASE_URL` in preference to any `.env` file, which is
+exactly how a one-off run against production is done without editing anything.
+
+### Backups
+
+**There is no backup policy in this repository.** Coolify can schedule `pg_dump` on a database
+resource; whether that is switched on is [VERIFY WITH OWNER]. The catalogue is in git and the
+image is reproducible — the orders table is the only thing here that cannot be rebuilt.
+
+---
+
+## 5b. The health check, and the one thing it must not be pointed at
+
+**A manual Coolify step, because it is a dashboard setting and not a file in this repository.**
+Nothing here can read it, so what Coolify is currently configured with is
+**[VERIFY WITH OWNER]**.
+
+### What to set
+
+In Coolify: **your application → Configuration → Health Check**.
+
+- If the health check is **disabled**, leave it disabled. The image carries its own
+  `HEALTHCHECK` (see the `Dockerfile`) and it is already correct.
+- If it is **enabled**, the **Path** must be `/` and the expected **Return Code** `200`.
+
+That is the whole change: confirm the path is `/`, and change it back if it is anything else.
+
+### Why it is `/` and not `/api/health`
+
+`/api/health` is the new route that actually queries Postgres, and pointing a *container* health
+check at it looks like an obvious upgrade. It is the opposite of one.
+
+The storefront renders from `data/products.json`, and checkout writes to Postgres off the
+critical path on purpose ([ADR-042](docs/decisions/ADR-042-order-capture-in-postgres.md)): the
+shop keeps serving pages and keeps taking payments through a database outage. If the container
+health check went red whenever Postgres did, Coolify would mark a perfectly serving container
+unhealthy, restart it, and fail deploys — so a thirty-second Postgres restart at 3am would take
+the whole shop offline to protect it from a fault it was built to survive. **Liveness is
+"can this process serve"; `/api/health` answers "is the dependency well". They are different
+questions and only one of them may decide whether the container lives.**
+
+### So who watches `/api/health`?
+
+You do, after each deploy (§5 above). Beyond that, point any uptime monitor at
+`https://www.morchadigems.com/api/health` and have it alert on a non-200 — the route is public,
+unauthenticated, `no-store`, and its body is three fields wide with no host, port or error text
+in it. Treat an alert as urgent rather than as a broken page: **checkout does not stop when
+Postgres does**, so every minute of a 503 there is a minute in which real orders are being paid
+for and not recorded.
+
+The admin panel says the same thing from the inside. Every panel screen renders its own
+"The order database did not answer" state during an outage rather than a blank list or a generic
+500, and it says out loud that orders are still arriving unrecorded
+([ADR-048](docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
+
+### One thing the route deliberately does not answer
+
+On the admin hostname, `admin.morchadigems.com/api/health` is **not** this route: middleware
+rewrites every path on that hostname into `/admin/*`, so it resolves to `/admin/api/health`,
+which does not exist — a 307 to the login page without a session cookie, a 404 with one. Use
+the storefront domain. The container's own check reaches the app at `127.0.0.1:3000`, which is
+not the admin hostname either, so the rewrite never applies there.
 
 ---
 
@@ -193,6 +405,16 @@ If the box has 2 GB or less total, do both. A third option is building the image
 | Build fails, `exit code 137` | Out of memory | Section 6. |
 | Contact form says delivery is not connected | `NEXT_PUBLIC_WEB3FORMS_KEY` unset at build time | Add it as a build variable and redeploy. |
 | Deploy succeeds but the catalogue is stale | Image not rebuilt | Catalogue changes ship as code ([ADR-001](docs/decisions/ADR-001-tech-stack.md)). Every product edit needs a redeploy. |
+| Checkout works, but no orders appear in the panel | `DATABASE_URL` unset or wrong | `curl $BASE/api/health` first: it answers this in one line. The capture write is off the critical path and fails silently by design ([ADR-042](docs/decisions/ADR-042-order-capture-in-postgres.md)). Look for `[order-capture]` in the container log. Section 3. |
+| `/api/health` says `"database":"schema-mismatch"` | Postgres is reachable but the image is ahead of it | `prisma migrate deploy`. Nothing runs it for you. Section 5a. |
+| `/api/health` 404s, or 307s to a login page | It was requested on `admin.morchadigems.com` | Use the storefront domain. Every path on the admin hostname is rewritten into `/admin/*`. Section 5b. |
+| Coolify restarts the container whenever Postgres blips | Coolify's health check path was pointed at `/api/health` | Set it back to `/`. That route is a dependency probe, not a liveness probe. Section 5b. |
+| Every admin screen says "The order database did not answer" | Postgres is unreachable from the container | It is telling the truth, and orders are being taken and not recorded. Treat as urgent. `curl $BASE/api/health`, then section 3. |
+| Admin login always rejects, correct password | No `admins` row in *this* database | `npm run seed:admin` against the production URL. Section 5a. |
+| `The column orders.xyz does not exist` at runtime | Image is ahead of the database | `prisma migrate deploy`. Nothing runs it for you. Section 5a. |
+| Sign-in says "The admin database did not answer" | Postgres unreachable, so the password could not be checked at all | It is not the password. `curl $BASE/api/health`, then section 3. |
+| `admin.morchadigems.com` shows the shop, or redirects to it | The hostname is not the one middleware recognises | Set `ADMIN_HOSTNAME` to match exactly, and add the hostname to the application in Coolify. Section 3, section 4. |
+| GA4 installed but reporting nothing | `NEXT_PUBLIC_GA_MEASUREMENT_ID` set at runtime, or baked by an image built before 2026-08-21 | Set it as a **build** variable and redeploy. The `Dockerfile` `ARG` only exists from that date. |
 
 ---
 
@@ -204,6 +426,8 @@ Useful for reproducing a failure locally. This is exactly what Coolify runs.
 docker build \
   --build-arg APP_BASE_URL=https://www.morchadigems.com \
   --build-arg NEXT_PUBLIC_BASE_URL=https://www.morchadigems.com \
+  --build-arg NEXT_PUBLIC_WEB3FORMS_KEY=... \
+  --build-arg NEXT_PUBLIC_GA_MEASUREMENT_ID=G-... \
   -t morchadi-gems .
 
 docker run --rm -p 3000:3000 \
@@ -211,8 +435,17 @@ docker run --rm -p 3000:3000 \
   -e CASHFREE_ENV=sandbox \
   -e CASHFREE_APP_ID=... \
   -e CASHFREE_SECRET_KEY=... \
+  -e DATABASE_URL='postgresql://...' \
   morchadi-gems
 ```
 
-Resulting image is roughly 310 MB. Local development is unaffected by any of this —
-`npm run dev` behaves exactly as before.
+All four `--build-arg` values are declared as `ARG` in the Dockerfile; a `--build-arg` Docker
+does not recognise is discarded with a warning rather than an error, which is how the GA id went
+missing for as long as it did.
+
+The image runs without `DATABASE_URL` — the storefront degrades exactly as section 3 describes
+— but the admin panel will not sign in and no order will be recorded.
+
+Resulting image is roughly 310 MB, plus the Prisma query engine the build trace now carries.
+Local development is unaffected by any of this: `npm run dev:all` starts the local Postgres,
+applies migrations and runs the dev server in one command.

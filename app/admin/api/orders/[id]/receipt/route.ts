@@ -1,10 +1,8 @@
 import type { NextResponse } from "next/server";
 import {
-  readAdminForOrderAction,
   readJsonObject,
   readOptionalBoolean,
-  respondToAdminOrderOutcome,
-  unauthorisedAdminOrderResponse,
+  runAdminOrderAction,
   type AdminOrderActionResponseBody,
 } from "@/lib/admin-order-api";
 import { updateAdminOrderReceipt } from "@/lib/admin-order-updates";
@@ -23,24 +21,24 @@ export const dynamic = "force-dynamic";
  * tied to the status change that made it relevant. There is no transaction because there is no
  * second write to be atomic with; unlike a status change, these carry their own timestamp on
  * the order row and add nothing to the audit table.
+ *
+ * The session check and the error boundary are `runAdminOrderAction`'s, shared with the other
+ * two order actions (ADR-048).
  */
 export async function POST(
   request: Request,
   { params }: { params: { id: string } },
 ): Promise<NextResponse<AdminOrderActionResponseBody>> {
-  const admin = await readAdminForOrderAction();
-  if (admin === null) return unauthorisedAdminOrderResponse();
+  return runAdminOrderAction("receipt", params.id, async () => {
+    const body = await readJsonObject(request);
 
-  const body = await readJsonObject(request);
-
-  const outcome = await updateAdminOrderReceipt(
-    {
-      orderId: params.id,
-      itemReceivedBack: readOptionalBoolean(body, "itemReceivedBack"),
-      codAmountCollected: readOptionalBoolean(body, "codAmountCollected"),
-    },
-    prisma,
-  );
-
-  return respondToAdminOrderOutcome(outcome);
+    return updateAdminOrderReceipt(
+      {
+        orderId: params.id,
+        itemReceivedBack: readOptionalBoolean(body, "itemReceivedBack"),
+        codAmountCollected: readOptionalBoolean(body, "codAmountCollected"),
+      },
+      prisma,
+    );
+  });
 }

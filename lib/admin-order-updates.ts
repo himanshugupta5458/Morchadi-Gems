@@ -238,6 +238,16 @@ export interface AdminOrderReceiptUpdateInput {
  * No history row. Unlike an address edit, these two write their own timestamp onto the order,
  * so the row already records what happened and when; a second copy in the audit table would be
  * the duplication ADR-040's addendum argues against.
+ *
+ * The write is `updateMany` guarded on the status the two checks above were made against, which
+ * is the same shape its two siblings use and is here for the same reason. The *flags* are
+ * independent of status; the permission to set them is not — `acceptsItemReceivedBack` reads a
+ * status that another tab can move between this function's read and its write, and an unguarded
+ * `update` would happily record a parcel coming back on an order that no longer expects one. It
+ * also removes the last way these three writers could answer differently: `update` throws
+ * `P2025` when the row has gone, where `updateMany` matches nothing and says
+ * `CONCURRENT_CHANGE` — one sentence an operator can act on instead of an exception
+ * ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
  */
 export async function updateAdminOrderReceipt(
   input: AdminOrderReceiptUpdateInput,
@@ -275,8 +285,8 @@ export async function updateAdminOrderReceipt(
 
   const changedAt = new Date();
 
-  await client.order.update({
-    where: { id: orderId },
+  const { count } = await client.order.updateMany({
+    where: { id: orderId, status: order.status },
     data: {
       ...(input.itemReceivedBack === undefined
         ? {}
@@ -292,6 +302,10 @@ export async function updateAdminOrderReceipt(
           }),
     },
   });
+
+  if (count === 0) {
+    return { kind: "REJECTED", error: "CONCURRENT_CHANGE", message: CONCURRENT_CHANGE_MESSAGE };
+  }
 
   return { kind: "UPDATED" };
 }

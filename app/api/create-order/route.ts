@@ -13,6 +13,7 @@ import {
 } from "@/lib/address";
 import {
   CASHFREE_API_VERSION,
+  CASHFREE_TIMEOUT_MS,
   buildReturnUrl,
   getCashfreeOrdersUrl,
   readCashfreeCredentials,
@@ -43,7 +44,6 @@ export const runtime = "nodejs";
 /** Never prerendered and never cached — every call mints a new payment session. */
 export const dynamic = "force-dynamic";
 
-const CASHFREE_TIMEOUT_MS = 15_000;
 const BASE36_ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz";
 
 function randomBase36(length: number): string {
