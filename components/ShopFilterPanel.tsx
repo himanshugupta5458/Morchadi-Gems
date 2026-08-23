@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import {
-  CATEGORIES,
+  SURFACED_CATEGORIES,
   COLLECTIONS,
   type Category,
   type CollectionFilterSlug,
@@ -55,7 +55,7 @@ export function ShopFilterPanel({
       <fieldset className="flex flex-col gap-3">
         <legend className={legendClasses}>Category</legend>
         <ul className="flex flex-col">
-          {CATEGORIES.map((category) => (
+          {SURFACED_CATEGORIES.map((category) => (
             <li key={category.slug}>
               <label className={optionLabelClasses}>
                 <input

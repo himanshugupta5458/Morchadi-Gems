@@ -1133,7 +1133,8 @@ while open. Every link closes the drawer on click.
 
 Charcoal, `ivory` text. The brand column opens with `<Wordmark variant="text" tone="ivory" />`
 rather than the logo — see `Wordmark` above for why. Seven columns at `lg` — brand (spanning two: blurb, registered
-address, support email, phone), Shop (the ten categories), Collections (the four), Company
+address, support email, phone), Shop (the surfaced categories — ten of the eleven today),
+Collections (the four), Company
 (About / Contact), Policies, Secure Payments (Cashfree) — over a copyright row. The address and contact
 links come from `CONTACT_CONFIG`, which reads `config/business.ts`, so they match the contact
 page and the policies by construction. The year is build-time, since every route is
@@ -1178,7 +1179,7 @@ catalogue.
 
 | Export | Notes |
 | --- | --- |
-| `CATEGORY_MENU` | "Shop by Category" — the ten categories |
+| `CATEGORY_MENU` | "Shop by Category" — `SURFACED_CATEGORIES`, the ten of eleven a shopper can browse. A category still `pending` is absent from the menu entirely ([ADR-055](../decisions/ADR-055-category-vocabulary-and-surfacing.md)) |
 | `COLLECTION_MENU` | "Collections" — the four collections |
 | `NAV_MENUS` | The two menus in nav order; what `PrimaryNav` and `MobileNav` render |
 | `buildCategoryHref(slug)` | `/shop?category={slug}` |

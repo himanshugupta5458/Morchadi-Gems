@@ -81,6 +81,11 @@ const PRECIOUS_METAL_CLAIM =
  */
 const PRODUCT_ID = /^P\d{3}$/;
 
+/**
+ * The category **vocabulary** — every slug a product record may carry. Mirrors `CATEGORIES` in
+ * `types/product.ts`, duplicated rather than imported because this script must stay runnable as
+ * plain ESM over the JSON with no application code loaded.
+ */
 const CATEGORY_SLUGS = [
   "necklaces",
   "earrings",
@@ -92,7 +97,17 @@ const CATEGORY_SLUGS = [
   "nose-pins",
   "watches",
   "hair-accessories",
+  "gift-hampers",
 ];
+
+/**
+ * The subset a shopper can browse — `SURFACED_CATEGORIES` in `types/product.ts`. The difference
+ * between this and the vocabulary is checked in **both** directions below: a surfaced category
+ * with nothing in it would render an empty listing, and a pending category with something in it
+ * would be a product no shopper can reach. See
+ * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md).
+ */
+const SURFACED_CATEGORY_SLUGS = CATEGORY_SLUGS.filter((slug) => slug !== "gift-hampers");
 
 const COLLECTION_TAGS = ["gifting", "anti-tarnish"];
 
@@ -894,10 +909,17 @@ check(
   `ids are not unique: ${catalogue.length} products but ${seenIds.size} distinct ids`,
 );
 
-for (const slug of CATEGORY_SLUGS) {
+for (const slug of SURFACED_CATEGORY_SLUGS) {
   check(
     categoryCounts[slug] > 0,
-    `category "${slug}" has no published products — its listing would render empty`,
+    `category "${slug}" is surfaced but has no published products — its listing would render empty`,
+  );
+}
+
+for (const slug of CATEGORY_SLUGS.filter((candidate) => !SURFACED_CATEGORY_SLUGS.includes(candidate))) {
+  check(
+    categoryCounts[slug] === 0,
+    `category "${slug}" is still pending but has ${categoryCounts[slug]} published product(s) — flip its status to "surfaced" in types/product.ts, or nobody can reach them`,
   );
 }
 
@@ -941,7 +963,8 @@ console.log(`With options        ${optionedProductCount}`);
 console.log(`With collections    ${taggedProductCount}`);
 console.log("\nCategory distribution");
 for (const slug of CATEGORY_SLUGS) {
-  console.log(`  ${slug.padEnd(18)}${categoryCounts[slug]}`);
+  const pending = SURFACED_CATEGORY_SLUGS.includes(slug) ? "" : "  (pending — not surfaced)";
+  console.log(`  ${slug.padEnd(18)}${categoryCounts[slug]}${pending}`);
 }
 console.log("\nOption controls");
 for (const type of OPTION_TYPES) {

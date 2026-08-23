@@ -1,5 +1,5 @@
 import {
-  CATEGORIES,
+  SURFACED_CATEGORIES,
   COLLECTIONS,
   type Category,
   type CategoryOption,
@@ -118,7 +118,7 @@ function toCollectionMenuItem(collection: CollectionOption): NavMenuItem {
 export const CATEGORY_MENU: NavMenu = {
   key: "categories",
   label: "Shop by Category",
-  items: CATEGORIES.map(toCategoryMenuItem),
+  items: SURFACED_CATEGORIES.map(toCategoryMenuItem),
 };
 
 export const COLLECTION_MENU: NavMenu = {

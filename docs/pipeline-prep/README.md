@@ -55,11 +55,12 @@ operating procedure for the part of it that can be run today.
 
 | # | Step | Done by | Exists? |
 | --- | --- | --- | --- |
+| 0 | **Stage 0, migration path only.** `node scripts/prepare-migration-batch.mjs <export.jsonl> <batch-id>` validates the Phase B JSONL export, refuses bad records into `needs-attention.md`, assigns real product ids from **P101**, transforms the Odoo variant and image shapes, and writes one `raw-block.json` per queued product into `content-pipeline/incoming/`. It runs **no extraction**. Stage `queued` ([ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md)) | Script | ✔ |
 | 1 | **Raw content** is assembled — a listing's original copy from the `Latest.xlsx` export (`sourceType: "migrated"`), or photographs put through [`fresh-listing-image-prompt.md`](fresh-listing-image-prompt.md) plus an `<owner-stated-facts>` block (`sourceType: "fresh"`) | Owner | ✔ |
 | 2 | **Draft A skill** ([`.claude/skills/draft-a-skills.md`](../../.claude/skills/draft-a-skills.md)) converts it to one structured object. Every material, treatment and stone value is a candidate carrying the exact source phrase it came from; prices are quarantined to `pricing.referencePrice` as a string; images stay empty | Skill, run by hand | ✔ |
-| 3 | **Saved as `content-pipeline/drafts/PNNN.json`** — one object per file, filename matching the object's own `productId`. The id is the next unused number (**P050** today) and is assigned by pipeline code, never by the model | Owner | folder ✔, id-assignment code ✘ |
+| 3 | **Saved as `content-pipeline/drafts/PNNN.json`** — one object per file, filename matching the object's own `productId`. On the migration path the id was already assigned at step 0 and the draft inherits it; on the fresh path it is still chosen by hand, above the migrated range. **P050–P100 are retired** | Owner | folder ✔, id-assignment code ✔ **on the migration path only** |
 | 4 | **Validated:** `node scripts/validate-draft-a.mjs content-pipeline/drafts` — structure and provenance, including the check that every `quotedPhrase` appears verbatim in `sourceNotes.rawContent` | Script | ✔ |
-| 5 | **Row added to [`drafts-in-progress.md`](drafts-in-progress.md)** at stage `extracted` | Owner | ✔ |
+| 5 | **Row added to [`drafts-in-progress.md`](drafts-in-progress.md)** at stage `extracted`. On the migration path the row already exists at `queued` from step 0 and is advanced by hand instead | Owner | ✔ |
 | 6 | **Owner reviews and confirms** each candidate against its quoted source phrase, flipping `confirmed` to `true` one attribute at a time. Stage moves `in-review` → `confirmed`. Nothing bypasses this step; there is no auto-trusted path | Owner | ✔ |
 | 7 | **Price and images assigned by hand.** Stage `priced-and-shot`. This sits *between* the two validator passes, which is why a value that fails the first check is required by the second | Owner | ✔ |
 | 8 | **Phase 2 orchestration** turns the confirmed draft into a `data/products.json` entry — the honesty rules of [ADR-018](../decisions/ADR-018-honest-product-description.md) and [ADR-035](../decisions/ADR-035-catalogue-content-pass.md), and the SEO metadata of [ADR-036](../decisions/ADR-036-product-seo-metadata-pass.md) | — | **✘ not designed** |
@@ -79,9 +80,12 @@ Three things named in this table do not exist and should not be assumed:
   [ADR-052](../decisions/ADR-052-product-status-field.md) added it, and a `"draft"` product in
   `data/products.json` is already invisible to every public surface — so a product can be landed
   in the catalogue at step 8 and published at step 10 as two separate commits.
-- **Id assignment code.** ADR-051 decision 4 requires `productId` to be set by pipeline code
-  rather than by the model. There is no such code, so the number is currently chosen and typed by
-  the owner — with the reservation rule (never reuse a rejected id) enforced by nothing but the
+- **Id assignment code, on the fresh path.** ADR-051 decision 4 requires `productId` to be set by
+  pipeline code rather than by the model. `scripts/prepare-migration-batch.mjs` now does that for
+  the Odoo migration ([ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md)), with
+  a safety assertion that refuses to run if `data/products.json` has moved past P049. The **fresh**
+  path still has no such code: a hand-made draft's number is chosen and typed by the owner, with
+  the reservation rule (never reuse a rejected id) enforced by nothing but the
   [rejected-ids table](drafts-in-progress.md#rejected-ids).
 
 `data/stone-terms.json` also does not exist. Under the skill's revised "always propose, always
@@ -89,8 +93,13 @@ confirm" design its absence no longer blocks a run — every stone candidate sim
 `stoneSource: "unverified-guess"` — but it means step 6 carries more weight on those candidates
 than it eventually should.
 
-**No Draft A object has ever been created in this repository.** The workflow above has not been
-run end to end, and both registers are empty templates.
+**No real Draft A object has ever been created in this repository.** One synthetic product was
+taken through the whole workflow once, in prompt 70, and removed again
+([RESULT-2026-08-23-content-pipeline-e2e.md](../testing/RESULT-2026-08-23-content-pipeline-e2e.md));
+both registers are otherwise empty templates. **Step 0 has never been run against real data
+either** — the Phase B JSONL export has not been delivered, and everything it does was built and
+tested against the synthetic fixtures in
+[`scripts/fixtures/`](../../scripts/fixtures/README.md).
 
 ## Tracking recommendation — owner decision needed
 

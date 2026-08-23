@@ -44,9 +44,14 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const REPO_ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 
 /**
- * The ten categories of ADR-020, which `types/product.ts` and `scripts/validate-products.mjs`
- * also hard-code. Duplicated rather than imported because this file must stay runnable as a
- * plain script over draft JSON with no application code loaded.
+ * The eleven categories `types/product.ts` and `scripts/validate-products.mjs` also hard-code —
+ * the ten of ADR-020 plus `gift-hampers`, added by
+ * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md). Duplicated rather
+ * than imported because this file must stay runnable as a plain script over draft JSON with no
+ * application code loaded.
+ *
+ * This is the vocabulary, not the browsable list. Whether a category is surfaced to shoppers is
+ * a storefront question and none of a draft's business — a draft records what a piece *is*.
  */
 const CATEGORY_SLUGS = [
   "rings",
@@ -59,6 +64,7 @@ const CATEGORY_SLUGS = [
   "necklaces",
   "watches",
   "pendants",
+  "gift-hampers",
 ];
 
 const FLAGGED_CONTENT_TYPES = [
@@ -172,7 +178,7 @@ function checkCategory(draft, errors) {
       RULES.category,
       "category",
       category,
-      `category must be null or one of the ten fixed slugs: ${CATEGORY_SLUGS.join(", ")}`,
+      `category must be null or one of the eleven fixed slugs: ${CATEGORY_SLUGS.join(", ")}`,
     ),
   );
 }
@@ -545,7 +551,7 @@ export function validatePublishReadiness(draft, options = {}) {
         RULES.postReviewCategory,
         "category",
         category,
-        `category must be non-null and one of the ten fixed slugs before publish: ${CATEGORY_SLUGS.join(", ")}`,
+        `category must be non-null and one of the eleven fixed slugs before publish: ${CATEGORY_SLUGS.join(", ")}`,
       ),
     );
   }

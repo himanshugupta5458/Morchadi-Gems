@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { CATEGORIES, COLLECTIONS } from "@/types/product";
+import { CATEGORIES, COLLECTIONS, SURFACED_CATEGORIES } from "@/types/product";
 import nextSitemap from "@/app/sitemap";
 import { LEGAL_CONFIG } from "@/lib/config";
 import { getAllProducts } from "@/lib/products";
@@ -62,12 +62,15 @@ describe("the sitemap", () => {
     }
   });
 
-  it("lists all ten categories", () => {
+  it("lists every surfaced category, and no pending one", () => {
     const urls = urlsOf();
-    expect(CATEGORIES).toHaveLength(10);
+    expect(SURFACED_CATEGORIES).toHaveLength(10);
 
-    for (const category of CATEGORIES) {
+    for (const category of SURFACED_CATEGORIES) {
       expect(urls).toContain(`${PRODUCTION_ORIGIN}/shop?category=${category.slug}`);
+    }
+    for (const category of CATEGORIES.filter((entry) => entry.status === "pending")) {
+      expect(urls).not.toContain(`${PRODUCTION_ORIGIN}/shop?category=${category.slug}`);
     }
   });
 

@@ -69,7 +69,10 @@ review carries more weight for those specific candidates.
 
 5. **Category must exactly match the fixed list:** `rings, earrings,
    nose-pins, bracelets, bangles, anklets, hair-accessories, necklaces,
-   watches, pendants`. No other value is ever written to this field. If
+   watches, pendants, gift-hampers`. No other value is ever written to
+   this field. Whether a shopper can browse a category is a separate,
+   storefront-side question (ADR-055) and never affects this choice —
+   a draft records what a piece is. If
    unclear, propose the closest guess as a candidate with low
    confidence noted, or leave null with a note if no reasonable guess
    exists.

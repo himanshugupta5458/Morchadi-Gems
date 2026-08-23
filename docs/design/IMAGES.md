@@ -160,6 +160,12 @@ held a product — the tile is keyed on the slug, not on whether anything is fil
 constant, so the two placeholders shipped on the same never-overwrite rule as the other
 eight: real photography dropped at either path survives every future run.
 
+`gift-hampers` (`#EDE7DF`) joined them the same way in
+[ADR-055](../decisions/ADR-055-category-vocabulary-and-surfacing.md), and goes one step
+further: its tile file exists but **no surface renders it yet**, because the category is
+`pending` until its first product ships. Producing the image now is what makes flipping that
+flag a one-line change rather than a change plus an asset.
+
 ## Regenerating placeholders
 
 ```bash

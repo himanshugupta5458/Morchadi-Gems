@@ -1,7 +1,7 @@
 import {
-  CATEGORIES,
+  SURFACED_CATEGORIES,
   COLLECTIONS,
-  isCategory,
+  isSurfacedCategory,
   isCollectionFilterSlug,
   type Category,
   type CollectionFilterSlug,
@@ -88,7 +88,7 @@ export interface ShopQuery {
 }
 
 const CATEGORY_ORDER = new Map(
-  CATEGORIES.map((category, index) => [category.slug, index] as const),
+  SURFACED_CATEGORIES.map((category, index) => [category.slug, index] as const),
 );
 
 const COLLECTION_ORDER = new Map(
@@ -130,7 +130,7 @@ function parsePageToken(token: string | undefined): number {
 
 export function parseShopQuery(params: ShopSearchParams): ShopQuery {
   const categories = uniqueInOrder(
-    toTokens(params.category).filter(isCategory),
+    toTokens(params.category).filter(isSurfacedCategory),
     CATEGORY_ORDER,
   );
   const collections = uniqueInOrder(

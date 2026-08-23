@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { CATEGORIES, COLLECTIONS } from "@/types/product";
+import { COLLECTIONS, SURFACED_CATEGORIES } from "@/types/product";
 import { LEGAL_CONFIG } from "@/lib/config";
 import { buildCategoryHref, buildCollectionHref } from "@/lib/navigation";
 import { getAllProducts } from "@/lib/products";
@@ -111,7 +111,7 @@ export function buildSitemap(): MetadataRoute.Sitemap {
     })),
   ].map(toEntry);
 
-  const categoryEntries = CATEGORIES.map((category) =>
+  const categoryEntries = SURFACED_CATEGORIES.map((category) =>
     toEntry({
       path: buildCategoryHref(category.slug),
       changeFrequency: "weekly",

@@ -199,7 +199,10 @@ specs{material, type, size?, closure?, stone?}, description, seo{...},
 stock{inStock}, flags{featured, isNew}, collections[]?
 ```
 
-**Categories** (10, defined in `types/product.ts`, counts from the data):
+**Categories** (11 in the vocabulary, 10 surfaced to shoppers — defined in `types/product.ts`,
+counts from the data). `gift-hampers` is a valid category a record may carry that reaches no
+shopper-facing surface until its first product ships; see
+[ADR-055](decisions/ADR-055-category-vocabulary-and-surfacing.md):
 
 | Category | Count |
 | --- | --- |
@@ -213,6 +216,7 @@ stock{inStock}, flags{featured, isNew}, collections[]?
 | necklaces | 2 |
 | watches | 2 |
 | pendants | 1 |
+| gift-hampers | 0 — `pending`, not surfaced |
 
 **Collections** (4 filter slugs, two hand-tagged and two derived): `gifting` and `anti-tarnish`
 are tags a product opts into; `best-sellers` derives from `flags.featured` and `new-arrivals`

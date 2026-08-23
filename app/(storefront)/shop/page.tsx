@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CATEGORIES, getCategoryLabel, getCollectionLabel } from "@/types/product";
+import { SURFACED_CATEGORIES, getCategoryLabel, getCollectionLabel } from "@/types/product";
 import {
   FREE_SHIPPING_THRESHOLD,
   PRODUCT_DESCRIPTOR,
@@ -156,7 +156,7 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
           accent={facetLabel === null ? "Collection" : facetLabel}
           subtitle={
             facetLabel === null
-              ? `Every piece we make, anti-tarnish and hand-finished, across ${CATEGORIES.length} categories.`
+              ? `Every piece we make, anti-tarnish and hand-finished, across ${SURFACED_CATEGORIES.length} categories.`
               : `Every ${facetLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
           }
         />

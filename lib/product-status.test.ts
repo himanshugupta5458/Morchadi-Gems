@@ -47,7 +47,7 @@ vi.mock("@/data/products.json", async (importOriginal) => {
   return { default: [...actual.default, draft] };
 });
 
-import { CATEGORIES, COLLECTIONS } from "@/types/product";
+import { COLLECTIONS, SURFACED_CATEGORIES } from "@/types/product";
 import { buildCollectionHref } from "@/lib/navigation";
 import {
   getAllProducts,
@@ -201,8 +201,8 @@ describe("the sitemap", () => {
     expect(urls.some((url) => url.endsWith(buildCollectionHref("gifting")))).toBe(false);
   });
 
-  it("still publishes every category and the static routes", () => {
-    for (const category of CATEGORIES) {
+  it("still publishes every surfaced category and the static routes", () => {
+    for (const category of SURFACED_CATEGORIES) {
       expect(urls.some((url) => url.endsWith(`/shop?category=${category.slug}`))).toBe(true);
     }
   });

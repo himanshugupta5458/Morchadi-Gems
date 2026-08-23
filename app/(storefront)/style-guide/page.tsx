@@ -29,7 +29,7 @@ import { ProductOptionControlsPreview } from "@/components/ProductOptionControls
 import { QuantityStepperPreview } from "@/components/QuantityStepperPreview";
 import { ProductGrid } from "@/components/ProductGrid";
 import { ViewAllLink } from "@/components/ViewAllLink";
-import { CATEGORIES, getCategoryLabel } from "@/types/product";
+import { SURFACED_CATEGORIES, getCategoryLabel } from "@/types/product";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TrustBadge } from "@/components/TrustBadge";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -422,7 +422,7 @@ export default function StyleGuidePage(): JSX.Element {
         note="Portrait tile off /categories/{slug}.webp with a bottom scrim for label legibility and a gentle zoom on hover. The whole tile links to /shop?category={slug}."
       >
         <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
-          {CATEGORIES.slice(0, 4).map((category) => (
+          {SURFACED_CATEGORIES.slice(0, 4).map((category) => (
             <li key={category.slug}>
               <CategoryTile category={category} />
             </li>
@@ -495,13 +495,16 @@ export default function StyleGuidePage(): JSX.Element {
       >
         <div className="flex flex-col gap-4">
           <p className="max-w-prose text-body-sm text-muted">
-            The nav is two dropdowns over one flat tier each: the ten categories a
-            product belongs to, and the four collections that cut across them, plus
-            About and Contact as top-level links. Every entry resolves to a{" "}
+            The nav is two dropdowns over one flat tier each: the categories a shopper
+            can browse, and the four collections that cut across them, plus About and
+            Contact as top-level links. Every entry resolves to a{" "}
             <code className="text-ink">/shop</code> query param, so the nav, the filter
             sidebar and a pasted URL all express the same state. Both groups come from{" "}
-            <code className="text-ink">CATEGORIES</code> and{" "}
-            <code className="text-ink">COLLECTIONS</code>; nothing here is written twice.
+            <code className="text-ink">SURFACED_CATEGORIES</code> and{" "}
+            <code className="text-ink">COLLECTIONS</code>; nothing here is written twice. A
+            category agreed before its products exist sits in{" "}
+            <code className="text-ink">CATEGORIES</code> only, and reaches none of these
+            surfaces until its flag is flipped.
           </p>
           {NAV_MENUS.map((menu) => (
             <div key={menu.key} className="flex flex-col gap-1">

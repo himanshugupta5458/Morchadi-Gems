@@ -8,42 +8,85 @@ export type Category =
   | "anklets"
   | "nose-pins"
   | "watches"
-  | "hair-accessories";
+  | "hair-accessories"
+  | "gift-hampers";
+
+/**
+ * Whether shoppers can see a category yet. `surfaced` is in the nav, the home grid, the shop
+ * facets and the sitemap; `pending` is a valid value a product record may carry and appears on
+ * none of those surfaces. See [ADR-055](/docs/decisions/ADR-055-category-vocabulary-and-surfacing.md).
+ */
+export type CategoryStatus = "surfaced" | "pending";
 
 export interface CategoryOption {
   slug: Category;
   label: string;
+  status: CategoryStatus;
 }
 
 /**
  * The first tier of the catalogue: every product sits in exactly one of these. Nath and
  * other nose ornaments are filed under `nose-pins` rather than earning a category of their
  * own. See [ADR-020](/docs/decisions/ADR-020-two-tier-catalogue-ia.md).
+ *
+ * This is the **vocabulary** — every slug a product record is allowed to carry. It is not the
+ * list a shopper browses; that is `SURFACED_CATEGORIES` below, and the two differ whenever a
+ * category has been agreed before its products exist.
  */
 export const CATEGORIES: readonly CategoryOption[] = [
-  { slug: "necklaces", label: "Necklaces" },
-  { slug: "earrings", label: "Earrings" },
-  { slug: "rings", label: "Rings" },
-  { slug: "bracelets", label: "Bracelets" },
-  { slug: "bangles", label: "Bangles" },
-  { slug: "pendants", label: "Pendants" },
-  { slug: "anklets", label: "Anklets" },
-  { slug: "nose-pins", label: "Nose Pins" },
-  { slug: "watches", label: "Watches" },
-  { slug: "hair-accessories", label: "Hair Accessories" },
+  { slug: "necklaces", label: "Necklaces", status: "surfaced" },
+  { slug: "earrings", label: "Earrings", status: "surfaced" },
+  { slug: "rings", label: "Rings", status: "surfaced" },
+  { slug: "bracelets", label: "Bracelets", status: "surfaced" },
+  { slug: "bangles", label: "Bangles", status: "surfaced" },
+  { slug: "pendants", label: "Pendants", status: "surfaced" },
+  { slug: "anklets", label: "Anklets", status: "surfaced" },
+  { slug: "nose-pins", label: "Nose Pins", status: "surfaced" },
+  { slug: "watches", label: "Watches", status: "surfaced" },
+  { slug: "hair-accessories", label: "Hair Accessories", status: "surfaced" },
+  { slug: "gift-hampers", label: "Gift Hampers", status: "pending" },
 ] as const;
 
 export const CATEGORY_SLUGS: readonly Category[] = CATEGORIES.map(
   (category) => category.slug,
 );
 
+/**
+ * The categories a shopper can actually reach. Every storefront surface that lists categories
+ * reads this rather than `CATEGORIES`, so a category can be agreed, typed and validated long
+ * before it has a single product to show — and an empty listing, an empty sitemap URL and an
+ * empty nav entry never ship.
+ *
+ * A static filter rather than a count over the catalogue, for the same reason
+ * [ADR-010](/docs/decisions/ADR-010-cart-architecture.md) gave: the nav, the mobile drawer and
+ * the shop filter panel are Client Components, and deriving this from `data/products.json`
+ * would put the whole catalogue in the browser bundle to answer a question with eleven possible
+ * answers. `scripts/validate-products.mjs` is what keeps the flag honest in both directions.
+ */
+export const SURFACED_CATEGORIES: readonly CategoryOption[] = CATEGORIES.filter(
+  (category) => category.status === "surfaced",
+);
+
+export const SURFACED_CATEGORY_SLUGS: readonly Category[] =
+  SURFACED_CATEGORIES.map((category) => category.slug);
+
 export function getCategoryLabel(slug: Category): string {
   const match = CATEGORIES.find((category) => category.slug === slug);
   return match ? match.label : slug;
 }
 
+/** Is this a slug a product record may carry? The vocabulary check. */
 export function isCategory(value: string): value is Category {
   return CATEGORIES.some((category) => category.slug === value);
+}
+
+/**
+ * Is this a slug a shopper may browse? Narrower than `isCategory`, and the one the `?category=`
+ * param is parsed against — a hand-typed URL for a pending category falls back to the whole shop
+ * rather than rendering an empty one.
+ */
+export function isSurfacedCategory(value: string): value is Category {
+  return SURFACED_CATEGORIES.some((category) => category.slug === value);
 }
 
 /**

@@ -44,6 +44,7 @@ const CATEGORIES = [
   { slug: "nose-pins", label: "Nose Pins", tint: "#F0E2E2" },
   { slug: "watches", label: "Watches", tint: "#E6E4DE" },
   { slug: "hair-accessories", label: "Hair Accessories", tint: "#EFE4EA" },
+  { slug: "gift-hampers", label: "Gift Hampers", tint: "#EDE7DF" },
 ];
 
 const categoryBySlug = new Map(CATEGORIES.map((category) => [category.slug, category]));

@@ -9,10 +9,11 @@ reads this directory.
 
 | Path | Holds |
 | --- | --- |
+| [`incoming/`](incoming/) | Stage 0 migration batches ([ADR-054](../docs/decisions/ADR-054-stage-0-migration-batch-preparation.md)) — raw blocks with real product ids assigned, **before** Draft A extraction has run. `{batch-id}/PNNN/raw-block.json`, plus a manifest and a needs-attention report |
 | [`drafts/`](drafts/) | Draft A objects awaiting or undergoing owner review — `PNNN.json`, one object per file |
 | [`completed/`](completed/) | Draft A objects whose product has been published into `data/products.json` — moved here, not deleted, so the provenance trail behind a live product survives |
 
-Both start empty. Their `README.md` files are the only tracked contents; see
+All three start empty. Their `README.md` files are the only tracked contents; see
 [Tracking](#tracking-and-gitignore) below.
 
 ## What is not here
@@ -20,7 +21,9 @@ Both start empty. Their `README.md` files are the only tracked contents; see
 - **No prices and no images.** Phase 1 quarantines a source price to
   `pricing.referencePrice` as a descriptive string and leaves `pricing.price` and `pricing.mrp`
   null; `images.general` and `images.variantImages` stay empty. Both are assigned by hand
-  between the two validator passes.
+  between the two validator passes. A raw block in `incoming/` does carry *suggested* image
+  paths with their source provenance attached — that is a proposal being carried to the manual
+  assignment step, not a value it has already made, and it is why a raw block is not a draft.
 - **No product records.** Nothing in this directory is a `Product`. A draft becomes a catalogue
   entry only by being written into `data/products.json` in a commit, which is the
   catalogue-as-code rule of [ADR-001](../docs/decisions/ADR-001-tech-stack.md) and is unchanged
@@ -30,17 +33,33 @@ Both start empty. Their `README.md` files are the only tracked contents; see
 
 ## Tracking and gitignore
 
-`.gitignore` ignores the *contents* of this directory while keeping the three `README.md` files
+`.gitignore` ignores the *contents* of this directory while keeping the four `README.md` files
 tracked, so a fresh clone gets the folder structure and its explanation but none of the working
 data. The recommendation and the argument against it are written up in
 [`docs/pipeline-prep/README.md`](../docs/pipeline-prep/README.md#tracking-recommendation--owner-decision-needed);
 **it is a proposal awaiting the owner's decision, not a settled rule.**
+
+## Preparing a migration batch
+
+```
+node scripts/prepare-migration-batch.mjs <export.jsonl> <batch-id>
+```
+
+Stage 0 only: validate the Phase B JSONL export, assign real product ids from **P101**, transform
+the Odoo variant and image shapes, and write the queue into `incoming/{batch-id}/`. **It does not
+run Draft A extraction** — that is a separate, human-supervised step afterward, in sub-batches.
+Read `incoming/{batch-id}/needs-attention.md` before anything else. See
+[`incoming/README.md`](incoming/) and
+[ADR-054](../docs/decisions/ADR-054-stage-0-migration-batch-preparation.md).
 
 ## Validating what is here
 
 ```
 node scripts/validate-draft-a.mjs content-pipeline/drafts
 ```
+
+Point it at `drafts/` and nothing else. A raw block under `incoming/` is not a Draft A object
+and every one of them would fail — correctly.
 
 Walks the directory recursively for `*.json` and runs the pre-review check
 (`validateDraftA` — structure and provenance). Exit 1 on a hard failure or unreadable JSON,

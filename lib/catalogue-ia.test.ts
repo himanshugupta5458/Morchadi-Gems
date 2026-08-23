@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   CATEGORIES,
   CATEGORY_SLUGS,
+  SURFACED_CATEGORY_SLUGS,
   COLLECTIONS,
   COLLECTION_SLUGS,
   COLLECTION_TAGS,
@@ -24,11 +25,18 @@ import {
   buildCollectionHref,
 } from "@/lib/navigation";
 
-const EXPECTED_CATEGORY_COUNT = 10;
+/**
+ * Eleven slugs a product record may carry; ten of them reachable by a shopper. The two numbers
+ * differ because `gift-hampers` was agreed before its products exist — see
+ * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md) and
+ * `lib/category-vocabulary.test.ts`, which owns that split in full.
+ */
+const EXPECTED_CATEGORY_COUNT = 11;
+const EXPECTED_SURFACED_CATEGORY_COUNT = 10;
 const EXPECTED_COLLECTION_COUNT = 4;
 
 describe("the category tier", () => {
-  it("holds ten categories with unique slugs and labels", () => {
+  it("holds eleven categories with unique slugs and labels", () => {
     expect(CATEGORIES).toHaveLength(EXPECTED_CATEGORY_COUNT);
     expect(new Set(CATEGORY_SLUGS).size).toBe(EXPECTED_CATEGORY_COUNT);
     expect(new Set(CATEGORIES.map((category) => category.label)).size).toBe(
@@ -118,10 +126,10 @@ describe("the two nav dropdowns", () => {
     ]);
   });
 
-  it("lists all ten categories, each linking to its shop filter", () => {
-    expect(CATEGORY_MENU.items).toHaveLength(EXPECTED_CATEGORY_COUNT);
+  it("lists every surfaced category, each linking to its shop filter", () => {
+    expect(CATEGORY_MENU.items).toHaveLength(EXPECTED_SURFACED_CATEGORY_COUNT);
     expect(CATEGORY_MENU.items.map((item) => item.href)).toEqual(
-      CATEGORY_SLUGS.map(buildCategoryHref),
+      SURFACED_CATEGORY_SLUGS.map(buildCategoryHref),
     );
     expect(buildCategoryHref("watches")).toBe("/shop?category=watches");
   });
