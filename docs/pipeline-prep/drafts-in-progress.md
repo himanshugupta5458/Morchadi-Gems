@@ -20,7 +20,7 @@ code sets.
 | `in-review` | The owner is working through the candidate values, confirming or editing each one against its quoted source phrase |
 | `confirmed` | Every attribute is `confirmed: true`. Price and images are still absent — those are the next manual step, not part of review |
 | `priced-and-shot` | `pricing.price` and at least one `images.general` entry assigned by hand. This is the state `validatePublishReadiness` is designed to check |
-| `awaiting-publish` | Ready to be written into `data/products.json`. Blocked on the final owner approval and on the publish step, **which has no script yet** |
+| `awaiting-publish` | Written into `data/products.json` as a `draft` record by the Phase 2 orchestration skill ([ADR-053](../decisions/ADR-053-draft-a-to-product-orchestration.md)), and blocked on the final owner approval. `npm run publish:product PNNN` is the step that turns it on |
 
 A draft that is rejected in review is not a stage. Delete its row, note the id under
 [Rejected ids](#rejected-ids) below, and never reuse the number.

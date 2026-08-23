@@ -44,7 +44,24 @@ node scripts/validate-draft-a.mjs content-pipeline/drafts
 
 Walks the directory recursively for `*.json` and runs the pre-review check
 (`validateDraftA` — structure and provenance). Exit 1 on a hard failure or unreadable JSON,
-exit 2 on a usage error. The post-review check `validatePublishReadiness` exists in the same
-module but is deliberately **not** wired to the CLI: the Phase 2 pipeline that would call it is
-not designed, and running it over freshly extracted drafts would fail every one of them by
-design. See the [ADR-051 addendum](../docs/decisions/ADR-051-draft-a-content-pipeline.md#addendum-2026-08-23--the-validator-exists-and-the-allow-list-gate-does-not).
+exit 2 on a usage error. The post-review check `validatePublishReadiness` is still **not** wired
+to this CLI, and for the original reason: running it over freshly extracted drafts would fail
+every one of them by design. See the [ADR-051 addendum](../docs/decisions/ADR-051-draft-a-content-pipeline.md#addendum-2026-08-23--the-validator-exists-and-the-allow-list-gate-does-not).
+
+It now has two callers, both from Phase 2
+([ADR-053](../docs/decisions/ADR-053-draft-a-to-product-orchestration.md)): the orchestration
+skill `.claude/skills/draft-a-to-product-skills.md` runs it as its first gate, and
+`scripts/publish-product.mjs` runs it again at publish, because the draft file is hand-edited
+between those two points and publishing cannot be undone.
+
+## Publishing a draft
+
+```
+npm run publish:product PNNN
+```
+
+Flips `PNNN` from `draft` to `active` in `data/products.json`, regenerates `data/keyword-map.json`,
+moves `drafts/PNNN.json` to `completed/PNNN.json`, and prints the two register rows to update by
+hand. It refuses if the readiness check fails, if the record is not in the catalogue, if it is
+already active, or if publishing would give one primary keyword two owners. The record itself is
+written into `data/products.json` beforehand by the orchestration skill, always as a draft.

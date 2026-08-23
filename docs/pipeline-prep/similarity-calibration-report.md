@@ -2,7 +2,7 @@
 
 ## No threshold is set here
 
-This file reports what the three similarity metrics actually measure across the catalogue as it stands. It **does not** set a flagging threshold, does not label any pair a duplicate, and does not gate anything. Choosing the number at which a score becomes a problem is a separate, human step taken after reading this — see [ADR-052](../decisions/ADR-052-content-similarity-engine.md), which states the same thing and explains why the engine and the threshold are decided apart.
+This file reports what the three similarity metrics actually measure across the catalogue as it stands. It **does not** set a flagging threshold, does not label any pair a duplicate, and does not gate anything. Choosing the number at which a score becomes a problem is a separate, human step taken after reading this — see [ADR-053](../decisions/ADR-053-draft-a-to-product-orchestration.md), which states the same thing and explains why the engine and the threshold are decided apart. (This paragraph originally pointed at `ADR-052-content-similarity-engine.md`, which was never written — ADR-052 is the product status field.)
 
 Nothing in the pipeline reads these scores. `data/products.json` is untouched by the script that produced them.
 

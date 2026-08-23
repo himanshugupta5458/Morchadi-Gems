@@ -6,7 +6,9 @@ import type { Product } from "@/types/product";
  * of placeholder copy. At width 3 ordinary English function-word runs collide across
  * unrelated products; at width 5 the four short descriptions yield too few shingles for a
  * stable ratio. Width 4 keeps at least 12 shingles even for the shortest description.
- * See [ADR-052](/docs/decisions/ADR-052-content-similarity-engine.md).
+ * See [ADR-053](/docs/decisions/ADR-053-draft-a-to-product-orchestration.md), which carries the
+ * threshold decision. `ADR-052-content-similarity-engine.md` was planned and never written —
+ * ADR-052 is the product status field.
  */
 export const SHINGLE_SIZE = 4;
 
@@ -311,4 +313,142 @@ export function toSimilarityInput(product: Product): SimilarityInput {
     specs: product.specs,
     options: product.options,
   };
+}
+
+/**
+ * The score at or below which a new description is allowed through. **`null` is the shipped
+ * value and it means the gate is advisory**: every score is still computed and written to
+ * `content-pipeline/drafts/{productId}-similarity.json`, and nothing is ever refused.
+ *
+ * It is `null` rather than a number because no number has been earned yet. The calibration
+ * behind [ADR-053](/docs/decisions/ADR-053-draft-a-to-product-orchestration.md) ran against the
+ * 49 products in this repository, which are the *survivors* of a hand-written catalogue pass
+ * and not the population this gate will police — several hundred migrated listings whose copy
+ * came off one old site. A threshold fitted to 49 hand-tuned descriptions would be a number
+ * about the wrong catalogue, and a wrong number that blocks is worse than no number at all.
+ *
+ * Turning the gate on is this one assignment. Nothing else changes: the blocking path is
+ * implemented, tested and exercised by `evaluateSimilarityGate` today.
+ */
+export const SIMILARITY_THRESHOLD: number | null = null;
+
+export type SimilarityMeasure = keyof ProductPairScores;
+
+/**
+ * Checked in this order, and the first to hold the peak wins a tie. Raw leads because a raw
+ * collision is the one a reader would notice unaided; `opening` is last because it is the
+ * narrowest window and the easiest to score high by coincidence.
+ */
+export const SIMILARITY_MEASURE_PRECEDENCE: readonly SimilarityMeasure[] = [
+  "raw",
+  "normalised",
+  "opening",
+] as const;
+
+export interface SimilarityPeak {
+  measure: SimilarityMeasure;
+  score: number;
+}
+
+export interface SimilarityComparison {
+  againstProductId: string;
+  scores: ProductPairScores;
+  /** The highest of the three scores. This, and only this, is what a threshold is read against. */
+  peak: SimilarityPeak;
+}
+
+export interface SimilarityGateReport {
+  productId: string;
+  /** Echoed into the report file so a stored result records which rule produced it. */
+  threshold: number | null;
+  /** True exactly when `threshold` is `null`. An advisory run can never set `blocked`. */
+  advisory: boolean;
+  blocked: boolean;
+  comparedAgainst: number;
+  /** Every comparison, highest peak first. Written whole, so a later calibration has the data. */
+  comparisons: SimilarityComparison[];
+  /** The comparisons whose peak sits above the threshold. Always empty on an advisory run. */
+  exceeded: SimilarityComparison[];
+}
+
+export function peakScore(scores: ProductPairScores): SimilarityPeak {
+  let peak: SimilarityPeak = { measure: "raw", score: scores.raw };
+  for (const measure of SIMILARITY_MEASURE_PRECEDENCE) {
+    if (scores[measure] > peak.score) peak = { measure, score: scores[measure] };
+  }
+  return peak;
+}
+
+/**
+ * Scores one candidate against every entry it is given, excluding any record carrying the
+ * candidate's own id so re-running the gate while rewriting a live description does not report
+ * the product against itself.
+ */
+export function compareAgainstCatalogue(
+  candidate: SimilarityInput,
+  catalogue: readonly SimilarityInput[],
+): SimilarityComparison[] {
+  return catalogue
+    .filter((entry) => entry.id !== candidate.id)
+    .map((entry) => {
+      const scores = scoreProductPair(candidate, entry);
+      return { againstProductId: entry.id, scores, peak: peakScore(scores) };
+    })
+    .sort(
+      (left, right) =>
+        right.peak.score - left.peak.score ||
+        left.againstProductId.localeCompare(right.againstProductId),
+    );
+}
+
+/**
+ * The gate itself. A comparison is refused only when its peak sits **strictly above** the
+ * threshold: a score equal to the threshold passes, so a threshold of `1` reads as "refuse a
+ * verbatim copy" rather than "refuse everything including a verbatim copy".
+ */
+export function evaluateSimilarityGate(
+  candidate: SimilarityInput,
+  catalogue: readonly SimilarityInput[],
+  threshold: number | null = SIMILARITY_THRESHOLD,
+): SimilarityGateReport {
+  const comparisons = compareAgainstCatalogue(candidate, catalogue);
+  const exceeded =
+    threshold === null
+      ? []
+      : comparisons.filter((comparison) => comparison.peak.score > threshold);
+
+  return {
+    productId: candidate.id,
+    threshold,
+    advisory: threshold === null,
+    blocked: exceeded.length > 0,
+    comparedAgainst: comparisons.length,
+    comparisons,
+    exceeded,
+  };
+}
+
+/** Every active record, as the gate's comparison population. Drafts are not live copy. */
+export function selectActiveSimilarityInputs(
+  catalogue: readonly Product[],
+): SimilarityInput[] {
+  return catalogue
+    .filter((product) => product.status === "active")
+    .map(toSimilarityInput);
+}
+
+export function describeSimilarityGate(report: SimilarityGateReport): string {
+  const highest = report.comparisons[0];
+  const headline =
+    highest === undefined
+      ? "no active product to compare against"
+      : `highest ${highest.peak.measure} ${highest.peak.score.toFixed(3)} against ${highest.againstProductId}`;
+
+  if (report.threshold === null) {
+    return `ADVISORY (SIMILARITY_THRESHOLD is null, nothing blocks): ${headline}, across ${report.comparedAgainst} active product(s).`;
+  }
+  if (report.blocked) {
+    return `BLOCKED at threshold ${report.threshold}: ${report.exceeded.length} comparison(s) above it, ${headline}.`;
+  }
+  return `PASS at threshold ${report.threshold}: ${headline}, across ${report.comparedAgainst} active product(s).`;
 }

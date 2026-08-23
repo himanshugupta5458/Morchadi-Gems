@@ -491,6 +491,39 @@ currently lives is **[VERIFY WITH OWNER]**.
 > The skill's per-batch ledger is unchanged and still governs a single writing session; the map
 > is what makes the rule answerable *between* sessions.
 
+> **Extended, 2026-08-23 (prompt 69).** The diagram above describes the *fresh-image* path. The
+> real pipeline is now two phases and both intake paths converge on the same one
+> ([ADR-051](decisions/ADR-051-draft-a-content-pipeline.md),
+> [ADR-053](decisions/ADR-053-draft-a-to-product-orchestration.md)):
+>
+> ```
+> raw listing text, or images + owner notes
+>   -> .claude/skills/draft-a-skills.md         Phase 1: one Draft A object per product
+>   -> scripts/validate-draft-a.mjs             structure and provenance
+>   -> OWNER REVIEW                             every attribute confirmed, price and images set
+>   -> .claude/skills/draft-a-to-product-skills.md
+>        gate  validatePublishReadiness         refuses an unreviewed draft
+>        write product-skills.md                name and description
+>        write meta-skills.md                   SEO, checked against data/keyword-map.json
+>        gate  lib/content-similarity.ts        ADVISORY ONLY, never blocks today
+>        map   lib/draft-a-to-product.ts        attributes -> specs, images -> media
+>   -> data/products.json, as status: "draft"
+>   -> HUMAN READS THE RECORD
+>   -> npm run publish:product PNNN             status -> active, map regenerated, draft filed
+> ```
+>
+> **The similarity gate is advisory and blocks nothing.** `SIMILARITY_THRESHOLD` in
+> `lib/content-similarity.ts` is `null`; every score is computed and written to
+> `content-pipeline/drafts/{id}-similarity.json` on every run, and nothing is refused. The
+> blocking path is implemented and tested, so turning it on is one assignment. **Setting a real
+> number requires a calibration run against the owner's actual final catalogue, not the 49 test
+> products** — that is a future decision and its own ADR. **[VERIFY WITH OWNER]** when the
+> migrated catalogue is large enough to calibrate against.
+>
+> Still true: **no Draft A object has ever been created in this repository.** Everything above is
+> a mechanism tested on synthetic fixtures and never run on real product data.
+> `data/stone-terms.json` still does not exist.
+
 ---
 
 ## 12. Working conventions
