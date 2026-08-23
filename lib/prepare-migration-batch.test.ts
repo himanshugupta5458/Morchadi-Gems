@@ -18,6 +18,7 @@ import {
   formatProductId,
   orderRecordsForAssignment,
   parseJsonl,
+  parseMarkdownTables,
   planBatch,
   readMaxCatalogueProductId,
   renderDraftsInProgressRows,
@@ -785,6 +786,87 @@ describe("Part A — the needs-attention report", () => {
   });
 });
 
+/**
+ * The register's real structure, reproduced: the `## Register` heading, the table with its example
+ * row, **the paragraph that sits between the table and the next heading**, then `## Rejected ids`
+ * with a table of its own.
+ *
+ * That paragraph is the whole reason this fixture exists in this form. The old one ran the table
+ * straight into the next heading, so an insertion above that heading looked correct — and against
+ * the real file the same insertion put rows after the paragraph with no blank line, where Markdown
+ * reads them as lazy continuation and renders them as prose. `the register fixture matches the real
+ * file` below is what keeps this honest if the real file is ever reshaped.
+ */
+const EXAMPLE_ROW_PARAGRAPH = "**The example row is not a reservation, and P050 is no longer next.**";
+
+const REGISTER_FIXTURE_EXAMPLE_ROW =
+  "| ~~P050~~ | ~~Gold Plated AD Studs~~ | ~~`earrings`~~ | ~~`in-review`~~ | ~~2026-08-23~~ | **EXAMPLE ROW — not a real draft.** |";
+
+function realShapedRegister(extraRows: string[] = [], rejectedRows: string[] = []): string {
+  return [
+    "# Drafts in progress",
+    "",
+    "## Register",
+    "",
+    "| Product ID | Reference Title (old site) | Category | Stage | Last Updated | Notes |",
+    "| --- | --- | --- | --- | --- | --- |",
+    REGISTER_FIXTURE_EXAMPLE_ROW,
+    ...extraRows,
+    "",
+    EXAMPLE_ROW_PARAGRAPH + " An id is reserved by the",
+    "first file named after it, never by appearing in a table. ADR-054 retired **P050–P100**",
+    "permanently and starts the Odoo migration at **P101**.",
+    "",
+    "## Rejected ids",
+    "",
+    "| Product ID | Rejected | Why |",
+    "| --- | --- | --- |",
+    ...(rejectedRows.length > 0 ? rejectedRows : ["| _(none yet)_ | | |"]),
+    "",
+  ].join("\n");
+}
+
+function queuedRow(productId: string): string {
+  return `| ${productId} | Synthetic Title ${productId} | \`rings\` | \`queued\` | 2026-08-23 | batch \`test\` |`;
+}
+
+function registerTableOf(markdown: string) {
+  const table = parseMarkdownTables(markdown).tables.find(
+    (candidate) =>
+      candidate.headerCells[0] === "Product ID" && candidate.headerCells.includes("Stage"),
+  );
+  if (table === undefined) throw new Error("no register table in the parsed output");
+  return table;
+}
+
+describe("the register fixture matches the real file", () => {
+  const realRegister = readFileSync(join(REPO_ROOT, "docs/pipeline-prep/drafts-in-progress.md"), "utf8");
+
+  it("both put a paragraph between the register table and the next heading", () => {
+    for (const [label, markdown] of [
+      ["the real file", realRegister],
+      ["the fixture", realShapedRegister()],
+    ] as const) {
+      const tableEnd = markdown.lastIndexOf("|", markdown.indexOf(EXAMPLE_ROW_PARAGRAPH));
+      const nextHeading = markdown.indexOf("## Rejected ids");
+
+      expect(markdown, label).toContain(EXAMPLE_ROW_PARAGRAPH);
+      expect(tableEnd, label).toBeLessThan(markdown.indexOf(EXAMPLE_ROW_PARAGRAPH));
+      expect(markdown.indexOf(EXAMPLE_ROW_PARAGRAPH), label).toBeLessThan(nextHeading);
+    }
+  });
+
+  it("the real file parses cleanly today, and its register table has six columns", () => {
+    expect(parseMarkdownTables(realRegister).problems).toEqual([]);
+    expect(registerTableOf(realRegister).columnCount).toBe(6);
+  });
+
+  it("the real file reserves only P050 — the ids in its prose are not reservations", () => {
+    expect(registerTableOf(realRegister).rows.map((row) => row[0])).toEqual(["~~P050~~"]);
+    expect(realRegister).toContain("**P101**");
+  });
+});
+
 describe("Part D — the drafts-in-progress rows", () => {
   it("writes the new queued stage, never extracted", () => {
     const rows = renderDraftsInProgressRows(planValidFixture(), "2026-08-23");
@@ -811,23 +893,180 @@ describe("Part D — the drafts-in-progress rows", () => {
     ]);
   });
 
-  it("refuses to append an id the register already names", () => {
+  it("refuses to append an id the register already reserves with a row", () => {
     const registerPath = join(incomingRoot, "register-collision.md");
-    writeFileSync(registerPath, "| P101 | already here |\n\n## Rejected ids\n");
+    writeFileSync(registerPath, realShapedRegister(["| P101 | already here | `rings` | `queued` | 2026-08-23 | |"]));
 
-    expect(() => appendRegisterRows(["| P101 | x |"], ["P101"], registerPath)).toThrow(
+    expect(() => appendRegisterRows([queuedRow("P101")], ["P101"], registerPath)).toThrow(
       /already names P101/,
     );
   });
 
-  it("inserts above the Rejected ids heading rather than at the end of the file", () => {
-    const registerPath = join(incomingRoot, "register-insert.md");
-    writeFileSync(registerPath, "## Register\n\n| a | b |\n\n## Rejected ids\n\n| x | y |\n");
+  /**
+   * The second fault the real file exposed and the fixture could not. The guard used to test
+   * `\bP101\b` against the whole document, and the register's own prose says the migration
+   * "starts at P101" — so the first real batch would have been refused by a sentence describing
+   * the plan. An id is reserved by a row, never by being mentioned.
+   */
+  it("does not treat an id mentioned in prose as a reservation", () => {
+    const registerPath = join(incomingRoot, "register-prose.md");
+    writeFileSync(registerPath, realShapedRegister());
 
-    appendRegisterRows(["| P101 | queued |"], ["P101"], registerPath);
+    expect(readFileSync(registerPath, "utf8")).toContain("starts the Odoo migration at **P101**");
+    expect(() => appendRegisterRows([queuedRow("P101")], ["P101"], registerPath)).not.toThrow();
+    expect(registerTableOf(readFileSync(registerPath, "utf8")).rows.some((row) => row[0] === "P101")).toBe(
+      true,
+    );
+  });
+
+  it("still refuses an id that only a Rejected ids row names", () => {
+    const registerPath = join(incomingRoot, "register-rejected.md");
+    writeFileSync(registerPath, realShapedRegister([], ["| P111 | 2026-08-23 | rejected in review |"]));
+
+    expect(() => appendRegisterRows([queuedRow("P111")], ["P111"], registerPath)).toThrow(
+      /already names P111/,
+    );
+  });
+});
+
+/**
+ * Part D, against the register's REAL shape rather than a simplified one.
+ *
+ * The fixture these cases replace was `"## Register\n\n| a | b |\n\n## Rejected ids\n"` — a table
+ * sitting flush against the next heading. The real file has a paragraph between the two, and that
+ * paragraph is what made the old insertion silently catastrophic: rows landed after it with no
+ * blank line, so Markdown read them as lazy continuation and rendered 542 of them as one run-on
+ * sentence. The old fixture could not see it because it had nothing there to land after.
+ *
+ * Every assertion below reads the written file back through `parseMarkdownTables` rather than
+ * looking for a substring, because "the id appears somewhere before the next heading" is exactly
+ * the check that passed while the file was being destroyed.
+ */
+describe("Part D — the register append, against the real file's shape", () => {
+  function registerPathFor(name: string): string {
+    return join(incomingRoot, `${name}.md`);
+  }
+
+  it("puts a new row inside the table, above the paragraph that follows it", () => {
+    const registerPath = registerPathFor("shape-basic");
+    writeFileSync(registerPath, realShapedRegister());
+
+    appendRegisterRows([queuedRow("P101")], ["P101"], registerPath);
     const written = readFileSync(registerPath, "utf8");
 
-    expect(written.indexOf("P101")).toBeLessThan(written.indexOf("## Rejected ids"));
+    expect(written.indexOf("| P101 |")).toBeLessThan(written.indexOf(EXAMPLE_ROW_PARAGRAPH));
+    expect(written.indexOf("| P101 |")).toBeLessThan(written.indexOf("## Rejected ids"));
+  });
+
+  it("produces output that parses as a table, which is the check the old test lacked", () => {
+    const registerPath = registerPathFor("shape-parses");
+    writeFileSync(registerPath, realShapedRegister());
+
+    appendRegisterRows([queuedRow("P101"), queuedRow("P102")], ["P101", "P102"], registerPath);
+    const written = readFileSync(registerPath, "utf8");
+    const { tables, problems } = parseMarkdownTables(written);
+
+    expect(problems).toEqual([]);
+    const register = registerTableOf(written);
+    expect(register.columnCount).toBe(6);
+    expect(register.rows.map((row) => row[0])).toEqual(["~~P050~~", "P101", "P102"]);
+    expect(tables.some((table) => table.headerCells.join(",") === "Product ID,Rejected,Why")).toBe(
+      true,
+    );
+  });
+
+  it("leaves the paragraph and the Rejected ids section exactly as they were", () => {
+    const registerPath = registerPathFor("shape-intact");
+    const before = realShapedRegister();
+    writeFileSync(registerPath, before);
+
+    appendRegisterRows([queuedRow("P101")], ["P101"], registerPath);
+    const written = readFileSync(registerPath, "utf8");
+
+    expect(written).toContain(EXAMPLE_ROW_PARAGRAPH);
+    expect(written.slice(written.indexOf("## Rejected ids"))).toBe(
+      before.slice(before.indexOf("## Rejected ids")),
+    );
+  });
+
+  it("appends a whole batch and every one of them is a parsed row", () => {
+    const registerPath = registerPathFor("shape-batch");
+    writeFileSync(registerPath, realShapedRegister());
+
+    const ids = Array.from({ length: 542 }, (_, index) => `P${101 + index}`);
+    appendRegisterRows(ids.map(queuedRow), ids, registerPath);
+    const written = readFileSync(registerPath, "utf8");
+    const register = registerTableOf(written);
+
+    expect(parseMarkdownTables(written).problems).toEqual([]);
+    expect(register.rows).toHaveLength(543);
+    expect(register.rows.every((row) => row.length === 6)).toBe(true);
+    expect(register.rows.at(-1)?.[0]).toBe("P642");
+    expect(written.indexOf("| P642 |")).toBeLessThan(written.indexOf(EXAMPLE_ROW_PARAGRAPH));
+  });
+
+  /**
+   * The negative control. Reproducing the old insertion point — above the `## Rejected ids`
+   * heading — against this same fixture must produce a document the parser refuses, otherwise
+   * these tests would pass on the broken implementation too.
+   */
+  it("the old insertion point produces output the parser rejects", () => {
+    const before = realShapedRegister();
+    const marker = "## Rejected ids";
+    const markerIndex = before.indexOf(marker);
+    const corrupted = `${before.slice(0, markerIndex).replace(/\s+$/, "")}\n${queuedRow("P101")}\n\n${before.slice(markerIndex)}`;
+
+    const register = registerTableOf(corrupted);
+    expect(register.rows.map((row) => row[0])).not.toContain("P101");
+    expect(corrupted.indexOf("| P101 |")).toBeGreaterThan(corrupted.indexOf(EXAMPLE_ROW_PARAGRAPH));
+  });
+
+  it("refuses to write at all when the register has no table to append to", () => {
+    const registerPath = registerPathFor("shape-no-table");
+    writeFileSync(registerPath, "# Register\n\n## Register\n\nNo table here.\n\n## Rejected ids\n");
+
+    expect(() => appendRegisterRows([queuedRow("P101")], ["P101"], registerPath)).toThrow(
+      /no table under it/,
+    );
+  });
+
+  it("refuses when the Register heading is missing entirely", () => {
+    const registerPath = registerPathFor("shape-no-heading");
+    writeFileSync(registerPath, "# Drafts\n\n| a | b |\n| --- | --- |\n| 1 | 2 |\n");
+
+    expect(() => appendRegisterRows([queuedRow("P101")], ["P101"], registerPath)).toThrow(
+      /no "## Register" heading/,
+    );
+  });
+});
+
+describe("parseMarkdownTables", () => {
+  it("reads a well-formed table into its header and rows", () => {
+    const { tables, problems } = parseMarkdownTables("| a | b |\n| --- | --- |\n| 1 | 2 |\n");
+
+    expect(problems).toEqual([]);
+    expect(tables).toHaveLength(1);
+    expect(tables[0].headerCells).toEqual(["a", "b"]);
+    expect(tables[0].rows).toEqual([["1", "2"]]);
+  });
+
+  it("refuses a run of pipe lines with no delimiter row — what lazy continuation produces", () => {
+    const { tables, problems } = parseMarkdownTables("Some paragraph text\n| P101 | queued |\n");
+
+    expect(tables).toEqual([]);
+    expect(problems[0]).toContain("no delimiter row");
+  });
+
+  it("reports a row whose column count does not match the header", () => {
+    const { problems } = parseMarkdownTables("| a | b |\n| --- | --- |\n| 1 | 2 | 3 |\n");
+
+    expect(problems[0]).toContain("3 cell(s), header has 2");
+  });
+
+  it("finds every table in a document, not just the first", () => {
+    const { tables } = parseMarkdownTables(realShapedRegister());
+
+    expect(tables.length).toBeGreaterThanOrEqual(2);
   });
 });
 

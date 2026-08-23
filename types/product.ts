@@ -63,9 +63,21 @@ export const CATEGORY_SLUGS: readonly Category[] = CATEGORIES.map(
  * would put the whole catalogue in the browser bundle to answer a question with eleven possible
  * answers. `scripts/validate-products.mjs` is what keeps the flag honest in both directions.
  */
-export const SURFACED_CATEGORIES: readonly CategoryOption[] = CATEGORIES.filter(
-  (category) => category.status === "surfaced",
-);
+/**
+ * The surfacing rule as a function of the `status` field alone, so it can be applied to a list
+ * other than `CATEGORIES` — which is what lets a test flip a category's status and check the
+ * result, rather than checking the one category that happens to be pending today.
+ * `scripts/validate-products.mjs` keeps its own copy of this list and derives its browsable
+ * subset the same way; `lib/category-vocabulary.test.ts` holds the two together.
+ */
+export function selectSurfacedCategories(
+  categories: readonly CategoryOption[],
+): CategoryOption[] {
+  return categories.filter((category) => category.status === "surfaced");
+}
+
+export const SURFACED_CATEGORIES: readonly CategoryOption[] =
+  selectSurfacedCategories(CATEGORIES);
 
 export const SURFACED_CATEGORY_SLUGS: readonly Category[] =
   SURFACED_CATEGORIES.map((category) => category.slug);

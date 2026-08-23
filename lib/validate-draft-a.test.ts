@@ -33,9 +33,17 @@ const RAW_CONTENT =
   "Elegant gold-plated brass ring set with American Diamond stones. Free size.\n" +
   "Dispatch within 2 days. Free returns within 7 days. ★★★★☆ (12 reviews)";
 
+/**
+ * `P900` rather than a number near the real range, per ADR-053's addendum: *a product id that
+ * stands for a fixture, in any test, is `P9xx`.* This file used `P050` until the readiness audit's
+ * M-1 flagged it — a retired id (ADR-054 permanently retired P050–P100) standing in for a
+ * placeholder, which reads as a real reference to anyone who does not already know it is not one.
+ * These cases are hermetic, so it could never have collided; it was still the wrong number to
+ * write down.
+ */
 function cleanDraft(): Record<string, unknown> {
   return {
-    productId: "P050",
+    productId: "P900",
     sourceType: "migrated",
     category: "rings",
     subcategory: null,
@@ -83,7 +91,7 @@ function reviewedDraft(): Record<string, unknown> {
   }
   draft.images = {
     general: [
-      { path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" },
+      { path: "/products/P900.webp", confirmed: true, sourceFile: null, role: "main" },
     ],
     variantImages: {},
   };
@@ -122,7 +130,7 @@ describe("the clean baseline fixture", () => {
 
     expect(result.errors).toEqual([]);
     expect(result.warnings).toEqual([]);
-    expect(result.productId).toBe("P050");
+    expect(result.productId).toBe("P900");
   });
 
   it("does not object to a material phrase no allow-list would contain", () => {
@@ -226,7 +234,7 @@ describe("A2 — pricing.price and pricing.mrp are always null", () => {
 describe("A3 — image suggestions may be carried, but never already confirmed", () => {
   function suggestion(overrides: Record<string, unknown> = {}): Record<string, unknown> {
     return {
-      path: "/products/P050.webp",
+      path: "/products/P900.webp",
       confirmed: false,
       sourceFile: "2026-08-23-batch-01/odoo-1002/raw/main.webp",
       role: "main",
@@ -241,9 +249,9 @@ describe("A3 — image suggestions may be carried, but never already confirmed",
   it("accepts a Stage-0-prepared draft whose every suggestion is confirmed: false", () => {
     const draft = cleanDraft();
     draft.images = {
-      general: [suggestion(), suggestion({ path: "/products/P050-2.webp", role: "extra-1" })],
+      general: [suggestion(), suggestion({ path: "/products/P900-2.webp", role: "extra-1" })],
       variantImages: {
-        "Colour:Golden": suggestion({ path: "/products/P050-golden.webp", verifiedDistinct: true }),
+        "Colour:Golden": suggestion({ path: "/products/P900-golden.webp", verifiedDistinct: true }),
       },
     };
 
@@ -282,7 +290,7 @@ describe("A3 — image suggestions may be carried, but never already confirmed",
 
   it("rejects a bare path string, which cannot say whether anyone approved it", () => {
     const draft = cleanDraft();
-    draft.images = { general: ["/products/P050.webp"], variantImages: {} };
+    draft.images = { general: ["/products/P900.webp"], variantImages: {} };
     const result: Result = validateDraftA(draft);
 
     expect(rulesIn(result)).toContain("A3");
@@ -749,7 +757,7 @@ describe("Part D — validatePublishReadiness, the publish gate", () => {
   it("D4 rejects a general image still sitting at confirmed: false", () => {
     const draft = reviewedDraft();
     draft.images = {
-      general: [{ path: "/products/P050.webp", confirmed: false, sourceFile: null, role: "main" }],
+      general: [{ path: "/products/P900.webp", confirmed: false, sourceFile: null, role: "main" }],
       variantImages: {},
     };
     const result: Result = validatePublishReadiness(draft);
@@ -761,9 +769,9 @@ describe("Part D — validatePublishReadiness, the publish gate", () => {
   it("D4 rejects an unconfirmed variant image beside a confirmed general one", () => {
     const draft = reviewedDraft();
     draft.images = {
-      general: [{ path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" }],
+      general: [{ path: "/products/P900.webp", confirmed: true, sourceFile: null, role: "main" }],
       variantImages: {
-        "Colour:Golden": { path: "/products/P050-golden.webp", confirmed: false },
+        "Colour:Golden": { path: "/products/P900-golden.webp", confirmed: false },
       },
     };
     const result: Result = validatePublishReadiness(draft);
@@ -775,10 +783,10 @@ describe("Part D — validatePublishReadiness, the publish gate", () => {
   it("D4 accepts a fully confirmed general and variant set", () => {
     const draft = reviewedDraft();
     draft.images = {
-      general: [{ path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" }],
+      general: [{ path: "/products/P900.webp", confirmed: true, sourceFile: null, role: "main" }],
       variantImages: {
         "Colour:Golden": {
-          path: "/products/P050-golden.webp",
+          path: "/products/P900-golden.webp",
           confirmed: true,
           verifiedDistinct: true,
         },
@@ -891,7 +899,7 @@ describe("Part C — batch reporting", () => {
     expect(printed).toContain("A1");
     expect(printed).toContain("category");
     expect(printed).toContain('"ring"');
-    expect(printed).toContain("productId: P050");
+    expect(printed).toContain("productId: P900");
   });
 
   it("marks a warning as a warning", () => {

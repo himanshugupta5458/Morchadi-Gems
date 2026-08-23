@@ -12,6 +12,8 @@ import {
   getCategoryLabel,
   isCategory,
   isSurfacedCategory,
+  selectSurfacedCategories,
+  type CategoryOption,
 } from "@/types/product";
 import { CATEGORY_MENU } from "@/lib/navigation";
 import { MIGRATION_CATEGORY_SLUGS } from "@/scripts/prepare-migration-batch.mjs";
@@ -45,13 +47,46 @@ function sorted(values: readonly string[]): string[] {
  * without importing a file that runs on import (`validate-products.mjs` validates the catalogue
  * and calls `process.exit` at module scope).
  */
-function slugsDeclaredIn(scriptPath: string, constantName: string): string[] {
+function declarationBodyIn(scriptPath: string, constantName: string): string {
   const source = readFileSync(join(REPO_ROOT, scriptPath), "utf8");
   const declaration = new RegExp(`const ${constantName} = \\[([^\\]]*)\\]`).exec(source);
   if (declaration === null) {
     throw new Error(`${scriptPath} declares no ${constantName} array`);
   }
-  return sorted([...declaration[1].matchAll(/"([a-z-]+)"/g)].map((match) => match[1]));
+  return declaration[1];
+}
+
+/** The script with its prose stripped, so a claim about the code is checked against code. */
+function executableSourceOf(scriptPath: string): string {
+  return readFileSync(join(REPO_ROOT, scriptPath), "utf8")
+    .split("\n")
+    .filter((line) => !/^\s*(\*|\/\*|\/\/)/.test(line))
+    .join("\n");
+}
+
+function slugsDeclaredIn(scriptPath: string, constantName: string): string[] {
+  return sorted(
+    [...declarationBodyIn(scriptPath, constantName).matchAll(/"([a-z-]+)"/g)].map(
+      (match) => match[1],
+    ),
+  );
+}
+
+/**
+ * The `{ slug, status }` pairs a plain script hard-codes, so the surfacing flag can be compared
+ * across the boundary as well as the vocabulary. Before ADR-056's prompt,
+ * `scripts/validate-products.mjs` held bare slugs and derived its browsable subset by excluding
+ * `gift-hampers` **by name**, so nothing here could have caught the two lists disagreeing about a
+ * status — there was no status to disagree about.
+ */
+function categoriesDeclaredIn(scriptPath: string, constantName: string): CategoryOption[] {
+  return [
+    ...declarationBodyIn(scriptPath, constantName).matchAll(
+      /slug:\s*"([a-z-]+)",\s*status:\s*"(surfaced|pending)"/g,
+    ),
+  ]
+    .map((match) => ({ slug: match[1], label: match[1], status: match[2] }) as CategoryOption)
+    .sort((left, right) => left.slug.localeCompare(right.slug));
 }
 
 describe("the category vocabulary", () => {
@@ -78,9 +113,87 @@ describe("the category vocabulary", () => {
   });
 });
 
+/**
+ * The surfacing rule tested as a rule, over categories that do not exist. Asserting only that
+ * `gift-hampers` is the pending one would pass on the name-based exclusion this replaced, which is
+ * exactly how audit finding I-5 survived a green gate.
+ */
+describe("selectSurfacedCategories, over arbitrary categories", () => {
+  const RINGS: CategoryOption = { slug: "rings", label: "Rings", status: "surfaced" };
+  const WATCHES: CategoryOption = { slug: "watches", label: "Watches", status: "surfaced" };
+
+  it("keeps the surfaced ones and drops the pending ones", () => {
+    const flipped: CategoryOption[] = [{ ...RINGS, status: "pending" }, WATCHES];
+
+    expect(selectSurfacedCategories(flipped).map((category) => category.slug)).toEqual(["watches"]);
+  });
+
+  it("follows a status flip in both directions, whatever the slug is called", () => {
+    const pendingWatches: CategoryOption[] = [RINGS, { ...WATCHES, status: "pending" }];
+    expect(selectSurfacedCategories(pendingWatches).map((category) => category.slug)).toEqual([
+      "rings",
+    ]);
+
+    const bothSurfaced: CategoryOption[] = [RINGS, WATCHES];
+    expect(selectSurfacedCategories(bothSurfaced).map((category) => category.slug)).toEqual([
+      "rings",
+      "watches",
+    ]);
+  });
+
+  it("returns nothing when every category is pending, rather than falling back to all of them", () => {
+    const allPending: CategoryOption[] = [
+      { ...RINGS, status: "pending" },
+      { ...WATCHES, status: "pending" },
+    ];
+
+    expect(selectSurfacedCategories(allPending)).toEqual([]);
+  });
+
+  it("is what SURFACED_CATEGORIES is built from, so the two can never disagree", () => {
+    expect(selectSurfacedCategories(CATEGORIES)).toEqual([...SURFACED_CATEGORIES]);
+    expect(sorted(SURFACED_CATEGORY_SLUGS)).toEqual(
+      sorted(
+        CATEGORIES.filter((category) => category.status === "surfaced").map(
+          (category) => category.slug,
+        ),
+      ),
+    );
+  });
+});
+
 describe("the four enumerations that must not drift apart", () => {
   it("types/product.ts and scripts/validate-products.mjs agree", () => {
-    expect(slugsDeclaredIn("scripts/validate-products.mjs", "CATEGORY_SLUGS")).toEqual(THE_ELEVEN);
+    expect(
+      sorted(
+        categoriesDeclaredIn("scripts/validate-products.mjs", "CATEGORIES").map(
+          (category) => category.slug,
+        ),
+      ),
+    ).toEqual(THE_ELEVEN);
+  });
+
+  it("they agree on each category's STATUS too, not only on the slugs", () => {
+    const declared = categoriesDeclaredIn("scripts/validate-products.mjs", "CATEGORIES");
+    const expected = [...CATEGORIES]
+      .map((category) => ({ slug: category.slug, status: category.status }))
+      .sort((left, right) => left.slug.localeCompare(right.slug));
+
+    expect(declared.map(({ slug, status }) => ({ slug, status }))).toEqual(expected);
+  });
+
+  /**
+   * The regression guard for audit finding I-5. The validator used to answer "is this category
+   * browsable" with `slug !== "gift-hampers"` — a question about a name, when ADR-055 had already
+   * created a field to answer it. A source assertion rather than a behavioural one because
+   * `validate-products.mjs` validates the catalogue and calls `process.exit` at module scope, so
+   * a test cannot import it and read the derived value.
+   */
+  it("validate-products.mjs derives surfacing from status, never from a slug name", () => {
+    const code = executableSourceOf("scripts/validate-products.mjs");
+
+    expect(code).toContain('category.status === "surfaced"');
+    expect(code).not.toContain('slug !== "gift-hampers"');
   });
 
   it("types/product.ts and scripts/validate-draft-a.mjs agree", () => {

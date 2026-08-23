@@ -748,7 +748,7 @@ export function buildProductFromDraft(input: ProductBuildInput): ProductBuildRes
     issues.push(
       error(
         "category",
-        "category must be resolved to one of the ten fixed slugs before publish. It is the record's first-tier identity",
+        "category must be resolved to one of the eleven fixed slugs before publish. It is the record's first-tier identity",
       ),
     );
   }

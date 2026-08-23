@@ -718,3 +718,49 @@ rather than bugs to repair, and both are still open on the day the export lands.
 ---
 
 *Read-only audit. No application code, schema, or data was modified.*
+
+---
+
+# Addendum, 2026-08-23 — what has since been fixed
+
+This audit was diagnose-only. Two later prompts acted on it. This section is the running index of
+which findings are closed and where, so the report above can stay as it was written.
+
+| Finding | Status | Fixed by |
+| --- | --- | --- |
+| **B-1** — `appendRegisterRows` writes 542 rows outside the register's table | **Closed** | prompt 76 |
+| **B-2** — image suggestions and their `verified_distinct` evidence have no path across extraction | **Closed** | prompt 75, [ADR-056](../decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md) decisions 1–2 |
+| **B-3** — `subcategory` and the four `original*` fields are captured, then permanently lost | **Closed** | prompt 75, [ADR-056](../decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md) decisions 3 and 5 |
+| **I-1** — the similarity gate never compares migrated drafts to each other | **Closed** | prompt 75, [ADR-056](../decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md) decision 4 |
+| **I-2** — `draft-a-to-product-skills.md` instructs a hard error on eleven-slug categories | **Closed** | prompt 76 |
+| **I-3** — the same stale count in the refusal message a person reads | **Closed** | prompt 76 |
+| **I-4** — three documents disagree about the next product id | **Closed** | prompt 76 |
+| **I-5** — `validate-products.mjs` derives "surfaced" by hardcoded slug name | **Closed** | prompt 76 |
+| **I-6** — the keyword near-match loop is O(n²) with no memoisation, ~30s at 591 products | Open | — |
+| **I-7** — `docs/decisions/README.md:106` says `validate-draft-a.mjs` is "not built" | **Closed** | prompt 76 |
+| **I-8** — two live references to the retired `material-phrases.json` allow-list | **Closed** | prompt 76 |
+| **I-9** — `docs/pipeline-prep/README.md:42` says the register holds "the five-stage vocabulary" | **Closed** | prompt 76 |
+| **M-1** — `lib/validate-draft-a.test.ts` uses the retired `P050` as its fixture id | **Closed** | prompt 76 |
+| **M-2** — `validate-draft-a.mjs` never checks `productId` presence, format or batch uniqueness | Open | — |
+| **M-3** — product-id regexes diverge (`/^P\d{3}$/` vs `/^P(\d{3,})$/`) | Open | — |
+| **M-4** — stale test *names* saying "ten" in `catalogue-ia.test.ts` and `draft-a-to-product.test.ts` | Open | — |
+| **M-5** — `validate-draft-a.mjs` prints 542 PASS/FAIL lines before its summary | Open | — |
+| **M-6** — landing 542 products requires 542 one-line bumps of `EXPECTED_PRODUCT_COUNT` | Open — intended | — |
+
+## B-1, and the second fault underneath it
+
+Prompt 76 fixed B-1 by anchoring the insertion to **the last row of the table under `## Register`**
+rather than to the `## Rejected ids` heading, and by re-parsing the result before keeping the write.
+Details and the mutation proof are in
+[RESULT-2026-08-23-register-append-and-audit-corrections.md](RESULT-2026-08-23-register-append-and-audit-corrections.md).
+
+Running the fix against a copy of the real file — which this audit asked for and which the original
+report did too — surfaced **a second fault in the same function that this audit did not find.** The
+double-run guard tested `\bP101\b` against the *whole document*, and the register's own prose reads
+*"ADR-054 retired P050–P100 permanently and starts the Odoo migration at P101"*. So the very first
+real batch, which begins at P101 by design, would have been refused as a double run — by a sentence
+describing the plan rather than by any reservation. It is now read from table rows only, which is
+what the register itself says a reservation is.
+
+This audit's Part G called B-1 *"the single most important thing to fix before real data arrives"*.
+That was right, and it was one fault short.

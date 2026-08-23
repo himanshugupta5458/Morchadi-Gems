@@ -8,8 +8,12 @@ say, and how often", never "what should we do about it".
 
 Nothing in this folder is a decision, a policy, or an input any code reads. In particular:
 
-- A candidate list here is **not** an allow-list. `data/material-phrases.json` is built by the
-  owner *from* these files; it is never generated from them automatically.
+- A candidate list here is **not** an allow-list, and there is no longer an allow-list for it to
+  become. [ADR-051's addendum](../decisions/ADR-051-draft-a-content-pipeline.md#addendum-2026-08-23--the-validator-exists-and-the-allow-list-gate-does-not)
+  retired the pre-approval gate: every candidate phrase goes to owner review whatever any curated
+  file says, `data/material-phrases.json` was never built and is not a prerequisite for anything,
+  and `scripts/validate-draft-a.mjs` reads neither it nor `data/stone-terms.json`. These files are
+  raw extraction output kept for reference.
 - Phrases are recorded verbatim, grouped by exact string equality only. No fuzzy matching, no
   semantic merging, no normalisation, no correction of the source text.
 - A claim appearing here has **not** been checked against the honesty rules of
@@ -39,7 +43,7 @@ states the rule it used, so the owner can overrule it rather than guess at it.
 | [`fresh-listing-image-prompt.md`](fresh-listing-image-prompt.md) | The owner-authored companion prompt for the fresh intake path — turns product photographs into the text the Draft A skill reads. Forbids the descriptive pass from naming any metal or stone (`gold-toned`, never `gold`) |
 | [`similarity-calibration-report.md`](similarity-calibration-report.md) | Phase-three calibration measurements over the 49 live products. **Measurements only — no threshold is set by it**, and ADR-051's "not calibrated" state is unchanged |
 | [`similarity-scores-all-pairs.json`](similarity-scores-all-pairs.json) | The raw pairwise scores behind that report. Nothing reads it |
-| [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the five-stage vocabulary and the retired-id list |
+| [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the six-stage vocabulary — `queued` through `published`, per [ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md) — and the retired-id list |
 | [`products-completed.md`](products-completed.md) | Manual register of drafts whose product has been published into `data/products.json` |
 
 The source workbook `Latest.xlsx` is an owner-supplied export sitting untracked at the repo

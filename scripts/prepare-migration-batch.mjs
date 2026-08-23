@@ -696,12 +696,144 @@ export function parseJsonl(contents) {
 }
 
 export const DRAFTS_IN_PROGRESS_PATH = join(REPO_ROOT, "docs/pipeline-prep/drafts-in-progress.md");
-const REGISTER_TABLE_MARKER = "## Rejected ids";
+
+/** The heading above the register table. A row belongs inside that table and nowhere else. */
+const REGISTER_HEADING = "## Register";
 
 /**
- * Appends the queued rows to the manual register. It refuses if any id it is about to add is
- * already named in the file — that is the second half of the double-run guard, and the first
- * half is the raw block whose existence reserves the id.
+ * A line that is part of a Markdown table: a pipe, possibly indented. Nothing else in a section
+ * begins with one, which is what makes "the last such line" a usable anchor.
+ *
+ * @param {string} line
+ */
+function isTableLine(line) {
+  return line.trimStart().startsWith("|");
+}
+
+/**
+ * Splits a Markdown document into its tables, so a caller can assert that what was written is a
+ * table rather than looking at it and deciding it resembles one.
+ *
+ * A table is a run of consecutive pipe-leading lines whose second line is a delimiter row. The
+ * checks are the ones a Markdown renderer actually applies: every row carries the same number of
+ * cells as the header, and a run with no delimiter row is not a table at all — which is precisely
+ * what a row appended into the middle of a paragraph produces.
+ *
+ * @param {string} markdown
+ * @returns {{ tables: {startLine: number, columnCount: number, headerCells: string[], rows: string[][]}[], problems: string[] }}
+ */
+export function parseMarkdownTables(markdown) {
+  const lines = markdown.split("\n");
+  const tables = [];
+  const problems = [];
+
+  let index = 0;
+  while (index < lines.length) {
+    if (!isTableLine(lines[index])) {
+      index += 1;
+      continue;
+    }
+
+    const startLine = index;
+    const block = [];
+    while (index < lines.length && isTableLine(lines[index])) {
+      block.push(lines[index]);
+      index += 1;
+    }
+
+    const cellsOf = (line) =>
+      line
+        .trim()
+        .replace(/^\|/, "")
+        .replace(/\|$/, "")
+        .split("|")
+        .map((cell) => cell.trim());
+
+    if (block.length < 2) {
+      problems.push(`line ${startLine + 1}: a single pipe line is not a table — it has no delimiter row`);
+      continue;
+    }
+
+    const headerCells = cellsOf(block[0]);
+    const delimiterCells = cellsOf(block[1]);
+    const delimiterIsValid =
+      delimiterCells.length === headerCells.length &&
+      delimiterCells.every((cell) => /^:?-{3,}:?$/.test(cell));
+
+    if (!delimiterIsValid) {
+      problems.push(
+        `line ${startLine + 2}: expected a delimiter row of ${headerCells.length} column(s), found ${JSON.stringify(block[1])}`,
+      );
+      continue;
+    }
+
+    const rows = block.slice(2).map(cellsOf);
+    rows.forEach((row, rowIndex) => {
+      if (row.length !== headerCells.length) {
+        problems.push(
+          `line ${startLine + 3 + rowIndex}: row has ${row.length} cell(s), header has ${headerCells.length}`,
+        );
+      }
+    });
+
+    tables.push({ startLine, columnCount: headerCells.length, headerCells, rows });
+  }
+
+  return { tables, problems };
+}
+
+/**
+ * The line a new register row goes **after**: the last row of the table under `## Register`.
+ *
+ * This is a function of its own, and it is the fix for the whole bug. The previous version
+ * inserted above the `## Rejected ids` heading, which is not the end of the table — between the
+ * two sits the "*The example row is not a reservation*" paragraph. Rows landed after that
+ * paragraph with no blank line, so Markdown read them as lazy continuation of it and rendered
+ * 542 table rows as one run-on sentence, silently, exit 0.
+ *
+ * Anchoring to the table's own last row rather than to whatever heading follows it means the
+ * paragraph can move, grow or disappear without moving the insertion point again.
+ *
+ * @param {string[]} lines
+ * @returns {number}
+ */
+export function findRegisterTableEnd(lines) {
+  const headingIndex = lines.findIndex((line) => line.trim() === REGISTER_HEADING);
+  if (headingIndex === -1) {
+    throw new Error(`register has no "${REGISTER_HEADING}" heading to insert under`);
+  }
+
+  let sectionEnd = lines.length;
+  for (let index = headingIndex + 1; index < lines.length; index += 1) {
+    if (lines[index].startsWith("## ")) {
+      sectionEnd = index;
+      break;
+    }
+  }
+
+  let lastTableLine = -1;
+  for (let index = headingIndex + 1; index < sectionEnd; index += 1) {
+    if (isTableLine(lines[index])) lastTableLine = index;
+  }
+
+  if (lastTableLine === -1) {
+    throw new Error(
+      `register has a "${REGISTER_HEADING}" heading but no table under it — there is no row to append to`,
+    );
+  }
+
+  return lastTableLine;
+}
+
+/**
+ * Appends the queued rows to the manual register, **inside the register table**. It refuses if any
+ * id it is about to add is already named in the file — that is the second half of the double-run
+ * guard, and the first half is the raw block whose existence reserves the id.
+ *
+ * The write is verified before it is kept: the resulting document is re-parsed, and if the
+ * register table does not come back holding every appended row at the right column count, nothing
+ * is written and the error says so. A register is the index that survives if `content-pipeline/`
+ * is lost, and corrupting it quietly is worse than failing loudly.
  *
  * `registerPath` is a parameter rather than a constant so a synthetic batch can be demonstrated
  * end to end against a scratch copy without writing fabricated products into the real register.
@@ -712,22 +844,104 @@ const REGISTER_TABLE_MARKER = "## Rejected ids";
  */
 export function appendRegisterRows(rows, productIds, registerPath = DRAFTS_IN_PROGRESS_PATH) {
   const existing = readFileSync(registerPath, "utf8");
-  const alreadyPresent = productIds.filter((productId) =>
-    new RegExp(`\\b${productId}\\b`).test(existing),
-  );
+  const reserved = registerReservedIds(existing);
+  const alreadyPresent = productIds.filter((productId) => reserved.has(productId));
   if (alreadyPresent.length > 0) {
     throw new Error(
       `REFUSING TO WRITE — ${registerPath} already names ${alreadyPresent.join(", ")}. ` +
         "An id is reserved permanently, so a second row for one is a double run, not an update.",
     );
   }
-  const markerIndex = existing.indexOf(REGISTER_TABLE_MARKER);
-  if (markerIndex === -1) {
-    throw new Error(`${registerPath} has no "${REGISTER_TABLE_MARKER}" heading to insert above`);
+
+  const updated = insertRegisterRows(existing, rows);
+  const verification = verifyRegisterRows(updated, rows);
+  if (verification !== null) {
+    throw new Error(
+      `REFUSING TO WRITE — appending to ${registerPath} would not produce a valid register table: ${verification}`,
+    );
   }
-  const before = existing.slice(0, markerIndex).replace(/\s+$/, "");
-  const after = existing.slice(markerIndex);
-  writeFileSync(registerPath, `${before}\n${rows.join("\n")}\n\n${after}`, "utf8");
+
+  writeFileSync(registerPath, updated, "utf8");
+}
+
+/**
+ * Every product id the register has actually reserved: the **first cell of every row of every
+ * table in it**, across both the Register and the Rejected ids sections, with the strikethrough
+ * of a retired row stripped off.
+ *
+ * Read from the tables rather than from the whole document, and that distinction is the second
+ * fault this function had. The guard used to test `\bP101\b` against the file's entire text, and
+ * the register's own prose says *"ADR-054 retired P050–P100 permanently and starts the Odoo
+ * migration at P101"*. So the very first real batch — which begins at P101 by design — would have
+ * been refused as a double run, by a sentence describing the plan rather than by any reservation.
+ * Nothing in the fixture had prose mentioning an id, so nothing caught it.
+ *
+ * An id is reserved by a row, which is what the file itself says one paragraph further down: *"an
+ * id is reserved by the first file named after it, never by appearing in a table"* — and a table
+ * row is the register's record of that file. A sentence about a range is not a row.
+ *
+ * @param {string} markdown
+ * @returns {Set<string>}
+ */
+export function registerReservedIds(markdown) {
+  const reserved = new Set();
+  for (const table of parseMarkdownTables(markdown).tables) {
+    for (const row of table.rows) {
+      const match = /P\d{3,}/.exec(row[0] ?? "");
+      if (match !== null) reserved.add(match[0]);
+    }
+  }
+  return reserved;
+}
+
+/**
+ * The pure half of the append, so the result can be checked before it reaches a file.
+ *
+ * @param {string} existing
+ * @param {string[]} rows
+ * @returns {string}
+ */
+export function insertRegisterRows(existing, rows) {
+  if (rows.length === 0) return existing;
+
+  const lines = existing.split("\n");
+  const tableEnd = findRegisterTableEnd(lines);
+  lines.splice(tableEnd + 1, 0, ...rows);
+  return lines.join("\n");
+}
+
+/**
+ * Re-reads the document the way a renderer would and answers one question: did every appended row
+ * land in the register table. Returns `null` when it did, and the reason when it did not.
+ *
+ * @param {string} updated
+ * @param {string[]} rows
+ * @returns {string | null}
+ */
+function verifyRegisterRows(updated, rows) {
+  const { tables, problems } = parseMarkdownTables(updated);
+  if (problems.length > 0) return problems.join("; ");
+
+  const registerTable = tables.find((table) =>
+    table.headerCells[0] === "Product ID" && table.headerCells.includes("Stage"),
+  );
+  if (registerTable === undefined) return "the register table is not in the parsed output";
+
+  const rendered = registerTable.rows.map((row) => row.join(" | "));
+  for (const row of rows) {
+    const expected = row
+      .trim()
+      .replace(/^\|/, "")
+      .replace(/\|$/, "")
+      .split("|")
+      .map((cell) => cell.trim())
+      .join(" | ");
+    if (!rendered.includes(expected)) {
+      return `a row did not land in the register table: ${row.slice(0, 60)}…`;
+    }
+  }
+
+  return null;
 }
 
 /** @param {string} message */

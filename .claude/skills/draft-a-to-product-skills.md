@@ -46,7 +46,7 @@ node -e "import('./scripts/validate-draft-a.mjs').then(async (m) => {
 ```
 
 `validatePublishReadiness` from `scripts/validate-draft-a.mjs` asks whether owner review actually
-happened: every `attributes[].confirmed` is `true`, `category` is one of the ten slugs,
+happened: every `attributes[].confirmed` is `true`, `category` is one of the eleven slugs,
 `personalized` is resolved to a boolean, `images.general` holds at least one entry, and
 `pricing.price` is a positive number.
 
@@ -265,7 +265,7 @@ control they want if it is not obvious from the values.
 | `id` | `draft.productId` | Assigned at Draft A creation and permanently reserved (Draft A rule 14) |
 | `name`, `description` | step 2 | |
 | `seo` | step 3 | |
-| `category` | `draft.category` | Must be one of the ten slugs; anything else is a hard error |
+| `category` | `draft.category` | Must be one of the eleven slugs, `gift-hampers` included ([ADR-055](../../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md)); anything else is a hard error |
 | `status` | — | **Always `"draft"`.** Never `"active"`, whatever the draft says its own status is |
 | `pricing.price`, `pricing.cost` | `draft.pricing` | Positive whole rupees, both required. A missing `cost` is a hard error — it is margin data and nothing may invent it |
 | `pricing.mrp` | `draft.pricing.mrp` | Falls back to `price` when unset, which shows no discount. Below `price` is a hard error |

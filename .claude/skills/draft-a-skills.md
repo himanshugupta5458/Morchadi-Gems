@@ -126,9 +126,19 @@ review carries more weight for those specific candidates.
 
 14. **`productId` and `rawContent` are populated by pipeline code, NEVER
     by this skill.** `productId` follows the site's sequential
-    convention (continuing from the next available number after P049),
-    assigned once per candidate at Draft A creation and PERMANENTLY
-    reserved even if later rejected.
+    convention, is assigned once per candidate at Draft A creation, and
+    is PERMANENTLY reserved even if later rejected. The ranges, which
+    this skill never chooses and only ever reads:
+    `data/products.json` holds **P001–P049**; **P050–P100 are
+    permanently retired** and are never assigned to anything; the Odoo
+    migration takes **P101 upward**, one id per accepted record, so its
+    542-record Phase B export is expected to occupy **P101–P642**. A
+    fresh hand-made draft takes the next unused number **above the
+    highest id the migration has actually assigned** — read that from
+    `docs/pipeline-prep/drafts-in-progress.md` rather than assuming
+    P642. See
+    [`content-pipeline/drafts/README.md`](../../content-pipeline/drafts/README.md#id-reservation-two-paths-one-rule),
+    which states the same rule for both intake paths.
 
 15. **Every raw block produces exactly one Draft A object** — never
     skipped, never merged.
@@ -227,7 +237,7 @@ A fresh draft has none of them. See
 
 ```json
 {
-  "productId": "P050",
+  "productId": "P101",
   "sourceType": "migrated",
   "category": "rings",
   "subcategory": null,

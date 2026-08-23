@@ -86,28 +86,49 @@ const PRODUCT_ID = /^P\d{3}$/;
  * `types/product.ts`, duplicated rather than imported because this script must stay runnable as
  * plain ESM over the JSON with no application code loaded.
  */
-const CATEGORY_SLUGS = [
-  "necklaces",
-  "earrings",
-  "rings",
-  "bracelets",
-  "bangles",
-  "pendants",
-  "anklets",
-  "nose-pins",
-  "watches",
-  "hair-accessories",
-  "gift-hampers",
+/**
+ * The eleven categories, each with the state
+ * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md) gives it. Duplicated
+ * from `CATEGORIES` in `types/product.ts` rather than imported, because this file must stay
+ * runnable as plain ESM over `data/products.json` with no application code loaded.
+ *
+ * **It carries `status` rather than deriving surfacing from a slug name.** This list used to be
+ * eleven bare strings with the browsable subset computed as
+ * `CATEGORY_SLUGS.filter((slug) => slug !== "gift-hampers")`, which was correct only for as long
+ * as `gift-hampers` was the one pending category and answered a question about a *name* rather
+ * than about the field ADR-055 created to answer it. Flipping that category to surfaced in
+ * `types/product.ts` produced a failure here telling you to do the thing you had just done, and a
+ * second pending category would not have been checked at all.
+ *
+ * `lib/category-vocabulary.test.ts` compares this array against `types/product.ts` on both slug
+ * and status, so the two cannot drift apart on either.
+ */
+const CATEGORIES = [
+  { slug: "necklaces", status: "surfaced" },
+  { slug: "earrings", status: "surfaced" },
+  { slug: "rings", status: "surfaced" },
+  { slug: "bracelets", status: "surfaced" },
+  { slug: "bangles", status: "surfaced" },
+  { slug: "pendants", status: "surfaced" },
+  { slug: "anklets", status: "surfaced" },
+  { slug: "nose-pins", status: "surfaced" },
+  { slug: "watches", status: "surfaced" },
+  { slug: "hair-accessories", status: "surfaced" },
+  { slug: "gift-hampers", status: "pending" },
 ];
 
+/** Every slug a product record may carry. The vocabulary. */
+const CATEGORY_SLUGS = CATEGORIES.map((category) => category.slug);
+
 /**
- * The subset a shopper can browse — `SURFACED_CATEGORIES` in `types/product.ts`. The difference
- * between this and the vocabulary is checked in **both** directions below: a surfaced category
- * with nothing in it would render an empty listing, and a pending category with something in it
- * would be a product no shopper can reach. See
- * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md).
+ * The subset a shopper can browse — `SURFACED_CATEGORIES` in `types/product.ts`, derived from the
+ * same field. The difference between this and the vocabulary is checked in **both** directions
+ * below: a surfaced category with nothing in it would render an empty listing, and a pending
+ * category with something in it would be a product no shopper can reach.
  */
-const SURFACED_CATEGORY_SLUGS = CATEGORY_SLUGS.filter((slug) => slug !== "gift-hampers");
+const SURFACED_CATEGORY_SLUGS = CATEGORIES.filter(
+  (category) => category.status === "surfaced",
+).map((category) => category.slug);
 
 const COLLECTION_TAGS = ["gifting", "anti-tarnish"];
 

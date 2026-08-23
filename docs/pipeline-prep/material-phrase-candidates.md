@@ -1,7 +1,9 @@
 # Material / plating / stone phrase candidates
 
 Source: `Latest.xlsx`, sheet `Sheet1`, single column **eCommerce Description**.
-Generated as raw extraction input for the owner-built `data/material-phrases.json`.
+Generated as raw extraction input, originally for an owner-built `data/material-phrases.json`.
+**That file was never built and is no longer planned** — [ADR-051's addendum](../decisions/ADR-051-draft-a-content-pipeline.md#addendum-2026-08-23--the-validator-exists-and-the-allow-list-gate-does-not)
+retired the allow-list gate, so this table is reference material and is read by nothing.
 
 > **This is a candidate list, not an allow-list.** Nothing in this table has been judged
 > for honesty-policy compliance, accuracy, or whether two phrases mean the same thing.
