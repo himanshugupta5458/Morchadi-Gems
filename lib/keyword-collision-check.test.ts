@@ -37,7 +37,7 @@ const publishedProducts = products.filter((product) => product.status !== "draft
 
 /**
  * A small hand-built map for the behavioural tests. The real catalogue is used separately, for
- * the backfill correctness tests below — a fixture proves the rule, the real 49 prove the
+ * the backfill correctness tests below — a fixture proves the rule, the real catalogue proves the
  * backfill, and neither job is done well by the other.
  */
 const FIXTURE_MAP: KeywordMap = {
@@ -190,12 +190,12 @@ describe("a hard collision and an advisory can coexist", () => {
   });
 });
 
-describe("the backfill against the real 49 products", () => {
+describe("the backfill against the real catalogue", () => {
   const built: KeywordMap = buildMap(products);
 
   it("reads every published product and no drafts", () => {
+    expect(publishedProducts.length).toBeGreaterThan(0);
     expect(built.productCount).toBe(publishedProducts.length);
-    expect(built.productCount).toBe(49);
   });
 
   it("indexes every published product's primary keyword", () => {

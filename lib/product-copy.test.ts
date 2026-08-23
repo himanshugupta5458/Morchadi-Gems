@@ -22,7 +22,7 @@ function approvedProducts(): typeof catalogue {
 }
 
 describe("the approved product descriptions", () => {
-  it("covers forty-five of the forty-nine pieces, with four still awaiting owner copy", () => {
+  it("covers every piece except the four still awaiting owner copy", () => {
     expect(approvedProducts()).toHaveLength(catalogue.length - AWAITING_APPROVED_COPY.size);
   });
 

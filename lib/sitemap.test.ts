@@ -50,12 +50,12 @@ describe("the sitemap", () => {
     }
   });
 
-  it("lists all 49 products, one entry each", () => {
+  it("lists every product, one entry each", () => {
     const products = getAllProducts();
-    expect(products).toHaveLength(49);
+    expect(products.length).toBeGreaterThan(0);
 
     const productUrls = urlsOf().filter((url) => url.includes("/product/"));
-    expect(productUrls).toHaveLength(49);
+    expect(productUrls).toHaveLength(products.length);
 
     for (const product of products) {
       expect(productUrls).toContain(`${PRODUCTION_ORIGIN}/product/${product.id}`);

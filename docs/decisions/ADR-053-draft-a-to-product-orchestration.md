@@ -230,3 +230,69 @@ which the mapper reads field by field. Or a category of product whose specs do n
 **Still not built, and named so it is not mistaken for done.** No Draft A object has ever been
 created in this repository; every test here runs on synthetic fixtures. `data/stone-terms.json`
 still does not exist. The mechanism is complete and has never been run against real product data.
+
+## Addendum, 2026-08-23 — one catalogue count, and synthetic ids stay out of the real range
+
+The end-to-end dry run recorded in
+[`RESULT-2026-08-23-content-pipeline-e2e.md`](../testing/RESULT-2026-08-23-content-pipeline-e2e.md)
+took a synthetic product through every stage of this pipeline. The pipeline's own logic held at all
+twelve steps. What did not hold was the scaffolding around it: appending the record — while it was
+still a **draft** — turned the gate red, and getting back to green took nine hand-edits across
+eight files that nothing in this ADR, in the skill, or in `publish-product.mjs` mentions. Two fixes
+follow, and they pull in opposite directions on purpose.
+
+### The count is asserted in exactly one place now, and it stays hardcoded there
+
+`EXPECTED_PRODUCT_COUNT` in `scripts/validate-products.mjs` is a deliberate tripwire and is
+**unchanged in kind**: still exact rather than a floor, still counting drafts, still requiring a
+person to change it on purpose. ADR-052 explains why it counts every record in the file — it is a
+check on the file, not on a surface, and a record appearing or vanishing unintentionally is exactly
+what it exists to catch. Making it derive itself from the file would have turned it into
+`catalogue.length === catalogue.length` and deleted the protection.
+
+What was wrong was that seven test files had each grown their own copy of the same number:
+
+| File | Was | Now |
+| --- | --- | --- |
+| `lib/product-schema.test.ts` | `const CATALOGUE_SIZE = 49` | `catalogue.length`, and the single-image count derives from the multi-image set rather than from `SIZE - 1` |
+| `lib/product-seo.test.ts` | `toHaveLength(49)` | a non-empty guard; the per-product loop was always the real assertion |
+| `lib/structured-data.test.ts` | `toHaveLength(49)` | a non-empty guard |
+| `lib/content-similarity.test.ts` | `toHaveLength(49)` | a non-empty guard |
+| `lib/sitemap.test.ts` | `toHaveLength(49)` twice | a non-empty guard, then `toHaveLength(products.length)` — "one entry each" was the invariant all along |
+| `lib/keyword-collision-check.test.ts` | `toBe(publishedProducts.length)` **and** `toBe(49)` | the derived assertion alone; the literal was pure duplication of the line above it |
+| `lib/product-copy.test.ts` | already derived | title only, which named a number the assertion did not |
+
+None of these was testing catalogue size. Each was iterating the catalogue and needed a guard
+against an empty array making a `for` loop pass vacuously. A non-empty guard does that job without
+claiming to know how many pieces the owner stocks.
+
+Duplicating the tripwire eight times bought no protection the one copy did not already give, and
+charged an eight-file edit for every product added. One tripwire, seven derived checks. The
+validator's failure message now names the single line to change, and says so differently depending
+on whether a record appeared or went missing, because those are opposite problems.
+
+### Synthetic product ids live in the P9xx range
+
+`lib/content-similarity-gate.test.ts` used `P050` for its "candidate not yet in the catalogue"
+fixture — the exact id this pipeline assigns next. That file scores its candidates against the
+**real** `data/products.json`, and `compareAgainstCatalogue` filters out any entry sharing the
+candidate's id. A real `P050` therefore shrank the comparison population by one silently; the test
+failed on an arithmetic mismatch rather than on anything that named the collision.
+
+It now uses a `SYNTHETIC_ID` constant set to `P900`, matching the convention
+`lib/product-status.test.ts` already followed. `lib/draft-a-to-product.test.ts` and
+`lib/publish-product.test.ts` were moved off `P050` and `P099` too. Those two are hermetic — they
+build in-memory catalogues or write into a temporary repository root, and never read the real file
+— so their ids could not collide. They were changed anyway, because a reader cannot tell a
+placeholder from a real reference when the placeholder is picked from the real range, and because
+the next person to wire one of them to the live catalogue should not have to notice.
+
+**The rule, stated so it does not have to be rediscovered:** a product id that stands for a
+fixture, in any test, is `P9xx`. `P001`–`P0xx` in a test means the real catalogue record of that
+name.
+
+### What this does not fix
+
+Adding a product still requires bumping `EXPECTED_PRODUCT_COUNT`, and that is intended. The
+difference is that it is now one line rather than eight, the failure message says which line and
+what to set it to, and the skill's step 6 says so before the gate is ever run.

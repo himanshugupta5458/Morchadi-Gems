@@ -40,7 +40,7 @@ describe("the JSON-LD script block", () => {
     expect(JSON.parse(script.textContent ?? "")).toEqual(graph);
   });
 
-  it("parses back into the graph it was given, for every one of the 49 products", () => {
+  it("parses back into the graph it was given, for every product", () => {
     for (const product of getAllProducts()) {
       const graph = buildProductSchemaGraph(product, buildProductBreadcrumb(product));
       const script = renderGraphScript(`product-schema-${product.id}`, graph);

@@ -62,7 +62,7 @@ const REMOVED_MODULES = [
 ];
 
 describe("the catalogue after the fabricated reviews were removed", () => {
-  it("carries no rating and no review field on any of the 49 records", () => {
+  it("carries no rating and no review field on any record", () => {
     const rawCatalogue = readFileSync("data/products.json", "utf8");
 
     expect(rawCatalogue).not.toContain('"rating"');

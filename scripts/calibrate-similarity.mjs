@@ -242,7 +242,7 @@ const cloneOpening = openingSentenceSimilarity(controlSource.description, contro
 const topRawPair = topByMetric.get("raw")[0];
 
 const lines = [];
-lines.push("# Similarity calibration — the 49 live products");
+lines.push(`# Similarity calibration — the ${products.length} live products`);
 lines.push("");
 lines.push("## No threshold is set here");
 lines.push("");

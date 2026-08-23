@@ -274,6 +274,17 @@ either. They stay in the draft, which is why the draft is filed rather than dele
 Append the record to `data/products.json`, keeping the file's existing formatting: two-space
 indent, trailing newline, and the field order above.
 
+**Before running the gate, bump `EXPECTED_PRODUCT_COUNT` in `scripts/validate-products.mjs`** to
+the catalogue's new length. It is an exact count rather than a floor, deliberately, so that a
+record cannot appear or vanish without someone intending it — and it counts drafts too, because it
+checks the file rather than a surface (ADR-052). Adding a record therefore fails the gate until
+this one line is updated, and that failure is correct rather than a bug.
+
+It is the **only** hardcoded catalogue count in the repository. Every count in the test suite
+derives from the file at run time, so nothing else needs touching. The validator's own failure
+message names this line and the number to set it to. See the
+[ADR-053 addendum](../../docs/decisions/ADR-053-draft-a-to-product-orchestration.md#addendum-2026-08-23--one-catalogue-count-and-synthetic-ids-stay-out-of-the-real-range).
+
 Then run the full gate — `npm run typecheck && npm run lint && npm run test:run && npm run
 validate:products && npm run build`. `validate-products.mjs` is where the record's character
 counts, price bands, image paths and keyword uniqueness are actually enforced; this skill's own

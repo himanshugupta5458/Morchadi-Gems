@@ -44,7 +44,7 @@ const SEO: ProductSeo = {
   imageAlt: "Gold-tone adjustable band ring topped with a small cubic zirconia bow",
   ogTitle: "Adjustable Bow Ring in Gold Tone",
   ogDescription: "A gold-plated band topped with a little cubic zirconia bow, made to wear every day.",
-  ogImage: "/products/P050.webp",
+  ogImage: "/products/P900.webp",
 };
 
 const CONTENT: AuthoredContent = {
@@ -55,7 +55,7 @@ const CONTENT: AuthoredContent = {
 
 function draft(overrides: Partial<DraftA> = {}): DraftA {
   return {
-    productId: "P050",
+    productId: "P900",
     sourceType: "migrated",
     category: "rings",
     subcategory: null,
@@ -65,7 +65,7 @@ function draft(overrides: Partial<DraftA> = {}): DraftA {
       attribute({ label: "Stone", value: "cubic zirconia", source: null }),
       attribute({ label: "Type", value: "adjustable open band", source: null }),
     ],
-    images: { general: ["/products/P050.webp"], variantImages: {} },
+    images: { general: ["/products/P900.webp"], variantImages: {} },
     pricing: { price: 210, mrp: 299, cost: 126, referencePrice: "₹499 (old site)" },
     personalized: false,
     suggestedCollections: [],
@@ -252,11 +252,11 @@ describe("mapImagesToMedia", () => {
 
   it("renames general to media.images and omits variantImages when empty", () => {
     const { media, issues } = mapImagesToMedia(
-      { general: ["/products/P050.webp"], variantImages: {} },
+      { general: ["/products/P900.webp"], variantImages: {} },
       [],
     );
 
-    expect(media).toEqual({ images: ["/products/P050.webp"] });
+    expect(media).toEqual({ images: ["/products/P900.webp"] });
     expect("variantImages" in media).toBe(false);
     expect(issues).toEqual([]);
   });
@@ -264,13 +264,13 @@ describe("mapImagesToMedia", () => {
   it("passes an OptionName:value key through unchanged", () => {
     const { media, issues } = mapImagesToMedia(
       {
-        general: ["/products/P050.webp"],
-        variantImages: { "Colour:Golden": "/products/P050-golden.webp" },
+        general: ["/products/P900.webp"],
+        variantImages: { "Colour:Golden": "/products/P900-golden.webp" },
       },
       [colourOption],
     );
 
-    expect(media.variantImages).toEqual({ "Colour:Golden": "/products/P050-golden.webp" });
+    expect(media.variantImages).toEqual({ "Colour:Golden": "/products/P900-golden.webp" });
     expect(issues).toEqual([]);
   });
 
@@ -345,12 +345,12 @@ describe("buildProductFromDraft", () => {
 
     expect(errors).toEqual([]);
     expect(product).toEqual({
-      id: "P050",
+      id: "P900",
       name: "Cubic Zirconia Bow Ring",
       category: "rings",
       status: "draft",
       pricing: { price: 210, mrp: 299, cost: 126 },
-      media: { images: ["/products/P050.webp"] },
+      media: { images: ["/products/P900.webp"] },
       specs: {
         material: "Gold-plated brass",
         stone: "Cubic zirconia",
@@ -376,8 +376,8 @@ describe("buildProductFromDraft", () => {
       draft: draft({
         variants: [{ optionName: "Colour", values: ["Golden", "Silver"] }],
         images: {
-          general: ["/products/P050.webp"],
-          variantImages: { "Colour:Golden": "/products/P050-golden.webp" },
+          general: ["/products/P900.webp"],
+          variantImages: { "Colour:Golden": "/products/P900-golden.webp" },
         },
         suggestedCollections: ["gifting"],
       }),
@@ -389,7 +389,7 @@ describe("buildProductFromDraft", () => {
     expect(product?.options).toEqual([
       { name: "Colour", type: "swatch", values: ["Golden", "Silver"], default: "Golden" },
     ]);
-    expect(product?.media.variantImages).toEqual({ "Colour:Golden": "/products/P050-golden.webp" });
+    expect(product?.media.variantImages).toEqual({ "Colour:Golden": "/products/P900-golden.webp" });
     expect(product?.collections).toEqual(["gifting"]);
   });
 
@@ -461,7 +461,7 @@ describe("checkCandidatePrimaryKeyword", () => {
   });
 
   it("blocks on an unpublished record's primary keyword, which the committed map cannot see", () => {
-    const catalogue = [record("P050", "draft", "gold-plated bow ring")];
+    const catalogue = [record("P900", "draft", "gold-plated bow ring")];
     const result = checkCandidatePrimaryKeyword("gold-plated bow ring", committed, catalogue);
 
     expect(result.published.blocked).toBe(false);
@@ -470,8 +470,8 @@ describe("checkCandidatePrimaryKeyword", () => {
   });
 
   it("ignores the product being written for, so a rewrite does not collide with itself", () => {
-    const catalogue = [record("P050", "draft", "gold-plated bow ring")];
-    const result = checkCandidatePrimaryKeyword("gold-plated bow ring", committed, catalogue, "P050");
+    const catalogue = [record("P900", "draft", "gold-plated bow ring")];
+    const result = checkCandidatePrimaryKeyword("gold-plated bow ring", committed, catalogue, "P900");
     expect(result.blocked).toBe(false);
   });
 

@@ -25,7 +25,7 @@ const SEO = {
   imageAlt: "Gold-tone adjustable band ring topped with a small cubic zirconia bow",
   ogTitle: "Adjustable Bow Ring in Gold Tone",
   ogDescription: "A gold-plated band topped with a little cubic zirconia bow.",
-  ogImage: "/products/P050.webp",
+  ogImage: "/products/P900.webp",
 };
 
 function product(id: string, status: string, primaryKeyword = SEO.primaryKeyword) {
@@ -115,8 +115,8 @@ afterEach(() => {
 
 describe("activateProduct", () => {
   it("flips draft to active and leaves the input array untouched", () => {
-    const catalogue = [product("P001", "active", "gold-plated initial ring"), product("P050", "draft")];
-    const result = activateProduct(catalogue, "P050");
+    const catalogue = [product("P001", "active", "gold-plated initial ring"), product("P900", "draft")];
+    const result = activateProduct(catalogue, "P900");
 
     expect(result.error).toBeNull();
     expect(result.catalogue).not.toBeNull();
@@ -125,21 +125,21 @@ describe("activateProduct", () => {
   });
 
   it("changes nothing but the status", () => {
-    const before = product("P050", "draft");
-    const { catalogue } = activateProduct([before], "P050");
+    const before = product("P900", "draft");
+    const { catalogue } = activateProduct([before], "P900");
 
     expect(catalogue).not.toBeNull();
     expect((catalogue as (typeof before)[])[0]).toEqual({ ...before, status: "active" });
   });
 
   it("refuses an id that is not in the catalogue", () => {
-    const result = activateProduct([product("P050", "draft")], "P099");
+    const result = activateProduct([product("P900", "draft")], "P901");
     expect(result.catalogue).toBeNull();
     expect(result.error).toContain("not in data/products.json");
   });
 
   it("refuses a product that is already active", () => {
-    const result = activateProduct([product("P050", "active")], "P050");
+    const result = activateProduct([product("P900", "active")], "P900");
     expect(result.catalogue).toBeNull();
     expect(result.error).toContain("already active");
   });
@@ -147,23 +147,23 @@ describe("activateProduct", () => {
 
 describe("publishProduct", () => {
   it("flips the status and moves the draft to completed", () => {
-    seedRepository([product("P050", "draft")], { P050: readyDraft("P050") });
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(true);
     expect(result.errors).toEqual([]);
-    expect(statusOf("P050")).toBe("active");
-    expect(existsSync(draftFile("P050"))).toBe(false);
-    expect(existsSync(completedFile("P050"))).toBe(true);
-    expect(readJson(completedFile("P050"))).toEqual(readyDraft("P050"));
+    expect(statusOf("P900")).toBe("active");
+    expect(existsSync(draftFile("P900"))).toBe(false);
+    expect(existsSync(completedFile("P900"))).toBe(true);
+    expect(readJson(completedFile("P900"))).toEqual(readyDraft("P900"));
   });
 
   it("leaves every other product exactly as it was", () => {
     const others = [product("P001", "active", "gold-plated initial ring"), product("P002", "draft", "glass locket necklace")];
-    seedRepository([...others, product("P050", "draft")], { P050: readyDraft("P050") });
+    seedRepository([...others, product("P900", "draft")], { P900: readyDraft("P900") });
 
-    publishProduct("P050", { repoRoot: root });
+    publishProduct("P900", { repoRoot: root });
     const catalogue = readJson(join(root, "data", "products.json")) as unknown[];
 
     expect(catalogue).toHaveLength(3);
@@ -172,19 +172,19 @@ describe("publishProduct", () => {
   });
 
   it("writes the catalogue back in the repository's own formatting", () => {
-    const catalogue = [product("P050", "draft")];
-    seedRepository(catalogue, { P050: readyDraft("P050") });
+    const catalogue = [product("P900", "draft")];
+    seedRepository(catalogue, { P900: readyDraft("P900") });
 
-    publishProduct("P050", { repoRoot: root });
+    publishProduct("P900", { repoRoot: root });
     const written = readFileSync(join(root, "data", "products.json"), "utf8");
 
     expect(written).toBe(serialiseCatalogue([{ ...catalogue[0], status: "active" }]));
   });
 
   it("regenerates the keyword map, which the newly published product now appears in", () => {
-    seedRepository([product("P050", "draft")], { P050: readyDraft("P050") });
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
 
-    publishProduct("P050", { repoRoot: root });
+    publishProduct("P900", { repoRoot: root });
     const map = readJson(join(root, "data", "keyword-map.json")) as {
       productCount: number;
       primary: Record<string, string[]>;
@@ -192,87 +192,87 @@ describe("publishProduct", () => {
     };
 
     expect(map.productCount).toBe(1);
-    expect(map.primary["gold-plated bow ring"]).toEqual(["P050"]);
-    expect(map.secondary["adjustable ring for women"]).toEqual(["P050"]);
+    expect(map.primary["gold-plated bow ring"]).toEqual(["P900"]);
+    expect(map.secondary["adjustable ring for women"]).toEqual(["P900"]);
   });
 
   it("refuses a draft whose publish-readiness check no longer passes, changing nothing", () => {
-    const unconfirmed = readyDraft("P050");
+    const unconfirmed = readyDraft("P900");
     unconfirmed.attributes[0].confirmed = false;
-    seedRepository([product("P050", "draft")], { P050: unconfirmed });
+    seedRepository([product("P900", "draft")], { P900: unconfirmed });
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(false);
     expect(result.errors.join(" ")).toContain("confirmed");
-    expect(statusOf("P050")).toBe("draft");
-    expect(existsSync(draftFile("P050"))).toBe(true);
+    expect(statusOf("P900")).toBe("draft");
+    expect(existsSync(draftFile("P900"))).toBe(true);
     expect(existsSync(join(root, "data", "keyword-map.json"))).toBe(false);
   });
 
   it("refuses a draft whose price was removed after the record was built", () => {
-    const unpriced = readyDraft("P050");
+    const unpriced = readyDraft("P900");
     unpriced.pricing.price = null as unknown as number;
-    seedRepository([product("P050", "draft")], { P050: unpriced });
+    seedRepository([product("P900", "draft")], { P900: unpriced });
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(false);
-    expect(statusOf("P050")).toBe("draft");
+    expect(statusOf("P900")).toBe("draft");
   });
 
   it("refuses when the draft file is missing, rather than publishing an unsourced record", () => {
-    seedRepository([product("P050", "draft")], {});
+    seedRepository([product("P900", "draft")], {});
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(false);
     expect(result.errors[0]).toContain("does not exist");
-    expect(statusOf("P050")).toBe("draft");
+    expect(statusOf("P900")).toBe("draft");
   });
 
   it("refuses a second publish of the same product", () => {
-    seedRepository([product("P050", "draft")], { P050: readyDraft("P050") });
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
 
-    expect(publishProduct("P050", { repoRoot: root }).published).toBe(true);
-    const second = publishProduct("P050", { repoRoot: root });
+    expect(publishProduct("P900", { repoRoot: root }).published).toBe(true);
+    const second = publishProduct("P900", { repoRoot: root });
 
     expect(second.published).toBe(false);
-    expect(existsSync(completedFile("P050"))).toBe(true);
+    expect(existsSync(completedFile("P900"))).toBe(true);
   });
 
   it("refuses when publishing would give one primary keyword two owners", () => {
     seedRepository(
-      [product("P001", "active"), product("P050", "draft")],
-      { P050: readyDraft("P050") },
+      [product("P001", "active"), product("P900", "draft")],
+      { P900: readyDraft("P900") },
     );
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(false);
     expect(result.errors[0]).toContain("two owners");
-    expect(statusOf("P050")).toBe("draft");
-    expect(existsSync(draftFile("P050"))).toBe(true);
+    expect(statusOf("P900")).toBe("draft");
+    expect(existsSync(draftFile("P900"))).toBe(true);
   });
 
   it("leaves the similarity report behind and says so", () => {
-    seedRepository([product("P050", "draft")], { P050: readyDraft("P050") });
-    writeJson(join(root, "content-pipeline", "drafts", "P050-similarity.json"), { threshold: null });
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
+    writeJson(join(root, "content-pipeline", "drafts", "P900-similarity.json"), { threshold: null });
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.published).toBe(true);
-    expect(result.warnings.join(" ")).toContain("P050-similarity.json");
-    expect(existsSync(join(root, "content-pipeline", "drafts", "P050-similarity.json"))).toBe(true);
+    expect(result.warnings.join(" ")).toContain("P900-similarity.json");
+    expect(existsSync(join(root, "content-pipeline", "drafts", "P900-similarity.json"))).toBe(true);
   });
 
   it("names the row the owner has to write by hand", () => {
-    seedRepository([product("P050", "draft")], { P050: readyDraft("P050") });
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
 
-    const result = publishProduct("P050", { repoRoot: root });
+    const result = publishProduct("P900", { repoRoot: root });
 
     expect(result.name).toBe("Cubic Zirconia Bow Ring");
     expect(result.category).toBe("rings");
-    expect(result.movedTo).toBe("content-pipeline/completed/P050.json");
+    expect(result.movedTo).toBe("content-pipeline/completed/P900.json");
   });
 });

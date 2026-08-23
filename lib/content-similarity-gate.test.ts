@@ -32,12 +32,23 @@ const NEIGHBOURS: SimilarityInput[] = [
   ),
 ];
 
+/**
+ * P900 rather than an id near the real range, and this matters more here than in a hermetic
+ * fixture: the candidates below are scored against the REAL catalogue, and
+ * `compareAgainstCatalogue` filters out `entry.id === candidate.id`. A synthetic id that a real
+ * product later takes would silently shrink the comparison population by one rather than fail
+ * loudly. This file used P050 until the end-to-end run of 2026-08-23 added a real P050 and the
+ * count assertion below broke. Keep synthetic ids in the P9xx range, as
+ * `lib/product-status.test.ts` does. See the ADR-053 addendum.
+ */
+const SYNTHETIC_ID = "P900";
+
 /** Word-for-word the same as P001. Nothing scores higher than this, so it is the ceiling case. */
-const VERBATIM_COPY = entry("P050", CATALOGUE_DESCRIPTION);
+const VERBATIM_COPY = entry(SYNTHETIC_ID, CATALOGUE_DESCRIPTION);
 
 /** Shares nothing but function words with either neighbour. */
 const ORIGINAL = entry(
-  "P050",
+  SYNTHETIC_ID,
   "Sixteen lacquered bangles arrive as a stack, each one thin enough that the whole set weighs less than a single kada.",
 );
 
@@ -143,7 +154,7 @@ describe("the gate with a threshold set", () => {
 
   it("blocks on any one of the three measures, not only the raw one", () => {
     const templated = entry(
-      "P050",
+      SYNTHETIC_ID,
       "A slim silver-tone band with a softly waved face carrying the single motif you choose. The open back adjusts to whichever finger you want it on.",
     );
     const report = evaluateSimilarityGate(templated, NEIGHBOURS, 0.5);

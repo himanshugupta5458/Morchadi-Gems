@@ -15,6 +15,16 @@ const KEYWORD_MAP_PATH = join(REPO_ROOT, "data", "keyword-map.json");
 /**
  * The owner stocks forty-nine pieces. Exact rather than a floor, so a product cannot be added
  * or lost without someone changing this line on purpose. Bump it when real stock arrives.
+ *
+ * THIS IS THE ONLY HARDCODED CATALOGUE COUNT LEFT IN THE REPOSITORY, and it is deliberate.
+ * Every count in the test suite is derived from the file at run time, because duplicating the
+ * tripwire across eight files bought no protection and made adding a product an eight-file
+ * chore — the reasoning is in the ADR-053 addendum. Being the single place a product count is
+ * asserted is what makes this line meaningful: a record appearing or vanishing without anyone
+ * intending it stops here, whether it is a draft or active, because this is a check on the file
+ * rather than on a surface (ADR-052).
+ *
+ * So the gate failing after you add a product is CORRECT, not a bug. Bump the number.
  */
 const EXPECTED_PRODUCT_COUNT = 49;
 
@@ -215,7 +225,9 @@ if (!Array.isArray(catalogue)) process.exit(1);
 
 check(
   catalogue.length === EXPECTED_PRODUCT_COUNT,
-  `expected exactly ${EXPECTED_PRODUCT_COUNT} products, found ${catalogue.length}`,
+  catalogue.length > EXPECTED_PRODUCT_COUNT
+    ? `expected exactly ${EXPECTED_PRODUCT_COUNT} products, found ${catalogue.length}. If you meant to add a product, this is the one line to update: set EXPECTED_PRODUCT_COUNT to ${catalogue.length} in scripts/validate-products.mjs. Nothing else in the repository hardcodes a catalogue count`
+    : `expected exactly ${EXPECTED_PRODUCT_COUNT} products, found ${catalogue.length}. A record has gone missing from data/products.json — check the diff before touching EXPECTED_PRODUCT_COUNT`,
 );
 
 const seenIds = new Set();

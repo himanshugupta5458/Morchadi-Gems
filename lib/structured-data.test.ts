@@ -452,7 +452,7 @@ describe("the Product schema", () => {
     }
   });
 
-  it("claims no rating and no review on any of the 49 products", () => {
+  it("claims no rating and no review on any product", () => {
     for (const product of getAllProducts()) {
       const schema = buildProductSchema(product);
 
@@ -483,9 +483,9 @@ describe("the Product schema", () => {
     expect(additionalProperty.every((entry) => entry.value.length > 0)).toBe(true);
   });
 
-  it("gives every one of the 49 products a well-formed, parseable graph", () => {
+  it("gives every product a well-formed, parseable graph, however many there are", () => {
     const products = getAllProducts();
-    expect(products).toHaveLength(49);
+    expect(products.length).toBeGreaterThan(0);
 
     for (const product of products) {
       const graph = buildProductSchemaGraph(product, buildProductBreadcrumb(product));
