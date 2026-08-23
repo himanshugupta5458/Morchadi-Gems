@@ -12,6 +12,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "validate:products": "node scripts/validate-products.mjs",
+    "backfill:keyword-map": "node scripts/backfill-keyword-map.mjs",
     "seed:admin": "node scripts/seed-admin.mjs",
     "generate:placeholders": "node scripts/generate-placeholders.mjs",
     "generate:brand-assets": "node scripts/generate-brand-assets.mjs"

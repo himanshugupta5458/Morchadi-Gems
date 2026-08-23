@@ -36,3 +36,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Draft A content pipeline working files (ADR-051). Unpublished and unconfirmed product data —
+# treated like .env.local rather than like source. The three README.md files stay tracked so a
+# fresh clone gets the folder structure; git will not descend into an ignored *directory*, which
+# is why the contents are ignored rather than the directory itself. Recommendation pending owner
+# confirmation — see docs/pipeline-prep/README.md.
+/content-pipeline/*
+!/content-pipeline/README.md
+!/content-pipeline/drafts/
+!/content-pipeline/completed/
+/content-pipeline/drafts/*
+!/content-pipeline/drafts/README.md
+/content-pipeline/completed/*
+!/content-pipeline/completed/README.md
+Latest.xlsx

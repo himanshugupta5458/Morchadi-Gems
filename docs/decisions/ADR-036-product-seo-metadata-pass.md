@@ -183,3 +183,92 @@ than the record.
 **Emit `<meta name="keywords">` since the keywords are now stored.** Rejected. Google has
 ignored it since 2009 and it publishes the targeting for a competitor to read. The keywords
 earn their place in the record by being what the collision rule is enforced against.
+
+
+## Addendum, 2026-08-23 — the site-wide keyword map now exists
+
+*Prompt 68. This record's body above is unchanged; ADRs are immutable once accepted, and this
+section states only what has moved.*
+
+### The gap this closes
+
+`.claude/skills/meta-skills.md` enforces its collision rule against a **ledger** — a per-batch
+running list the writer keeps and consults before each product. That works inside one sitting
+and answers nothing across sittings. The body above stores `primaryKeyword` and
+`secondaryKeywords` in the record precisely so the rule has something durable to check against,
+but nothing ever assembled them into a site-wide view, and
+[`docs/PROJECT-STATE.md`](../PROJECT-STATE.md) §11 recorded the consequence: *"A standalone
+site-wide keyword-map file was not found in the repository, so where it currently lives is
+**[VERIFY WITH OWNER]**."* It lived nowhere. This addendum builds it.
+
+| Artefact | What it is |
+| --- | --- |
+| `data/keyword-map.json` | The map. `{ keyword: [productId] }`, twice: once for primary keywords, once for secondary |
+| `scripts/backfill-keyword-map.mjs` | Builds it from `data/products.json`. `npm run backfill:keyword-map` |
+| `lib/keyword-collision-check.ts` | Checks one candidate `primaryKeyword` against the map |
+
+### The alternative this record rejected, and why this is not it
+
+The Alternatives section above rejects *"hold the metadata in a lookup keyed by product id, in
+`lib/`"* on the grounds that **a parallel map is a second file to keep in step with
+`products.json`.** That objection is correct and it applies here, so it is answered rather than
+ignored.
+
+Two things make this a different proposition. First, the direction is reversed: that alternative
+proposed the map as the *place metadata lives*, replacing the record. This map is **derived** —
+`data/products.json` remains the single source of truth for every keyword, and the map holds no
+fact the records do not already carry. Second, the drift is closed mechanically.
+`scripts/validate-products.mjs` rebuilds the map from the catalogue on every gate run and
+compares it byte for byte with the committed file; a mismatch is a **hard failure** naming the
+one command that fixes it. The map cannot silently disagree with the catalogue, because
+disagreeing fails the build.
+
+What justifies a derived file at all is that the collision rule is the one question in this
+record that a *single product record cannot answer*. Everything else the validator checks —
+lengths, honesty, field-clones — is a property of one product. "Is this keyword taken" is a
+property of the catalogue.
+
+### Hard versus advisory
+
+The rule in the skill says no two products may share a `primaryKeyword` and says **nothing about
+secondary terms.** That silence is deliberate and is now encoded rather than left to a reader:
+
+| Condition | Severity |
+| --- | --- |
+| The candidate is another published product's `primaryKeyword` | **Hard — blocks** |
+| The candidate is another product's secondary keyword | Advisory |
+| The candidate differs from an existing keyword only by word order or punctuation | Advisory |
+
+Only the first blocks. Two rings genuinely are both adjustable, and forbidding that overlap
+would push a writer into inventing a distinction the products do not have, which is the failure
+[ADR-018](ADR-018-honest-product-description.md) exists to prevent. A near-match is advisory for
+the reason [ADR-051](ADR-051-draft-a-content-pipeline.md) gives for refusing fuzzy matching
+elsewhere: *a fuzzy match is an answer nobody gave.* The loose comparison here is a stated,
+mechanical rule — punctuation dropped, word order discarded, a trailing plural removed from words
+long enough for that to be safe — and it exists to point a writer somewhere, never to decide.
+
+Case is not a difference. `Gold-Plated Ring` and `gold-plated ring` are one keyword competing
+with itself, so the hard check compares canonicalised strings.
+
+### Drafts do not reserve keywords
+
+A `status: "draft"` product ([ADR-052](ADR-052-product-status-field.md)) is excluded from the
+map. An unpublished record is not competing for a search result, and letting it hold a keyword
+would block a real product on behalf of one nobody can reach. A draft's keyword becomes live
+when the product does.
+
+### The state of the existing 49
+
+**No hard collision exists.** All 49 published products carry distinct primary keywords, and no
+product's primary keyword appears as another product's secondary term. The pass that wrote them
+held its ledger correctly.
+
+Advisory findings, reported on every gate run and **not fixed**, because which of two products
+should own a shared term is an owner and merchandising decision rather than a code fix:
+
+- **9 secondary keywords claimed by more than one product**, spanning 15 products. The largest is
+  `adjustable ring for women` on P004, P007 and P019. `set of sixteen bangles` and
+  `lacquered glass bangles` are both shared by P042 and P043, which are the same piece in two
+  colourways.
+- **1 near-match pair:** `gold-plated thin ring` (P015) and `thin gold-plated ring` (P017),
+  identical in words and different in order. Both are secondary terms, so neither blocks.

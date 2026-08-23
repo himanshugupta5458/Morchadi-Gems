@@ -1,10 +1,16 @@
 import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import {
+  KEYWORD_MAP_RELATIVE_PATH,
+  buildKeywordMap,
+  serialiseKeywordMap,
+} from "./backfill-keyword-map.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
 const PUBLIC_DIR = join(REPO_ROOT, "public");
+const KEYWORD_MAP_PATH = join(REPO_ROOT, "data", "keyword-map.json");
 
 /**
  * The owner stocks forty-nine pieces. Exact rather than a floor, so a product cannot be added
@@ -173,6 +179,8 @@ const descriptionAdvisories = [];
  * cost-against-price is an advisory. See ADR-040.
  */
 const marginAdvisories = [];
+const secondaryKeywordAdvisories = [];
+const nearMatchKeywordAdvisories = [];
 
 function check(condition, message) {
   if (!condition) failures.push(message);
@@ -788,6 +796,87 @@ for (const product of catalogue) {
   );
 }
 
+/**
+ * The site-wide keyword map is **derived** from this catalogue, so the only way it can be wrong
+ * is by being stale. ADR-036 rejected a parallel metadata file precisely because a second copy
+ * drifts; the answer here is not discipline but this check — the map is rebuilt from the records
+ * above and compared byte for byte, so an edited keyword with an un-regenerated map fails the
+ * gate rather than quietly answering a collision question against yesterday's catalogue.
+ *
+ * Duplicate primary keywords are already a hard failure in the loop above, checked against the
+ * records themselves rather than against the map. This section adds only what a site-wide view
+ * can see: the map's freshness, and the overlaps that are advisory by design.
+ */
+function normaliseKeywordLoosely(keyword) {
+  return keyword
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .split(" ")
+    .filter((word) => word.length > 0)
+    .map((word) =>
+      word.length >= 4 && word.endsWith("s") && !word.endsWith("ss")
+        ? word.slice(0, -1)
+        : word,
+    )
+    .sort()
+    .join(" ");
+}
+
+const expectedKeywordMap = buildKeywordMap(catalogue);
+
+if (!existsSync(KEYWORD_MAP_PATH)) {
+  check(
+    false,
+    `${KEYWORD_MAP_RELATIVE_PATH} does not exist — run: npm run backfill:keyword-map`,
+  );
+} else {
+  const onDisk = readFileSync(KEYWORD_MAP_PATH, "utf8");
+  check(
+    onDisk === serialiseKeywordMap(expectedKeywordMap),
+    `${KEYWORD_MAP_RELATIVE_PATH} is stale — it does not match the keywords in data/products.json. Run: npm run backfill:keyword-map`,
+  );
+}
+
+for (const [keyword, ids] of Object.entries(expectedKeywordMap.secondary)) {
+  if (ids.length > 1) {
+    secondaryKeywordAdvisories.push(`"${keyword}" shared by ${ids.join(", ")}`);
+  }
+}
+
+const everyKeywordEntry = [
+  ...Object.entries(expectedKeywordMap.primary).map(([keyword, ids]) => ({
+    keyword,
+    ids,
+    field: "primaryKeyword",
+  })),
+  ...Object.entries(expectedKeywordMap.secondary).map(([keyword, ids]) => ({
+    keyword,
+    ids,
+    field: "secondaryKeywords",
+  })),
+];
+
+for (let left = 0; left < everyKeywordEntry.length; left += 1) {
+  for (let right = left + 1; right < everyKeywordEntry.length; right += 1) {
+    const first = everyKeywordEntry[left];
+    const second = everyKeywordEntry[right];
+    if (first.keyword === second.keyword) continue;
+    if (
+      normaliseKeywordLoosely(first.keyword) !== normaliseKeywordLoosely(second.keyword)
+    ) {
+      continue;
+    }
+    const sharesEveryProduct =
+      first.ids.length === second.ids.length &&
+      first.ids.every((id) => second.ids.includes(id));
+    if (sharesEveryProduct) continue;
+
+    nearMatchKeywordAdvisories.push(
+      `"${first.keyword}" (${first.field}, ${first.ids.join(", ")}) and "${second.keyword}" (${second.field}, ${second.ids.join(", ")}) differ only by word order or punctuation`,
+    );
+  }
+}
+
 check(
   seenIds.size === catalogue.length,
   `ids are not unique: ${catalogue.length} products but ${seenIds.size} distinct ids`,
@@ -859,6 +948,7 @@ console.log("\nSearch and social metadata");
 console.log(`  with seo block     ${catalogue.filter((product) => isPlainObject(product?.seo)).length}/${catalogue.length}`);
 console.log(`  unique metaTitles  ${seenMetaTitles.size}`);
 console.log(`  unique keywords    ${seenPrimaryKeywords.size}`);
+console.log(`  secondary keywords ${Object.keys(expectedKeywordMap.secondary).length}`);
 console.log(`  price-dated copy   ${pricedMetadataIds.length}`);
 console.log("\nMargin (cost is server-only, never shipped to a browser)");
 console.log(`  with cost          ${costedCount}/${catalogue.length}`);
@@ -898,6 +988,20 @@ if (descriptionAdvisories.length > 0) {
     `\nADVISORY — ${descriptionAdvisories.length} description(s) outside the house word range. Four products are still awaiting owner copy; see docs/CATALOGUE-DATA-TODO.md:`,
   );
   for (const advisory of descriptionAdvisories) console.warn(`  - ${advisory}`);
+}
+
+if (secondaryKeywordAdvisories.length > 0) {
+  console.warn(
+    `\nADVISORY — ${secondaryKeywordAdvisories.length} secondary keyword(s) claimed by more than one product. Overlap is permitted by the collision rule and is usually correct; only a duplicate PRIMARY keyword is a failure:`,
+  );
+  for (const advisory of secondaryKeywordAdvisories) console.warn(`  - ${advisory}`);
+}
+
+if (nearMatchKeywordAdvisories.length > 0) {
+  console.warn(
+    `\nADVISORY — ${nearMatchKeywordAdvisories.length} keyword pair(s) differ only by word order or punctuation. Not a collision; worth a look if the products are close:`,
+  );
+  for (const advisory of nearMatchKeywordAdvisories) console.warn(`  - ${advisory}`);
 }
 
 if (pricedMetadataIds.length > 0) {

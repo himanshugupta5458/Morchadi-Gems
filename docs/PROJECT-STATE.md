@@ -480,6 +480,17 @@ Today this is **manual**: a human runs the skills and the results are committed.
 is v2 work. A standalone site-wide keyword-map file was not found in the repository, so where it
 currently lives is **[VERIFY WITH OWNER]**.
 
+> **Resolved, 2026-08-23 (prompt 68).** It lived nowhere, and now it lives at
+> **`data/keyword-map.json`** — derived from `data/products.json` by
+> `scripts/backfill-keyword-map.mjs` (`npm run backfill:keyword-map`), queried by
+> `lib/keyword-collision-check.ts`, and rebuilt-and-compared by `scripts/validate-products.mjs`
+> on every gate run so it cannot go stale. An exact match against another published product's
+> `primaryKeyword` is a hard block; secondary overlap and near-matches are advisory. **No hard
+> collision exists among the 49** — see the
+> [ADR-036 addendum](decisions/ADR-036-product-seo-metadata-pass.md#addendum-2026-08-23--the-site-wide-keyword-map-now-exists).
+> The skill's per-batch ledger is unchanged and still governs a single writing session; the map
+> is what makes the rule answerable *between* sessions.
+
 ---
 
 ## 12. Working conventions
