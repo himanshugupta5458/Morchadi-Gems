@@ -88,6 +88,7 @@ purpose.
 | *(no plan — content and data correction)* | [2026-08-19](RESULT-2026-08-19-catalogue-content-pass.md) — catalogue content pass, 15/15 pass, 747/747 suite |
 | *(no plan — metadata pass)* | [2026-08-19](RESULT-2026-08-19-product-seo-metadata.md) — per-product search and social metadata for all 49, 762/762 suite |
 | *(no plan — live-site audit)* | [2026-08-19](RESULT-2026-08-19-seo-audit-round-three.md) — third-round SEO audit, no code changed |
+| *(no plan — live-site audit)* | [2026-08-22](RESULT-2026-08-22-seo-audit-round-four.md) — fourth-round SEO audit, 75.7/100, no Critical confirmed, the round-three return-policy finding withdrawn on all-49 evidence, no code changed |
 | *(no plan — schema verification)* | [2026-08-20](RESULT-2026-08-20-orders-crm-schema.md) — the orders/CRM migration applied and inspected in Postgres, `pricing.cost` proven absent from the built bundle, 814/814 suite |
 | [PLAN-admin-auth.md](PLAN-admin-auth.md) | [2026-08-20](RESULT-2026-08-20-admin-auth.md) — admin login, sessions and subdomain routing, 73/73 pass, two defects found live and fixed, 895/895 suite |
 | [PLAN-admin-auth.md](PLAN-admin-auth.md) — *Seed script prompts* | [2026-08-20](RESULT-2026-08-20-seed-admin-prompt.md) — the hidden password prompts made visible again, 20/20 pass, the regression test proven to fail on the old code, 907/907 suite |

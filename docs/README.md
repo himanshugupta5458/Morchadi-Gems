@@ -11,6 +11,7 @@ before finishing. See [`CLAUDE.md`](../CLAUDE.md) for the full rule.
 | [`progress/`](progress/) | `BUILD_LOG.md`, the running record of what each prompt built |
 | [`logs/`](logs/) | Diagnosis and error-resolution logs — symptom, root cause, fix |
 | [`testing/`](testing/) | Test plans and their results |
+| [`pipeline-prep/`](pipeline-prep/) | Raw extraction output from bulk content exports — candidate lists the owner reads before deciding, never an input any code reads |
 
 Each folder has its own `README.md` with its file-naming convention. Read it before adding
 a file.

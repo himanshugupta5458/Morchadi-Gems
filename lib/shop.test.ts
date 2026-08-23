@@ -59,6 +59,7 @@ function productFixture(overrides: Partial<Product> = {}): Product {
     id: "fx-001",
     name: "Fixture Piece",
     category: "rings",
+    status: "active",
     pricing: { price: 1499, mrp: 1999, cost: 899 },
     media: { images: [] },
     specs: { material: "Brass" },

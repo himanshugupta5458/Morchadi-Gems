@@ -129,6 +129,7 @@ function buildOptionControlsShowcase(images: string[]): Product {
     id: "style-guide-showcase",
     name: "Option Controls Showcase",
     category: "rings",
+    status: "active",
     pricing: { price: 999, mrp: 1499, cost: 599 },
     media: { images },
     options: SHOWCASE_OPTIONS,

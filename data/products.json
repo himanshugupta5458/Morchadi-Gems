@@ -3,6 +3,7 @@
     "id": "P001",
     "name": "Wave Band Initial Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 299,
@@ -80,6 +81,7 @@
     "id": "P002",
     "name": "Teardrop Glass Locket Necklace",
     "category": "necklaces",
+    "status": "active",
     "pricing": {
       "price": 450,
       "mrp": 999,
@@ -127,6 +129,7 @@
     "id": "P003",
     "name": "Heart Floating Locket with Birthstone Charms",
     "category": "necklaces",
+    "status": "active",
     "pricing": {
       "price": 450,
       "mrp": 999,
@@ -170,6 +173,7 @@
     "id": "P004",
     "name": "Heart Crystal Adjustable Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 499,
       "mrp": 799,
@@ -213,6 +217,7 @@
     "id": "P005",
     "name": "Silver-Tone Initial Signet Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 299,
@@ -287,6 +292,7 @@
     "id": "P006",
     "name": "Floating Locket Pendant",
     "category": "pendants",
+    "status": "active",
     "pricing": {
       "price": 450,
       "mrp": 450,
@@ -343,6 +349,7 @@
     "id": "P007",
     "name": "Hug Embrace Open Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -386,6 +393,7 @@
     "id": "P008",
     "name": "Silver-Tone Bow Twist Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 210,
@@ -429,6 +437,7 @@
     "id": "P009",
     "name": "Watch Dial Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -472,6 +481,7 @@
     "id": "P010",
     "name": "Mini Watch Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 420,
@@ -529,6 +539,7 @@
     "id": "P011",
     "name": "Love Knot Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 599,
@@ -572,6 +583,7 @@
     "id": "P012",
     "name": "Clear Heart Statement Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 499,
       "mrp": 799,
@@ -615,6 +627,7 @@
     "id": "P013",
     "name": "Pink Baguette Stacking Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 349,
       "mrp": 699,
@@ -658,6 +671,7 @@
     "id": "P014",
     "name": "Emerald-Green Baguette Stacking Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 349,
       "mrp": 699,
@@ -701,6 +715,7 @@
     "id": "P015",
     "name": "Red Solitaire Thread Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 399,
@@ -744,6 +759,7 @@
     "id": "P016",
     "name": "Pink Solitaire Thread Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 399,
@@ -787,6 +803,7 @@
     "id": "P017",
     "name": "Clear Solitaire Thread Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 399,
@@ -830,6 +847,7 @@
     "id": "P018",
     "name": "Green Solitaire Thread Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 399,
@@ -873,6 +891,7 @@
     "id": "P019",
     "name": "CZ Bow Adjustable Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 599,
@@ -916,6 +935,7 @@
     "id": "P020",
     "name": "Gold Ribbon Bow Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 130,
       "mrp": 599,
@@ -959,6 +979,7 @@
     "id": "P021",
     "name": "Rainbow Baguette Eternity Ring",
     "category": "rings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 599,
@@ -1002,6 +1023,7 @@
     "id": "P022",
     "name": "Vintage Gold Beaded Bracelet Watch",
     "category": "watches",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1048,6 +1070,7 @@
     "id": "P023",
     "name": "Traditional Meenakari Bracelet Watch",
     "category": "watches",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1094,6 +1117,7 @@
     "id": "P024",
     "name": "Multicolour CZ Cluster Studs",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 250,
@@ -1137,6 +1161,7 @@
     "id": "P025",
     "name": "Silver-Plated Pink Leaf Studs",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 350,
@@ -1180,6 +1205,7 @@
     "id": "P026",
     "name": "Silver-Plated Blue Floral Studs",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 350,
@@ -1223,6 +1249,7 @@
     "id": "P027",
     "name": "Gold-Plated Mint Green Floral Studs",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 350,
@@ -1266,6 +1293,7 @@
     "id": "P028",
     "name": "Gold-Plated Pink Flower Studs",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 350,
@@ -1309,6 +1337,7 @@
     "id": "P029",
     "name": "Delicate Pink Petal Floral Earrings",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 250,
@@ -1352,6 +1381,7 @@
     "id": "P030",
     "name": "Gold-Plated Round CZ Studs with Square Centre",
     "category": "earrings",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 350,
@@ -1395,6 +1425,7 @@
     "id": "P031",
     "name": "Silver-Plated Floral Teardrop Nath",
     "category": "nose-pins",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 249,
@@ -1439,6 +1470,7 @@
     "id": "P032",
     "name": "Gold Peacock Nath with Pearl Drop",
     "category": "nose-pins",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 249,
@@ -1483,6 +1515,7 @@
     "id": "P033",
     "name": "Gold Peacock Nath with Clear Stones",
     "category": "nose-pins",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 249,
@@ -1527,6 +1560,7 @@
     "id": "P034",
     "name": "Gold Minimalist Stone Nath",
     "category": "nose-pins",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 249,
@@ -1571,6 +1605,7 @@
     "id": "P035",
     "name": "Silver-Plated Floral Cluster Nath",
     "category": "nose-pins",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 299,
@@ -1615,6 +1650,7 @@
     "id": "P036",
     "name": "Orange Enamel Floral Kada",
     "category": "bracelets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1660,6 +1696,7 @@
     "id": "P037",
     "name": "Pink Flower Bracelet",
     "category": "bracelets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1706,6 +1743,7 @@
     "id": "P038",
     "name": "Multicolour Tulip Bracelet",
     "category": "bracelets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1752,6 +1790,7 @@
     "id": "P039",
     "name": "Pink Tulip Bracelet",
     "category": "bracelets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1798,6 +1837,7 @@
     "id": "P040",
     "name": "Blue Tulip Bracelet",
     "category": "bracelets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -1844,6 +1884,7 @@
     "id": "P041",
     "name": "Kashmiri Ghungroo Bangles",
     "category": "bangles",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -1887,6 +1928,7 @@
     "id": "P042",
     "name": "Royal Purple Glass Bangle Set",
     "category": "bangles",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 499,
@@ -1929,6 +1971,7 @@
     "id": "P043",
     "name": "Emerald Green Glass Bangle Set",
     "category": "bangles",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 499,
@@ -1971,6 +2014,7 @@
     "id": "P044",
     "name": "Silver-Plated Snake Chain Ball Anklet",
     "category": "anklets",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 199,
@@ -2013,6 +2057,7 @@
     "id": "P045",
     "name": "Black Evil Eye Spiral Charm Anklet",
     "category": "anklets",
+    "status": "active",
     "pricing": {
       "price": 120,
       "mrp": 199,
@@ -2056,6 +2101,7 @@
     "id": "P046",
     "name": "Clover Charm Gold Anklet",
     "category": "anklets",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -2102,6 +2148,7 @@
     "id": "P047",
     "name": "Pink Tulip Bow Hair Clip",
     "category": "hair-accessories",
+    "status": "active",
     "pricing": {
       "price": 49,
       "mrp": 199,
@@ -2144,6 +2191,7 @@
     "id": "P048",
     "name": "Satin Long Tail Bow Hair Clip",
     "category": "hair-accessories",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 199,
@@ -2199,6 +2247,7 @@
     "id": "P049",
     "name": "Satin Scrunchies Set of Four",
     "category": "hair-accessories",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 199,

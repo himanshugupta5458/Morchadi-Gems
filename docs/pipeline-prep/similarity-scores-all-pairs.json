@@ -1,0 +1,10125 @@
+{
+  "source": "data/products.json",
+  "engine": "lib/content-similarity.ts",
+  "method": {
+    "metric": "jaccard-over-word-shingles",
+    "shingleSize": 4,
+    "openingShingleSize": 3,
+    "openingWordLimit": 20,
+    "normalisationVocabularySource": [
+      "category",
+      "specs.material",
+      "specs.stone",
+      "specs.size",
+      "options[name=Colour].values"
+    ],
+    "placeholderPrecedence": [
+      "category",
+      "stone",
+      "material",
+      "colour",
+      "size"
+    ]
+  },
+  "thresholdsDecided": false,
+  "productCount": 49,
+  "pairCount": 1176,
+  "products": [
+    {
+      "id": "P001",
+      "name": "Wave Band Initial Ring",
+      "category": "rings",
+      "descriptionWordCount": 15,
+      "openingSentence": "A slim gold-tone band with a softly waved face carrying the single initial you choose.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 4,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P002",
+      "name": "Teardrop Glass Locket Necklace",
+      "category": "necklaces",
+      "descriptionWordCount": 191,
+      "openingSentence": "The teardrop hangs point-down and stays that way instead of spinning to show its back, which matters more on a",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P003",
+      "name": "Heart Floating Locket with Birthstone Charms",
+      "category": "necklaces",
+      "descriptionWordCount": 229,
+      "openingSentence": "Twelve charms arrive in the box, one for each month, so this gold-plated locket necklace can hold a single birthday",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 6,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P004",
+      "name": "Heart Crystal Adjustable Ring",
+      "category": "rings",
+      "descriptionWordCount": 228,
+      "openingSentence": "Crystal and cubic zirconia behave differently under light, and this adjustable ring uses crystal.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 4,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P005",
+      "name": "Silver-Tone Initial Signet Ring",
+      "category": "rings",
+      "descriptionWordCount": 198,
+      "openingSentence": "Signet rings started as a way to stamp wax, and the flat face never lost its appeal even after the",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 3,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P006",
+      "name": "Floating Locket Pendant",
+      "category": "pendants",
+      "descriptionWordCount": 181,
+      "openingSentence": "Oval, heart, rectangle or round.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P007",
+      "name": "Hug Embrace Open Ring",
+      "category": "rings",
+      "descriptionWordCount": 232,
+      "openingSentence": "Two hands, one coming from each side of the band, meeting in a hug where a stone would normally sit.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 4,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P008",
+      "name": "Silver-Tone Bow Twist Ring",
+      "category": "rings",
+      "descriptionWordCount": 226,
+      "openingSentence": "The band is the part worth looking at.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 2,
+        "material": 3,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P009",
+      "name": "Watch Dial Ring",
+      "category": "rings",
+      "descriptionWordCount": 191,
+      "openingSentence": "It does not tell the time.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 2,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P010",
+      "name": "Mini Watch Ring",
+      "category": "rings",
+      "descriptionWordCount": 181,
+      "openingSentence": "Everything on this one is scaled down twice.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 2,
+        "colour": 2,
+        "size": 2
+      }
+    },
+    {
+      "id": "P011",
+      "name": "Love Knot Ring",
+      "category": "rings",
+      "descriptionWordCount": 209,
+      "openingSentence": "One fine wire, tied once, and nothing else on the band.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P012",
+      "name": "Clear Heart Statement Ring",
+      "category": "rings",
+      "descriptionWordCount": 232,
+      "openingSentence": "Size is the whole argument.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 4,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P013",
+      "name": "Pink Baguette Stacking Ring",
+      "category": "rings",
+      "descriptionWordCount": 215,
+      "openingSentence": "Run a thumb along the band and the texture is the first thing you notice.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P014",
+      "name": "Emerald-Green Baguette Stacking Ring",
+      "category": "rings",
+      "descriptionWordCount": 203,
+      "openingSentence": "The word emerald in the name is doing colour work, not material work.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 3,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P015",
+      "name": "Red Solitaire Thread Ring",
+      "category": "rings",
+      "descriptionWordCount": 212,
+      "openingSentence": "Garnet red is harder to get right than it looks.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P016",
+      "name": "Pink Solitaire Thread Ring",
+      "category": "rings",
+      "descriptionWordCount": 189,
+      "openingSentence": "Some rings you notice all day.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P017",
+      "name": "Clear Solitaire Thread Ring",
+      "category": "rings",
+      "descriptionWordCount": 215,
+      "openingSentence": "From two feet away this reads as a diamond solitaire, and there is no harm in that as long as",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P018",
+      "name": "Green Solitaire Thread Ring",
+      "category": "rings",
+      "descriptionWordCount": 211,
+      "openingSentence": "Olive is an unusual choice for a small stone and that is the reason to pick it.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P019",
+      "name": "CZ Bow Adjustable Ring",
+      "category": "rings",
+      "descriptionWordCount": 205,
+      "openingSentence": "A trillion cut is triangular, and two of them set base to base give you a bow without a single",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 2,
+        "material": 3,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P020",
+      "name": "Gold Ribbon Bow Ring",
+      "category": "rings",
+      "descriptionWordCount": 209,
+      "openingSentence": "Nothing is set into this one.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 4,
+        "colour": 0,
+        "size": 3
+      }
+    },
+    {
+      "id": "P021",
+      "name": "Rainbow Baguette Eternity Ring",
+      "category": "rings",
+      "descriptionWordCount": 200,
+      "openingSentence": "The stones go all the way around.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 5,
+        "material": 4,
+        "colour": 0,
+        "size": 2
+      }
+    },
+    {
+      "id": "P022",
+      "name": "Vintage Gold Beaded Bracelet Watch",
+      "category": "watches",
+      "descriptionWordCount": 21,
+      "openingSentence": "A working quartz watch on a strand of polished gold-tone beads, with a slim oval dial that reads as jewellery",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P023",
+      "name": "Traditional Meenakari Bracelet Watch",
+      "category": "watches",
+      "descriptionWordCount": 214,
+      "openingSentence": "You hear this one before you see it.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 7,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P024",
+      "name": "Multicolour CZ Cluster Studs",
+      "category": "earrings",
+      "descriptionWordCount": 208,
+      "openingSentence": "Rose, mint, amber and clear, packed close enough that no single colour takes over.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P025",
+      "name": "Silver-Plated Pink Leaf Studs",
+      "category": "earrings",
+      "descriptionWordCount": 199,
+      "openingSentence": "Two parts, stacked.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P026",
+      "name": "Silver-Plated Blue Floral Studs",
+      "category": "earrings",
+      "descriptionWordCount": 203,
+      "openingSentence": "Blue is under-used in Indian fashion jewellery, which is odd, because it sits against almost every traditional colour without fighting",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P027",
+      "name": "Gold-Plated Mint Green Floral Studs",
+      "category": "earrings",
+      "descriptionWordCount": 193,
+      "openingSentence": "Frosted stones are unusual at this price.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 5,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P028",
+      "name": "Gold-Plated Pink Flower Studs",
+      "category": "earrings",
+      "descriptionWordCount": 196,
+      "openingSentence": "Six petals, not five and not eight, which is the count that makes a flower read as a flower rather",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P029",
+      "name": "Delicate Pink Petal Floral Earrings",
+      "category": "earrings",
+      "descriptionWordCount": 192,
+      "openingSentence": "Some earrings come off at the end of the day and some stay in for a week.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P030",
+      "name": "Gold-Plated Round CZ Studs with Square Centre",
+      "category": "earrings",
+      "descriptionWordCount": 203,
+      "openingSentence": "A cat's-eye stone has a single line of light running across it that moves as the stone tilts, and that",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 8,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P031",
+      "name": "Silver-Plated Floral Teardrop Nath",
+      "category": "nose-pins",
+      "descriptionWordCount": 206,
+      "openingSentence": "The teardrop swings.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 2,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P032",
+      "name": "Gold Peacock Nath with Pearl Drop",
+      "category": "nose-pins",
+      "descriptionWordCount": 20,
+      "openingSentence": "A peacock curved along a pavé hoop, set with a deep pink-red stone and finished with a single hanging pearl.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 7,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P033",
+      "name": "Gold Peacock Nath with Clear Stones",
+      "category": "nose-pins",
+      "descriptionWordCount": 209,
+      "openingSentence": "Strip the colour out of a peacock nath and what is left is the shape, which turns out to be",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 6,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P034",
+      "name": "Gold Minimalist Stone Nath",
+      "category": "nose-pins",
+      "descriptionWordCount": 198,
+      "openingSentence": "Not every nath is trying to be the centre of a wedding photograph.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 2,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P035",
+      "name": "Silver-Plated Floral Cluster Nath",
+      "category": "nose-pins",
+      "descriptionWordCount": 183,
+      "openingSentence": "The hoop stops being a hoop about halfway round.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 2,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P036",
+      "name": "Orange Enamel Floral Kada",
+      "category": "bracelets",
+      "descriptionWordCount": 207,
+      "openingSentence": "Orange is a difficult colour to wear and an easy one to want.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 6,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P037",
+      "name": "Pink Flower Bracelet",
+      "category": "bracelets",
+      "descriptionWordCount": 214,
+      "openingSentence": "The design runs along the chain rather than sitting on it.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P038",
+      "name": "Multicolour Tulip Bracelet",
+      "category": "bracelets",
+      "descriptionWordCount": 232,
+      "openingSentence": "Red, blue, green and violet, set in a run along a waved gold-tone bar chain, which is a lot of",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P039",
+      "name": "Pink Tulip Bracelet",
+      "category": "bracelets",
+      "descriptionWordCount": 202,
+      "openingSentence": "With only one colour to work with, the interest has to come from the cutting.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 3,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P040",
+      "name": "Blue Tulip Bracelet",
+      "category": "bracelets",
+      "descriptionWordCount": 199,
+      "openingSentence": "Blue stones with green ones set between them is the arrangement here, and the green is doing the job of",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 4,
+        "material": 5,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P041",
+      "name": "Kashmiri Ghungroo Bangles",
+      "category": "bangles",
+      "descriptionWordCount": 207,
+      "openingSentence": "Four bangles or eight, and the choice changes the piece more than the price does.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 6,
+        "colour": 0,
+        "size": 12
+      }
+    },
+    {
+      "id": "P042",
+      "name": "Royal Purple Glass Bangle Set",
+      "category": "bangles",
+      "descriptionWordCount": 16,
+      "openingSentence": "Sixteen glass bangles in deep royal purple, dusted with gold-tone beadwork and hung with ghungroo clusters.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 9,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P043",
+      "name": "Emerald Green Glass Bangle Set",
+      "category": "bangles",
+      "descriptionWordCount": 185,
+      "openingSentence": "Green bangles carry more meaning in India than most jewellery does.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 9,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P044",
+      "name": "Silver-Plated Snake Chain Ball Anklet",
+      "category": "anklets",
+      "descriptionWordCount": 169,
+      "openingSentence": "Two anklets come in the set rather than one, which is how payal is actually worn.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 3,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P045",
+      "name": "Black Evil Eye Spiral Charm Anklet",
+      "category": "anklets",
+      "descriptionWordCount": 211,
+      "openingSentence": "Nazar beads have been made in more or less this shape for a very long time, and the reasoning behind",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 0,
+        "material": 8,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P046",
+      "name": "Clover Charm Gold Anklet",
+      "category": "anklets",
+      "descriptionWordCount": 194,
+      "openingSentence": "Two charms, not one, which is a small decision that changes how the anklet reads.",
+      "normalisationTermCount": {
+        "category": 2,
+        "stone": 2,
+        "material": 6,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P047",
+      "name": "Pink Tulip Bow Hair Clip",
+      "category": "hair-accessories",
+      "descriptionWordCount": 162,
+      "openingSentence": "Organza and satin behave differently and this clip uses both.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 0,
+        "material": 6,
+        "colour": 0,
+        "size": 0
+      }
+    },
+    {
+      "id": "P048",
+      "name": "Satin Long Tail Bow Hair Clip",
+      "category": "hair-accessories",
+      "descriptionWordCount": 207,
+      "openingSentence": "The tails are the point.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 0,
+        "material": 5,
+        "colour": 7,
+        "size": 0
+      }
+    },
+    {
+      "id": "P049",
+      "name": "Satin Scrunchies Set of Four",
+      "category": "hair-accessories",
+      "descriptionWordCount": 187,
+      "openingSentence": "Satin is the reason to buy a scrunchie rather than a rubber band.",
+      "normalisationTermCount": {
+        "category": 3,
+        "stone": 0,
+        "material": 3,
+        "colour": 0,
+        "size": 8
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "a": "P001",
+      "b": "P002",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P003",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P004",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P005",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P006",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P007",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P008",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P009",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P001",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P003",
+      "sameCategory": true,
+      "raw": 0.009592,
+      "normalised": 0.009592,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P004",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002387,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P005",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002571,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P006",
+      "sameCategory": false,
+      "raw": 0.01087,
+      "normalised": 0.01087,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P007",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P008",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P009",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P010",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P011",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P012",
+      "sameCategory": false,
+      "raw": 0.00237,
+      "normalised": 0.00237,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P013",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P014",
+      "sameCategory": false,
+      "raw": 0.002545,
+      "normalised": 0.002545,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P015",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P016",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P017",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P018",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P019",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P020",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P021",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.004963,
+      "normalised": 0.004963,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0.002506,
+      "normalised": 0.002506,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.00495,
+      "normalised": 0.00495,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002674,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.002584,
+      "normalised": 0.002584,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.005076,
+      "opening": 0
+    },
+    {
+      "a": "P002",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002667,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P004",
+      "sameCategory": false,
+      "raw": 0.002203,
+      "normalised": 0.002203,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P005",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P006",
+      "sameCategory": false,
+      "raw": 0.007426,
+      "normalised": 0.007426,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P007",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P008",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P009",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P010",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P011",
+      "sameCategory": false,
+      "raw": 0.002304,
+      "normalised": 0.002304,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P012",
+      "sameCategory": false,
+      "raw": 0.002188,
+      "normalised": 0.002188,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P013",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P014",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P015",
+      "sameCategory": false,
+      "raw": 0.002278,
+      "normalised": 0.002278,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P016",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P017",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P018",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P019",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P020",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P021",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.004566,
+      "normalised": 0.004566,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0.002364,
+      "normalised": 0.002364,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002309,
+      "normalised": 0.002309,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002364,
+      "normalised": 0.002364,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0.002445,
+      "normalised": 0.002445,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.006849,
+      "normalised": 0.006849,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.005063,
+      "normalised": 0.005063,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0.002288,
+      "normalised": 0.002299,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.00237,
+      "normalised": 0.00237,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P003",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P005",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002364,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P006",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P007",
+      "sameCategory": true,
+      "raw": 0.017778,
+      "normalised": 0.017778,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P008",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P009",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0.011062,
+      "normalised": 0.011062,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.007026,
+      "normalised": 0.007026,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.013986,
+      "normalised": 0.013986,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0.002358,
+      "normalised": 0.002358,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0.00232,
+      "normalised": 0.00232,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002315,
+      "normalised": 0.002315,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P004",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P006",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P007",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002342,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P008",
+      "sameCategory": true,
+      "raw": 0.002381,
+      "normalised": 0.002381,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P009",
+      "sameCategory": true,
+      "raw": 0.002604,
+      "normalised": 0.002604,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.005051,
+      "normalised": 0.005051,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002597,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.004988,
+      "normalised": 0.004988,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0.005305,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.004762,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P005",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P007",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P008",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P009",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P010",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P011",
+      "sameCategory": false,
+      "raw": 0.002597,
+      "normalised": 0.002597,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P012",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P013",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P014",
+      "sameCategory": false,
+      "raw": 0.002639,
+      "normalised": 0.002639,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P015",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P016",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P017",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P018",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P019",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P020",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P021",
+      "sameCategory": false,
+      "raw": 0.008,
+      "normalised": 0.008,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.002564,
+      "normalised": 0.002564,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.002558,
+      "normalised": 0.002558,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.00578,
+      "normalised": 0.00578,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.002681,
+      "normalised": 0.002681,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P006",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P008",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P009",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0.008753,
+      "normalised": 0.008753,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.00232,
+      "normalised": 0.00232,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.009302,
+      "normalised": 0.009302,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.016204,
+      "normalised": 0.016204,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.011416,
+      "normalised": 0.011416,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0.002151,
+      "normalised": 0.002151,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P007",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P009",
+      "sameCategory": true,
+      "raw": 0.002433,
+      "normalised": 0.002433,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0.004577,
+      "normalised": 0.006881,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0.002299,
+      "normalised": 0.002299,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0.002309,
+      "normalised": 0.002309,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.007075,
+      "normalised": 0.007075,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0.004762,
+      "normalised": 0.00716,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0.007042,
+      "normalised": 0.009412,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002387,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002392,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0.009732,
+      "normalised": 0.009732,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.004673,
+      "normalised": 0.007026,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002387,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.00232,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P008",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.004926,
+      "normalised": 0.004938,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P010",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0.002398,
+      "normalised": 0.002398,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0.002488,
+      "normalised": 0.002488,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.002577,
+      "normalised": 0.002577,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0.002519,
+      "normalised": 0.002519,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.002532,
+      "normalised": 0.002532,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0.002611,
+      "normalised": 0.002611,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0.005249,
+      "normalised": 0.005249,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002545,
+      "normalised": 0.002545,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0.002571,
+      "normalised": 0.002571,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P009",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.002695,
+      "normalised": 0.002703,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P011",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002732,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.002625,
+      "normalised": 0.002632,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.002591,
+      "normalised": 0.002597,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0.002597,
+      "normalised": 0.002604,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002688,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P010",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P012",
+      "sameCategory": true,
+      "raw": 0.006912,
+      "normalised": 0.006912,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.002457,
+      "normalised": 0.002457,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0.004796,
+      "normalised": 0.004796,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0.002532,
+      "normalised": 0.005076,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.002445,
+      "normalised": 0.002445,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.004843,
+      "normalised": 0.004843,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0.002494,
+      "normalised": 0.002494,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0.002421,
+      "normalised": 0.002421,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0.002427,
+      "normalised": 0.002427,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0.00495,
+      "normalised": 0.00495,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.002494,
+      "normalised": 0.002494,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P011",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P013",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002252,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.002326,
+      "normalised": 0.007009,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.004545,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0.002252,
+      "normalised": 0.004515,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.009217,
+      "normalised": 0.009217,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.002268,
+      "normalised": 0.002268,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.002262,
+      "normalised": 0.002262,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.004728,
+      "normalised": 0.007109,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P012",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P014",
+      "sameCategory": true,
+      "raw": 0.00241,
+      "normalised": 0.00241,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002398,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.004751,
+      "normalised": 0.004751,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0.004866,
+      "normalised": 0.007317,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0.004785,
+      "normalised": 0.007194,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0.002439,
+      "normalised": 0.002439,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0.002445,
+      "normalised": 0.002445,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002381,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002439,
+      "normalised": 0.002439,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.00237,
+      "normalised": 0.00237,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P013",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P015",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.004866,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.007264,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002439,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.002451,
+      "normalised": 0.002451,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002469,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002463,
+      "normalised": 0.002463,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0.005025,
+      "normalised": 0.005025,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0.002481,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P014",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P016",
+      "sameCategory": true,
+      "raw": 0.005013,
+      "normalised": 0.005013,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0.004706,
+      "normalised": 0.009456,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0.00716,
+      "normalised": 0.00716,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.004785,
+      "normalised": 0.004785,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002457,
+      "normalised": 0.002457,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P015",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P017",
+      "sameCategory": true,
+      "raw": 0.002481,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0.002513,
+      "normalised": 0.002513,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0.0025,
+      "normalised": 0.0025,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0.005236,
+      "normalised": 0.005236,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0.002639,
+      "normalised": 0.002639,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0.002506,
+      "normalised": 0.002506,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.00495,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P016",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P018",
+      "sameCategory": true,
+      "raw": 0.002358,
+      "normalised": 0.002358,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0.002439,
+      "normalised": 0.002439,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002227,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0.002404,
+      "normalised": 0.002404,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0.002525,
+      "normalised": 0.002525,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P017",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P019",
+      "sameCategory": true,
+      "raw": 0.004866,
+      "normalised": 0.004866,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002469,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0.005128,
+      "normalised": 0.005128,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.00237,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0.002252,
+      "normalised": 0.002252,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.002646,
+      "normalised": 0.002646,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P018",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.002545,
+      "normalised": 0.002551,
+      "opening": 0.083333
+    },
+    {
+      "a": "P019",
+      "b": "P020",
+      "sameCategory": true,
+      "raw": 0.00489,
+      "normalised": 0.00489,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.0025,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002457,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002513,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002519,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002451,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002513,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0.002604,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0.002288,
+      "normalised": 0.002288,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002439,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.005405,
+      "normalised": 0.005405,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0.002762,
+      "normalised": 0.002762,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P019",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P021",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002469,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0.002488,
+      "normalised": 0.002488,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002421,
+      "normalised": 0.002421,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0.002392,
+      "normalised": 0.002392,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0.002398,
+      "normalised": 0.00241,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002488,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P020",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P022",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P023",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002469,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.004878,
+      "normalised": 0.004878,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P021",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P023",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P022",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P024",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P025",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P026",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P027",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P028",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P029",
+      "sameCategory": false,
+      "raw": 0.002488,
+      "normalised": 0.002488,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P030",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0.002398,
+      "normalised": 0.002398,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.01432,
+      "normalised": 0.01432,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.002632,
+      "normalised": 0.002632,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.014963,
+      "normalised": 0.014963,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002415,
+      "opening": 0
+    },
+    {
+      "a": "P023",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P025",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P026",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P027",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P028",
+      "sameCategory": true,
+      "raw": 0.002494,
+      "normalised": 0.002494,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P029",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0.002577,
+      "normalised": 0.002577,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.002387,
+      "normalised": 0.002387,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P024",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P026",
+      "sameCategory": true,
+      "raw": 0.0075,
+      "normalised": 0.0075,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P027",
+      "sameCategory": true,
+      "raw": 0.002545,
+      "normalised": 0.005102,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P028",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002551,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P029",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002481,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002545,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.00495,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0.002639,
+      "normalised": 0.002639,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P025",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P027",
+      "sameCategory": true,
+      "raw": 0.0025,
+      "normalised": 0.005013,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P028",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002506,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P029",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0.002433,
+      "normalised": 0.007335,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.00489,
+      "normalised": 0.00489,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0.00241,
+      "normalised": 0.00241,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.0025,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0.004975,
+      "normalised": 0.004975,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002427,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P026",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P028",
+      "sameCategory": true,
+      "raw": 0.002564,
+      "normalised": 0.002564,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P029",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0.002488,
+      "normalised": 0.002488,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.005,
+      "normalised": 0.007519,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0.002463,
+      "normalised": 0.002463,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002558,
+      "normalised": 0.002558,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.002481,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.002747,
+      "normalised": 0.002747,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P027",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P029",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.0025,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0.002564,
+      "normalised": 0.002564,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.004988,
+      "normalised": 0.004988,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P028",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P030",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P029",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P031",
+      "sameCategory": false,
+      "raw": 0.002427,
+      "normalised": 0.002427,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P032",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P033",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P034",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P035",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0.002469,
+      "normalised": 0.002469,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P030",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P032",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P033",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P034",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002494,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P035",
+      "sameCategory": true,
+      "raw": 0.015707,
+      "normalised": 0.015707,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.002392,
+      "normalised": 0.002392,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0.004926,
+      "normalised": 0.004926,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.002421,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.005362,
+      "normalised": 0.005362,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0.002451,
+      "normalised": 0.002451,
+      "opening": 0
+    },
+    {
+      "a": "P031",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P033",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P034",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P035",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P032",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P034",
+      "sameCategory": true,
+      "raw": 0.004938,
+      "normalised": 0.004938,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P035",
+      "sameCategory": true,
+      "raw": 0.007692,
+      "normalised": 0.007692,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0.002404,
+      "normalised": 0.002404,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.002392,
+      "normalised": 0.002392,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P033",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P035",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0.002326,
+      "normalised": 0.002326,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0.002481,
+      "normalised": 0.002481,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.002564,
+      "normalised": 0.002564,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0.002817,
+      "normalised": 0.002817,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P034",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P036",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P037",
+      "sameCategory": false,
+      "raw": 0.007653,
+      "normalised": 0.007653,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P038",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P039",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P040",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0.014451,
+      "normalised": 0.014451,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P035",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.00274,
+      "normalised": 0.002747,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P037",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P038",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P039",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P040",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.0025,
+      "normalised": 0.0025,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P036",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P038",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.004484,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P039",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P040",
+      "sameCategory": true,
+      "raw": 0.002433,
+      "normalised": 0.002433,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0.00237,
+      "normalised": 0.002381,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.007407,
+      "normalised": 0.007407,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P037",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P039",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P040",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0.002331,
+      "normalised": 0.002331,
+      "opening": 0.032258
+    },
+    {
+      "a": "P038",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P038",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P040",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0.002611,
+      "normalised": 0.002611,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0.002433,
+      "normalised": 0.002445,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P039",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P041",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P042",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P043",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P040",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P042",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P043",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P041",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.015544,
+      "normalised": 0.020888,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P043",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0.004808,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P042",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P044",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P045",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P046",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P043",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P044",
+      "b": "P045",
+      "sameCategory": true,
+      "raw": 0.010667,
+      "normalised": 0.010724,
+      "opening": 0
+    },
+    {
+      "a": "P044",
+      "b": "P046",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0.038462
+    },
+    {
+      "a": "P044",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P044",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P044",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.005698,
+      "normalised": 0.005714,
+      "opening": 0
+    },
+    {
+      "a": "P045",
+      "b": "P046",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P045",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P045",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P045",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0.002545,
+      "normalised": 0.002564,
+      "opening": 0
+    },
+    {
+      "a": "P046",
+      "b": "P047",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P046",
+      "b": "P048",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P046",
+      "b": "P049",
+      "sameCategory": false,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P047",
+      "b": "P048",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P047",
+      "b": "P049",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0,
+      "opening": 0
+    },
+    {
+      "a": "P048",
+      "b": "P049",
+      "sameCategory": true,
+      "raw": 0,
+      "normalised": 0.002597,
+      "opening": 0
+    }
+  ]
+}

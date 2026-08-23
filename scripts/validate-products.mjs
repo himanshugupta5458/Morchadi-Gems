@@ -80,6 +80,14 @@ const CATEGORY_SLUGS = [
 
 const COLLECTION_TAGS = ["gifting", "anti-tarnish"];
 
+/**
+ * Publication state. Required on every product rather than defaulted here, so a record that
+ * forgets it fails the gate instead of being published by omission — `lib/products.ts` reads a
+ * missing status as `active`, and this check is what stops anything from ever relying on that.
+ * See ADR-052.
+ */
+const PRODUCT_STATUSES = ["draft", "active"];
+
 const OPTION_TYPES = ["dropdown", "swatch", "pills", "chips"];
 
 const VARIANT_KEY_SEPARATOR = ":";
@@ -88,6 +96,7 @@ const PRODUCT_KEYS = [
   "id",
   "name",
   "category",
+  "status",
   "collections",
   "pricing",
   "media",
@@ -202,6 +211,7 @@ check(
 );
 
 const seenIds = new Set();
+const statusCounts = Object.fromEntries(PRODUCT_STATUSES.map((status) => [status, 0]));
 const categoryCounts = Object.fromEntries(CATEGORY_SLUGS.map((slug) => [slug, 0]));
 const priceBands = { budget: 0, mid: 0, premium: 0, outOfBand: 0 };
 const optionTypeCounts = Object.fromEntries(OPTION_TYPES.map((type) => [type, 0]));
@@ -633,7 +643,27 @@ function validateNoFabricatedReception(product, label) {
   );
 }
 
+function validateStatus(product, label) {
+  const status = product?.status;
+  check(
+    PRODUCT_STATUSES.includes(status),
+    `${label}: status must be one of ${PRODUCT_STATUSES.join(", ")} — found ${JSON.stringify(status)}`,
+  );
+  if (PRODUCT_STATUSES.includes(status)) statusCounts[status] += 1;
+}
+
+function isPublished(product) {
+  return product?.status !== "draft";
+}
+
+/**
+ * The stock and merchandising counters below are the floors that keep a rendered surface
+ * populated — the home best-sellers row, the new-arrivals row, the sold-out styling. A draft
+ * reaches none of those, so it is counted towards none of them: a catalogue whose only four
+ * featured pieces are unpublished has an empty row, and the gate should say so.
+ */
 function validateStockAndFlags(product, label) {
+  const published = isPublished(product);
   const stock = product?.stock;
   check(isPlainObject(stock), `${label}: stock must be an object`);
   if (isPlainObject(stock)) {
@@ -641,7 +671,7 @@ function validateStockAndFlags(product, label) {
       typeof stock.inStock === "boolean",
       `${label}: stock.inStock must be a boolean`,
     );
-    if (stock.inStock === false) outOfStockCount += 1;
+    if (stock.inStock === false && published) outOfStockCount += 1;
   }
 
   const flags = product?.flags;
@@ -653,8 +683,8 @@ function validateStockAndFlags(product, label) {
     `${label}: flags.featured must be a boolean`,
   );
   check(typeof flags.isNew === "boolean", `${label}: flags.isNew must be a boolean`);
-  if (flags.featured === true) featuredCount += 1;
-  if (flags.isNew === true) newCount += 1;
+  if (flags.featured === true && published) featuredCount += 1;
+  if (flags.isNew === true && published) newCount += 1;
 }
 
 function validateCollections(product, label) {
@@ -701,7 +731,7 @@ for (const product of catalogue) {
     CATEGORY_SLUGS.includes(product?.category),
     `${label}: category "${product?.category}" is not a known slug`,
   );
-  if (CATEGORY_SLUGS.includes(product?.category)) {
+  if (CATEGORY_SLUGS.includes(product?.category) && isPublished(product)) {
     categoryCounts[product.category] += 1;
   }
 
@@ -711,6 +741,7 @@ for (const product of catalogue) {
   validateSpecs(product, label);
   validateSeo(product, label);
   validateNoFabricatedReception(product, label);
+  validateStatus(product, label);
   validateStockAndFlags(product, label);
   validateCollections(product, label);
 
@@ -763,7 +794,10 @@ check(
 );
 
 for (const slug of CATEGORY_SLUGS) {
-  check(categoryCounts[slug] > 0, `category "${slug}" has no products`);
+  check(
+    categoryCounts[slug] > 0,
+    `category "${slug}" has no published products — its listing would render empty`,
+  );
 }
 
 check(
@@ -797,9 +831,11 @@ for (const slug of CATEGORY_SLUGS) {
 console.log("Morchadi Gems — product catalogue validation\n");
 console.log(`Products            ${catalogue.length}`);
 console.log(`Unique ids          ${seenIds.size}`);
-console.log(`Featured            ${featuredCount}`);
-console.log(`New arrivals        ${newCount}`);
-console.log(`Out of stock        ${outOfStockCount}`);
+console.log(`Active              ${statusCounts.active}`);
+console.log(`Draft               ${statusCounts.draft}`);
+console.log(`Featured            ${featuredCount} (published)`);
+console.log(`New arrivals        ${newCount} (published)`);
+console.log(`Out of stock        ${outOfStockCount} (published)`);
 console.log(`With options        ${optionedProductCount}`);
 console.log(`With collections    ${taggedProductCount}`);
 console.log("\nCategory distribution");

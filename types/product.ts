@@ -114,6 +114,20 @@ export function isCollectionTag(value: string): value is CollectionSlug {
 }
 
 /**
+ * Whether a product is published. `draft` is the catalogue's own unpublished state: the
+ * record ships in `data/products.json` and is validated like any other, but no public surface
+ * may render it, link to it, price it, or sell it. See
+ * [ADR-052](/docs/decisions/ADR-052-product-status-field.md).
+ */
+export type ProductStatus = "draft" | "active";
+
+export const PRODUCT_STATUSES: readonly ProductStatus[] = ["draft", "active"] as const;
+
+export function isProductStatus(value: string): value is ProductStatus {
+  return PRODUCT_STATUSES.some((status) => status === value);
+}
+
+/**
  * Which control a choice is made with. It is catalogue data rather than a guess made from
  * the number of values, because two groups of the same size are not the same kind of
  * question: four locket shapes are a set to compare, four ribbon colours are a set to look
@@ -272,6 +286,14 @@ export interface Product {
   id: string;
   name: string;
   category: Category;
+  /**
+   * Whether the record is published. Written on every product rather than left optional, so
+   * "no status" is a validation failure rather than a silent guess. The one place that guess
+   * is still made is `lib/products.ts`, which reads a record without the field as `active`
+   * for backward compatibility — nothing but an explicit `draft` withholds a product. See
+   * [ADR-052](/docs/decisions/ADR-052-product-status-field.md).
+   */
+  status: ProductStatus;
   /**
    * The hand-tagged collections this product belongs to. Absent or empty is normal — a
    * product needs no tag to appear in the derived collections. See ADR-020.

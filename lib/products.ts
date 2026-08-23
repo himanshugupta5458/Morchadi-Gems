@@ -15,6 +15,36 @@ import type { OrderOptionEntry } from "@/lib/order-options";
  */
 const products = catalogue as unknown as Product[];
 
+/**
+ * Whether a record may be shown, linked, priced or sold. Only an explicit `"draft"` withholds
+ * a product: a record written before the field existed reads as published, which is the
+ * backward-compatible default and the one `scripts/validate-products.mjs` stops anything from
+ * relying on, because it requires the field on every product in the gate.
+ */
+export function isActiveProduct(product: Product): boolean {
+  return product.status !== "draft";
+}
+
+/**
+ * The catalogue as every public surface is allowed to see it. Every accessor below reads this
+ * rather than `products`, so filtering by status is a property of the module rather than a
+ * line each consumer has to remember: the shop listing, the facets, the sitemap, the
+ * structured data, the related-products rail, the prerendered route list, the cart's
+ * catalogue and all three order catalogues inherit it for free, and a surface added tomorrow
+ * inherits it without being told. See
+ * [ADR-052](/docs/decisions/ADR-052-product-status-field.md).
+ */
+const activeProducts = products.filter(isActiveProduct);
+
+/**
+ * The unfiltered catalogue, drafts included. Its readers are the tools that check the file
+ * rather than the surfaces that publish it — a validator has to see a draft to validate it.
+ * No route, page, component or order path may call this.
+ */
+export function getAllProductsIncludingDrafts(): Product[] {
+  return products;
+}
+
 /** The photograph every listing shows, or null for a product with no photograph yet. */
 export function getPrimaryImage(product: Product): string | null {
   return product.media.images.length > 0 ? product.media.images[0] : null;
@@ -61,31 +91,35 @@ export function toCatalogueEntry(product: Product): CatalogueEntry {
 
 /** The whole catalogue as lean entries — what `CartProvider` is given to reconcile against. */
 export function getCatalogueIndex(): CatalogueEntry[] {
-  return products.map(toCatalogueEntry);
+  return activeProducts.map(toCatalogueEntry);
 }
 
 export function getAllProducts(): Product[] {
-  return products;
+  return activeProducts;
 }
 
+/**
+ * Undefined for a draft as well as for an id that was never in the catalogue, so the product
+ * page's existing `notFound()` turns a draft into a 404 without knowing what a draft is.
+ */
 export function getProductById(id: string): Product | undefined {
-  return products.find((product) => product.id === id);
+  return activeProducts.find((product) => product.id === id);
 }
 
 export function getProductsByCategory(slug: Category): Product[] {
-  return products.filter((product) => product.category === slug);
+  return activeProducts.filter((product) => product.category === slug);
 }
 
 export function getFeaturedProducts(): Product[] {
-  return products.filter((product) => product.flags.featured);
+  return activeProducts.filter((product) => product.flags.featured);
 }
 
 export function getNewArrivals(): Product[] {
-  return products.filter((product) => product.flags.isNew);
+  return activeProducts.filter((product) => product.flags.isNew);
 }
 
 export function getRelatedProducts(product: Product, limit: number): Product[] {
-  return products
+  return activeProducts
     .filter(
       (candidate) =>
         candidate.category === product.category && candidate.id !== product.id,
@@ -100,7 +134,7 @@ export function getRelatedProducts(product: Product, limit: number): Product[] {
  * cast. See ADR-011 and ADR-027.
  */
 export function getOrderPricingCatalogue(): OrderPricingEntry[] {
-  return products.map((product) => ({
+  return activeProducts.map((product) => ({
     id: product.id,
     name: product.name,
     price: product.pricing.price,
@@ -124,7 +158,7 @@ export function getOrderPricingCatalogue(): OrderPricingEntry[] {
  * photograph per product and runs in the gate.
  */
 export function getOrderCaptureCatalogue(): OrderCaptureEntry[] {
-  return products.map((product) => ({
+  return activeProducts.map((product) => ({
     id: product.id,
     name: product.name,
     image: getPrimaryImage(product) ?? "",
@@ -137,7 +171,7 @@ export function getOrderCaptureCatalogue(): OrderCaptureEntry[] {
  * no amount in the object to read. See ADR-019.
  */
 export function getOrderOptionCatalogue(): OrderOptionEntry[] {
-  return products.map((product) => ({
+  return activeProducts.map((product) => ({
     id: product.id,
     name: product.name,
     ...(hasProductOptions(product.options) ? { options: product.options } : {}),
