@@ -128,23 +128,34 @@ from the catalogue on every gate run and fails the build if the committed file d
 
 ### Step 4 — Similarity, advisory only
 
-Score the new description against every **active** product and write the result to
-`content-pipeline/drafts/{productId}-similarity.json`:
+Score the new description against **every product in the catalogue, published or not**, plus any
+sibling draft written earlier in this same session that has not been saved yet, and write the
+result to `content-pipeline/drafts/{productId}-similarity.json`:
 
 ```ts
 import catalogue from "@/data/products.json";
 import {
   SIMILARITY_THRESHOLD,
   evaluateSimilarityGate,
-  selectActiveSimilarityInputs,
+  selectSimilarityComparisonPopulation,
 } from "@/lib/content-similarity";
 
 const report = evaluateSimilarityGate(
   { id: productId, category, description, specs, options },
-  selectActiveSimilarityInputs(catalogue),
+  selectSimilarityComparisonPopulation(catalogue, sessionDrafts),
   SIMILARITY_THRESHOLD,
 );
 ```
+
+`sessionDrafts` is a `SimilarityInput[]` of the drafts this run has already written — omit it and
+the population is just the catalogue. **Do not call `selectActiveSimilarityInputs` here.** It
+returns the published half only, and a migrated batch is written entirely as `status: "draft"`,
+so an active-only population scores each candidate against the original catalogue and never
+against its own batch — which is the population most likely to be templated. See
+[ADR-056](../../docs/decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md).
+
+Every comparison records `againstPopulation`, so the stored file says whether a score was
+measured against live copy or against a sibling draft.
 
 The report carries all three of the engine's measures — raw, normalised and opening-sentence —
 for every comparison, plus the peak of the three and which measure produced it.

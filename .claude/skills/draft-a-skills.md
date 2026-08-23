@@ -168,11 +168,24 @@ review carries more weight for those specific candidates.
       "confirmed": false
     }
   ],
-  "images": { "general": [], "variantImages": {} },
+  "images": {
+    "general": [
+      { "path": "string", "confirmed": false,
+        "sourceFile": "string | null", "role": "string | null" }
+    ],
+    "variantImages": {
+      "OptionName:value": { "path": "string", "confirmed": false,
+                            "sourceFile": "string | null", "verifiedDistinct": false }
+    }
+  },
   "pricing": { "price": null, "mrp": null, "cost": null, "referencePrice": "string | null" },
   "personalized": "boolean | null",
   "suggestedCollections": ["string"],
-  "sourceNotes": { "rawContent": "string | null", "referenceTitle": "string | null" },
+  "sourceNotes": {
+    "rawContent": "string | null", "referenceTitle": "string | null",
+    "originalId": "string | null", "originalSku": "string | null",
+    "originalUrl": "string | null", "originalCategories": ["string"]
+  },
   "flaggedContent": [
     { "type": "boilerplate-discarded | review-markup-discarded | brand-mismatch",
       "detail": "string", "sourceContext": "string | null" }
@@ -188,6 +201,27 @@ on every proposed candidate, always. This is what the review stage
 actually gates on — a product cannot proceed to description/meta
 generation (Phase 2) while any attribute still has `confirmed: false`.
 This is the mechanical enforcement of "always confirm per product."
+
+**`confirmed` is on every image suggestion too, on exactly the same
+terms.** `images.general` and `images.variantImages` may be *carried*
+populated — Stage 0 derives a suggested path per photograph off the
+source export, and dropping them would strand the `verified_distinct`
+evidence and make the manual image-assignment step for a whole migrated
+batch start from nothing. What may never happen at this stage is a
+suggestion arriving already confirmed: `validate-draft-a.mjs` rule A3
+hard-fails any `confirmed: true`, exactly as B1 does for an attribute,
+and `validatePublishReadiness` requires every one of them `true` before
+publish. An image the reviewer declines is deleted from the draft rather
+than left unconfirmed. **This skill never writes an image suggestion of
+its own** — it carries through the ones the raw block already holds,
+verbatim and still unconfirmed, and invents no path.
+
+**`sourceNotes` carries the four `original*` fields through.** They are
+transcribed by Stage 0, never invented here, and they become the
+product record's `migrationProvenance` block — server-only data that
+answers "which old listing is P387?" once `content-pipeline/` is gone.
+A fresh draft has none of them. See
+[ADR-056](../../docs/decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md).
 
 ## Worked example — migrated listing, fully proposed, awaiting confirmation
 
@@ -216,11 +250,26 @@ This is the mechanical enforcement of "always confirm per product."
       "confirmed": false
     }
   ],
-  "images": { "general": [], "variantImages": {} },
+  "images": {
+    "general": [
+      { "path": "/products/P101.webp", "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/odoo-1002/raw/main.webp", "role": "main" }
+    ],
+    "variantImages": {
+      "Colour:Golden": { "path": "/products/P101-golden.webp", "confirmed": false,
+                         "sourceFile": "2026-08-23-batch-01/odoo-1002/raw/variant-golden.webp",
+                         "verifiedDistinct": true }
+    }
+  },
   "pricing": { "price": null, "mrp": null, "cost": null, "referencePrice": "₹499 (old site)" },
   "personalized": false,
   "suggestedCollections": ["gifting"],
-  "sourceNotes": { "rawContent": null, "referenceTitle": "Amethyst Purple & Emerald Vine Necklace" },
+  "sourceNotes": {
+    "rawContent": null, "referenceTitle": "Amethyst Purple & Emerald Vine Necklace",
+    "originalId": "1002", "originalSku": "MG-ODOO-1002",
+    "originalUrl": "https://old-shop.example/product/1002",
+    "originalCategories": ["Jewellery", "Rings"]
+  },
   "flaggedContent": [
     { "type": "boilerplate-discarded", "detail": "Removed shipping/return-policy paragraph",
       "sourceContext": "Dispatch within 2 days... Free returns within 7 days" }

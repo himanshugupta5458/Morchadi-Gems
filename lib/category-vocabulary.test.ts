@@ -138,7 +138,12 @@ describe("a gift-hampers product passes the record-level validators", () => {
     const reviewed = {
       ...draft(),
       attributes: draft().attributes.map((attribute) => ({ ...attribute, confirmed: true })),
-      images: { general: ["/products/P900.webp"], variantImages: {} },
+      images: {
+        general: [
+          { path: "/products/P900.webp", confirmed: true, sourceFile: null, role: "main" },
+        ],
+        variantImages: {},
+      },
       pricing: { price: 999, mrp: 1299, cost: 600, referencePrice: "₹999 (old site)" },
     };
 

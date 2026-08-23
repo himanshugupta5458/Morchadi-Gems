@@ -3,6 +3,7 @@ import type {
   Product,
   ProductFlags,
   ProductMedia,
+  ProductMigrationProvenance,
   ProductOption,
   ProductPricing,
   ProductSeo,
@@ -38,9 +39,54 @@ export interface DraftVariant {
   values: string[];
 }
 
+/**
+ * One suggested photograph, in the same always-propose-always-confirm shape as
+ * `DraftAttribute`. Stage 0 writes the path it derived from the source export and sets
+ * `confirmed: false`; the manual image-assignment step is what turns that into `true`, and
+ * nothing else may. A suggestion the reviewer declined is deleted from the draft rather than
+ * left unconfirmed, so "present but unconfirmed" means review has not reached it yet.
+ *
+ * `sourceFile` and `role` are the provenance that used to sit in a parallel
+ * `imageSuggestionProvenance` block and could not cross into a Draft A object. They ride
+ * inside the suggestion now, which is what makes them survive extraction. See ADR-056.
+ */
+export interface DraftGeneralImage {
+  path: string;
+  confirmed: boolean;
+  sourceFile?: string | null;
+  role?: string | null;
+}
+
+/**
+ * A suggested variant photograph. `verifiedDistinct` is the source system's own hash check —
+ * evidence that two files differ, never evidence that this is the right photograph for this
+ * variant. It is carried for the person doing the confirming and is read by nothing else. A
+ * missing flag reads as *not* verified.
+ */
+export interface DraftVariantImage {
+  path: string;
+  confirmed: boolean;
+  sourceFile?: string | null;
+  verifiedDistinct?: boolean;
+}
+
 export interface DraftImages {
-  general: string[];
-  variantImages: Record<string, string>;
+  general: DraftGeneralImage[];
+  variantImages: Record<string, DraftVariantImage>;
+}
+
+/**
+ * What Stage 0 transcribed off the source listing. `rawContent` and `referenceTitle` are raw
+ * material for the copy skills; the four `original*` fields are the link back to the listing
+ * this product came from, and are the only source `migrationProvenance` has.
+ */
+export interface DraftSourceNotes {
+  originalId?: string | null;
+  originalSku?: string | null;
+  originalUrl?: string | null;
+  originalCategories?: string[];
+  referenceTitle?: string | null;
+  rawContent?: string | null;
 }
 
 export interface DraftPricing {
@@ -58,6 +104,7 @@ export interface DraftA {
   variants: DraftVariant[];
   attributes: DraftAttribute[];
   images: DraftImages;
+  sourceNotes?: DraftSourceNotes | null;
   pricing: DraftPricing;
   personalized: boolean | null;
   suggestedCollections: string[];
@@ -70,6 +117,10 @@ export interface MappingIssue {
   severity: MappingSeverity;
   field: string;
   message: string;
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 function error(field: string, message: string): MappingIssue {
@@ -356,13 +407,20 @@ export interface MediaMappingResult {
 
 /**
  * `images.general` becomes `media.images` and `images.variantImages` becomes
- * `media.variantImages`, unchanged. Both already use the storefront's own key format —
+ * `media.variantImages`. Both already use the storefront's own key format —
  * `"OptionName:value"` — so this is a rename and not a translation (ADR-050).
  *
- * The one thing checked is that every variant key names an option the product actually
- * declares. A photograph keyed to a value nothing can select is unreachable, and the unified
- * gallery strip renders every mapped photograph, so it would render a thumbnail no swatch
- * ever selects back.
+ * **Only a confirmed suggestion is carried forward**, which is the same rule
+ * `mapAttributesToSpecs` applies to a candidate value and for the same reason: a path Stage 0
+ * derived from an export is a proposal, and a proposal nobody approved is not a photograph
+ * this shop publishes. An unconfirmed entry is dropped with an advisory rather than in
+ * silence, so a draft that reaches the mapper mid-review says so. `validatePublishReadiness`
+ * is the gate that refuses it earlier. See ADR-056.
+ *
+ * The one structural thing checked is that every variant key names an option the product
+ * actually declares. A photograph keyed to a value nothing can select is unreachable, and the
+ * unified gallery strip renders every mapped photograph, so it would render a thumbnail no
+ * swatch ever selects back.
  */
 export function mapImagesToMedia(
   images: DraftImages,
@@ -370,30 +428,62 @@ export function mapImagesToMedia(
 ): MediaMappingResult {
   const issues: MappingIssue[] = [];
 
-  const general = Array.isArray(images?.general)
-    ? images.general.filter((path): path is string => typeof path === "string" && path.trim().length > 0)
-    : [];
+  const general: string[] = [];
+  const rawGeneral = Array.isArray(images?.general) ? images.general : [];
+  rawGeneral.forEach((entry, index) => {
+    const field = `images.general[${index}]`;
+    const path = isRecord(entry) && typeof entry.path === "string" ? entry.path.trim() : "";
+
+    if (path.length === 0) {
+      issues.push(
+        error(
+          field,
+          "each general image must be an object carrying a non-empty path and a confirmed flag. A bare path string records nothing about whether a person approved it",
+        ),
+      );
+      return;
+    }
+    if (entry.confirmed !== true) {
+      issues.push(
+        advisory(
+          field,
+          `"${path}" is still confirmed: false, so it is not written to media.images. An image suggestion is an owner decision before it reaches the catalogue`,
+        ),
+      );
+      return;
+    }
+    general.push(path);
+  });
 
   if (general.length === 0) {
     issues.push(
-      error("images.general", "images.general must hold at least one path. media.images[0] is every listing's photograph"),
+      error(
+        "images.general",
+        "images.general must hold at least one confirmed path. media.images[0] is every listing's photograph",
+      ),
     );
   }
 
   const variantImages: VariantImages = {};
   const rawVariantImages = images?.variantImages;
-  if (rawVariantImages !== null && typeof rawVariantImages === "object") {
-    for (const [key, path] of Object.entries(rawVariantImages)) {
-      if (typeof path !== "string" || path.trim().length === 0) {
-        issues.push(error(`images.variantImages["${key}"]`, "variant image path must be a non-empty string"));
+  if (isRecord(rawVariantImages)) {
+    for (const [key, entry] of Object.entries(rawVariantImages)) {
+      const field = `images.variantImages["${key}"]`;
+      const path = isRecord(entry) && typeof entry.path === "string" ? entry.path.trim() : "";
+
+      if (path.length === 0) {
+        issues.push(
+          error(
+            field,
+            "each variant image must be an object carrying a non-empty path and a confirmed flag",
+          ),
+        );
         continue;
       }
 
       const separator = key.indexOf(":");
       if (separator <= 0 || separator === key.length - 1) {
-        issues.push(
-          error(`images.variantImages["${key}"]`, 'variant image key must read "OptionName:value"'),
-        );
+        issues.push(error(field, 'variant image key must read "OptionName:value"'));
         continue;
       }
 
@@ -403,23 +493,28 @@ export function mapImagesToMedia(
       if (matchedOption === undefined) {
         issues.push(
           error(
-            `images.variantImages["${key}"]`,
+            field,
             `no option named "${optionName}". A photograph keyed to a choice the product does not offer is unreachable`,
           ),
         );
         continue;
       }
       if (!matchedOption.values.includes(optionValue)) {
+        issues.push(error(field, `option "${optionName}" has no value "${optionValue}"`));
+        continue;
+      }
+
+      if (entry.confirmed !== true) {
         issues.push(
-          error(
-            `images.variantImages["${key}"]`,
-            `option "${optionName}" has no value "${optionValue}"`,
+          advisory(
+            field,
+            `"${path}" is still confirmed: false, so it is not written to media.variantImages`,
           ),
         );
         continue;
       }
 
-      variantImages[key] = path.trim();
+      variantImages[key] = path;
     }
   }
 
@@ -429,6 +524,74 @@ export function mapImagesToMedia(
       : { images: general, variantImages };
 
   return { media, issues };
+}
+
+export interface ProvenanceMappingResult {
+  /** `null` for a fresh draft and for a migrated one carrying no source id. */
+  migrationProvenance: ProductMigrationProvenance | null;
+  issues: MappingIssue[];
+}
+
+function readNullableString(value: unknown): string | null {
+  return typeof value === "string" && value.trim().length > 0 ? value.trim() : null;
+}
+
+/**
+ * `sourceNotes` becomes `migrationProvenance` — the record's link back to the listing it came
+ * from. Only a migrated draft may carry one: provenance on a piece this shop wrote from
+ * scratch would be a claim about an origin that does not exist.
+ *
+ * `originalId` is the field the block exists for, so a migrated draft without one loses its
+ * provenance entirely rather than gaining a block with a hole in it, and says so out loud.
+ * That is an advisory rather than an error because a draft can legitimately be migrated in
+ * *copy* and hand-entered in *identity*; what it may never be is silently unlinked, which is
+ * what happened before ADR-056.
+ */
+export function mapMigrationProvenance(
+  sourceType: unknown,
+  sourceNotes: DraftSourceNotes | null | undefined,
+): ProvenanceMappingResult {
+  const issues: MappingIssue[] = [];
+  const notes = isRecord(sourceNotes) ? sourceNotes : {};
+  const originalId = readNullableString(notes.originalId);
+
+  if (sourceType !== "migrated") {
+    if (originalId !== null) {
+      issues.push(
+        advisory(
+          "sourceNotes.originalId",
+          `sourceType is "${String(sourceType)}", so the source id ${originalId} is not written to the record. Provenance belongs only to a migrated listing`,
+        ),
+      );
+    }
+    return { migrationProvenance: null, issues };
+  }
+
+  if (originalId === null) {
+    issues.push(
+      advisory(
+        "sourceNotes.originalId",
+        "this draft is migrated but carries no sourceNotes.originalId, so the record ships with no link back to the listing it came from",
+      ),
+    );
+    return { migrationProvenance: null, issues };
+  }
+
+  const originalCategories = Array.isArray(notes.originalCategories)
+    ? notes.originalCategories
+        .map((entry) => readNullableString(entry))
+        .filter((entry): entry is string => entry !== null)
+    : [];
+
+  return {
+    migrationProvenance: {
+      originalId,
+      originalSku: readNullableString(notes.originalSku),
+      originalUrl: readNullableString(notes.originalUrl),
+      originalCategories,
+    },
+    issues,
+  };
 }
 
 export interface PricingMappingResult {
@@ -564,6 +727,11 @@ export interface ProductBuildResult {
  * **`status` is always `"draft"`.** Publication is `scripts/publish-product.mjs` and a separate
  * owner decision (ADR-052); nothing that writes a record also switches it on.
  *
+ * **`subcategory` and `migrationProvenance` are carried through here and nowhere else.** Both
+ * are server-only catalogue data: `lib/products.ts`'s `toCatalogueEntry` whitelist is what
+ * keeps them out of a browser bundle, and `lib/product-provenance.test.ts` is what checks that
+ * it still does. See ADR-056.
+ *
  * This function does not run `validatePublishReadiness`, the keyword collision check or the
  * similarity gate. Those are the orchestration skill's gates and run before it, so that a draft
  * that fails one never reaches the point of having a record built for it.
@@ -620,6 +788,11 @@ export function buildProductFromDraft(input: ProductBuildInput): ProductBuildRes
   );
   issues.push(...collectionResult.issues);
 
+  const provenanceResult = mapMigrationProvenance(draft?.sourceType, draft?.sourceNotes);
+  issues.push(...provenanceResult.issues);
+
+  const subcategory = typeof draft?.subcategory === "string" ? draft.subcategory.trim() : "";
+
   if (draft?.personalized === true && optionResult.options.length === 0) {
     issues.push(
       advisory(
@@ -650,6 +823,7 @@ export function buildProductFromDraft(input: ProductBuildInput): ProductBuildRes
     id,
     name,
     category,
+    ...(subcategory.length > 0 ? { subcategory } : {}),
     status: "draft",
     ...(collectionResult.collections.length > 0
       ? { collections: collectionResult.collections }
@@ -662,6 +836,9 @@ export function buildProductFromDraft(input: ProductBuildInput): ProductBuildRes
     seo: content.seo,
     stock: { inStock: inStock ?? true },
     flags: flags ?? { featured: false, isNew: true },
+    ...(provenanceResult.migrationProvenance === null
+      ? {}
+      : { migrationProvenance: provenanceResult.migrationProvenance }),
   };
 
   return { product, errors, advisories };

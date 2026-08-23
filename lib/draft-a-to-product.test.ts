@@ -11,9 +11,12 @@ import {
   mapPricing,
   mapVariantsToOptions,
   resolveSpecKey,
+  mapMigrationProvenance,
   type AuthoredContent,
   type DraftA,
   type DraftAttribute,
+  type DraftGeneralImage,
+  type DraftVariantImage,
 } from "@/lib/draft-a-to-product";
 import type { KeywordMap } from "@/lib/keyword-collision-check";
 import type { Product, ProductSeo } from "@/types/product";
@@ -33,6 +36,22 @@ function attribute(overrides: Partial<DraftAttribute> = {}): DraftAttribute {
     confirmed: true,
     ...overrides,
   };
+}
+
+/**
+ * A confirmed image suggestion — the only kind that may reach `media`. Written as a builder for
+ * the same reason `attribute` is: most cases below vary exactly one field of it, and since
+ * ADR-056 the field they usually vary is `confirmed`.
+ */
+function image(path: string, overrides: Partial<DraftGeneralImage> = {}): DraftGeneralImage {
+  return { path, confirmed: true, sourceFile: null, role: null, ...overrides };
+}
+
+function variantImage(
+  path: string,
+  overrides: Partial<DraftVariantImage> = {},
+): DraftVariantImage {
+  return { path, confirmed: true, sourceFile: null, verifiedDistinct: false, ...overrides };
 }
 
 const SEO: ProductSeo = {
@@ -65,7 +84,7 @@ function draft(overrides: Partial<DraftA> = {}): DraftA {
       attribute({ label: "Stone", value: "cubic zirconia", source: null }),
       attribute({ label: "Type", value: "adjustable open band", source: null }),
     ],
-    images: { general: ["/products/P900.webp"], variantImages: {} },
+    images: { general: [image("/products/P900.webp")], variantImages: {} },
     pricing: { price: 210, mrp: 299, cost: 126, referencePrice: "₹499 (old site)" },
     personalized: false,
     suggestedCollections: [],
@@ -252,7 +271,7 @@ describe("mapImagesToMedia", () => {
 
   it("renames general to media.images and omits variantImages when empty", () => {
     const { media, issues } = mapImagesToMedia(
-      { general: ["/products/P900.webp"], variantImages: {} },
+      { general: [image("/products/P900.webp")], variantImages: {} },
       [],
     );
 
@@ -264,8 +283,8 @@ describe("mapImagesToMedia", () => {
   it("passes an OptionName:value key through unchanged", () => {
     const { media, issues } = mapImagesToMedia(
       {
-        general: ["/products/P900.webp"],
-        variantImages: { "Colour:Golden": "/products/P900-golden.webp" },
+        general: [image("/products/P900.webp")],
+        variantImages: { "Colour:Golden": variantImage("/products/P900-golden.webp") },
       },
       [colourOption],
     );
@@ -276,13 +295,13 @@ describe("mapImagesToMedia", () => {
 
   it("refuses a variant key naming an option or a value the product does not offer", () => {
     const unknownOption = mapImagesToMedia(
-      { general: ["/a.webp"], variantImages: { "Finish:Matte": "/b.webp" } },
+      { general: [image("/a.webp")], variantImages: { "Finish:Matte": variantImage("/b.webp") } },
       [colourOption],
     );
     expect(unknownOption.issues[0].message).toContain("no option named");
 
     const unknownValue = mapImagesToMedia(
-      { general: ["/a.webp"], variantImages: { "Colour:Rose": "/b.webp" } },
+      { general: [image("/a.webp")], variantImages: { "Colour:Rose": variantImage("/b.webp") } },
       [colourOption],
     );
     expect(unknownValue.issues[0].message).toContain('has no value "Rose"');
@@ -290,13 +309,80 @@ describe("mapImagesToMedia", () => {
 
   it("refuses a malformed key and an empty general list", () => {
     const malformed = mapImagesToMedia(
-      { general: ["/a.webp"], variantImages: { Golden: "/b.webp" } },
+      { general: [image("/a.webp")], variantImages: { Golden: variantImage("/b.webp") } },
       [colourOption],
     );
     expect(malformed.issues[0].message).toContain("OptionName:value");
 
     const noImages = mapImagesToMedia({ general: [], variantImages: {} }, []);
     expect(noImages.issues.some((issue) => issue.field === "images.general")).toBe(true);
+  });
+
+  it("carries a confirmed suggestion and drops an unconfirmed one, saying which", () => {
+    const { media, issues } = mapImagesToMedia(
+      {
+        general: [
+          image("/products/P900.webp"),
+          image("/products/P900-2.webp", { confirmed: false }),
+        ],
+        variantImages: {},
+      },
+      [],
+    );
+
+    expect(media.images).toEqual(["/products/P900.webp"]);
+    expect(
+      issues.some(
+        (issue) =>
+          issue.severity === "advisory" &&
+          issue.field === "images.general[1]" &&
+          issue.message.includes("confirmed: false"),
+      ),
+    ).toBe(true);
+  });
+
+  it("drops an unconfirmed variant image without dropping the confirmed one beside it", () => {
+    const { media, issues } = mapImagesToMedia(
+      {
+        general: [image("/products/P900.webp")],
+        variantImages: {
+          "Colour:Golden": variantImage("/products/P900-golden.webp", { verifiedDistinct: true }),
+          "Colour:Silver": variantImage("/products/P900-silver.webp", { confirmed: false }),
+        },
+      },
+      [colourOption],
+    );
+
+    expect(media.variantImages).toEqual({ "Colour:Golden": "/products/P900-golden.webp" });
+    expect(
+      issues.some(
+        (issue) =>
+          issue.severity === "advisory" &&
+          issue.field === 'images.variantImages["Colour:Silver"]',
+      ),
+    ).toBe(true);
+  });
+
+  it("refuses the whole media block when every general suggestion is unconfirmed", () => {
+    const { media, issues } = mapImagesToMedia(
+      { general: [image("/products/P900.webp", { confirmed: false })], variantImages: {} },
+      [],
+    );
+
+    expect(media.images).toEqual([]);
+    expect(
+      issues.some((issue) => issue.severity === "error" && issue.field === "images.general"),
+    ).toBe(true);
+  });
+
+  it("refuses a bare path string, which records nothing about who approved it", () => {
+    const { issues } = mapImagesToMedia(
+      { general: ["/products/P900.webp"] as unknown as DraftGeneralImage[], variantImages: {} },
+      [],
+    );
+
+    expect(issues[0].severity).toBe("error");
+    expect(issues[0].message).toContain("confirmed flag");
   });
 });
 
@@ -376,8 +462,8 @@ describe("buildProductFromDraft", () => {
       draft: draft({
         variants: [{ optionName: "Colour", values: ["Golden", "Silver"] }],
         images: {
-          general: ["/products/P900.webp"],
-          variantImages: { "Colour:Golden": "/products/P900-golden.webp" },
+          general: [image("/products/P900.webp")],
+          variantImages: { "Colour:Golden": variantImage("/products/P900-golden.webp") },
         },
         suggestedCollections: ["gifting"],
       }),
@@ -419,6 +505,49 @@ describe("buildProductFromDraft", () => {
     expect(errors.some((issue) => issue.field === "category")).toBe(true);
   });
 
+  it("carries subcategory and migrationProvenance through from the draft", () => {
+    const { product, errors } = buildProductFromDraft({
+      draft: draft({
+        subcategory: "adjustable band",
+        sourceNotes: {
+          originalId: "1002",
+          originalSku: "MG-RING-1002",
+          originalUrl: "https://old.example/shop/bow-ring",
+          originalCategories: ["Jewellery", "Rings"],
+          referenceTitle: "Bow Ring",
+          rawContent: "gold-plated brass",
+        },
+      }),
+      content: CONTENT,
+    });
+
+    expect(errors).toEqual([]);
+    expect(product?.subcategory).toBe("adjustable band");
+    expect(product?.migrationProvenance).toEqual({
+      originalId: "1002",
+      originalSku: "MG-RING-1002",
+      originalUrl: "https://old.example/shop/bow-ring",
+      originalCategories: ["Jewellery", "Rings"],
+    });
+  });
+
+  it("omits both rather than writing an empty subcategory or a hollow provenance block", () => {
+    const { product } = buildProductFromDraft({ draft: draft(), content: CONTENT });
+
+    expect(product === null ? true : "subcategory" in product).toBe(false);
+    expect(product === null ? true : "migrationProvenance" in product).toBe(false);
+  });
+
+  it("says out loud when a migrated draft has no source id to link back to", () => {
+    const { product, advisories } = buildProductFromDraft({
+      draft: draft({ sourceNotes: { referenceTitle: "Bow Ring" } }),
+      content: CONTENT,
+    });
+
+    expect(product?.migrationProvenance).toBeUndefined();
+    expect(advisories.some((issue) => issue.field === "sourceNotes.originalId")).toBe(true);
+  });
+
   it("flags a personalised piece that offers nothing to personalise", () => {
     const { advisories } = buildProductFromDraft({
       draft: draft({ personalized: true }),
@@ -426,6 +555,39 @@ describe("buildProductFromDraft", () => {
     });
 
     expect(advisories.some((issue) => issue.field === "personalized")).toBe(true);
+  });
+});
+
+describe("mapMigrationProvenance", () => {
+  it("writes nothing for a fresh draft, and says so if one carries a source id anyway", () => {
+    const clean = mapMigrationProvenance("fresh", { referenceTitle: "Hand-written piece" });
+    expect(clean.migrationProvenance).toBeNull();
+    expect(clean.issues).toEqual([]);
+
+    const stray = mapMigrationProvenance("fresh", { originalId: "1002" });
+    expect(stray.migrationProvenance).toBeNull();
+    expect(stray.issues[0].severity).toBe("advisory");
+    expect(stray.issues[0].message).toContain("only to a migrated listing");
+  });
+
+  it("records a null sku and url rather than dropping the fields", () => {
+    const { migrationProvenance } = mapMigrationProvenance("migrated", { originalId: "1002" });
+
+    expect(migrationProvenance).toEqual({
+      originalId: "1002",
+      originalSku: null,
+      originalUrl: null,
+      originalCategories: [],
+    });
+  });
+
+  it("drops a blank entry from originalCategories rather than carrying it", () => {
+    const { migrationProvenance } = mapMigrationProvenance("migrated", {
+      originalId: "1002",
+      originalCategories: ["Jewellery", "  ", "Rings"],
+    });
+
+    expect(migrationProvenance?.originalCategories).toEqual(["Jewellery", "Rings"]);
   });
 });
 

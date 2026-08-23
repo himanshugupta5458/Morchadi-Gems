@@ -461,7 +461,7 @@ describe("Part C — the image transformation", () => {
   it("puts the main photograph first and numbers its siblings from 2, per ADR-006", () => {
     const { images } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
 
-    expect(images.general).toEqual([
+    expect(images.general.map((entry) => entry.path)).toEqual([
       "/products/P101.webp",
       "/products/P101-2.webp",
       "/products/P101-3.webp",
@@ -471,66 +471,72 @@ describe("Part C — the image transformation", () => {
   it("keys variant images as OptionName:Value", () => {
     const { images } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
 
-    expect(images.variantImages).toEqual({
+    expect(
+      Object.fromEntries(
+        Object.entries(images.variantImages).map(([key, entry]) => [key, entry.path]),
+      ),
+    ).toEqual({
       "Colour:Golden": "/products/P101-golden.webp",
       "Colour:Rose Gold": "/products/P101-rose-gold.webp",
     });
   });
 
-  it("carries verified_distinct forward as metadata beside the suggestion, not inside it", () => {
-    const { images, imageSuggestionProvenance } = buildImageSuggestions(
-      record,
-      "P101",
-      BATCH_ID,
-      "1002",
-    );
+  it("writes every suggestion as confirmed: false — nothing here has been approved", () => {
+    const { images } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
 
-    for (const path of Object.values(images.variantImages)) {
-      expect(typeof path).toBe("string");
-    }
-    expect(imageSuggestionProvenance.variantImages).toEqual([
-      {
-        key: "Colour:Golden",
+    for (const entry of images.general) expect(entry.confirmed).toBe(false);
+    for (const entry of Object.values(images.variantImages)) expect(entry.confirmed).toBe(false);
+  });
+
+  it("carries verified_distinct forward inside the suggestion, so it survives extraction", () => {
+    const { images } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
+
+    expect(images.variantImages).toEqual({
+      "Colour:Golden": {
         path: "/products/P101-golden.webp",
+        confirmed: false,
         sourceFile: join(BATCH_ID, "odoo-1002", "raw", "variant-golden.webp"),
         verifiedDistinct: true,
       },
-      {
-        key: "Colour:Rose Gold",
+      "Colour:Rose Gold": {
         path: "/products/P101-rose-gold.webp",
+        confirmed: false,
         sourceFile: join(BATCH_ID, "odoo-1002", "raw", "variant-rose.webp"),
         verifiedDistinct: false,
       },
-    ]);
+    });
   });
 
   it("treats a missing verified_distinct as not verified rather than as verified", () => {
-    const { imageSuggestionProvenance } = buildImageSuggestions(
+    const { images } = buildImageSuggestions(
       { images: { variantImages: [{ attribute: "Colour", value: "Golden", file: "v.webp" }] } },
       "P101",
       BATCH_ID,
       "1002",
     );
 
-    expect(imageSuggestionProvenance.variantImages[0].verifiedDistinct).toBe(false);
+    expect(images.variantImages["Colour:Golden"].verifiedDistinct).toBe(false);
   });
 
   it("records the source file behind every general suggestion", () => {
-    const { imageSuggestionProvenance } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
+    const { images } = buildImageSuggestions(record, "P101", BATCH_ID, "1002");
 
-    expect(imageSuggestionProvenance.general).toEqual([
+    expect(images.general).toEqual([
       {
         path: "/products/P101.webp",
+        confirmed: false,
         sourceFile: join(BATCH_ID, "odoo-1002", "raw", "main.webp"),
         role: "main",
       },
       {
         path: "/products/P101-2.webp",
+        confirmed: false,
         sourceFile: join(BATCH_ID, "odoo-1002", "raw", "extra-1.webp"),
         role: "extra-1",
       },
       {
         path: "/products/P101-3.webp",
+        confirmed: false,
         sourceFile: join(BATCH_ID, "odoo-1002", "raw", "extra-2.webp"),
         role: "extra-2",
       },
@@ -552,7 +558,11 @@ describe("Part C — the image transformation", () => {
       "1002",
     );
 
-    expect(images.variantImages).toEqual({
+    expect(
+      Object.fromEntries(
+        Object.entries(images.variantImages).map(([key, entry]) => [key, entry.path]),
+      ),
+    ).toEqual({
       "Colour:Gold": "/products/P101-colour-gold.webp",
       "Strap:Gold": "/products/P101-strap-gold.webp",
     });
@@ -561,7 +571,17 @@ describe("Part C — the image transformation", () => {
   it("gives a record with no photographs beyond the main one a single general entry", () => {
     const { images } = buildImageSuggestions({ images: {} }, "P101", BATCH_ID, "1002");
 
-    expect(images).toEqual({ general: ["/products/P101.webp"], variantImages: {} });
+    expect(images).toEqual({
+      general: [
+        {
+          path: "/products/P101.webp",
+          confirmed: false,
+          sourceFile: join(BATCH_ID, "odoo-1002", "raw", "main.webp"),
+          role: "main",
+        },
+      ],
+      variantImages: {},
+    });
   });
 });
 
@@ -633,9 +653,14 @@ describe("the raw block — shaped for Draft A, and not claiming to be one", () 
     }
     expect(Object.keys(block.images).sort()).toEqual(["general", "variantImages"]);
     expect(Array.isArray(block.images.general)).toBe(true);
-    for (const [key, path] of Object.entries(block.images.variantImages)) {
+    for (const entry of block.images.general) {
+      expect(entry.path).toMatch(/^\/products\/P\d{3}[a-z0-9-]*\.webp$/);
+      expect(entry.confirmed).toBe(false);
+    }
+    for (const [key, entry] of Object.entries(block.images.variantImages)) {
       expect(key).toMatch(/^.+:.+$/);
-      expect(path).toMatch(/^\/products\/P\d{3}[a-z0-9-]*\.webp$/);
+      expect(entry.path).toMatch(/^\/products\/P\d{3}[a-z0-9-]*\.webp$/);
+      expect(entry.confirmed).toBe(false);
     }
   });
 

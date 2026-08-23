@@ -99,6 +99,14 @@ export const PLACEHOLDER_PRECEDENCE: readonly PlaceholderClass[] = [
 export type NormalisationVocabulary = Record<PlaceholderClass, ReadonlySet<string>>;
 
 /**
+ * Which half of the comparison population an entry belongs to. Carried on every comparison so
+ * a stored report says what a score was measured *against* — a 0.9 against a published product
+ * and a 0.9 against a sibling draft from the same migrated batch are different findings, and a
+ * calibration run reading these files later has to be able to tell them apart. See ADR-056.
+ */
+export type SimilarityPopulation = "active" | "draft";
+
+/**
  * The subset of a catalogue record this module reads. Declared structurally so a test can
  * build a fixture without a full `Product`, and so the calibration script can pass parsed
  * JSON straight through.
@@ -109,6 +117,8 @@ export interface SimilarityInput {
   description: string;
   specs: Record<string, string>;
   options?: readonly { readonly name: string; readonly values: readonly string[] }[];
+  /** Defaults to `"active"`, so a hand-built fixture need not state it. */
+  population?: SimilarityPopulation;
 }
 
 export interface ProductPairScores {
@@ -312,6 +322,7 @@ export function toSimilarityInput(product: Product): SimilarityInput {
     description: product.description,
     specs: product.specs,
     options: product.options,
+    population: product.status === "draft" ? "draft" : "active",
   };
 }
 
@@ -352,6 +363,8 @@ export interface SimilarityPeak {
 
 export interface SimilarityComparison {
   againstProductId: string;
+  /** Whether the entry compared against is published copy or an unpublished sibling draft. */
+  againstPopulation: SimilarityPopulation;
   scores: ProductPairScores;
   /** The highest of the three scores. This, and only this, is what a threshold is read against. */
   peak: SimilarityPeak;
@@ -365,6 +378,10 @@ export interface SimilarityGateReport {
   advisory: boolean;
   blocked: boolean;
   comparedAgainst: number;
+  /** The published half of `comparedAgainst`. */
+  comparedAgainstActive: number;
+  /** The unpublished half — sibling drafts, which before ADR-056 were not compared at all. */
+  comparedAgainstDraft: number;
   /** Every comparison, highest peak first. Written whole, so a later calibration has the data. */
   comparisons: SimilarityComparison[];
   /** The comparisons whose peak sits above the threshold. Always empty on an advisory run. */
@@ -392,7 +409,12 @@ export function compareAgainstCatalogue(
     .filter((entry) => entry.id !== candidate.id)
     .map((entry) => {
       const scores = scoreProductPair(candidate, entry);
-      return { againstProductId: entry.id, scores, peak: peakScore(scores) };
+      return {
+        againstProductId: entry.id,
+        againstPopulation: entry.population ?? "active",
+        scores,
+        peak: peakScore(scores),
+      };
     })
     .sort(
       (left, right) =>
@@ -423,12 +445,18 @@ export function evaluateSimilarityGate(
     advisory: threshold === null,
     blocked: exceeded.length > 0,
     comparedAgainst: comparisons.length,
+    comparedAgainstActive: comparisons.filter((c) => c.againstPopulation === "active").length,
+    comparedAgainstDraft: comparisons.filter((c) => c.againstPopulation === "draft").length,
     comparisons,
     exceeded,
   };
 }
 
-/** Every active record, as the gate's comparison population. Drafts are not live copy. */
+/**
+ * The published half of the population, on its own. Exported because "what is live copy" is a
+ * real question a caller can have — but it is **not** what the gate compares against. Reach for
+ * `selectSimilarityComparisonPopulation` for that.
+ */
 export function selectActiveSimilarityInputs(
   catalogue: readonly Product[],
 ): SimilarityInput[] {
@@ -437,18 +465,67 @@ export function selectActiveSimilarityInputs(
     .map(toSimilarityInput);
 }
 
+/** The unpublished half: every record sitting in `data/products.json` as a draft. */
+export function selectDraftSimilarityInputs(
+  catalogue: readonly Product[],
+): SimilarityInput[] {
+  return catalogue
+    .filter((product) => product.status === "draft")
+    .map(toSimilarityInput);
+}
+
+/**
+ * **The gate's comparison population: every record in the catalogue, published or not, plus any
+ * sibling draft from the batch in progress that has not been written to `data/products.json`
+ * yet.**
+ *
+ * This was active-only until ADR-056, and the docstring that justified it — *"drafts are not
+ * live copy"* — was a true statement about a 49-product hand-written catalogue and a costly one
+ * about a 542-product migration. Every migrated product is written as `status: "draft"` and
+ * stays that way until someone runs `publish-product.mjs`, so an active-only population scored
+ * each of 542 candidates against the 49 originals and never against the other 541 — the ones
+ * whose copy came off a single old site and are by far the likeliest to be templated. By the
+ * time a duplicated pair was both active, the gate had already passed both.
+ *
+ * It is the same argument [ADR-053](/docs/decisions/ADR-053-draft-a-to-product-orchestration.md)
+ * decision 4 made for keywords, where a second index over draft records was added *"because the
+ * committed map cannot see drafts"*. `sessionDrafts` is the extra step keywords did not need:
+ * within one orchestration run several drafts can be written before any of them is saved, and a
+ * comparison against a sibling that exists only in memory is the earliest this gate can ever
+ * make it.
+ *
+ * The threshold is still `null` and nothing is refused. What changes is that the scores being
+ * accumulated for the eventual calibration run are measured against the right population, so
+ * turning the gate on remains one assignment rather than one assignment and a second retrofit.
+ */
+export function selectSimilarityComparisonPopulation(
+  catalogue: readonly Product[],
+  sessionDrafts: readonly SimilarityInput[] = [],
+): SimilarityInput[] {
+  const fromCatalogue = catalogue.map(toSimilarityInput);
+  const known = new Set(fromCatalogue.map((input) => input.id));
+
+  return [
+    ...fromCatalogue,
+    ...sessionDrafts
+      .filter((input) => !known.has(input.id))
+      .map((input) => ({ ...input, population: input.population ?? "draft" }) as SimilarityInput),
+  ];
+}
+
 export function describeSimilarityGate(report: SimilarityGateReport): string {
   const highest = report.comparisons[0];
   const headline =
     highest === undefined
-      ? "no active product to compare against"
-      : `highest ${highest.peak.measure} ${highest.peak.score.toFixed(3)} against ${highest.againstProductId}`;
+      ? "no product to compare against"
+      : `highest ${highest.peak.measure} ${highest.peak.score.toFixed(3)} against ${highest.againstProductId} (${highest.againstPopulation})`;
+  const population = `${report.comparedAgainst} product(s): ${report.comparedAgainstActive} active, ${report.comparedAgainstDraft} draft`;
 
   if (report.threshold === null) {
-    return `ADVISORY (SIMILARITY_THRESHOLD is null, nothing blocks): ${headline}, across ${report.comparedAgainst} active product(s).`;
+    return `ADVISORY (SIMILARITY_THRESHOLD is null, nothing blocks): ${headline}, across ${population}.`;
   }
   if (report.blocked) {
     return `BLOCKED at threshold ${report.threshold}: ${report.exceeded.length} comparison(s) above it, ${headline}.`;
   }
-  return `PASS at threshold ${report.threshold}: ${headline}, across ${report.comparedAgainst} active product(s).`;
+  return `PASS at threshold ${report.threshold}: ${headline}, across ${population}.`;
 }

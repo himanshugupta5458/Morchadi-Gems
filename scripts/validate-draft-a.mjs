@@ -14,9 +14,9 @@
  *
  * What is left is what a machine can actually decide: STRUCTURE and PROVENANCE.
  *
- * - Structure — is the object the shape the schema states, with the fields that must be empty
- *   at this stage actually empty. A populated price or a populated image list is not a
- *   difference of opinion, it is a phase-1 rule broken.
+ * - Structure — is the object the shape the schema states, with nothing at this stage claiming
+ *   a decision that has not been taken. A populated price is not a difference of opinion, it is
+ *   a phase-1 rule broken; so is an image suggestion that already says it was confirmed.
  * - Provenance — is every candidate carrying the source quote the owner needs in order to
  *   confirm it, and does that quote actually appear in the source text. The containment check
  *   in `checkQuotedPhraseContainment` is the load-bearing one: a model can invent a fluent
@@ -27,11 +27,12 @@
  *
  * - `validateDraftA` — Parts A/B. "Did the extraction skill produce well-formed output?"
  *   Runs on the skill's output BEFORE any human has looked at it. Every attribute must be
- *   `confirmed: false` here, prices must be null, images must be empty.
+ *   `confirmed: false` here, prices must be null, and every image suggestion must be
+ *   `confirmed: false` too — carried, never decided.
  * - `validatePublishReadiness` — Part D. "Has review actually happened, and is this thing
  *   ready to become a product?" Runs much later, after owner review and after the separate
  *   manual image-assignment step. Its expectations are close to the inverse: confirmed true,
- *   a real price, at least one image.
+ *   a real price, at least one image, and every image confirmed.
  *
  * Only the first is wired to the CLI. The second is exported for the Phase 2 pipeline, which
  * is not designed yet (ADR-051, decision 5).
@@ -84,7 +85,7 @@ const KNOWN_TRADE_TERM = "known-trade-term";
 const RULES = {
   category: "A1",
   pricingNull: "A2",
-  imagesEmpty: "A3",
+  imagesUnconfirmed: "A3",
   personalized: "A4",
   flaggedContentType: "A5",
   attributeConfirmedFalse: "B1",
@@ -213,35 +214,108 @@ function checkPricingIsUnset(draft, errors) {
 }
 
 /**
- * Image assignment is a manual step that happens between Draft A creation and publish
- * readiness. At this stage both containers are empty, and a populated one means an image was
- * attached by something that had no business attaching it.
+ * A3. Image assignment is a manual step that happens between Draft A creation and publish
+ * readiness, and this rule is what stops it happening earlier.
+ *
+ * It reads the same way B1 does, and it changed for the same reason B1 exists. Until ADR-056
+ * both containers had to be **empty** here — which was right while every draft was written
+ * from scratch, and wrong the moment Stage 0 began deriving suggested paths from a real
+ * export. An empty-only rule failed all 542 migrated drafts, and the obvious way to unstick
+ * that would have been to relax the rule into nothing.
+ *
+ * So the rule is now about confirmation rather than about presence: a suggestion may be
+ * carried, and **`confirmed: true` is a hard failure**, exactly as it is on an attribute.
+ * Nothing is confirmed before a human has looked at it. The opposite expectation lives in
+ * `validatePublishReadiness`.
  */
-function checkImagesAreEmpty(draft, errors) {
+function checkImagesAreUnconfirmed(draft, errors) {
   const images = draft.images;
   if (!isPlainObject(images)) {
-    errors.push(makeFinding(RULES.imagesEmpty, "images", images, "images must be an object"));
+    errors.push(makeFinding(RULES.imagesUnconfirmed, "images", images, "images must be an object"));
     return;
   }
 
-  if (!Array.isArray(images.general) || images.general.length > 0) {
+  if (!Array.isArray(images.general)) {
     errors.push(
       makeFinding(
-        RULES.imagesEmpty,
+        RULES.imagesUnconfirmed,
         "images.general",
         images.general,
-        "images.general must be an empty array — image assignment never happens in this skill",
+        "images.general must be an array of image suggestions",
+      ),
+    );
+  } else {
+    images.general.forEach((entry, index) => {
+      checkImageSuggestionIsUnconfirmed(entry, `images.general[${index}]`, errors);
+    });
+  }
+
+  if (!isPlainObject(images.variantImages)) {
+    errors.push(
+      makeFinding(
+        RULES.imagesUnconfirmed,
+        "images.variantImages",
+        images.variantImages,
+        "images.variantImages must be an object keyed by \"OptionName:value\"",
+      ),
+    );
+    return;
+  }
+
+  for (const [key, entry] of Object.entries(images.variantImages)) {
+    checkImageSuggestionIsUnconfirmed(entry, `images.variantImages["${key}"]`, errors);
+  }
+}
+
+/**
+ * One suggestion, checked for the two things a machine can decide about it: that it is an
+ * object carrying a path, and that it does not already claim a confirmation nobody gave.
+ * `sourceFile`, `role` and `verifiedDistinct` are provenance carried for the reviewer and are
+ * not required — an image suggested by hand has no source file to name.
+ */
+function checkImageSuggestionIsUnconfirmed(entry, field, errors) {
+  if (!isPlainObject(entry)) {
+    errors.push(
+      makeFinding(
+        RULES.imagesUnconfirmed,
+        field,
+        entry,
+        "each image suggestion must be an object carrying a path and a confirmed flag — a bare path string records nothing about whether a person approved it",
+      ),
+    );
+    return;
+  }
+
+  if (!isNonEmptyString(entry.path)) {
+    errors.push(
+      makeFinding(
+        RULES.imagesUnconfirmed,
+        `${field}.path`,
+        entry.path,
+        "path must be a non-empty string",
       ),
     );
   }
 
-  if (!isPlainObject(images.variantImages) || Object.keys(images.variantImages).length > 0) {
+  if (!Object.prototype.hasOwnProperty.call(entry, "confirmed")) {
     errors.push(
       makeFinding(
-        RULES.imagesEmpty,
-        "images.variantImages",
-        images.variantImages,
-        "images.variantImages must be an empty object — image assignment never happens in this skill",
+        RULES.imagesUnconfirmed,
+        `${field}.confirmed`,
+        undefined,
+        "confirmed must be present on every image suggestion",
+      ),
+    );
+    return;
+  }
+
+  if (entry.confirmed !== false) {
+    errors.push(
+      makeFinding(
+        RULES.imagesUnconfirmed,
+        `${field}.confirmed`,
+        entry.confirmed,
+        "confirmed must be false at extraction time — an image suggestion is carried to the manual image-assignment step, never decided before it",
       ),
     );
   }
@@ -465,7 +539,7 @@ export function validateDraftA(draft, options = {}) {
 
   checkCategory(draft, errors);
   checkPricingIsUnset(draft, errors);
-  checkImagesAreEmpty(draft, errors);
+  checkImagesAreUnconfirmed(draft, errors);
   checkPersonalized(draft, errors);
   checkFlaggedContent(draft, errors);
   checkAttributes(draft, errors, warnings);
@@ -476,6 +550,27 @@ export function validateDraftA(draft, options = {}) {
     errors,
     warnings,
   };
+}
+
+/**
+ * D4, per suggestion. The mirror of `checkImageSuggestionIsUnconfirmed`: by publish time every
+ * image carried on the draft has been through the manual image-assignment step, so an entry
+ * still sitting at `confirmed: false` means that step has not reached it. A suggestion the
+ * reviewer declined is deleted from the draft rather than left unconfirmed, which is what makes
+ * "every entry confirmed" a rule the reviewer can actually satisfy.
+ */
+function checkImageSuggestionIsConfirmed(entry, field, errors) {
+  const confirmed = isPlainObject(entry) ? entry.confirmed : undefined;
+  if (confirmed === true) return;
+
+  errors.push(
+    makeFinding(
+      RULES.postReviewImages,
+      `${field}.confirmed`,
+      confirmed,
+      "every image must be confirmed: true before publish — an unconfirmed suggestion has not been through the manual image-assignment step",
+    ),
+  );
 }
 
 /**
@@ -491,7 +586,8 @@ export function validateDraftA(draft, options = {}) {
  * | --- | --- | --- |
  * | `attributes[].confirmed` | must be `false` | must be `true` |
  * | `pricing.price` | must be `null` | must be a positive number |
- * | `images.general` | must be empty | must hold at least one entry |
+ * | `images.general[].confirmed` | must be `false` | must be `true` |
+ * | `images.general` | may be empty or hold suggestions | must hold at least one entry |
  *
  * Image assignment and pricing are separate manual steps that happen *between* the two checks,
  * which is why a value that is a hard failure in the first is a hard requirement in the second.
@@ -568,7 +664,8 @@ export function validatePublishReadiness(draft, options = {}) {
     );
   }
 
-  const general = isPlainObject(draft.images) ? draft.images.general : undefined;
+  const images = isPlainObject(draft.images) ? draft.images : undefined;
+  const general = images === undefined ? undefined : images.general;
   if (!Array.isArray(general) || general.length === 0) {
     errors.push(
       makeFinding(
@@ -578,6 +675,26 @@ export function validatePublishReadiness(draft, options = {}) {
         "images.general must hold at least one image before publish — image assignment is the manual step between Draft A creation and this check",
       ),
     );
+  } else {
+    general.forEach((entry, index) => {
+      checkImageSuggestionIsConfirmed(entry, `images.general[${index}]`, errors);
+    });
+  }
+
+  const variantImages = images === undefined ? undefined : images.variantImages;
+  if (variantImages !== undefined && !isPlainObject(variantImages)) {
+    errors.push(
+      makeFinding(
+        RULES.postReviewImages,
+        "images.variantImages",
+        variantImages,
+        "images.variantImages must be an object keyed by \"OptionName:value\"",
+      ),
+    );
+  } else if (isPlainObject(variantImages)) {
+    for (const [key, entry] of Object.entries(variantImages)) {
+      checkImageSuggestionIsConfirmed(entry, `images.variantImages["${key}"]`, errors);
+    }
   }
 
   const price = isPlainObject(draft.pricing) ? draft.pricing.price : undefined;

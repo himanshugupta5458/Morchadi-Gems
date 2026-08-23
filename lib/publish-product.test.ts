@@ -61,7 +61,12 @@ function readyDraft(id: string) {
         confirmed: true,
       },
     ],
-    images: { general: [`/products/${id}.webp`], variantImages: {} },
+    images: {
+      general: [
+        { path: `/products/${id}.webp`, confirmed: true, sourceFile: null, role: "main" },
+      ],
+      variantImages: {},
+    },
     pricing: { price: 210, mrp: 299, cost: 126, referencePrice: "₹499 (old site)" },
     personalized: false,
     suggestedCollections: [],

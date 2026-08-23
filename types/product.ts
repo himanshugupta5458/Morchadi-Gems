@@ -275,6 +275,26 @@ export interface ProductSeo {
   ogImage: string;
 }
 
+/**
+ * Where a migrated record came from, kept as one named group rather than four top-level
+ * fields so that every surface which must exclude it excludes it by dropping one key. The
+ * shop's own hand-written products carry no such block, and its absence is the normal case.
+ *
+ * It is **server-only catalogue data**, held to the same seal as `pricing.cost`: no
+ * `CatalogueEntry`, no order catalogue and no rendered page reads it, so another shop's
+ * identifiers never reach a browser. Its one job is to keep "which Odoo listing is P387?"
+ * answerable from the repository after `content-pipeline/` is cleaned up. See
+ * [ADR-056](/docs/decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md).
+ */
+export interface ProductMigrationProvenance {
+  /** The source system's own id for the listing. The one field that is never null. */
+  originalId: string;
+  originalSku: string | null;
+  originalUrl: string | null;
+  /** The source system's category path, verbatim, before it was mapped to a `Category`. */
+  originalCategories: string[];
+}
+
 export interface ProductStock {
   inStock: boolean;
 }
@@ -330,6 +350,17 @@ export interface Product {
   name: string;
   category: Category;
   /**
+   * The source system's second tier, carried through as free text because this catalogue has
+   * no subcategory vocabulary to validate it against. Nothing renders it and no facet reads
+   * it: it is captured so that a subcategory decision taken later has the data it needs,
+   * rather than being re-derived from 542 raw blocks. Absent on every hand-written product.
+   *
+   * Unlike `migrationProvenance` it is not sensitive, and it is deliberately *permitted* to
+   * reach a client bundle should a surface ever need it. That it does not reach one today is
+   * a consequence of `toCatalogueEntry`'s whitelist and not of any rule about this field.
+   */
+  subcategory?: string;
+  /**
    * Whether the record is published. Written on every product rather than left optional, so
    * "no status" is a validation failure rather than a silent guess. The one place that guess
    * is still made is `lib/products.ts`, which reads a record without the field as `active`
@@ -351,4 +382,6 @@ export interface Product {
   seo: ProductSeo;
   stock: ProductStock;
   flags: ProductFlags;
+  /** Present only on a record that came from the Odoo migration. Never sent to a browser. */
+  migrationProvenance?: ProductMigrationProvenance;
 }

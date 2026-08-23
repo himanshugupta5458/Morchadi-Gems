@@ -339,3 +339,29 @@ Two things change in this record's terms:
 The category being valid is not the same as it being browsable. A published gift-hamper product
 would still be unreachable by a shopper until ADR-055's flag is flipped, and
 `npm run validate:products` fails loudly if one is published before then.
+
+
+## Addendum, 2026-08-23 — decision 5's field placement is reversed
+
+[ADR-056](ADR-056-image-confirmation-provenance-and-draft-similarity.md) moves the image
+provenance **inside** each suggestion, which is the opposite of what decision 5 chose. The
+`imageSuggestionProvenance` block no longer exists, and `images.general` and
+`images.variantImages` hold objects — `{ path, confirmed, sourceFile }` plus `role` or
+`verifiedDistinct` — rather than bare paths.
+
+Decision 5's reason is quoted in full in ADR-056 and is worth restating here: the provenance sat
+beside the suggestion so that *"`images.variantImages` stays a plain string-to-string map matching
+the Draft A schema exactly."* ADR-056 changed the Draft A schema to carry `confirmed` per image, so
+the map is no longer plain and the reason no longer holds. What the placement cost in the meantime
+is that the Draft A schema had no slot for a parallel block, so `verified_distinct` — the one piece
+of hash-checked evidence in the whole import — stopped at the `queued` → `extracted` boundary.
+
+The distinction decision 5 was protecting is untouched, because it was never about field placement:
+`verifiedDistinct` answers *do these two files differ*, `confirmed` answers *is this the right
+photograph for this variant on this shop*, Stage 0 writes only the first, and a missing
+`verifiedDistinct` still reads as **not** verified.
+
+No real batch has been prepared, so there is nothing to migrate. A synthetic batch already sitting
+in `content-pipeline/incoming/` carries the old shape and should be re-prepared under a fresh batch
+id. Everything else in this record — validation, id assignment from P101, the manifest, the
+`queued` stage, the refusals — is unchanged.

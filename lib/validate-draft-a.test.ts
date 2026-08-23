@@ -81,7 +81,12 @@ function reviewedDraft(): Record<string, unknown> {
   for (const attribute of draft.attributes as Record<string, unknown>[]) {
     attribute.confirmed = true;
   }
-  draft.images = { general: ["/products/P050.webp"], variantImages: {} };
+  draft.images = {
+    general: [
+      { path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" },
+    ],
+    variantImages: {},
+  };
   draft.pricing = { price: 499, mrp: 999, cost: 180, referencePrice: "₹499 (old site)" };
   draft.personalized = false;
   return draft;
@@ -218,25 +223,77 @@ describe("A2 — pricing.price and pricing.mrp are always null", () => {
   });
 });
 
-describe("A3 — images stay empty at Draft A", () => {
+describe("A3 — image suggestions may be carried, but never already confirmed", () => {
+  function suggestion(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+    return {
+      path: "/products/P050.webp",
+      confirmed: false,
+      sourceFile: "2026-08-23-batch-01/odoo-1002/raw/main.webp",
+      role: "main",
+      ...overrides,
+    };
+  }
+
   it("accepts an empty array and an empty object", () => {
     expect(rulesIn(validateDraftA(cleanDraft()))).not.toContain("A3");
   });
 
-  it("rejects a populated images.general", () => {
+  it("accepts a Stage-0-prepared draft whose every suggestion is confirmed: false", () => {
+    const draft = cleanDraft();
+    draft.images = {
+      general: [suggestion(), suggestion({ path: "/products/P050-2.webp", role: "extra-1" })],
+      variantImages: {
+        "Colour:Golden": suggestion({ path: "/products/P050-golden.webp", verifiedDistinct: true }),
+      },
+    };
+
+    expect(validateDraftA(draft).errors).toEqual([]);
+  });
+
+  it("rejects a general suggestion that already claims confirmation", () => {
+    const draft = cleanDraft();
+    draft.images = { general: [suggestion({ confirmed: true })], variantImages: {} };
+    const result: Result = validateDraftA(draft);
+
+    expect(rulesIn(result)).toContain("A3");
+    expect(result.errors[0].field).toBe("images.general[0].confirmed");
+  });
+
+  it("rejects a variant suggestion that already claims confirmation", () => {
+    const draft = cleanDraft();
+    draft.images = {
+      general: [],
+      variantImages: { "Colour:Golden": suggestion({ confirmed: true }) },
+    };
+
+    expect(validateDraftA(draft).errors[0].field).toBe(
+      'images.variantImages["Colour:Golden"].confirmed',
+    );
+  });
+
+  it("rejects a suggestion with no confirmed flag at all", () => {
+    const draft = cleanDraft();
+    const missing = suggestion();
+    delete missing.confirmed;
+    draft.images = { general: [missing], variantImages: {} };
+
+    expect(validateDraftA(draft).errors[0].field).toBe("images.general[0].confirmed");
+  });
+
+  it("rejects a bare path string, which cannot say whether anyone approved it", () => {
     const draft = cleanDraft();
     draft.images = { general: ["/products/P050.webp"], variantImages: {} };
     const result: Result = validateDraftA(draft);
 
     expect(rulesIn(result)).toContain("A3");
-    expect(result.errors[0].field).toBe("images.general");
+    expect(result.errors[0].field).toBe("images.general[0]");
   });
 
-  it("rejects a populated images.variantImages", () => {
+  it("rejects a suggestion carrying no path", () => {
     const draft = cleanDraft();
-    draft.images = { general: [], variantImages: { Golden: ["/products/P050-golden.webp"] } };
+    draft.images = { general: [suggestion({ path: "  " })], variantImages: {} };
 
-    expect(validateDraftA(draft).errors[0].field).toBe("images.variantImages");
+    expect(validateDraftA(draft).errors[0].field).toBe("images.general[0].path");
   });
 
   it("rejects images.general given as an object rather than an array", () => {
@@ -687,6 +744,48 @@ describe("Part D — validatePublishReadiness, the publish gate", () => {
     draft.images = { general: [], variantImages: {} };
 
     expect(rulesIn(validatePublishReadiness(draft))).toEqual(["D4"]);
+  });
+
+  it("D4 rejects a general image still sitting at confirmed: false", () => {
+    const draft = reviewedDraft();
+    draft.images = {
+      general: [{ path: "/products/P050.webp", confirmed: false, sourceFile: null, role: "main" }],
+      variantImages: {},
+    };
+    const result: Result = validatePublishReadiness(draft);
+
+    expect(rulesIn(result)).toEqual(["D4"]);
+    expect(result.errors[0].field).toBe("images.general[0].confirmed");
+  });
+
+  it("D4 rejects an unconfirmed variant image beside a confirmed general one", () => {
+    const draft = reviewedDraft();
+    draft.images = {
+      general: [{ path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" }],
+      variantImages: {
+        "Colour:Golden": { path: "/products/P050-golden.webp", confirmed: false },
+      },
+    };
+    const result: Result = validatePublishReadiness(draft);
+
+    expect(rulesIn(result)).toEqual(["D4"]);
+    expect(result.errors[0].field).toBe('images.variantImages["Colour:Golden"].confirmed');
+  });
+
+  it("D4 accepts a fully confirmed general and variant set", () => {
+    const draft = reviewedDraft();
+    draft.images = {
+      general: [{ path: "/products/P050.webp", confirmed: true, sourceFile: null, role: "main" }],
+      variantImages: {
+        "Colour:Golden": {
+          path: "/products/P050-golden.webp",
+          confirmed: true,
+          verifiedDistinct: true,
+        },
+      },
+    };
+
+    expect(validatePublishReadiness(draft).errors).toEqual([]);
   });
 
   it("D5 rejects a null price", () => {

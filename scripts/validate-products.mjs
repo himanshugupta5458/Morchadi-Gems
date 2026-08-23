@@ -127,6 +127,7 @@ const PRODUCT_KEYS = [
   "id",
   "name",
   "category",
+  "subcategory",
   "status",
   "collections",
   "pricing",
@@ -137,6 +138,20 @@ const PRODUCT_KEYS = [
   "seo",
   "stock",
   "flags",
+  "migrationProvenance",
+];
+
+/**
+ * Every key `migrationProvenance` may hold, and the only ones. The block exists so a migrated
+ * record keeps a link back to the listing it came from; an unrecognised key inside it is a
+ * field somebody added without deciding whether it is safe to keep, so it fails here for the
+ * same reason an unrecognised product key does. See ADR-056.
+ */
+const MIGRATION_PROVENANCE_KEYS = [
+  "originalId",
+  "originalSku",
+  "originalUrl",
+  "originalCategories",
 ];
 
 const SEO_KEYS = [
@@ -259,6 +274,7 @@ let newCount = 0;
 let outOfStockCount = 0;
 let optionedProductCount = 0;
 let taggedProductCount = 0;
+let migratedProductCount = 0;
 let primaryImagesOnDisk = 0;
 let additionalImageCount = 0;
 let variantImageCount = 0;
@@ -722,6 +738,65 @@ function validateStockAndFlags(product, label) {
   if (flags.isNew === true && published) newCount += 1;
 }
 
+/**
+ * `subcategory` and `migrationProvenance` are both optional and both absent from every
+ * hand-written product. What is checked is that a record carrying either carries it in full:
+ * a subcategory that is present but blank says nothing, and a provenance block missing its
+ * `originalId` is a link back to the source system that cannot be followed.
+ *
+ * `originalSku` and `originalUrl` are nullable because the export genuinely omits them for
+ * some listings, and a null recorded on purpose is worth more than a field quietly dropped.
+ * See ADR-056.
+ */
+function validateMigrationFields(product, label) {
+  const { subcategory } = product ?? {};
+  check(
+    subcategory === undefined || isNonEmptyString(subcategory),
+    `${label}: subcategory must be a non-empty string when present`,
+  );
+
+  const provenance = product?.migrationProvenance;
+  if (provenance === undefined) return;
+
+  check(
+    isPlainObject(provenance),
+    `${label}: migrationProvenance must be an object when present`,
+  );
+  if (!isPlainObject(provenance)) return;
+
+  migratedProductCount += 1;
+
+  const unknownKeys = Object.keys(provenance).filter(
+    (key) => !MIGRATION_PROVENANCE_KEYS.includes(key),
+  );
+  check(
+    unknownKeys.length === 0,
+    `${label}: migrationProvenance has unknown keys ${unknownKeys.join(", ")}`,
+  );
+
+  check(
+    isNonEmptyString(provenance.originalId),
+    `${label}: migrationProvenance.originalId must be a non-empty string — it is the link back to the source listing`,
+  );
+  for (const field of ["originalSku", "originalUrl"]) {
+    check(
+      provenance[field] === null || isNonEmptyString(provenance[field]),
+      `${label}: migrationProvenance.${field} must be null or a non-empty string`,
+    );
+  }
+  check(
+    Array.isArray(provenance.originalCategories),
+    `${label}: migrationProvenance.originalCategories must be an array`,
+  );
+  if (!Array.isArray(provenance.originalCategories)) return;
+  provenance.originalCategories.forEach((entry, index) => {
+    check(
+      isNonEmptyString(entry),
+      `${label}: migrationProvenance.originalCategories[${index}] must be a non-empty string`,
+    );
+  });
+}
+
 function validateCollections(product, label) {
   const collections = product?.collections;
   check(
@@ -779,6 +854,7 @@ for (const product of catalogue) {
   validateStatus(product, label);
   validateStockAndFlags(product, label);
   validateCollections(product, label);
+  validateMigrationFields(product, label);
 
   const unknownProductKeys = Object.keys(product ?? {}).filter(
     (key) => !PRODUCT_KEYS.includes(key),
@@ -961,6 +1037,7 @@ console.log(`New arrivals        ${newCount} (published)`);
 console.log(`Out of stock        ${outOfStockCount} (published)`);
 console.log(`With options        ${optionedProductCount}`);
 console.log(`With collections    ${taggedProductCount}`);
+console.log(`With provenance     ${migratedProductCount} (migrated, server-only)`);
 console.log("\nCategory distribution");
 for (const slug of CATEGORY_SLUGS) {
   const pending = SURFACED_CATEGORY_SLUGS.includes(slug) ? "" : "  (pending — not surfaced)";

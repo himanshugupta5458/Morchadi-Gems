@@ -332,3 +332,25 @@ does not exist, and while its absence no longer blocks the skill the way an allo
 have — every stone candidate now falls back to `stoneSource: "unverified-guess"` rather than to
 nothing — a first real run has not happened, and no Draft A object exists in this repository. The
 validator's tests are synthetic for exactly that reason.
+
+
+## Addendum, 2026-08-23 — rule A3 is about confirmation, not absence
+
+[ADR-056](ADR-056-image-confirmation-provenance-and-draft-similarity.md) changed what rule A3
+checks, and this record's Phase 1 rule that *"images must be empty"* no longer describes the
+validator.
+
+The rule was written for a draft composed from nothing, where an attached image could only have
+been attached by something with no business attaching it. Stage 0
+([ADR-054](ADR-054-stage-0-migration-batch-preparation.md)) then began deriving a suggested path
+per photograph off a real export, and an empty-only rule would have failed all 542 migrated drafts
+at the `queued` → `extracted` boundary.
+
+So an image suggestion now carries `confirmed`, exactly as an attribute does, and A3 checks that
+flag rather than the length of the list: a suggestion may be **carried** and may never arrive
+already **confirmed**. The Phase 1 guarantee this record was protecting is unchanged — it is now
+enforced on the field that means it, and the rule reads as the exact mirror of B1 that it always
+should have been. `validatePublishReadiness` requires every image `confirmed: true`, mirroring D1.
+
+Nothing else in this record changes. Decisions 1 through 6 stand, and the two-check design of the
+first addendum stands with them.

@@ -35,10 +35,15 @@ and a raw block is not one; every file here would fail, and correctly.
 `images.general` and `images.variantImages` are populated with the paths a product *would* use,
 in the [ADR-006](../../docs/decisions/ADR-006-product-image-convention.md) conventions. They are
 proposals for the manual image-assignment step, not decisions it has already made.
-`imageSuggestionProvenance` records the source file behind each one, and carries the source
-system's `verified_distinct` hash check forward as `verifiedDistinct`. That flag is evidence for
-whoever is reviewing — it says two files differ, not that this is the right photograph for this
-variant. Nothing here is confirmed.
+
+Each entry is an object rather than a bare path: `{ path, confirmed, sourceFile }`, plus `role`
+on a general image and `verifiedDistinct` on a variant one. **`confirmed` is `false` in every
+entry of every file here**, and the provenance rides inside the entry rather than in a parallel
+block — which is what lets it survive Draft A extraction rather than being stranded in this
+directory ([ADR-056](../../docs/decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md)).
+`verifiedDistinct` carries the source system's `verified_distinct` hash check forward as evidence
+for whoever is reviewing: it says two files differ, not that this is the right photograph for
+this variant. A missing flag reads as *not* verified. Nothing here is confirmed.
 
 ## The id reservation
 

@@ -365,13 +365,20 @@ function slugifyImageSegment(value) {
 }
 
 /**
- * PART C. Builds the suggested image paths and the provenance that makes them reviewable.
+ * PART C. Builds the suggested image entries — the path, its provenance, and the confirmation
+ * flag that says nobody has approved it yet.
  *
  * The paths follow ADR-006's catalogue convention — `/products/P101.webp` for the main
  * photograph and `/products/P101-2.webp` onward for its siblings — because these strings are
  * copied verbatim into `media.images` later and a path invented here would be a path the site
  * cannot serve. The source file each one came from is recorded alongside, so a suggestion can be
  * traced back to the byte it describes.
+ *
+ * **The provenance rides inside the suggestion rather than beside it**, which reverses what
+ * ADR-054 decision 5 chose. That choice was made to keep `images.variantImages` a plain
+ * string-to-string map matching the Draft A schema exactly; ADR-056 changed the Draft A schema
+ * to carry `confirmed` per image, so the reason no longer holds — and a parallel block was the
+ * reason the `verified_distinct` evidence had no way across extraction. See ADR-056.
  *
  * Nothing here is confirmed. `verifiedDistinct` is the source system's own hash check carried
  * forward as evidence for the person doing the review; it is not a licence to auto-populate.
@@ -386,17 +393,19 @@ export function buildImageSuggestions(record, productId, batchId, originalId) {
   const extraFiles = (record.images.extra ?? []).filter(isNonEmptyString);
   const variantImages = record.images.variantImages ?? [];
 
-  /** @type {string[]} */
-  const general = [`/products/${productId}.webp`];
-  /** @type {{path: string, sourceFile: string, role: string}[]} */
-  const generalProvenance = [
-    { path: general[0], sourceFile: sourceImagePath(batchId, originalId, mainFile), role: "main" },
+  /** @type {{path: string, confirmed: boolean, sourceFile: string, role: string}[]} */
+  const general = [
+    {
+      path: `/products/${productId}.webp`,
+      confirmed: false,
+      sourceFile: sourceImagePath(batchId, originalId, mainFile),
+      role: "main",
+    },
   ];
   for (const [index, file] of extraFiles.entries()) {
-    const path = `/products/${productId}-${index + 2}.webp`;
-    general.push(path);
-    generalProvenance.push({
-      path,
+    general.push({
+      path: `/products/${productId}-${index + 2}.webp`,
+      confirmed: false,
       sourceFile: sourceImagePath(batchId, originalId, file),
       role: `extra-${index + 1}`,
     });
@@ -408,31 +417,23 @@ export function buildImageSuggestions(record, productId, batchId, originalId) {
     valueSlugCounts.set(slug, (valueSlugCounts.get(slug) ?? 0) + 1);
   }
 
-  /** @type {Record<string, string>} */
+  /** @type {Record<string, {path: string, confirmed: boolean, sourceFile: string, verifiedDistinct: boolean}>} */
   const variantImagePaths = {};
-  /** @type {{key: string, path: string, sourceFile: string, verifiedDistinct: boolean}[]} */
-  const variantProvenance = [];
   for (const variantImage of variantImages) {
     const valueSlug = slugifyImageSegment(variantImage.value);
     const needsAttributePrefix = (valueSlugCounts.get(valueSlug) ?? 0) > 1;
     const suffix = needsAttributePrefix
       ? `${slugifyImageSegment(variantImage.attribute)}-${valueSlug}`
       : valueSlug;
-    const key = `${variantImage.attribute}:${variantImage.value}`;
-    const path = `/products/${productId}-${suffix}.webp`;
-    variantImagePaths[key] = path;
-    variantProvenance.push({
-      key,
-      path,
+    variantImagePaths[`${variantImage.attribute}:${variantImage.value}`] = {
+      path: `/products/${productId}-${suffix}.webp`,
+      confirmed: false,
       sourceFile: sourceImagePath(batchId, originalId, variantImage.file),
       verifiedDistinct: variantImage.verified_distinct === true,
-    });
+    };
   }
 
-  return {
-    images: { general, variantImages: variantImagePaths },
-    imageSuggestionProvenance: { general: generalProvenance, variantImages: variantProvenance },
-  };
+  return { images: { general, variantImages: variantImagePaths } };
 }
 
 /**
@@ -450,12 +451,7 @@ export function buildImageSuggestions(record, productId, batchId, originalId) {
  * @param {string} originalId
  */
 export function buildRawBlock(record, productId, batchId, originalId) {
-  const { images, imageSuggestionProvenance } = buildImageSuggestions(
-    record,
-    productId,
-    batchId,
-    originalId,
-  );
+  const { images } = buildImageSuggestions(record, productId, batchId, originalId);
   return {
     productId,
     stage: QUEUED_STAGE,
@@ -485,7 +481,6 @@ export function buildRawBlock(record, productId, batchId, originalId) {
       : [],
     variants: toVariants(record),
     images,
-    imageSuggestionProvenance,
     pricing: { referencePrice: record.referencePrice ?? null },
   };
 }

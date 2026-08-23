@@ -296,3 +296,26 @@ name.
 Adding a product still requires bumping `EXPECTED_PRODUCT_COUNT`, and that is intended. The
 difference is that it is now one line rather than eight, the failure message says which line and
 what to set it to, and the skill's step 6 says so before the gate is ever run.
+
+
+## Addendum, 2026-08-23 — the similarity gate now sees drafts, and the mapper carries provenance
+
+[ADR-056](ADR-056-image-confirmation-provenance-and-draft-similarity.md) extends two things this
+record built, and neither is a reversal.
+
+**The similarity gate's comparison population is no longer active-only.** This record's decision 4
+added a second keyword index over draft records *because the committed map cannot see drafts*, and
+the identical argument was never made for descriptions — so `selectActiveSimilarityInputs` scored
+each migrated candidate against the 49 published originals and never against the other 541 drafts
+of its own batch. `selectSimilarityComparisonPopulation` replaces it as the gate's population:
+every record in `data/products.json` whatever its status, plus sibling drafts written earlier in
+the same session and not yet saved. Each comparison records `againstPopulation`.
+
+**`SIMILARITY_THRESHOLD` is still `null`, and this addendum does not move it.** The calibration
+this record required has still not happened. What is corrected is the population being measured,
+so that the data accumulating for that calibration is about the right catalogue.
+
+**`buildProductFromDraft` carries two more fields.** `subcategory` and a nested
+`migrationProvenance` block were captured by Stage 0, declared in the Draft A schema, and read by
+nothing; they now reach the record. Both are server-only in practice and `migrationProvenance` is
+server-only by rule, on the same seal as `pricing.cost`.
