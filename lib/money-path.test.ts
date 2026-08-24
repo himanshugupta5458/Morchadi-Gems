@@ -212,7 +212,12 @@ describe("the single-image products", () => {
         product.media.images.length === 1 && product.media.variantImages === undefined,
     );
 
-    expect(untouched.length).toBe(getAllProducts().length - 2);
+    const touched = getAllProducts().filter(
+      (product) =>
+        product.media.images.length > 1 || product.media.variantImages !== undefined,
+    );
+    expect(touched.map((product) => product.id).sort()).toEqual(["P002", "P010", "P108"]);
+    expect(untouched.length).toBe(getAllProducts().length - 3);
 
     for (const product of untouched) {
       if (!product.stock.inStock) continue;

@@ -7,8 +7,7 @@ import { describe, expect, it, vi } from "vitest";
  * and the only way to hold that is to ask every surface at once.
  *
  * The draft is deliberately the loudest record in the file: featured, new, in stock, tagged
- * into a collection nothing else is tagged into, and priced fifty times above the dearest real
- * piece. Every one of those is a hook some surface sorts, counts, bands or aggregates on, so a
+ * into a collection, and priced fifty times above the dearest real piece. Every one of those is a hook some surface sorts, counts, bands or aggregates on, so a
  * surface that has forgotten about status fails here rather than passing by luck.
  *
  * Hoisted, because `vi.mock` runs its factory when the mocked module is first imported, which
@@ -100,11 +99,27 @@ describe("the draft fixture is genuinely in the catalogue file", () => {
     expect(idsOf(getAllProductsIncludingDrafts())).toContain(DRAFT_ID);
   });
 
-  it("is the only unpublished record, and every real product is published", () => {
+  /**
+   * Until 2026-08-24 the fixture was the only unpublished record in the file. Phase 2 now lands
+   * real migrated drafts in `data/products.json` as `status: "draft"` awaiting the publish step,
+   * so "unpublished" is no longer synonymous with "the fixture". What still must hold is that no
+   * unpublished record is unaccounted for: each one is either this suite's injected fixture or a
+   * migrated pipeline record, which Phase 2 always writes with its `migrationProvenance` link
+   * back to the source listing. An unpublished record with neither is a record nobody meant to
+   * leave switched off, and it fails here.
+   */
+  it("accounts for every unpublished record: the fixture, or a migrated pipeline draft", () => {
     const unpublished = getAllProductsIncludingDrafts().filter(
       (product) => !isActiveProduct(product),
     );
-    expect(idsOf(unpublished)).toEqual([DRAFT_ID]);
+    expect(idsOf(unpublished)).toContain(DRAFT_ID);
+    for (const product of unpublished) {
+      if (product.id === DRAFT_ID) continue;
+      expect(
+        product.migrationProvenance?.originalId,
+        `${product.id} is unpublished but is neither the test fixture nor a migrated pipeline draft`,
+      ).toBeTruthy();
+    }
   });
 });
 
@@ -197,8 +212,21 @@ describe("the sitemap", () => {
     expect(productUrls).toHaveLength(PUBLISHED_COUNT);
   });
 
-  it("does not treat a collection populated only by the draft as populated", () => {
-    expect(urls.some((url) => url.endsWith(buildCollectionHref("gifting")))).toBe(false);
+  /**
+   * Until the pilot batch published on 2026-08-24, gifting held nothing but this suite's draft
+   * fixture and the sitemap rightly omitted it. Gifting is now genuinely populated, so the
+   * property inverts on the same reasoning: the sitemap lists it, and the listing is justified
+   * entirely by published products — the draft's membership contributes nothing, which the
+   * second assertion proves by counting only what `getAllProducts` (draft-free) returns.
+   */
+  it("lists gifting because published products populate it, never counting the draft", () => {
+    expect(urls.some((url) => url.endsWith(buildCollectionHref("gifting")))).toBe(true);
+
+    const publishedGiftingMembers = getAllProducts().filter((product) =>
+      (product.collections ?? []).includes("gifting"),
+    );
+    expect(publishedGiftingMembers.length).toBeGreaterThan(0);
+    expect(idsOf(publishedGiftingMembers)).not.toContain(DRAFT_ID);
   });
 
   it("still publishes every surfaced category and the static routes", () => {

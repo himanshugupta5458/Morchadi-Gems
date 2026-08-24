@@ -44,6 +44,7 @@ states the rule it used, so the owner can overrule it rather than guess at it.
 | [`similarity-calibration-report.md`](similarity-calibration-report.md) | Phase-three calibration measurements over the 49 live products. **Measurements only — no threshold is set by it**, and ADR-051's "not calibrated" state is unchanged |
 | [`similarity-scores-all-pairs.json`](similarity-scores-all-pairs.json) | The raw pairwise scores behind that report. Nothing reads it |
 | [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the six-stage vocabulary — `queued` through `published`, per [ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md) — and the retired-id list |
+| [`known-issues-post-publish.md`](known-issues-post-publish.md) | The durable record of issues the owner has **explicitly accepted publishing with**, each with evidence, the acceptance decision and an open/resolved status. The post-publish review pass works through this file |
 | [`products-completed.md`](products-completed.md) | Manual register of drafts whose product has been published into `data/products.json` |
 
 The source workbook `Latest.xlsx` is an owner-supplied export sitting untracked at the repo
@@ -67,23 +68,22 @@ operating procedure for the part of it that can be run today.
 | 5 | **Row added to [`drafts-in-progress.md`](drafts-in-progress.md)** at stage `extracted`. On the migration path the row already exists at `queued` from step 0 and is advanced by hand instead | Owner | ✔ |
 | 6 | **Owner reviews and confirms** each candidate against its quoted source phrase, flipping `confirmed` to `true` one attribute at a time. Stage moves `in-review` → `confirmed`. Nothing bypasses this step; there is no auto-trusted path | Owner | ✔ |
 | 7 | **Price and images assigned by hand.** Stage `priced-and-shot`. This sits *between* the two validator passes, which is why a value that fails the first check is required by the second | Owner | ✔ |
-| 8 | **Phase 2 orchestration** turns the confirmed draft into a `data/products.json` entry — the honesty rules of [ADR-018](../decisions/ADR-018-honest-product-description.md) and [ADR-035](../decisions/ADR-035-catalogue-content-pass.md), and the SEO metadata of [ADR-036](../decisions/ADR-036-product-seo-metadata-pass.md) | — | **✘ not designed** |
+| 8 | **Phase 2 orchestration** turns the confirmed draft into a `data/products.json` entry — the honesty rules of [ADR-018](../decisions/ADR-018-honest-product-description.md) and [ADR-035](../decisions/ADR-035-catalogue-content-pass.md), and the SEO metadata of [ADR-036](../decisions/ADR-036-product-seo-metadata-pass.md) | Skill ([ADR-053](../decisions/ADR-053-draft-a-to-product-orchestration.md)), run by hand | ✔ |
 | 9 | **Owner approves** the finished product entry | Owner | ✔ |
-| 10 | **Publish step** flips the entry's `status` from `"draft"` to `"active"` and moves the file from `content-pipeline/drafts/` to `content-pipeline/completed/` | — | **✘ no script; both halves are manual today** |
+| 10 | **Publish step** flips the entry's `status` from `"draft"` to `"active"`, regenerates the keyword map and moves the file from `content-pipeline/drafts/` to `content-pipeline/completed/` — `node scripts/publish-product.mjs PNNN` ([ADR-052](../decisions/ADR-052-product-status-field.md)) | Script, run by hand | ✔ |
 | 11 | **Row moved by hand** out of `drafts-in-progress.md` and into [`products-completed.md`](products-completed.md) | Owner | ✔ |
 
 ### Where this stops today
 
-Steps 8 and 10 have no implementation, and steps 1–7 and 9–11 are people and hand-run scripts.
-Three things named in this table do not exist and should not be assumed:
+Every step now exists, and every one of them is still a person or a hand-run script — there is
+no orchestration connecting any two steps. Two earlier gaps in this table have since closed:
+Phase 2 orchestration was designed in [ADR-053](../decisions/ADR-053-draft-a-to-product-orchestration.md)
+and first ran on real data on 2026-08-24, and the publish step is
+`scripts/publish-product.mjs`. A `"draft"` product in `data/products.json` is invisible to
+every public surface ([ADR-052](../decisions/ADR-052-product-status-field.md)), so a product
+lands in the catalogue at step 8 and is published at step 10 as two separate decisions. One
+gap remains:
 
-- **Phase 2 orchestration.** Not designed, per ADR-051 decision 5. Step 8 is a person writing a
-  product record.
-- **The publish script.** Nothing flips `status` and nothing moves a file. Both are `git mv` and
-  an edit today. The `status` field it would flip **does** exist —
-  [ADR-052](../decisions/ADR-052-product-status-field.md) added it, and a `"draft"` product in
-  `data/products.json` is already invisible to every public surface — so a product can be landed
-  in the catalogue at step 8 and published at step 10 as two separate commits.
 - **Id assignment code, on the fresh path.** ADR-051 decision 4 requires `productId` to be set by
   pipeline code rather than by the model. `scripts/prepare-migration-batch.mjs` now does that for
   the Odoo migration ([ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md)), with
@@ -92,18 +92,28 @@ Three things named in this table do not exist and should not be assumed:
   the reservation rule (never reuse a rejected id) enforced by nothing but the
   [rejected-ids table](drafts-in-progress.md#rejected-ids).
 
-`data/stone-terms.json` also does not exist. Under the skill's revised "always propose, always
-confirm" design its absence no longer blocks a run — every stone candidate simply falls back to
-`stoneSource: "unverified-guess"` — but it means step 6 carries more weight on those candidates
-than it eventually should.
+`data/stone-terms.json` now exists, seeded 2026-08-24 with its first entry:
+`"American Diamond" -> "cubic zirconia"`. The entry was added on the owner's explicit
+confirmation of that mapping during the 11-product pilot-batch review (P106–P122
+duplicate-title group), not curated by the pipeline on its own — the file is owner-curated by
+design, and every future entry needs the same explicit confirmation. Its role is unchanged from
+the skill's revised design: a HELPER that lets a matching stone candidate arrive as
+`stoneSource: "known-trade-term"` instead of `"unverified-guess"`, never a gate — a phrase
+absent from it still produces a candidate, and `scripts/validate-draft-a.mjs` still does not
+read it. The shape is the flat trade-name-to-technical-value map that skill rule 3 describes,
+matched by exact string equality on the trade name.
 
-**No real Draft A object has ever been created in this repository.** One synthetic product was
-taken through the whole workflow once, in prompt 70, and removed again
-([RESULT-2026-08-23-content-pipeline-e2e.md](../testing/RESULT-2026-08-23-content-pipeline-e2e.md));
-both registers are otherwise empty templates. **Step 0 has never been run against real data
-either** — the Phase B JSONL export has not been delivered, and everything it does was built and
-tested against the synthetic fixtures in
-[`scripts/fixtures/`](../../scripts/fixtures/README.md).
+**The pipeline has now run on real data, end to end short of publish.** Step 0 ran for real on
+2026-08-24 (542 records queued from `2026-08-23-batch-01`), the 11-product pilot group
+(P106–P122, the duplicate-title ring group) went through extraction, owner review, pricing and
+image assignment, and Phase 2 wrote all 11 into `data/products.json` as `status: "draft"`
+([RESULT-2026-08-24-phase2-pilot-batch.md](../testing/RESULT-2026-08-24-phase2-pilot-batch.md)).
+Before that, one synthetic product was taken through the whole workflow in prompt 70 and removed
+again ([RESULT-2026-08-23-content-pipeline-e2e.md](../testing/RESULT-2026-08-23-content-pipeline-e2e.md)).
+Note that landing P106–P122 in the catalogue **spent the Stage 0 one-time override by its own
+design**: `scripts/prepare-migration-batch.mjs` now refuses to run, correctly, because the
+catalogue's maximum id is past P049. The already-queued raw blocks are unaffected; a future
+export batch needs a new decision, not a loosened assertion.
 
 ## Tracking recommendation — owner decision needed
 

@@ -167,13 +167,24 @@ describe("the per-variant images", () => {
 });
 
 describe("the multi-image products", () => {
-  it("gives exactly one product a second view, so the strip has something to strip", () => {
+  /**
+   * P002 was the only multi-image product until the pilot batch published on 2026-08-24;
+   * P108's source export supplied three photographs and all three were owner-confirmed, so it
+   * joined. The exact-list assertion stays deliberate: a product growing a gallery is a real
+   * catalogue event, and it should land here by intention rather than by upload.
+   */
+  it("gives exactly two products a second view, so the strip has something to strip", () => {
     const multiImage = catalogue.filter((product) => product.media.images.length > 1);
 
-    expect(multiImage.map((product) => product.id)).toEqual(["P002"]);
+    expect(multiImage.map((product) => product.id)).toEqual(["P002", "P108"]);
     expect(multiImage[0].media.images).toEqual([
       "/products/P002.webp",
       "/products/P002-2.webp",
+    ]);
+    expect(multiImage[1].media.images).toEqual([
+      "/products/P108.webp",
+      "/products/P108-2.webp",
+      "/products/P108-3.webp",
     ]);
   });
 

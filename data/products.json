@@ -2286,5 +2286,636 @@
       "featured": false,
       "isNew": false
     }
+  },
+  {
+    "id": "P106",
+    "name": "Pear-Petal CZ Flower Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P106.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Five petals, one round stone in the middle. Each petal is a pear-cut stone laid over a bed of smaller rounds, and together they make up the whole face of this rose gold flower ring, since the band behind the flower stays slim and plain.\n\nThe stones are cubic zirconia, the clear sparkle half the market lists as American Diamond, and the pear cuts do most of the work. A pear has a point and a belly, so each petal returns light at a slightly different angle as your finger moves, which keeps a small flower lively without any single big stone. The warm rose tone of the plating holds the five settings close, and the flower reads as one bloom rather than five parts.\n\nThe band is open at the back and adjusts with a gentle squeeze, so it fits most fingers without a size chart. Worn often it behaves itself, though the plating will thank you for a wipe after wear and a spot in the box away from perfume sprays.\n\nFlower rings tend to read younger the bigger they get. This one stays at the small end, closer in spirit to a stud earring than to a cocktail piece, which is why it earns its keep on an ordinary weekday hand and still holds up at a party.",
+    "seo": {
+      "primaryKeyword": "rose gold flower ring",
+      "secondaryKeywords": [
+        "adjustable flower ring for women",
+        "american diamond flower ring",
+        "cz petal ring"
+      ],
+      "metaTitle": "Rose Gold Flower Ring with Pear-Cut CZ Petals, Adjustable",
+      "metaDescription": "A five-petal cubic zirconia flower ring in warm rose gold plating, with an open band that adjusts to most fingers. ₹59, with 7-day returns across India.",
+      "imageAlt": "Rose gold-plated flower ring with five pear-cut cubic zirconia petals around a round centre stone, on a black display box",
+      "ogTitle": "Pear-Petal CZ Flower Ring in Rose Gold Plate | Morchadi Gems",
+      "ogDescription": "A little flower of pear-cut sparkle in warm rose gold plating. Five CZ petals, one centre stone, and an open band that fits most fingers. Honestly priced at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P106.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "124",
+      "originalSku": "MJ-504",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-504-rose-gold-plated-american-diamond-ring-124",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P108",
+    "name": "Butterfly Wing Bypass Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P108.webp",
+        "/products/P108-2.webp",
+        "/products/P108-3.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "The two wings do not match. That is the design of this butterfly bypass ring: one wing is set edge to edge with small cubic zirconia, the other is a smooth panel with a soft pink, shell-look finish that returns light as a sheen rather than a sparkle. A single round stone sits where the wings meet.\n\nThe open bypass band is the other half of the idea. The wings approach from opposite sides and pass each other across the top of the finger instead of joining, so the gap between the ends is both the fit and the picture: ease them apart or press them closer and the ring sizes itself, while the butterfly keeps its mid-flight look.\n\nOn the hand it sits low and small. The worn photographs show it honestly, one wing of sparkle and one of colour on a slim rose gold-plated band, a ring that reads as detail rather than centrepiece. Flat-set designs like this slide under gloves and sleeves without complaint, which claw-set rings rarely manage.\n\nA note on the pink, since it matters: it is a finish, not a stone, and it is why this piece photographs warmer than an all-clear setting would. If most of your jewellery leans plain, one small wing of colour is an easy place to start.",
+    "seo": {
+      "primaryKeyword": "butterfly bypass ring",
+      "secondaryKeywords": [
+        "butterfly ring for women",
+        "open adjustable ring",
+        "shell-look butterfly ring"
+      ],
+      "metaTitle": "Butterfly Bypass Ring with CZ and a Pink Shell-Look Wing",
+      "metaDescription": "One butterfly wing in pavé cubic zirconia, one in a soft pink shell-look finish, on an open bypass band that eases to fit. A small ring carrying real colour.",
+      "imageAlt": "Open bypass ring with one pavé cubic zirconia butterfly wing and one pink shell-look wing in rose gold plating",
+      "additionalImageAlts": [
+        "Butterfly wing bypass ring worn on the index finger, showing the slim rose gold-plated band",
+        "Hand wearing the butterfly bypass ring beside a white wrist watch, showing the ring's small scale"
+      ],
+      "ogTitle": "Butterfly Wing Bypass Ring, CZ and Pink Sheen | Morchadi Gems",
+      "ogDescription": "One wing sparkles, one glows pink. A small butterfly bypass ring in rose gold plating that eases open to fit most fingers, from Morchadi Gems.",
+      "ogImage": "/products/P108.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "128",
+      "originalSku": "MJ-508",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-508-rose-gold-plated-american-diamond-ring-128",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P109",
+    "name": "Oval CZ Swirl Cocktail Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 59
+    },
+    "media": {
+      "images": [
+        "/products/P109.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Ninety-nine rupees is doing a lot of work here. The centre stone is a full oval cubic zirconia, big enough to read from across a room, and the setting swirls two curved lines of smaller stones past it, so the whole face of this oval CZ cocktail ring moves when your hand does.\n\nA swirl halo is a different animal from a neat border. The curves run past the oval rather than around it, which gives the design a direction, almost a rotation, and stops it sitting as a static lozenge on the finger. Between the curves the rose gold plating shows through in warm channels, so there is metal in the picture as well as sparkle.\n\nIt has the scale of the rings that usually come out for receptions and festive dinners, and the adjustable open band means it can move between hands, which big rings are often asked to do. It needs no supporting jewellery.\n\nBig stones at small prices are exactly where honesty matters most, so, plainly: this is cubic zirconia over plated metal, sold as that. What the money buys is cut and scale. Keep it dry, give it the odd wipe, and the shine it left the box with is the shine it keeps.",
+    "seo": {
+      "primaryKeyword": "oval cz cocktail ring",
+      "secondaryKeywords": [
+        "cocktail ring under 100",
+        "big stone adjustable ring",
+        "party ring for women"
+      ],
+      "metaTitle": "Oval CZ Cocktail Ring in Rose Gold Plate with Swirl Halo",
+      "metaDescription": "From ₹99, a full-size cocktail ring: a big oval cubic zirconia wrapped in a swirl of smaller stones on an adjustable rose gold-plated band. Dispatch in 2 days.",
+      "imageAlt": "Large oval cubic zirconia ring with a swirling pavé halo in rose gold plating, displayed on a black jewellery box",
+      "ogTitle": "Oval CZ Swirl Cocktail Ring at ₹99 | Morchadi Gems",
+      "ogDescription": "A proper cocktail ring at ₹99: big oval CZ, a swirl of smaller stones, warm rose gold plating. Adjustable, so it moves between hands and occasions. From Morchadi Gems.",
+      "ogImage": "/products/P109.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "129",
+      "originalSku": "MJ-500",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-500-rose-gold-plated-american-diamond-ring-129",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P110",
+    "name": "Lattice Criss-Cross CZ Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P110.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Two bands cross once and go their separate ways. That is the whole architecture of this criss-cross rose gold ring: one strand carries a line of small cubic zirconia, the other stays plain polished metal and widens at each end into a leaf-shaped tip pierced with rows of tiny openwork squares.\n\nThe cut-outs earn their keep. Openwork catches shadow the way stones catch light, so the pierced tips read as pattern even when nothing is sparkling, and the ring holds some interest in flat indoor light where pavé alone goes quiet. Less metal also means less weight, which your hand notices at the end of a long day rather than in the first minute.\n\nThe crossing point sits slightly off-centre and the open ends tuck under the finger, where they double as the adjustment. Ease them apart or press them in and the ring resizes without tools. Nothing about the shape demands an occasion; it wears as easily on a workday as a plain band does, with more to look at.\n\nPerfume is the one enemy worth naming. Spray settles into openwork and dulls plating from inside the pattern outward, so this ring goes on after the scent, never before.",
+    "seo": {
+      "primaryKeyword": "criss-cross rose gold ring",
+      "secondaryKeywords": [
+        "adjustable criss-cross ring",
+        "cut-out band ring",
+        "rose gold cz ring"
+      ],
+      "metaTitle": "Criss-Cross Rose Gold Ring with CZ Line and Cut-Out Tips",
+      "metaDescription": "Two bands cross once: a line of cubic zirconia over polished rose gold plate, ending in pierced lattice tips. The open ends adjust the fit without any tools.",
+      "imageAlt": "Two crossing rose gold-plated bands, one pavé-set with cubic zirconia and one ending in pierced lattice tips",
+      "ogTitle": "Lattice Criss-Cross CZ Ring in Rose Gold | Morchadi Gems",
+      "ogDescription": "Two bands cross, one sparkling and one pierced with lattice work. An adjustable rose gold-plated ring that keeps its interest even in flat light. From Morchadi Gems.",
+      "ogImage": "/products/P110.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "131",
+      "originalSku": "MJ-499",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-499-rose-gold-plated-american-diamond-ring-131",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P115",
+    "name": "Beaded-Edge CZ Band Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P115.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Some rings apply for the loudest job on the hand. This CZ half eternity band takes the other one. A single row of round cubic zirconia sits in a channel across the top of the finger, and a fine beaded edge runs along both sides, an old jeweller's detail called milgrain that gives the metal a soft, slightly vintage grain up close.\n\nA channel setting holds the stones between two continuous walls of metal rather than in individual claws. Nothing stands proud of the band, nothing snags on knitwear or a dupatta, and small stones held this way are far harder to lose than small stones in prongs. The sparkle stops at the shoulders; turn the ring and the plain rose gold-plated back shows instead, which is normal for a half eternity and part of why it stays comfortable.\n\nThis is the band that stacks under a bigger ring without arguing with it, and the one you can put on in the morning and forget by lunch. It asks nothing of an outfit and quietly improves most of them.\n\nStore it dry between wears. Plating lasts longest when water never reaches it, and this design has no other demands to make.",
+    "seo": {
+      "primaryKeyword": "cz half eternity band",
+      "secondaryKeywords": [
+        "channel set cz ring",
+        "milgrain band ring",
+        "stacking band for women"
+      ],
+      "metaTitle": "CZ Half Eternity Band with Beaded Milgrain Edge, Rose Gold",
+      "metaDescription": "A single channel row of cubic zirconia with a beaded milgrain edge. Nothing snags and the stones stay put, so it wears daily and stacks well. 7-day returns.",
+      "imageAlt": "Slim channel-set cubic zirconia band ring with beaded milgrain edges in rose gold plating, shown in a black ring box",
+      "ogTitle": "Beaded-Edge CZ Band Ring, Channel Set | Morchadi Gems",
+      "ogDescription": "A quiet channel-set CZ band with a vintage beaded edge. It wears all day, snags nothing, and stacks under bigger rings. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P115.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "138",
+      "originalSku": "MJ-505",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-505-rose-gold-plated-american-diamond-ring-138",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P117",
+    "name": "Interlaced Crossover CZ Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P117.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "There is real weight to this one, and the weight is the point. Three strands interlace across the top of the finger, two of them polished rose gold plate looping over and under each other, the third a crossover CZ band running through the middle, set edge to edge with small stones. Together they read as one wide woven surface rather than three thin ones.\n\nCrossover bands flatter movement. Because the strands run at angles instead of straight around, light keeps finding a new polished face as the hand turns, and the pavé line returns part of that light as sparkle rather than shine. From arm's length the weave blurs into a single band with a bright seam through it.\n\nWidth changes how a ring wears. This one fills the base of the finger the way a kada fills a wrist, so it suits hands on which slim bands tend to disappear, and it carries a full outfit's worth of interest alone. Party wear is its natural habitat, though nothing about the construction objects to an ordinary Tuesday.\n\nThe open back adjusts to size. Give the polished strands their wipe after wear, since broad shiny surfaces show fingerprints sooner than textured ones do, and the band keeps looking deliberate rather than handled.",
+    "seo": {
+      "primaryKeyword": "crossover cz band ring",
+      "secondaryKeywords": [
+        "chunky rose gold ring",
+        "interlaced band ring",
+        "wide ring for women"
+      ],
+      "metaTitle": "Crossover CZ Band Ring of Three Interlaced Rose Gold Strands",
+      "metaDescription": "Three interlaced strands, two polished and one set with cubic zirconia, build a wide crossover band with the presence of a small stack. Adjustable open back.",
+      "imageAlt": "Wide interlaced crossover ring of three rose gold-plated strands with a central pavé cubic zirconia line",
+      "ogTitle": "Interlaced Crossover CZ Ring in Rose Gold Plate | Morchadi Gems",
+      "ogDescription": "Three strands woven into one wide band, with a line of CZ running through the middle. Solid presence, adjustable fit, warm rose gold plating. From Morchadi Gems.",
+      "ogImage": "/products/P117.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "141",
+      "originalSku": "MJ-507",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-507-rose-gold-plated-american-diamond-ring-141",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P118",
+    "name": "Open Heart and Teardrop CZ Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P118.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Hearts on rings usually arrive solid and filled with stones. This one is drawn. On this open heart CZ ring an outline of small cubic zirconia traces the shape and leaves the middle empty, so your skin shows through and becomes part of the design. Across a small gap sits a single teardrop stone, its point turned towards the heart.\n\nThe open front does two jobs at once. It is the adjustment, since the ends ease apart or press together to fit, and it is the composition, because the space between heart and teardrop is what lets the design read as two clear thoughts instead of one crowded cluster.\n\nAn outlined heart is easier to live with than a solid one. It suggests the motif without shouting it, which keeps the ring wearable long after the occasion that prompted it has passed, and it photographs cleanly against skin, worth knowing if the ring is a gift and the giving will be photographed.\n\nGifting is where this piece most obviously belongs. A heart motif and a fit that never needs the recipient's ring size settle the two practical questions a surprise usually raises. The stones are cubic zirconia in rose gold-plated metal, stated plainly, so the gesture never has to carry an asterisk.",
+    "seo": {
+      "primaryKeyword": "open heart cz ring",
+      "secondaryKeywords": [
+        "heart ring gift",
+        "adjustable heart ring",
+        "teardrop stone ring"
+      ],
+      "metaTitle": "Open Heart CZ Ring with a Teardrop Stone, Rose Gold Plate",
+      "metaDescription": "An outlined cubic zirconia heart faces a single teardrop stone across an open, adjustable gap. An easy ring to gift: no size needed. Dispatch in 2 days.",
+      "imageAlt": "Adjustable open ring with an outlined cubic zirconia heart and a single teardrop stone in rose gold plating",
+      "ogTitle": "Open Heart and Teardrop CZ Ring | Morchadi Gems",
+      "ogDescription": "An open heart drawn in small stones, facing a single teardrop CZ. No ring size needed, which makes gifting simple. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P118.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "142",
+      "originalSku": "MJ-506",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-506-rose-gold-plated-american-diamond-ring-142",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P119",
+    "name": "Rose Gold-Plated Oval Halo Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 59
+    },
+    "media": {
+      "images": [
+        "/products/P119.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "A halo exists to make the middle stone look bigger, and it works because the eye reads the whole sparkling area as one stone before it sorts out the parts. Here the centre is an oval cubic zirconia and the frame is an unbroken border of smaller rounds, so the face of this oval halo CZ ring reads perhaps half again larger than the centre alone would.\n\nOvals are the forgiving classic cut. The shape stretches slightly along the finger rather than across it, which suits more hands than a round of the same size, and with the halo's border it sits like a small angled mirror. The band underneath stays slim and plain in rose gold plate, which is the right call; a busy band under a halo is two designs fighting for one finger.\n\nThis is the classic bridal-jewellery silhouette worn simply as jewellery. It is happiest where that silhouette can be seen, at a dinner or in photographs, and on quieter days it will dress a plain kurta sleeve up a notch on its own.\n\nSmall stones packed close hold on to powder and lotion, so the halo is the one part worth minding. A soft dry brush around the border every so often keeps the frame bright. The centre stone looks after itself.",
+    "seo": {
+      "primaryKeyword": "oval halo cz ring",
+      "secondaryKeywords": [
+        "halo ring for women",
+        "oval stone adjustable ring",
+        "rose gold halo ring"
+      ],
+      "metaTitle": "Oval Halo CZ Ring in Rose Gold Plate on an Adjustable Band",
+      "metaDescription": "An oval cubic zirconia ringed by a full halo of smaller stones, so the face reads far larger than the centre alone. Slim adjustable band in rose gold plate.",
+      "imageAlt": "Oval cubic zirconia centre stone with a full pavé halo on a slim rose gold-plated ring, on a black box",
+      "ogTitle": "Rose Gold-Plated Oval Halo Ring | Morchadi Gems",
+      "ogDescription": "An oval CZ with a full halo, so the sparkle reads half again bigger. The classic silhouette on a slim adjustable band in rose gold plate, from Morchadi Gems.",
+      "ogImage": "/products/P119.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "143",
+      "originalSku": "MJ-502",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-502-rose-gold-plated-american-diamond-ring-143",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P120",
+    "name": "Blooming Five-Petal CZ Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P120.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Mehendi photographs are where small flower rings do their best work. The pattern on the skin is fine and detailed, and an adjustable flower ring of clear cubic zirconia like this one sits inside all that detail without breaking it, where a bigger or darker ring would punch a hole in the picture.\n\nAway from occasions it is simply a well-mannered everyday bloom. The petals are cut as pears and set close around one round stone, the surrounding rose gold-plated metal is kept warm and thin, and the flower stays small enough to read as texture at arm's length and as a bloom only up close. That two-distance behaviour is what makes small florals so easy to reach for in the morning.\n\nThe fit is open-backed. Squeeze gently to size it. Done. That matters more than usual in a piece likely to be borrowed, shared, or given onward, which is the social life small flower rings tend to lead.\n\nOne buying note, offered plainly. The stones are cubic zirconia, the metal is rose gold plating over a base the maker does not state, and at fifty-nine rupees the ring is priced as exactly what it is. Perfume and water are plating's slow enemies, so this goes on last while getting ready and comes off before the washbasin, not after.",
+    "seo": {
+      "primaryKeyword": "adjustable cz flower ring",
+      "secondaryKeywords": [
+        "small flower ring",
+        "pear cut cz ring",
+        "ring under 100"
+      ],
+      "metaTitle": "Adjustable CZ Flower Ring, Five Pear Petals in Rose Gold",
+      "metaDescription": "At ₹59, a small flower of pear-cut cubic zirconia petals on a slim rose gold-plated band. Open back that sizes with a squeeze, and 7-day returns across India.",
+      "imageAlt": "Five-petal cubic zirconia flower ring in rose gold plating with pear-cut petals, resting on a black display card",
+      "ogTitle": "Blooming Five-Petal CZ Ring at ₹59 | Morchadi Gems",
+      "ogDescription": "Small flower, honest price. Pear-cut CZ petals in rose gold plating on an adjustable open band, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P120.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "145",
+      "originalSku": "MJ-501",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-501-rose-gold-plated-american-diamond-ring-145",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P121",
+    "name": "Pink-Wing Butterfly CZ Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 59
+    },
+    "media": {
+      "images": [
+        "/products/P121.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "Butterflies in jewellery usually lie flat. This one perches. The body sits across the band with both wings lifted, and the wings are deliberately unalike: one paved with small cubic zirconia, the other filled with a pale pink, shell-look inlay, which is what makes this pink wing butterfly ring legible from across a table instead of dissolving into general shine.\n\nThe two finishes split the work. The pavé wing answers light with sparkle, the pink wing answers it with a soft glow, and between them the butterfly keeps its shape at distances where an all-sparkle motif becomes a smudge of light. Underneath, the band is plain rose gold plate, open at the back, and sizes with a gentle press.\n\nA raised design has habits worth knowing before buying. It reads well in close photographs and it will find doorframes and bag straps sooner than a flat ring would, so it suits days chosen for it rather than absent-minded constant wear. Parties are its natural territory, and it makes a gentle first ring for someone young enough to still count jewellery in butterflies.\n\nThe pink is a finish rather than a stone, and the sparkle is cubic zirconia rather than anything grander. Both facts are stated up front, which is how a ninety-nine rupee ring should be sold.",
+    "seo": {
+      "primaryKeyword": "pink wing butterfly ring",
+      "secondaryKeywords": [
+        "butterfly ring gift",
+        "pave cz butterfly ring",
+        "raised motif ring"
+      ],
+      "metaTitle": "Pink Wing Butterfly Ring with Pavé CZ, Rose Gold Plate",
+      "metaDescription": "A butterfly that perches rather than lies flat: one pavé cubic zirconia wing, one pale pink shell-look wing, on an adjustable rose gold-plated open band.",
+      "imageAlt": "Perched butterfly ring with one pavé cubic zirconia wing and one pale pink shell-look wing in rose gold plating",
+      "ogTitle": "Pink-Wing Butterfly CZ Ring | Morchadi Gems",
+      "ogDescription": "A butterfly that lands rather than lies flat: pavé CZ on one wing, a pink sheen on the other. Adjustable rose gold-plated band, from Morchadi Gems.",
+      "ogImage": "/products/P121.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "146",
+      "originalSku": "MJ-509",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-509-rose-gold-plated-american-diamond-ring-146",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P122",
+    "name": "Rose Gold-Plated CZ Solitaire Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P122.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "One stone, four claws, a slim band. The round solitaire is the oldest ring formula still in daily use, and this rose gold solitaire ring runs it faithfully: a round cubic zirconia held up in a four-prong crown, with a short line of smaller stones down each shoulder walking the light in towards the centre.\n\nThe stone is the kind sold across India as American Diamond. That is a trade name rather than a gemstone, and what actually sits in the setting is cubic zirconia, which this listing prefers to say outright. CZ happens to do exactly what a solitaire asks of a stone: it cuts crisply, keeps a white sparkle, and holds its polish, so the classic silhouette works at a price where wearing it daily carries no anxiety at all.\n\nSolitaires carry meaning, and that cuts both ways. On your own hand it is simply clean, traditional sparkle that sits as comfortably beside office cotton as beside a sari border. Given to someone else it will be read as a gesture, so give it knowingly.\n\nProngs are where dust settles. A soft brush under the crown now and then keeps light entering the stone from below, which is where most of a round stone's fire actually starts.",
+    "seo": {
+      "primaryKeyword": "rose gold solitaire ring",
+      "secondaryKeywords": [
+        "american diamond solitaire ring",
+        "four prong cz ring",
+        "simple ring for daily wear"
+      ],
+      "metaTitle": "Rose Gold Solitaire Ring with Round CZ, Adjustable Fit",
+      "metaDescription": "The classic four-prong round solitaire, done honestly in cubic zirconia at ₹59, with pavé shoulders on a slim rose gold-plated band that adjusts to fit.",
+      "imageAlt": "Round cubic zirconia solitaire in a four-prong setting with pavé shoulders on a slim rose gold-plated band",
+      "ogTitle": "Rose Gold-Plated CZ Solitaire Ring at ₹59 | Morchadi Gems",
+      "ogDescription": "One round CZ, four claws, pavé shoulders. The oldest ring design there is, honestly priced at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P122.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "148",
+      "originalSku": "MJ-503",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-503-rose-gold-plated-american-diamond-ring-148",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
   }
 ]

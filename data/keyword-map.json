@@ -1,10 +1,13 @@
 {
   "generatedBy": "scripts/backfill-keyword-map.mjs",
   "source": "data/products.json",
-  "productCount": 49,
+  "productCount": 60,
   "primary": {
     "adjustable crystal heart ring": [
       "P004"
+    ],
+    "adjustable cz flower ring": [
+      "P120"
     ],
     "beaded bracelet watch": [
       "P022"
@@ -15,14 +18,26 @@
     "bridal cluster nath": [
       "P035"
     ],
+    "butterfly bypass ring": [
+      "P108"
+    ],
     "clear stone peacock nath": [
       "P033"
     ],
     "clear stone thread ring": [
       "P017"
     ],
+    "criss-cross rose gold ring": [
+      "P110"
+    ],
+    "crossover cz band ring": [
+      "P117"
+    ],
     "cubic zirconia bow ring": [
       "P019"
+    ],
+    "cz half eternity band": [
+      "P115"
     ],
     "enamel kada bangle": [
       "P036"
@@ -93,6 +108,15 @@
     "olive green thread ring": [
       "P018"
     ],
+    "open heart cz ring": [
+      "P118"
+    ],
+    "oval cz cocktail ring": [
+      "P109"
+    ],
+    "oval halo cz ring": [
+      "P119"
+    ],
     "oversized clear heart ring": [
       "P012"
     ],
@@ -108,6 +132,9 @@
     "pink tulip bracelet": [
       "P039"
     ],
+    "pink wing butterfly ring": [
+      "P121"
+    ],
     "purple glass bangle set": [
       "P042"
     ],
@@ -116,6 +143,12 @@
     ],
     "red stone thread ring": [
       "P015"
+    ],
+    "rose gold flower ring": [
+      "P106"
+    ],
+    "rose gold solitaire ring": [
+      "P122"
     ],
     "rose gold-plated stacking ring": [
       "P013"
@@ -164,6 +197,15 @@
     "adjustable cocktail ring": [
       "P012"
     ],
+    "adjustable criss-cross ring": [
+      "P110"
+    ],
+    "adjustable flower ring for women": [
+      "P106"
+    ],
+    "adjustable heart ring": [
+      "P118"
+    ],
     "adjustable letter ring": [
       "P001"
     ],
@@ -183,6 +225,12 @@
     ],
     "alphabet ring": [
       "P001"
+    ],
+    "american diamond flower ring": [
+      "P106"
+    ],
+    "american diamond solitaire ring": [
+      "P122"
     ],
     "anklet set of two": [
       "P044"
@@ -235,6 +283,9 @@
     "big heart ring": [
       "P012"
     ],
+    "big stone adjustable ring": [
+      "P109"
+    ],
     "black bead anklet": [
       "P045"
     ],
@@ -257,8 +308,17 @@
       "P031",
       "P033"
     ],
+    "butterfly ring for women": [
+      "P108"
+    ],
+    "butterfly ring gift": [
+      "P121"
+    ],
     "cat's-eye effect earrings": [
       "P030"
+    ],
+    "channel set cz ring": [
+      "P115"
     ],
     "channel-set band": [
       "P021"
@@ -266,8 +326,14 @@
     "cheap ring under 200": [
       "P020"
     ],
+    "chunky rose gold ring": [
+      "P117"
+    ],
     "clear stone ring": [
       "P004"
+    ],
+    "cocktail ring under 100": [
+      "P109"
     ],
     "colourful bracelet for women": [
       "P038"
@@ -296,6 +362,12 @@
     ],
     "cubic zirconia studs": [
       "P024"
+    ],
+    "cut-out band ring": [
+      "P110"
+    ],
+    "cz petal ring": [
+      "P106"
     ],
     "daily wear payal": [
       "P044"
@@ -362,6 +434,9 @@
     ],
     "four leaf clover charm": [
       "P046"
+    ],
+    "four prong cz ring": [
+      "P122"
     ],
     "free size ring": [
       "P004",
@@ -457,11 +532,20 @@
     "hair accessories under 100": [
       "P047"
     ],
+    "halo ring for women": [
+      "P119"
+    ],
     "heart locket necklace": [
       "P003"
     ],
+    "heart ring gift": [
+      "P118"
+    ],
     "initial ring for women": [
       "P005"
+    ],
+    "interlaced band ring": [
+      "P117"
     ],
     "ivory and gold hair clip": [
       "P048"
@@ -500,6 +584,9 @@
     "marquise stone nath": [
       "P035"
     ],
+    "milgrain band ring": [
+      "P115"
+    ],
     "multicolour cubic zirconia ring": [
       "P021"
     ],
@@ -524,6 +611,9 @@
     "office wear ring": [
       "P016"
     ],
+    "open adjustable ring": [
+      "P108"
+    ],
     "open cuff ring": [
       "P007"
     ],
@@ -545,14 +635,26 @@
     "oval and marquise stones": [
       "P039"
     ],
+    "oval stone adjustable ring": [
+      "P119"
+    ],
     "pale pink earrings": [
       "P028"
+    ],
+    "party ring for women": [
+      "P109"
     ],
     "pastel earrings": [
       "P024"
     ],
     "pastel green earrings": [
       "P027"
+    ],
+    "pave cz butterfly ring": [
+      "P121"
+    ],
+    "pear cut cz ring": [
+      "P120"
     ],
     "personalised letter ring": [
       "P005"
@@ -581,6 +683,9 @@
     "quartz watch jewellery": [
       "P022"
     ],
+    "raised motif ring": [
+      "P121"
+    ],
     "red cubic zirconia ring": [
       "P015"
     ],
@@ -590,6 +695,15 @@
     "rhodium-plated ring": [
       "P005",
       "P008"
+    ],
+    "ring under 100": [
+      "P120"
+    ],
+    "rose gold cz ring": [
+      "P110"
+    ],
+    "rose gold halo ring": [
+      "P119"
     ],
     "satin hair ties": [
       "P049"
@@ -615,6 +729,9 @@
       "P042",
       "P043"
     ],
+    "shell-look butterfly ring": [
+      "P108"
+    ],
     "shimmer bow clip": [
       "P048"
     ],
@@ -633,6 +750,9 @@
     "silver-tone ring": [
       "P019"
     ],
+    "simple ring for daily wear": [
+      "P122"
+    ],
     "single colour bracelet": [
       "P039"
     ],
@@ -641,6 +761,9 @@
     ],
     "slim band ring": [
       "P014"
+    ],
+    "small flower ring": [
+      "P120"
     ],
     "small nose hoop": [
       "P034"
@@ -669,6 +792,9 @@
     "stackable ring for women": [
       "P013"
     ],
+    "stacking band for women": [
+      "P115"
+    ],
     "stainless steel payal": [
       "P046"
     ],
@@ -680,6 +806,9 @@
     ],
     "teardrop locket": [
       "P002"
+    ],
+    "teardrop stone ring": [
+      "P118"
     ],
     "teej bangles": [
       "P043"
@@ -716,6 +845,9 @@
     ],
     "wedding nath": [
       "P035"
+    ],
+    "wide ring for women": [
+      "P117"
     ],
     "woven link ring": [
       "P010"

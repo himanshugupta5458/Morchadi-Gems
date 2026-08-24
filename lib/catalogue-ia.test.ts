@@ -102,18 +102,24 @@ describe("the collection tier", () => {
   });
 
   /**
-   * `gifting` is deliberately untagged as of ADR-021 — nothing in the owner's range is sold
-   * as a gift set, and inventing the tag to fill the facet would be the one thing a tag is
-   * not for. Its nav link and facet checkbox therefore resolve to an empty listing until a
-   * gift set is stocked. This pins that as a known state rather than letting it pass as an
-   * oversight.
+   * `gifting` was deliberately untagged from ADR-021 until 2026-08-24 — nothing in the
+   * hand-written range was sold as giftable, and inventing the tag to fill the facet would be
+   * the one thing a tag is not for. The Draft A pilot batch (P106–P122) ended that state
+   * honestly: their owner-reviewed drafts carried `suggestedCollections: ["gifting"]` off the
+   * source listing's own "gifting" occasion, and the tag published with them. Both hand-tagged
+   * collections now resolve to populated listings, and every gifting member so far is a
+   * migrated record — a hand-written product tagged gifting would be a new owner decision, not
+   * a regression, but it should not appear by accident.
    */
-  it("populates anti-tarnish and leaves gifting deliberately empty", () => {
+  it("populates both hand-tagged collections, gifting since the pilot batch published", () => {
     const membersOf = (tag: CollectionSlug): Product[] =>
       getAllProducts().filter((product) => (product.collections ?? []).includes(tag));
 
     expect(membersOf("anti-tarnish").length).toBeGreaterThan(0);
-    expect(membersOf("gifting")).toEqual([]);
+    expect(membersOf("gifting").length).toBeGreaterThan(0);
+    expect(
+      membersOf("gifting").every((product) => product.migrationProvenance !== undefined),
+    ).toBe(true);
     expect(COLLECTION_TAGS).toContain("gifting");
   });
 });

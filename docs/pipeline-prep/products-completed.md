@@ -20,4 +20,14 @@ the reference title the draft started from — review renames things. The draft 
 
 | Product ID | Final Name | Category | Published Date |
 | --- | --- | --- | --- |
-| _(none yet — no Draft A object has ever been created in this repository)_ | | | |
+| P106 | Pear-Petal CZ Flower Ring | rings | 2026-08-24 |
+| P108 | Butterfly Wing Bypass Ring | rings | 2026-08-24 |
+| P109 | Oval CZ Swirl Cocktail Ring | rings | 2026-08-24 |
+| P110 | Lattice Criss-Cross CZ Ring | rings | 2026-08-24 |
+| P115 | Beaded-Edge CZ Band Ring | rings | 2026-08-24 |
+| P117 | Interlaced Crossover CZ Ring | rings | 2026-08-24 |
+| P118 | Open Heart and Teardrop CZ Ring | rings | 2026-08-24 |
+| P119 | Rose Gold-Plated Oval Halo Ring | rings | 2026-08-24 |
+| P120 | Blooming Five-Petal CZ Ring | rings | 2026-08-24 |
+| P121 | Pink-Wing Butterfly CZ Ring | rings | 2026-08-24 |
+| P122 | Rose Gold-Plated CZ Solitaire Ring | rings | 2026-08-24 |

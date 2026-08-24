@@ -172,6 +172,169 @@ export function readOriginalId(value) {
 }
 
 /**
+ * THE SOURCE SHAPE, and why every read below goes through a named accessor.
+ *
+ * Stage 0 was written against the schema ADR-054 said the Phase B export would have — every
+ * provenance field at the top level, `images.main` a filename string, variant options in a
+ * deduplicated top-level `attributes[]`. The export that actually arrived nests the provenance
+ * under `sourceNotes`, names the image block `sourceImages`, makes `main` and `extras[]` objects
+ * rather than strings, and expresses variant options as a per-variant combination list in
+ * `variants[].attributes[]` while leaving top-level `attributes` an empty array in all 542
+ * records.
+ *
+ * The reconciliation in `docs/testing/RESULT-2026-08-23-stage0-real-data-reconciliation.md`
+ * measured the whole difference. Three of the mismatches rejected every record loudly; four more
+ * would have written a wrong value into `raw-block.json` and exited 0. Reading through named
+ * accessors rather than through inline property chains is what makes the second kind visible:
+ * there is one place per field where the real path is stated, and `lib/prepare-migration-batch.test.ts`
+ * pins each one against a fixture that now carries the real shape. See ADR-054's addendum.
+ */
+
+/** @param {unknown} record @returns {Record<string, unknown>} */
+function readSourceNotes(record) {
+  return isPlainObject(record) && isPlainObject(record.sourceNotes) ? record.sourceNotes : {};
+}
+
+/** @param {unknown} record @returns {Record<string, unknown> | null} */
+function readSourceImages(record) {
+  if (!isPlainObject(record)) return null;
+  return isPlainObject(record.sourceImages) ? record.sourceImages : null;
+}
+
+/** @param {unknown} record @returns {Record<string, unknown>[]} */
+function readVariantEntries(record) {
+  if (!isPlainObject(record) || !Array.isArray(record.variants)) return [];
+  return record.variants.filter(isPlainObject);
+}
+
+/**
+ * The `{attribute, value}` pairs one variant combination carries. This is where the real export
+ * keeps its option data; top-level `attributes[]` is empty in every record and is never read as a
+ * variant source.
+ *
+ * @param {unknown} variant
+ * @returns {{attribute: string, value: string}[]}
+ */
+function readVariantAttributePairs(variant) {
+  if (!isPlainObject(variant) || !Array.isArray(variant.attributes)) return [];
+  return variant.attributes
+    .filter((pair) => isPlainObject(pair) && isNonEmptyString(pair.attribute) && isNonEmptyString(pair.value))
+    .map((pair) => ({ attribute: pair.attribute.trim(), value: pair.value.trim() }));
+}
+
+/** @param {unknown} record @returns {string | null} */
+function readRawContent(record) {
+  const { rawContent } = readSourceNotes(record);
+  return typeof rawContent === "string" ? rawContent : null;
+}
+
+/** @param {unknown} record @returns {string | null} */
+function readRawHtml(record) {
+  const { rawHtml } = readSourceNotes(record);
+  return typeof rawHtml === "string" ? rawHtml : null;
+}
+
+/** @param {unknown} record @returns {string | null} */
+function readReferencePrice(record) {
+  if (!isPlainObject(record) || !isPlainObject(record.pricing)) return null;
+  const { referencePrice } = record.pricing;
+  return typeof referencePrice === "string" ? referencePrice : null;
+}
+
+/** @param {unknown} sourceImages @returns {string} */
+function readMainImageFile(sourceImages) {
+  if (isPlainObject(sourceImages) && isPlainObject(sourceImages.main) && isNonEmptyString(sourceImages.main.file)) {
+    return sourceImages.main.file.trim();
+  }
+  return "main.webp";
+}
+
+/** @param {unknown} sourceImages @returns {string[]} */
+function readExtraImageFiles(sourceImages) {
+  if (!isPlainObject(sourceImages) || !Array.isArray(sourceImages.extras)) return [];
+  return sourceImages.extras
+    .filter((extra) => isPlainObject(extra) && isNonEmptyString(extra.file))
+    .map((extra) => extra.file.trim());
+}
+
+/** @param {unknown} sourceImages @returns {Record<string, unknown>[]} */
+function readVariantImageEntries(sourceImages) {
+  if (!isPlainObject(sourceImages) || !Array.isArray(sourceImages.variants)) return [];
+  return sourceImages.variants.filter(isPlainObject);
+}
+
+/**
+ * PART C, the join the variant-image map cannot be built without.
+ *
+ * `sourceImages.variants[]` carries a `variantId` and a `value` but no attribute name, and the
+ * Draft A image map is keyed `OptionName:Value`. The name is recovered by finding the variant the
+ * image belongs to and taking the attribute whose value the image entry names. It is a real join,
+ * not an assumption: it returns `null` when the variant is absent or when no pair on it carries
+ * that value, and `validateSourceRecord` refuses the record rather than keying the map by
+ * `undefined`.
+ *
+ * @param {unknown} record
+ * @param {unknown} variantImage
+ * @returns {string | null}
+ */
+export function resolveVariantImageAttribute(record, variantImage) {
+  if (!isPlainObject(variantImage)) return null;
+  const variant = readVariantEntries(record).find((entry) => entry.variantId === variantImage.variantId);
+  if (variant === undefined) return null;
+  const match = readVariantAttributePairs(variant).find((pair) => pair.value === variantImage.value);
+  return match === undefined ? null : match.attribute;
+}
+
+/**
+ * The working id the batch's image directory is named after. The export states it, and Stage 0
+ * derives the same string from `sourceNotes.originalId`; the reconciliation confirmed the two are
+ * identical in all 542 records. It is derived rather than read so a record with no `workingId` —
+ * the shape ADR-054 was written against — still resolves to a directory.
+ *
+ * @param {string} originalId
+ */
+export function workingIdFor(originalId) {
+  return `odoo-${originalId}`;
+}
+
+/**
+ * PART A, decision I-4. The set of records the operator has decided to accept despite failing the
+ * sub-50-character stub check.
+ *
+ * The export has no `knownStub` field — the key appears nowhere in the real file — so there is no
+ * way for the exporter to say "this one is genuinely short, take it anyway". Until it grows one,
+ * that statement is made on the command line and nowhere else. It is a deliberate manual
+ * override: naming an id here is a person taking responsibility for a record extraction will have
+ * nothing to quote from, and the record is still queued with a warning that says so.
+ *
+ * Ids may be given as working ids (`odoo-817`) or as bare originalIds (`817`); both forms are
+ * accepted so the list can be pasted from either the export or the needs-attention report.
+ *
+ * @param {unknown} value
+ * @returns {Set<string>}
+ */
+export function parseKnownStubIds(value) {
+  const ids = new Set();
+  if (!isNonEmptyString(value)) return ids;
+  for (const token of value.split(/[\s,]+/)) {
+    const id = token.trim();
+    if (id.length > 0) ids.add(id);
+  }
+  return ids;
+}
+
+/**
+ * Whether the operator named this record on `--known-stub-ids`, in either accepted form.
+ *
+ * @param {Set<string>} knownStubIds
+ * @param {string | null} originalId
+ */
+function isKnownStubOverride(knownStubIds, originalId) {
+  if (originalId === null) return false;
+  return knownStubIds.has(originalId) || knownStubIds.has(workingIdFor(originalId));
+}
+
+/**
  * The path the batch's downloader is expected to have written the main photograph to. Relative
  * to the incoming root so a test can point the whole run at a temporary directory.
  *
@@ -190,11 +353,12 @@ export function sourceImagePath(batchId, originalId, fileName) {
  * `imageExists` is injected rather than called directly so the whole check is pure.
  *
  * @param {unknown} record
- * @param {{ batchId: string, index: number, imageExists: (relativePath: string) => boolean }} context
+ * @param {{ batchId: string, index: number, imageExists: (relativePath: string) => boolean, knownStubIds?: Set<string> }} context
  * @returns {{ ok: boolean, originalId: string | null, line: number, failures: {field: string, reason: string}[], warnings: {field: string, reason: string}[] }}
  */
 export function validateSourceRecord(record, context) {
   const line = context.index + 1;
+  const knownStubIds = context.knownStubIds ?? new Set();
   /** @type {{field: string, reason: string}[]} */
   const failures = [];
   /** @type {{field: string, reason: string}[]} */
@@ -210,10 +374,10 @@ export function validateSourceRecord(record, context) {
     };
   }
 
-  const originalId = readOriginalId(record.originalId);
+  const originalId = readOriginalId(readSourceNotes(record).originalId);
   if (originalId === null) {
     failures.push({
-      field: "originalId",
+      field: "sourceNotes.originalId",
       reason: "missing — it orders the batch and names the image directory, so nothing can proceed without it",
     });
   }
@@ -236,71 +400,194 @@ export function validateSourceRecord(record, context) {
     });
   }
 
-  const rawContentLength = typeof record.rawContent === "string" ? record.rawContent.trim().length : 0;
+  const rawContent = readRawContent(record);
+  const rawContentLength = rawContent === null ? 0 : rawContent.trim().length;
   const isStub = rawContentLength < KNOWN_STUB_MAX_CONTENT_LENGTH;
-  if (isStub && record.knownStub !== true) {
+  const acceptedAsKnownStub = record.knownStub === true || isKnownStubOverride(knownStubIds, originalId);
+  if (isStub && !acceptedAsKnownStub) {
     failures.push({
-      field: "rawContent",
+      field: "sourceNotes.rawContent",
       reason:
         rawContentLength === 0
-          ? "absent or empty, and the record is not flagged knownStub: true"
-          : `only ${rawContentLength} characters of source text, under the ${KNOWN_STUB_MAX_CONTENT_LENGTH}-character stub threshold, and the record is not flagged knownStub: true`,
+          ? "absent or empty, and the record is not named on --known-stub-ids"
+          : `only ${rawContentLength} characters of source text, under the ${KNOWN_STUB_MAX_CONTENT_LENGTH}-character stub threshold, and the record is not named on --known-stub-ids`,
     });
   }
-  if (isStub && record.knownStub === true) {
+  if (isStub && acceptedAsKnownStub) {
     warnings.push({
-      field: "rawContent",
-      reason: `flagged knownStub: true with ${rawContentLength} characters — extraction will have nothing to quote, so this one needs owner-supplied copy before Draft A`,
+      field: "sourceNotes.rawContent",
+      reason: `accepted as a knownStub with ${rawContentLength} characters — extraction will have nothing to quote, so this one needs owner-supplied copy before Draft A`,
     });
   }
 
-  const imageFailure = validateImageShape(record.images);
-  if (imageFailure !== null) {
-    failures.push(imageFailure);
-  } else if (originalId !== null) {
-    const mainPath = sourceImagePath(context.batchId, originalId, "main.webp");
-    if (!context.imageExists(mainPath)) {
-      failures.push({
-        field: "images.main",
-        reason: `no file on disk at content-pipeline/incoming/${mainPath}`,
-      });
+  const variantFailures = collectVariantShapeFailures(record);
+  failures.push(...variantFailures);
+
+  const imageFailures = collectImageShapeFailures(record, variantFailures.length === 0);
+  failures.push(...imageFailures);
+  if (imageFailures.length === 0 && originalId !== null) {
+    for (const { field, file } of collectReferencedImageFiles(record)) {
+      const relativePath = sourceImagePath(context.batchId, originalId, file);
+      if (!context.imageExists(relativePath)) {
+        failures.push({
+          field,
+          reason: `no file on disk at content-pipeline/incoming/${relativePath}`,
+        });
+      }
     }
   }
 
   const attributeFailure = validateAttributeShape(record.attributes);
-  if (attributeFailure !== null) failures.push(attributeFailure);
+  if (attributeFailure !== null) {
+    failures.push(attributeFailure);
+  } else if (Array.isArray(record.attributes) && record.attributes.length > 0) {
+    warnings.push({
+      field: "attributes",
+      reason:
+        "populated, and Stage 0 does not read it — variant options are taken from variants[].attributes[]. " +
+        "It is empty in every record of the real export; a populated one means the export shape has changed",
+    });
+  }
 
   return { ok: failures.length === 0, originalId, line, failures, warnings };
 }
 
-/** @param {unknown} images */
-function validateImageShape(images) {
-  if (!isPlainObject(images)) {
-    return { field: "images", reason: "missing or not an object" };
+/**
+ * PART A. The `variants[]` shape, checked before anything tries to join against it. A malformed
+ * pair here is what would otherwise surface as a variant-image key of `undefined:B`.
+ *
+ * @param {Record<string, unknown>} record
+ * @returns {{field: string, reason: string}[]}
+ */
+function collectVariantShapeFailures(record) {
+  if (record.variants === undefined || record.variants === null) return [];
+  if (!Array.isArray(record.variants)) {
+    return [{ field: "variants", reason: "present but not an array" }];
   }
-  if (images.extra !== undefined && !Array.isArray(images.extra)) {
-    return { field: "images.extra", reason: "present but not an array" };
+  const failures = [];
+  for (const [index, variant] of record.variants.entries()) {
+    if (!isPlainObject(variant)) {
+      failures.push({ field: `variants[${index}]`, reason: "not an object" });
+      continue;
+    }
+    if (variant.attributes === undefined || variant.attributes === null) continue;
+    if (!Array.isArray(variant.attributes)) {
+      failures.push({ field: `variants[${index}].attributes`, reason: "present but not an array" });
+      continue;
+    }
+    for (const [pairIndex, pair] of variant.attributes.entries()) {
+      if (!isPlainObject(pair) || !isNonEmptyString(pair.attribute) || !isNonEmptyString(pair.value)) {
+        failures.push({
+          field: `variants[${index}].attributes[${pairIndex}]`,
+          reason: "each entry needs a non-empty attribute and value",
+        });
+      }
+    }
   }
-  if (images.variantImages !== undefined && !Array.isArray(images.variantImages)) {
-    return { field: "images.variantImages", reason: "present but not an array" };
+  return failures;
+}
+
+/**
+ * PART A. The `sourceImages` shape, including the one check that is not a shape check at all:
+ * that every variant image can be joined back to an attribute name. The map Draft A reads is
+ * keyed `OptionName:Value`, and a record whose join fails has no honest key to offer.
+ *
+ * The join is only attempted when `variants[]` itself validated — reporting an unjoinable image
+ * on top of the malformed variant that caused it would name the same fault twice.
+ *
+ * @param {Record<string, unknown>} record
+ * @param {boolean} variantsAreWellFormed
+ * @returns {{field: string, reason: string}[]}
+ */
+function collectImageShapeFailures(record, variantsAreWellFormed) {
+  const sourceImages = readSourceImages(record);
+  if (sourceImages === null) {
+    return [{ field: "sourceImages", reason: "missing or not an object" }];
   }
-  for (const [index, variantImage] of (images.variantImages ?? []).entries()) {
+
+  const failures = [];
+  if (!isPlainObject(sourceImages.main) || !isNonEmptyString(sourceImages.main.file)) {
+    failures.push({
+      field: "sourceImages.main",
+      reason: "missing — it must be an object carrying a non-empty file name",
+    });
+  }
+
+  if (sourceImages.extras !== undefined && !Array.isArray(sourceImages.extras)) {
+    failures.push({ field: "sourceImages.extras", reason: "present but not an array" });
+  } else {
+    for (const [index, extra] of (sourceImages.extras ?? []).entries()) {
+      if (!isPlainObject(extra) || !isNonEmptyString(extra.file)) {
+        failures.push({
+          field: `sourceImages.extras[${index}]`,
+          reason: "each entry needs a non-empty file name",
+        });
+      }
+    }
+  }
+
+  if (sourceImages.variants !== undefined && !Array.isArray(sourceImages.variants)) {
+    failures.push({ field: "sourceImages.variants", reason: "present but not an array" });
+    return failures;
+  }
+  for (const [index, variantImage] of (sourceImages.variants ?? []).entries()) {
     if (
       !isPlainObject(variantImage) ||
-      !isNonEmptyString(variantImage.attribute) ||
       !isNonEmptyString(variantImage.value) ||
       !isNonEmptyString(variantImage.file)
     ) {
-      return {
-        field: `images.variantImages[${index}]`,
-        reason: "each entry needs a non-empty attribute, value and file",
-      };
+      failures.push({
+        field: `sourceImages.variants[${index}]`,
+        reason: "each entry needs a non-empty value and file",
+      });
+      continue;
+    }
+    if (variantsAreWellFormed && resolveVariantImageAttribute(record, variantImage) === null) {
+      failures.push({
+        field: `sourceImages.variants[${index}].variantId`,
+        reason:
+          `${JSON.stringify(variantImage.variantId)} does not join to any variants[] entry carrying ` +
+          `the value ${JSON.stringify(variantImage.value)}, so the option name behind this image cannot be recovered`,
+      });
     }
   }
-  return null;
+  return failures;
 }
 
-/** @param {unknown} attributes */
+/**
+ * PART A, finding I-5. Every image file the record actually names, so existence is checked against
+ * the record's own values rather than against a literal.
+ *
+ * The old check probed the hardcoded string `"main.webp"` and looked at nothing else. It agreed
+ * with the record only because every `sourceImages.main.file` in this batch happens to be
+ * `main.webp`, and it left all 483 extras and all 50 variant images unchecked — a suggestion could
+ * point at a file that was never downloaded and Stage 0 would queue it without a word.
+ *
+ * @param {Record<string, unknown>} record
+ * @returns {{field: string, file: string}[]}
+ */
+function collectReferencedImageFiles(record) {
+  const sourceImages = readSourceImages(record);
+  const files = [{ field: "sourceImages.main", file: readMainImageFile(sourceImages) }];
+  for (const [index, file] of readExtraImageFiles(sourceImages).entries()) {
+    files.push({ field: `sourceImages.extras[${index}]`, file });
+  }
+  for (const [index, variantImage] of readVariantImageEntries(sourceImages).entries()) {
+    if (isNonEmptyString(variantImage.file)) {
+      files.push({ field: `sourceImages.variants[${index}]`, file: variantImage.file.trim() });
+    }
+  }
+  return files;
+}
+
+/**
+ * The top-level `attributes[]` of the schema ADR-054 was written against. The real export leaves it
+ * an empty array in every record, which is a correctly-empty array rather than a missing variant
+ * source — the options live in `variants[].attributes[]`. This still validates the old shape so a
+ * malformed one is reported rather than ignored.
+ *
+ * @param {unknown} attributes
+ */
 function validateAttributeShape(attributes) {
   if (attributes === undefined || attributes === null) return null;
   if (!Array.isArray(attributes)) {
@@ -342,18 +629,34 @@ export function orderRecordsForAssignment(records) {
 }
 
 /**
- * PART C. The Odoo attribute list becomes this project's `variants` shape. Values keep their
- * source order and their source spelling; de-duplicating or title-casing them here would be a
- * silent edit to data the owner still has to read.
+ * PART C. The Odoo variant list becomes this project's `variants` shape.
  *
- * @param {{ attributes?: {name: string, values: string[]}[] }} record
+ * The real export expresses options as a **per-variant combination list**: one `variants[]` entry
+ * per sellable combination, each carrying the `{attribute, value}` pairs that define it. Draft A
+ * wants the **deduplicated option list** — one entry per option name, holding its distinct values.
+ * The two are the same information in different arrangements, and this is the arrangement.
+ *
+ * Option names keep first-appearance order and values keep first-appearance order within their
+ * option. Values keep their source spelling: de-duplicating is a shape change the data invites,
+ * title-casing would be a silent edit to text the owner still has to read.
+ *
+ * Top-level `attributes[]` is not consulted. It is an empty array in all 542 real records, and
+ * reading it was what wrote `variants: []` into all 78 multi-variant products.
+ *
+ * @param {unknown} record
  * @returns {{ optionName: string, values: string[] }[]}
  */
 export function toVariants(record) {
-  return (record.attributes ?? []).map((attribute) => ({
-    optionName: attribute.name,
-    values: [...attribute.values],
-  }));
+  /** @type {Map<string, string[]>} */
+  const valuesByOptionName = new Map();
+  for (const variant of readVariantEntries(record)) {
+    for (const pair of readVariantAttributePairs(variant)) {
+      const values = valuesByOptionName.get(pair.attribute) ?? [];
+      if (!values.includes(pair.value)) values.push(pair.value);
+      valuesByOptionName.set(pair.attribute, values);
+    }
+  }
+  return [...valuesByOptionName].map(([optionName, values]) => ({ optionName, values }));
 }
 
 /** @param {string} value */
@@ -378,20 +681,30 @@ function slugifyImageSegment(value) {
  * ADR-054 decision 5 chose. That choice was made to keep `images.variantImages` a plain
  * string-to-string map matching the Draft A schema exactly; ADR-056 changed the Draft A schema
  * to carry `confirmed` per image, so the reason no longer holds — and a parallel block was the
- * reason the `verified_distinct` evidence had no way across extraction. See ADR-056.
+ * reason the `verifiedDistinct` evidence had no way across extraction. See ADR-056.
  *
  * Nothing here is confirmed. `verifiedDistinct` is the source system's own hash check carried
- * forward as evidence for the person doing the review; it is not a licence to auto-populate.
+ * forward as evidence for the person doing the review; it is not a licence to auto-populate. It is
+ * read camelCase, as the export spells it — read as `verified_distinct` it was `undefined === true`
+ * for all 50 real variant images, and every one of them reached the reviewer inverted.
  *
- * @param {{ images: { main?: string, extra?: string[], variantImages?: {attribute: string, value: string, file: string, verified_distinct?: boolean}[] } }} record
+ * @param {unknown} record
  * @param {string} productId
  * @param {string} batchId
  * @param {string} originalId
  */
 export function buildImageSuggestions(record, productId, batchId, originalId) {
-  const mainFile = isNonEmptyString(record.images.main) ? record.images.main : "main.webp";
-  const extraFiles = (record.images.extra ?? []).filter(isNonEmptyString);
-  const variantImages = record.images.variantImages ?? [];
+  const sourceImages = readSourceImages(record);
+  const mainFile = readMainImageFile(sourceImages);
+  const extraFiles = readExtraImageFiles(sourceImages);
+  const variantImages = readVariantImageEntries(sourceImages)
+    .map((variantImage) => ({
+      attribute: resolveVariantImageAttribute(record, variantImage),
+      value: typeof variantImage.value === "string" ? variantImage.value : "",
+      file: typeof variantImage.file === "string" ? variantImage.file : "",
+      verifiedDistinct: variantImage.verifiedDistinct === true,
+    }))
+    .filter((variantImage) => variantImage.attribute !== null);
 
   /** @type {{path: string, confirmed: boolean, sourceFile: string, role: string}[]} */
   const general = [
@@ -429,7 +742,7 @@ export function buildImageSuggestions(record, productId, batchId, originalId) {
       path: `/products/${productId}-${suffix}.webp`,
       confirmed: false,
       sourceFile: sourceImagePath(batchId, originalId, variantImage.file),
-      verifiedDistinct: variantImage.verified_distinct === true,
+      verifiedDistinct: variantImage.verifiedDistinct,
     };
   }
 
@@ -449,9 +762,11 @@ export function buildImageSuggestions(record, productId, batchId, originalId) {
  * @param {string} productId
  * @param {string} batchId
  * @param {string} originalId
+ * @param {{ knownStub?: boolean }} [flags]
  */
-export function buildRawBlock(record, productId, batchId, originalId) {
+export function buildRawBlock(record, productId, batchId, originalId, flags = {}) {
   const { images } = buildImageSuggestions(record, productId, batchId, originalId);
+  const sourceNotes = readSourceNotes(record);
   return {
     productId,
     stage: QUEUED_STAGE,
@@ -464,15 +779,36 @@ export function buildRawBlock(record, productId, batchId, originalId) {
     },
     sourceNotes: {
       originalId,
-      originalSku: record.originalSku ?? null,
-      originalUrl: record.originalUrl ?? null,
-      referenceTitle: record.referenceTitle ?? null,
-      rawContent: typeof record.rawContent === "string" ? record.rawContent : null,
-      rawHtml: typeof record.rawHtml === "string" ? record.rawHtml : null,
-      originalCategories: Array.isArray(record.originalCategories)
-        ? [...record.originalCategories]
+      workingId: workingIdFor(originalId),
+      originalSku: sourceNotes.originalSku ?? null,
+      originalUrl: sourceNotes.originalUrl ?? null,
+      referenceTitle: sourceNotes.referenceTitle ?? null,
+      rawContent: readRawContent(record),
+      rawHtml: readRawHtml(record),
+      originalCategories: Array.isArray(sourceNotes.originalCategories)
+        ? [...sourceNotes.originalCategories]
         : [],
-      knownStub: record.knownStub === true,
+      /**
+       * ARCHIVAL ONLY — never read by extraction, never used to generate anything.
+       *
+       * This is the meta description the owner wrote on the old site. It is carried so the record
+       * of what the source held is complete, and for no other purpose. Draft A must not quote it,
+       * paraphrase it, seed a meta description from it, or treat it as evidence for a material,
+       * plating or stone claim: it is marketing copy from a system whose claims this migration
+       * exists to re-examine, not source text about the product. `sourceNotes.rawContent` is the
+       * only field extraction reads for content. See ADR-054's addendum, decision I-2.
+       */
+      originalMetaDescription: sourceNotes.originalMetaDescription ?? null,
+      /**
+       * The export's own QA observations from the extraction session — "only one image available
+       * from source", "duplicate title shared with template(s) …", "source description is only N
+       * characters". They are the source system describing itself, so they belong beside the other
+       * provenance rather than at the top level, where the Draft A schema's own `notes[]` lives and
+       * where extraction would later write its own. Carried verbatim, for the person reviewing the
+       * queued record to read.
+       */
+      exportNotes: Array.isArray(record.notes) ? [...record.notes] : [],
+      knownStub: flags.knownStub === true || record.knownStub === true,
     },
     category: record.category ?? null,
     subcategory: record.subcategory ?? null,
@@ -481,7 +817,7 @@ export function buildRawBlock(record, productId, batchId, originalId) {
       : [],
     variants: toVariants(record),
     images,
-    pricing: { referencePrice: record.referencePrice ?? null },
+    pricing: { referencePrice: readReferencePrice(record) },
   };
 }
 
@@ -489,11 +825,12 @@ export function buildRawBlock(record, productId, batchId, originalId) {
  * PART A and B together, as one pure decision over already-parsed input. Returns the whole plan —
  * what to write, what to report, what to refuse — without touching the filesystem.
  *
- * @param {{ records: {value: unknown, line: number}[], parseErrors: {line: number, message: string}[], batchId: string, catalogue: unknown, imageExists: (relativePath: string) => boolean, startNumber?: number }} input
+ * @param {{ records: {value: unknown, line: number}[], parseErrors: {line: number, message: string}[], batchId: string, catalogue: unknown, imageExists: (relativePath: string) => boolean, startNumber?: number, knownStubIds?: Set<string> }} input
  */
 export function planBatch(input) {
   const catalogue = assertCatalogueBelowOverrideFloor(input.catalogue);
   const startNumber = input.startNumber ?? MIGRATION_ID_START;
+  const knownStubIds = input.knownStubIds ?? new Set();
 
   /** @type {{originalId: string | null, line: number, failures: {field: string, reason: string}[]}[]} */
   const rejected = input.parseErrors.map((parseError) => ({
@@ -501,7 +838,7 @@ export function planBatch(input) {
     line: parseError.line,
     failures: [{ field: "(line)", reason: `not valid JSON — ${parseError.message}` }],
   }));
-  /** @type {{record: object, originalId: string, line: number, warnings: {field: string, reason: string}[]}[]} */
+  /** @type {{record: object, originalId: string, line: number, knownStub: boolean, warnings: {field: string, reason: string}[]}[]} */
   const accepted = [];
 
   for (const { value, line } of input.records) {
@@ -509,12 +846,14 @@ export function planBatch(input) {
       batchId: input.batchId,
       index: line - 1,
       imageExists: input.imageExists,
+      knownStubIds,
     });
     if (result.ok && result.originalId !== null) {
       accepted.push({
         record: /** @type {object} */ (value),
         originalId: result.originalId,
         line,
+        knownStub: isKnownStubOverride(knownStubIds, result.originalId),
         warnings: result.warnings,
       });
     } else {
@@ -544,7 +883,9 @@ export function planBatch(input) {
     return {
       ...entry,
       productId,
-      rawBlock: buildRawBlock(entry.record, productId, input.batchId, entry.originalId),
+      rawBlock: buildRawBlock(entry.record, productId, input.batchId, entry.originalId, {
+        knownStub: entry.knownStub,
+      }),
     };
   });
 
@@ -654,6 +995,20 @@ export function renderNeedsAttention(plan, sourcePath) {
 }
 
 /**
+ * A literal `|` inside a register cell ends the cell early and shifts every cell after it —
+ * sixteen titles in the real export carry one. The HTML entity renders as the same character in
+ * the table while being unmistakable for a cell boundary, both to a Markdown renderer and to
+ * `parseMarkdownTables`, which splits on the raw character. A backslash escape would satisfy a
+ * renderer but not the parser, so the append guard would still refuse the write.
+ *
+ * @param {string} text
+ * @returns {string}
+ */
+export function escapeRegisterCell(text) {
+  return text.replaceAll("|", "&#124;");
+}
+
+/**
  * PART D. The register rows, at the new `queued` stage — not `extracted`, which would claim a
  * Draft A run that has not happened.
  *
@@ -662,12 +1017,16 @@ export function renderNeedsAttention(plan, sourcePath) {
  */
 export function renderDraftsInProgressRows(plan, isoDate) {
   return plan.assigned.map((entry) => {
-    const title = entry.rawBlock.sourceNotes.referenceTitle ?? "_(no title in export)_";
+    const title = escapeRegisterCell(
+      entry.rawBlock.sourceNotes.referenceTitle ?? "_(no title in export)_",
+    );
     const category = entry.rawBlock.category === null ? "_(none)_" : `\`${entry.rawBlock.category}\``;
-    const notes = [
-      `batch \`${plan.batchId}\`, Odoo id \`${entry.originalId}\``,
-      ...entry.warnings.map((warning) => `**${warning.field}:** ${warning.reason}`),
-    ].join(". ");
+    const notes = escapeRegisterCell(
+      [
+        `batch \`${plan.batchId}\`, Odoo id \`${entry.originalId}\``,
+        ...entry.warnings.map((warning) => `**${warning.field}:** ${warning.reason}`),
+      ].join(". "),
+    );
     return `| ${entry.productId} | ${title} | ${category} | \`${QUEUED_STAGE}\` | ${isoDate} | ${notes} |`;
   });
 }
@@ -944,6 +1303,37 @@ function verifyRegisterRows(updated, rows) {
   return null;
 }
 
+/**
+ * Resolves `--known-stub-ids` into the set the validator consults. The value is either the ids
+ * themselves, comma- or space-separated, or the path to a file holding them — a JSON array, or one
+ * id per line. Which it is is decided by asking the filesystem rather than by a prefix or an
+ * extension: 11 ids fit on a command line, 200 would not, and the operator should not have to
+ * remember a sigil to switch between the two.
+ *
+ * @param {string | undefined} value
+ * @returns {Set<string>}
+ */
+export function resolveKnownStubIds(value) {
+  if (value === undefined || value === "true") return new Set();
+  if (!existsSync(value)) return parseKnownStubIds(value);
+
+  const contents = readFileSync(value, "utf8");
+  const trimmed = contents.trim();
+  if (trimmed.startsWith("[") || trimmed.startsWith("{")) {
+    const parsed = JSON.parse(trimmed);
+    if (!Array.isArray(parsed)) {
+      throw new Error(`${value} holds JSON, but not an array of ids`);
+    }
+    return parseKnownStubIds(parsed.join(","));
+  }
+  return parseKnownStubIds(
+    contents
+      .split("\n")
+      .map((line) => line.replace(/#.*$/, "").trim())
+      .join(","),
+  );
+}
+
 /** @param {string} message */
 function fail(message) {
   console.error(message);
@@ -969,7 +1359,8 @@ export function runCli(argv) {
   if (!sourcePath || !batchId) {
     console.error(
       "Usage: node scripts/prepare-migration-batch.mjs <export.jsonl> <batch-id> " +
-        "[--incoming-root=DIR] [--register=FILE] [--date=YYYY-MM-DD] [--dry-run]",
+        "[--incoming-root=DIR] [--register=FILE] [--date=YYYY-MM-DD] [--dry-run] " +
+        "[--known-stub-ids=ID,ID,… | --known-stub-ids=FILE]",
     );
     return 2;
   }
@@ -977,6 +1368,12 @@ export function runCli(argv) {
   const incomingRoot = flags.get("incoming-root") ?? join(REPO_ROOT, "content-pipeline/incoming");
   const registerPath = flags.get("register") ?? DRAFTS_IN_PROGRESS_PATH;
   const isDryRun = flags.get("dry-run") === "true";
+  let knownStubIds;
+  try {
+    knownStubIds = resolveKnownStubIds(flags.get("known-stub-ids"));
+  } catch (error) {
+    return fail(`Could not read --known-stub-ids: ${/** @type {Error} */ (error).message}`);
+  }
   const isoDate = flags.get("date") ?? new Date().toISOString().slice(0, 10);
   const batchRoot = join(incomingRoot, batchId);
 
@@ -993,6 +1390,7 @@ export function runCli(argv) {
       batchId,
       catalogue,
       imageExists: (relativePath) => existsSync(join(incomingRoot, relativePath)),
+      knownStubIds,
     });
   } catch (error) {
     return fail(`\n${/** @type {Error} */ (error).message}\n`);
@@ -1008,6 +1406,9 @@ export function runCli(argv) {
   console.log(
     `  ids assigned      ${plan.assignedRange === null ? "none" : `${plan.assignedRange.first}–${plan.assignedRange.last}`}`,
   );
+  if (knownStubIds.size > 0) {
+    console.log(`  known stub ids    ${knownStubIds.size} accepted by manual override`);
+  }
 
   const collidingIds = plan.assigned
     .map((entry) => join(batchRoot, entry.productId, "raw-block.json"))

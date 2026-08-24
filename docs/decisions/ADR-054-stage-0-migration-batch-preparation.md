@@ -365,3 +365,172 @@ No real batch has been prepared, so there is nothing to migrate. A synthetic bat
 in `content-pipeline/incoming/` carries the old shape and should be re-prepared under a fresh batch
 id. Everything else in this record — validation, id assignment from P101, the manifest, the
 `queued` stage, the refusals — is unchanged.
+
+
+## Addendum, 2026-08-24 — the real export shape
+
+This record was written before the export existed, against the schema the Phase B specification
+described. The file arrived on 2026-08-23 and does not have that shape. The reconciliation in
+[`docs/testing/RESULT-2026-08-23-stage0-real-data-reconciliation.md`](../testing/RESULT-2026-08-23-stage0-real-data-reconciliation.md)
+walked every path of all 542 records against every `record.*` access in the script and measured
+the whole of the difference; this addendum records what was changed in response. **The body above
+is left untouched** — an accepted decision is not rewritten, and the gap between what it predicted
+and what arrived is the most useful thing about it.
+
+### What the export actually does
+
+| The schema said | The export does |
+| --- | --- |
+| `originalId`, `rawContent`, `rawHtml`, `referenceTitle`, `originalSku`, `originalUrl`, `originalCategories` at the top level | all seven under **`sourceNotes`** |
+| `referencePrice` at the top level | **`pricing.referencePrice`**, a descriptive sentence |
+| `images`, with `main` a filename string and `extra[]` an array of strings | **`sourceImages`**, with `main` an **object** carrying `.file`, and **`extras[]`** an array of objects |
+| `images.variantImages[]` carrying `{attribute, value, file, verified_distinct}` | **`sourceImages.variants[]`** carrying `{variantId, value, file, verifiedDistinct, …}` — **no `attribute` field at all**, and the flag spelled camelCase |
+| variant options in a deduplicated top-level `attributes[]` of `{name, values[]}` | a per-variant combination list in **`variants[].attributes[]`** of `{attribute, value}`. Top-level `attributes` is `[]` in all 542 records |
+| `knownStub: true` on a record whose copy is genuinely short | **the key appears nowhere in the file** |
+
+Three of those rejected every record loudly — 0 of 542 passed. The other four did not reject
+anything: they wrote a wrong value into `raw-block.json` and exited 0, and were invisible only
+because the loud three rejected the record first. **Fixing the loud three alone would have turned
+0 rejections into 531 silently-degraded raw blocks**, which is the reason this addendum exists at
+all rather than a one-line field rename.
+
+### Decision 1 — Stage 0 reads the export's real shape, through named accessors
+
+Every source read now goes through a named function — `readSourceNotes`, `readSourceImages`,
+`readMainImageFile`, `readExtraImageFiles`, `readVariantImageEntries`, `readRawContent`,
+`readRawHtml`, `readReferencePrice`, `readVariantAttributePairs` — rather than through an inline
+property chain at the point of use. That is not decoration. A property chain that reads the wrong
+path returns `undefined`, and `undefined` becomes `null` in the raw block without a word; a named
+accessor puts the real path in exactly one place, where a test can pin it. The four silent
+mismatches all had the same shape, and this is the structural answer to that shape.
+
+### Decision 2 — variants are derived from the combination list, not from `attributes[]`
+
+`toVariants` collects the distinct `{attribute, value}` pairs across every entry of a product's
+`variants[].attributes[]`, keyed by option name in first-appearance order, values deduplicated in
+first-appearance order within their option. Nine real products carry two option names and 154
+variants carry more than one attribute, so the dedup is load-bearing rather than incidental.
+
+Top-level `attributes[]` is **not** a fallback. It is an empty array in all 542 records and is
+read as correctly-empty; a *populated* one now raises a warning saying Stage 0 does not read it,
+because silently ignoring a field that has data in it is the same class of fault this addendum is
+correcting.
+
+### Decision 3 — the variant-image attribute name is recovered by a real join
+
+`sourceImages.variants[]` has a `variantId` and a `value` and no attribute name; the Draft A image
+map is keyed `OptionName:Value`. `resolveVariantImageAttribute` finds the variant the image belongs
+to by `variantId`, then takes the attribute whose value the image entry names. It returns `null`
+when the variant is absent or when no pair on it carries that value, and `validateSourceRecord`
+**refuses the record** rather than keying the map by `undefined` — which is what the old code did,
+for all 50 real variant images, silently.
+
+The reconciliation verified the join succeeds for 50/50 real cases. It is implemented as a join
+regardless: verified-today is not the same as guaranteed-tomorrow, and the failure path is a
+refusal with the offending `variantId` named.
+
+### Decision 4 — `verifiedDistinct` is read camelCase, as the export spells it
+
+Read as `verified_distinct` it was `undefined === true` for all 50 real variant images, so every
+one of them would have reached the reviewer as `verifiedDistinct: false` — which the schema defines
+as *not verified*. This is precisely the evidence
+[ADR-056](ADR-056-image-confirmation-provenance-and-draft-similarity.md) reversed decision 5 to
+preserve, and it would have arrived inverted. A missing flag still reads as **not** verified; that
+part of decision 5 is unchanged.
+
+### Decision 5 — `sourceNotes.originalMetaDescription` is carried, archival-only
+
+**Owner-confirmed.** 331 records carry a meta description the owner wrote for the old site. It is
+carried into the raw block's `sourceNotes` so the record of what the source held is complete, and
+it is **read by nothing**. Extraction must not quote it, paraphrase it, seed a meta description
+from it, or treat it as evidence for a material, plating or stone claim. `sourceNotes.rawContent`
+remains the only field extraction reads for content.
+
+The reason is the one ADR-018 and ADR-035 already give for the descriptions themselves: it is
+marketing copy from the system whose claims this migration exists to re-examine, not source text
+about the product. A meta description is the most concentrated form of that copy — a claim
+compressed to 155 characters with no room for the qualification that makes it honest. Carrying it
+without this restriction would let the least reliable text in the export become the seed for the
+most-read text on the new site.
+
+The restriction is stated in `scripts/prepare-migration-batch.mjs` at the point the field is
+carried through, not only here, because the person who needs to read it is the one editing that
+line.
+
+### Decision 6 — the export's own `notes[]` are carried, as `sourceNotes.exportNotes`
+
+563 QA observations from the extraction session — *"only one image available from source"* ×366,
+*"no source category mapped"* ×43, *"duplicate title shared with template(s) …"* ×54, *"source
+description is only N characters"* ×11 — were being dropped entirely. They are the migration's own
+account of what it found, and the reviewer of a queued raw block is exactly the person who should
+see it.
+
+They are carried as **`sourceNotes.exportNotes`**, not as a top-level `notes`, because the Draft A
+schema has a top-level `notes[]` of its own that extraction writes. Two arrays with the same name
+and different owners in the same pipeline is a collision waiting for someone to merge them; under
+`sourceNotes` they are unambiguously the source describing itself.
+
+### Decision 7 — `--known-stub-ids` replaces the `knownStub` field the export does not have
+
+**Owner-confirmed.** The sub-50-character stub rule stands: a record with almost no copy is a data
+fault unless someone says otherwise. The export has no field for saying otherwise — `knownStub`
+appears nowhere in the file — so the rule had no lever at all, and the 11 genuine stubs were
+refused with no way to accept them.
+
+The lever is now a CLI flag:
+
+```
+--known-stub-ids=odoo-817,odoo-818,odoo-819     # the ids themselves
+--known-stub-ids=path/to/known-stubs.txt        # or a file holding them
+```
+
+The value is either the ids, comma- or space-separated, or the path to a file — a JSON array, or
+one id per line with `#` comments. Which it is is decided by asking the filesystem whether the
+value names an existing file, rather than by a prefix or an extension: eleven ids fit on a command
+line, two hundred would not, and the operator should not have to remember a sigil to switch
+between them. Both `odoo-817` and the bare `817` are accepted, so a list can be pasted from either
+the export or `needs-attention.md`.
+
+**This is a deliberate manual override and is documented as one.** Naming an id here is a person
+taking responsibility for a record extraction will have nothing to quote from. The record is still
+queued *with a warning*, its raw block still records `sourceNotes.knownStub: true`, and the
+manifest still marks it `queued-with-warnings`. If the export ever grows a real `knownStub` field
+it is still honoured, and this flag can go.
+
+The alternative — lowering `KNOWN_STUB_MAX_CONTENT_LENGTH` until the 11 slipped under it — was
+rejected: it would accept every future short record silently, which is the opposite of what the
+rule is for.
+
+### Decision 8 — existence is checked against what the record says, and for every image
+
+The old check probed the hardcoded literal `"main.webp"` rather than the record's own value, and
+looked at nothing but the main photograph. It agreed with the data only by coincidence — every
+real `sourceImages.main.file` happens to be `main.webp` — and left 483 extras and 50 variant images
+unchecked by anything except the reconciliation's own manual probe.
+
+`validateSourceRecord` now resolves the record's actual `sourceImages.main.file`, every
+`sourceImages.extras[].file` and every `sourceImages.variants[].file`, and names the specific entry
+that is missing. A suggestion that points at a file nobody downloaded is now a refusal rather than
+a queued record with a broken path in it.
+
+### What this does not change
+
+Id assignment from P101, the ordering rule, the `queued` stage, the manifest, the register append,
+the double-run guards, the catalogue ceiling and the separation from extraction are all untouched.
+`--dry-run` is unchanged too — it merely has tests now, which it did not before (finding M-5).
+
+### Not fixed here, and deliberately
+
+**I-6 — no duplicate-title or duplicate-description check.** The export flags 54 records as
+sharing a title, 31 of them with byte-identical descriptions, and Stage 0's duplicate check is on
+`originalId` only. ADR-056's similarity gate is the mechanism that can see this population, and its
+`SIMILARITY_THRESHOLD` is still `null`. Calibrating that threshold is its own decision with its own
+evidence, and guessing at one inside a field-mapping fix would be the wrong place to make it.
+
+**M-1 — `workingId` is still derived rather than read.** `workingIdFor(originalId)` produces the
+same string as the export's own `workingId` in all 542 records. It is now written into the raw
+block so the two can be compared, but the directory name is still derived, so a record with no
+`workingId` still resolves.
+
+**M-4 — `extras[].sequence` is a string.** Irrelevant while array order already matches the file
+numbering, which the reconciliation verified for all 483. Nothing sorts on it.

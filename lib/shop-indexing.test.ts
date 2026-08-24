@@ -28,11 +28,14 @@ afterEach(() => {
 });
 
 /**
- * `gifting` is a real collection with no product tagged into it, so it is the facet a shopper
- * can genuinely reach and find nothing behind. If a product is ever tagged, this stops being
- * empty and the tests below should be pointed at whatever combination is empty then.
+ * This used to be `{ collection: "gifting" }` — a real collection with no product tagged into
+ * it — until the pilot batch published on 2026-08-24 and populated gifting with eleven rings.
+ * Per this constant's own standing instruction, it now points at the combination that is
+ * genuinely empty: every gifting member is a ring, so gifting intersected with the watches
+ * category matches nothing a shopper can find. If a gifting-tagged watch ever ships, point
+ * this at whatever combination is empty then.
  */
-const EMPTY_FACET: ShopSearchParams = { collection: "gifting" };
+const EMPTY_FACET: ShopSearchParams = { category: "watches", collection: "gifting" };
 
 function metadataFor(params: ShopSearchParams): ReturnType<typeof generateMetadata> {
   return generateMetadata({ searchParams: { ...params } });
@@ -94,17 +97,22 @@ describe("a facet that matches nothing", () => {
     expect(robots).toHaveProperty("follow", true);
   });
 
-  it("still renders for a shopper, with a title and a description of its own", () => {
+  it("still renders for a shopper, under the generic title a multi-facet page keeps", () => {
     const metadata = metadataFor(EMPTY_FACET);
 
-    expect(metadata.title).toBe("Gifting");
-    expect(metadata.description).toContain("gifting");
+    expect(metadata.title).toBe("Shop All Jewellery");
+    expect(metadata.description).toContain("the full collection");
   });
 });
 
 describe("a facet that matches products", () => {
   it("carries no robots directive at all, so it indexes normally", () => {
-    for (const params of [{}, { category: "rings" }, { sort: DEFAULT_SORT }]) {
+    for (const params of [
+      {},
+      { category: "rings" },
+      { sort: DEFAULT_SORT },
+      { collection: "gifting" },
+    ]) {
       expect(metadataFor(params).robots).toBeUndefined();
     }
   });
