@@ -35,7 +35,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Structured layered satin bow, French-style design"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clip type",
@@ -57,7 +57,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Available in Magenta Pink, Ivory White & Classic Black"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

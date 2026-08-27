@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "giving you 8–9 surprise jewellery items to discover"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Contents disclaimer",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Designs, colours and styles may vary from the images shown. Each jar is curated individually, so the exact contents remain a surprise."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Design: Green Meenakari with Kundan Stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -91,7 +91,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Country of Origin: India"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -102,7 +102,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Decorative ghungroo & chain tassels"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

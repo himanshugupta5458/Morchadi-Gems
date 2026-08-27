@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "thoughtfully filled with 3–4 surprise jewellery pieces featuring a mix of trendy anti-tarnish and Korean-style jewellery"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Contents disclaimer",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Jewellery designs are assorted and selected randomly. The exact pieces may vary from jar to jar."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

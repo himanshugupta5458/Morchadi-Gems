@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Aesthetic, trending Korean-style hair accessory"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clip type",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Available in Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

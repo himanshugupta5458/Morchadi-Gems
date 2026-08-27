@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant red meenakari detailing"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Decorative ghungroo & chain tassels"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Closure",
