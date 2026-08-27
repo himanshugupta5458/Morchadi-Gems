@@ -22352,5 +22352,520 @@
         "Necklace / Fashion Necklaces"
       ]
     }
+  },
+  {
+    "id": "P433",
+    "name": "Gold-Toned Snake Chain Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P433.webp"
+      ]
+    },
+    "specs": {
+      "chain type": "Snake chain",
+      "material finish": "Gold-toned",
+      "care instructions": "Apply perfumes and lotions before wearing; store in a dry place"
+    },
+    "description": "A snake chain runs the length of this necklace, gold-toned and built from tight, flexible links that give it a smooth, almost liquid movement against the collarbone rather than the stiffer feel of a flat curb chain. No pendant shape is confirmed for this piece, so it stands on the chain itself rather than on any charm.\n\nThat smoothness is the main thing worth knowing about a snake chain: the segments are small enough that the whole length moves as one piece, catching light evenly along its run instead of in flashes from individual links. It sits close to the neck, which makes it easy to layer under a collared top or wear on its own against a plain neckline.\n\nCare here runs a little differently from most gold-toned pieces in this shop: apply any perfume or lotion before putting the necklace on, rather than after, and store it somewhere dry between wears. That order matters more for a fine chain than for a bulkier piece, since the segments sit closer to the skin.\n\nAt ₹89, a plain snake chain like this is a quiet, wearable basic, the kind of necklace that goes under or alongside something else rather than needing to be the only thing on.",
+    "seo": {
+      "primaryKeyword": "gold-toned snake chain necklace",
+      "secondaryKeywords": [
+        "fine chain necklace layering",
+        "gold necklace under 100 rupees",
+        "everyday chain necklace india"
+      ],
+      "metaTitle": "Gold-Toned Snake Chain Necklace, Everyday Layering",
+      "metaDescription": "A gold-toned snake chain necklace with tight, flexible links that sit smooth against the collarbone, easy to layer under a top. Priced at ₹89.",
+      "imageAlt": "Gold-toned snake chain necklace with tight flexible links",
+      "ogTitle": "Snake Chain Necklace, Gold-Toned, Layering Piece, ₹89",
+      "ogDescription": "A gold-toned snake chain necklace, smooth and flexible, built for everyday layering under or beside another piece. ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P433.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "886",
+      "originalSku": "MJ-476",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-476-puffed-heart-necklace-on-sleek-snake-chain-886",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P438",
+    "name": "Silver-Toned Evil Eye Motif Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P438.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Silver-toned",
+      "design": "Evil Eye motif",
+      "care instructions": "Keep away from water and perfumes; store in a dry place after each wear"
+    },
+    "description": "An evil eye charm sits at the centre of this bracelet, cast in a silver-toned finish and built around one of the most recognisable protective motifs in jewellery, worn across many cultures as a symbol meant to ward off ill will rather than attract it. No stone is confirmed for this piece, so the charm itself, its shape and finish, carries the design rather than any added sparkle.\n\nBecause the motif is small and singular, the bracelet reads as a quiet daily piece rather than something that asks for attention, easy to wear alongside a watch or stacked with a plainer band. It suits the kind of everyday styling where you want a bracelet on without it becoming the focal point of the outfit.\n\nCare is specific and worth following: keep it away from water and perfume, and store it in a dry place after each wear. A silver-toned finish is more sensitive to that kind of daily contact than some other platings, so the routine matters more here than it might elsewhere.\n\nAt ₹49, this is an accessible way into the evil eye motif, small, symbolic, and built for regular wear rather than a single occasion.",
+    "seo": {
+      "primaryKeyword": "silver-toned evil eye motif bracelet",
+      "secondaryKeywords": [
+        "evil eye bracelet women",
+        "protective symbol bracelet silver",
+        "affordable evil eye jewellery india"
+      ],
+      "metaTitle": "Silver-Toned Evil Eye Motif Bracelet, Everyday Wear",
+      "metaDescription": "A silver-toned bracelet with a single evil eye charm, a widely worn protective motif, built for regular everyday daily wear here. Priced at ₹49.",
+      "imageAlt": "Silver-toned bracelet with a single evil eye charm",
+      "ogTitle": "Evil Eye Bracelet, Silver-Toned Finish, ₹49",
+      "ogDescription": "A silver-toned bracelet centred on a single evil eye charm, a quiet daily piece rather than a loud one. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P438.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "892",
+      "originalSku": "MJ-550",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-550-silver-evil-eye-bracelet-with-sparkling-crystals-892",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P439",
+    "name": "Silver-Toned Anchor and Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P439.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Silver-toned",
+      "design": "Anchor and Evil Eye motif",
+      "care instructions": "Avoid moisture and perfumes; store in original packaging after use"
+    },
+    "description": "Two motifs share this bracelet rather than one: an anchor alongside an evil eye charm, both in a silver-toned finish. The anchor brings a nautical, grounded note to the piece, while the evil eye carries its usual protective meaning, worn across many cultures to ward off ill will. No stone is confirmed here, so the charms themselves do the visual work.\n\nPairing two symbols on one bracelet gives it a bit more to notice than a single-charm piece would, without adding bulk, since both motifs sit small and close together rather than spread across a wider band. It suits daily wear, layered with other bracelets or worn on its own.\n\nCare matters here specifically because of the finish: avoid moisture and perfume, and store the piece in its original packaging after use rather than leaving it loose. A silver-toned bracelet holds up better with that small habit than one thrown in a drawer with heavier jewellery.\n\nAt ₹49, getting two motifs rather than one on a single bracelet is a reasonable amount of detail for the price, and honest about being silver-toned metal rather than anything else.",
+    "seo": {
+      "primaryKeyword": "silver-toned anchor evil eye bracelet",
+      "secondaryKeywords": [
+        "anchor charm bracelet silver",
+        "nautical evil eye bracelet",
+        "dual motif bracelet women"
+      ],
+      "metaTitle": "Silver-Toned Anchor and Evil Eye Charm Bracelet, ₹49",
+      "metaDescription": "A silver-toned bracelet pairing an anchor charm with an evil eye motif, a nautical and protective combination. Priced at ₹49, everyday wear.",
+      "imageAlt": "Silver-toned bracelet with an anchor charm and an evil eye charm",
+      "ogTitle": "Anchor and Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet with two charms, an anchor and an evil eye, worn together on one band. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P439.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "893",
+      "originalSku": "MJ-571",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-571-sparkling-silver-anchor-evil-eye-bracelet-893",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P440",
+    "name": "Silver-Toned Ship Wheel and Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P440.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Silver-toned",
+      "design": "Ship Wheel and Evil Eye motif",
+      "care instructions": "Keep dry; store safely away from perfumes and moisture after every wear"
+    },
+    "description": "A ship's wheel charm sits alongside an evil eye motif on this bracelet, both cast in a silver-toned finish. The wheel brings a directional, seafaring shape into the mix, distinct from the anchor pairing this shop also carries, while the evil eye keeps its familiar protective role, a motif recognised across many cultures. No stone is confirmed on this piece.\n\nBecause the wheel has real visual structure, spokes radiating from a centre point, it reads a little more detailed than a plain round charm would, even at bracelet scale. Paired with the smaller evil eye charm beside it, the two motifs sit close together rather than competing for space on the band.\n\nKeep it dry, and store it safely away from perfumes and moisture after every wear; that habit does more for a silver-toned finish than most other care steps combined. It's a piece built for daily contact rather than occasional wear, so the routine is worth actually keeping to.\n\nAt ₹49, the ship wheel design gives this one a distinct shape within the shop's evil eye bracelet range, honestly silver-toned rather than sterling.",
+    "seo": {
+      "primaryKeyword": "silver-toned ship wheel evil eye bracelet",
+      "secondaryKeywords": [
+        "ship wheel charm bracelet",
+        "nautical bracelet silver toned",
+        "evil eye bracelet with wheel charm"
+      ],
+      "metaTitle": "Silver-Toned Ship Wheel and Evil Eye Bracelet, ₹49",
+      "metaDescription": "A silver-toned bracelet with a ship wheel charm beside an evil eye motif, a distinct nautical shape and finish. Priced at ₹49 for daily wear.",
+      "imageAlt": "Silver-toned bracelet with a ship wheel charm and an evil eye charm",
+      "ogTitle": "Ship Wheel Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet pairing a ship wheel charm with an evil eye motif, a distinct nautical shape. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P440.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "894",
+      "originalSku": "MJ-555",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-555-silver-ship-wheel-evil-eye-bracelet-894",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P441",
+    "name": "Silver-Toned Butterfly and Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P441.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish": "Silver-toned",
+      "design": "Butterfly and Evil Eye motif",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry place after each wear"
+    },
+    "description": "A small crystal-look stone, described only as glass or cubic zirconia rather than pinned to one or the other, catches the light between two charms on this bracelet: a butterfly and an evil eye, both in a silver-toned finish. The butterfly brings a lighter, more decorative note than the shop's nautical-themed pairings, while the evil eye keeps its familiar protective role.\n\nThe stone adds a bit of catch-the-light detail that a plain metal charm wouldn't have on its own, small enough not to overwhelm either motif but enough to give the piece some sparkle beyond the silhouette of the charms themselves. It suits daily wear or stacking with a plainer band.\n\nKeep it away from moisture and perfumes, and store it in a dry place after each wear, the same routine that keeps any silver-toned piece looking newer for longer. It's built for regular contact rather than being saved for one outing.\n\nAt ₹49, two motifs plus a set stone is a reasonable amount of detail for the price, honestly described as silver-toned rather than anything it isn't.",
+    "seo": {
+      "primaryKeyword": "silver-toned butterfly evil eye bracelet",
+      "secondaryKeywords": [
+        "butterfly charm bracelet silver",
+        "crystal evil eye bracelet women",
+        "whimsical evil eye jewellery"
+      ],
+      "metaTitle": "Silver-Toned Butterfly and Evil Eye Bracelet, Stone",
+      "metaDescription": "A silver-toned bracelet with a butterfly charm, an evil eye motif and a small crystal-look stone set into the overall design. Priced at ₹49.",
+      "imageAlt": "Silver-toned bracelet with a butterfly charm, evil eye charm and small stone",
+      "ogTitle": "Butterfly Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet pairing a butterfly charm with an evil eye motif and a small stone-set detail. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P441.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "895",
+      "originalSku": "MJ-549",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-549-silver-butterfly-evil-eye-bracelet-895",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P442",
+    "name": "Silver-Toned Tree of Life and Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P442.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish": "Silver-toned",
+      "design": "Tree of Life and Evil Eye motif",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry, safe place after each wear"
+    },
+    "description": "Growth and connection are the ideas a tree of life charm is meant to carry, a heavier symbol than most of the charm pairings this shop stocks. Here it shares a silver-toned bracelet with an evil eye motif and a small crystal-look stone, described only as glass or cubic zirconia rather than settled as one or the other.\n\nThe set stone gives the branches and the evil eye centre a bit of extra catch-light detail, small enough to stay in proportion with the rest of the charm rather than dominating it. Two motifs on one small bracelet means there's genuinely something to look at from more than one angle.\n\nCare follows the same routine as the rest of this bracelet family: keep it away from moisture and perfumes, and store it in a dry, safe place after each wear. That consistency matters more than any single step on its own for keeping a silver-toned piece looking the way it did on day one.\n\nAt ₹49, the combination of a symbolic motif, a protective one, and a set stone adds up to real detail for the price.",
+    "seo": {
+      "primaryKeyword": "silver-toned tree of life evil eye bracelet",
+      "secondaryKeywords": [
+        "tree of life bracelet silver",
+        "growth symbol bracelet women",
+        "evil eye bracelet with stone"
+      ],
+      "metaTitle": "Silver-Toned Tree of Life and Evil Eye Bracelet, ₹49",
+      "metaDescription": "A silver-toned bracelet with a tree of life charm, an evil eye motif and a small set stone, symbolic and genuinely detailed, all priced at just ₹49 flat.",
+      "imageAlt": "Silver-toned bracelet with a tree of life charm and an evil eye charm",
+      "ogTitle": "Tree of Life Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet pairing a tree of life charm with an evil eye motif and a small stone. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P442.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "896",
+      "originalSku": "MJ-558",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-558-silver-tree-of-life-evil-eye-bracelet-896",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P443",
+    "name": "Silver-Toned Eyelash and Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P443.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish": "Silver-toned",
+      "design": "Eyelash and Evil Eye motif",
+      "care instructions": "Keep away from moisture and perfumes; store safely in a dry place after every wear"
+    },
+    "description": "Curved rather than symmetrical, an eyelash-shaped charm is the more unusual half of this pairing, sitting beside a familiar evil eye motif on a silver-toned bracelet. Small crystal-look stones, described only as glass or cubic zirconia without settling on one specifically, run along the eyelash shape itself.\n\nThe eyelash detail gives this piece a more playful, distinctly shaped silhouette than a plain charm would, curved rather than symmetrical, which makes it read differently depending on which way the bracelet sits on the wrist. Paired with the evil eye's familiar protective role, the two motifs together feel more personal than either alone.\n\nKeep it away from moisture and perfumes, and store it safely in a dry place after every wear, the same care routine this shop recommends across its silver-toned charm bracelets. Regular upkeep like this matters more for daily-wear pieces than for something worn once and put away.\n\nAt ₹49, the eyelash shape and the set stones give this bracelet a distinct silhouette within a fairly crowded evil eye category.",
+    "seo": {
+      "primaryKeyword": "silver-toned eyelash evil eye bracelet",
+      "secondaryKeywords": [
+        "eyelash charm bracelet silver",
+        "unique evil eye bracelet design",
+        "crystal detail evil eye bracelet"
+      ],
+      "metaTitle": "Silver-Toned Eyelash and Evil Eye Charm Bracelet, ₹49",
+      "metaDescription": "A silver-toned bracelet with a curved eyelash charm, an evil eye motif and small set stones for genuine everyday sparkle. Priced simply at ₹49.",
+      "imageAlt": "Silver-toned bracelet with an eyelash-shaped charm and an evil eye charm",
+      "ogTitle": "Eyelash Evil Eye Bracelet, Silver-Toned Finish, ₹49",
+      "ogDescription": "A silver-toned bracelet with a curved eyelash charm beside an evil eye motif and small set stones. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P443.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "897",
+      "originalSku": "MJ-572",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-572-sparkling-silver-eyelash-evil-eye-bracelet-897",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P444",
+    "name": "Silver-Toned Teardrop Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P444.webp"
+      ]
+    },
+    "specs": {
+      "design": "Teardrop evil eye charm design",
+      "material": "Silver-toned metal, base metal unspecified",
+      "care instructions": "Keep dry; avoid contact with perfumes; store safely in a dry place"
+    },
+    "description": "A teardrop-shaped evil eye charm sits on this bracelet, cast in a silver-toned finish, the base metal itself not specified beyond that. The teardrop shape is a softer, more elongated read than a round evil eye charm, curved rather than circular, and it's the one motif on this piece rather than a paired combination.\n\nNo stone is confirmed for this piece, so the shape and the silver-toned finish are what carry it, a single clean charm rather than something built around added sparkle. That keeps it on the simpler end of the shop's evil eye range, closer to a plain daily piece than a detailed one.\n\nCare is straightforward: keep it dry, avoid contact with perfumes, and store it safely in a dry place between wears. A silver-toned finish responds well to that kind of routine, holding its colour longer than it would with regular exposure to moisture and fragrance.\n\nAt ₹49, a single-motif teardrop charm like this is an unfussy way to wear the evil eye symbol without a busier design competing for attention.",
+    "seo": {
+      "primaryKeyword": "silver-toned teardrop evil eye bracelet",
+      "secondaryKeywords": [
+        "teardrop evil eye charm",
+        "simple evil eye bracelet silver",
+        "single motif protective bracelet"
+      ],
+      "metaTitle": "Silver-Toned Teardrop Evil Eye Charm Bracelet, ₹49",
+      "metaDescription": "A silver-toned bracelet with a single teardrop-shaped evil eye charm, a simple daily piece carrying no set stone at all. Priced simply at ₹49.",
+      "imageAlt": "Silver-toned bracelet with a teardrop-shaped evil eye charm",
+      "ogTitle": "Teardrop Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet with one teardrop-shaped evil eye charm, simple and unfussy. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P444.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "898",
+      "originalSku": "MJ-557",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-557-silver-teardrop-evil-eye-bracelet-898",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P445",
+    "name": "Silver-Toned Round Evil Eye Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P445.webp"
+      ]
+    },
+    "specs": {
+      "design": "Round evil eye charm design",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Silver-toned metal, base metal unspecified",
+      "care instructions": "Keep dry; store safely after every wear"
+    },
+    "description": "A round evil eye charm anchors this bracelet, cast in a silver-toned finish with a small crystal-look stone set into the design, described only as glass or cubic zirconia without settling on one specifically. The round shape is the classic read for this motif, the one most people picture when they think of an evil eye charm.\n\nBecause the charm is round rather than an elongated or paired design, it sits centred and symmetrical on the wrist, easy to layer with other bracelets without one shape fighting another for attention. The set stone adds a bit of sparkle to the centre without changing the overall silhouette.\n\nKeep it dry and store it safely after every wear, a simple enough routine that's worth turning into a habit for any silver-toned piece worn regularly. This one is built for that kind of daily contact rather than being kept for a single event.\n\nAt ₹49, a round evil eye charm with a set stone is close to the classic version of this motif, honestly silver-toned and straightforward about what it is.",
+    "seo": {
+      "primaryKeyword": "silver-toned round evil eye bracelet blue centre",
+      "secondaryKeywords": [
+        "round evil eye charm bracelet",
+        "classic evil eye bracelet silver",
+        "crystal centre evil eye charm"
+      ],
+      "metaTitle": "Silver-Toned Round Evil Eye Bracelet, Crystal Centre",
+      "metaDescription": "A silver-toned bracelet with a round evil eye charm and a small crystal-look stone at its centre, the classic shape. Priced at just ₹49 flat.",
+      "imageAlt": "Silver-toned bracelet with a round evil eye charm and a small set stone",
+      "ogTitle": "Round Evil Eye Bracelet, Silver-Toned, Stone Set, ₹49",
+      "ogDescription": "A silver-toned bracelet with a classic round evil eye charm and a small set stone at its centre. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P445.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "899",
+      "originalSku": "MJ-141",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-141-classic-silver-round-evil-eye-bracelet-899",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P446",
+    "name": "Silver-Toned Round Evil Eye Bracelet, Daily Wear",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P446.webp"
+      ]
+    },
+    "specs": {
+      "design": "Round evil eye charm design",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Silver-toned metal, base metal unspecified",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "Like its round-charm sibling in this shop's evil eye range, this bracelet centres on a round evil eye charm in a silver-toned finish, with a small crystal-look stone set in, described only as glass or cubic zirconia, not pinned down further than that. The round shape keeps the design centred and symmetrical rather than asymmetrical or paired with a second motif.\n\nWorn on its own, it's built for the kind of daily rotation where a bracelet stays on through most of the day rather than coming on and off for specific occasions. The set stone gives the round charm a small point of sparkle without turning it into something busier than a single-motif piece should be.\n\nKeep it dry and store it safely in a dry place after every wear, the same routine this shop recommends across its whole evil eye bracelet range, and one that genuinely extends how long a silver-toned finish keeps its colour.\n\nAt ₹49, this is a straightforward, wearable pick for someone who wants the classic round evil eye shape as a piece they reach for often rather than occasionally.",
+    "seo": {
+      "primaryKeyword": "silver-toned round evil eye bracelet everyday",
+      "secondaryKeywords": [
+        "round evil eye bracelet daily wear",
+        "silver evil eye charm bracelet",
+        "affordable protective bracelet india"
+      ],
+      "metaTitle": "Silver-Toned Round Evil Eye Bracelet for Daily Wear",
+      "metaDescription": "A silver-toned bracelet with a round evil eye charm and a small set stone, built for regular everyday rotation on the wrist. Priced simply at ₹49.",
+      "imageAlt": "Silver-toned bracelet with a round evil eye charm, shown against a plain background",
+      "ogTitle": "Everyday Round Evil Eye Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned round evil eye bracelet with a small set stone, built for regular daily wear. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P446.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "900",
+      "originalSku": "MJ-427",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-427-minimalist-silver-round-evil-eye-bracelet-900",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
   }
 ]
