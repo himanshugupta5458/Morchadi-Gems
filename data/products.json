@@ -7887,5 +7887,1044 @@
         "Glass bangles"
       ]
     }
+  },
+  {
+    "id": "P240",
+    "name": "Infinity Ring, Silver-Tone Anti-Tarnish",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P240.webp"
+      ]
+    },
+    "specs": {
+      "colour": "Silver",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Anti-tarnish finish",
+      "fit": "Adjustable"
+    },
+    "description": "The infinity symbol doesn't need much explaining, which is probably why it keeps turning up in jewellery long after other motifs fade out. Here it sits as the whole design of the band, a single looped line finished in a silver tone with a scatter of clear stones following its curve. The anti-tarnish finish underneath is the part that actually matters day to day. A piece worn often is the piece most likely to dull first, and this one is built to hold its shine through regular wear rather than a few outings.\n\nThe band adjusts to fit, so there's no sizing chart to consult before you order, and it slips on and off easily enough for days when you haven't decided what else you're wearing. It reads clean enough for an office desk and still carries enough sparkle for a smaller gathering afterward, without switching rings in between.\n\nAt this price, a piece like this isn't pretending to be fine jewellery. It doesn't need to. The looped design does the visual work, the clear stones catch enough light to notice, and the anti-tarnish layer means less time with a polishing cloth than most cheap rings ask for. A wipe after wear and keeping it clear of perfume covers most of the upkeep.\n\nIt's a small, steady kind of piece, the sort that disappears into daily wear rather than waiting for one event a year.",
+    "seo": {
+      "primaryKeyword": "silver-tone infinity ring",
+      "secondaryKeywords": [
+        "adjustable ring for women",
+        "anti-tarnish silver ring",
+        "clear stone ring",
+        "everyday silver ring"
+      ],
+      "metaTitle": "Silver-Tone Infinity Ring with Anti-Tarnish Finish",
+      "metaDescription": "A silver-tone infinity ring with clear stones tracing the loop, finished anti-tarnish so the shine holds through daily wear. Adjustable, ₹199.",
+      "imageAlt": "Silver-tone infinity ring with clear stone detailing along an adjustable band",
+      "ogTitle": "Infinity Ring in Silver Tone, Anti-Tarnish | Morchadi Gems",
+      "ogDescription": "A looped infinity band in silver tone, lined with clear stones and finished anti-tarnish for everyday wear. Adjustable fit, ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P240.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "541",
+      "originalSku": "MJ-343",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-343-infinity-adjustable-silver-ring-for-women-541",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
+  },
+  {
+    "id": "P247",
+    "name": "Blue Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P247.webp"
+      ]
+    },
+    "specs": {
+      "design": "Blue ombre enamel",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "Hold this kada up to the light and the blue doesn't sit still: it runs from a deep navy at one end through to a pale, almost sky blue at the other, each shade painted on in its own segment and separated by a thin gold-plated band. The effect reads more like a dip-dye than a single flat colour, which is what makes a plain bangle shape worth a second look.\n\nThe enamel has a slight marbled texture under close inspection, not a perfectly flat surface, so the colour catches light a little differently depending on the angle. It's built as an open kada, so it slides on rather than needing to pass over the widest part of the hand, and the gold-plated dividers are done in anti-tarnish work, which matters more here than on jewellery you wear occasionally. A kada like this tends to go on in the morning and stay on.\n\nBlue is an easy colour to build a small wrist stack around, whether that's a plain kurta on an ordinary day or something with more colour where you want one piece that doesn't compete. Keep it away from harsh scrubbing and perfume sprays and the shine at the joins holds rather than wearing thin the way cheaper plating often does.\n\nThere's nothing fussy about it. It's a bangle that does one thing, a gradient of blue in gold trim, and does it without needing anything else on the wrist to make sense.",
+    "seo": {
+      "primaryKeyword": "blue ombre enamel kada",
+      "secondaryKeywords": [
+        "gold-plated anti-tarnish kada",
+        "blue gradient bangle",
+        "enamel kada for daily wear"
+      ],
+      "metaTitle": "Blue Ombre Enamel Kada, Gold-Plated Anti-Tarnish Trim",
+      "metaDescription": "A gold-plated kada in a blue gradient, deep navy to pale sky blue, painted in segments with an anti-tarnish finish that holds through daily wear. ₹299.",
+      "imageAlt": "Blue ombre enamel kada with gold-plated segment dividers, shown resting in an open palm",
+      "ogTitle": "Blue Ombre Enamel Kada, Anti-Tarnish | Morchadi Gems",
+      "ogDescription": "A kada that shifts from deep navy to pale sky blue across its enamel segments, trimmed in gold-plated anti-tarnish dividers. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P247.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "632",
+      "originalSku": "MJ-062",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-062-anti-tarnish-blue-ombre-enamel-kada-632",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P248",
+    "name": "Pink Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P248.webp"
+      ]
+    },
+    "specs": {
+      "design": "Pink ombre enamel",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "A gift box that only ever holds one shade of pink gets predictable fast. This kada avoids that by running through four of them in one piece: a bright magenta at one tip, softening into a lilac-pink through the middle, then a deeper rose before settling into a pale, almost grey-pink at the other end. Thin gold-plated bands mark where each shade ends and the next begins.\n\nIt wears as an open kada, easy on and off over the hand rather than a closed circle you have to work past the knuckle. The gold trim is anti-tarnish, so the segments keep their edge instead of dulling the way plated dividers on a cheap bangle tend to after a few months of daily wear. Perfume and harsh soap are still worth keeping away from it; that's the one habit that protects any plated piece.\n\nPink like this is forgiving to build an outfit around, from a plain white kurta to something already busy where you want a bangle that adds colour without adding a second pattern to compete with. Gifting is a fair use for it too. A four-shade gradient reads as more thought-out than a single-colour bangle, without the price climbing to match that impression.\n\nAt ₹299, it's an easy add to a small gift or a small stack, not a piece that asks you to plan the rest of the outfit around it.",
+    "seo": {
+      "primaryKeyword": "pink ombre enamel kada",
+      "secondaryKeywords": [
+        "gold-plated anti-tarnish kada",
+        "pink gradient bangle",
+        "enamel kada gift for her"
+      ],
+      "metaTitle": "Pink Ombre Enamel Kada, Gold-Plated Anti-Tarnish Trim",
+      "metaDescription": "A gold-plated kada shifting through four pink shades, magenta to pale rose, with anti-tarnish dividers that hold their shine. ₹299, a fair gifting pick.",
+      "imageAlt": "Pink ombre enamel kada with gold-plated dividers, four shades from magenta to pale rose",
+      "ogTitle": "Pink Ombre Enamel Kada, Anti-Tarnish | Morchadi Gems",
+      "ogDescription": "Four shades of pink in one enamel kada, magenta through to pale rose, trimmed in gold-plated anti-tarnish dividers. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P248.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "633",
+      "originalSku": "MJ-091",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-091-anti-tarnish-pink-enamel-ombre-kada-633",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P249",
+    "name": "Neutral Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P249.webp"
+      ]
+    },
+    "specs": {
+      "design": "Neutral ombre enamel",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "Not every enamel kada needs to be loud to earn a place in a jewellery box. This one keeps to an earthy palette instead, sage green fading into ivory, then into a warm tan before circling back to green, each block separated by a thin gold-plated line. It reads closer to something you'd wear with neutrals than an accent piece competing for attention.\n\nThe finish underneath is anti-tarnish, done in the gold-plated segments that divide one enamel block from the next, so the metal edges stay bright rather than dulling under regular wear the way untreated plating usually does within a season. Being an open kada, it slides over the hand rather than needing to be stretched past the knuckle first, which makes it a genuinely daily piece rather than one you save for occasions with time to fuss over it.\n\nThe muted colours are the whole appeal here. Sage, ivory and tan sit close enough on the colour wheel that the gradient never jars, and it pairs with more of a wardrobe than a bright ombre would, from office cottons to a plain kurta on a weekend. A soft cloth after wear and keeping it out of water is really all the upkeep it asks for.\n\nFor ₹299, it's the kind of piece that goes on in the morning and doesn't need a second thought for the rest of the day.",
+    "seo": {
+      "primaryKeyword": "neutral ombre enamel kada",
+      "secondaryKeywords": [
+        "gold-plated anti-tarnish kada",
+        "sage and ivory enamel bangle",
+        "earthy tone kada"
+      ],
+      "metaTitle": "Neutral Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
+      "metaDescription": "A gold-plated kada in sage, ivory and tan enamel blocks, finished with anti-tarnish trim that holds its shine through daily wear. Easy to pair, ₹299.",
+      "imageAlt": "Neutral-toned ombre enamel kada in sage, ivory and tan with gold-plated dividers",
+      "ogTitle": "Neutral Ombre Enamel Kada, Anti-Tarnish | Morchadi Gems",
+      "ogDescription": "Sage, ivory and tan enamel in one kada, divided by gold-plated anti-tarnish trim that keeps its edge through daily wear. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P249.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "634",
+      "originalSku": "MJ-083",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-083-anti-tarnish-neutral-enamel-ombre-kada-634",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P299",
+    "name": "Daisy Pearl-Look Pendant Necklace, Gold-Plated Anti-Tarnish",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 219,
+      "mrp": 219,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P299.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated anti-tarnish stainless steel",
+      "stone": "Pearl (real or imitation unclear from text)",
+      "design": "Daisy flower pendant with pearl center",
+      "size": "One-size, adjustable",
+      "net quantity": "1",
+      "care": "Wipe after use; avoid chemicals, sprays and perfume; store flat; do not soak in water"
+    },
+    "description": "Count the petals on this pendant and you'll find more than a real daisy usually grows, each one an open ribbon of gold-plated metal fanning out around a cluster of small pearl-look beads at the centre. It's the beads that do the quiet work here. A single stone would sit flat; a cluster of them catches the light from more than one angle as the pendant moves.\n\nIt hangs from a fine gold-plated chain, adjustable to one size, so it sits at the collarbone without needing anything measured out in advance. The stainless steel base underneath the plating is anti-tarnish, which is the part that actually earns its keep on a piece meant for regular wear rather than special occasions only. A daisy motif photographs well too, small enough not to overwhelm a neckline but detailed enough to hold up in a close-up.\n\nCasual and a little dressed-up both work for this one. It sits fine against a plain t-shirt and just as well against a kurta, since the gold tone reads as finished rather than flashy. Wipe it down after wearing, keep it clear of perfume and sprays, and store it flat rather than tangled in a drawer with other chains.\n\nAt ₹219, a daisy is an easy motif to give without overthinking the occasion, whether that's for someone else or for yourself on an ordinary Tuesday.",
+    "seo": {
+      "primaryKeyword": "daisy pearl-look pendant necklace",
+      "secondaryKeywords": [
+        "gold-plated anti-tarnish necklace",
+        "flower pendant necklace",
+        "pearl-look flower necklace"
+      ],
+      "metaTitle": "Daisy Pearl-Look Pendant, Gold-Plated Anti-Tarnish",
+      "metaDescription": "A gold-plated daisy pendant with a cluster of pearl-look beads at its centre, on an adjustable anti-tarnish chain that holds its shine daily. ₹219.",
+      "imageAlt": "Gold-plated daisy pendant necklace with a cluster of pearl-look beads at the centre",
+      "ogTitle": "Daisy Pendant Necklace, Pearl-Look Centre | Morchadi Gems",
+      "ogDescription": "An open-petal daisy pendant in gold plating, a small cluster of pearl-look beads at its centre, on an adjustable anti-tarnish chain. ₹219.",
+      "ogImage": "/products/P299.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "703",
+      "originalSku": "MJ-206",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-206-daisy-flower-pearl-pendant-necklace-anti-tarnish-gold-jewelry-703",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P300",
+    "name": "Key, Lock and Heart Charm Bracelet, Gold-Plated",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P300.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "design": "Charm bracelet with key, lock, high-heeled shoe and heart charms",
+      "closure": "Lobster closure",
+      "warranty": "1 month (brand owner/manufacturer)",
+      "size": "Bracelet length 17 cm, adjustable chain 5 cm",
+      "weight": "5 g",
+      "care": "Wipe after use; store flat; keep sprays and perfumes away; do not soak in water; clean with a soft brush and jewelry cleaning solution"
+    },
+    "description": "A key, a lock, a lipstick, a high-heeled shoe and a heart: five small gold-plated charms strung along a chunky curb-link chain, each one its own little object rather than an abstract shape. There's a small story built into the set if you look for one, a key and a lock paired together being the obvious read, but it works just as well as a collection of things that simply look good hanging off a wrist.\n\nThe chain itself is the sturdier part of the design, thick curb links in gold-plated stainless steel rather than the fine chain a single-charm bracelet usually gets away with, since five charms need something with enough weight to carry them without twisting. A lobster clasp closes it, and the bracelet measures 17cm with a 5cm adjustable extension chain, so there's some room to fit it looser or snugger depending on the wrist.\n\nCharm bracelets photograph better than most fashion jewellery because there's always a detail catching the light somewhere along the chain. This one suits a gift more than most, since the charms give a receiver something to notice piece by piece rather than taking in the whole bracelet at once. It weighs 5g, light enough not to announce itself constantly on the arm.\n\nKeep it dry, wipe it after wear, and store it flat away from other jewellery so the charms don't tangle. At ₹229, it's a reasonable way to hand someone a small handful of things to like.",
+    "seo": {
+      "primaryKeyword": "key and lock charm bracelet",
+      "secondaryKeywords": [
+        "gold-plated charm bracelet",
+        "charm bracelet for women",
+        "gift bracelet with charms"
+      ],
+      "metaTitle": "Key, Lock and Heart Charm Bracelet in Gold-Plated Metal",
+      "metaDescription": "A gold-plated curb-link bracelet strung with key, lock, lipstick, shoe and heart charms, each its own small object. Adjustable, lobster clasp, ₹229.",
+      "imageAlt": "Gold-plated charm bracelet with key, lock, lipstick, shoe and heart charms on a curb-link chain",
+      "ogTitle": "Charm Bracelet with Key, Lock and Heart | Morchadi Gems",
+      "ogDescription": "Five gold-plated charms, key, lock, lipstick, shoe and heart, strung on a chunky curb-link bracelet with a lobster clasp. ₹229 at Morchadi Gems.",
+      "ogImage": "/products/P300.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "708",
+      "originalSku": "MJ-210",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-210-designer-charm-bracelet-with-key-and-lock-anti-tarnish-gold-jewelry-708",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P319",
+    "name": "Pink Stone Tennis Necklace and Earring Set, Silver-Plated",
+    "category": "necklaces",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P319.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Pink zircon-type stone, exact composition unclear from text",
+      "material": "Silver-plated",
+      "design": "Refined row of uniformly cut stones",
+      "set includes": "Matching earrings with the same pink stones",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "Every stone in this necklace is cut and set the same way, in a single unbroken row that circles the collarbone without a single accent piece breaking the rhythm. That's the tennis-necklace format, borrowed here in a pink stone rather than the usual clear one, and it's a style that reads as more considered than a single pendant precisely because of that repetition.\n\nThe pink runs closer to a deep rose than a pale blush, uniform across every stone in the row, set in silver-plated prongs that catch a thin edge of light along the metal between each one. A matching pair of drop earrings comes with it, the same pink stones in a smaller vertical line, so the set works as one continuous idea from ear to collarbone rather than two separate pieces styled together.\n\nIt's genuinely lightweight for how full the row looks, which matters for a necklace that sits directly against the neck for hours at a stretch. There's no clasp fumbling either, since it's built to lie flat and close simply behind the neck. This is occasion jewellery more than an everyday layer: a wedding function, a festive evening, somewhere the outfit already has some shine and the necklace is meant to match it rather than undercut it.\n\nStore the set flat and away from other jewellery so the stones don't scratch each other, and it'll outlast far more outings than its ₹199 price suggests it should.",
+    "seo": {
+      "primaryKeyword": "pink stone tennis necklace set",
+      "secondaryKeywords": [
+        "silver-plated necklace and earring set",
+        "pink stone necklace for wedding",
+        "matching necklace earring set"
+      ],
+      "metaTitle": "Pink Stone Tennis Necklace and Earring Set, Silver",
+      "metaDescription": "A silver-plated tennis necklace in a single unbroken row of pink stones, with matching drop earrings. Lightweight, built for festive wear. ₹199.",
+      "imageAlt": "Silver-plated tennis necklace and drop earrings set with a continuous row of pink stones",
+      "ogTitle": "Pink Stone Necklace and Earring Set | Morchadi Gems",
+      "ogDescription": "A row of pink stones set in silver-plated prongs, necklace and matching drop earrings, made for a festive evening. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P319.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "741",
+      "originalSku": "MJ-459",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-459-pink-cz-tennis-necklace-set-741",
+      "originalCategories": [
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P320",
+    "name": "Gold-Plated Multicolor Drop Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 250,
+      "mrp": 250,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P320.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "design": "Alternating red, green, and pearl-toned drops",
+      "chain": "Delicate gold chain",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "Nothing on this necklace stays still for long. Red, green and pearl-toned drops hang at intervals along a delicate gold-plated chain, each one on its own short link so they swing slightly out of sync with each other rather than moving as one solid piece. It's a small detail that only shows up once the necklace is actually on and moving with you.\n\nThe drops alternate in a loose rhythm rather than a strict repeating pattern, red next to a pearl-look drop next to green, which keeps the eye moving along the chain instead of settling on one point. The chain itself stays fine and unobtrusive, doing the job of a frame rather than competing with what hangs off it. It's genuinely light to wear, the kind of necklace you forget is there until it catches the light.\n\nThe colour mix leans festive without going all the way there, which makes it more useful than a single-colour necklace built for one specific outfit. It sits well against a plain kurta that needs one point of colour, or alongside a saree where the red and green pick up threads already in the fabric. A gold base plating means it pairs easily with other gold jewellery rather than fighting it.\n\nAt ₹250, it's a reasonable way to add some colour to a neckline without committing to a single dominant stone or shade.",
+    "seo": {
+      "primaryKeyword": "multicolor drop necklace",
+      "secondaryKeywords": [
+        "gold-plated necklace with drops",
+        "red and green drop necklace",
+        "festive necklace for women"
+      ],
+      "metaTitle": "Gold-Plated Multicolor Drop Necklace for Everyday Wear",
+      "metaDescription": "A fine gold-plated chain with alternating red, green and pearl-look drops swinging along its length. Festive without being fixed to one outfit. ₹250.",
+      "imageAlt": "Gold-plated chain necklace with alternating red, green and pearl-look drops",
+      "ogTitle": "Multicolor Drop Necklace, Gold-Plated | Morchadi Gems",
+      "ogDescription": "Red, green and pearl-look drops swinging from a fine gold-plated chain, built to move with you rather than sit flat. ₹250 at Morchadi Gems.",
+      "ogImage": "/products/P320.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "742",
+      "originalSku": "MJ-316",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-316-gold-plated-multicolor-drop-necklace-742",
+      "originalCategories": [
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P327",
+    "name": "Multicolor Crystal Cluster Stud Earrings, Gold-Plated",
+    "category": "earrings",
+    "status": "draft",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P327.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "stone": "Multicolor marquise and princess-cut crystal cluster (pink, mint green, amber, lavender) with clear cubic zirconia, exact stone types unclear from text",
+      "design": "Dazzling floral burst design",
+      "weight": "Lightweight"
+    },
+    "description": "A cluster earring works on volume rather than restraint, and this one commits to that fully: marquise and princess-cut stones in pink, mint green and amber sit packed together around a central clear stone, with more clear stones filling whatever gaps are left. Nothing here is trying to be minimal, and it doesn't pretend otherwise.\n\nThe stones are set close enough that from a short distance the cluster reads as one solid burst rather than individual pieces, which is really the point of this shape of earring. Up close the different cuts do the work: the pointed marquise stones create the outer edge while the princess-cut ones anchor the centre, all held in gold-plated prong settings. They're genuinely lightweight for how full they look, sitting flush against the ear rather than pulling on the lobe.\n\nA multicolour cluster like this suits an outfit that's already decided its own colour story, since the earring will pick up more than one shade in the fabric without needing to match a single dominant one. Evenings and festive wear are the natural fit here, less so a desk day. Keep them away from perfume before you put them on, since scent sprays are harder on stone settings than on plain metal.\n\nAt ₹150, a cluster this dense is a reasonable trade for something with real visual weight in a small footprint.",
+    "seo": {
+      "primaryKeyword": "multicolor crystal cluster earrings",
+      "secondaryKeywords": [
+        "gold-plated stud earrings for women",
+        "cluster earrings for festive wear",
+        "marquise crystal earrings"
+      ],
+      "metaTitle": "Multicolor Crystal Cluster Stud Earrings, Gold-Plated",
+      "metaDescription": "A dense cluster of pink, mint green, amber and clear stones in gold-plated prong settings, lightweight studs built for a festive evening. ₹150.",
+      "imageAlt": "Gold-plated cluster stud earrings with pink, mint green, amber and clear marquise-cut stones",
+      "ogTitle": "Multicolor Cluster Stud Earrings | Morchadi Gems",
+      "ogDescription": "Pink, mint green and amber stones packed into a gold-plated cluster stud, lightweight enough for a full evening of wear. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P327.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "753",
+      "originalSku": "MJ-439",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-439-multicolor-crystal-cluster-stud-earrings-753",
+      "originalCategories": [
+        "Traditional Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P328",
+    "name": "Pink Square Stone Solitaire Ring, Gold-Plated",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P328.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated alloy",
+      "stone": "Square-cut pink crystal, exact type unclear from text",
+      "design": "Minimalist Korean-style square-cut solitaire",
+      "size": "Adjustable, fits most finger sizes",
+      "weight": "Lightweight and skin-friendly"
+    },
+    "description": "One square-cut pink stone, bezel-set into a thin gold-plated band: that's the entire design, and it works because it doesn't try to add anything else. The Korean-style minimalism that's shaped a lot of ring design lately favours exactly this, a single clean shape over a cluster of smaller ones.\n\nThe bezel setting wraps the stone in a full metal rim rather than leaving it held by prongs, which gives it a slightly more grown-in look and means less risk of the edge catching on things through the day. The band is genuinely lightweight, and the alloy underneath is finished to be skin-friendly, which matters most on a ring worn for hours without a break. It adjusts to fit, so there's no guesswork about sizing before it arrives.\n\nA single-stone ring like this earns its keep by being easy to stack. Wear it alone on a day when nothing else needs to compete with it, or add it to two or three thinner bands on the same hand for a look that reads more built-up without any one piece trying too hard. Office desks and casual weekends both suit it equally, which is really the appeal of understated over showy.\n\nAt ₹49, it's a low-stakes way to add pink to a hand without committing to anything louder, and a fair pick for gifting when you're not sure what someone already owns.",
+    "seo": {
+      "primaryKeyword": "pink square stone ring",
+      "secondaryKeywords": [
+        "gold-plated solitaire ring",
+        "adjustable ring for stacking",
+        "minimalist pink stone ring"
+      ],
+      "metaTitle": "Pink Square Stone Solitaire Ring, Gold-Plated Band",
+      "metaDescription": "A bezel-set square pink stone on a thin gold-plated band, adjustable to fit and finished to be skin-friendly for all-day wear. Easy to stack or wear alone, ₹49.",
+      "imageAlt": "Gold-plated adjustable ring with a bezel-set square pink stone, worn on a finger",
+      "ogTitle": "Pink Square Solitaire Ring, Gold-Plated | Morchadi Gems",
+      "ogDescription": "A single square-cut pink stone in a bezel setting on a thin adjustable gold-plated band. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P328.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "754",
+      "originalSku": "MJ-379",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-379-korean-pink-square-adjustable-ring-754",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P329",
+    "name": "Oval Black Stone Silver-Finish Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 35,
+      "mrp": 35,
+      "cost": 14
+    },
+    "media": {
+      "images": [
+        "/products/P329.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Black gemstone, exact type unclear from text",
+      "material": "Silver-finish",
+      "design": "Minimal yet bold statement design",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "A round black cabochon sits inside a beaded oval frame on this one, the kind of detailing that borrows from older Rajasthani silver work even in a piece made for everyday budgets. The bead border runs the full circle around the stone, giving it more visual weight than a plain bezel would, without needing a busier design elsewhere on the band.\n\nThe stone reads as a solid, opaque black under most light rather than the glassy sparkle a cut crystal gives off, which puts this ring closer to the oxidised-silver family of jewellery than the CZ-and-shine end of the catalogue. It's a genuinely different mood, less about catching light and more about a settled, grounded look on the hand. Silver-finish metal supports that read rather than fighting it.\n\nIt's lightweight for its visual size, which matters since a wider ring face can otherwise feel top-heavy through a full day of wear. Office, errands, evenings out: the design is plain enough underneath the detailing to not clash with much. Black pairs easily, which is most of the reason a ring like this earns repeat wear rather than sitting in a box after the first outing.\n\nIt's a fair gifting pick too, at ₹35, for someone who leans toward the quieter, more textured end of silver jewellery rather than anything with more shine to it.",
+    "seo": {
+      "primaryKeyword": "oval black stone silver ring",
+      "secondaryKeywords": [
+        "silver-finish beaded ring",
+        "oxidised-style black stone ring",
+        "black stone ring for gifting"
+      ],
+      "metaTitle": "Oval Black Stone Ring in Silver-Finish, Beaded Frame",
+      "metaDescription": "A round black cabochon sits inside a beaded oval frame on this silver-finish ring, closer to oxidised-silver style than shine. Lightweight, an easy gift at ₹35.",
+      "imageAlt": "Silver-finish ring with a round black stone set in a beaded oval frame, worn on a finger",
+      "ogTitle": "Oval Black Stone Ring, Silver-Finish | Morchadi Gems",
+      "ogDescription": "A black cabochon stone framed in beaded silver-finish metal, closer to oxidised silver style than shine. ₹35 at Morchadi Gems.",
+      "ogImage": "/products/P329.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "755",
+      "originalSku": "MJ-122",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-122-black-stone-silver-ring-755",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P330",
+    "name": "Rectangular Maroon Stone Silver-Finish Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 35,
+      "mrp": 35,
+      "cost": 14
+    },
+    "media": {
+      "images": [
+        "/products/P330.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Maroon gemstone, exact type unclear from text",
+      "material": "Silver-finish",
+      "design": "Minimal yet bold statement design",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "This one trades the usual round or oval stone for a flat rectangular cut, set inside a beaded silver-finish frame that squares off the whole design rather than rounding it. The maroon stone sits matte rather than glossy under most light, deep enough in tone that it reads almost brown-black in low light and closer to true maroon in daylight.\n\nThe beaded border does more work here than it might on a plainer setting, since the straight edges of a rectangular stone benefit from a frame that softens the geometry slightly. It's the same detailing language as older silver work, small dots ringing the stone, scaled down for a ring you'd wear without thinking twice about it.\n\nMaroon is an easier colour to build an outfit around than it first seems, closer to a neutral than red actually is, and it holds up next to both winter layers and festive colours without clashing the way a brighter stone can. The ring is minimal yet bold enough to work as a standalone piece rather than needing company from other rings on the same hand.\n\nAt ₹35, it sits at an easy price for trying a stone colour outside the usual black-or-red rotation, and it's lightweight enough that a full day of wear doesn't register on the finger by evening.",
+    "seo": {
+      "primaryKeyword": "rectangular maroon stone ring",
+      "secondaryKeywords": [
+        "silver-finish beaded ring",
+        "maroon stone ring for women",
+        "vintage-style silver ring"
+      ],
+      "metaTitle": "Rectangular Maroon Stone Ring, Silver-Finish Frame",
+      "metaDescription": "A flat rectangular maroon stone sits in a beaded silver-finish frame, matte rather than glossy and bold enough to wear on its own. ₹35, 7-day returns.",
+      "imageAlt": "Silver-finish ring with a rectangular matte maroon stone in a beaded frame",
+      "ogTitle": "Rectangular Maroon Stone Ring | Morchadi Gems",
+      "ogDescription": "A matte rectangular maroon stone framed in beaded silver-finish metal, minimal and bold on its own. ₹35 at Morchadi Gems.",
+      "ogImage": "/products/P330.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "756",
+      "originalSku": "MJ-614",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-614-vintage-stone-silver-ring-756",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P331",
+    "name": "Oval Red Stone Silver-Finish Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 35,
+      "mrp": 35,
+      "cost": 14
+    },
+    "media": {
+      "images": [
+        "/products/P331.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Red gemstone, exact type unclear from text",
+      "material": "Silver-finish",
+      "design": "Minimal yet bold statement design",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "Red does something a black or maroon stone doesn't on the same beaded oval setting: it turns a piece that could read as understated into one that's clearly meant to be noticed. The cabochon stone sits glossy and deep, closer to true red than the browner maroon tone the same silhouette comes in elsewhere in this range, ringed by the small beaded border that gives the whole ring its slightly older, handcrafted look.\n\nThe silver-finish metal keeps the red from tipping into anything too warm or festive-only, so it lands somewhere between eye-catching and something you'd actually wear on a regular Tuesday. It sits comfortably on the finger for the size of the stone, lightweight enough that the visual impact doesn't come with real weight attached.\n\nRed jewellery tends to get saved for specific occasions, but a stone this size in silver rather than gold reads more everyday than that instinct suggests. It pairs as easily with denim as with festive colours, since the metal tone keeps it grounded rather than dressy by default.\n\nAt ₹35, it's an easy way to bring one strong colour into a hand that's otherwise wearing something quieter, and a fair gift for someone who already likes a bit of colour in their jewellery box.",
+    "seo": {
+      "primaryKeyword": "oval red stone silver ring",
+      "secondaryKeywords": [
+        "silver-finish red stone ring",
+        "red cabochon ring for women",
+        "red cabochon ring for evenings"
+      ],
+      "metaTitle": "Oval Red Stone Ring in Silver-Finish, Beaded Frame",
+      "metaDescription": "A glossy red cabochon fills a beaded silver-finish oval frame on this ring, lightweight enough for daily wear well beyond festive occasions alone. ₹35.",
+      "imageAlt": "Silver-finish ring with a glossy red oval stone in a beaded frame, worn on a finger",
+      "ogTitle": "Oval Red Stone Ring, Silver-Finish | Morchadi Gems",
+      "ogDescription": "A deep red cabochon stone in a beaded silver-finish frame, more everyday than its colour first suggests. ₹35 at Morchadi Gems.",
+      "ogImage": "/products/P331.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "757",
+      "originalSku": "MJ-494",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-494-red-stone-silver-ring-757",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P332",
+    "name": "Square Black Stone Two-Tone Ring, Silver-Finish",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 35,
+      "mrp": 35,
+      "cost": 14
+    },
+    "media": {
+      "images": [
+        "/products/P332.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Black gemstone, exact type unclear from text",
+      "material": "Silver-finish",
+      "design": "Minimal yet bold statement design",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "The other black stone rings in this range keep to an oval cabochon; this one breaks that shape entirely with a raised, pyramid-cut black stone set into a square beaded frame. The cut catches light differently from a flat cabochon, a sharper glint off the facets rather than a soft glow, which changes the whole feel of the ring even with the same base colour.\n\nA thin gold-toned band runs along part of the shank beneath the silver-finish setting, a two-tone detail that's easy to miss in a quick glance but reads clearly once you notice it. It's a small design choice that keeps the ring from sitting entirely in either the silver or gold camp, which makes it easier to pair with jewellery from both.\n\nThe square shape gives it a more architectural look than the oval styles nearby in this range, less soft and rounded, more deliberate. It photographs well for exactly that reason, the geometry holding its shape clearly even in a small image. Worn alone, it carries enough visual weight to stand on its own rather than needing to be layered under three other rings.\n\nAt ₹35, the two-tone detail and the faceted cut make this one feel like more thought went into it than the price tag suggests, and it's a fair pick for someone who wants black jewellery with a bit more edge to it.",
+    "seo": {
+      "primaryKeyword": "square black stone ring",
+      "secondaryKeywords": [
+        "two-tone silver and gold ring",
+        "faceted black stone ring",
+        "faceted stone ring for evenings"
+      ],
+      "metaTitle": "Square Black Stone Ring, Two-Tone Silver and Gold Band",
+      "metaDescription": "A raised, pyramid-cut black stone in a square beaded frame, with a two-tone silver and gold-toned band beneath it. Bold enough to wear alone, ₹35.",
+      "imageAlt": "Two-tone ring with a faceted square black stone in a beaded silver-finish frame",
+      "ogTitle": "Square Black Stone Ring, Two-Tone | Morchadi Gems",
+      "ogDescription": "A faceted black stone set in a square beaded frame, with a two-tone silver and gold-toned band running beneath it. ₹35 at Morchadi Gems.",
+      "ogImage": "/products/P332.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "758",
+      "originalSku": "MJ-121",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-121-black-stone-silver-ring-758",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P333",
+    "name": "Rectangular Green Stone Silver-Finish Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 35,
+      "mrp": 35,
+      "cost": 14
+    },
+    "media": {
+      "images": [
+        "/products/P333.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Green gemstone, exact type unclear from text",
+      "material": "Silver-finish",
+      "design": "Minimal yet bold statement design",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "Swap the maroon in this range's rectangular stone ring for a deep, opaque green and the whole mood shifts, from earthy-warm to something closer to a garden in shade. The stone sits flat-cut inside the same beaded silver-finish frame, straight edges softened just slightly by the small dots ringing the border.\n\nGreen reads as more wearable day-to-day than it gets credit for. It sits next to gold jewellery without a fight, works against both warm and cool-toned outfits, and doesn't carry the same festive-only association that red or maroon stones tend to. That makes this one of the easier colours in the range to wear on an ordinary day rather than saving for something specific.\n\nThe silver-finish metal and the beaded detailing keep it in the same family as the black and maroon versions nearby, so it's an easy one to add if you already own one of those and want a different colour rather than a different design. It's lightweight, sits flat against the finger, and doesn't need adjusting once it's on.\n\nAt ₹35, it's a low-commitment way to try green stone jewellery without needing to build an entire outfit's colour scheme around it first.",
+    "seo": {
+      "primaryKeyword": "rectangular green stone silver ring",
+      "secondaryKeywords": [
+        "silver-finish green stone ring",
+        "beaded frame green stone ring",
+        "green stone ring for daily wear"
+      ],
+      "metaTitle": "Rectangular Green Stone Silver-Finish Ring, Beaded",
+      "metaDescription": "A flat-cut, opaque green stone sits inside a beaded silver-finish rectangular frame, easy to wear well beyond festive occasions. Lightweight fit, ₹35.",
+      "imageAlt": "Silver-finish ring with a flat rectangular green stone in a beaded frame",
+      "ogTitle": "Rectangular Green Stone Ring, Silver | Morchadi Gems",
+      "ogDescription": "A deep green stone, flat-cut and framed in beaded silver-finish metal, easy to wear well beyond festive occasions. ₹35 at Morchadi Gems.",
+      "ogImage": "/products/P333.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "759",
+      "originalSku": "MJ-334",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-334-green-stone-silver-ring-759",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P334",
+    "name": "Rectangular Green Stone Ring, Gold-Tone Bezel",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P334.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-tone-plated alloy",
+      "stone": "Rectangular green crystal, exact type unclear from text",
+      "design": "Sleek bezel-set solitaire",
+      "size": "Adjustable, fits most finger sizes",
+      "occasion": "Daily wear, office wear, parties, gifting"
+    },
+    "description": "Where the beaded silver rings nearby dress their green stone up with a textured frame, this one goes the other way entirely: a rectangular green stone bezel-set flush into a thin gold-tone band, nothing else added. It's the same emerald-cut shape jewellers use on real stones, borrowed here for a fraction of the price and none of the pretence.\n\nThe band is genuinely thin, closer to a stacking ring than a bold one, so the stone does all the visual work rather than sharing attention with an elaborate setting. Gold-tone plating on the alloy underneath keeps the whole thing warm rather than cool, which suits green better than a silver setting tends to.\n\nThe attribute list on this one is short for a reason: daily wear, office wear, parties, gifting, which is really just a way of saying it doesn't ask much of an occasion to make sense. It adjusts to fit most finger sizes, so there's nothing to measure before ordering, and it's light enough to wear alongside two or three other rings without the hand feeling weighed down.\n\nAt ₹49, it reads as a small, considered piece rather than a costume one, and it's an easy add to a gift when green isn't a colour someone already owns much of.",
+    "seo": {
+      "primaryKeyword": "gold-tone green stone ring",
+      "secondaryKeywords": [
+        "emerald-cut green stone ring",
+        "adjustable gold ring for daily wear",
+        "green stone ring for gifting"
+      ],
+      "metaTitle": "Rectangular Green Stone Ring, Gold-Tone Bezel Setting",
+      "metaDescription": "An emerald-cut green stone bezel-set into a thin gold-tone band, adjustable and light enough to stack. Built for daily wear through gifting. ₹49.",
+      "imageAlt": "Gold-tone ring with a bezel-set rectangular green stone on a thin band",
+      "ogTitle": "Green Stone Ring, Gold-Tone Bezel | Morchadi Gems",
+      "ogDescription": "A rectangular green stone set flush into a thin gold-tone band, minimal enough to stack and adjustable to fit. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P334.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "764",
+      "originalSku": "MJ-018",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-018-adjustable-gold-plated-green-crystal-ring-764",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P338",
+    "name": "Rose Gold Rings, Set of Twelve",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P338.webp"
+      ]
+    },
+    "specs": {
+      "metal plating": "Rose gold",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "weight quality": "Lightweight",
+      "set quantity": "12 rings (per listing title)"
+    },
+    "description": "Twelve tiny rings in one set means twelve different small shapes to sort through: a heart here, a star there, a butterfly, a couple of diamond outlines, a feather. Each one is its own little enamel motif in rose gold-plated metal, with small clear stones picking out the edges rather than sitting as a single central piece the way a normal ring does.\n\nA set like this isn't really about any one ring standing alone. It's built for stacking several across two or three fingers at once, mixing shapes and colours rather than matching them, which is a different way of wearing rings than a single considered piece. Kids' jewellery boxes and casual daily stacks both suit this format, since nothing here is precious enough to worry about matching perfectly.\n\nThey're genuinely lightweight, thin bands that don't crowd the finger even three or four at a time, and the rose gold-plated base keeps a consistent warm tone underneath whatever colour each individual motif carries. Twelve rings from one set means there's room to experiment: wear four today, swap for a different four tomorrow, without needing to buy anything else.\n\nAt ₹150 for the full set, it works out to a low cost per ring, which is really the appeal of a stacking set over buying single pieces one at a time.",
+    "seo": {
+      "primaryKeyword": "rose gold ring set of twelve",
+      "secondaryKeywords": [
+        "stacking rings for women",
+        "enamel motif ring set",
+        "mini ring set for kids"
+      ],
+      "metaTitle": "Rose Gold Rings, Set of Twelve Enamel Motif Styles",
+      "metaDescription": "Twelve small rose gold-plated rings in enamel motifs, hearts, stars, a butterfly, with clear stone accents. Built for mixing and stacking. ₹150.",
+      "imageAlt": "Set of twelve small enamel motif rings in rose gold-plated metal, worn across several fingers",
+      "ogTitle": "Rose Gold Ring Set of Twelve | Morchadi Gems",
+      "ogDescription": "Twelve tiny enamel motif rings, hearts, stars, a butterfly and more, in rose gold-plated metal built for stacking. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P338.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "768",
+      "originalSku": "MJ-238",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-238-elegant-rose-gold-rings-set-of-12-768",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P355",
+    "name": "Double Rectangular Stone Open Ring, Silver-Plated",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P355.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver",
+      "stone": "Two rectangular stones, type unclear from text",
+      "design": "Open adjustable design",
+      "size": "Adjustable",
+      "weight": "Lightweight"
+    },
+    "description": "Two rectangular clear stones, set slightly staggered rather than in a straight line, sit on either side of an open band that never quite closes at the back. That gap is the whole point of the design: no clasp to fasten, no sizing chart to check against your finger before ordering, just a band that flexes open a little wider or narrower as needed.\n\nThe staggered placement of the two stones keeps the ring from reading as a plain matched pair. One sits slightly higher than the other, which gives it a bit more visual movement than a symmetric design would, even though the whole piece is otherwise stripped back to just metal and stone. Silver-plated finish keeps the look clean and cool-toned rather than warm.\n\nIt's genuinely lightweight, which matters for an open-back ring since there's nothing anchoring it from underneath the way a closed band does. It sits well for daily wear, an office desk or a casual day out, without needing much thought once it's on. The open design also makes it easy to loan or gift without knowing someone's exact ring size in advance.\n\nAt ₹199, an adjustable open ring like this is a practical pick when sizing is the main hesitation, and the staggered stone detail keeps it from feeling like the safest, most obvious option in the category.",
+    "seo": {
+      "primaryKeyword": "double stone open ring",
+      "secondaryKeywords": [
+        "silver-plated adjustable ring",
+        "open band ring with stones",
+        "staggered stone ring for women"
+      ],
+      "metaTitle": "Double Rectangular Stone Open Ring, Silver-Plated Band",
+      "metaDescription": "An open-back silver-plated ring with two staggered rectangular clear stones, adjustable with no sizing chart needed. Lightweight daily wear, ₹199.",
+      "imageAlt": "Silver-plated open ring with two staggered rectangular clear stones",
+      "ogTitle": "Double Stone Open Ring, Silver-Plated | Morchadi Gems",
+      "ogDescription": "Two staggered rectangular clear stones on an open, adjustable silver-plated band that skips the sizing chart entirely. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P355.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "790",
+      "originalSku": "MJ-220",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-220-double-stone-adjustable-ring-for-girls-790",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
+  },
+  {
+    "id": "P356",
+    "name": "Thin Gold Band Ring with Clear Stones",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 160,
+      "mrp": 160,
+      "cost": 64
+    },
+    "media": {
+      "images": [
+        "/products/P356.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for rings",
+        "type": "pills",
+        "values": [
+          "6",
+          "7",
+          "8"
+        ],
+        "default": "6"
+      }
+    ],
+    "specs": {
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "material": "Gold finish",
+      "design": "Thin band",
+      "size": "Adjustable",
+      "weight": "Lightweight"
+    },
+    "description": "Three small clear stones set flush into an otherwise plain gold-finish band, thin enough that from a few feet away it just reads as a slim gold ring rather than one with any detail at all. That's the appeal of a piece this minimal: it does its job without asking to be noticed first.\n\nThe stones sit low, flush with the metal rather than raised, so nothing catches on gloves or clothing the way a bezel or prong setting sometimes does. It's built to be worn constantly rather than saved for occasions, the kind of ring you forget is on your hand by midafternoon. Sizes 6, 7 and 8 are available, so it's worth checking against a ring you already own before choosing.\n\nA band this thin earns most of its use as a stacking piece, sitting alongside two or three others without adding bulk to the finger. Worn alone, it still holds its own as a quiet, considered choice rather than reading as unfinished or plain. Either way works, which is really the point of a design this pared back.\n\nAt ₹160, it's a low-risk way to add one thin gold piece to a hand that already has a few rings, or to start a stack from scratch without committing to anything louder.",
+    "seo": {
+      "primaryKeyword": "thin gold band ring",
+      "secondaryKeywords": [
+        "minimal stacking ring for women",
+        "gold ring with clear stones",
+        "everyday thin band ring"
+      ],
+      "metaTitle": "Thin Gold Band Ring with Clear Stones, Sizes 6 to 8",
+      "metaDescription": "A slim gold-finish band with three clear stones set flush against the metal, sized 6 to 8. Built for stacking or wearing alone, quiet and everyday. ₹160.",
+      "imageAlt": "Thin gold-finish ring with three small clear stones set flush into the band",
+      "ogTitle": "Thin Gold Band Ring, Clear Stones | Morchadi Gems",
+      "ogDescription": "A slim gold-finish band with three clear stones set flush against the metal, sized 6 to 8 and built for stacking. ₹160 at Morchadi Gems.",
+      "ogImage": "/products/P356.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "792",
+      "originalSku": "MJ-418",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-418-minimal-thin-band-gold-ring-for-girls-792",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
   }
 ]
