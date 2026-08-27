@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 249,
+    "mrp": 249,
+    "cost": 97,
     "referencePrice": "₹249 sale price, ₹97 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
