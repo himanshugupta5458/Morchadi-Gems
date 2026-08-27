@@ -1,0 +1,103 @@
+{
+  "productId": "P382",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Base material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted in stainless steel with a radiant 18k gold tone"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18k gold tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted in stainless steel with a radiant 18k gold tone"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish, waterproof",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "waterproof and anti-tarnish necklace"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P382.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P382/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P382-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P382/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P382-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P382/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P382-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P382/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P382-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P382/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "The Golden Infinity Necklace features a timeless infinity pendant on a sleek gold-tone chain, symbolizing eternal elegance. Crafted in stainless steel with a radiant 18k gold tone, this waterproof and anti-tarnish necklace effortlessly enhances casual, office, or evening outfits, adding a modern yet classic touch to both everyday and festive ensembles.\nSTYLING TIP: Wear over soft tops or dresses to add understated sophistication.",
+    "referenceTitle": "Infinity Gold-plated Stainless Steel Necklace",
+    "originalId": "830",
+    "originalSku": "MJ-346",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-346-infinity-gold-plated-stainless-steel-necklace-830",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

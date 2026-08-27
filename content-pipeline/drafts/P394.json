@@ -1,0 +1,73 @@
+{
+  "productId": "P394",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (synthetic)",
+      "displayTerm": "Synthetic Zirconia",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P394.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P394/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P394-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P394/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Versatile Japanese and Korean Cross-Border Women's Square Bracelet, Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet, Birthday Gift",
+    "referenceTitle": "Stainless Steel Birthday Synthetic Zirconia Bracelet",
+    "originalId": "846",
+    "originalSku": "MJ-579",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-579-stainless-steel-birthday-synthetic-zirconia-bracelet-846",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,105 @@
+{
+  "productId": "P370",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Base material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel Gold Plated Stainless Steel Anti Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel Gold Plated Stainless Steel Anti Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel Gold Plated Stainless Steel Anti Tarnish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P370.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P370/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P370-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P370/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P370-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P370/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P370-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P370/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P370-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P370/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹175 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Stainless Steel Gold Plated Stainless Steel Anti Tarnish Nail Bracelet For Women balances design, versatility, and craftsmanship, making it an ideal addition to any collection.",
+    "referenceTitle": "Gold Plated Anti Tarnish Nail Bracelet For Women",
+    "originalId": "813",
+    "originalSku": "MJ-293",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-293-gold-plated-anti-tarnish-nail-bracelet-for-women-813",
+    "originalCategories": [
+      "Best selling"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text ('Nail Bracelet' in title); raw block did not supply one (export note: no source category mapped to a target category).",
+    "subcategory set to 'anti-tarnish' based on explicit source text ('Anti Tarnish'); raw block left subcategory null.",
+    "added 'anti-tarnish' to suggestedCollections based on explicit source text; raw block had none."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

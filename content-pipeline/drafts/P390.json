@@ -1,0 +1,101 @@
+{
+  "productId": "P390",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Charm/motif",
+      "value": "yellow lotus flower charms with green leaf accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "bright yellow lotus flower charms with green leaf accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial finish",
+      "value": "pearl-bordered, white",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "flanking a pearl-bordered white quartz dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement",
+      "value": "quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "flanking a pearl-bordered white quartz dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant",
+      "value": "meenakari elephant pendant (green)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "an adorable green meenakari elephant pendant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "cascading ghungroo chains",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "with cascading ghungroo chains"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P390.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P390/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Vibrant, joyful, and rooted in Indian folk art — this unique Kashmiri bracelet watch features bright yellow lotus flower charms with green leaf accents flanking a pearl-bordered white quartz dial, leading to an adorable green meenakari elephant pendant with cascading ghungroo chains. A truly festive and one-of-a-kind piece that celebrates the colours and symbols of Indian heritage. Perfect for Haldi ceremonies, Navratri, folk-themed events, and gifting.",
+    "referenceTitle": "Kashmiri Yellow Lotus Elephant Meenakari Bracelet Watch",
+    "originalId": "840",
+    "originalSku": "MJ-370",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-370-kashmiri-yellow-lotus-elephant-meenakari-bracelet-watch-840",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "added 'gifting' to suggestedCollections based on explicit text ('folk-themed events, and gifting'); raw block had none."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

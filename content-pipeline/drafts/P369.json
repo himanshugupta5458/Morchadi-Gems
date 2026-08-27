@@ -1,0 +1,80 @@
+{
+  "productId": "P369",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-Plated Anti Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-Plated Anti Tarnish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P369.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P369/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P369-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P369/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P369-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P369/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Gold-Plated Anti Tarnish Green Geometric Pendant balances design, versatility, and craftsmanship, making it an ideal addition to any collection.",
+    "referenceTitle": "Gold-Plated Anti Tarnish Green Geometric Pendant",
+    "originalId": "811",
+    "originalSku": "MJ-303",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-303-gold-plated-anti-tarnish-green-geometric-pendant-811",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

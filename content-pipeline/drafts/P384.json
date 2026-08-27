@@ -1,0 +1,88 @@
+{
+  "productId": "P384",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color/design",
+      "value": "gold with infinity charm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Gold with Infinity charm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P384.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P384-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P384-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P384-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a cute romantic touch with this Infinity Gold-Plated Bracelet. Its minimal and elegant design makes it perfect for gifting.\n✨ Details:\n• Color: Gold with Infinity charm\n• Lightweight & comfortable\n• Trendy aesthetic design\nPerfect for daily wear and gifting.",
+    "referenceTitle": "Infinity Gold-Plated Bracelet",
+    "originalId": "832",
+    "originalSku": "MJ-345",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-345-infinity-gold-plated-bracelet-832",
+    "originalCategories": [
+      "Best selling",
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text ('Bracelet' in title); raw block did not supply one (export note: no source category mapped to a target category).",
+    "added 'gifting' to suggestedCollections based on explicit text ('perfect for gifting' / 'Perfect for daily wear and gifting'); raw block had none."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,127 @@
+{
+  "productId": "P398",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Stone",
+      "values": [
+        "February Purple",
+        "October Pink"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "synthetic zirconia (cubic zirconia), based on 'Synthetic Zircon' wording",
+      "displayTerm": "Synthetic Zircon",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adorned with Synthetic Synthetic Synthetic Zircon"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P398.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P398-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P398-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P398-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P398-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P398-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P398-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P398-8.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-7.webp",
+        "role": "extra-7"
+      },
+      {
+        "path": "/products/P398-9.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-8.webp",
+        "role": "extra-8"
+      },
+      {
+        "path": "/products/P398-10.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-9.webp",
+        "role": "extra-9"
+      },
+      {
+        "path": "/products/P398-11.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-10.webp",
+        "role": "extra-10"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear",
+    "referenceTitle": "1pc Women'S Stainless Steel Zirconia Birthstone Pendant Necklace",
+    "originalId": "850",
+    "originalSku": "MJ-009",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-009-1pc-women-s-stainless-steel-zirconia-birthstone-pendant-necklace-850",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "rawContent describes a 'Flower Bracelet' while referenceTitle/originalCategories and the existing Stone variant (birthstone colours) indicate a pendant/necklace product; likely a data mismatch carried from Stage 0 migration — flagging for review, category left as 'pendants' per title/variant evidence.",
+    "'Synthetic Synthetic Synthetic Zircon' contains a repeated word, likely a scraping artifact; treated as a single 'Synthetic Zircon' stone claim."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

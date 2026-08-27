@@ -1,0 +1,92 @@
+{
+  "productId": "P399",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Korean Fashion Minimalist Glossy Stainless Steel Moebius Ring Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "glossy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Korean Fashion Minimalist Glossy Stainless Steel Moebius Ring Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Moebius (infinity loop) design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Moebius Ring Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "fine chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Exquisite Fine Chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P399.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P399/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "1pc Korean Fashion Minimalist Glossy Stainless Steel Moebius Ring Bracelet, Exquisite Fine Chain, Perfect for Daily Wear, Ideal Gift for Relatives and Friends",
+    "referenceTitle": "Minimalist Glossy Stainless Steel Infinity Bracelet",
+    "originalId": "851",
+    "originalSku": "MJ-424",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-424-minimalist-glossy-stainless-steel-infinity-bracelet-851",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "added 'gifting' to suggestedCollections based on explicit text ('Ideal Gift for Relatives and Friends')."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
