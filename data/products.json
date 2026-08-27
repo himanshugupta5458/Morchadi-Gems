@@ -15801,5 +15801,559 @@
         "DC Ring"
       ]
     }
+  },
+  {
+    "id": "P165",
+    "name": "Gold-Plated Geometric Ring with Baguette and Round Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P165.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold-plated",
+      "stone": "Cubic zirconia (baguette-cut and round)",
+      "design": "Modern geometric band with mixed stone setting",
+      "fit": "Adjustable, fits most finger sizes comfortably",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Two cuts of cubic zirconia share this band: baguette stones running in straight lines and round stones filling the gaps between them, on an alloy base with a gold-plated finish. Mixing cuts like this is a deliberate way to add visual texture to a small piece without adding size, since the eye reads the contrast between rectangular and round stones even at ring scale.\n\nThe geometric layout keeps the design structured rather than scattered, so it reads as a considered piece rather than a handful of stones set wherever there was room. It's built adjustable, fitting most finger sizes without a chart to check first, which makes it a reasonable pick even when you're buying for someone else.\n\nBecause the setting mixes two stone shapes, it holds attention a little longer than a single-cut ring does, useful if you want one ring to do more visual work rather than layering several plainer ones. It sits comfortably against both a work outfit and something dressier for the evening.\n\nLook after the plating the way any gold-plated piece needs: a microfiber cloth after wear, no chemicals, water or ultrasonic cleaning, and off before swimming, showering or gardening. Store it dry and cool. At ₹59, the mixed-cut setting is a lot of detail for the price.",
+    "seo": {
+      "primaryKeyword": "gold-plated geometric ring baguette round cubic zirconia",
+      "secondaryKeywords": [
+        "mixed cut cz ring",
+        "modern geometric ring gold",
+        "adjustable statement ring under 100"
+      ],
+      "metaTitle": "Gold-Plated Geometric Ring, Baguette and Round CZ, ₹59",
+      "metaDescription": "A gold-plated ring mixing baguette-cut and round-cut cubic zirconia stones in a structured geometric layout, adjustable fit, 7-day returns policy.",
+      "imageAlt": "Gold-plated geometric ring set with baguette and round cubic zirconia stones",
+      "ogTitle": "Geometric CZ Ring, Gold-Plated, Baguette and Round Cut, ₹59",
+      "ogDescription": "A gold-plated ring mixing baguette and round cubic zirconia stones in a structured geometric layout. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P165.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "210",
+      "originalSku": "MJ-435",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-435-modern-geometric-cz-gold-plated-ring-210",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P166",
+    "name": "Rose Gold-Plated Cubic Zirconia Ring",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P166.webp"
+      ]
+    },
+    "specs": {
+      "collection": "All Occasions",
+      "type": "Finger Ring",
+      "plating coating": "Rose gold-plated (polished) finish",
+      "material": "Brass",
+      "stone": "Cubic zirconia",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "This ring is built in brass with a polished rose gold-plated finish and set with cubic zirconia, the stone sometimes sold elsewhere under the trade name American Diamond. It's filed under the shop's All Occasions collection as a Finger Ring, the kind of small, wearable piece meant to go on and stay on rather than be reserved for one specific event.\n\nThe rose gold tone sits warmer than a plain gold or silver finish, and cubic zirconia gives it a clean, consistent sparkle rather than the variable clarity a real stone at this price point would carry. No specific silhouette is confirmed for this piece beyond that, so this description sticks to material and finish rather than describing a shape.\n\nCare is straightforward: wipe with a microfiber or polishing cloth after wearing it, and keep it away from chemicals, water and ultrasonic cleaners. Take it off before swimming, showering or gardening, and store it somewhere cool and dry rather than in a damp bathroom drawer.\n\nAt ₹59, it's priced to be a first or a spare ring in rose gold, something you can wear daily without worrying about it the way you might a costlier piece.",
+    "seo": {
+      "primaryKeyword": "rose gold-plated cubic zirconia ring",
+      "secondaryKeywords": [
+        "american diamond ring rose gold",
+        "brass ring for daily wear",
+        "affordable cz ring india"
+      ],
+      "metaTitle": "Rose Gold-Plated Cubic Zirconia Ring, All Occasions",
+      "metaDescription": "A rose gold-plated brass ring set with cubic zirconia stones, from the All Occasions collection, built for everyday wear. Just ₹59, ships across India.",
+      "imageAlt": "Rose gold-plated ring set with cubic zirconia stones on a brass band",
+      "ogTitle": "Rose Gold Cubic Zirconia Ring for Everyday Wear, ₹59",
+      "ogDescription": "A rose gold-plated brass ring set with cubic zirconia, built for daily wear rather than one occasion. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P166.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "211",
+      "originalSku": "MJ-171",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-171-dc-jewelry-heart-shape-ring-211",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P170",
+    "name": "Silver-Plated Double Emerald-Cut Ring with Halo Accents",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P170.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Silver-plated",
+      "stone": "Cubic zirconia (emerald-cut, with halo accent stones)",
+      "design": "Double twin rectangular solitaire",
+      "fit": "Adjustable band, fits most finger sizes",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Two emerald-cut cubic zirconia stones sit side by side on this ring, each ringed by a halo of smaller accent stones, on an alloy band with a silver-plated finish. The double rectangular arrangement is the point of interest here: rather than one centre stone, there are two, matched in size and cut, which gives the ring more presence across the finger than a single-stone setting would.\n\nEmerald cut means the stones are rectangular with trimmed corners rather than round or pointed, a shape that reads as more architectural and a little less conventional than a round solitaire. The halo around each one adds sparkle at the edges without competing with the clean lines of the main stones.\n\nIt's adjustable, sized to fit most fingers, and honest about being cubic zirconia set in silver-plated alloy rather than anything sterling or gemstone. That distinction is exactly what keeps a piece like this in reach at ₹59 instead of running into thousands for the equivalent in real stones and metal.\n\nWipe it with a soft cloth after wearing, avoid water, chemicals and ultrasonic cleaners, and remove it before swimming, showering or gardening. Stored dry, the silver plating holds its shine considerably longer than a ring left loose in a bag.",
+    "seo": {
+      "primaryKeyword": "silver-plated double emerald-cut ring halo",
+      "secondaryKeywords": [
+        "twin stone cz ring",
+        "rectangular halo ring silver",
+        "adjustable statement ring women"
+      ],
+      "metaTitle": "Silver-Plated Double Emerald-Cut Ring, Halo Accents",
+      "metaDescription": "A silver-plated ring with two matched emerald-cut cubic zirconia stones, each set inside a halo of accent stones, adjustable, 7-day returns.",
+      "imageAlt": "Silver-plated ring with two emerald-cut cubic zirconia stones in halo settings",
+      "ogTitle": "Double Emerald-Cut Halo Ring, Silver-Plated CZ, ₹59",
+      "ogDescription": "A silver-plated ring with two emerald-cut cubic zirconia stones, each ringed by accent stones. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P170.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "215",
+      "originalSku": "MJ-218",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-218-double-emerald-cut-cz-silver-plated-ring-215",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P172",
+    "name": "Gold-Plated Double-Row Ring with Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P172.webp"
+      ]
+    },
+    "specs": {
+      "material": "Brass",
+      "plating coating": "Gold-plated",
+      "stone": "Cubic zirconia",
+      "design": "Double-row band with stone detailing",
+      "fit": "Adjustable, fits most finger sizes"
+    },
+    "description": "Two rows of cubic zirconia run side by side along this band, a full-width setting rather than a single line of stones down the centre. It's built in brass with a gold-plated finish, and the stones are honestly cubic zirconia, sold by some sellers under the trade name American Diamond.\n\nA double row means the sparkle reads as continuous rather than punctuated, closer in effect to a pavé band than a ring with a single visible stone. It suits daily wear as easily as it does a party outfit, since there's no single focal point that reads as too dressed-up for an ordinary day.\n\nThe band is adjustable, built to fit most finger sizes without a size chart to check beforehand, which is useful whether it's for you or a gift where you don't know the exact size. It's a straightforward, unfussy ring rather than one built around a single motif or shape.\n\nKeep it away from perfume, water and cleaning products, and give it a wipe with a soft cloth after each wear. At ₹59, a full double row of stones is a fair amount of sparkle for the price, without pretending to be anything other than gold-plated brass and cubic zirconia.",
+    "seo": {
+      "primaryKeyword": "gold-plated double-row ring cubic zirconia",
+      "secondaryKeywords": [
+        "american diamond band ring",
+        "pave style cz ring",
+        "adjustable ring for daily wear"
+      ],
+      "metaTitle": "Gold-Plated Double-Row Ring with Cubic Zirconia, ₹59",
+      "metaDescription": "A gold-plated brass ring with two full rows of cubic zirconia stones set edge to edge, adjustable to fit, usually dispatched within 2 working days.",
+      "imageAlt": "Gold-plated ring with two rows of cubic zirconia stones set side by side",
+      "ogTitle": "Double-Row Cubic Zirconia Ring, Gold-Plated Brass, ₹59",
+      "ogDescription": "A gold-plated brass ring with two rows of cubic zirconia stones running the width of the band. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P172.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "217",
+      "originalSku": "MJ-511",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-511-rose-gold-plated-ad-stone-band-ring-217",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P173",
+    "name": "Gold-Plated Double Disk Ring with Pavé Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P173.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold-plated",
+      "stone": "Cubic zirconia (pavé-set)",
+      "design": "Double disk motif with pavé accents",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Two disks sit at the front of this ring, each paved edge to edge with small cubic zirconia stones, on a gold-plated alloy band. Pavé setting is what makes a small stone read as continuous sparkle rather than as individual points, and here it's used across two separate disks rather than one larger surface.\n\nThe double-disk shape gives the ring a bit of dimension that a flat-set stone wouldn't have; from the side, the two disks catch light differently than they do face-on. It's a design built to be noticed at a glance without relying on a single large centre stone to do that work.\n\nFit is adjustable, built to work across most finger sizes without a chart to consult beforehand. It moves easily between an everyday outfit and something for going out, since the sparkle is spread across the piece rather than concentrated in a way that reads as occasion-only.\n\nCare is the same as any plated piece deserves: a microfiber cloth after wear, no chemicals, water or ultrasonic cleaners, and off before swimming, showering or gardening. At ₹59, the pavé work across two disks is more detail than a single-stone ring gives you at the same price.",
+    "seo": {
+      "primaryKeyword": "gold-plated double disk ring pave cubic zirconia",
+      "secondaryKeywords": [
+        "pave cz ring gold",
+        "two disk statement ring",
+        "adjustable ring under 100 rupees"
+      ],
+      "metaTitle": "Gold-Plated Double Disk Ring, Pavé Cubic Zirconia, ₹59",
+      "metaDescription": "A gold-plated ring with two pavé-set disks of small cubic zirconia stones, adjustable to fit, a detailed piece priced for daily wear at ₹59.",
+      "imageAlt": "Gold-plated ring with two pavé-set disks covered in cubic zirconia stones",
+      "ogTitle": "Double Disk Pavé Ring, Gold-Plated Cubic Zirconia, ₹59",
+      "ogDescription": "A gold-plated ring with two pavé-set disks of cubic zirconia, catching light from more than one angle. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P173.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "218",
+      "originalSku": "MJ-217",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-217-double-disk-cz-gold-plated-ring-218",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P182",
+    "name": "Gold-Plated Infinity Crossover Ring with Pavé Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P182.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia",
+      "design": "Modern crossover infinity band with pavé accents",
+      "fit": "Adjustable",
+      "care instructions": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "An infinity shape crosses over itself at the centre of this ring, the overlapping lines picked out in pavé-set cubic zirconia on a gold-plated alloy band. The crossover is the whole design here: two continuous curves meeting and re-crossing rather than a fixed centre stone or a flat band.\n\nPavé setting means the stones sit close together across the crossover, so the sparkle follows the shape of the infinity symbol rather than sitting apart from it in a separate cluster. It's a motif ring more than a stone ring, one where the shape carries as much visual weight as the cubic zirconia does.\n\nSuggested here as a gifting piece, it suits that role: a small, complete-feeling ring that doesn't need explaining, whether it's for a birthday, an anniversary, or simply because. It's adjustable, so there's no size guesswork before it arrives, which matters for anything bought as a gift.\n\nWipe it with a soft cloth after wear, keep it clear of chemicals, water and ultrasonic cleaners, and take it off before swimming, showering or gardening. At ₹59, the crossover shape and the pavé work together do more than a plain band would at the same price.",
+    "seo": {
+      "primaryKeyword": "gold-plated infinity crossover ring pave cubic zirconia",
+      "secondaryKeywords": [
+        "infinity ring gift",
+        "pave cz crossover ring",
+        "adjustable ring for gifting"
+      ],
+      "metaTitle": "Gold-Plated Infinity Crossover Ring, Pavé CZ Stones, ₹59",
+      "metaDescription": "A gold-plated ring with an infinity crossover shape set in pavé cubic zirconia stones, adjustable to fit, an easy ₹59 gift for any occasion.",
+      "imageAlt": "Gold-plated ring with an infinity crossover shape set with pavé cubic zirconia stones",
+      "ogTitle": "Infinity Crossover Ring, Gold-Plated Pavé CZ, ₹59",
+      "ogDescription": "A gold-plated ring shaped as an infinity crossover, set in pavé cubic zirconia. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P182.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "479",
+      "originalSku": "MJ-344",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-344-infinity-crossover-cz-gold-plated-ring-479",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P183",
+    "name": "Gold-Plated Double Band Ring with Solitaire Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P183.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia",
+      "design": "Statement double band with solitaire centerpiece",
+      "fit": "Adjustable",
+      "care instructions": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "A single cubic zirconia stone sits at the centre of this ring, held between two separate bands rather than one continuous piece of metal, in a gold-plated alloy finish. The double-band structure is the detail worth noticing: it frames the centre stone from two directions instead of one, giving the setting more visual weight than a plain single-band solitaire.\n\nThe centre stone is honestly cubic zirconia rather than diamond, chosen for a clean, consistent sparkle at a fraction of the cost a mined stone setting would carry. Because the two bands do the framing work, the centre stone reads larger against the hand than its actual size would suggest on its own.\n\nTagged here for gifting, it works well in that role: complete on its own, adjustable so there's no size to guess at, and dressy enough to suit a celebration without being too formal for an ordinary day. It moves easily from daily wear to a festive occasion without needing to be swapped out.\n\nLook after the plating with a soft cloth after wear, no water, chemicals or ultrasonic cleaning, and off before swimming or showering. At ₹59, the double-band setting gives a solitaire more presence than a single band usually manages at this price.",
+    "seo": {
+      "primaryKeyword": "gold-plated double band ring solitaire cubic zirconia",
+      "secondaryKeywords": [
+        "solitaire cz ring gold",
+        "double band statement ring",
+        "gifting ring adjustable"
+      ],
+      "metaTitle": "Gold-Plated Double Band Ring, Solitaire Cubic Zirconia",
+      "metaDescription": "A gold-plated ring with a solitaire cubic zirconia stone framed by two separate bands, adjustable to fit most finger sizes, priced only at ₹59.",
+      "imageAlt": "Gold-plated ring with a solitaire cubic zirconia stone framed by two separate bands",
+      "ogTitle": "Double Band Solitaire Ring, Gold-Plated CZ, ₹59",
+      "ogDescription": "A gold-plated ring with a solitaire cubic zirconia stone held between two separate bands. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P183.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "481",
+      "originalSku": "MJ-114",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-114-baguette-solitaire-cz-gold-plated-ring-481",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P184",
+    "name": "Gold-Plated Full-Band Pavé Ring with Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P184.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia",
+      "design": "Classic full-band pavé style",
+      "fit": "Adjustable",
+      "care instructions": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Cubic zirconia stones run the entire way around this band, a full pavé setting rather than a partial one, cast in alloy with a gold-plated finish. Because the stones continue all the way round, the ring reads the same from any angle, which matters for a piece meant to be worn alone rather than deliberately angled to show off one side.\n\nIt's a classic shape rather than a shaped motif, which means it stacks easily with other rings without competing for attention the way a bow or star design might. Worn on its own, the continuous sparkle does the job a single stone can't: there's no dull side facing away from view.\n\nSuggested for gifting, this one earns that role through simplicity, a full-band ring is a safe, complete-feeling choice when you're not certain what someone else would pick for themselves. It's adjustable, so sizing isn't a concern either way.\n\nCare for it as you would any plated piece: wipe with a soft cloth after wear, avoid chemicals, water and ultrasonic cleaners, and remove before swimming, showering or gardening. At ₹59, a full round of pavé stones is meaningfully more coverage than a single-stone ring gives for the same price.",
+    "seo": {
+      "primaryKeyword": "gold-plated full-band pave ring cubic zirconia",
+      "secondaryKeywords": [
+        "eternity style cz ring",
+        "pave band ring gold",
+        "stacking ring adjustable gift"
+      ],
+      "metaTitle": "Gold-Plated Full-Band Pavé Ring with Cubic Zirconia",
+      "metaDescription": "A gold-plated ring set with cubic zirconia stones running the entire band in a pavé style, adjustable to fit, a simple gifting choice at ₹59.",
+      "imageAlt": "Gold-plated ring with cubic zirconia stones set in a pave pattern around the full band",
+      "ogTitle": "Full-Band Pavé Ring, Gold-Plated Cubic Zirconia, ₹59",
+      "ogDescription": "A gold-plated ring with cubic zirconia stones set the full way around in a pavé pattern. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P184.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "482",
+      "originalSku": "MJ-451",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-451-pave-cz-gold-plated-band-ring-482",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P185",
+    "name": "Gold-Plated Rectangular Bar Ring with Five Cubic Zirconia Stones",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P185.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia",
+      "design": "Modern rectangular bar with five sparkling stones",
+      "fit": "Adjustable",
+      "care instructions": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Five cubic zirconia stones sit in a row along a rectangular bar on this ring, a linear arrangement rather than a clustered one, finished in gold-plated alloy. The bar shape sits across the finger rather than running lengthwise, so the row of stones reads as a clean horizontal line when the hand is at rest.\n\nFive stones is a specific, countable detail rather than a vague scattering, which gives the design a sense of precision. It's a modern shape more than a traditional one, closer to a bar necklace pendant in spirit than to a rounded stone setting, translated onto a ring.\n\nIt's adjustable, fitting most finger sizes without a size chart, and suggested here for gifting: a clean, considered piece rather than an ornate one, which suits giving it to someone whose exact taste in jewellery you might not know in detail. It also stacks well beside a plainer band.\n\nAs with any plated piece, keep it away from water, perfume and chemicals, and wipe it with a soft cloth after wear. At ₹59, five matched stones set precisely in a row is a fair amount of detail for a ring at this price point.",
+    "seo": {
+      "primaryKeyword": "gold-plated rectangular bar ring five cubic zirconia",
+      "secondaryKeywords": [
+        "bar ring cz stones",
+        "linear stone ring gold",
+        "adjustable bar ring gift"
+      ],
+      "metaTitle": "Gold-Plated Rectangular Bar Ring, Five Cubic Zirconia",
+      "metaDescription": "A gold-plated bar ring set with five matched cubic zirconia stones in a precise row, adjustable to fit most sizes, a clean gifting pick at ₹59.",
+      "imageAlt": "Gold-plated rectangular bar ring set with five cubic zirconia stones in a row",
+      "ogTitle": "Rectangular Bar Ring, Five CZ Stones, Gold-Plated, ₹59",
+      "ogDescription": "A gold-plated rectangular bar ring set with five cubic zirconia stones in a precise row. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P185.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "483",
+      "originalSku": "MJ-475",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-475-princess-bar-cz-gold-plated-ring-483",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P186",
+    "name": "Gold-Plated Rectangular Bar Ring with Linear Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P186.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia",
+      "design": "Modern rectangular bar with linear stone setting",
+      "fit": "Adjustable",
+      "care instructions": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures"
+    },
+    "description": "Like its rectangular-bar sibling, this ring sets cubic zirconia along a horizontal bar rather than around a centre point, but here the stones run in one continuous linear setting instead of a fixed count spaced along the bar. The result reads slightly more like a solid line of light than a row of individual points.\n\nCast in gold-plated alloy, the bar shape sits across the finger, giving the ring a graphic, almost architectural quality next to a rounded stone setting. It's a piece that leans modern rather than traditional, which suits someone who wants sparkle without an obviously vintage or floral shape.\n\nFit is adjustable, built to work across most finger sizes without a size check beforehand. Worn alone, the bar sits as the clear focal point of the hand; worn with a plainer ring alongside it, the two don't compete because the bar's line is so distinct from a rounded band.\n\nLook after the plating with a soft cloth after wear, and keep it away from water, chemicals and ultrasonic cleaners. Take it off before swimming, showering or gardening. At ₹59, the continuous linear setting is a straightforward, unfussy way to wear cubic zirconia without a shaped motif.",
+    "seo": {
+      "primaryKeyword": "gold-plated rectangular bar ring linear cubic zirconia",
+      "secondaryKeywords": [
+        "linear cz bar ring",
+        "modern bar ring gold",
+        "adjustable minimal ring women"
+      ],
+      "metaTitle": "Gold-Plated Rectangular Bar Ring, Linear Cubic Zirconia",
+      "metaDescription": "A gold-plated bar ring set with cubic zirconia stones in one continuous linear setting, adjustable to fit most fingers, a modern pick at ₹59.",
+      "imageAlt": "Gold-plated rectangular bar ring set with a continuous line of cubic zirconia stones",
+      "ogTitle": "Rectangular Bar Ring, Linear CZ Setting, Gold-Plated, ₹59",
+      "ogDescription": "A gold-plated rectangular bar ring set with cubic zirconia in one continuous line. Adjustable fit, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P186.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "484",
+      "originalSku": "MJ-487",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-487-rectangular-baguette-cz-gold-plated-ring-484",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
   }
 ]
