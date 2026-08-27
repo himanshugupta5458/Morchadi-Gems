@@ -19969,5 +19969,593 @@
         "Glass bangles"
       ]
     }
+  },
+  {
+    "id": "P298",
+    "name": "Gold-Plated Anti-Tarnish Coin Pendant",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 219,
+      "mrp": 219,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P298.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated anti-tarnish stainless steel",
+      "design": "Circular coin pendant with intricate detailing",
+      "size": "One-size, adjustable",
+      "net quantity": "1",
+      "care": "Wipe after use; avoid chemicals, sprays and perfume; store flat; do not soak in water"
+    },
+    "description": "A circular coin sits at the centre of this pendant, its surface picked out in intricate detailing rather than left plain, hung from a one-size, adjustable chain in gold-plated anti-tarnish stainless steel. Coin motifs have a long history in jewellery generally, and this one leans into that with a design dense enough to hold your eye without needing a second charm alongside it.\n\nStainless steel as the base metal is doing real work here: it's part of why the shop tags this anti-tarnish, since the metal itself resists dulling rather than relying only on the plating over top. That matters over months of wear more than it does on day one, when every gold-plated piece looks equally bright.\n\nIt's a single pendant on a single chain, adjustable to fit rather than fixed at one length, which keeps it simple whether you're wearing it high and close or a little lower. There's no stone or second material here, just the coin shape and the plated finish carrying the whole design.\n\nCare is straightforward: wipe it after wear, keep sprays and perfume away, store it flat, and don't soak it in water. At ₹219, the detailing on the coin face is more intricate than a plain disc pendant offers at a similar price, and the anti-tarnish base means it should still look that way months from now.",
+    "seo": {
+      "primaryKeyword": "gold-plated anti-tarnish coin pendant",
+      "secondaryKeywords": [
+        "coin pendant necklace gold",
+        "adjustable chain pendant india",
+        "anti tarnish pendant everyday"
+      ],
+      "metaTitle": "Gold-Plated Anti-Tarnish Coin Pendant Necklace, ₹219",
+      "metaDescription": "A gold-plated anti-tarnish coin pendant with intricate surface detailing, on a one-size adjustable chain. Priced at ₹219, ships across India.",
+      "imageAlt": "Gold-plated anti-tarnish coin pendant with detailed surface engraving on a fine chain",
+      "ogTitle": "Coin Pendant Necklace, Gold-Plated Anti-Tarnish, ₹219",
+      "ogDescription": "A gold-plated anti-tarnish coin pendant with detailed engraving, on an adjustable chain. Simple, durable, ₹219 at Morchadi Gems.",
+      "ogImage": "/products/P298.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "702",
+      "originalSku": "MJ-211",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-211-designer-inspired-coin-pendant-necklace-anti-tarnish-gold-jewelry-702",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P301",
+    "name": "Gold-Plated Fruit Charm Chain Bracelet",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P301.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "design": "Chain bracelet with fruit charms (bananas, pineapple, watermelon slice)",
+      "plating coating": "Enamel",
+      "closure": "Lobster closure",
+      "warranty": "1 month (brand owner/manufacturer)",
+      "size": "Bracelet length 17 cm, adjustable chain 5 cm",
+      "weight": "4 g",
+      "care": "Wipe after use; store flat; keep sprays and perfumes away; do not soak in water; clean with a soft brush and jewelry cleaning solution"
+    },
+    "description": "A row of fruit charms hangs along this chain bracelet in gold-plated stainless steel, with bananas, a pineapple and a watermelon slice picked out in enamel colour rather than left as plain metal shapes. It's a playful bracelet more than a formal one, built for someone who wants a small conversation piece on the wrist rather than a plain link chain.\n\nThe bracelet runs 17 centimetres with an adjustable extension of 5 centimetres, so there's a little room to size it without needing an exact wrist measurement in hand, and it closes on a lobster clasp, a small metal hook that clips shut rather than sliding or hooking open loosely. At 4 grams it sits light, in keeping with a charm bracelet rather than a heavier chain piece.\n\nEnamel work like this brings colour into a gold-plated piece without needing a stone to do it, and the fruit shapes stay legible even at bracelet scale rather than blurring into an abstract shape. It suits everyday wear, adding a bit of whimsy to an otherwise plain outfit.\n\nWipe it after wear, keep sprays and perfumes away, and clean it occasionally with a soft brush and a proper jewellery cleaning solution rather than water alone. It carries a one-month manufacturer warranty. At ₹199, the fruit charms are the whole point, and there are enough of them to feel like a set rather than a single token detail.",
+    "seo": {
+      "primaryKeyword": "gold-plated fruit charm chain bracelet",
+      "secondaryKeywords": [
+        "enamel charm bracelet women",
+        "pineapple banana charm bracelet",
+        "lobster clasp bracelet gold"
+      ],
+      "metaTitle": "Gold-Plated Fruit Charm Chain Bracelet, Enamel Detail",
+      "metaDescription": "A gold-plated chain bracelet with enamel fruit charms, banana, pineapple and watermelon, lobster clasp, adjustable. ₹199, playful daily wear.",
+      "imageAlt": "Gold-plated chain bracelet with enamel fruit charms including banana and pineapple shapes",
+      "ogTitle": "Fruit Charm Bracelet, Gold-Plated, Enamel Detail, ₹199",
+      "ogDescription": "A gold-plated chain bracelet strung with enamel fruit charms, adjustable, lobster clasp. Playful, ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P301.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "709",
+      "originalSku": "MJ-319",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-319-gold-plated-stainless-steel-fruit-charm-bracelet-709",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P312",
+    "name": "Pink Glass Bangles with Golden Bead Accents",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P312.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Pink",
+      "embellishment": "Golden bead accents"
+    },
+    "description": "These bangles are cast in pink glass, each one carrying a scatter of golden bead accents rather than a plain unbroken surface. Glass bangles have a distinct sound and shine that a metal bangle doesn't, catching light differently as the hand moves, and the golden beads add a second layer of detail without competing against the pink base colour.\n\nThey're offered across three sizes, 2.4, 2.6 and 2.8, so it's worth checking a size before ordering rather than guessing. Multiple bangles from this kind of set are typically worn stacked together on one wrist, letting the golden bead accents repeat rhythmically rather than reading as a single isolated detail.\n\nSuggested here for gifting, a set of pink glass bangles is an easy, colourful pick for someone who wears Indian ethnic jewellery regularly, or an approachable way in for someone building a first collection of it. Pink sits well against most other jewellery tones without needing to be matched precisely.\n\nGlass bangles are more fragile than a metal band, so handle them with a bit of care when putting them on and taking them off rather than forcing them over the knuckle. At ₹149, a set like this brings genuine colour and detail to a stack for a modest cost.",
+    "seo": {
+      "primaryKeyword": "pink glass bangles golden bead accents",
+      "secondaryKeywords": [
+        "glass bangle set for gifting",
+        "stacking bangles pink india",
+        "ethnic glass bangles sized"
+      ],
+      "metaTitle": "Pink Glass Bangle Set with Golden Bead Accents, ₹149",
+      "metaDescription": "A set of pink glass bangles with golden bead accents, sized 2.4 to 2.8, suited to stacking. An easy ₹149 gifting pick for a small collection.",
+      "imageAlt": "Pink glass bangles with scattered golden bead accents, shown as a stacking set",
+      "ogTitle": "Pink Glass Bangle Set, Golden Bead Accents, ₹149",
+      "ogDescription": "A set of pink glass bangles with golden bead accents, sized to fit, built for stacking. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P312.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "730",
+      "originalSku": "MJ-465",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-465-pink-rain-drop-glass-bangles-12-piece-730",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P313",
+    "name": "Red Glass Bangles with Golden Bead Accents",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P313.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Red",
+      "embellishment": "Golden bead accents",
+      "weight": "Lightweight",
+      "construction": "Handcrafted"
+    },
+    "description": "Cast in red glass with a scatter of golden bead accents across each piece, these bangles are handcrafted rather than machine-uniform, which means a little natural variation between individual bangles in a set is expected rather than a flaw. Red is one of the more traditional bangle colours in Indian jewellery, worn on its own or stacked with other tones.\n\nThey're lightweight despite the glass, sized across 2.4, 2.6 and 2.8, so checking a size before ordering matters here more than it would with an adjustable metal piece. The golden bead detailing catches light against the red glass without needing a metal bangle mixed in to add that contrast separately.\n\nBecause they're handcrafted, the golden beads may sit at slightly different points from bangle to bangle within the same size, part of what makes a handmade set feel less uniform than a factory-identical one. They suit festive wear and everyday ethnic outfits about equally, since red isn't tied to one specific event on the calendar.\n\nHandle glass bangles carefully when putting them on, easing rather than forcing them past the knuckle. At ₹149, the handcrafted detailing and the lightweight feel are what this set is built around.",
+    "seo": {
+      "primaryKeyword": "red glass bangles golden bead accents handmade",
+      "secondaryKeywords": [
+        "red bangle set sized",
+        "handcrafted glass bangles india",
+        "festive bangle stack red"
+      ],
+      "metaTitle": "Red Glass Bangles, Golden Bead Accents, Handcrafted",
+      "metaDescription": "A handcrafted set of red glass bangles with golden bead accents, sized 2.4 to 2.8, light on the wrist. Priced simply at ₹149 for the full set.",
+      "imageAlt": "Red glass bangles with golden bead accents, shown handcrafted with natural variation",
+      "ogTitle": "Red Glass Bangle Set, Golden Beads, Handcrafted, ₹149",
+      "ogDescription": "A handcrafted set of red glass bangles with golden bead accents, sized to fit, lightweight. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P313.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "731",
+      "originalSku": "MJ-531",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-531-set-of-12-multicolor-raindrop-glass-bangles-731",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P314",
+    "name": "Red Glass Bangles with Golden Bead Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P314.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Red",
+      "embellishment": "Golden bead accents",
+      "weight": "Lightweight",
+      "construction": "Handcrafted"
+    },
+    "description": "This set shares its material, colour and golden bead detailing with the shop's other handcrafted red glass bangles: red glass throughout, a scatter of golden beads across each piece, and the same lightweight feel that comes from glass rather than a heavier metal bangle. As a handcrafted set, expect the bead placement to vary a little from bangle to bangle rather than lining up identically.\n\nAvailable across sizes 2.4, 2.6 and 2.8, it's worth measuring or checking against a bangle you already own before choosing a size, since glass doesn't stretch the way an adjustable metal cuff would. Worn stacked, several from a set like this build up a rhythm of colour and small gold accents along the wrist.\n\nRed glass bangles suit festive occasions in particular, weddings, sangeet, mehndi, and the general run of Indian festivals, while also working for everyday ethnic wear when the day doesn't call for anything more elaborate. They pair naturally with a saree, lehenga or salwar suit.\n\nAs with any glass bangle, ease them on and off carefully rather than forcing them over the knuckle. At ₹149, this set gives you another way into the same red-and-gold combination as its sibling set, useful if you want a fuller stack without repeating a single set twice.",
+    "seo": {
+      "primaryKeyword": "red glass bangles golden bead detailing festive",
+      "secondaryKeywords": [
+        "red bangle set festive wear",
+        "glass bangles sized wedding",
+        "stacking bangle set red gold"
+      ],
+      "metaTitle": "Red Glass Bangles, Golden Bead Detailing, Festive Set",
+      "metaDescription": "A handcrafted set of red glass bangles with golden bead detailing, sized 2.4 to 2.8, suited to festive wear. Priced at ₹149 for the full set.",
+      "imageAlt": "Red glass bangles with golden bead detailing, stacked as a festive-wear set",
+      "ogTitle": "Festive Red Bangle Set, Glass, Golden Beads, ₹149",
+      "ogDescription": "A handcrafted set of red glass bangles with golden bead detailing, sized to fit, built for festive wear. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P314.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "732",
+      "originalSku": "MJ-529",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-529-set-of-12-colorful-festival-raindrop-glass-bangles-732",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P317",
+    "name": "Heart Charm Necklace and Bracelet Set, Fine Chain",
+    "category": "necklaces",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P317.webp"
+      ]
+    },
+    "specs": {
+      "design": "Delicate heart charm on a fine chain",
+      "weight": "Lightweight",
+      "colour": "Golden",
+      "set includes": "1 necklace, 1 bracelet"
+    },
+    "description": "A small heart charm hangs from a fine chain in this two-piece set, which pairs a necklace with a matching bracelet rather than selling either on its own. Both pieces run light on the fine chain, golden in tone, with the heart doing the work as the single motif across both rather than a busier combination of charms.\n\nBuying necklace and bracelet together solves the usual matching problem: instead of picking a bracelet later and hoping the tone and scale line up, both are already built to sit together. That makes it a straightforward gift, one purchase covering two pieces rather than leaving a gap the recipient has to fill themselves.\n\nSuggested here for gifting, the set suits both daily wear, given how light and simple the design is, and slightly dressier occasions where a heart motif reads as sentimental rather than accidental. It's a set built around one small idea rather than several competing ones.\n\nAt ₹220 for both pieces together, a matched two-piece set costs less as a pair than buying two separate items usually would, and it removes the guesswork of pairing a necklace with a bracelet that was never made to go with it.",
+    "seo": {
+      "primaryKeyword": "heart charm necklace bracelet set fine chain",
+      "secondaryKeywords": [
+        "matching jewellery set gold",
+        "heart pendant gift set",
+        "fine chain necklace bracelet duo"
+      ],
+      "metaTitle": "Heart Charm Necklace and Bracelet Set, Fine Chain, ₹220",
+      "metaDescription": "A matching two-piece set, a heart charm necklace and bracelet on fine golden chain, light and simple. Priced together at ₹220, gift-ready today.",
+      "imageAlt": "Heart charm necklace and matching bracelet set on a fine golden chain",
+      "ogTitle": "Heart Necklace and Bracelet Duo, Fine Chain, ₹220",
+      "ogDescription": "A matching heart charm necklace and bracelet set on fine golden chain, sold together as one gift. ₹220 at Morchadi Gems.",
+      "ogImage": "/products/P317.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "739",
+      "originalSku": "MJ-413",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-413-minimal-heart-necklace-bracelet-set-739",
+      "originalCategories": [
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P318",
+    "name": "Gold-Plated Linked Heart Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P318.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "design": "Series of mini heart motifs linked seamlessly",
+      "plating coating": "Textured, reflective finish",
+      "weight": "Lightweight and durable"
+    },
+    "description": "A series of mini heart motifs link seamlessly along this necklace, each one carrying a textured, reflective finish rather than a smooth plain surface, in gold-plated metal. Instead of one heart doing the work as a single pendant, a whole line of them repeats along the chain, which reads as a pattern rather than a solitary charm.\n\nThe texture on each heart is what keeps the repetition from feeling flat: light catches differently across a textured surface than it would on a plain polished one, so the necklace has some visual movement even sitting still against the collarbone. It's lightweight and durable, sitting comfortably rather than pulling at the neck through a full day of wear.\n\nIt suits both casual and slightly dressier settings, since a chain of small linked hearts reads as a considered detail rather than a loud one. It works easily with a plain top, a dress, or office wear, without needing anything else to complete the look.\n\nSuggested here for gifting, it's a piece with genuine repeat detail across the whole chain rather than a single motif at the front. At ₹199, the textured finish and the linked construction are more work than a single flat charm on a plain chain offers at a similar price.",
+    "seo": {
+      "primaryKeyword": "gold-plated linked heart necklace",
+      "secondaryKeywords": [
+        "mini heart chain necklace",
+        "textured heart necklace gold",
+        "linked charm necklace gift"
+      ],
+      "metaTitle": "Gold-Plated Linked Heart Necklace, Textured Finish",
+      "metaDescription": "A gold-plated necklace with mini heart motifs linked along the chain, each with a textured, reflective finish. Priced at ₹199, gift-ready too.",
+      "imageAlt": "Gold-plated necklace with a chain of small linked heart motifs, textured finish",
+      "ogTitle": "Linked Heart Necklace, Gold-Plated, Textured, ₹199",
+      "ogDescription": "A gold-plated necklace with mini heart motifs linked along the chain, each with a textured finish. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P318.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "740",
+      "originalSku": "MJ-310",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-310-gold-plated-heart-necklace-740",
+      "originalCategories": [
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P323",
+    "name": "Gold-Plated Flower Stud Earrings, Pastel Pink Petals",
+    "category": "earrings",
+    "status": "draft",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P323.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "stone": "Pastel pink crystal petals, exact type unclear from text",
+      "design": "Flower stud with gold-detailed edges",
+      "weight": "Lightweight and comfortable"
+    },
+    "description": "A flower shape carries pastel pink crystal-look petals on these gold-plated stud earrings, the edges of each petal finished with a line of gold detailing that outlines the flower shape. The exact stone material behind the pastel colour isn't pinned down in the product record, so it's fairest to describe the petals as crystal-look rather than name a specific gem.\n\nThe flower motif reads as soft and feminine without tipping into anything too delicate to wear daily; it's a stud rather than a drop, so it sits close to the ear and doesn't catch on hair or clothing the way a longer earring might. The gold-detailed edges give the petals a defined outline rather than letting the pastel colour blur into the ear itself.\n\nLightweight and comfortable is the confirmed build here, which matters for a stud meant to be worn through a full day rather than taken off between errands. It suits both a casual outfit and a festive one, since pastel pink doesn't read as tied to a specific occasion the way a bolder colour might.\n\nAt ₹150, a flower stud with this much petal detail and a gold-outlined edge offers more visual interest than a plain round stud at a similar price.",
+    "seo": {
+      "primaryKeyword": "gold-plated flower stud earrings pastel pink",
+      "secondaryKeywords": [
+        "pink crystal flower earrings",
+        "gold edge stud earrings women",
+        "lightweight flower stud daily wear"
+      ],
+      "metaTitle": "Gold-Plated Flower Stud Earrings, Pastel Pink Petals",
+      "metaDescription": "Gold-plated flower stud earrings with pastel pink crystal-look petals and gold-detailed edges, lightweight. Priced at ₹150, built for daily wear.",
+      "imageAlt": "Gold-plated flower stud earrings with pastel pink petals and gold-outlined edges",
+      "ogTitle": "Pastel Pink Flower Stud Earrings, Gold-Plated, ₹150",
+      "ogDescription": "Gold-plated flower stud earrings with pastel pink crystal-look petals and gold-outlined edges. Light, ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P323.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "749",
+      "originalSku": "MJ-317",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-317-gold-plated-pink-crystal-flower-stud-earrings-749",
+      "originalCategories": [
+        "Traditional Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P324",
+    "name": "Gold-Plated Stud Earrings, Soft Mint Stones",
+    "category": "earrings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P324.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "stone": "Soft mint stones with a crystal center, exact type unclear from text",
+      "design": "Gold detailing",
+      "weight": "Lightweight"
+    },
+    "description": "Soft mint stones arrange around a crystal centre on these gold-plated stud earrings, with gold detailing running through the design rather than a plain metal setting. As with the shop's pastel pink pair in this same family, the exact stone material behind the mint colour is never confirmed as one specific gem, so the honest description here is \"soft mint stones\" rather than a firmer material claim.\n\nMint is a cooler, less common colour in everyday earrings, which gives these a slightly different read from a standard gold or clear-stone stud without leaning into anything too bold. The crystal centre gives the mint stones a bright focal point rather than leaving the colour to carry the whole design alone.\n\nThey're lightweight, built for wear that lasts a full day without pulling at the ear, and suited to both casual and festive styling since a soft colour like mint doesn't tip strongly toward either. Suggested here for gifting, a colour-forward stud like this suits someone who already has the basics and wants something a little different.\n\nAt ₹150, the combination of the mint stones and a crystal centre gives more colour variety than the shop's plain gold or clear-stone studs at the same price point.",
+    "seo": {
+      "primaryKeyword": "gold-plated stud earrings soft mint stones",
+      "secondaryKeywords": [
+        "mint green stud earrings gold",
+        "crystal centre stud earrings",
+        "colourful stud earrings gift"
+      ],
+      "metaTitle": "Gold-Plated Stud Earrings with Soft Mint Stones, ₹150",
+      "metaDescription": "Gold-plated stud earrings with soft mint stones around a crystal centre, gold detailing, lightweight. Priced at ₹150, a colourful gift pick.",
+      "imageAlt": "Gold-plated stud earrings with soft mint stones around a crystal centre",
+      "ogTitle": "Mint Stone Stud Earrings, Gold-Plated Detail, ₹150",
+      "ogDescription": "Gold-plated stud earrings with soft mint stones around a crystal centre, lightweight and colourful. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P324.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "750",
+      "originalSku": "MJ-313",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-313-gold-plated-mint-green-floral-stud-earrings-750",
+      "originalCategories": [
+        "Traditional Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P339",
+    "name": "Emerald Green Glass Bangles with Golden Dotted Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P339.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Emerald green",
+      "design": "Golden dotted detailing",
+      "plating coating": "Smooth, glossy finish"
+    },
+    "description": "Golden dots run across the surface of these emerald green glass bangles, a smooth, glossy finish underneath so the dots sit visibly against the deep green rather than blending into a matte surface. The gloss also does real optical work, reflecting light back rather than absorbing it the way a duller finish would.\n\nEmerald green is a striking, less common bangle colour compared to the usual reds and golds, and the dotted detailing gives it a considered pattern rather than a plain block of colour. They come in three sizes, 2.4, 2.6 and 2.8, so checking your size against a bangle you already own is worth doing before ordering.\n\nTraditionally worn stacked, a set like this builds a strong colour statement on the wrist, well suited to festive occasions, weddings, sangeet and mehndi, as well as everyday ethnic wear when a plain outfit could use one bold accent. They pair naturally with a saree, lehenga or ethnic suit.\n\nGlass bangles need a careful hand going on and off rather than force over the knuckle. At ₹149, the golden dotted detailing and the glossy finish give this set more visual texture than a plain-coloured glass bangle offers at a similar price.",
+    "seo": {
+      "primaryKeyword": "emerald green glass bangles golden dotted",
+      "secondaryKeywords": [
+        "green glass bangle set sized",
+        "festive bangles emerald green india",
+        "glossy glass bangles stacking"
+      ],
+      "metaTitle": "Emerald Green Glass Bangles, Golden Dotted Design, ₹149",
+      "metaDescription": "A set of emerald green glass bangles with golden dotted detailing and a glossy finish, sized 2.4 to 2.8. Priced simply at ₹149 for the full set.",
+      "imageAlt": "Emerald green glass bangles with golden dotted detailing and a glossy finish",
+      "ogTitle": "Emerald Green Bangle Set, Golden Dots, Glossy, ₹149",
+      "ogDescription": "A set of emerald green glass bangles with golden dotted detailing, glossy finish, sized to fit. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P339.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "773",
+      "originalSku": "MJ-484",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-484-raindrop-green-glass-bangles-773",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
   }
 ]
