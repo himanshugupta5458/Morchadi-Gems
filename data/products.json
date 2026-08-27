@@ -17469,5 +17469,410 @@
       "originalUrl": "https://www.morchadijewels.com/shop/mj-215-dome-pave-cz-gold-plated-ring-505",
       "originalCategories": []
     }
+  },
+  {
+    "id": "P208",
+    "name": "Gold-Plated Floral Ring with Cubic Zirconia, Curved Band",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P208.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-tone metal alloy",
+      "plating coating": "Gold-plated",
+      "stone": "Cubic zirconia",
+      "design": "Elegant floral pattern with curved band",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures."
+    },
+    "description": "A flower motif runs along a curved band on this ring, set with cubic zirconia and finished in gold-plated alloy. The curve of the band follows the shape of the floral pattern rather than sitting as a straight line beneath it, so the design reads as one continuous piece rather than a motif stuck onto a plain ring.\n\nFloral pieces like this tend to earn their keep because they don't lean toward any one specific event; a flower suits a plain kurta on an ordinary Tuesday just as easily as it suits a saree at a wedding. The cubic zirconia adds sparkle without turning the piece into something that only makes sense dressed up.\n\nIt's adjustable, built to fit most finger sizes, which takes the size guesswork out of buying it as a gift. Worn daily, the curved band sits comfortably against the finger rather than pressing a flat edge into it the way a straighter design sometimes can.\n\nCare for the plating as you would any gold-plated piece: a microfiber cloth after wear, no chemicals, water or ultrasonic cleaners, and off before swimming, showering or gardening. At ₹59, the floral detailing on a shaped band is a specific design choice, not a generic stone-on-band ring.",
+    "seo": {
+      "primaryKeyword": "gold-plated floral ring cubic zirconia curved band",
+      "secondaryKeywords": [
+        "floral cz ring gold",
+        "adjustable flower ring women",
+        "everyday floral ring india"
+      ],
+      "metaTitle": "Gold-Plated Floral Ring with Cubic Zirconia, Only ₹59",
+      "metaDescription": "A gold-plated ring with a floral motif along a curved band, set with cubic zirconia stones, adjustable to fit most fingers comfortably. Just ₹59.",
+      "imageAlt": "Gold-plated ring with a floral motif on a curved band set with cubic zirconia",
+      "ogTitle": "Floral Ring, Gold-Plated, Curved Band, Cubic Zirconia, ₹59",
+      "ogDescription": "A gold-plated ring with a flower motif following a curved band, set with cubic zirconia stones. Adjustable, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P208.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "507",
+      "originalSku": "MJ-225",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-225-elegant-adjustable-floral-gold-plated-ring-507",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P209",
+    "name": "Silver-Plated Bow Knot Ring with Cubic Zirconia",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P209.webp"
+      ]
+    },
+    "specs": {
+      "material": "Alloy",
+      "plating coating": "Silver-plated",
+      "stone": "Cubic zirconia",
+      "design": "Bow knot with layered band structure",
+      "fit": "Adjustable for most finger sizes",
+      "care instructions": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures."
+    },
+    "description": "A bow knot sits at the front of this ring, built across a layered band structure, in a silver-plated alloy finish set with cubic zirconia. The layering gives the bow a small amount of depth, so it reads as a tied shape rather than a flat stamped outline pressed onto the band.\n\nBows are a playful motif rather than a serious one, which suits a ring meant to be worn casually rather than reserved for a single formal event. The silver-plated tone runs cooler than a gold finish, closer to how a plain metal band would read, which lets the bow and its cubic zirconia do the visual work rather than the colour of the metal.\n\nIt's adjustable, sized to fit most fingers without a chart, useful whether it's a purchase for yourself or something bought as a gift for someone whose size you don't know. It suits daily wear as easily as an evening out, since a bow knot doesn't carry the weight of a single specific occasion.\n\nStandard care applies: a soft cloth after wear, no water or chemicals, off before swimming, showering or gardening. At ₹59, the layered bow construction is a specific structural detail rather than a plain stone-set ring.",
+    "seo": {
+      "primaryKeyword": "silver-plated bow knot ring cubic zirconia",
+      "secondaryKeywords": [
+        "layered bow ring silver",
+        "cz bow ring adjustable",
+        "playful ring for gifting"
+      ],
+      "metaTitle": "Silver-Plated Bow Knot Ring with Cubic Zirconia, ₹59",
+      "metaDescription": "A silver-plated ring with a layered bow knot design set in cubic zirconia stones, adjustable to fit most finger sizes. Priced simply at just ₹59.",
+      "imageAlt": "Silver-plated ring with a layered bow knot design set with cubic zirconia stones",
+      "ogTitle": "Bow Knot Ring, Silver-Plated, Cubic Zirconia, ₹59",
+      "ogDescription": "A silver-plated ring with a layered bow knot design set with cubic zirconia stones. Adjustable fit, ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P209.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "508",
+      "originalSku": "MJ-131",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-131-bow-knot-designer-cz-silver-plated-ring-508",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P210",
+    "name": "Rose Gold-Tone Brass Bracelet with Toggle Clasp",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P210.webp"
+      ]
+    },
+    "specs": {
+      "material": "Brass",
+      "colour": "Rose gold",
+      "clasp type": "Toggle clasp",
+      "net quantity": "1 bracelet",
+      "care instructions": "Avoid contact with water and perfume."
+    },
+    "description": "A plain rose gold-tone bracelet in brass, closed with a toggle clasp rather than a hook or a lobster clip. Toggle closures work by passing a bar through a ring rather than latching, which makes them straightforward to fasten one-handed, a small practical detail that matters more day to day than it sounds.\n\nThis is filed under the shop's anti-tarnish collection, so the rose gold tone is built to resist the usual fading a cheaper plated finish shows after a few weeks of regular contact with skin, water and the everyday world. It's a plain, wearable base piece rather than one built around a specific motif, the kind of bracelet that sits quietly on the wrist whether worn alone or stacked beside something busier.\n\nOne bracelet comes in the box, on its own rather than as part of a set, which keeps this a straightforward single purchase rather than something to divide up. It suits daily wear precisely because there's nothing here that reads as occasion-specific.\n\nAvoid contact with water and perfume, the two things most likely to dull a plated finish faster than ordinary wear does. At ₹199, a toggle-clasp bracelet in an anti-tarnish finish is a dependable everyday basic.",
+    "seo": {
+      "primaryKeyword": "rose gold-tone brass bracelet toggle clasp",
+      "secondaryKeywords": [
+        "anti tarnish bracelet women",
+        "toggle clasp bracelet plain",
+        "everyday rose gold bracelet"
+      ],
+      "metaTitle": "Rose Gold-Tone Anti-Tarnish Bracelet, Toggle Clasp",
+      "metaDescription": "A rose gold-tone brass bracelet with a toggle clasp, from the anti-tarnish collection, built for everyday daily wear. Priced simply at ₹199.",
+      "imageAlt": "Rose gold-tone brass bracelet with a toggle clasp closure",
+      "ogTitle": "Toggle Clasp Bracelet, Rose Gold-Tone, Anti-Tarnish, ₹199",
+      "ogDescription": "A plain rose gold-tone brass bracelet with a toggle clasp, from the anti-tarnish collection. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P210.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "509",
+      "originalSku": "MJ-052",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-052-anti-tarnish-rose-gold-plated-bracelet-509",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P211",
+    "name": "Rose Gold-Tone Brass Bracelet, Anti-Tarnish, Single Piece",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P211.webp"
+      ]
+    },
+    "specs": {
+      "material": "Brass",
+      "colour": "Rose gold",
+      "clasp type": "Toggle clasp",
+      "net quantity": "1 bracelet",
+      "care instructions": "Avoid contact with water and perfume."
+    },
+    "description": "The same toggle-clasp construction that anchors this shop's anti-tarnish bracelet line shows up here too: a rose gold-tone brass band closing with a toggle, a bar passed through a ring rather than a hook or clip. It's a closure built to be fastened without help, which matters more for a bracelet than for most other jewellery, since a bracelet clasp usually has to be worked one-handed.\n\nTagged anti-tarnish, the rose gold plating here is treated to resist the fading that an untreated finish shows after weeks of contact with skin and water. The bracelet itself carries no separate motif or stone, just the plain band and the clasp, which makes it a base piece more than a statement one, suited to being worn under a sleeve as easily as shown off.\n\nOne bracelet ships per order, on its own. There's no matching set to complicate the purchase, and no specific occasion this one is built for over any other; it's meant for the days you'd otherwise reach for nothing at all.\n\nKeep it away from water and perfume, the two things that shorten a plated finish's good look fastest. At ₹199, this is a simple, considered basic rather than a piece trying to do more than a bracelet needs to.",
+    "seo": {
+      "primaryKeyword": "rose gold-tone bracelet anti-tarnish single piece",
+      "secondaryKeywords": [
+        "toggle bracelet brass rose gold",
+        "anti tarnish bracelet everyday",
+        "plain bracelet for daily wear"
+      ],
+      "metaTitle": "Rose Gold-Tone Bracelet, Anti-Tarnish, Toggle Clasp",
+      "metaDescription": "A plain rose gold-tone brass bracelet with a toggle clasp, anti-tarnish finish, one bracelet per order. Simple, considered daily wear, ₹199 only.",
+      "imageAlt": "Rose gold-tone brass bracelet with a plain band and toggle closure",
+      "ogTitle": "Anti-Tarnish Rose Gold-Tone Bracelet, Toggle, ₹199",
+      "ogDescription": "A plain rose gold-tone brass bracelet, anti-tarnish, closing with a toggle clasp. One bracelet, ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P211.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "510",
+      "originalSku": "MJ-053",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-053-anti-tarnish-rose-gold-plated-bracelet-510",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P214",
+    "name": "Red Glass Bangles with Golden Bead Accents, Set of 12",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P214.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Red",
+      "embellishment": "Golden bead accents"
+    },
+    "description": "Twelve red glass bangles come as a set here, each one carrying small golden bead accents along the glass. Red is a colour with real weight in Indian jewellery, worn through weddings and festivals as much as chosen for its own sake, and glass gives it a depth that a plastic bangle in the same shade doesn't quite manage.\n\nThe golden beads sit as a detail rather than the main event, catching a bit of extra light without competing with the red glass itself. Sold in a set of twelve, these are built for the layered look a stack of bangles gives on the wrist, one colour repeated rather than a single bangle worn alone.\n\nThey come in three sizes, 2.4, 2.6 and 2.8, so fit is worth checking against your usual bangle size before ordering rather than assuming a single size fits every wrist. Glass bangles need a bit more care than metal ones: they don't bend, so they should go on and off gently rather than being forced over the widest part of the hand.\n\nSuited to a saree, a lehenga or a salwar suit, this set works for festival wear as much as for adding colour to an otherwise plain outfit. At ₹149 for twelve, it's a full stack rather than a single piece.",
+    "seo": {
+      "primaryKeyword": "red glass bangles golden bead accents set",
+      "secondaryKeywords": [
+        "glass bangles set of 12",
+        "red bangles for saree",
+        "festive bangle set india"
+      ],
+      "metaTitle": "Red Glass Bangles with Golden Bead Accents, Set of 12",
+      "metaDescription": "A set of 12 red glass bangles with golden bead accents, available across three bangle sizes. A festive wrist stack for sarees and lehengas, priced at ₹149.",
+      "imageAlt": "Set of red glass bangles with small golden bead accents along the band",
+      "ogTitle": "Red Glass Bangle Set, Golden Beads, 12 Piece, ₹149",
+      "ogDescription": "Twelve red glass bangles with golden bead accents, sized for a full wrist stack. Suits sarees and lehengas, ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P214.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "513",
+      "originalSku": "MJ-491",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-491-red-rain-drop-glass-bangles-12-piece-513",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P217",
+    "name": "Emerald Green Glass Bangles with Golden Bead Accents, Set of 12",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P217.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Emerald green",
+      "embellishment": "Golden bead accents"
+    },
+    "description": "This set brings the same golden-bead detailing to an emerald green glass bangle instead of red, twelve bangles to a set. Green carries its own place in festive wear, a colour that reads richly against gold jewellery and sits comfortably beside brighter shades like red or pink in a mixed stack.\n\nThe golden beads run along each bangle as an accent rather than the focus, adding a small amount of extra sparkle without pulling attention away from the depth of the glass colour itself. Glass takes colour differently to plastic or metal, holding a richness that a moulded bangle in the same shade generally doesn't match.\n\nAvailable in the same three sizes as the rest of this bangle line, 2.4, 2.6 and 2.8, it's worth checking your usual size before ordering since glass bangles don't flex to fit the way an open metal cuff would. Handle them gently going on and off the hand to avoid cracking the glass.\n\nThese suit sarees, lehengas and salwar suits, worn through festivals, weddings or an ordinary day when you want a stack of colour on the wrist. At ₹149 for twelve, this is a full set rather than a single bangle.",
+    "seo": {
+      "primaryKeyword": "emerald green glass bangles golden bead set",
+      "secondaryKeywords": [
+        "green glass bangles set of 12",
+        "green bangles for lehenga",
+        "festive glass bangle stack"
+      ],
+      "metaTitle": "Emerald Green Glass Bangles, Golden Beads, Set of 12",
+      "metaDescription": "A set of 12 emerald green glass bangles with golden bead accents, available across three bangle sizes. A festive wrist stack, priced simply at ₹149.",
+      "imageAlt": "Set of emerald green glass bangles with golden bead accents along the band",
+      "ogTitle": "Green Glass Bangle Set, Golden Beads, 12 Piece, ₹149",
+      "ogDescription": "Twelve emerald green glass bangles with golden bead accents, sized for a full stack. Festive wear, ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P217.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "516",
+      "originalSku": "MJ-332",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-332-green-rain-drop-glass-bangles-12-piece-516",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P229",
+    "name": "Gold-Plated Triple Band Wave Ring, No Stone",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P229.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel or brass",
+      "plating coating": "Gold plating",
+      "stone": "None (plain, no stone)",
+      "design": "Triple band wave design",
+      "fit": "Adjustable, fits most finger sizes"
+    },
+    "description": "Three bands wave across each other on this ring rather than sitting flat, in a gold-plated finish over stainless steel or brass, and it carries no stone at all. The absence of a stone is the point here: the shape does the work through its wave pattern and the triple-band structure rather than through any added sparkle.\n\nBecause it's plain, this ring reads as more minimal than most of this shop's cubic zirconia pieces, closer to something you'd wear as a base layer with other rings than as the piece meant to draw the eye. The triple-band wave gives it enough visual interest that it doesn't read as a single flat circle, even without a stone.\n\nTagged anti-tarnish, the gold plating here is treated to hold its colour better through daily contact than an untreated finish manages, which matters more on a ring worn regularly than on an occasional piece. It's adjustable, built to fit most finger sizes without a chart to consult first.\n\nStandard care applies: a soft cloth after wear, no chemicals, water or ultrasonic cleaners, and off before swimming, showering or gardening. At ₹249, a stone-free wave design is a specific, considered choice rather than a plainer version of a stone ring.",
+    "seo": {
+      "primaryKeyword": "gold-plated triple band wave ring no stone",
+      "secondaryKeywords": [
+        "anti tarnish wave ring plain",
+        "minimal gold ring adjustable",
+        "stone free ring for stacking"
+      ],
+      "metaTitle": "Gold-Plated Triple Band Wave Ring, Anti-Tarnish, No Stone",
+      "metaDescription": "A gold-plated triple band wave ring with no stone, anti-tarnish finish, adjustable to fit most finger sizes. Minimal, priced simply at ₹249.",
+      "imageAlt": "Gold-plated triple band wave ring with no stone, anti-tarnish finish",
+      "ogTitle": "Triple Band Wave Ring, Gold-Plated, No Stone, ₹249",
+      "ogDescription": "A gold-plated triple band wave ring with no stone, anti-tarnish, adjustable fit. Minimal and stackable, ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P229.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "530",
+      "originalSku": "MJ-098",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-098-anti-tarnish-triple-band-adjustable-wave-ring-530",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
   }
 ]
