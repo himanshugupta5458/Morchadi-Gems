@@ -9965,5 +9965,322 @@
         "Necklace"
       ]
     }
+  },
+  {
+    "id": "P472",
+    "name": "Gold-Toned Crystal Tennis Bracelet & Snake Chain Combo",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 19
+    },
+    "media": {
+      "images": [
+        "/products/P472.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Gold-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "design set contents": "Two-piece bracelet combo set: crystal-studded tennis strand and flat snake chain",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "One of these two bracelets is built for shine, cubic zirconia stones set edge to edge along a gold-toned band so the stones do the talking. The other skips stones altogether, a flat, close-linked snake chain in the same gold-toned finish, smooth enough to catch light on its own without any help. Together they read like two different moods rather than a matched pair, one bracelet for when you want sparkle at the wrist and one for the days you'd rather keep things quiet. That's the whole idea.\n\nBoth pieces are gold-toned metal over a base that isn't specified further, so treat them as everyday stacking pieces rather than a lifetime one. The tennis-style strand sits close and doesn't move around much once it's on, while the snake chain has more drape to it, the kind that settles flat against the skin instead of standing up. Layer them on one wrist for a fuller look, or split the pair, sparkle on one arm and the plain chain on the other, and let each do its own job.\n\nAt this price a set like this earns its keep by giving two genuinely different bracelets rather than two versions of the same idea. Wear the tennis strand to a family function where a bit of shine is expected, and save the snake chain for the office or a plain kurta day when you'd rather not announce it.\n\nKeep both pieces dry and store them away from perfume and moisture after wear, the usual rule for gold-toned plating at any price. Small habits like that stretch the life of a set like this more than anything printed on the card.",
+    "seo": {
+      "primaryKeyword": "gold-toned tennis bracelet set",
+      "secondaryKeywords": [
+        "crystal tennis bracelet",
+        "snake chain bracelet",
+        "bracelet combo set",
+        "layering bracelets for women"
+      ],
+      "metaTitle": "Gold-Toned Tennis Bracelet & Snake Chain Combo Set",
+      "metaDescription": "A two-piece gold-toned bracelet set, one crystal-studded tennis strand and one flat snake chain, ₹89. Stack them together or wear separately, 7-day returns.",
+      "imageAlt": "Gold-toned tennis bracelet with cubic zirconia stones paired with a flat snake chain bracelet",
+      "ogTitle": "Two Bracelets, One Card: Crystal Tennis & Snake Chain, ₹89",
+      "ogDescription": "A gold-toned bracelet duo, a crystal-studded tennis strand and a flat snake chain, made for stacking or wearing apart. ₹89 for both at Morchadi Gems.",
+      "ogImage": "/products/P472.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "928",
+      "originalSku": "MJ-269",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-269-gold-bracelet-combo-set-sparkling-crystal-tennis-bracelet-sleek-snake-chain-928",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P477",
+    "name": "Gold-Toned Halo Nath with Clear Stones",
+    "category": "nose-pins",
+    "status": "draft",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P477.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Gold-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "design": "Drop design",
+      "care instructions": "Keep away from moisture and perfumes; store safely in a dry place after every wear"
+    },
+    "description": "A ring of stones set edge to edge all the way round is what turns a plain hoop into a halo, and that's the whole design here, no separate motif worked into the metal, just density. The gold-toned wire underneath barely shows through the clear stones, so from a few feet away the piece reads as one continuous circle of sparkle rather than a hoop with stones added on. A single teardrop stone hangs just below the ring, catching light on its own once the halo settles.\n\nThis is built for occasions where a plain stud would get lost. A dense ring of stones photographs well even in low light, the kind a lot of festive and wedding functions are lit with, and it holds its own next to heavier jewellery elsewhere on the face without competing for attention. On a quieter day it's a lot for a plain kurta, so save it for when the rest of the outfit can carry the weight.\n\nThe stones are cubic zirconia rather than diamond, set into a plain plated base with no special coating claimed beyond that, so treat it the way you'd treat any plated piece. Wipe it after wear and keep it clear of perfume before it goes on, a small habit that's cheap insurance either way. It's a piece built to be the loudest thing on the face, and at this price that's not much of an ask.",
+    "seo": {
+      "primaryKeyword": "gold-toned halo nath",
+      "secondaryKeywords": [
+        "cubic zirconia nose ring",
+        "festive nath for wedding",
+        "nose pin with clear stones",
+        "gold-plated nath"
+      ],
+      "metaTitle": "Gold-Toned Halo Nath, Ring of Clear Cubic Zirconia",
+      "metaDescription": "A gold-toned nath with a dense halo of clear cubic zirconia stones and a teardrop drop, ₹129. Enough detail on its own for a wedding or festive day.",
+      "imageAlt": "Gold-toned nath with clear cubic zirconia stones set edge to edge around the ring and a teardrop drop",
+      "ogTitle": "Gold-Toned Halo Nath with a Teardrop Drop, ₹129",
+      "ogDescription": "A dense ring of clear cubic zirconia stones on a gold-toned nath, with a single teardrop stone hanging below. Built to carry a festive look on its own.",
+      "ogImage": "/products/P477.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "933",
+      "originalSku": "MJ-311",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-311-gold-plated-minimalist-nath-sparkling-white-stone-studded-933",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P479",
+    "name": "Silver-Toned Halo Nath with Clear Stones",
+    "category": "nose-pins",
+    "status": "draft",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P479.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Silver-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "design": "Teardrop charm",
+      "care instructions": "Avoid moisture and perfumes; store in a dry, safe place after each wear"
+    },
+    "description": "Silver-toned settings read cooler than gold ones under the same light, which matters more on a nath than it does almost anywhere else on the face, since it sits this close to skin tone and either warms it or works against it. This one goes cool: a full ring of clear stones in a silver-toned setting, dense enough that the metal underneath barely shows, with a single teardrop stone dropped just below.\n\nIt suits the same kind of occasion a gold halo nath would, a wedding, a big festive day, anywhere the rest of the face is already carrying jewellery and needs one piece dense enough to hold its own rather than get lost in the mix. Pair it with a heavier silver-toned set elsewhere, earrings or a maang tikka, so the metal tones agree with each other instead of competing. It sits well against a silver-heavy lehenga or a plain white-and-silver saree, where a gold-toned piece would have stood out for the wrong reason.\n\nThe stones are cubic zirconia, not the real thing, set into a plated base with no special coating claimed beyond the plating itself. Wipe it down after wear and keep it away from perfume, the way you would with any plated piece. It's a small, deliberate cost for a piece doing this much work at this price.",
+    "seo": {
+      "primaryKeyword": "silver-toned halo nath",
+      "secondaryKeywords": [
+        "silver-plated nose ring",
+        "cubic zirconia nath",
+        "bridal nath silver",
+        "nose pin with white stones"
+      ],
+      "metaTitle": "Silver-Toned Halo Nath, Ring of Clear Zirconia Stones",
+      "metaDescription": "From ₹129, a silver-toned nath with a dense ring of clear cubic zirconia and a teardrop drop. Cool tone that pairs well with a silver-toned set.",
+      "imageAlt": "Silver-toned nath with clear cubic zirconia stones set around the ring and a small teardrop drop",
+      "ogTitle": "Silver-Toned Halo Nath with a Teardrop Drop, ₹129",
+      "ogDescription": "A cool-toned ring of clear cubic zirconia stones on a silver-toned nath, dense enough to hold its own next to heavier jewellery. ₹129 at Morchadi Gems.",
+      "ogImage": "/products/P479.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "935",
+      "originalSku": "MJ-564",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-564-silver-plated-designer-nath-sparkling-white-zirconia-studded-935",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P480",
+    "name": "Gold-Toned Small Cluster Nath with Teardrop Charm",
+    "category": "nose-pins",
+    "status": "draft",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P480.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Gold-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "design": "Dainty teardrop charm",
+      "care instructions": "Avoid moisture and perfumes; store safely in a dry place after use"
+    },
+    "description": "Look at the join on this one and you'll find a small hook where the ring actually opens, not a continuous loop welded shut. That gives it a bit of flex against the pull of the metal, useful on a piece this size where a rigid hoop can be less forgiving to work with day to day than one that gives slightly at the seam. Round the rest of the ring, small clear stones sit close together in a cluster dense enough to catch light from most angles, with a small teardrop charm swinging just below.\n\nA design at this scale suits a smaller festive day rather than a full wedding function, somewhere between a plain stud and the denser halo styles in this range. It carries festive detail without asking the rest of the face to match it, which makes it easier to wear with a simple kurta or a saree that isn't already busy elsewhere.\n\nThe stones are cubic zirconia, set in a plated base with no special coating claimed beyond that, so the usual plating care applies: keep it dry, keep it away from perfume, and wipe it after wear. Small and dense is a harder combination to pull off than it looks, and this one manages it without needing to be bigger to make the point.",
+    "seo": {
+      "primaryKeyword": "gold-toned small cluster nath",
+      "secondaryKeywords": [
+        "small nose ring gold",
+        "cubic zirconia nath",
+        "teardrop charm nose pin",
+        "everyday festive nath"
+      ],
+      "metaTitle": "Gold-Toned Small Cluster Nath with a Teardrop Charm",
+      "metaDescription": "A gold-toned nath with a small, dense cluster of clear stones and a teardrop charm, ₹129. Sized for a festive day rather than a full wedding.",
+      "imageAlt": "Gold-toned nath with a hook opening, a small dense cluster of clear stones and a teardrop charm",
+      "ogTitle": "Small Cluster Gold-Toned Nath with Teardrop, ₹129",
+      "ogDescription": "A gold-toned nath scaled down from the full halo styles, a dense small cluster of clear stones and a teardrop charm. ₹129 at Morchadi Gems.",
+      "ogImage": "/products/P480.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "936",
+      "originalSku": "MJ-306",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-306-gold-plated-dainty-nath-sparkling-white-stone-studded-936",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P481",
+    "name": "Silver-Toned Baguette Nath with Double Drop",
+    "category": "nose-pins",
+    "status": "draft",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P481.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Silver-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "care instructions": "Keep dry; store safely away from perfumes and moisture after use"
+    },
+    "description": "Most stone-set naths in this range use one cut of stone right around the ring; this one alternates. Rectangular baguette-cut stones sit between rounder ones all the way round, so the ring catches light in two different ways depending on which stone the angle hits, instead of one uniform sparkle. Two small stones drop below the ring rather than the single teardrop some of the other naths in this style carry, one settled close to the ring and a slightly larger one hanging just under it.\n\nThe mixed-cut ring reads as more detailed than a plain halo in photographs, which is where a nath usually does its heaviest lifting, since the piece is small in person but close to the camera in every close-up shot at a function. It suits a wedding or a big festive day for that reason, somewhere the detail is worth the attention it draws rather than getting lost quietly against the rest of the face.\n\nIt's cubic zirconia rather than the real stone, in a silver-toned setting with no special coating claimed beyond the plating itself, so the usual care applies: dry storage, no perfume contact, a wipe after each wear. The two-cut mix is a small design choice that does more for the piece than a bigger single stone would at the same price.",
+    "seo": {
+      "primaryKeyword": "silver-toned baguette nath",
+      "secondaryKeywords": [
+        "baguette cut nose ring",
+        "silver nath for wedding",
+        "double drop nath",
+        "cubic zirconia nose pin"
+      ],
+      "metaTitle": "Silver-Toned Baguette Nath with a Double Stone Drop",
+      "metaDescription": "A silver-toned nath alternating baguette and round cubic zirconia stones, with a double stone drop, ₹129. Detail built for close-up festive photos.",
+      "imageAlt": "Silver-toned nath with alternating baguette and round cubic zirconia stones and a double stone drop",
+      "ogTitle": "Silver-Toned Nath, Baguette-Cut Stones and Double Drop",
+      "ogDescription": "A silver-toned nath that alternates baguette and round cubic zirconia stones around the ring, with two stones dropping below. ₹129 at Morchadi Gems.",
+      "ogImage": "/products/P481.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "937",
+      "originalSku": "MJ-561",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-561-silver-plated-baguette-stone-nath-sparkling-white-zirconia-937",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P482",
+    "name": "Gold-Toned Cluster Nath with Drop Charm",
+    "category": "nose-pins",
+    "status": "draft",
+    "pricing": {
+      "price": 109,
+      "mrp": 109,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P482.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Gold-toned",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "design": "Floral cluster nath design with drop charm",
+      "care instructions": "Keep away from moisture and perfumes; store safely after use"
+    },
+    "description": "Not every nath in this price range needs to fill the whole ring with stones, and this one doesn't try to. A small cluster of clear stones sits low on the hoop rather than running the full circle, with one teardrop stone hanging just beneath it, so most of the gold-toned wire stays bare and visible, plain enough to sit under a work shirt or a cotton kurta without looking like it was left over from the night before.\n\nThat restraint is what makes it wearable on an ordinary day rather than only a wedding or a festive one, small enough to sit through a full day at work without asking for the attention a denser halo ring would. It still has enough detail to carry a festive outfit if the day calls for it, it just doesn't insist on one, which is a rarer thing to find at this price than another fully stone-set ring.\n\nThe stones are cubic zirconia in a base with no special coating claimed beyond the gold-tone plating, so it gets the same care as anything else plated here: dry storage, no perfume contact, a wipe after wear. A smaller piece like this earns its place by being the one you can actually reach for without needing an occasion to justify it first.",
+    "seo": {
+      "primaryKeyword": "gold-toned cluster nath",
+      "secondaryKeywords": [
+        "small gold nose ring",
+        "everyday nath",
+        "cubic zirconia nose pin",
+        "minimal nath with drop"
+      ],
+      "metaTitle": "Gold-Toned Cluster Nath with a Drop Charm, From ₹109",
+      "metaDescription": "A gold-toned nath with a small cluster of clear stones low on the hoop and a drop charm, ₹109. Small enough for everyday wear, not just festive days.",
+      "imageAlt": "Gold-toned nath with a small cluster of clear stones and a teardrop drop charm",
+      "ogTitle": "Small Gold-Toned Nath with a Drop Charm, ₹109",
+      "ogDescription": "A gold-toned nath that keeps most of the wire bare, with a small cluster of clear stones and a drop charm. Built for everyday wear at ₹109.",
+      "ogImage": "/products/P482.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "938",
+      "originalSku": "MJ-307",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-307-gold-plated-floral-cluster-nath-sparkling-white-stone-studded-938",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
   }
 ]
