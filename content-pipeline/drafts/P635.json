@@ -1,0 +1,89 @@
+{
+  "productId": "P635",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "clear cubic zirconia accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Clear cubic zirconia accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 2cm x 1.5cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 2cm x 1.5cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P635.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P635/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A unique key-shaped pendant featuring a textured sunburst medallion top, paired with a sleek crystal-lined bar for the key's shaft. The mix of hammered gold detailing and sparkling stones gives this piece a bold, symbolic feel — perfect for anyone drawn to meaningful, statement jewelry. It hangs from a fine gold chain, making it easy to wear alone or layered with other necklaces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nA striking conversation piece with a hint of symbolism, this necklace makes a memorable gift for milestones or just because.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Clear cubic zirconia accents\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 2cm x 1.5cm",
+    "referenceTitle": "Sunburst Key Pendant Necklace",
+    "originalId": "1107",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/sunburst-key-pendant-necklace-1107",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

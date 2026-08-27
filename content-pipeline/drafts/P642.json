@@ -1,0 +1,106 @@
+{
+  "productId": "P642",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "mother-of-pearl center",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Mother-of-pearl center, clear crystal border accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone (border accents)",
+      "value": "glass or cubic zirconia, unclear from text (clear crystal border accents)",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Mother-of-pearl center, clear crystal border accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1.8cm diameter",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1.8cm diameter"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P642.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P642/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P642-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P642/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A scalloped gold medallion framed with sparkling crystal edges, centered around a luminous mother-of-pearl disc and finished with a small gold star accent. The soft, iridescent pearl surface gives this pendant a subtle shimmer that shifts beautifully in the light, while the flower-shaped border adds a vintage, keepsake feel. It hangs from a fine gold chain, perfect for wearing alone or layering with other pieces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nElegant and understated, this necklace makes a beautiful everyday piece or a thoughtful gift for any occasion.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Mother-of-pearl center, clear crystal border accents\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 1.8cm diameter",
+    "referenceTitle": "Mother of Pearl Flower Medallion Necklace",
+    "originalId": "1114",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/mother-of-pearl-flower-medallion-necklace-1114",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

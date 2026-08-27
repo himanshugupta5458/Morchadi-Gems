@@ -1,0 +1,95 @@
+{
+  "productId": "P634",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "rose gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Rose gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "clear cubic zirconia heart, pavé halo setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Clear cubic zirconia heart, pavé halo setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Satellite bead chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Satellite bead chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1cm heart",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1cm heart"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P634.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P634/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P634-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P634/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A dainty heart pendant set with a sparkling clear crystal, edged in a delicate halo of pavé detailing. Suspended from a satellite-style rose gold chain with small beaded accents, this necklace has a soft, romantic feel that layers beautifully or shines on its own. Crafted in rose gold-plated stainless steel, it's tarnish and water resistant, so it stays beautiful with everyday wear.\nEffortlessly feminine and timeless, this necklace makes a lovely everyday piece or a heartfelt gift.\nDetails:\n- Material: Rose gold-plated stainless steel, tarnish and water resistant\n- Stone: Clear cubic zirconia heart, pavé halo setting\n- Chain: Satellite bead chain, adjustable length\n- Pendant size: Approx. 1cm heart",
+    "referenceTitle": "White Crystal Heart Pendant Necklace",
+    "originalId": "1106",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/white-crystal-heart-pendant-necklace-1106",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

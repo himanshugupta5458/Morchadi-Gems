@@ -1,0 +1,95 @@
+{
+  "productId": "P640",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "red enamel rose pendant with gold stem and leaves",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Red enamel rose pendant with gold stem and leaves"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 2.5cm x 1.3cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 2.5cm x 1.3cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P640.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P640/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P640-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P640/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹209 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A beautifully sculpted red rose in full bloom, complete with a curved gold stem and delicate leaves, capturing the romance of a single rose in miniature form. The rich red enamel finish on the petals contrasts strikingly against the polished gold detailing, making this pendant feel both realistic and enchanting. It hangs from a fine gold chain, ready to be worn alone as a statement or layered with simpler pieces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it stays beautiful with everyday wear.\nSymbolic and romantic, this necklace makes a heartfelt gift for anniversaries, Valentine's Day, or anyone who loves timeless floral jewelry.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Design: Red enamel rose pendant with gold stem and leaves\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 2.5cm x 1.3cm",
+    "referenceTitle": "3D Red Rose Pendant Necklace",
+    "originalId": "1112",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/3d-red-rose-pendant-necklace-1112",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

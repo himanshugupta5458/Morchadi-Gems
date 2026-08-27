@@ -1,0 +1,95 @@
+{
+  "productId": "P637",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "purple enamel flower pendant, painterly finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Purple enamel flower pendant, painterly finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 2.2cm x 2cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 2.2cm x 2cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P637.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P637/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P637-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P637/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A five-petal flower pendant finished in a rich purple enamel with subtle painterly texture, edged in polished gold for a hand-painted, artisanal feel. The dimensional petals catch the light beautifully, making this piece feel both delicate and full of personality. It hangs from a fine gold link chain, perfect for wearing alone as a statement or layered with simpler pieces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it stays vibrant with everyday wear.\nWhimsical and eye-catching, this necklace is a lovely gift for anyone who loves nature-inspired jewelry with a pop of color.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Design: Purple enamel flower pendant, painterly finish\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 2.2cm x 2cm",
+    "referenceTitle": "Purple Enamel Flower Pendant Necklace",
+    "originalId": "1109",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/purple-enamel-flower-pendant-necklace-1109",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

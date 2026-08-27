@@ -1,0 +1,102 @@
+{
+  "productId": "P639",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pink and green cubic zirconia tulip charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Pink and green cubic zirconia tulip charms, clear crystal spacers"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone (chain spacers)",
+      "value": "glass or cubic zirconia, unclear from text (clear crystal spacers)",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Pink and green cubic zirconia tulip charms, clear crystal spacers"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain with layered drop design, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain with layered drop design, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Largest charm approx. 1.5cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Largest charm approx. 1.5cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P639.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P639/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A delicate layered-look necklace featuring three tulip-shaped charms, each set with a vibrant fuchsia-pink crystal petal and a emerald-green crystal base, finished with sparkling clear crystal spacers along the chain. The asymmetrical, multi-drop design gives the necklace a botanical, nature-inspired feel with a pop of jewel-toned color. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nRomantic and colorful, this necklace is a beautiful statement piece for spring and summer looks, and makes a thoughtful gift for any flower lover.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Pink and green cubic zirconia tulip charms, clear crystal spacers\n- Chain: Fine link chain with layered drop design, adjustable length\n- Pendant size: Largest charm approx. 1.5cm",
+    "referenceTitle": "Gold Tulip Necklace with Ruby",
+    "originalId": "1111",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/gold-tulip-necklace-with-ruby-1111",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "referenceTitle says 'Gold Tulip Necklace with Ruby' but rawContent/Details never mention ruby anywhere — describes pink and green cubic zirconia tulip charms and clear crystal spacers instead. Likely an inaccurate original listing title; flagged for review, not corrected."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,97 @@
+{
+  "productId": "P638",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text (purple emerald-cut center stone with clear crystal leaf accents)",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Emerald-cut amethyst-purple center stone, clear crystal leaf accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Snake chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Snake chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 3cm x 2cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 3cm x 2cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P638.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P638/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P638-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P638/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A statement pendant featuring a deep purple emerald-cut center stone, surrounded by a cascading halo of clear crystal leaves for an art deco, vintage-inspired look. The asymmetrical spray design adds movement and drama, while the sleek gold snake chain keeps the overall look modern. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine and sparkle through everyday wear.\nBold and glamorous, this necklace is perfect for special occasions or for anyone who loves a statement piece with old-world charm.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Emerald-cut amethyst-purple center stone, clear crystal leaf accents\n- Chain: Snake chain, adjustable length\n- Pendant size: Approx. 3cm x 2cm",
+    "referenceTitle": "Vintage-Style Amethyst Necklace with Crystal Leaf Halo",
+    "originalId": "1110",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-style-amethyst-necklace-with-crystal-leaf-halo-1110",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Stone marked unverified-guess: source calls it 'amethyst-purple center stone' and 'clear crystal leaf accents' without ever using the word cubic zirconia (unlike sibling products in this run) — text does not confirm the material, though it is very likely CZ given the product line."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
