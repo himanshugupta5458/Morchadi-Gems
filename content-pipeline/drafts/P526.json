@@ -1,0 +1,89 @@
+{
+  "productId": "P526",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated copper (14K)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from 14K gold-plated copper"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone - bud",
+      "value": "glass/cat's-eye-effect fiber-optic glass bead, unclear from text — likely synthetic 'cat's eye' glass rather than genuine chrysoberyl cat's eye",
+      "displayTerm": "cat's eye",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a shimmering cat's eye stone bud"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone - leaves",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "crystal-accented leaves"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Sizing/design",
+      "value": "Adjustable pull-chain closure, one-size-fits-most",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The adjustable pull-chain design ensures a perfect fit for any wrist"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P526.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P526/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Embrace effortless elegance with this stunning tulip floral bracelet. Crafted from 14K gold-plated copper, it features a shimmering cat's eye stone bud and crystal-accented leaves. The adjustable pull-chain design ensures a perfect fit for any wrist, making it a versatile accessory and a beautiful gift for someone special",
+    "referenceTitle": "Gold Tulip Cat's Eye Pull Bracelet",
+    "originalId": "988",
+    "originalSku": "MJ-298",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-298-gold-tulip-cat-s-eye-pull-bracelet-988",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

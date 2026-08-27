@@ -1,0 +1,67 @@
+{
+  "productId": "P519",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a brilliant vine of shimmering marquise-cut crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/finish - chain",
+      "value": "gold-toned metal chain, anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a dainty gold-toned chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P519.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P519/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹349 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Illuminate your neckline with this radiant crystal floral necklace. Featuring a dainty gold-toned chain and a brilliant vine of shimmering marquise-cut crystals, this anti-tarnish piece offers a high-end, sophisticated sparkle. It is the perfect elegant accessory for weddings, special events, or adding a touch of luxury to your daily style",
+    "referenceTitle": "Gold Crystal Floral Vine Cluster Necklace",
+    "originalId": "981",
+    "originalSku": "MJ-273",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-273-gold-crystal-floral-vine-cluster-necklace-981",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

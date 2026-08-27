@@ -1,0 +1,92 @@
+{
+  "productId": "P513",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-finished copper",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "This innovative gold-finished copper ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design feature",
+      "value": "Openable heart or round locket design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a unique, openable heart or round locket design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Customization mechanism",
+      "value": "Replaceable locket accessories (not name/engraving personalization)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "it allows you to customize your style with replaceable accessories"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Sizing",
+      "value": "Adjustable (open ring, one-size-fits-most)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and adjustable"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P513.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P513/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": null,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "This innovative gold-finished copper ring features a unique, openable heart or round locket design. Lightweight and adjustable, it allows you to customize your style with replaceable accessories. Comfortable for daily wear, it's the perfect sentimental gift for any modern jewelry collection.",
+    "referenceTitle": "Gold Heart Locket Adjustable Open Ring",
+    "originalId": "974",
+    "originalSku": "MJ-280",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-280-gold-heart-locket-adjustable-open-ring-974",
+    "originalCategories": [
+      "Best selling",
+      "Personalised Item",
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "personalized: null — rawContent mentions customizing 'your style with replaceable accessories' (swappable openable-locket inserts), which is customization-adjacent but names no naming/engraving mechanism; originalCategories also tags this 'Personalised Item', reinforcing the ambiguity rather than resolving it."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

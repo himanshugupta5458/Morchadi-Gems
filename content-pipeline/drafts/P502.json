@@ -1,0 +1,70 @@
+{
+  "productId": "P502",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material composition",
+      "value": "16-piece set: 12 deep purple glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Enrich your ethnic look with this striking set of 12 deep purple glass bangles and 4 golden ghoonghroo bangles."
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from moisture and store safely after use to preserve golden luster of charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P502.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P502/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price, ₹165 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Enrich your ethnic look with this striking set of 12 deep purple glass bangles and 4 golden ghoonghroo bangles. This fashionable ensemble adds a beautiful melodic charm to your attire. To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use.\nTo ensure safe delivery, prepaid payment is mandatory as this is a fragile item",
+    "referenceTitle": "Deep Purple Glass Bangle Set with Golden Ghoonghroo Accents – 16-Piece",
+    "originalId": "958",
+    "originalSku": "MJ-208",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-208-deep-purple-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-958",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed prepaid-payment/fragile-item delivery notice",
+      "sourceContext": "To ensure safe delivery, prepaid payment is mandatory as this is a fragile item"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,67 @@
+{
+  "productId": "P517",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "enamel (purple), flower-shaped pendant with lustrous metallic finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this vibrant purple enamel flower necklace. Featuring a lustrous metallic finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/finish - chain",
+      "value": "gold-toned metal chain, anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a dainty gold-toned chain, this anti-tarnish pendant"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P517.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P517/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a statement with this vibrant purple enamel flower necklace. Featuring a lustrous metallic finish and a dainty gold-toned chain, this anti-tarnish pendant adds a bold yet feminine touch to your style. It is the perfect durable accessory for elevating your everyday look",
+    "referenceTitle": "Purple Enamel Floral Gold Pendant Necklace",
+    "originalId": "979",
+    "originalSku": "MJ-479",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-479-purple-enamel-floral-gold-pendant-necklace-979",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

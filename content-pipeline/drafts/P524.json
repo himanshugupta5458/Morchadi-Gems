@@ -1,0 +1,78 @@
+{
+  "productId": "P524",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone - bud",
+      "value": "cubic zirconia (synthetic, yellow)",
+      "displayTerm": "zirconia",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a vibrant synthetic zirconia bud"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone - leaves",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering crystal leaves"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/finish - chain",
+      "value": "gold-finished copper",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "on a gold-finished copper chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P524.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P524/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten your jewelry collection with this elegant yellow tulip pendant necklace. Featuring a vibrant synthetic zirconia bud and shimmering crystal leaves on a gold-finished copper chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a sunny, feminine touch to any outfit",
+    "referenceTitle": "Yellow Zirconia Tulip Gold Clavicle Chain",
+    "originalId": "986",
+    "originalSku": "MJ-623",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-623-yellow-zirconia-tulip-gold-clavicle-chain-986",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

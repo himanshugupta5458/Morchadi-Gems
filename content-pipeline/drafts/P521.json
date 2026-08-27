@@ -1,0 +1,69 @@
+{
+  "productId": "P521",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "Nature-inspired vine bracelet with red and green leaf motifs, open (adjustable) design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Red Green Leaf Bracelet, Natural Vine Open Design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "chain-link bracelet (base material unspecified)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Vintage Romantic Chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P521.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P521/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Red Green Leaf Bracelet, Natural Vine Open Design, Unique High-End Feel, Everyday Versatile Accessory, Birthday Gift, Valentine'S Day Present, Nature-Inspired Vine Bracelet, Vintage Romantic Chain, Commuting-Friendly Bracelet",
+    "referenceTitle": "Luxurious  Fairy Bloom Floral Tulip Bracelet With Red Green Stones",
+    "originalId": "983",
+    "originalSku": "MJ-402",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-402-luxurious-fairy-bloom-floral-tulip-bracelet-with-red-green-stones-983",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "rawContent is keyword-style marketing text, not full sentences. referenceTitle mentions 'Red Green Stones' but rawContent itself only says 'Red Green Leaf Bracelet' with no explicit stone/material word to quote, so no Stone attribute was proposed — captured as a leaf-motif design attribute instead."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

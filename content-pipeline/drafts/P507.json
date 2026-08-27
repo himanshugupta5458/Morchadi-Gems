@@ -1,0 +1,57 @@
+{
+  "productId": "P507",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Set contents",
+      "value": "1-set necklace and earrings jewelry set with flower/leaf design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "1set Exquisite Flower Leaf Design Shiny Colorful Earrings Necklace, Elegant Cute Style Jewelry Set for Daughter Christmas Birthday Gift"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P507.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P507/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "1set Exquisite Flower Leaf Design Shiny Colorful Earrings Necklace, Elegant Cute Style Jewelry Set for Daughter Christmas Birthday Gift",
+    "referenceTitle": "Flower Leaf Design Shiny Colorful Necklace",
+    "originalId": "968",
+    "originalSku": "MJ-258",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-258-flower-leaf-design-shiny-colorful-necklace-968",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "rawContent is a keyword-style marketing string, not full sentences; no material/stone term present to quote so no material attribute was proposed."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
