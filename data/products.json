@@ -21781,5 +21781,576 @@
         "Bracelet under ₹99"
       ]
     }
+  },
+  {
+    "id": "P394",
+    "name": "Stainless Steel Bracelet with Cubic Zirconia",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 450,
+      "mrp": 450,
+      "cost": 180
+    },
+    "media": {
+      "images": [
+        "/products/P394.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "stone": "Cubic zirconia (synthetic)"
+    },
+    "description": "Cast in stainless steel and set with cubic zirconia, this bracelet is built as an anti-tarnish piece meant to hold its finish through regular contact rather than dulling the way a softer metal does. Some sellers list this stone under the trade name Synthetic Zirconia; the honest description is cubic zirconia, a lab-made stone chosen for clean, consistent sparkle rather than for rarity.\n\nStainless steel is a sturdier base than the plated alloy used in a lot of budget jewellery, which is part of why this sits at ₹450 rather than the shop's ₹59 range. The metal itself resists scratching and everyday knocks better than a soft plated surface, useful for a bracelet worn daily rather than saved for occasions.\n\nBecause it's tagged as anti-tarnish, the shine at unboxing should stay closer to the shine after a few months of wear than an untreated piece manages. That's a genuine practical difference for something that sits on the wrist through washing hands, typing and the general friction of a normal day.\n\nThere's no adjustability confirmed for this piece, so it's worth checking sizing carefully before ordering rather than assuming a stretch fit. Keep it away from harsh chemicals and give it an occasional wipe to keep the cubic zirconia looking clear rather than clouded over time.",
+    "seo": {
+      "primaryKeyword": "stainless steel bracelet cubic zirconia anti-tarnish",
+      "secondaryKeywords": [
+        "synthetic zirconia bracelet",
+        "anti tarnish steel bracelet women",
+        "cz bracelet daily wear"
+      ],
+      "metaTitle": "Stainless Steel Bracelet with Cubic Zirconia, Anti-Tarnish",
+      "metaDescription": "An anti-tarnish stainless steel bracelet set with cubic zirconia stones, built to resist dulling through daily wear. Priced at ₹450, 7-day returns.",
+      "imageAlt": "Stainless steel bracelet set with cubic zirconia stones, anti-tarnish finish",
+      "ogTitle": "Anti-Tarnish Steel Bracelet with Cubic Zirconia, ₹450",
+      "ogDescription": "A stainless steel bracelet set with cubic zirconia, anti-tarnish and built for daily wear rather than occasional use. ₹450 at Morchadi Gems.",
+      "ogImage": "/products/P394.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "846",
+      "originalSku": "MJ-579",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-579-stainless-steel-birthday-synthetic-zirconia-bracelet-846",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P398",
+    "name": "Gold-Toned Birthstone Pendant",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 450,
+      "mrp": 450,
+      "cost": 180
+    },
+    "media": {
+      "images": [
+        "/products/P398.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Stone",
+        "type": "swatch",
+        "values": [
+          "February Purple",
+          "October Pink"
+        ],
+        "default": "February Purple"
+      }
+    ],
+    "specs": {
+      "stone": "Synthetic zirconia (cubic zirconia), based on 'Synthetic Zircon' wording"
+    },
+    "description": "This pendant is set with a stone in one of two colours, February Purple or October Pink, styled after the idea of a birthstone pendant tied to a birth month rather than a single fixed colour. The stone itself is described as synthetic zirconia, close to what's more widely known as cubic zirconia, chosen for a consistent, affordable sparkle rather than a rare gem's price tag.\n\nPicking a colour tied to a birth month gives a plain pendant a specific, personal reason to choose it, useful when you're buying for someone whose birthday falls in a particular month rather than picking a generic gift. The gold-toned setting keeps the two colour options feeling part of one line rather than two unrelated designs.\n\n\"Synthetic zirconia\" is the closest honest description of the stone rather than a more specific gem name, close enough to cubic zirconia that the sparkle reads the same either way. What's certain is the colour choice and the gold tone of the setting itself.\n\nAt ₹450, a birthstone-style pendant like this works well as a considered small gift, more specific than a plain stone pendant without asking for real gemstone pricing. Choose your colour at checkout based on the birth month it's meant to represent.",
+    "seo": {
+      "primaryKeyword": "gold-toned birthstone pendant zirconia",
+      "secondaryKeywords": [
+        "february purple birthstone pendant",
+        "october pink birthstone pendant",
+        "synthetic zirconia pendant necklace"
+      ],
+      "metaTitle": "Gold-Toned Birthstone Pendant, Two Colour Choices, ₹450",
+      "metaDescription": "A gold-toned birthstone-style pendant set with synthetic zirconia, in February Purple or October Pink. Priced at ₹450, choose a colour at checkout.",
+      "imageAlt": "Gold-toned pendant set with a purple or pink synthetic zirconia birthstone",
+      "ogTitle": "Birthstone Pendant, Gold-Toned, Purple or Pink, ₹450",
+      "ogDescription": "A gold-toned pendant set with a synthetic zirconia birthstone, available in February Purple or October Pink. ₹450 at Morchadi Gems.",
+      "ogImage": "/products/P398.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "850",
+      "originalSku": "MJ-009",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-009-1pc-women-s-stainless-steel-zirconia-birthstone-pendant-necklace-850",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P399",
+    "name": "Stainless Steel Moebius Infinity Bracelet, Glossy Finish",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish",
+      "gifting"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P399.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "plating coating": "Glossy",
+      "design": "Moebius (infinity loop) design",
+      "chain": "Fine chain"
+    },
+    "description": "A Moebius, or infinity loop, shape gives this bracelet its form, a single continuous curve rather than a closed circle or a chain of separate links. It's built in stainless steel with a glossy finish, strung on a fine chain rather than a rigid band, so the infinity shape sits with a bit of natural movement on the wrist instead of holding one fixed position.\n\nThe infinity motif reads as a small, quiet symbol rather than a loud statement, which suits daily wear and makes it an easy gift for a friend or relative without needing to explain the design. Stainless steel gives it more resistance to everyday knocks and tarnish than a plated alloy would manage at a similar weight.\n\nThe fine chain keeps the whole piece minimal rather than bulky, sitting close to the wrist rather than standing away from it. That makes it a bracelet that layers easily alongside a watch or another simple piece without competing for space.\n\nAt ₹299, the combination of a considered shape and a durable stainless steel base makes this a straightforward, low-maintenance daily bracelet rather than one that needs babying.",
+    "seo": {
+      "primaryKeyword": "stainless steel moebius infinity bracelet",
+      "secondaryKeywords": [
+        "glossy steel bracelet fine chain",
+        "infinity loop bracelet gift",
+        "minimalist bracelet daily wear"
+      ],
+      "metaTitle": "Stainless Steel Moebius Infinity Bracelet, Glossy, ₹299",
+      "metaDescription": "A stainless steel bracelet shaped as a Moebius infinity loop, glossy finish, on a fine chain. Minimal and durable, ₹299, dispatch in 2 days.",
+      "imageAlt": "Stainless steel bracelet shaped as a glossy infinity loop on a fine chain",
+      "ogTitle": "Infinity Loop Bracelet, Glossy Steel, Fine Chain, ₹299",
+      "ogDescription": "A stainless steel bracelet in a Moebius infinity loop shape, glossy finish, on a fine chain. Minimal daily wear, ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P399.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "851",
+      "originalSku": "MJ-424",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-424-minimalist-glossy-stainless-steel-infinity-bracelet-851",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P404",
+    "name": "Gold-Toned Cherry Blossom Pendant",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P404.webp"
+      ]
+    },
+    "specs": {
+      "motif": "Cherry blossom (pink petal, spring theme)"
+    },
+    "description": "A cherry blossom motif carries this pendant, pink petals set in a gold-toned finish, drawing on the spring-flowering tree rather than a generic floral shape. Cherry blossom as a motif has a specific, recognisable silhouette, small five-petal blooms, which reads clearly even at pendant scale rather than blurring into a vague flower shape.\n\nBecause the motif is tied to spring, it carries a lighter, more seasonal feel than a heavier, all-occasion floral piece might, though nothing about wearing it ties it strictly to one time of year. The pink petal colouring against the gold-toned setting gives it a soft, considered contrast rather than a single flat tone.\n\nCare is simple: keep it away from water and perfumes, both of which wear down a gold-toned finish faster than ordinary daily contact does on its own. A quick wipe after wear and dry storage between uses keeps the colour looking closer to new for longer.\n\nAt ₹299, a specific, recognisable motif like cherry blossom gives this pendant more identity than a plain stone-set piece would carry at a similar price, without asking for a higher budget to get there.",
+    "seo": {
+      "primaryKeyword": "gold-toned cherry blossom pendant",
+      "secondaryKeywords": [
+        "pink petal pendant necklace",
+        "spring floral pendant gold",
+        "cherry blossom jewellery women"
+      ],
+      "metaTitle": "Gold-Toned Cherry Blossom Pendant, Pink Petals, ₹299",
+      "metaDescription": "A gold-toned pendant shaped as a cherry blossom with pink petal detailing, a light spring-inspired motif. Priced at ₹299, ships across India.",
+      "imageAlt": "Gold-toned pendant shaped as a cherry blossom with pink petal detailing",
+      "ogTitle": "Cherry Blossom Pendant, Gold-Toned, Pink Petals, ₹299",
+      "ogDescription": "A gold-toned pendant shaped as a cherry blossom, pink petal detailing, a light spring-inspired motif. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P404.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "856",
+      "originalSku": "MJ-464",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-464-pink-petal-cherry-blossom-spring-pendant-necklace-for-women-856",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P408",
+    "name": "Gold-Plated Brass Initial Letter Ring, Personalized",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P408.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Letter",
+        "type": "dropdown",
+        "values": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "T",
+          "U",
+          "V",
+          "W",
+          "Z",
+          "D",
+          "A",
+          "Y"
+        ],
+        "default": "B"
+      }
+    ],
+    "specs": {
+      "material": "Brass",
+      "plating coating": "Gold-plated (fine)",
+      "fit": "Adjustable / comfort fit",
+      "care instructions": "Remove before bathing, swimming, washing hands with soap, or heavy sweating; wipe gently with a clean, dry cloth after use; avoid contact with perfume, lotion, or hand sanitizer; store in a dry place away from moisture when not worn."
+    },
+    "description": "This ring carries a single letter of your choosing, cast in brass with a gold-plated finish, from a range covering most of the alphabet. An initial ring is a specific kind of personal piece, one that names something rather than decorating generally, which makes it suit gifting as much as wearing it yourself.\n\nFit is adjustable, built for comfort rather than a precise size match, which matters for something meant for everyday wear rather than a single occasion. The letter sits as the whole point of the design; there's no additional stone or motif competing with it, so the initial itself stays the clear focus.\n\nBecause plating is a thin layer over brass rather than solid gold, care matters more here than on a heavier piece: remove it before bathing, swimming, washing hands with soap, or heavy sweating, wipe it gently with a dry cloth after wear, and keep it away from perfume, lotion and hand sanitiser. Store it dry when it's off your hand.\n\nAt ₹199, a personalized initial is a specific, thoughtful choice for a gift, more considered than a generic ring without stepping up to a much higher price for that specificity. Choose the letter you need at checkout.",
+    "seo": {
+      "primaryKeyword": "gold-plated initial letter ring personalized",
+      "secondaryKeywords": [
+        "brass alphabet ring adjustable",
+        "personalized letter ring gift",
+        "initial ring for her"
+      ],
+      "metaTitle": "Gold-Plated Initial Letter Ring, Personalized Brass",
+      "metaDescription": "A gold-plated brass ring carrying a single initial letter, adjustable comfort fit, personalized at checkout. Priced at ₹199, an easy gifting choice.",
+      "imageAlt": "Gold-plated brass ring engraved with a single initial letter",
+      "ogTitle": "Personalized Initial Ring, Gold-Plated Brass, ₹199",
+      "ogDescription": "A gold-plated brass ring carrying your chosen initial letter, adjustable fit. A considered personalized gift, ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P408.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "861",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/brass-initial-letter-adjustable-ring-silver-861",
+      "originalCategories": [
+        "Best selling",
+        "Personalised Item"
+      ]
+    }
+  },
+  {
+    "id": "P422",
+    "name": "Gold-Toned Pendant",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 36
+    },
+    "media": {
+      "images": [
+        "/products/P422.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned",
+      "care instructions": "Keep away from water and perfumes to maintain the golden glow"
+    },
+    "description": "This pendant carries a gold-toned finish, plain and undecorated rather than built around a specific shape or motif. It's a piece defined by its tone rather than by a silhouette that has to be described or explained.\n\nA plain gold-toned pendant like this works as a base layer piece, something that sits well under a scarf or against a plain neckline without competing for attention the way a shaped or stone-set pendant might. It's a piece built for regular, easy wear rather than a single occasion.\n\nKeeping the golden glow looking bright comes down to two simple habits: keep it away from water and perfumes, both of which wear down a gold-toned finish faster than ordinary contact alone. A dry wipe after wearing it and dry storage between uses go a long way toward keeping the colour consistent.\n\nAt ₹89, this sits at the accessible end of what this shop carries, a low-commitment way to add a gold-toned piece to a small collection without a specific shape needing to match anything else you already own.",
+    "seo": {
+      "primaryKeyword": "gold-toned pendant necklace simple",
+      "secondaryKeywords": [
+        "affordable pendant under 100",
+        "layering pendant gold tone",
+        "everyday gold pendant women"
+      ],
+      "metaTitle": "Gold-Toned Pendant, Simple Everyday Piece, ₹89 Only",
+      "metaDescription": "A simple gold-toned pendant built for everyday layering, easy to care for and priced at ₹89. A low-commitment addition to a jewellery box today.",
+      "imageAlt": "Gold-toned pendant shown against a plain background, simple finish",
+      "ogTitle": "Simple Gold-Toned Pendant for Everyday Wear, ₹89",
+      "ogDescription": "A simple gold-toned pendant, easy to layer, easy to care for. A low-commitment daily piece at ₹89 from Morchadi Gems.",
+      "ogImage": "/products/P422.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "875",
+      "originalSku": "MJ-204",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-204-dainty-sparkling-butterfly-pendant-necklace-875",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P423",
+    "name": "Gold-Toned Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P423.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned",
+      "care instructions": "Store in a dry place and avoid contact with moisture and perfumes"
+    },
+    "description": "A gold-toned finish carries this necklace, plain in shape rather than built around a specific motif or a layered design. It's a piece defined by its tone rather than by a silhouette.\n\nA plain gold-toned necklace like this suits an everyday role, something to put on without much thought that still adds a bit of warmth to a plain neckline. It's the kind of piece that works equally well on its own or as a base layer under something more detailed, without asking to be the centre of attention.\n\nCare is straightforward and worth doing consistently: avoid contact with moisture and perfumes, both of which dull a gold-toned finish faster than regular wear on its own does, and store it in a dry place when it's not around your neck.\n\nAt ₹89, it's priced as an easy, low-risk pick, useful for building up a small everyday jewellery rotation without a specific design needing to coordinate with anything else you're wearing.",
+    "seo": {
+      "primaryKeyword": "gold-toned necklace affordable everyday",
+      "secondaryKeywords": [
+        "plain gold tone necklace women",
+        "layering necklace under 100",
+        "simple daily necklace gold"
+      ],
+      "metaTitle": "Gold-Toned Necklace, Everyday Layering Piece, Simple",
+      "metaDescription": "A simple gold-toned necklace built for everyday wear or layering, easy to care for. Priced at ₹89, a low-risk addition to a small collection.",
+      "imageAlt": "Gold-toned necklace shown against a plain background, simple finish",
+      "ogTitle": "Everyday Gold-Toned Necklace for Layering, ₹89",
+      "ogDescription": "A simple gold-toned necklace, easy to layer or wear alone, easy to care for. Priced at ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P423.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "876",
+      "originalSku": "MJ-391",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-391-layered-geometric-necklace-gold-876",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P424",
+    "name": "Gold-Toned Pendant, Everyday Finish",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P424.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned",
+      "care instructions": "Keep away from moisture and store in a dry place after use"
+    },
+    "description": "Two habits keep a piece like this looking new: staying clear of moisture, and going back into a dry spot rather than sitting out once it's off. That's the whole care routine for this gold-toned pendant, which is worth knowing upfront because there isn't a shaped motif here competing for attention instead.\n\nWhat's certain about this one begins and ends with the finish itself, gold-toned rather than a specific shape or theme, which is a different kind of honest than a piece built around a motif. No silhouette is claimed here, just the colour and the two care habits above.\n\nThat plainness has its own use. A pendant with no fixed shape doesn't have to be reasoned into an outfit the way a themed one does; it either adds the warmth of the tone or it doesn't, and there's nothing else to weigh up. It works equally well as the only piece at the neckline or layered under something busier.\n\nAt ₹89, it's a low-stakes way to add gold tone to a small rotation, the kind of piece bought without much deliberation because there isn't much to deliberate over.",
+    "seo": {
+      "primaryKeyword": "gold-toned pendant everyday finish",
+      "secondaryKeywords": [
+        "plain pendant necklace gold",
+        "budget pendant india",
+        "quiet everyday jewellery piece"
+      ],
+      "metaTitle": "Gold-Toned Pendant, Everyday Finish, Priced at ₹89",
+      "metaDescription": "A plain gold-toned pendant built for easy everyday wear, no specific theme, simple to care for. Priced at ₹89, and it ships across India quickly.",
+      "imageAlt": "Gold-toned pendant with a plain, undecorated finish",
+      "ogTitle": "Plain Gold-Toned Pendant for Daily Wear, ₹89",
+      "ogDescription": "A plain, easy gold-toned pendant, no specific theme, built for everyday wear. Priced at ₹89 from Morchadi Gems.",
+      "ogImage": "/products/P424.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "877",
+      "originalSku": "MJ-585",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-585-star-pendant-necklace-in-gold-finish-877",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P425",
+    "name": "Gold-Toned Pendant, Understated Style",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P425.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned",
+      "care instructions": "Keep tucked away in a dry place and avoid contact with perfumes or water"
+    },
+    "description": "Layer it under a printed kurta, wear it alone against a plain neckline, or add it to a stack of thinner chains: a pendant with no fixed shape doesn't argue with whatever else is going on in an outfit. That flexibility is the actual case for buying something this plain rather than a shortcoming of it.\n\nThe gold tone is the one confirmed fact carried here, nothing more specific than that, no stone, no motif, no shaped silhouette to name. Buying it means buying exactly that tone and nothing else, which is a fair trade at ₹89 for a piece meant to blend in rather than announce itself.\n\nPerfume and water are the two things that shorten how long a gold-toned finish stays looking right; keep it away from both and tuck it into a dry spot when it's off your neck. That's the entire maintenance routine, no more elaborate than the piece itself.\n\nAt this price, it earns its place less as a considered purchase and more as a small, low-risk addition, one more warm-toned option in a drawer that might otherwise only have silver.",
+    "seo": {
+      "primaryKeyword": "gold-toned pendant understated style",
+      "secondaryKeywords": [
+        "minimal pendant necklace gold",
+        "affordable everyday pendant india",
+        "plain gold pendant layering"
+      ],
+      "metaTitle": "Gold-Toned Pendant, Understated Style, Priced at ₹89",
+      "metaDescription": "An understated gold-toned pendant with no fixed motif, built to go with almost anything. Priced at ₹89, a low-cost everyday addition to try.",
+      "imageAlt": "Gold-toned pendant with an understated, plain design",
+      "ogTitle": "Understated Gold-Toned Pendant, Adaptable, ₹89",
+      "ogDescription": "An understated gold-toned pendant, no fixed motif, easy to wear alone or layered. Priced at ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P425.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "878",
+      "originalSku": "MJ-203",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-203-dainty-gold-bow-pendant-necklace-878",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P432",
+    "name": "Gold-Toned Jewellery Set, Necklace, Earrings and Bracelet",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P432.webp"
+      ]
+    },
+    "specs": {
+      "package contents": "Necklace, drop earrings, tennis bracelet",
+      "stone": "Unspecified stones — likely glass crystal or cubic zirconia, unclear from text",
+      "care": "Keep dry; store in a cool, moisture-free place after use"
+    },
+    "description": "This set bundles three pieces together: a necklace, a pair of drop earrings and a tennis-style bracelet, all in a matching gold-toned finish so the three read as one coordinated look rather than three separate purchases. The set carries a stone detail too, most likely glass crystal or cubic zirconia rather than one firm gem type, so take the sparkle at face value rather than as a specific material claim.\n\nBuying a matched set solves the usual problem of picking three separate pieces and hoping they read as coordinated; here that decision is made for you, useful for an event where you want a finished look without assembling it piece by piece. The drop earrings and the tennis-style bracelet both follow familiar, easy-to-place shapes within their categories.\n\nAt ₹149 for all three pieces, this is priced as an accessible way into a matched set rather than buying a necklace, a pair of earrings and a bracelet separately at their own individual prices.\n\nCare applies across all three pieces the same way: keep them dry, and store them in a cool, moisture-free place after wear rather than leaving them out, which helps the gold tone and the stone detailing both hold up longer.",
+    "seo": {
+      "primaryKeyword": "gold-toned jewellery set necklace earrings bracelet",
+      "secondaryKeywords": [
+        "matching jewellery set for women",
+        "tennis bracelet drop earrings set",
+        "affordable three piece set india"
+      ],
+      "metaTitle": "Gold-Toned Jewellery Set, Necklace and Earrings, ₹149",
+      "metaDescription": "A gold-toned set of a necklace, drop earrings and a tennis-style bracelet with stone detailing, matched for one coordinated look. ₹149 for all three.",
+      "imageAlt": "Gold-toned jewellery set with a necklace, drop earrings and a tennis-style bracelet",
+      "ogTitle": "Three-Piece Gold-Toned Jewellery Set, ₹149",
+      "ogDescription": "A matched gold-toned set: necklace, drop earrings and a tennis-style bracelet with stone detailing, all for ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P432.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "885",
+      "originalSku": "MJ-266",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-266-gold-bow-jewelry-set-885",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
   }
 ]
