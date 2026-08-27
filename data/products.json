@@ -6193,5 +6193,1027 @@
         "Anti Tarnish bracelet"
       ]
     }
+  },
+  {
+    "id": "P103",
+    "name": "Golden Toggle Clasp Bracelet",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P103.webp"
+      ]
+    },
+    "specs": {
+      "care": "Avoid contact with water and perfume",
+      "closure": "Toggle clasp",
+      "material": "Brass",
+      "net quantity": "1 bracelet",
+      "colour": "Golden"
+    },
+    "description": "A toggle clasp does one job and does it without fuss. A bar swings through a ring and the bracelet is on, no clumsy hook to line up one-handed in a hurry before you leave the house. That's worth knowing before anything else, because a fiddly clasp is the real reason most bracelets end up sitting in a drawer instead of on a wrist. This one is a plain golden band in brass, warmed by an even gold tone rather than dressed up with stones or charms, built to sit under a cuff or over one without asking for attention.\n\nThe gold tone here runs even from edge to edge, with none of the dull or greenish patchiness that plated brass can pick up fast, because the piece carries an anti-tarnish base underneath the finish. That matters on a bracelet more than it does almost anywhere else you wear metal, since a wrist knocks against more through an ordinary day than an earring ever will. Skin, sweat and the odd bump against a desk are exactly the conditions anti-tarnish plating is built to hold up against, with the basic care any plated piece already asks for.\n\nKeep it away from perfume mist and standing water, the two things that age plated jewellery fastest regardless of what sits underneath, and it should carry its colour through weeks of regular wear rather than the usual month or two. At ₹199 it sits in the everyday-gold bracket rather than the save-it-for-a-wedding one, a piece you put on for an ordinary Tuesday and stop thinking about.\n\nOne bracelet arrives in the box, nothing paired or bundled alongside it, which suits a piece meant to be worn on its own or stacked with bangles you already own. A small, dependable layer of gold for a wrist that already has its own rhythm.",
+    "seo": {
+      "primaryKeyword": "golden toggle clasp bracelet",
+      "secondaryKeywords": [
+        "anti-tarnish gold bracelet",
+        "brass bracelet for women",
+        "everyday gold bracelet"
+      ],
+      "metaTitle": "Golden Toggle Clasp Bracelet, Anti-Tarnish Brass at ₹199",
+      "metaDescription": "A plain golden bracelet in anti-tarnish brass with an easy toggle clasp, made for everyday wear. Simple, dependable, from ₹199 at Morchadi Gems.",
+      "imageAlt": "Golden toggle clasp bracelet in anti-tarnish brass with a plain band",
+      "ogTitle": "A Plain Gold Bracelet That Holds Its Colour, ₹199",
+      "ogDescription": "An anti-tarnish golden bracelet in brass with a simple toggle clasp, easy on and off. A dependable everyday layer of gold at ₹199 from Morchadi Gems.",
+      "ogImage": "/products/P103.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "62",
+      "originalSku": "MJ-044",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-044-anti-tarnish-love-bracelet-62",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P105",
+    "name": "Star and Square Ring Set",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P105.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star and square-shaped ring combo",
+      "net quantity": "2-piece ring set",
+      "size": "Adjustable",
+      "weight": "Lightweight",
+      "care": "Keep away from water and perfumes; wipe gently after use"
+    },
+    "description": "Two rings, two shapes, one box: a star on one band and a square on the other, so you get a stacking pair instead of picking just one silhouette and living with it. Both sit in rosegold-plated brass and carry a scatter of cubic zirconia stones, sold as a trade term of American Diamond on the old listing but worth naming plainly here since that is what they actually are.\n\nWorn together, the star and the square read as a set without matching exactly, which is the more interesting way to stack two rings than buying the same shape twice. Worn apart, each one still works as a single ring on its own finger, so a slow week does not have to mean both go back in the box unused. Both bands are adjustable and light enough to forget about by midafternoon, which matters more for a two-ring day than a one-ring one.\n\nRosegold plating over brass needs the usual care any plated piece asks for: no perfume mist directly onto the metal, and a wipe with a soft cloth rather than a rinse under the tap. Treated that way it holds its warmth through regular wear rather than dulling after a few weeks, which is the difference between fashion jewellery that earns its price and fashion jewellery that doesn't.\n\nAt this price, a two-piece set reads as one of the easier additions to a small collection, useful either as a pair you build a stack around or as two separate gifts split between two people. Teens and adults both wear this kind of piece without it looking like it was bought for one age group specifically, which is part of why a star-and-square combo like this tends to stay in rotation rather than sitting untouched.",
+    "seo": {
+      "primaryKeyword": "star and square ring set",
+      "secondaryKeywords": [
+        "cz stacking ring set",
+        "rosegold plated ring for women",
+        "adjustable ring set"
+      ],
+      "metaTitle": "Star and Square CZ Ring Set, Rosegold-Plated Brass",
+      "metaDescription": "A two-piece ring set, a star band and a square band, both in rosegold-plated brass with cubic zirconia stones. Adjustable, from ₹59 at Morchadi Gems.",
+      "imageAlt": "Two-piece rosegold-plated ring set, one star-shaped band and one square band, both set with cubic zirconia",
+      "ogTitle": "A Star Ring and a Square Ring, One Box | Morchadi Gems",
+      "ogDescription": "A stacking pair of rosegold-plated CZ rings, one star-shaped and one square, adjustable to fit. Two shapes for ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P105.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "123",
+      "originalSku": "MJ-192",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-192-dc-jewelry-twinkle-duo-ring-star-square-123",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P107",
+    "name": "Gold-Plated Heart Pattern Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P107.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Heart pattern",
+      "care": "Avoid moisture and chemicals; clean with a soft cloth after use"
+    },
+    "description": "Hearts on a ring band tend to go one of two ways: obvious and a little much, or small enough that you have to look twice to notice the shape at all. This one sits closer to the second. A heart pattern traces the band in gold-plated brass, set with cubic zirconia stones, so the sparkle carries the piece and the heart shape reads more as a design detail than a declaration.\n\nThat balance is what makes it easy to wear on an ordinary day and not just a romantic one. It works well as a ring you put on without thinking about the occasion, and it works just as well as a small gift, since a heart motif does more explaining than most other shapes when you hand someone a box without much of a note. Gold-plated brass keeps the price sensible while still giving the warm tone that reads as gold from across a room.\n\nCare here is simple and worth actually doing, since moisture and chemicals are what dull a plated finish faster than daily wear ever will. Avoid contact with perfume, lotion and water where you can, and clean it with a soft cloth after wear rather than letting residue sit on the metal overnight. Done consistently, that alone keeps the gold tone looking closer to new for a lot longer than skipping it does.\n\nAt ₹59, it costs less than most gifts wrapped around it, which is part of the point. A heart ring doesn't need to be expensive to say something, and this one says it in gold plate and CZ rather than in a price tag.",
+    "seo": {
+      "primaryKeyword": "gold-plated heart pattern ring",
+      "secondaryKeywords": [
+        "cz heart ring",
+        "gift ring for her",
+        "affordable heart ring"
+      ],
+      "metaTitle": "Gold-Plated Heart Pattern CZ Ring, ₹59 | Morchadi Gems",
+      "metaDescription": "A gold-plated ring with a heart pattern traced in cubic zirconia stones, subtle enough for daily wear. A small gift at ₹59 from Morchadi Gems.",
+      "imageAlt": "Gold-plated ring with a heart pattern band set with cubic zirconia stones",
+      "ogTitle": "A Small Heart Ring for ₹59 | Morchadi Gems",
+      "ogDescription": "A gold-plated heart pattern ring with cubic zirconia stones, subtle enough to wear daily. A thoughtful, inexpensive gift at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P107.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "126",
+      "originalSku": "MJ-170",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-170-dc-jewelry-golden-heart-band-adjustable-ring-126",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P111",
+    "name": "Rosegold Bloom-Inspired CZ Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P111.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Bloom-inspired",
+      "size": "Adjustable",
+      "weight": "Lightweight",
+      "care": "Avoid contact with water or perfumes; clean with a soft cloth"
+    },
+    "description": "Floral rings live or die on whether the flower actually looks like one from arm's length, and this bloom-inspired design earns the comparison. Petals curve out across the band in rosegold-plated brass, each one picking up a cubic zirconia stone, so the shape reads as a flower first and a ring second, which is the right order for this kind of piece.\n\nIt is lightweight in a way that's easy to underestimate until you have worn a heavier ring for a whole day and felt the difference. This one sits close to the finger without pulling at it, adjustable enough to fit a range of finger sizes without needing to be resized or guessed at before buying. That combination, floral and light, is what makes it work equally well as a daily-wear ring and as something chosen for a festive outfit without swapping rings in between.\n\nBeing gifting-friendly is almost a given at this price. A floral ring reads as thoughtful without reading as expensive, which takes the pressure off a small gift meant to be a nice gesture rather than a statement of intent.\n\nWater and perfume are the two things to keep it away from, and a soft cloth after wear does most of the rest of the work. Treated that way, the rosegold plating holds its warmth rather than fading to a duller tone after a handful of wears, which is the difference between fashion jewellery worth the price and jewellery that starts looking cheap after a month.\n\nAt ₹59, a bloom ring like this earns a place in a small collection for exactly the reason a real flower ring in gold would cost too much to buy on impulse. This one doesn't ask for that kind of thinking.",
+    "seo": {
+      "primaryKeyword": "rosegold bloom cz ring",
+      "secondaryKeywords": [
+        "floral adjustable ring",
+        "cz flower ring for women",
+        "gifting ring under 100"
+      ],
+      "metaTitle": "Rosegold Bloom-Inspired CZ Ring, Adjustable Fit, ₹59",
+      "metaDescription": "A bloom-inspired ring with petals in rosegold-plated brass, each set with cubic zirconia. Lightweight, adjustable, from ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated bloom-inspired ring with petals set in cubic zirconia stones",
+      "ogTitle": "A Floral Ring That Costs ₹59 | Morchadi Gems",
+      "ogDescription": "Petals curve across this rosegold-plated ring, each set with a cubic zirconia stone. Light, adjustable, and just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P111.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "133",
+      "originalSku": "MJ-166",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-166-dc-jewelry-floral-adjustable-ring-133",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P112",
+    "name": "Rose Gold CZ Ring, Minimal Yet Glamorous",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P112.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfumes; store in a dry place when not in use"
+    },
+    "description": "Minimal and glamorous don't usually sit in the same sentence about a ring, but this one earns both words honestly. The rose gold finish keeps the shape understated rather than showy, while a scatter of cubic zirconia stones does the work of catching light without needing a bigger setting to do it.\n\nThe fit is built to be forgotten about, in the good sense. It's adjustable to suit most finger sizes straight out of the box, so there's no guessing a size before ordering and no trip to a jeweller afterward to fix one that's slightly off. That alone makes it an easy ring to wear across a normal week, whether it's an ordinary morning or a party you didn't plan your outfit around until the last hour.\n\nGifting sits comfortably alongside daily wear here, since a rose gold CZ ring reads as a considered choice without needing a story behind it. Handed over on its own or slipped into a bigger gift, it does the job of feeling like more than what it cost.\n\nKeep it away from water and perfume, and store it somewhere dry when it's not on, and the shine holds for longer than most fashion rings manage at this price. A quick wipe after wear is really the whole routine, nothing more demanding than that.\n\nAt ₹59, it sits in that useful middle ground between throwaway and precious, dressed up enough for parties and plain enough for a Tuesday, which is most of what a ring like this needs to do.",
+    "seo": {
+      "primaryKeyword": "rose gold cz ring minimal glamorous",
+      "secondaryKeywords": [
+        "adjustable cz ring for women",
+        "rose gold party ring",
+        "cz ring for daily wear"
+      ],
+      "metaTitle": "Rose Gold CZ Ring, Minimal Yet Glamorous Style, ₹59",
+      "metaDescription": "An adjustable rose gold ring with cubic zirconia stones, minimal enough for daily wear and glamorous enough for parties. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Rose gold ring set with cubic zirconia stones in a minimal glamorous style, adjustable band",
+      "ogTitle": "Minimal by Day, Glamorous by Evening, ₹59",
+      "ogDescription": "A rose gold ring with cubic zirconia stones, adjustable and light enough for daily wear or a party. Understated sparkle at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P112.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "134",
+      "originalSku": "MJ-180",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-180-dc-jewelry-petal-adjustable-ring-134",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P113",
+    "name": "Adjustable Rose Gold CZ Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P113.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfumes; store in a dry place when not in use"
+    },
+    "description": "An adjustable band solves a specific problem: buying a ring online without a size chart in front of you, and not wanting to guess wrong. This one sidesteps that entirely, opening or closing to fit most fingers without a resizing trip afterward. The band itself is rose gold-plated brass, set with cubic zirconia stones that catch light without needing a large centre stone to carry the piece.\n\nStyle-wise it sits in that useful zone between plain and dressed-up, close enough to minimal for an office day and sparkly enough to hold its own at an evening event without a change of jewellery in between. That range is really the whole appeal of a piece built for daily wear, parties and gifting all at once, rather than one narrow occasion.\n\nAs a gift, it asks little of the giver and gives a reasonable amount back. There's no sizing information to get wrong, no waiting on an exchange, and the rose gold tone reads as a considered pick rather than a last-minute one.\n\nA soft cloth after wear and a general habit of keeping it away from water and perfume is the whole care routine worth remembering, and it's the same routine that keeps any plated ring from dulling ahead of schedule. Store it dry when it's off, and the shine holds through regular use rather than fading in the first few weeks.\n\nAt ₹59, a ring this flexible on fit and occasion earns its keep quickly, more of a wardrobe basic than a special-occasion piece kept for one event a year.",
+    "seo": {
+      "primaryKeyword": "adjustable rose gold cz ring",
+      "secondaryKeywords": [
+        "cz ring for parties and daily wear",
+        "rose gold ring for gifting",
+        "no size cz ring"
+      ],
+      "metaTitle": "Adjustable Rose Gold CZ Ring for Daily Wear, Just ₹59",
+      "metaDescription": "An adjustable rose gold-plated ring with cubic zirconia stones, built for daily wear, parties and gifting alike. Just ₹59 at Morchadi Gems, with 7-day returns.",
+      "imageAlt": "Adjustable rose gold-plated ring with cubic zirconia stones on a plain band",
+      "ogTitle": "One Ring, No Size to Guess, ₹59 | Morchadi Gems",
+      "ogDescription": "An adjustable rose gold CZ ring that fits without a size chart, dressy enough for parties and plain enough for every day. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P113.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "135",
+      "originalSku": "MJ-182",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-182-dc-jewelry-radiant-bloom-statement-ring-135",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P124",
+    "name": "Rosegold-Plated Star CZ Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P124.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A star ring only works if the shape actually stays sharp instead of blurring into a round blob once the stones go in, and this one keeps its lines. The star sits clearly defined across the rosegold-plated band, catching a scatter of cubic zirconia, so the shape reads as a star at a glance rather than needing an explanation.\n\nRosegold plating over brass keeps the piece light on the finger, which matters over a full day of wear more than most buyers expect until they've worn something heavier by comparison. A star motif also travels well between outfits: it doesn't read as strictly festive or strictly casual, so it moves between a plain weekday look and something dressed up for a birthday or a small celebration without looking out of place in either.\n\nGifting is where this kind of ring does its best work. A star shape carries enough of its own meaning, luck, ambition, a small wish, that it doesn't need a long note attached to feel considered, which makes it an easy pick for a friend's birthday or a festival exchange.\n\nCare is simple: keep it clear of water, perfume and harsh chemicals, clean it gently with a soft or microfiber cloth, and take it off before swimming or showering. Store it somewhere cool and dry between wears. Done consistently, the rosegold tone holds rather than turning patchy after a few weeks, which is the usual failure point for cheaper plated pieces.",
+    "seo": {
+      "primaryKeyword": "rosegold star cz ring",
+      "secondaryKeywords": [
+        "star shaped ring for gifting",
+        "cz star ring",
+        "rosegold plated brass ring"
+      ],
+      "metaTitle": "Rosegold-Plated Star CZ Ring for Everyday Wear, ₹59",
+      "metaDescription": "A star-shaped ring in rosegold-plated brass set with cubic zirconia stones, light enough for daily wear. Gift-ready, from ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated star-shaped ring with cubic zirconia stones set along the band",
+      "ogTitle": "A Rosegold Star Ring for ₹59 | Morchadi Gems",
+      "ogDescription": "A rosegold-plated star ring with cubic zirconia stones, light enough for daily wear. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P124.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "154",
+      "originalSku": "MJ-165",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-165-dc-jewelry-finger-ring-rosegold-polished-american-diamond-ring-154",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P125",
+    "name": "Star CZ Ring for Gifting, Rosegold Tone",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P125.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Birthdays, small festivals, a Valentine's exchange between friends who don't want to overspend on each other: a star ring like this one is built for exactly that tier of gift, small enough not to feel like an event and still nice enough that it doesn't feel like an afterthought either. The star shape sits across a rosegold-plated band, picked out in cubic zirconia stones that carry the sparkle without a large centre stone doing all the work.\n\nWhat makes it work as a gift specifically is how little context it needs. A star reads as a good wish on its own, so there's no explaining required if it's handed over with a short card or none at all. The rosegold tone over brass reads as warm rather than cold, which suits a gift meant to feel considered rather than practical.\n\nBeyond the gifting occasion, it holds up fine as an everyday ring too, light enough that a full day of wear doesn't register as a full day of wear. That crossover, gift-worthy and wearable on repeat, is what keeps a small piece like this from being a one-time novelty.\n\nCare instructions are short: clean gently with a soft cloth, keep chemicals, water and ultrasonic cleaners away from it, and take it off before swimming, showering or gardening. A cool, dry storage spot between wears rounds out the routine and keeps the rosegold tone from turning patchy ahead of schedule.",
+    "seo": {
+      "primaryKeyword": "star cz ring for gifting",
+      "secondaryKeywords": [
+        "rosegold star ring",
+        "small gift ring",
+        "cz ring for birthday gift"
+      ],
+      "metaTitle": "Star CZ Ring for Gifting in Rosegold Tone, Just ₹59",
+      "metaDescription": "A star-shaped ring in rosegold-plated brass with cubic zirconia stones, sized for small gifts and daily wear alike. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Star-shaped ring in rosegold tone with cubic zirconia stones, shown on a plain card",
+      "ogTitle": "A Star Ring Worth Gifting, ₹59 | Morchadi Gems",
+      "ogDescription": "A small star-shaped ring in rosegold-plated brass with cubic zirconia stones, easy to gift and easy to wear. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P125.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "155",
+      "originalSku": "MJ-167",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-167-dc-jewelry-floral-elegance-ring-rosegold-finish-premium-ad-adjustable-ring-155",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P126",
+    "name": "Rosegold-Plated Star Ring for Teens and Women",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P126.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Cheap plated jewellery has a reputation, and most of it is earned by pieces that lose their colour within a month of ordinary wear. This star-shaped ring is no different underneath, rosegold plating over brass rather than anything with a special coating, so what keeps it looking good is the same routine that keeps any plated piece looking good: no direct perfume spray, no swimming or showering in it, and a wipe with a soft or microfiber cloth after wear rather than leaving it to sit.\n\nThe star shape itself is set with cubic zirconia stones across the band, giving it enough sparkle to read as more than a plain metal shape without tipping into anything heavy or ornate. It's light on the hand, the kind of ring that disappears into a day rather than announcing itself every time a hand moves.\n\nThat lightness also makes it suit a wide range of wearers. Teens and adult women alike can wear a piece like this without it looking chosen for the wrong age group, and it moves easily between a western outfit and an ethnic one without looking out of place in either.\n\nStore it somewhere cool and dry when it's off, away from extreme temperatures, and skip an ultrasonic cleaner if there's one at home, since that kind of cleaning is harder on plated pieces than a soft cloth ever is. Handled that way, a ring like this earns its keep well past the first few wears.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring for teens",
+      "secondaryKeywords": [
+        "cz star ring for women",
+        "star ring for western and ethnic wear",
+        "rosegold plated brass ring"
+      ],
+      "metaTitle": "Rosegold-Plated Star Ring for Teens and Women, ₹59",
+      "metaDescription": "A star-shaped rosegold-plated ring with cubic zirconia stones, light enough for daily wear by teens and women alike. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated star ring with cubic zirconia stones, close-up on a plain background",
+      "ogTitle": "A Star Ring for Every Day, ₹59 | Morchadi Gems",
+      "ogDescription": "A rosegold-plated star ring with cubic zirconia stones, light enough to wear daily and suited to teens and women alike. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P126.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "156",
+      "originalSku": "MJ-168",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-168-dc-jewelry-floral-elegance-ring-rosegold-finish-premium-ad-adjustable-ring-156",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P130",
+    "name": "Lightweight Rosegold Star CZ Ring",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P130.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "You notice a heavy ring by the end of the day, when the finger underneath feels the weight it stopped registering at breakfast. This one avoids that problem entirely. A star shape sits across a rosegold-plated brass band, set with cubic zirconia stones, and the whole piece stays light enough that a full day of wear barely registers as wearing a ring at all.\n\nThat lightness doesn't come at the cost of presence. The star shape reads clearly rather than fading into a vague glittery blob, which is the usual trade-off with very light fashion rings. Here the cubic zirconia does the sparkling and the star shape does the identifying, and both hold up under a normal amount of scrutiny across a room or in a photo.\n\nGifting is a natural fit for a piece this easy to wear. It suits birthdays, small festivals and Valentine's exchanges without demanding a big gesture around it, and it works just as well worn by the person who bought it for herself on an ordinary week.\n\nRosegold plating asks for the same care any plated brass does: clean gently with a soft or microfiber cloth, keep chemicals and water away from it, and take it off before swimming, showering or gardening. A cool, dry spot for storage between wears rounds out the whole routine, which takes longer to read than it does to do.",
+    "seo": {
+      "primaryKeyword": "lightweight rosegold star ring",
+      "secondaryKeywords": [
+        "cz star ring for everyday wear",
+        "star ring for gifting",
+        "rosegold plated brass ring"
+      ],
+      "metaTitle": "Lightweight Rosegold Star CZ Ring, Everyday Wear, ₹59",
+      "metaDescription": "A lightweight star-shaped ring in rosegold-plated brass with cubic zirconia stones, easy to wear all day without noticing it. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Lightweight rosegold-plated star ring with cubic zirconia stones, shown against a plain surface",
+      "ogTitle": "A Star Ring You Forget You're Wearing, ₹59",
+      "ogDescription": "A lightweight rosegold star ring with cubic zirconia stones, easy on the finger all day. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P130.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "160",
+      "originalSku": "MJ-158",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-158-dc-jewelry-baguette-sparkle-ring-rosegold-polish-adjustable-ad-fashion-ring-160",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P131",
+    "name": "Rosegold Star Ring with CZ Detailing",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P131.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A star has been a shorthand for good fortune and small ambitions for long enough that nobody remembers when it started, which is probably why the shape keeps turning up on rings meant to feel a little lucky. This one carries that shape in rosegold-plated brass, the star's outline picked out with cubic zirconia stones so it catches light rather than sitting flat and matte.\n\nThe finish leans warm rather than cool, which is part of what makes rosegold read as softer than plain gold or silver tone without losing any of the sparkle from the stones. It's a small ring in every practical sense, light on the hand and easy to overlook until it catches the light at an angle.\n\nDaily wear is where it earns its keep, since a piece this understated doesn't demand a special occasion to justify putting it on. It also holds its own at a party or a small celebration without feeling out of place next to more elaborate jewellery, and it works across both western and ethnic outfits without needing to be swapped out.\n\nA soft or microfiber cloth handles most of the upkeep. Keep it away from chemicals, water and ultrasonic cleaners, take it off before swimming, showering or gardening, and store it somewhere cool and dry the rest of the time. None of that is demanding, but skipping it is usually what shortens a plated piece's good years.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring cz detailing",
+      "secondaryKeywords": [
+        "star ring for daily wear",
+        "cz detailed rosegold ring",
+        "star ring for parties"
+      ],
+      "metaTitle": "Rosegold Star Ring with CZ Detailing for Gifting, ₹59",
+      "metaDescription": "A star-shaped ring in rosegold-plated brass detailed with cubic zirconia stones, light enough for daily wear or a small celebration. Just ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold star ring detailed with cubic zirconia stones, catching light against a plain backdrop",
+      "ogTitle": "A Small Star Ring, Rosegold and CZ | Morchadi Gems",
+      "ogDescription": "A rosegold-plated star ring detailed with cubic zirconia, warm-toned and light on the hand. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P131.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "161",
+      "originalSku": "MJ-164",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-164-dc-jewelry-double-t-cz-ring-rosegold-finish-adjustable-statement-finger-ring-161",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P132",
+    "name": "Star-Shaped CZ Ring, Rosegold Plate",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P132.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A star cut into real gold and set with genuine stones would put this design well outside an everyday budget, which is exactly the gap cubic zirconia and rosegold plating exist to close. This ring gives you the shape and the sparkle, a star outlined in cubic zirconia across a rosegold-plated brass band, without the price of the materials it's styled after.\n\nThat honesty is worth stating plainly rather than letting the shine do the talking. The stones are cubic zirconia, not diamond, and the metal is plated brass, not solid gold. What that trade-off buys is a ring you can wear without worrying about it, to a casual outing or a small celebration, without the weight of it being something precious.\n\nThe star motif itself keeps the ring from reading as too plain or too busy. It's detailed enough to notice, simple enough not to compete with whatever else is on the hand, and light enough that it doesn't announce its own weight through the day.\n\nCare is unfussy: a soft or microfiber cloth for cleaning, no chemicals or ultrasonic cleaners, and removal before swimming, showering or gardening. Store it somewhere cool and dry between wears, and it holds up to the kind of regular handling a ring worn often actually gets.",
+    "seo": {
+      "primaryKeyword": "star shaped cz ring rosegold plate",
+      "secondaryKeywords": [
+        "affordable star ring",
+        "cz ring instead of diamond",
+        "rosegold plated brass ring"
+      ],
+      "metaTitle": "Star-Shaped CZ Ring in Rosegold Plate for Gifting, ₹59",
+      "metaDescription": "A star-shaped ring outlined in cubic zirconia on a rosegold-plated brass band, an affordable stand-in for the real thing. Just ₹59 at Morchadi Gems.",
+      "imageAlt": "Star-shaped rosegold-plated ring outlined in cubic zirconia stones",
+      "ogTitle": "The Shape and Sparkle, Not the Price, ₹59",
+      "ogDescription": "A star-shaped cubic zirconia ring on rosegold-plated brass, the look without the cost of the real thing. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P132.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "162",
+      "originalSku": "MJ-187",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-187-dc-jewelry-solitaire-glow-ring-rosegold-polish-adjustable-american-diamond-ring-162",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P133",
+    "name": "Rosegold CZ Ring, Star Outline",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P133.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Small stones catch more light than one big one does, angle for angle, which is the practical reason a star traced in cubic zirconia can look livelier than a single solitaire twice its size. That's the effect at work here: a star outline across a rosegold-plated brass band, each point picking up its own point of light rather than one setting doing all the work.\n\nThe rosegold finish keeps the overall look warm, closer to a gold tone than a cold silver one, which tends to suit more skin tones without anyone having to think about it. The ring itself stays slim and low, sitting close to the finger instead of rising up off it, so it slips under gloves or through a bag pocket without catching on anything.\n\nIt reads as equally at home in daily wear and at a small party, since a star shape doesn't lean hard toward either casual or festive. Gifting works well too, given how little explanation a star ring needs before it feels like a considered choice rather than a random pick.\n\nCare is the same short routine any plated CZ piece asks for: a soft or microfiber cloth for cleaning, no chemicals or ultrasonic cleaners, and off before swimming, showering or gardening. Keep it in a cool, dry spot the rest of the time, and the sparkle stays where it should.",
+    "seo": {
+      "primaryKeyword": "rosegold cz ring star outline",
+      "secondaryKeywords": [
+        "star outline ring",
+        "cz ring for parties",
+        "rosegold plated brass ring"
+      ],
+      "metaTitle": "Rosegold CZ Ring with a Star Outline for Daily Wear",
+      "metaDescription": "A star outlined in cubic zirconia across a slim rosegold-plated band, light on the hand and easy to wear daily or to a party. Just ₹59 at Morchadi Gems.",
+      "imageAlt": "Slim rosegold-plated ring with a star outline traced in cubic zirconia stones",
+      "ogTitle": "A Star Traced in Small CZ Stones, ₹59 | Morchadi Gems",
+      "ogDescription": "A slim rosegold-plated ring with a star outline in cubic zirconia, catching light at every point. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P133.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "163",
+      "originalSku": "MJ-169",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-169-dc-jewelry-geometric-glamour-ring-rosegold-adjustable-finger-ring-163",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P134",
+    "name": "Star CZ Ring for Festive Wear, Rosegold",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P134.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Festive dressing usually asks for a bit more sparkle than an ordinary day, without necessarily asking for anything heavier or more expensive to get there. This star-shaped ring, cubic zirconia set into a rosegold-plated brass band, sits comfortably in that gap: enough shine to feel dressed for something, without the weight or the price tag of a proper occasion piece.\n\nIt works because the star shape is instantly readable even from across a room, which matters more at a gathering than at a desk. Rosegold plating keeps the tone warm rather than icy, a better match for festive colours than a cooler silver tone tends to be, and the ring stays light enough that stacking it with bangles or other rings doesn't turn into a weight problem by the end of the evening.\n\nOutside the festive calendar it still earns its place as a daily ring, since nothing about a small star shape restricts it to one kind of day. Gifting works well here too, particularly around birthdays and festivals where a small sparkling ring reads as generous without being extravagant.\n\nThe usual plated-metal care applies: clean gently with a soft or microfiber cloth, keep chemicals, water and ultrasonic cleaners away, and take it off before swimming, showering or gardening. Store it cool and dry when it's not being worn, and it holds up through more than one festive season of use.",
+    "seo": {
+      "primaryKeyword": "star cz ring festive rosegold",
+      "secondaryKeywords": [
+        "festive ring for women",
+        "rosegold star ring for gifting",
+        "cz ring for celebrations"
+      ],
+      "metaTitle": "Star CZ Ring for Festive Wear in Rosegold, Just ₹59",
+      "metaDescription": "A star-shaped ring with cubic zirconia in rosegold-plated brass, bright enough for festive wear and light for every day. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Star-shaped rosegold ring set with cubic zirconia, shown for a festive styling context",
+      "ogTitle": "A Festive Sparkle for ₹59 | Morchadi Gems",
+      "ogDescription": "A star-shaped rosegold ring set with cubic zirconia, bright enough for a celebration and light enough for every day. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P134.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "164",
+      "originalSku": "MJ-179",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-179-dc-jewelry-oval-halo-ring-rosegold-finish-adjustable-cz-fashion-ring-164",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P137",
+    "name": "Rosegold Star Ring, CZ Set",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P137.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Fashion rings rarely come with much of a care routine, but the short list that applies here is worth actually reading once rather than skimming. Keep it away from chemicals and water, wipe it with a soft or microfiber cloth rather than anything abrasive, take it off before swimming, showering or gardening, and store it somewhere cool and dry between wears. None of it is difficult, and it's the difference between a ring that looks the same in a year and one that doesn't.\n\nThe ring itself is a star shape set with cubic zirconia stones across a rosegold-plated brass band, light enough to wear all day without the finger noticing by evening. Rosegold keeps the look warm rather than sharp, and the star shape gives it a clear identity instead of reading as a vague cluster of stones.\n\nIt suits daily wear without effort and holds its own at a party too, moving between a plain outfit and something dressier without needing to be swapped for a different ring. Western or ethnic, it sits fine with either, which is part of why a simple shape like a star tends to outlast more elaborate trends in a jewellery box.\n\nAs a gift, it needs very little context to land well, useful for birthdays, small festivals or a Valentine's exchange between people who'd rather not overthink it. A star reads as a nice thought on its own.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring cz set",
+      "secondaryKeywords": [
+        "star ring for daily wear",
+        "cz set rosegold ring",
+        "star ring gift for her"
+      ],
+      "metaTitle": "Rosegold Star Ring, CZ Set, Just ₹59 at Morchadi Gems",
+      "metaDescription": "A star-shaped ring set with cubic zirconia stones on a rosegold-plated band, light enough for daily wear and easy to care for. Just ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated star ring set with cubic zirconia stones on a plain surface",
+      "ogTitle": "A Star Ring Worth the Small Routine, ₹59",
+      "ogDescription": "A star-shaped rosegold ring set with cubic zirconia, light enough for every day and easy to care for. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P137.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "167",
+      "originalSku": "MJ-191",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-191-dc-jewelry-twin-heart-adjustable-ring-rosegold-love-edition-with-cz-stones-167",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P139",
+    "name": "Rosegold Star Ring for Stacking",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P139.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A single ring rarely reads as an outfit decision, but two or three worn together start to. This star-shaped ring is light and low enough to be one of those, a rosegold-plated brass band with cubic zirconia stones tracing the star, built to sit alongside other rings on the same hand without crowding any of them.\n\nWorn alone it still holds its own, since the star shape gives it a clear identity rather than blending into a generic sparkle. Cubic zirconia catches enough light to make the shape read from a normal conversational distance, without needing a larger stone to do the work.\n\nDaily wear is where it's most useful, precisely because it's light enough to forget about. It also moves easily into evening wear or a small celebration without changing character, and works across western and ethnic outfits alike, which keeps it from being a ring reserved for one specific kind of day.\n\nGifting suits it well too. A small star ring doesn't need a big explanation to feel like a considered choice, which makes it easy to pick for a birthday or festival without overthinking the decision.\n\nCare stays simple: a soft or microfiber cloth for cleaning, no chemicals, water or ultrasonic cleaners, and off before swimming, showering or gardening. Cool, dry storage the rest of the time keeps it looking the way it did on day one for longer than skipping that routine would.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring for stacking",
+      "secondaryKeywords": [
+        "cz star ring",
+        "star ring for daily wear",
+        "rosegold ring set with other rings"
+      ],
+      "metaTitle": "Rosegold Star Ring for Stacking, CZ Detail, Just ₹59",
+      "metaDescription": "A light star-shaped ring in rosegold-plated brass with cubic zirconia detail, built to stack or wear alone through a normal day. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated star ring with cubic zirconia, shown worn alongside other rings",
+      "ogTitle": "A Star Ring That Plays Well with Others, ₹59",
+      "ogDescription": "A light rosegold star ring with cubic zirconia, easy to stack or wear alone. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P139.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "169",
+      "originalSku": "MJ-172",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-172-dc-jewelry-infinity-leaf-band-stylish-cz-finger-ring-in-rosegold-polish-169",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P140",
+    "name": "Star CZ Ring in Warm Rosegold",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P140.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Not every ring needs a story attached to it, and this one gets by fine without one: a star shape, set with cubic zirconia stones, on a rosegold-plated brass band. It's a simple piece that doesn't oversell itself, which is a rarer quality in fashion jewellery than it should be.\n\nThe rosegold tone runs warm rather than cool, closer to a soft gold than to silver, and it flatters more skin tones for exactly that reason. The star shape gives the piece something to be recognised by rather than reading as generic sparkle, and the cubic zirconia stones carry enough shine to be noticed without needing size to do it.\n\nLightness is a quiet feature here rather than a headline one, but it's the reason a ring like this actually gets worn day after day instead of sitting in a box for special occasions. It suits an ordinary day as easily as a party, and moves between western and ethnic outfits without a second thought.\n\nAs a gift, it's an easy one to choose. A star shape reads as thoughtful on its own, useful for a birthday, a small festival, or a Valentine's exchange that isn't trying to be a grand gesture.\n\nKeep it away from water, perfume and harsh chemicals, wipe it clean with a soft cloth, and store it somewhere cool and dry when it's not being worn. That's the whole routine, and it's a small price for keeping the sparkle where it belongs.",
+    "seo": {
+      "primaryKeyword": "star cz ring warm rosegold",
+      "secondaryKeywords": [
+        "rosegold star ring",
+        "cz ring for gifting",
+        "star ring for daily and party wear"
+      ],
+      "metaTitle": "Star CZ Ring in Warm Rosegold Tone for Daily Wear, ₹59",
+      "metaDescription": "A simple star-shaped ring in warm rosegold-plated brass, set with cubic zirconia stones. Light and easy to wear daily, from ₹59 at Morchadi Gems.",
+      "imageAlt": "Star-shaped ring in warm rosegold tone set with cubic zirconia stones",
+      "ogTitle": "A Star Ring That Doesn't Oversell Itself, ₹59",
+      "ogDescription": "A simple star-shaped ring in warm rosegold with cubic zirconia stones, light enough for every day. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P140.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "170",
+      "originalSku": "MJ-193",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-193-dc-jewelry-twisted-elegance-ring-dual-band-cz-adjustable-ring-in-rosegold-170",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P143",
+    "name": "Rosegold-Plated Star Ring, CZ Accent",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P143.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "There's a version of this ring in real gold with real stones somewhere, and it costs a great deal more than this one does. What you get here instead is the same idea done honestly in cheaper materials: a star shape in rosegold-plated brass, accented with cubic zirconia, priced for a wardrobe of pieces rather than one investment ring.\n\nThat trade-off is worth being upfront about rather than glossing over. The metal is plated, not solid, and the stones are cubic zirconia rather than diamond. What that buys in return is a ring you can wear without babying it, layered into a normal week rather than saved for one big event a year.\n\nThe star shape carries its own light lift, a small motif that reads as a nice thought without needing an explanation attached to it, which is part of what makes it work equally well as a gift and as something bought for yourself on a whim. It's light on the hand and easy to wear through a full day, at a desk or at a small gathering, without asking to be noticed.\n\nCare is short and worth sticking to: clean with a soft or microfiber cloth, keep it away from chemicals and water, remove it before swimming, showering or gardening, and store it somewhere cool and dry the rest of the time. It's a small habit that keeps the shine from fading ahead of schedule.",
+    "seo": {
+      "primaryKeyword": "rosegold plated star ring cz accent",
+      "secondaryKeywords": [
+        "affordable star ring",
+        "cz accent ring",
+        "star ring for gifting and daily wear"
+      ],
+      "metaTitle": "Rosegold-Plated Star Ring with CZ Accent, Just ₹59",
+      "metaDescription": "A star-shaped ring in rosegold-plated brass accented with cubic zirconia, an honest everyday alternative to the real thing. Just ₹59 at Morchadi Gems.",
+      "imageAlt": "Rosegold-plated star ring accented with cubic zirconia stones on a plain surface",
+      "ogTitle": "The Idea of a Star Ring, Honestly Priced, ₹59",
+      "ogDescription": "A star-shaped rosegold ring accented with cubic zirconia, an honest everyday version of a pricier idea. Just ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P143.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "173",
+      "originalSku": "MJ-194",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-194-dc-jewelry-wide-criss-cross-rose-gold-ring-173",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
   }
 ]
