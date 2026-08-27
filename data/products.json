@@ -24447,5 +24447,419 @@
         "Anti Tarnish bracelet"
       ]
     }
+  },
+  {
+    "id": "P569",
+    "name": "Gold-Plated Vine Leaf Necklace and Earring Set, Anti-Tarnish",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish",
+      "gifting"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P569.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "set contents necklace": "Gold-plated vine leaf necklace",
+      "set contents earrings": "Matching drop stud earrings",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "design accent": "Delicate gold leaf accents"
+    },
+    "description": "A necklace and a pair of drop stud earrings come together in this set, both built around the same vine leaf motif and finished in gold-plated, anti-tarnish metal. Delicate leaf accents trace the design on each piece, small cubic zirconia stones (sometimes labelled CZ) set among them rather than dominating the shape.\n\nBuying a matched set solves a specific problem: getting a necklace and earrings that genuinely belong together, rather than picking two separate pieces and hoping the metals and motifs line up. Here that coordination is done for you, both pieces sharing the same vine leaf language and the same gold-plated, anti-tarnish base.\n\nAnti-tarnish means the plating is built to resist the colour loss that untreated gold-plated metal shows with regular wear, though it's still worth the usual care: a soft cloth after wearing, and keeping both pieces away from perfume and water. Store them together so the set stays paired rather than scattered across a jewellery box.\n\nAt ₹320 for the pair, suggested for gifting, it's a complete look rather than a single piece, useful when you want to give (or wear) something finished rather than assembling a match yourself.",
+    "seo": {
+      "primaryKeyword": "gold-plated vine leaf necklace earring set anti-tarnish",
+      "secondaryKeywords": [
+        "matching jewellery set gifting",
+        "cz vine leaf necklace",
+        "anti tarnish earring necklace combo"
+      ],
+      "metaTitle": "Gold-Plated Vine Leaf Necklace and Earring Set, ₹320",
+      "metaDescription": "A gold-plated, anti-tarnish necklace and drop stud earring set with a shared vine leaf motif and cubic zirconia accents. Priced at ₹320 for the pair.",
+      "imageAlt": "Gold-plated vine leaf necklace and matching drop stud earrings, anti-tarnish finish",
+      "ogTitle": "Vine Leaf Necklace and Earring Set, Gold-Plated, ₹320",
+      "ogDescription": "A gold-plated, anti-tarnish necklace and earring set sharing one vine leaf motif with cubic zirconia accents. ₹320 for the pair at Morchadi Gems.",
+      "ogImage": "/products/P569.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1038",
+      "originalSku": "MJ-457",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-457-pink-purple-marquise-leaf-jewellery-set-1038",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P587",
+    "name": "Satin Long-Tail Bow Hair Clip",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 52
+    },
+    "media": {
+      "images": [
+        "/products/P587.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Color",
+        "type": "swatch",
+        "values": [
+          "Ivory White",
+          "Antique Gold",
+          "Lilac Shimmer",
+          "Cream shimmer"
+        ],
+        "default": "Ivory White"
+      }
+    ],
+    "specs": {
+      "material": "Satin",
+      "design": "Long tail bow with flowing drape",
+      "clip type": "Alligator clip"
+    },
+    "description": "The tail is the point of this bow: rather than a compact knot, the satin runs long and loose past the bow itself, giving it a drape that moves rather than sitting fixed. It's made in satin, which carries a soft sheen that a matte ribbon or cotton bow doesn't have, and it closes on an alligator clip built to hold in most hair types.\n\nA long-tail shape like this reads differently depending on where it's clipped: pinned high, the tail falls loose down the back of the head; clipped lower, it sits closer to the hair itself. That range is part of what a longer bow offers over a small, compact one despite being a single simple accessory.\n\nIt's available in four colourways: Ivory White, Antique Gold, Lilac Shimmer and Cream Shimmer, so the same shape comes in both quieter neutrals and something with a bit more shimmer to it. Satin holds a crease if crushed, so it's worth storing flat rather than balled up in a bag between wears.\n\nAt ₹129, a hair clip built around drape and movement rather than a plain flat bow earns its place for anyone who wants a bit more visual interest without switching to a full hair accessory set.",
+    "seo": {
+      "primaryKeyword": "satin long-tail bow hair clip",
+      "secondaryKeywords": [
+        "satin hair bow alligator clip",
+        "long tail bow clip women",
+        "satin bow clip colours"
+      ],
+      "metaTitle": "Satin Long-Tail Bow Hair Clip, Alligator Clip, ₹129",
+      "metaDescription": "A satin bow hair clip with a long, flowing tail on a secure alligator clip, available in four colourways. Priced at ₹129, with 7-day returns.",
+      "imageAlt": "Satin long-tail bow hair clip with a flowing drape on an alligator clip",
+      "ogTitle": "Long-Tail Satin Bow Clip, Four Colourways, ₹129",
+      "ogDescription": "A satin bow hair clip with a long flowing tail and a secure alligator clip, in four colourways. ₹129 at Morchadi Gems.",
+      "ogImage": "/products/P587.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1057",
+      "originalSku": "MJ-522",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-522-satin-long-tail-bow-hair-clip-1057",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P590",
+    "name": "Layered Satin French-Style Bow Hair Clip",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 79,
+      "mrp": 79,
+      "cost": 32
+    },
+    "media": {
+      "images": [
+        "/products/P590.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Color",
+        "type": "dropdown",
+        "values": [
+          "Combo",
+          "pink",
+          "black",
+          "white"
+        ],
+        "default": "Combo"
+      }
+    ],
+    "specs": {
+      "material": "Satin",
+      "design": "Layered French-style bow",
+      "clip type": "Alligator clip",
+      "colour availability": "Magenta Pink, Ivory White & Classic Black"
+    },
+    "description": "Where a single-loop bow reads as one clean shape, this one is layered, several folds of satin stacked into a fuller, French-style silhouette on the same kind of secure alligator clip. The layering gives it more visual weight than a flat bow, useful when a hairstyle needs one accessory to carry more of the look rather than several smaller ones stacked together.\n\nThree colourways are confirmed for this design: Magenta Pink, Ivory White and Classic Black, spanning a genuine range from a bright accent colour to two neutrals that work with almost anything. That range matters more here than on a plainer accessory, since the layered shape itself is already doing visual work before colour comes into it.\n\nIt suits daily wear as easily as an office day or a festive one, the structured shape reading as considered rather than casual even in satin, a fabric that photographs with a soft sheen rather than a flat matte finish. The alligator clip holds securely across most hair types without needing a second pin.\n\nAt ₹79, this sits below its long-tail sibling in price while offering a genuinely different silhouette, fuller and more structured rather than loose and flowing.",
+    "seo": {
+      "primaryKeyword": "layered satin french bow hair clip",
+      "secondaryKeywords": [
+        "structured satin bow clip",
+        "french bow hair accessory",
+        "satin bow clip magenta black white"
+      ],
+      "metaTitle": "Layered Satin French-Style Bow Hair Clip, ₹79 Only",
+      "metaDescription": "A layered satin bow hair clip in a fuller French-style shape, on a secure alligator clip, in three colourways. Priced at ₹79, dispatch in 2 days.",
+      "imageAlt": "Layered satin French-style bow hair clip with a structured, fuller shape",
+      "ogTitle": "French-Style Layered Bow Clip, Satin, ₹79",
+      "ogDescription": "A layered, structured satin bow hair clip in a French-style shape, on a secure alligator clip. ₹79 at Morchadi Gems.",
+      "ogImage": "/products/P590.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1060",
+      "originalSku": "MJ-392",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-392-layered-satin-bow-hair-clip-1060",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P611",
+    "name": "Anti-Tarnish Gold-Tone Watch, Emerald Green Leaf Dial",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P611.webp"
+      ]
+    },
+    "specs": {
+      "plating coating": "Anti-tarnish gold-tone finish",
+      "dial": "Emerald green dial",
+      "dial shape": "Leaf-shaped dial",
+      "material": "Pearl accents (natural or imitation unclear from text)",
+      "movement type": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish"
+    },
+    "description": "A leaf shape frames the dial on this watch rather than the usual round or square face, cast in an emerald green that reads as a real design choice rather than a default colour. The case and band carry an anti-tarnish gold-tone finish, and pearl-look accents sit worked into the design alongside a quartz movement underneath.\n\nThe leaf-shaped dial is what sets this apart from a plainer round-faced watch; it changes the read of the whole piece from purely functional to something with a bit of jewellery-like character, while the quartz movement underneath still does the ordinary job of keeping time reliably. Emerald green against gold-tone is a considered pairing, the kind of colour combination that reads as put-together rather than accidental.\n\nAnti-tarnish gold-tone means the finish is built to resist the dulling that untreated plating shows with regular wrist contact, though it still benefits from care: keep it away from perfume, water and excessive sweat, and store it in a dry place when it's off your wrist, the same routine any plated piece rewards.\n\nAt ₹599, a shaped dial and a pearl-look-accented band put this watch a step up from a plain round-faced piece in the same anti-tarnish gold-tone finish.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish gold-tone watch emerald green leaf dial",
+      "secondaryKeywords": [
+        "leaf shaped dial watch women",
+        "gold tone quartz watch pearl look",
+        "green dial watch anti tarnish"
+      ],
+      "metaTitle": "Anti-Tarnish Gold-Tone Watch, Emerald Green Leaf Dial",
+      "metaDescription": "An anti-tarnish gold-tone watch with a leaf-shaped emerald green dial, pearl-look accents and quartz movement. Priced at ₹599, ships across India.",
+      "imageAlt": "Gold-tone watch with a leaf-shaped emerald green dial and pearl-look accents",
+      "ogTitle": "Leaf Dial Watch, Gold-Tone, Emerald Green, ₹599",
+      "ogDescription": "An anti-tarnish gold-tone watch with a leaf-shaped emerald green dial and pearl-look accents on the band. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P611.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1083",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-pearl-bracelet-watch-for-women-1083",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P628",
+    "name": "Gold-Tone Initial 'A' Necklace, Anti-Tarnish",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P628.webp"
+      ]
+    },
+    "specs": {
+      "chain": "Gold-tone chain",
+      "stone": "Glass or cubic zirconia crystals, unclear from text",
+      "pendant design": "Initial 'A' pendant"
+    },
+    "description": "A single letter, A, sits as the pendant on this necklace, worked in small crystals rather than left as plain outlined metal, hung from a slim gold-tone chain. It's a specific, direct piece rather than a decorative one, meant for someone whose name or a name close to them actually starts with that letter.\n\nThe crystals along the letter are confirmed only as glass or cubic zirconia, without settling on one over the other, chosen for a consistent sparkle along the shape of the letter rather than a scattering across a wider pendant. The chain itself stays fine and understated, letting the initial carry the piece rather than competing with a busier design.\n\nAnti-tarnish plating means the gold tone is built to hold its colour with regular wear better than untreated plating manages, worth pairing with the usual care habits anyway: a wipe after wearing, and keeping it away from perfume and water between uses.\n\nAt ₹199, suggested for gifting, an initial necklace like this is about as specific and personal a piece as jewellery gets without being made to order, useful for a birthday or simply as a small, considered gift for someone in particular.",
+    "seo": {
+      "primaryKeyword": "gold-tone initial a necklace anti-tarnish",
+      "secondaryKeywords": [
+        "letter a pendant necklace",
+        "crystal initial necklace gifting",
+        "anti tarnish name necklace india"
+      ],
+      "metaTitle": "Gold-Tone Initial 'A' Necklace, Anti-Tarnish Finish",
+      "metaDescription": "A gold-tone anti-tarnish necklace with a crystal-set initial 'A' pendant on a slim chain, a specific and personal gift. Priced at ₹199 today.",
+      "imageAlt": "Gold-tone necklace with a crystal-set initial A pendant on a fine chain",
+      "ogTitle": "Initial 'A' Necklace, Gold-Tone, Anti-Tarnish, ₹199",
+      "ogDescription": "A gold-tone anti-tarnish necklace with a crystal-set initial 'A' pendant on a fine chain. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P628.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1100",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/a-letter-necklace-1100",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P629",
+    "name": "Aqua Blue Heart Pendant Necklace, Gold-Tone Frame",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P629.webp"
+      ]
+    },
+    "specs": {
+      "pendant design": "Heart-shaped aqua blue pendant, gold frame",
+      "material": "Gold-tone finish",
+      "chain": "Delicate beaded chain"
+    },
+    "description": "Colour is the whole point of this pendant: a heart shape in aqua blue, held inside a gold-tone frame rather than left as a plain outline, hung from a delicate beaded chain rather than a plain link one. Aqua sits between blue and green, a cooler, softer tone than a bright royal blue would give, and the gold frame keeps it from reading as too pastel or washed out.\n\nThe beaded chain adds a bit of texture that a smooth link chain wouldn't have, small enough not to compete with the pendant but noticeable up close. It's built for regular wear rather than one specific event, a colour-forward piece that suits an everyday outfit as easily as a date night, since aqua reads as playful rather than formal.\n\nAnti-tarnish plating is confirmed for this piece, so the gold-tone frame is built to resist the dulling that untreated plating shows with regular contact against the skin. Standard care still applies: keep it away from perfume and water, and give it a wipe after wearing.\n\nAt ₹199, suggested for gifting, the aqua-and-gold pairing is a specific, considered colour choice rather than a generic pendant shape in whatever finish happened to be available.",
+    "seo": {
+      "primaryKeyword": "aqua blue heart pendant necklace gold-tone",
+      "secondaryKeywords": [
+        "heart pendant beaded chain",
+        "blue heart necklace gifting",
+        "anti tarnish heart necklace india"
+      ],
+      "metaTitle": "Aqua Blue Heart Pendant Necklace, Gold-Tone Frame, ₹199",
+      "metaDescription": "A gold-tone, anti-tarnish necklace with an aqua blue heart pendant on a delicate beaded chain. Priced at ₹199, a colour-forward everyday piece.",
+      "imageAlt": "Aqua blue heart pendant in a gold-tone frame on a beaded chain necklace",
+      "ogTitle": "Aqua Heart Pendant Necklace, Gold-Tone, ₹199",
+      "ogDescription": "A gold-tone, anti-tarnish necklace with an aqua blue heart pendant on a delicate beaded chain. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P629.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1101",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/aqua-blue-heart-necklace-1101",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P634",
+    "name": "Rose Gold-Plated Heart Pendant with Pavé Halo",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 210,
+      "mrp": 210,
+      "cost": 84
+    },
+    "media": {
+      "images": [
+        "/products/P634.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated stainless steel",
+      "stone": "Clear cubic zirconia heart, pavé halo setting",
+      "chain": "Satellite bead chain, adjustable length",
+      "pendant size": "Approx. 1cm heart"
+    },
+    "description": "A small heart, about a centimetre across, sits at the centre of this pendant, set with a clear cubic zirconia stone and edged in a pavé halo of smaller stones around it. The halo is what gives it presence beyond its actual size, the ring of smaller stones making the centre stone read brighter and the whole shape a little larger than a centimetre would suggest on its own.\n\nIt hangs from a satellite bead chain, small beads spaced along a fine chain rather than a plain smooth link, which catches light differently as it moves and adds texture without adding visible bulk. The chain is confirmed adjustable, so length isn't fixed to one setting.\n\nRose gold-plated stainless steel is the base here, the steel giving it more resistance to everyday knocks than a softer alloy would, with the rose gold plating built to hold its warm tone through regular wear as part of this shop's anti-tarnish range. Keep it away from perfume and water, and wipe it after wearing, the same routine any plated piece rewards.\n\nAt ₹210, a pavé halo around a clear cubic zirconia heart is real detail for a pendant this size, small enough to layer and clear enough to stand on its own.",
+    "seo": {
+      "primaryKeyword": "rose gold heart pendant pave halo cubic zirconia",
+      "secondaryKeywords": [
+        "heart pendant satellite chain",
+        "pave halo pendant necklace",
+        "anti tarnish heart pendant rose gold"
+      ],
+      "metaTitle": "Rose Gold Heart Pendant, Pavé Halo, Cubic Zirconia",
+      "metaDescription": "A rose gold-plated heart pendant with a clear cubic zirconia centre and a pavé halo, on an adjustable satellite bead chain. Priced at ₹210 today.",
+      "imageAlt": "Rose gold-plated heart pendant with a cubic zirconia centre and pave halo detailing",
+      "ogTitle": "Heart Pendant, Rose Gold, Pavé Halo Detail, ₹210",
+      "ogDescription": "A rose gold-plated heart pendant with a clear cubic zirconia centre and a pavé halo, on an adjustable chain. ₹210 at Morchadi Gems.",
+      "ogImage": "/products/P634.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1106",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/white-crystal-heart-pendant-necklace-1106",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
   }
 ]
