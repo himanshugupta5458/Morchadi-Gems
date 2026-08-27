@@ -1,0 +1,85 @@
+{
+  "productId": "P174",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Rani",
+        "Gajri",
+        "Green",
+        "peach",
+        "pista",
+        "maroon",
+        "blue",
+        "surf",
+        "strawberry",
+        "pista dark",
+        "D multy",
+        "purple",
+        "yellow",
+        "dhani",
+        "morpankhi",
+        "white",
+        "jamuni",
+        "orange",
+        "clear",
+        "pink",
+        "red",
+        "l multy"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P174.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P174/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only",
+    "referenceTitle": "3mm crystal jelly glass bangles (Set of 8)",
+    "originalId": "471",
+    "originalSku": "MJ-011",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-011-3mm-crystal-jelly-glass-bangles-set-of-8-471",
+    "originalCategories": [
+      "jelly bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Entire rawContent is a COD-availability notice (prepaid-only, due to glass fragility); no product description text present.",
+      "sourceContext": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only"
+    }
+  ],
+  "notes": [
+    "Source contained only boilerplate — likely not a product; confirm before assigning an ID."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

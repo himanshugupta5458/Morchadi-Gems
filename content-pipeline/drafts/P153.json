@@ -1,0 +1,125 @@
+{
+  "productId": "P153",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Collection",
+      "value": "All Occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Collection: All Occasions"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Type",
+      "value": "Finger Ring",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Type: Finger Ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "rose gold-plated (polished) finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rosegold Polished"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Brass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: Premium American Diamonds"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "star-shaped design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Star-shaped – a minimalist and chic addition to your collection"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P153.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P153/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shine bright with our DC Jewelry Cross Ring — a charming symbol of elegance and grace. Whether it's a special celebration or everyday style, this ring brings a subtle sparkle to your look. It's an ideal gift for your loved ones on birthdays, weddings, anniversaries, Valentine's Day, or any festive occasion.\nWhy You'll Love It:\n✨ Lightweight & comfortable for daily wear\n✨ Trendy design for girls, teens, and women of all ages\n✨ A thoughtful gift that makes moments memorable\nProduct Details:\n🔹 Brand: DC Jewelry\n🔹 Collection: All Occasions\n🔹 Type: Finger Ring\n🔹 Plating: Rosegold Polished\n🔹 Material: Brass\n🔹 Stones: Premium American Diamonds\n🔹 Design: Star-shaped – a minimalist and chic addition to your collection\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "DC Jewelry Cross Ring",
+    "originalId": "191",
+    "originalSku": "MJ-162",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-162-dc-jewelry-cross-ring-191",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "brand-mismatch",
+      "detail": "Raw listing names 'DC Jewelry' as the product brand. Morchadi Gems is the only brand this shop uses — recorded here, not adopted.",
+      "sourceContext": "Brand: DC Jewelry"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

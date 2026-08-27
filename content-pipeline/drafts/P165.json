@@ -1,0 +1,108 @@
+{
+  "productId": "P165",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium, sturdy alloy for durability"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: High-quality gold plating for a radiant appearance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (baguette-cut and round)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Sparkling baguette-cut and round cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "modern geometric band with mixed stone setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Modern geometric band with mixed stone setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes comfortably",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable to fit most finger sizes comfortably"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P165.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P165/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nStand out with the striking Modern Geometric CZ Gold-Plated Ring for Women. Featuring a chic mix of baguette and round CZ stones, this ring delivers both sparkle and sophistication with its contemporary style. The elegant gold-plated finish adds a touch of luxury, making the Modern Geometric CZ Gold-Plated Ring for Women the perfect accessory for fashion-forward women who love unique glamour.\nWhy You Will Love It:\n✨ Eye-catching geometric combo of baguette and round CZ stones\n✨ Trendy and versatile design for everyday or party looks\n✨ Adjustable for a comfortable and secure fit\n✨ Makes a thoughtful and stylish gift for any occasion\nHighlights / Specifications:\n🔹 Material: Premium, sturdy alloy for durability\n🔹 Plating: High-quality gold plating for a radiant appearance\n🔹 Stone Type: Sparkling baguette-cut and round cubic zirconia\n🔹 Design: Modern geometric band with mixed stone setting\n🔹 Size/Fit: Adjustable to fit most finger sizes comfortably\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Modern Geometric CZ Gold-Plated Ring",
+    "originalId": "210",
+    "originalSku": "MJ-435",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-435-modern-geometric-cz-gold-plated-ring-210",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

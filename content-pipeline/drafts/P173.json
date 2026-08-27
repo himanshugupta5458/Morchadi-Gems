@@ -1,0 +1,108 @@
+{
+  "productId": "P173",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium, durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Lustrous gold plating for a luxurious finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (pavé-set)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: High-grade pavé-set cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "double disk motif with pavé accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Fashion-forward double disk motif with pavé accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable to accommodate most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P173.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P173/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nShine with playful elegance wearing the Double Disk CZ Gold-Plated Ring for Women. This standout ring features two dazzling pavé disks beautifully set on a sleek gold-plated band, offering a modern twist on classic glamour. Whether you're dressing up for a party or adding flair to your everyday look, the Double Disk CZ Gold-Plated Ring for Women makes you the center of attention with its radiant sparkle and unique design.\nWhy You Will Love It:\n✨ Contemporary double disk design for trendy appeal\n✨ Sparkling CZ stones for brilliant shine\n✨ Adjustable fit for effortless comfort\n✨ Versatile piece, perfect for gifting or personal style\nHighlights / Specifications:\n🔹 Material: Premium, durable alloy\n🔹 Plating: Lustrous gold plating for a luxurious finish\n🔹 Stone Type: High-grade pavé-set cubic zirconia\n🔹 Design: Fashion-forward double disk motif with pavé accents\n🔹 Size/Fit: Adjustable to accommodate most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Double Disk CZ Gold-Plated Ring",
+    "originalId": "218",
+    "originalSku": "MJ-217",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-217-double-disk-cz-gold-plated-ring-218",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

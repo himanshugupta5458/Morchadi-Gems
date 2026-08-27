@@ -1,0 +1,97 @@
+{
+  "productId": "P163",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "silver/rhodium-plated (high-shine)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: High-shine silver / rhodium plating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Cubic zirconia crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "adjustable stack-style star and crystal band set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Adjustable stack-style star and crystal band set"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "free size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size / Fit: Free size – adjustable"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P163.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P163/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "This stunning dual adjustable ring set is crafted with a shiny silver-tone finish and embellished with brilliant-cut cubic zirconia stones. Featuring a stylish star-shaped ring paired with a matching crystal band, it is perfect for stacking and adds a luxurious sparkle to everyday outfits.\n- Material: Durable alloy\n- Plating: High-shine silver / rhodium plating\n- Stone Type: Cubic zirconia crystals\n- Design: Adjustable stack-style star and crystal band set\n- Size / Fit: Free size – adjustable\n- Best Suitable For: Casual wear, special occasions, party wear, gifting",
+    "referenceTitle": "Silver-Tone Star & Crystal Adjustable Ring Set",
+    "originalId": "204",
+    "originalSku": "MJ-569",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-569-silver-tone-star-crystal-adjustable-ring-set-204",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

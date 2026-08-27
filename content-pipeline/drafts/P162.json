@@ -1,0 +1,97 @@
+{
+  "productId": "P162",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Premium Silver-plated finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: American Diamond (AD)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "open ring with floral and solitaire accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Open ring with floral & solitaire accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits comfortably on most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size & Fit: Adjustable – fits comfortably on most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P162.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P162/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a chic twist to your jewelry collection with this silver-plated adjustable open ring, designed with a delicate floral American Diamond motif and a sparkling solitaire-style stone. A perfect blend of elegance and trendiness, this ring is ideal for daily wear, parties, or gifting.\n- Material: Brass base\n- Plating: Premium Silver-plated finish\n- Stone Type: American Diamond (AD)\n- Design: Open ring with floral & solitaire accents\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Suitable for daily wear, parties, and gifting",
+    "referenceTitle": "Silver-Plated Adjustable Floral Open AD Ring",
+    "originalId": "202",
+    "originalSku": "MJ-560",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-560-silver-plated-adjustable-floral-open-ad-ring-202",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

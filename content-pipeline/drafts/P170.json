@@ -1,0 +1,108 @@
+{
+  "productId": "P170",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium high-quality alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Lustrous silver plating for a dazzling look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (emerald-cut, with halo accent stones)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Emerald-cut cubic zirconia with halo accent stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "double twin rectangular solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Double twin rectangular solitaire for elegant statement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable band, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable band fits most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P170.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P170/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nRadiate with sophistication wearing the Double Emerald-Cut CZ Silver-Plated Ring for Women. This dazzling ring features two large emerald-cut CZ stones, framed with brilliant halos for a luxurious finish. Designed to catch every eye, the Double Emerald-Cut CZ Silver-Plated Ring for Women is an instant showstopper, perfect for adding glamour and sparkle to your style, whether for everyday chic or a special event.\nWhy You Will Love It:\n✨ Glamorous double emerald-cut centerpiece for maximum brilliance\n✨ Sparkling halos amplify elegance and shine\n✨ Comfortable adjustable fit for effortless wear\n✨ Makes a stunning gift for birthdays, anniversaries, or celebrations\nHighlights / Specifications:\n🔹 Material: Premium high-quality alloy\n🔹 Plating: Lustrous silver plating for a dazzling look\n🔹 Stone Type: Emerald-cut cubic zirconia with halo accent stones\n🔹 Design: Double twin rectangular solitaire for elegant statement\n🔹 Size/Fit: Adjustable band fits most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Double Emerald-Cut CZ Silver-Plated Ring",
+    "originalId": "215",
+    "originalSku": "MJ-218",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-218-double-emerald-cut-cz-silver-plated-ring-215",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

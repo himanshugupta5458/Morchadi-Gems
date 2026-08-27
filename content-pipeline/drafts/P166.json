@@ -1,0 +1,114 @@
+{
+  "productId": "P166",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Collection",
+      "value": "All Occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Collection: All Occasions"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Type",
+      "value": "Finger Ring",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Type: Finger Ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "rose gold-plated (polished) finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rosegold Polished"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Brass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: Premium American Diamonds"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P166.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P166/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shine bright with our DC Jewelry Heart shape Ring — a charming symbol of elegance and grace. Whether it's a special celebration or everyday style, this ring brings a subtle sparkle to your look. It's an ideal gift for your loved ones on birthdays, weddings, anniversaries, Valentine's Day, or any festive occasion.\nWhy You'll Love It:\n✨ Lightweight & comfortable for daily wear\n✨ Trendy design for girls, teens, and women of all ages\n✨ A thoughtful gift that makes moments memorable\nProduct Details:\n🔹 Brand: DC Jewelry\n🔹 Collection: All Occasions\n🔹 Type: Finger Ring\n🔹 Plating: Rosegold Polished\n🔹 Material: Brass\n🔹 Stones: Premium American Diamonds\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "DC Jewelry Heart shape Ring",
+    "originalId": "211",
+    "originalSku": "MJ-171",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-171-dc-jewelry-heart-shape-ring-211",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "brand-mismatch",
+      "detail": "Raw listing names 'DC Jewelry' as the product brand. Morchadi Gems is the only brand this shop uses — recorded here, not adopted.",
+      "sourceContext": "Brand: DC Jewelry"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

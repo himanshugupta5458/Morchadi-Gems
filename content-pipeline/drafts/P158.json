@@ -1,0 +1,108 @@
+{
+  "productId": "P158",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium, strong alloy for durability"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Luxe gold plating that stays radiant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (round-cut)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Dazzling round-cut cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "sleek wavy band with full CZ embellishment",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Sleek wavy band with full CZ embellishment"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P158.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P158/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nElevate your style with the Wavy CZ Band Gold-Plated Adjustable Ring for Women. This chic ring features a graceful wave silhouette, embellished with brilliant CZ stones along its curved band. The sophisticated design and radiant gold plating make the Wavy CZ Band Gold-Plated Adjustable Ring for Women a versatile accessory that shines from day to night, whether worn solo or stacked.\nWhy You Will Love It:\n✨ Unique wavy band for contemporary elegance\n✨ Sparkling CZ stones offer eye-catching brilliance\n✨ Comfortable adjustable fit for everyday wear\n✨ Perfect for layering, statement looks, or gifting\nHighlights / Specifications:\n🔹 Material: Premium, strong alloy for durability\n🔹 Plating: Luxe gold plating that stays radiant\n🔹 Stone Type: Dazzling round-cut cubic zirconia\n🔹 Design: Sleek wavy band with full CZ embellishment\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, stacking, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Wavy CZ Band Gold-Plated Adjustable Ring",
+    "originalId": "197",
+    "originalSku": "MJ-618",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-618-wavy-cz-band-gold-plated-adjustable-ring-197",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

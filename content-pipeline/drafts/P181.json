@@ -1,0 +1,92 @@
+{
+  "productId": "P181",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "rose gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Premium Rose Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: High-quality American Diamonds"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: Adjustable (Fits most finger sizes)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P181.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P181/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of elegance to your everyday look with this stunning DC Jewelry geometric flower adjustable ring Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.\nWhether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.\nProduct Details:\n- Plating: Premium Rose Gold\n- Stones: High-quality American Diamonds\n- Size: Adjustable (Fits most finger sizes)\n- Style: Minimal yet glamorous\n- Occasion: Daily wear, parties, gifting\nCare Instructions:\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use",
+    "referenceTitle": "DC Jewelry geometric flower adjustable ring",
+    "originalId": "478",
+    "originalSku": "MJ-199",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-199-dc-jewelry-geometric-flower-adjustable-ring-478",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "brand-mismatch",
+      "detail": "Raw listing names 'DC Jewelry' as the product brand. Morchadi Gems is the only brand this shop uses — recorded here, not adopted.",
+      "sourceContext": "DC Jewelry geometric flower adjustable ring"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

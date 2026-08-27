@@ -1,0 +1,119 @@
+{
+  "productId": "P164",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium-quality, durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rich gold plating for luxurious shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Sparkling cubic zirconia with genuine pearl accent"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pearl",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Sparkling cubic zirconia with genuine pearl accent"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "contemporary open-band with bar and pearl elements",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Contemporary open-band with bar and pearl elements"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable open design, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable open design to fit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P164.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P164/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nEmbrace feminine sophistication with the Pearl & CZ Bar Gold-Plated Ring for Women. This exquisite open-band ring features a dazzling CZ-studded bar paired with a lustrous pearl accent, creating the perfect balance of modern elegance and timeless charm. The Pearl & CZ Bar Gold-Plated Ring for Women adds a refined touch to any outfit, making it an essential piece for the contemporary woman who appreciates classic beauty.\nWhy You Will Love It:\n✨ Elegant combination of sparkling CZ stones and lustrous pearl\n✨ Modern open-band design for comfortable, adjustable wear\n✨ Versatile style perfect for both casual and formal occasions\n✨ Makes a thoughtful gift for birthdays, anniversaries, or celebrations\nHighlights / Specifications:\n🔹 Material: Premium-quality, durable alloy\n🔹 Plating: Rich gold plating for luxurious shine\n🔹 Stone Type: Sparkling cubic zirconia with genuine pearl accent\n🔹 Design: Contemporary open-band with bar and pearl elements\n🔹 Size/Fit: Adjustable open design to fit most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Pearl & CZ Bar Gold-Plated Ring",
+    "originalId": "208",
+    "originalSku": "MJ-453",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-453-pearl-cz-bar-gold-plated-ring-208",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

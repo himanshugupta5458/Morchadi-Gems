@@ -1,0 +1,108 @@
+{
+  "productId": "P161",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Durable, premium-quality alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rich gold plating ensures long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: High-quality cubic zirconia accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "bow knot with layered band structure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Stylish bow knot with layered band structure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size/Fit: Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P161.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P161/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nAdd sophisticated charm to your look with the Bow Knot CZ Gold-Plated Ring for Women. Featuring a sparkling bow knot design set with brilliant CZ stones on a chic gold-plated band, this ring is an instant style booster. The eye-catching structure makes the Bow Knot CZ Gold-Plated Ring for Women perfect for making a statement, whether you're dressing for a party, casual outing, or gifting someone special.\nWhy You Will Love It:\n✨ Unique bow knot design for a playful yet elegant touch\n✨ Studded with CZ stones for dazzling sparkle\n✨ Adjustable band for superior comfort and fit\n✨ Makes a memorable gift for any occasion\nHighlights / Specifications:\n🔹 Material: Durable, premium-quality alloy\n🔹 Plating: Rich gold plating ensures long-lasting shine\n🔹 Stone Type: High-quality cubic zirconia accents\n🔹 Design: Stylish bow knot with layered band structure\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Bow Knot CZ Gold-Plated Ring",
+    "originalId": "200",
+    "originalSku": "MJ-130",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-130-bow-knot-cz-gold-plated-ring-200",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

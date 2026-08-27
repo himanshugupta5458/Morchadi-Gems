@@ -1,0 +1,97 @@
+{
+  "productId": "P172",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Premium Gold-plated finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: American Diamond (AD) stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "double-row band with stone detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Double-row band with stone detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size & Fit: Adjustable – fits most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P172.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P172/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shine with elegance in this Rose gold-plated adjustable band ring, featuring a sleek double row of sparkling American Diamond stones. Designed for comfort and style, it's the perfect choice for daily wear, party looks, and thoughtful gifting.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: American Diamond (AD) stones\n- Design: Double-row band with stone detailing\n- Size & Fit: Adjustable – fits most finger sizes\n- Style & Use: Perfect for daily wear, parties, and gifting",
+    "referenceTitle": "Rose Gold-Plated AD Stone Band Ring",
+    "originalId": "217",
+    "originalSku": "MJ-511",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-511-rose-gold-plated-ad-stone-band-ring-217",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
