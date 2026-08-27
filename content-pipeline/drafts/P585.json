@@ -1,0 +1,108 @@
+{
+  "productId": "P585",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "Satin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "satin rose flower hair tie"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "Black & White",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "set of 2 (black & white)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set contents",
+      "value": "Set of 2",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "set of 2 (black & white)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Monochrome rosette design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Classic monochrome rosette design, pairs with any outfit"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Band type",
+      "value": "Soft stretchable elastic band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Soft stretchable elastic band, gentle on hair"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dual use",
+      "value": "Doubles as a bracelet/wrist accessory when not in hair",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Doubles as a bracelet/wrist accessory when not in hair"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P585.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P585/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹109 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elegant satin rose flower hair tie, set of 2 (black & white)\nSoft stretchable elastic band, gentle on hair\nClassic monochrome rosette design, pairs with any outfit\nPerfect for daily wear, office, college & gifting\nDoubles as a bracelet/wrist accessory when not in hair\nLightweight, no-damage grip for all hair types",
+    "referenceTitle": "Satin Rose Flower Hair Tie – Black & White Set of 2",
+    "originalId": "1055",
+    "originalSku": "MJ-524",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-524-satin-rose-flower-hair-tie-black-white-set-of-2-1055",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

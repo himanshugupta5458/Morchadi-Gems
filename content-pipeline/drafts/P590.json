@@ -1,0 +1,133 @@
+{
+  "productId": "P590",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "pink",
+        "black",
+        "white"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "Satin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Structured layered satin bow, French-style design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Layered French-style bow",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Structured layered satin bow, French-style design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clip type",
+      "value": "Alligator clip",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure alligator clip, holds all hair types"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour availability",
+      "value": "Magenta Pink, Ivory White & Classic Black",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Available in Magenta Pink, Ivory White & Classic Black"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P590.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P590-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P590-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P590-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {
+      "Color:pink": {
+        "path": "/products/P590-pink.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-pink.webp",
+        "verifiedDistinct": true
+      },
+      "Color:black": {
+        "path": "/products/P590-black.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-black.webp",
+        "verifiedDistinct": true
+      },
+      "Color:white": {
+        "path": "/products/P590-white.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-white.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹79 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Structured layered satin bow, French-style design\nSecure alligator clip, holds all hair types\nAvailable in Magenta Pink, Ivory White & Classic Black\nPerfect for daily wear, office, parties & festive styling\nElegant statement piece, great for gifting\nLightweight, comfortable all-day wear",
+    "referenceTitle": "Layered Satin Bow Hair Clip",
+    "originalId": "1060",
+    "originalSku": "MJ-392",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-392-layered-satin-bow-hair-clip-1060",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

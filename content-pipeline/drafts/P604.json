@@ -1,0 +1,108 @@
+{
+  "productId": "P604",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "Antique gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium antique gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Red meenakari detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant red meenakari detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Glass or synthetic stone set in traditional Kundan style, exact material unclear from text",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling Kundan stones, decorative ghungroo charms, and graceful chain tassels"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Decorative ghungroo & chain tassels",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Decorative ghungroo & chain tassels"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable chain closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain closure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Traditional Kundan Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Traditional Kundan Bracelet Watch"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P604.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P604/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Enhance your ethnic style with this stunning Traditional Kundan Bracelet Watch, featuring elegant red meenakari detailing, sparkling Kundan stones, decorative ghungroo charms, and graceful chain tassels. Crafted with a premium antique gold finish, this bracelet watch blends timeless Indian craftsmanship with modern elegance.\nPerfect for weddings, festivals, Navratri, Karwa Chauth, Teej, Diwali, parties, and traditional celebrations, this adjustable bracelet watch pairs beautifully with sarees, lehengas, kurtis, and Indo-western outfits.\nFeatures\n-\nPremium antique gold finish\n-\nElegant red meenakari detailing\n-\nSparkling Kundan stone work\n-\nDecorative ghungroo & chain tassels\n-\nAdjustable chain closure\n-\nLightweight & comfortable\n-\nPerfect for festive, bridal & party wear\n-\nIdeal gift for women & girls\nPackage Includes: 1 Traditional Kundan Bracelet Watch",
+    "referenceTitle": "Red Meenakari Gold Plated Ethnic Wrist Watch with Ghungroo",
+    "originalId": "1075",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/red-meenakari-gold-plated-ethnic-wrist-watch-with-ghungroo-1075",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

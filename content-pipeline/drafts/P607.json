@@ -1,0 +1,97 @@
+{
+  "productId": "P607",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "Silver-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium silver-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Glass or cubic zirconia, exact material unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "dazzling crystal-studded floral dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Baguette-cut glass or cubic zirconia, exact material unclear from text",
+      "displayTerm": "baguette-cut crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Baguette-cut crystal bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable slider closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable slider closure for a perfect fit"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Luxury Crystal Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Luxury Crystal Bracelet Watch"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P607.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P607/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shine with elegance in this Luxury Silver Crystal Bracelet Watch, crafted with a dazzling crystal-studded floral dial and a premium silver-tone finish. The sparkling baguette-cut crystal bracelet and adjustable slider closure offer both style and comfort, making it the perfect accessory for every occasion.\nWhether you're dressing up for a party, wedding, office, or a casual outing, this elegant bracelet watch adds a luxurious touch to any outfit.\nFeatures\n-\nPremium silver-tone finish\n-\nSparkling crystal-studded floral dial\n-\nBaguette-cut crystal bracelet\n-\nAdjustable slider closure for a perfect fit\n-\nLightweight & comfortable\n-\nSuitable for daily wear, office, parties & weddings\n-\nIdeal gift for women & girls\nPackage Includes: 1 Luxury Crystal Bracelet Watch",
+    "referenceTitle": "Luxury Silver Crystal Bracelet Watch for Women",
+    "originalId": "1079",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/luxury-silver-crystal-bracelet-watch-for-women-1079",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

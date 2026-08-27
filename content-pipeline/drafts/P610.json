@@ -1,0 +1,132 @@
+{
+  "productId": "P610",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "Gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "warm gold-tone finish paired with the deep red dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Treatment",
+      "value": "Anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with an anti-tarnish finish, this watch is perfect for women"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial",
+      "value": "Rich red dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a rich red dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial shape",
+      "value": "Unique oval-shaped dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Its unique oval-shaped dial and textured bracelet give it a distinctive vintage charm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Classic Roman numeral detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "classic Roman numeral detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Strap type",
+      "value": "Textured link bracelet strap",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stylish textured link bracelet strap"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement type",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry, dry place when not in use to help maintain the finish."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P610.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P610/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a statement with this elegant Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich red dial, classic Roman numeral detailing and a sleek jewellery-inspired bracelet strap. The warm gold-tone finish paired with the deep red dial creates a luxurious vintage look that instantly elevates any outfit.\nDesigned with an anti-tarnish finish, this watch is perfect for women who love elegant accessories with a timeless, statement-making appeal. Its unique oval-shaped dial and textured bracelet give it a distinctive vintage charm, making it more than just a timepiece—it's a stylish piece of jewellery.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 💛 Anti-tarnish gold-tone finish\n- ❤️ Elegant red dial\n- 🕰️ Classic Roman numeral detailing\n- 🔗 Stylish textured link bracelet strap\n- ⌚ Quartz movement\n- 💎 Jewellery-inspired statement design\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal for gifting\n- 🌸 Suitable for everyday wear, parties, dates & special occasions\nPerfect For\nOffice wear, college looks, festive outfits, parties, casual outings, date nights and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry, dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Red Dial Bracelet Watch for Women",
+    "originalId": "1082",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1082",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

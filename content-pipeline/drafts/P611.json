@@ -1,0 +1,110 @@
+{
+  "productId": "P611",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "Anti-tarnish gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial",
+      "value": "Emerald green dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a beautiful emerald green dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial shape",
+      "value": "Leaf-shaped dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "unique leaf-shaped dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "Pearl accents (natural or imitation unclear from text)",
+      "displayTerm": "pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a unique pearl-detail chain bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement type",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P611.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P611/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of vintage elegance to your jewellery collection with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a beautiful emerald green dial and a unique pearl-detail chain bracelet. The elegant combination of gold, green and pearl accents creates a luxurious, feminine look that stands out effortlessly.\nDesigned with a jewellery-inspired bracelet and anti-tarnish finish, this watch is perfect for anyone who loves statement accessories with a classic vintage charm. The unique leaf-shaped dial and delicate pearl detailing make it a beautiful choice for both everyday styling and special occasions.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Elegant emerald green dial\n- 🤍 Pearl-detail bracelet design\n- 🌿 Unique leaf-shaped dial\n- ⌚ Quartz movement\n- 🔗 Stylish statement chain bracelet\n- 💎 Combines the look of a watch with a jewellery accessory\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Beautiful gifting option for women\nPerfect For\nFestive occasions, parties, date nights, weddings, office wear, casual outings and everyday styling.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Pearl Bracelet Watch for Women",
+    "originalId": "1083",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-pearl-bracelet-watch-for-women-1083",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

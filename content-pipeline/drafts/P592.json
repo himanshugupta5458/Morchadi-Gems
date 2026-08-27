@@ -1,0 +1,87 @@
+{
+  "productId": "P592",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "Satin Rose Hair Ties (Set of 2); Satin Bow Hair Clip – Ivory; Satin Scrunchies (Set of 4 – Assorted Colours); Sunfeast Dark Fantasy Choco Fills; Hershey's Kisses – Hazelnut 'n' Cookies; Naliao Natural Collection Pomegranate Sheet Face Mask",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "What's Inside:\n- Satin Rose Hair Ties (Set of 2)\n- Satin Bow Hair Clip – Ivory\n- Satin Scrunchies (Set of 4 – Assorted Colours)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Natural Collection Pomegranate Sheet Face Mask"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "Kraft gift box with dried flower fillers",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Beautifully packed in a kraft gift box with dried flower fillers for that premium unboxing feel."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P592.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P592/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹949 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "A thoughtfully curated gift hamper packed with pretty accessories, indulgent treats, and a relaxing skincare treat — perfect for birthdays, anniversaries, Rakhi, or just because. Beautifully packed in a kraft gift box with dried flower fillers for that premium unboxing feel.\nWhat's Inside:\n- Satin Rose Hair Ties (Set of 2)\n- Satin Bow Hair Clip – Ivory\n- Satin Scrunchies (Set of 4 – Assorted Colours)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Natural Collection Pomegranate Sheet Face Mask\nWhy She'll Love It:\n- Handpicked mix of beauty, self-care & sweet treats\n- Ready-to-gift packaging, no extra wrapping needed\n- Ideal for birthdays, anniversaries, Rakhi, Karwa Chauth, or a surprise \"just because\" gift\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Satin Scrunchie & Chocolate Hamper for Her",
+    "originalId": "1062",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/satin-scrunchie-chocolate-hamper-for-her-1062",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    },
+    {
+      "type": "brand-mismatch",
+      "detail": "Third-party snack brand named as a hamper content item, not a Morchadi Gems product",
+      "sourceContext": "Sunfeast Dark Fantasy Choco Fills"
+    },
+    {
+      "type": "brand-mismatch",
+      "detail": "Third-party confectionery brand named as a hamper content item, not a Morchadi Gems product",
+      "sourceContext": "Hershey's Kisses – Hazelnut 'n' Cookies"
+    },
+    {
+      "type": "brand-mismatch",
+      "detail": "Third-party skincare brand named as a hamper content item, not a Morchadi Gems product",
+      "sourceContext": "Naliao Natural Collection Pomegranate Sheet Face Mask"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,97 @@
+{
+  "productId": "P602",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "Glass or synthetic stone set in traditional Kundan style, exact material unclear from text",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant Kundan & ruby stone detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Ruby-coloured stone or glass, exact material unclear from text",
+      "displayTerm": "ruby-colored accents",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "rich ruby-colored accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "Antique gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium antique gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable chain closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain closure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Designer Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Designer Bracelet Watch"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P602.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P602/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Celebrate timeless elegance with this exquisite Antique Gold Kundan Bracelet Watch, beautifully crafted with intricate floral motifs, sparkling white stones, and rich ruby-colored accents. Inspired by traditional Indian jewelry, this designer watch is perfect for weddings, festive occasions, and ethnic celebrations.\nIts adjustable chain provides a comfortable fit, while the luxurious antique finish makes it a statement accessory for every jewelry collection.\nFeatures\n-\nPremium antique gold finish\n-\nElegant Kundan & ruby stone detailing\n-\nIntricate traditional floral craftsmanship\n-\nLightweight & comfortable to wear\n-\nAdjustable chain closure\n-\nIdeal for weddings, festivals & parties\n-\nPerfect gift for women & girls\nPackage Includes: 1 Designer Bracelet Watch",
+    "referenceTitle": "Traditional Antique Gold Kundan Bracelet Watch for Women |",
+    "originalId": "1072",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-antique-gold-kundan-bracelet-watch-for-women-1072",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

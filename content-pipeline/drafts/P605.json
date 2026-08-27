@@ -1,0 +1,141 @@
+{
+  "productId": "P605",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Type: Bracelet Watch"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "Alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "Antique Gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Finish: Antique Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Green Meenakari with Kundan Stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Green Meenakari with Kundan Stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Glass or crystal stones in Kundan-style setting, exact material unclear from text",
+      "displayTerm": "Kundan & Crystal Stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Kundan & Crystal Stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial shape",
+      "value": "Round",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Dial Shape: Round"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable Chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Closure: Adjustable Chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Country of origin",
+      "value": "India",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Country of Origin: India"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Decorative ghungroo & chain tassels",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Decorative ghungroo & chain tassels"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P605.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P605/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Enhance your traditional look with this elegant Kundan bracelet watch featuring green meenakari detailing, sparkling Kundan stones, decorative ghungroo charms, and stylish chain tassels. Designed with an adjustable chain for a comfortable fit, this beautiful ethnic watch is perfect for weddings, festivals, parties, and gifting.\nProduct Details\n-\nProduct Name: Traditional Kundan Bracelet Watch\n-\nType: Bracelet Watch\n-\nMaterial: Alloy\n-\nFinish: Antique Gold\n-\nDesign: Green Meenakari with Kundan Stones\n-\nStone Type: Kundan & Crystal Stones\n-\nDial Shape: Round\n-\nClosure: Adjustable Chain\n-\nOccasion: Wedding, Festive, Party, Traditional\n-\nSuitable For: Women & Girls\n-\nCountry of Origin: India\nKey Features\n-\nElegant Kundan craftsmanship\n-\nGreen meenakari detailing\n-\nDecorative ghungroo & chain tassels\n-\nAdjustable chain closure\n-\nLightweight & comfortable\n-\nPerfect for festive & bridal wear\n-\nExcellent gifting choice",
+    "referenceTitle": "Green Meenakari Gold Plated Ethnic Wrist Watch with Ghungroo",
+    "originalId": "1076",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/green-meenakari-gold-plated-ethnic-wrist-watch-with-ghungroo-1076",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

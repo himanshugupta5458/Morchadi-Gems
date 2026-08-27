@@ -1,0 +1,106 @@
+{
+  "productId": "P588",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "size",
+      "values": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "Satin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "satin scrunchies, soft ruffled volume, set of 4 colors"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set contents",
+      "value": "Set of 4",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "satin scrunchies, soft ruffled volume, set of 4 colors"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colours",
+      "value": "Blush Pink, Lilac Shimmer, Classic Black, Ivory White (set of 4)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Colors: Blush Pink, Lilac Shimmer, Classic Black, Ivory White"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Hair-care benefit",
+      "value": "Reduces frizz, breakage & tangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gentle on hair, reduces frizz, breakage & tangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dual use",
+      "value": "Doubles as a wrist accessory when not tying hair",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Doubles as a wrist accessory when not tying hair"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P588.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P588/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "satin scrunchies, soft ruffled volume, set of 4 colors\nGentle on hair, reduces frizz, breakage & tangles\nColors: Blush Pink, Lilac Shimmer, Classic Black, Ivory White\nPerfect for thick, long or curly hair — secure no-damage hold\nGreat for daily wear, gifting & sleepover sets\nDoubles as a wrist accessory when not tying hair",
+    "referenceTitle": "Satin Scrunchies Set of 4",
+    "originalId": "1058",
+    "originalSku": "MJ-527",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-527-satin-scrunchies-set-of-4-1058",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

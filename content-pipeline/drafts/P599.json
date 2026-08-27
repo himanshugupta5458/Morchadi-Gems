@@ -1,0 +1,105 @@
+{
+  "productId": "P599",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "Ruby & Crystal Pendant Necklace (Gold Tone); Multicolor Gemstone tulip Bracelet; Gold-Tone Charm anklet – Star & Flower Charms; Personalized Initial Ring (Silver Tone, Gift Box Included); Gold-Tone Hoop Earrings; Satin Rose Scrunchie – Black; Printed Satin Bow Hair Clip – Pink; Pink Hair Claw Clip; LED Fairy Light String (Decorative)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "What's Inside:\n- Ruby & Crystal Pendant Necklace (Gold Tone)\n- Multicolor Gemstone tulip Bracelet\n- Gold-Tone Charm anklet– Star & Flower Charms\n- Personalized Initial Ring (Silver Tone, Gift Box Included)\n- Gold-Tone Hoop Earrings\n- Satin Rose Scrunchie – Black\n- Printed Satin Bow Hair Clip – Pink\n- Pink Hair Claw Clip\n- LED Fairy Light String (Decorative)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Coloured glass or synthetic stone, exact material unclear from text",
+      "displayTerm": "Ruby & Crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ruby & Crystal Pendant Necklace (Gold Tone)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "Assorted coloured glass or synthetic gemstones, exact material unclear from text",
+      "displayTerm": "Multicolor Gemstone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Multicolor Gemstone tulip Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Personalization",
+      "value": "Engravable initial on ring",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Personalized Initial Ring (Silver Tone, Gift Box Included)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "Pink gift box with fairy lights and printed satin bow",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "packed in a pink gift box with fairy lights and a printed satin bow"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P599.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P599/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹1549 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": true,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "A lavish, fully-loaded jewellery hamper packed in a pink gift box with fairy lights and a printed satin bow — designed to feel like a true celebration in a box. Perfect for birthdays, anniversaries, or a milestone surprise.\nWhat's Inside:\n- Ruby & Crystal Pendant Necklace (Gold Tone)\n- Multicolor Gemstone tulip Bracelet\n- Gold-Tone Charm anklet– Star & Flower Charms\n- Personalized Initial Ring (Silver Tone, Gift Box Included)\n- Gold-Tone Hoop Earrings\n- Satin Rose Scrunchie – Black\n- Printed Satin Bow Hair Clip – Pink\n- Pink Hair Claw Clip\n- LED Fairy Light String (Decorative)\nWhy She'll Love It:\n- A complete jewellery wardrobe — necklace, 1 bracelets, 1 anklet, ring & earrings in one box\n- Personalized initial ring adds a special, one-of-a-kind touch\n- Styled with fairy lights and a satin bow for a premium unboxing moment\n- Perfect for birthdays, anniversaries, or a \"you deserve this\" surprise gift\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Deluxe Jewelry Gift Hamper for her",
+    "originalId": "1069",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/deluxe-jewelry-gift-hamper-for-her-1069",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
