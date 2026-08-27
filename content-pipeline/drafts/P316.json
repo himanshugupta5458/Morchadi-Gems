@@ -1,0 +1,108 @@
+{
+  "productId": "P316",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "Kundan-style stone setting, exact material unclear from text",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium Kundan stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "enamel work",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with intricate enamel work"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "pearl drops",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "lustrous pearl drops"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "multi-strand green beaded design interwoven with pearls",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The necklace features multiple strands of green beads interwoven with pearls"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "gold-tone detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted with high-quality materials and gold-tone detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set includes",
+      "value": "matching earrings with square enamel design, Kundan stones and pearl danglers",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The matching earrings mirror the same detailed square enamel design, embellished with Kundan stones and pearl danglers."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P316.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P316/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹799 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Add a touch of regal elegance to your ethnic look with this stunning green Kundan choker necklace set. Designed with intricate enamel work, premium Kundan stones, and lustrous pearl drops, this jewelry set combines tradition with luxury. The necklace features multiple strands of green beads interwoven with pearls, creating a rich and graceful silhouette.\n- The matching earrings mirror the same detailed square enamel design, embellished with Kundan stones and pearl danglers. Perfect for weddings, festive celebrations, haldi–mehndi functions, and traditional outfits, this choker set enhances both classic and contemporary styles.\n- Crafted with high-quality materials and gold-tone detailing, this set is comfortable to wear and ideal for bridal, bridesmaid, and party looks.\n- green Kundan choker, pearl choker set, enamel jewelry, traditional Indian necklace, bridal choker set, festive jewelry, handcrafted jewelry.",
+    "referenceTitle": "Green Kundan Pearl Choker Necklace Set",
+    "originalId": "738",
+    "originalSku": "MJ-331",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-331-green-kundan-pearl-choker-necklace-set-738",
+    "originalCategories": [
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

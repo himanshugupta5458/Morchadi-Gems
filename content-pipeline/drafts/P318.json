@@ -1,0 +1,88 @@
+{
+  "productId": "P318",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning gold-plated heart necklace"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "series of mini heart motifs linked seamlessly",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "designed with a beautiful series of mini heart motifs linked seamlessly for a soft, feminine look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "textured, reflective finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Each heart features a textured, reflective finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and durable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight, durable, and crafted with a premium gold-tone finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P318.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P318/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Enhance your everyday style with this stunning gold-plated heart necklace, designed with a beautiful series of mini heart motifs linked seamlessly for a soft, feminine look. Each heart features a textured, reflective finish that adds a subtle sparkle, making this piece perfect for both casual wear and elegant occasions.\n- Lightweight, durable, and crafted with a premium gold-tone finish, this necklace sits comfortably on the neckline and pairs effortlessly with dresses, tops, and office wear. Whether you're looking for a thoughtful gift or an elegant everyday accessory, this heart link necklace adds charm and sophistication to any outfit.\n- Keywords included: gold heart necklace, everyday wear jewelry, minimalist gold necklace, women's heart chain, trendy gold jewelry, lightweight necklace.",
+    "referenceTitle": "Gold-Plated Heart Necklace",
+    "originalId": "740",
+    "originalSku": "MJ-310",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-310-gold-plated-heart-necklace-740",
+    "originalCategories": [
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

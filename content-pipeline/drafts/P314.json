@@ -1,0 +1,118 @@
+{
+  "productId": "P314",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from premium glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "red",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "each bangle showcases a vibrant red hue"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "golden bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "beautifully adorned with shimmering golden bead accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable for extended daily or festive wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Construction",
+      "value": "handcrafted",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted for a flawless, elegant look"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P314.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P314/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P314-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P314/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P314-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P314/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nMake a bold statement with this radiant set of Colorful Festival RainDrop Glass Bangles , beautifully adorned with shimmering golden bead accents. Crafted from premium glass, each bangle showcases a vibrant red hue, symbolizing joy and tradition—perfect for weddings, festivals, parties, and everyday ethnic wear.\nHandcrafted for durability and lightweight comfort, these bangles add a dazzling touch to sarees, lehengas, salwar suits, and indo-western outfits. The golden bead detailing brings subtle sparkle, making this set a stunning accessory for bridal jewelry, festive looks, or thoughtful gifting.\nKey Features:\n- Premium red glass bangles with intricate golden bead embellishments\n- Handcrafted for a flawless, elegant look\n- Lightweight and comfortable for extended daily or festive wear\n- Ideal for weddings, festivals, parties, and gifting\n- Complements both traditional and modern Indian attire",
+    "referenceTitle": "Set of 12 Colorful Festival RainDrop Glass Bangles",
+    "originalId": "732",
+    "originalSku": "MJ-529",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-529-set-of-12-colorful-festival-raindrop-glass-bangles-732",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P323",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these stunning gold-plated pink crystal flower stud earrings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pastel pink crystal petals, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring six faceted petal stones in a soft pastel pink shade and a brilliant crystal center"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "flower stud with gold-detailed edges",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The gold-detailed edges enhance the luxurious look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable, these floral studs pair beautifully"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P323.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P323/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P323-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P323/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P323-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P323/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P323-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P323/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P323-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P323/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Bring a touch of elegance and sparkle to your everyday style with these stunning gold-plated pink crystal flower stud earrings. Featuring six faceted petal stones in a soft pastel pink shade and a brilliant crystal center, these earrings radiate feminine charm and sophistication.\n- The gold-detailed edges enhance the luxurious look, making them perfect for both casual outings and festive occasions. Lightweight and comfortable, these floral studs pair beautifully with Western, Indo-western, and traditional outfits, adding a subtle yet eye-catching glow.\n- Keywords included: pink flower earrings, gold-plated crystal studs, floral earrings for women, pastel pink stone earrings, lightweight daily wear jewelry, festive stud earrings.",
+    "referenceTitle": "Gold-Plated Pink Crystal Flower Stud Earrings",
+    "originalId": "749",
+    "originalSku": "MJ-317",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-317-gold-plated-pink-crystal-flower-stud-earrings-749",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

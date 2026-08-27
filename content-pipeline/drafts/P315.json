@@ -1,0 +1,99 @@
+{
+  "productId": "P315",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "mint-colored stone, exact type unspecified in text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "the choker is adorned with alternating mint stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted with premium silver plating and high-shine stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Construction",
+      "value": "hand-crafted design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a beautifully hand-crafted design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set includes",
+      "value": "matching earrings",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The matching earrings complete the ensemble"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P315.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P315/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elevate your occasion look with this stunning mint green and white CZ choker necklace set. Featuring a beautifully hand-crafted design, the choker is adorned with alternating mint stones and sparkling cubic zirconia, creating a fresh, luxurious glow. The matching earrings complete the ensemble, making it perfect for weddings, parties, festive events, and bridal wear.\n- Crafted with premium silver plating and high-shine stones, this jewelry set sits comfortably on the neckline and adds instant elegance to any outfit. Ideal for gifting or enhancing your traditional or contemporary look.\n- mint choker set, CZ necklace set, bridal jewelry, party wear jewelry, silver-plated choker, mint green stones, festive jewelry set.",
+    "referenceTitle": "Mint Green & White CZ Choker Necklace Set",
+    "originalId": "737",
+    "originalSku": "MJ-434",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-434-mint-green-white-cz-choker-necklace-set-737",
+    "originalCategories": [
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

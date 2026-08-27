@@ -1,0 +1,89 @@
+{
+  "productId": "P332",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "black gemstone, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant Black gemstone statement ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "silver-finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium silver-finish with classic detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "minimal yet bold statement design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Minimal yet bold design for effortless styling"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable for daily wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P332.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P332/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹35 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elegant Black gemstone statement ring\n- Premium silver-finish with classic detailing\n- Minimal yet bold design for effortless styling\n- Lightweight & comfortable for daily wear\n- Perfect for parties, office & evening looks\n- Pairs beautifully with western & ethnic outfits\n- Ideal gifting choice for women",
+    "referenceTitle": "Black Stone Silver Ring",
+    "originalId": "758",
+    "originalSku": "MJ-121",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-121-black-stone-silver-ring-758",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'rings' from source title ('Black Stone Silver Ring'); raw block did not supply one",
+    "raw block's exportNotes flags this as a duplicate title with template 755 (= P329, also 'Black Stone Silver Ring', same bullet copy) — likely two distinct physical rings sharing template description text; owner should differentiate from photographs at review"
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

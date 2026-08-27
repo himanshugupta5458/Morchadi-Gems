@@ -1,0 +1,103 @@
+{
+  "productId": "P325",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these stunning silver-plated blue and crystal floral stud earrings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a cluster of deep navy blue stones paired with sparkling cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "deep navy blue stone, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a cluster of deep navy blue stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "radiant floral pattern",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these earrings create a radiant floral pattern that shines beautifully in any light"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight yet luxurious"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P325.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P325/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P325-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P325/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Add a touch of sophistication to your style with these stunning silver-plated blue and crystal floral stud earrings. Featuring a cluster of deep navy blue stones paired with sparkling cubic zirconia, these earrings create a radiant floral pattern that shines beautifully in any light.\n- Lightweight yet luxurious, they are perfect for parties, festive occasions, office wear, and everyday elegance. Their versatile color combination pairs effortlessly with both Western and ethnic outfits, making them an essential addition to any jewelry collection.\n- Keywords included: blue stud earrings, floral crystal studs, silver-plated earrings, CZ cluster earrings, party wear jewelry, elegant women's earrings, navy blue stone studs.",
+    "referenceTitle": "Silver-Plated Blue & Crystal Floral Stud Earrings",
+    "originalId": "751",
+    "originalSku": "MJ-562",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-562-silver-plated-blue-crystal-floral-stud-earrings-751",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

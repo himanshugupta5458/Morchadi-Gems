@@ -1,0 +1,112 @@
+{
+  "productId": "P317",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "delicate heart charm on a fine chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with a delicate heart charm and a fine chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable to wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "golden",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Golden"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set includes",
+      "value": "1 necklace, 1 bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Necklace: 1 Piece"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P317.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P317-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P317-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P317-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P317-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of love and elegance to your everyday look with this Minimal Heart Necklace & Bracelet Set. Designed with a delicate heart charm and a fine chain, this set offers a classy and minimal style that never goes out of trend.\nLightweight and comfortable to wear, it's perfect for daily use as well as special occasions. Whether you're gifting it to someone special or styling it for yourself, this heart set adds a subtle charm to any outfit.\n✨ Minimal & elegant design\n✨ Lightweight and comfortable\n✨ Perfect for daily wear and gifting\nProduct Details:\n- Color: Golden\n- Necklace: 1 Piece\n- Bracelet: 1 Piece",
+    "referenceTitle": "Minimal Heart Necklace & Bracelet Set",
+    "originalId": "739",
+    "originalSku": "MJ-413",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-413-minimal-heart-necklace-bracelet-set-739",
+    "originalCategories": [
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,103 @@
+{
+  "productId": "P326",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these stunning silver-plated pink crystal drop earrings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "with a sparkling round CZ top"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pastel pink marquise-cut stone, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The lower section features multiple pastel pink marquise-cut stones arranged in an elegant, airy pattern"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "teardrop frame bordered by CZ accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a beautifully detailed teardrop frame"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "high-polish silver finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "the high-polish silver finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P326.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P326/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P326-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P326/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Make a graceful statement with these stunning silver-plated pink crystal drop earrings, designed with a sparkling round CZ top and a beautifully detailed teardrop frame. The lower section features multiple pastel pink marquise-cut stones arranged in an elegant, airy pattern, bordered by shimmering CZ accents for added brilliance.\n- Lightweight yet eye-catching, these earrings are perfect for weddings, parties, festive celebrations, or elevating an everyday look with a touch of sophistication. The soft pink tones paired with the high-polish silver finish create a chic and feminine accessory suitable for both Western and ethnic outfits.\n- pink drop earrings, silver-plated earrings, CZ earrings for women, pastel stone earrings, marquise cut earrings, party wear jewelry, elegant statement earrings.",
+    "referenceTitle": "Silver-Plated Pink Drop Earrings with CZ Stones",
+    "originalId": "752",
+    "originalSku": "MJ-568",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-568-silver-plated-pink-drop-earrings-with-cz-stones-752",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

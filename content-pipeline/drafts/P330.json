@@ -1,0 +1,88 @@
+{
+  "productId": "P330",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "maroon gemstone, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant Maroon gemstone statement ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "silver-finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium silver-finish with classic detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "minimal yet bold statement design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Minimal yet bold design for effortless styling"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable for daily wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P330.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P330/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹35 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elegant Maroon gemstone statement ring\n- Premium silver-finish with classic detailing\n- Minimal yet bold design for effortless styling\n- Lightweight & comfortable for daily wear\n- Perfect for parties, office & evening looks\n- Pairs beautifully with western & ethnic outfits\n- Ideal gifting choice for women",
+    "referenceTitle": "Vintage Stone Silver Ring",
+    "originalId": "756",
+    "originalSku": "MJ-614",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-614-vintage-stone-silver-ring-756",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'rings' from source title ('Vintage Stone Silver Ring'); raw block did not supply one"
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

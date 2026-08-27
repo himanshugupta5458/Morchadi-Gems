@@ -1,0 +1,106 @@
+{
+  "productId": "P324",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these stunning gold-plated mint green floral stud earrings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "soft mint stones with a crystal center, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with soft mint stones arranged around a sparkling crystal center"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The gold detailing enhances the premium look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable for everyday wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P324.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P324/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P324-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P324/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P324-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P324/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P324-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P324/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Add a refreshing pop of color to your jewelry collection with these stunning gold-plated mint green floral stud earrings. Designed with soft mint stones arranged around a sparkling crystal center, these earrings bring a perfect blend of elegance and subtle glamour. The gold detailing enhances the premium look, making them ideal for both casual and festive styling.\n- Lightweight and comfortable for everyday wear, these studs pair beautifully with Western, Indo-western, and ethnic outfits. Their fresh, modern appeal makes them a versatile accessory for brunch outings, office wear, celebrations, and gifting.\n- Keywords included: mint green earrings, floral stud earrings, gold-plated studs, crystal center earrings, pastel jewelry for women, lightweight daily wear studs, party wear earrings.",
+    "referenceTitle": "Gold-Plated Mint Green Floral Stud Earrings",
+    "originalId": "750",
+    "originalSku": "MJ-313",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-313-gold-plated-mint-green-floral-stud-earrings-750",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
