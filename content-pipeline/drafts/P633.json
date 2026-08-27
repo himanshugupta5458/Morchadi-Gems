@@ -1,0 +1,101 @@
+{
+  "productId": "P633",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "emerald-cut green cubic zirconia, octagon bezel setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Emerald-cut green cubic zirconia, octagon bezel setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Curb chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Curb chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1.7cm x 1.3cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1.7cm x 1.3cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P633.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P633/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P633-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P633/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P633-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P633/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A rich emerald-cut green stone set in a bold octagon bezel, finished with a beveled gold edge for extra dimension. This pendant has a slightly vintage, jewel-box feel, with the deep green stone glowing against the warm gold frame. It hangs from a fine curb chain, making it easy to wear on its own or layer with other necklaces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it keeps its shine through daily wear.\nRich in color and detail, this necklace is a striking everyday piece that also makes a memorable gift.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Emerald-cut green cubic zirconia, octagon bezel setting\n- Chain: Curb chain, adjustable length\n- Pendant size: Approx. 1.7cm x 1.3cm",
+    "referenceTitle": "Emerald Green Stone Necklace",
+    "originalId": "1105",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/emerald-green-stone-necklace-1105",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

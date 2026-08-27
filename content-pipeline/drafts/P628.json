@@ -1,0 +1,92 @@
+{
+  "productId": "P628",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Chain",
+      "value": "gold-tone chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Delicate gold-tone chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia crystals, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling crystal-encrusted letter \"A\" pendant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant design",
+      "value": "Initial 'A' pendant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant initial \"A\" pendant"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P628.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P628/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P628-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P628/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P628-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P628/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": null,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a personal touch to your everyday style with our elegant A Letter Necklace. Featuring a delicate gold-tone chain and a sparkling crystal-encrusted letter \"A\" pendant, this necklace is a beautiful choice for celebrating your name, initials, or someone special.\nDesigned to be effortlessly elegant, it pairs beautifully with both everyday outfits and special occasions. A thoughtful gift for birthdays, anniversaries, bridesmaids, or simply a little treat for yourself.\nDetails:\n- Elegant initial \"A\" pendant\n- Sparkling stone detailing\n- Delicate gold-tone chain\n- Perfect for everyday wear and gifting\n- Minimal, feminine & timeless design",
+    "referenceTitle": "A Letter Necklace",
+    "originalId": "1100",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/a-letter-necklace-1100",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "personalized set to null: raw content markets 'a personal touch' and 'celebrating your name, initials' but the raw block defines a single fixed 'A' pendant with no variants for a customer-chosen letter — no actual naming/engraving mechanism found in source, ambiguous whether this is genuinely personalizable."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,108 @@
+{
+  "productId": "P621",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant gold-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial colour",
+      "value": "Green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich green dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial shape",
+      "value": "Square",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The structured square dial gives the watch a chic retro-inspired appearance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Bracelet material",
+      "value": "mesh (base material not specified)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Fine mesh bracelet strap"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P621.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P621/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Give your everyday look a sophisticated upgrade with this Vintage Gold Green Square Dial Mesh Bracelet Watch, featuring a rich green dial, elegant detailing and a sleek gold-tone mesh bracelet.\nThe structured square dial gives the watch a chic retro-inspired appearance, while the fine mesh strap adds a delicate and polished finish. Its versatile design makes it perfect for styling with both western and traditional outfits.\nProduct Highlights\n-\n✨ Vintage-inspired square dial watch\n-\n💛 Elegant gold-tone finish\n-\n💚 Rich green dial\n-\n🔗 Fine mesh bracelet strap\n-\n⌚ Quartz movement\n-\n💎 Chic jewellery-inspired design\n-\n👗 Perfect for ethnic and western outfits\n-\n✨ Elegant everyday accessory\n-\n🎁 Ideal gifting option for women\n-\n💫 Suitable for casual and special occasions\nPerfect For\nOffice wear, college, casual outings, brunches, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Gold Green Square Dial Mesh Bracelet Watch",
+    "originalId": "1093",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-gold-green-square-dial-mesh-bracelet-watch-1093",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

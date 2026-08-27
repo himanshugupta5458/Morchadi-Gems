@@ -1,0 +1,119 @@
+{
+  "productId": "P623",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial colour",
+      "value": "Emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant deep emerald green dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "green glass or cubic zirconia stones, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Oval link chain embedded with green stone accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Open-oval link chain strap",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "distinctive open-oval link chain strap"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain extension",
+      "value": "Delicate adjustable chain extension",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Delicate adjustable chain extension"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P623.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P623/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich emerald green dial, delicate stone accents, and a distinctive open-oval link chain strap. The deep green dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.\nIts petite round dial and artistic oval-link bracelet embellished with matching green crystal studs give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.\nProduct Highlights\n✨ Vintage-inspired bracelet watch\n💛 Anti-tarnish gold-tone finish\n💚 Elegant deep emerald green dial\n💎 Oval link chain embedded with green stone accents\n🔗 Delicate adjustable chain extension\n⌚ Quartz movement\n✨ Jewellery-inspired statement bracelet design\n👗 Perfect for ethnic and western outfits\n🎁 Ideal gifting option for women\n✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings, and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Oval Link Emerald Dial Bracelet Watch",
+    "originalId": "1095",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-oval-link-emerald-dial-bracelet-watch-1095",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

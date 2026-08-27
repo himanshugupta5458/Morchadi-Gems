@@ -1,0 +1,95 @@
+{
+  "productId": "P632",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "emerald-cut green cubic zirconia, four-prong gold setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Emerald-cut green cubic zirconia, four-prong gold setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1.8cm x 1cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1.8cm x 1cm"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P632.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P632/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P632-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P632/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A sleek emerald-cut green stone set in a classic four-prong gold mounting, this pendant brings a touch of vintage-inspired elegance to everyday wear. The clean, rectangular baguette cut lets the deep green stone take center stage, while the fine gold chain keeps the overall look light and effortless. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through daily wear.\nUnderstated yet striking, this necklace is perfect for layering or wearing solo as a refined everyday staple — a beautiful gift for any occasion.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Emerald-cut green cubic zirconia, four-prong gold setting\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 1.8cm x 1cm",
+    "referenceTitle": "Emerald Green Baguette Necklace",
+    "originalId": "1104",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/emerald-green-baguette-necklace-1104",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,95 @@
+{
+  "productId": "P631",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "faceted emerald-green cubic zirconia, beaded gold bezel setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Faceted emerald-green cubic zirconia, beaded gold bezel setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1cm heart",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1cm heart"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P631.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P631/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P631-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P631/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A statement-making emerald green heart, faceted to catch the light from every angle and framed with a delicate gold beaded border. This pendant hangs from a fine gold chain, making it the perfect focal point whether worn alone or layered with other pieces. Crafted in 18K gold-plated stainless steel, it's designed to resist tarnish and water damage, so it stays radiant with everyday wear.\nBold yet romantic, this necklace makes a thoughtful gift for anniversaries, birthdays, or just because — and it's an easy way to add a pop of color to any outfit.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Faceted emerald-green cubic zirconia, beaded gold bezel setting\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 1cm heart",
+    "referenceTitle": "Green Heart Pendant Necklace",
+    "originalId": "1103",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/green-heart-pendant-necklace-1103",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

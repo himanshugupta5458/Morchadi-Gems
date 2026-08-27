@@ -1,0 +1,90 @@
+{
+  "productId": "P629",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Pendant design",
+      "value": "heart-shaped aqua blue pendant, gold frame",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "heart-shaped aqua blue pendant framed in gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant gold-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain",
+      "value": "Delicate beaded chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Delicate beaded chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P629.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P629-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P629-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of color and romance to your jewellery collection with our Aqua Blue Heart Necklace. Featuring a beautiful heart-shaped aqua blue pendant framed in gold, paired with a delicate beaded chain, this piece is effortlessly elegant and eye-catching.\nThe soft blue heart adds a dreamy pop of color, making it perfect for everyday styling, date nights, or gifting someone special.\n- Heart-shaped aqua blue pendant\n- Elegant gold-tone finish\n- Delicate beaded chain\n- Romantic and feminine design\n- Perfect for everyday wear and gifting",
+    "referenceTitle": "Aqua Blue Heart Necklace",
+    "originalId": "1101",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/aqua-blue-heart-necklace-1101",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

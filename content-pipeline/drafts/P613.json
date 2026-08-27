@@ -1,0 +1,119 @@
+{
+  "productId": "P613",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial colour",
+      "value": "Green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant deep green dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial markers",
+      "value": "Roman numeral",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Classic Roman numeral markers"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Rectangular-link bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sleek rectangular-link bracelet strap"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dial shape",
+      "value": "Oval",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The compact oval-shaped dial and structured bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P613.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P613/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your everyday style with this elegant Vintage Anti-Tarnish Gold Bracelet Watch, featuring a sophisticated deep green dial, classic Roman numeral detailing and a sleek rectangular-link bracelet. The combination of the rich green dial and gold-tone finish gives this watch a timeless, luxurious look.\nDesigned with a jewellery-inspired vintage aesthetic, this watch is perfect for women who love elegant and statement-making accessories. The compact oval-shaped dial and structured bracelet make it easy to pair with both ethnic and western outfits.\nProduct Highlights\n- ✨ Vintage-inspired watch design\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Elegant deep green dial\n- 🕰️ Classic Roman numeral markers\n- 🔗 Sleek rectangular-link bracelet strap\n- ⌚ Quartz movement\n- 💎 Elegant jewellery-inspired appearance\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college looks, casual outings, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Bracelet Watch for Women",
+    "originalId": "1085",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-bracelet-watch-for-women-1085",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
