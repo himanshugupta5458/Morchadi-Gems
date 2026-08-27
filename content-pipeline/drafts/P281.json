@@ -4,8 +4,24 @@
   "category": "bangles",
   "subcategory": null,
   "variants": [
-    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
-    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -13,15 +29,21 @@
       "value": "glass",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Material: Glass" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Glass"
+      },
+      "confirmed": true
     },
     {
       "label": "Net Quantity",
       "value": "2 bangles (1 pair)",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Quantity: 2 bangles (1 pair)" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quantity: 2 bangles (1 pair)"
+      },
       "confirmed": false
     },
     {
@@ -29,7 +51,10 @@
       "value": "unspecified stones - material unclear from text",
       "displayTerm": "stones",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "traditional design with embedded stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "traditional design with embedded stones"
+      },
       "confirmed": false
     },
     {
@@ -37,7 +62,10 @@
       "value": "stylish, traditional festive design",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Stylish design suitable for festive and daily wear" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stylish design suitable for festive and daily wear"
+      },
       "confirmed": false
     },
     {
@@ -45,7 +73,10 @@
       "value": "available in multiple colors",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Available in multiple colors to match your outfits" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Available in multiple colors to match your outfits"
+      },
       "confirmed": false
     }
   ],

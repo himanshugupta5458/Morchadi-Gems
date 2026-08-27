@@ -23,7 +23,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Crafted from high-quality glass"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Net quantity",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Lightweight and comfortable for extended wear"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Occasion",

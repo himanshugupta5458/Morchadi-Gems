@@ -4,7 +4,14 @@
   "category": "rings",
   "subcategory": "anti-tarnish",
   "variants": [
-    { "optionName": "Size for rings", "values": ["6", "7", "8"] }
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -12,7 +19,10 @@
       "value": "gold",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Colour- Gold" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Colour- Gold"
+      },
       "confirmed": false
     },
     {
@@ -20,7 +30,10 @@
       "value": "1.4gm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Weight - 1.4gm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight - 1.4gm"
+      },
       "confirmed": false
     },
     {
@@ -28,7 +41,10 @@
       "value": "1.8 cm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Height - 1.8 cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Height - 1.8 cm"
+      },
       "confirmed": false
     },
     {
@@ -36,7 +52,10 @@
       "value": "18K gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Plating- 18k gold tone plated" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating- 18k gold tone plated"
+      },
       "confirmed": false
     },
     {
@@ -44,15 +63,21 @@
       "value": "stainless steel",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Material- Stainless Steel" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material- Stainless Steel"
+      },
+      "confirmed": true
     },
     {
       "label": "Packaging",
       "value": "comes in a box",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "You will receive the ring in a box." },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "You will receive the ring in a box."
+      },
       "confirmed": false
     },
     {
@@ -60,7 +85,10 @@
       "value": "handmade — piece-to-piece variation is normal",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "As this is a handmade product it is very rare to create identical items" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "As this is a handmade product it is very rare to create identical items"
+      },
       "confirmed": false
     }
   ],
@@ -82,14 +110,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "- Colour- Gold\n- Size- 6,7,8\n- Weight - 1.4gm\n- Height - 1.8 cm\n- Plating- 18k gold tone plated\n- Material- Stainless Steel\n- You will receive the ring in a box.\n- As this is a handmade product it is very rare to create identical items",
     "referenceTitle": "Anti Tarnish Ring",
     "originalId": "537",
     "originalSku": "MJ-050",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-050-anti-tarnish-ring-537",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

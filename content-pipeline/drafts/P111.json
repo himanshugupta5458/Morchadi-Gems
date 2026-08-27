@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating: Rosegold\n- Material: Brass"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Lightweight & adjustable"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care",

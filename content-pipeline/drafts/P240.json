@@ -10,7 +10,10 @@
       "value": "silver",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "smooth silver finish" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "smooth silver finish"
+      },
       "confirmed": false
     },
     {
@@ -18,7 +21,10 @@
       "value": "glass or cubic zirconia, unclear from text",
       "displayTerm": "crystal",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "sparkling crystals" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling crystals"
+      },
       "confirmed": false
     },
     {
@@ -26,7 +32,10 @@
       "value": "anti-tarnish finish",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Anti-Tarnish Finish" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-Tarnish Finish"
+      },
       "confirmed": false
     },
     {
@@ -34,8 +43,11 @@
       "value": "adjustable",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Adjustable Fit" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable Fit"
+      },
+      "confirmed": true
     }
   ],
   "images": {
@@ -56,14 +68,18 @@
     "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "Symbolize endless love and elegance with this beautiful infinity design ring. Crafted with sparkling crystals and a smooth silver finish, this adjustable ring is perfect for parties, office wear, and special occasions. A timeless accessory for every woman.\n✨ Adjustable Fit\n✨ Shining Crystal Stones\n✨ Anti-Tarnish Finish\n✨ Perfect Gift for Her",
     "referenceTitle": "Infinity Adjustable Silver Ring for Women",
     "originalId": "541",
     "originalSku": "MJ-343",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-343-infinity-adjustable-silver-ring-for-women-541",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [

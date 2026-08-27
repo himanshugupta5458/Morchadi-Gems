@@ -34,7 +34,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Crafted from high-quality glass"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Color",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Designed to be lightweight and comfortable, these bangles are ideal for all-day wear"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

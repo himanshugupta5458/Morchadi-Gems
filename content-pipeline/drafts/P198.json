@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium-quality, sturdy alloy"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable to fit most finger sizes"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",

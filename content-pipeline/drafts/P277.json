@@ -10,15 +10,21 @@
       "value": "gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "gold-plated" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-plated"
+      },
+      "confirmed": true
     },
     {
       "label": "Finish",
       "value": "anti-tarnish, water-resistant",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish and water-resistant properties"
+      },
       "confirmed": false
     },
     {
@@ -26,7 +32,10 @@
       "value": "sleek, overlapping loop design",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "sleek, overlapping loop design" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sleek, overlapping loop design"
+      },
       "confirmed": false
     }
   ],
@@ -60,14 +69,18 @@
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "Elevate your accessory collection with this premium minimalist gold-plated kada. Featuring a sleek, overlapping loop design, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This versatile, polished statement piece offers a luxurious aesthetic that maintains its stunning, high-shine luster through everyday wear.",
     "referenceTitle": "Anti-Tarnish Minimalist Gold Loop Kada",
     "originalId": "663",
     "originalSku": "MJ-077",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-077-anti-tarnish-minimalist-gold-loop-kada-663",
-    "originalCategories": ["Anti Tarnish bracelet"]
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

@@ -4,7 +4,13 @@
   "category": "rings",
   "subcategory": "anti-tarnish",
   "variants": [
-    { "optionName": "Size for rings", "values": ["6", "7"] }
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -12,15 +18,21 @@
       "value": "stainless steel",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless Steel (Anti-Tarnish)" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel (Anti-Tarnish)"
+      },
+      "confirmed": true
     },
     {
       "label": "Plating",
       "value": "18K rose gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "18k Rose Gold Tone Plated" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18k Rose Gold Tone Plated"
+      },
       "confirmed": false
     },
     {
@@ -28,7 +40,10 @@
       "value": "cubic zirconia or glass, unclear from text",
       "displayTerm": "zircon",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "Premium Zircon Stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Zircon Stones"
+      },
       "confirmed": false
     },
     {
@@ -36,7 +51,10 @@
       "value": "V-shape chevron band, fully studded",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "V-shape Chevron Band (Fully Studded)" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "V-shape Chevron Band (Fully Studded)"
+      },
       "confirmed": false
     },
     {
@@ -44,7 +62,10 @@
       "value": "1.4 gm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Weight: 1.4 gm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight: 1.4 gm"
+      },
       "confirmed": false
     },
     {
@@ -52,7 +73,10 @@
       "value": "1.8 cm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Height: 1.8 cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Height: 1.8 cm"
+      },
       "confirmed": false
     },
     {
@@ -60,7 +84,10 @@
       "value": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm"
+      },
       "confirmed": false
     },
     {
@@ -68,7 +95,10 @@
       "value": "premium box",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Comes in a Premium Box" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Comes in a Premium Box"
+      },
       "confirmed": false
     },
     {
@@ -76,7 +106,10 @@
       "value": "handmade — piece-to-piece variation is normal",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Each piece is handmade, making every ring unique and special." },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Each piece is handmade, making every ring unique and special."
+      },
       "confirmed": false
     }
   ],
@@ -110,14 +143,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "The \"Duo Gleam\" Ring is the perfect blend of elegance and minimalism. Crafted in anti-tarnish stainless steel with an 18k rose gold tone plating, this chevron-style band dazzles with premium zircon stones that sparkle brilliantly under any light. Its lightweight design makes it ideal for everyday wear or stacking with other rings, while the elegant packaging makes it a thoughtful gift.\n-\n-\nMaterial: Stainless Steel (Anti-Tarnish)\n-\nPlating: 18k Rose Gold Tone Plated\n-\nStone Type: Premium Zircon Stones\n-\nDesign: V-shape Chevron Band (Fully Studded)\n-\nColour: Rose Gold\n-\nSize Options: 6, 7, 8\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm\n-\nWeight: 1.4 gm\n-\nHeight: 1.8 cm\n-\nPackaging: Comes in a Premium Box\n-\nNote: Each piece is handmade, making every ring unique and special.",
     "referenceTitle": "Anti-Tarnish \"Duo Gleam\" Ring",
     "originalId": "533",
     "originalSku": "MJ-103",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-103-anti-tarnish-duo-gleam-ring-533",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

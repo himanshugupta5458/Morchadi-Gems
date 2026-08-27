@@ -4,8 +4,24 @@
   "category": "bangles",
   "subcategory": null,
   "variants": [
-    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
-    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -13,15 +29,21 @@
       "value": "glass",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality glass" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality glass"
+      },
+      "confirmed": true
     },
     {
       "label": "Colour Options",
       "value": "yellow, green, pink, black, maroon, mint green (six hues)",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green"
+      },
       "confirmed": false
     },
     {
@@ -29,7 +51,10 @@
       "value": "smooth, plain finish",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "offering a smooth finish and a classic look" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "offering a smooth finish and a classic look"
+      },
       "confirmed": false
     },
     {
@@ -37,7 +62,10 @@
       "value": "set of two bangles",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)"
+      },
       "confirmed": false
     }
   ],

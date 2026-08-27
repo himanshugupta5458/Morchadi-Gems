@@ -4,7 +4,13 @@
   "category": "rings",
   "subcategory": "anti-tarnish",
   "variants": [
-    { "optionName": "Size for rings", "values": ["7", "8"] }
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "7",
+        "8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -12,23 +18,32 @@
       "value": "stainless steel",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless Steel (Anti-Tarnish)" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel (Anti-Tarnish)"
+      },
+      "confirmed": true
     },
     {
       "label": "Plating",
       "value": "gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Gold Tone Plated" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold Tone Plated"
+      },
+      "confirmed": true
     },
     {
       "label": "Stone",
       "value": "cubic zirconia (solitaire center with side accents)",
       "displayTerm": "cubic zirconia",
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Cubic Zirconia (Solitaire center with side accents)" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Cubic Zirconia (Solitaire center with side accents)"
+      },
       "confirmed": false
     },
     {
@@ -36,7 +51,10 @@
       "value": "cubic zirconia or glass, unclear from text",
       "displayTerm": "zircon",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "smaller zircon stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "smaller zircon stones"
+      },
       "confirmed": false
     },
     {
@@ -44,7 +62,10 @@
       "value": "twisted band with solitaire centerpiece and side-studded stones",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Twisted band with solitaire centerpiece and side-studded stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Twisted band with solitaire centerpiece and side-studded stones"
+      },
       "confirmed": false
     },
     {
@@ -52,7 +73,10 @@
       "value": "fixed size (not adjustable)",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Designed with a fixed size for a comfortable fit" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with a fixed size for a comfortable fit"
+      },
       "confirmed": false
     },
     {
@@ -60,7 +84,10 @@
       "value": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm"
+      },
       "confirmed": false
     },
     {
@@ -68,7 +95,10 @@
       "value": "premium black velvet box",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Premium black velvet box included" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium black velvet box included"
+      },
       "confirmed": false
     }
   ],
@@ -96,14 +126,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "- Discover elegance redefined with the \"Twisted Solitaire\" Ring. Made from anti-tarnish stainless steel and coated with radiant gold plating, this exquisite ring features a sparkling solitaire cubic zirconia centerpiece with intricate twisted band accents beautifully set with smaller zircon stones. Designed with a fixed size for a comfortable fit, it's perfect for daily wear, special occasions, or as a meaningful gift.\n-\n- Material: Stainless Steel (Anti-Tarnish)\n- Plating: Gold Tone Plated\n- Stone Type: Cubic Zirconia (Solitaire center with side accents)\n- Design: Twisted band with solitaire centerpiece and side-studded stones\n- Color: Gold\n- Sizes Available:\n- Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm\n- Best Use: Suitable for daily wear, party wear, engagement style, gifting\n- Packaging: Premium black velvet box included\n- Note: Hand-finished craftsmanship ensures a special, unique ring",
     "referenceTitle": "Anti Tarnish Twisted Solitaire Ring",
     "originalId": "536",
     "originalSku": "MJ-056",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-056-anti-tarnish-twisted-solitaire-ring-536",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "High-quality, durable alloy for lasting wear"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium gold plating for a luxurious finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable design to suit most finger sizes"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",

@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Alloy metal"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

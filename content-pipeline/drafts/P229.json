@@ -10,7 +10,10 @@
       "value": "stainless steel or brass",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "High-quality stainless steel / brass" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality stainless steel / brass"
+      },
       "confirmed": false
     },
     {
@@ -18,15 +21,21 @@
       "value": "gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Premium gold plating for long-lasting shine" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium gold plating for long-lasting shine"
+      },
+      "confirmed": true
     },
     {
       "label": "Stone",
       "value": "none (plain, no stone)",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Plain, no stone – minimalist elegance" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plain, no stone – minimalist elegance"
+      },
       "confirmed": false
     },
     {
@@ -34,7 +43,10 @@
       "value": "triple band wave design",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Triple band wave design for a modern look" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Triple band wave design for a modern look"
+      },
       "confirmed": false
     },
     {
@@ -42,7 +54,10 @@
       "value": "adjustable, fits most finger sizes",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Adjustable – fits most finger sizes comfortably" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits most finger sizes comfortably"
+      },
       "confirmed": false
     }
   ],
@@ -76,14 +91,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "- Elevate your style with this chic gold-plated adjustable ring featuring a modern triple band wave design. Crafted for comfort and durability, this elegant piece is perfect for daily wear, parties, and gifting – a must-have in every jewelry collection.\n- Highlights / Specifications:\n- Material: High-quality stainless steel / brass\n- Plating: Premium gold plating for long-lasting shine\n- Stone Type: Plain, no stone – minimalist elegance\n- Design: Triple band wave design for a modern look\n- Size/ Fit: Adjustable – fits most finger sizes comfortably\n- Best For: Daily wear, casual outings, parties & gifting",
     "referenceTitle": "Anti-Tarnish Triple Band Adjustable Wave Ring",
     "originalId": "530",
     "originalSku": "MJ-098",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-098-anti-tarnish-triple-band-adjustable-wave-ring-530",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

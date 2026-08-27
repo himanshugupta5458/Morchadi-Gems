@@ -4,7 +4,13 @@
   "category": "rings",
   "subcategory": "anti-tarnish",
   "variants": [
-    { "optionName": "Size for rings", "values": ["7", "8"] }
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "7",
+        "8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -12,15 +18,21 @@
       "value": "stainless steel",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless Steel (Anti-Tarnish)" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless Steel (Anti-Tarnish)"
+      },
+      "confirmed": true
     },
     {
       "label": "Plating",
       "value": "18K gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "18k Gold Tone Plated" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18k Gold Tone Plated"
+      },
       "confirmed": false
     },
     {
@@ -28,7 +40,10 @@
       "value": "cubic zirconia or glass, unclear from text",
       "displayTerm": "zircon",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "Premium Zircon Stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Zircon Stones"
+      },
       "confirmed": false
     },
     {
@@ -36,7 +51,10 @@
       "value": "criss-cross infinity wave, one studded one sleek",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Criss-cross infinity wave (one studded, one sleek)" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Criss-cross infinity wave (one studded, one sleek)"
+      },
       "confirmed": false
     },
     {
@@ -44,15 +62,21 @@
       "value": "adjustable",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Lightweight, adjustable, and handmade with care" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight, adjustable, and handmade with care"
+      },
+      "confirmed": true
     },
     {
       "label": "Weight",
       "value": "1.4 gm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Weight: 1.4 gm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight: 1.4 gm"
+      },
       "confirmed": false
     },
     {
@@ -60,7 +84,10 @@
       "value": "1.8 cm",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Height: 1.8 cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Height: 1.8 cm"
+      },
       "confirmed": false
     },
     {
@@ -68,7 +95,10 @@
       "value": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm"
+      },
       "confirmed": false
     },
     {
@@ -76,7 +106,10 @@
       "value": "premium box",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Comes in a premium box" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Comes in a premium box"
+      },
       "confirmed": false
     },
     {
@@ -84,7 +117,10 @@
       "value": "handmade — piece-to-piece variation is normal",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "As this is a handmade product, it is very rare to create identical items" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "As this is a handmade product, it is very rare to create identical items"
+      },
       "confirmed": false
     }
   ],
@@ -112,14 +148,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "The Anti-Tarnish Infinity Wave Ring is a statement piece crafted with elegance and durability. Featuring a criss-cross infinity design, one band sparkles with zircon stones while the other gleams in smooth 18k gold tone plating. Lightweight, adjustable, and handmade with care, this ring is perfect for daily wear, parties, or as a thoughtful gift. Each piece is unique, making it a rare addition to your jewelry collection.\n-\nMaterial: Stainless Steel (Anti-Tarnish)\n-\nPlating: 18k Gold Tone Plated\n-\nStone Type: Premium Zircon Stones\n-\nDesign: Criss-cross infinity wave (one studded, one sleek)\n-\nColour: Gold\n-\nSize Options: 6, 7, 8\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm\n-\nWeight: 1.4 gm\n-\nHeight: 1.8 cm\n-\nPackaging: Comes in a premium box\n-\nNote: As this is a handmade product, it is very rare to create identical items",
     "referenceTitle": "Anti-Tarnish Infinity Wave Ring",
     "originalId": "540",
     "originalSku": "MJ-074",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-074-anti-tarnish-infinity-wave-ring-540",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

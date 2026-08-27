@@ -4,8 +4,24 @@
   "category": "bangles",
   "subcategory": null,
   "variants": [
-    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
-    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -13,15 +29,21 @@
       "value": "glass",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality glass" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality glass"
+      },
+      "confirmed": true
     },
     {
       "label": "Colour Options",
       "value": "green, pink, yellow, blue, orange, peach (six hues)",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "green, pink, yellow, blue, orange, and peach" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "green, pink, yellow, blue, orange, and peach"
+      },
       "confirmed": false
     },
     {
@@ -29,7 +51,10 @@
       "value": "spiral design",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "each bangle showcases a unique spiral design for a modern, stylish look" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "each bangle showcases a unique spiral design for a modern, stylish look"
+      },
       "confirmed": false
     },
     {
@@ -37,7 +62,10 @@
       "value": "glossy finish",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "The glossy finish and vivid colors" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The glossy finish and vivid colors"
+      },
       "confirmed": false
     }
   ],

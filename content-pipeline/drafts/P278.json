@@ -10,15 +10,21 @@
       "value": "gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality gold plating" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold plating"
+      },
+      "confirmed": true
     },
     {
       "label": "Finish",
       "value": "anti-tarnish, water-resistant",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant piece" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish and water-resistant piece"
+      },
       "confirmed": false
     },
     {
@@ -26,7 +32,10 @@
       "value": "black marble enamel design",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "premium black marble enamel kada" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium black marble enamel kada"
+      },
       "confirmed": false
     }
   ],
@@ -48,14 +57,18 @@
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "- Define sophistication with this premium black marble enamel kada, a Crafted with high-quality gold plating, this anti-tarnish and water-resistant piece is perfect for everyday luxury. Its sleek, modern design ensures a bold statement that maintains its brilliant luster and striking finish over time.",
     "referenceTitle": "Anti-Tarnish Black Marble Enamel Kada",
     "originalId": "664",
     "originalSku": "MJ-060",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-060-anti-tarnish-black-marble-enamel-kada-664",
-    "originalCategories": ["Anti Tarnish bracelet"]
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

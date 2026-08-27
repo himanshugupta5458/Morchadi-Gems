@@ -4,7 +4,13 @@
   "category": "rings",
   "subcategory": "anti-tarnish",
   "variants": [
-    { "optionName": "Size for rings", "values": ["7", "8"] }
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "7",
+        "8"
+      ]
+    }
   ],
   "attributes": [
     {
@@ -12,15 +18,21 @@
       "value": "stainless steel",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "High-quality stainless steel" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality stainless steel"
+      },
+      "confirmed": true
     },
     {
       "label": "Plating",
       "value": "18K gold plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "18K gold tone plated" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18K gold tone plated"
+      },
       "confirmed": false
     },
     {
@@ -28,7 +40,10 @@
       "value": "unspecified stones - material unclear from text",
       "displayTerm": "stones",
       "stoneSource": "unverified-guess",
-      "source": { "origin": "migrated-text", "quotedPhrase": "shimmering stones" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering stones"
+      },
       "confirmed": false
     },
     {
@@ -36,7 +51,10 @@
       "value": "anti-tarnish coating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish coating" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish coating"
+      },
       "confirmed": false
     },
     {
@@ -44,7 +62,10 @@
       "value": "sleek band with shimmering stone inlay",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "Sleek band with shimmering stone inlay" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sleek band with shimmering stone inlay"
+      },
       "confirmed": false
     }
   ],
@@ -66,14 +87,18 @@
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "Add a subtle touch of elegance to your everyday style with this Anti-Tarnish Sparkle Band Ring. Handcrafted from premium stainless steel and plated in 18K gold tone, the sleek band is delicately studded with shimmering stones that catch the light beautifully. Its minimalist yet timeless design makes it perfect for both daily wear and special occasions, while also being a versatile piece for stacking with other rings.\nThanks to its anti-tarnish coating, this ring retains its shine and brilliance for a long time, ensuring it looks as good as new even with regular use. Lightweight, durable, and comfortable, it is an ideal accessory for modern women who appreciate style with practicality. Delivered in a premium box, this ring also makes a thoughtful and stylish gift.\n-\nProduct: Anti-Tarnish Sparkle Band Ring\n-\nMaterial: High-quality stainless steel\n-\nPlating: 18K gold tone plated\n-\nFinish: Anti-tarnish – long-lasting shine\n-\nDesign: Sleek band with shimmering stone inlay\n-\nStyle: Minimalist, elegant & versatile\n-\nComfort: Lightweight & suitable for everyday wear\n-\nOccasions: Ideal for daily, party & gifting",
     "referenceTitle": "Anti-Tarnish Sparkle Band Ring",
     "originalId": "529",
     "originalSku": "MJ-096",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-096-anti-tarnish-sparkle-band-ring-529",
-    "originalCategories": ["Anti Tarnish ring"]
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
   },
   "flaggedContent": [],
   "notes": [],
