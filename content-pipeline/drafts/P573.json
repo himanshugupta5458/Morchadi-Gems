@@ -1,0 +1,110 @@
+{
+  "productId": "P573",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Detail",
+      "value": "crosshatch engraving on polished gold surface",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Subtle crosshatch engraving on polished gold surface"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "medium hoop",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Medium hoop — versatile day-to-night piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P573.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P573/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Clean, modern, and effortlessly cool — our Cross Hatch Texture Hoop Earrings feature a polished gold crescent hoop with subtle diagonal crosshatch engraving that adds depth and texture without being loud. Minimalist enough for everyday wear, stylish enough to stand out.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Subtle crosshatch engraving on polished gold surface\n- Medium hoop — versatile day-to-night piece\nPairs with: Everything — truly an everyday essential hoop.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Cross Hatch Gold Stainless Steel Hoop Earrings",
+    "originalId": "1043",
+    "originalSku": "MJ-152",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-152-cross-hatch-gold-stainless-steel-hoop-earrings-1043",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

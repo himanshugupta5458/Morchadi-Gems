@@ -1,0 +1,112 @@
+{
+  "productId": "P569",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🌸 Blush pink + deep purple marquise CZ stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set Contents — Necklace",
+      "value": "gold-plated vine leaf necklace",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "📿 1 × Gold-plated vine leaf necklace"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set Contents — Earrings",
+      "value": "matching drop stud earrings",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "👂 1 × Pair of matching drop stud earrings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating — long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Coating",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating — long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Accent",
+      "value": "delicate gold leaf accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🍃 Delicate gold leaf accents — soft and graceful design"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P569.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P569/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "combo-set",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Effortlessly elegant, our Pink & Purple Marquise Leaf Anti-Tarnish Jewellery Set includes a matching necklace and stud earrings — each featuring a delicate alternating pattern of blush pink and deep purple marquise CZ stones with gold leaf accents. The soft ombre colour play makes this set uniquely feminine and versatile.\nGet the complete look with one piece — perfect for gifting or treating yourself.\nWhat's Included:\n- 📿 1 × Gold-plated vine leaf necklace\n- 👂 1 × Pair of matching drop stud earrings\nWhy You'll Love It:\n- 💛 Gold-plated with anti-tarnish coating — long-lasting shine\n- 🌸 Blush pink + deep purple marquise CZ stones\n- 🍃 Delicate gold leaf accents — soft and graceful design\n- 🎁 Comes as a matching set — ready to gift\n- ✨ Lightweight and comfortable for all-day wear\nPairs beautifully with: Pastel lehengas, georgette sarees, indo-western sets, and flowy dresses.",
+    "referenceTitle": "Pink & Purple Marquise Leaf Jewellery Set",
+    "originalId": "1038",
+    "originalSku": "MJ-457",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-457-pink-purple-marquise-leaf-jewellery-set-1038",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

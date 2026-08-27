@@ -1,0 +1,110 @@
+{
+  "productId": "P572",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Detail",
+      "value": "large concentric spiral/swirl texture, oversized chunky hoop",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Large concentric spiral texture — maximalist design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size/Silhouette",
+      "value": "oversized chunky hoop",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Oversized chunky hoop — bold yet comfortable all-day"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P572.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P572/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Go bigger, go bolder — our Large Spiral Texture Chunky Hoop Earrings feature the same gorgeous concentric swirl pattern as our small version, scaled up for a more dramatic, fashion-forward look. The oversized crescent silhouette is a true style statement.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Large concentric spiral texture — maximalist design\n- Oversized chunky hoop — bold yet comfortable all-day\nPairs with: Solid kurtas, co-ords, blazers, sarees, and fusion outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Spiral Texture Gold Stainless Steel Hoop Earrings",
+    "originalId": "1042",
+    "originalSku": "MJ-575",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-575-spiral-texture-gold-stainless-steel-hoop-earrings-1042",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

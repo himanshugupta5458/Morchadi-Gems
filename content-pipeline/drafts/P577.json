@@ -1,0 +1,121 @@
+{
+  "productId": "P577",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Detail",
+      "value": "raised quilted grid texture",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Raised quilted grid texture — luxury designer-inspired look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Hoop Shape",
+      "value": "wide crescent silhouette",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wide crescent silhouette — bold and flattering"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp Type",
+      "value": "secure latch-back clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure latch-back clasp — lightweight & comfortable all-day"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P577.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P577/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Luxe, bold, and instantly recognisable — our Quilted Grid Chunky Hoop Earrings feature a raised grid-quilt pattern across a wide crescent-shaped hoop, giving a premium designer-inspired look. The structured texture adds dimension and catches light from every angle, making these a standout piece for any outfit.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Raised quilted grid texture — luxury designer-inspired look\n- Wide crescent silhouette — bold and flattering\n- Secure latch-back clasp — lightweight & comfortable all-day\nPairs with: Solid kurtas, co-ords, blazers, sarees, jeans, and monochrome outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Quilted Grid Gold Stainless Steel Hoop Earrings",
+    "originalId": "1047",
+    "originalSku": "MJ-482",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-482-quilted-grid-gold-stainless-steel-hoop-earrings-1047",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P565",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💜 Soft lavender purple oval CZ + emerald green leaf stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Accent",
+      "value": "emerald-green leaf-shaped accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "paired with emerald green leaf accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Coating",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant/Design Shape",
+      "value": "V-shaped vine pendant design — light and graceful",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🌿 V-shaped vine pendant — light and graceful"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain & Clasp",
+      "value": "delicate gold chain with secure clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🔗 Delicate gold chain with secure clasp"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P565.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P565/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Soft, dreamy, and effortlessly elegant — our Lavender & Emerald Vine Anti-Tarnish Necklace features light purple oval CZ stones paired with emerald green leaf accents on a gold-plated V-shaped vine chain. A delicate, feminine piece that brings a romantic softness to any outfit.\n- 💛 Gold-plated with anti-tarnish coating\n- 💜 Soft lavender purple oval CZ + emerald green leaf stones\n- 🌿 V-shaped vine pendant — light and graceful\n- 🔗 Delicate gold chain with secure clasp\n- 🎁 Ideal for gifting, casual wear & festive occasions\nPairs beautifully with: Pastel pink, lilac, white, or mint ethnic and western outfits.",
+    "referenceTitle": "Purple & Emerald CZ Gold-Plated Anti-Tarnish Necklace",
+    "originalId": "1034",
+    "originalSku": "MJ-477",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-477-purple-emerald-cz-gold-plated-anti-tarnish-necklace-1034",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

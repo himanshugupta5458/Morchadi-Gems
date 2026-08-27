@@ -1,0 +1,112 @@
+{
+  "productId": "P555",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling green CZ leaves"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Charm Design",
+      "value": "pink tulip charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate pink tulip charms"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/Chain",
+      "value": "gold-tone chain with gold bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "set on a dainty gold chain with gold bead accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Coating",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish finish with adjustable fit"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish finish with adjustable fit"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P555.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P555-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P555-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹289 sale price, ₹114 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Wear a little garden on your wrist — this charming bracelet features delicate pink tulip charms with sparkling green CZ leaves set on a dainty gold chain with gold bead accents. Feminine, fresh, and forever in style. Anti-tarnish finish with adjustable fit",
+    "referenceTitle": "Anti Tarnish Pink tulip Leaf CZ Bracelet",
+    "originalId": "1021",
+    "originalSku": "MJ-049",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-049-anti-tarnish-pink-tulip-leaf-cz-bracelet-1021",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

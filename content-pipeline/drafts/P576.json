@@ -1,0 +1,121 @@
+{
+  "productId": "P576",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Detail",
+      "value": "diagonal ribbed croissant texture, open C-hoop shape",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Diagonal ribbed croissant texture — chunky & sculpted"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Hoop Shape",
+      "value": "open C-hoop silhouette",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Open C-hoop silhouette — modern and flattering"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp Type",
+      "value": "secure push-back stud clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure push-back stud clasp — easy and comfortable to wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P576.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P576/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Effortlessly chic and endlessly wearable — our Croissant Ribbed C-Hoop Earrings feature a chunky open C-shaped hoop with raised diagonal ribbing running the full length, inspired by the classic croissant texture. The puffy, sculpted silhouette looks rich and premium while staying lightweight on the ear.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Diagonal ribbed croissant texture — chunky & sculpted\n- Open C-hoop silhouette — modern and flattering\n- Secure push-back stud clasp — easy and comfortable to wear\nPairs with: Everything — casual kurtis, western outfits, co-ords, sarees, and date night looks.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Croissant Ribbed Gold Stainless Steel C-Hoop Earrings",
+    "originalId": "1046",
+    "originalSku": "MJ-151",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-151-croissant-ribbed-gold-stainless-steel-c-hoop-earrings-1046",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

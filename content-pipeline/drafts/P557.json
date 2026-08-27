@@ -1,0 +1,97 @@
+{
+  "productId": "P557",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Movement Type",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "clean white quartz dial"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone/Setting",
+      "value": "kundan work (glass or stone set in gold foil, exact material unclear from text)",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate red & green lotus kundan charms"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Charm Design",
+      "value": "lotus-shaped charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate red & green lotus kundan charms"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/Chain",
+      "value": "gold chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "all strung together on a gold chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "ghungroo bells",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "adorned with cheerful ghungroo bells"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P557.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P557/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elegance that jingles — this dainty Kashmiri bracelet watch features delicate red & green lotus kundan charms flanking a clean white quartz dial, all strung together on a gold chain adorned with cheerful ghungroo bells. Lighter and more subtle than traditional styles, yet deeply rooted in Indian craft heritage. Pairs effortlessly with festive ethnic wear — sarees, suits, and lehengas alike.",
+    "referenceTitle": "Kashmiri Lotus Kundan Bracelet Watch",
+    "originalId": "1023",
+    "originalSku": "MJ-359",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-359-kashmiri-lotus-kundan-bracelet-watch-1023",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

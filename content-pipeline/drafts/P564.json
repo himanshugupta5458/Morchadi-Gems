@@ -1,0 +1,110 @@
+{
+  "productId": "P564",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "❤️ Deep red ruby oval CZ + emerald green leaf stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design Accent",
+      "value": "emerald-green leaf-shaped accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "vibrant emerald green leaf accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Coating",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💛 Gold-plated with anti-tarnish coating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Pendant/Design Shape",
+      "value": "V-shaped vine pendant design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🌿 Elegant V-shaped vine pendant design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain & Clasp",
+      "value": "delicate gold chain with secure clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "🔗 Delicate gold chain with secure clasp"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P564.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P564/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Turn heads with our Red Ruby & Emerald Vine Anti-Tarnish Necklace — a bold gold-plated necklace featuring deep red ruby oval CZ stones nestled between vibrant emerald green leaf accents in a graceful V-shaped vine design. Rich, regal, and effortlessly glamorous — this necklace is made for women who love classic colour with a modern twist.\n- 💛 Gold-plated with anti-tarnish coating\n- ❤️ Deep red ruby oval CZ + emerald green leaf stones\n- 🌿 Elegant V-shaped vine pendant design\n- 🔗 Delicate gold chain with secure clasp\n- 🎁 Perfect for festivals, weddings & gifting\nPairs beautifully with: Red, green, or ivory ethnic wear — sarees, lehengas, and anarkalis.",
+    "referenceTitle": "Red Ruby & Emerald Vine Necklace",
+    "originalId": "1033",
+    "originalSku": "MJ-493",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-493-red-ruby-emerald-vine-necklace-1033",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,108 @@
+{
+  "productId": "P584",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "satin fabric",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant satin rose flower hair tie, set of 2 (pink & cream)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set Quantity",
+      "value": "set of 2 (pink & cream)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant satin rose flower hair tie, set of 2 (pink & cream)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Band Type",
+      "value": "soft stretchable elastic band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Soft stretchable elastic band, gentle on hair"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "rosette flower design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Aesthetic rosette design adds a chic touch to any hairstyle"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Additional Use",
+      "value": "doubles as a bracelet/wrist accessory",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Doubles as a bracelet/wrist accessory when not in hair"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Grip",
+      "value": "lightweight, no-damage grip suitable for all hair types",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight, no-damage grip for all hair types"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P584.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P584/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹109 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elegant satin rose flower hair tie, set of 2 (pink & cream)\nSoft stretchable elastic band, gentle on hair\nAesthetic rosette design adds a chic touch to any hairstyle\nPerfect for daily wear, college, parties & gifting\nDoubles as a bracelet/wrist accessory when not in hair\nLightweight, no-damage grip for all hair types",
+    "referenceTitle": "Satin Rose Flower Hair Tie – Set of 2",
+    "originalId": "1054",
+    "originalSku": "MJ-525",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-525-satin-rose-flower-hair-tie-set-of-2-1054",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

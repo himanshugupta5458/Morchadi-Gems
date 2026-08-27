@@ -1,0 +1,97 @@
+{
+  "productId": "P558",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Craftsmanship Technique",
+      "value": "meenakari (enamel) work",
+      "displayTerm": "Meenakari",
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricate meenakari work"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone/Material",
+      "value": "pearl (real or imitation unclear from text)",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pearl accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "ghungroo bells",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "ghungroo bells"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Beadwork",
+      "value": "vibrant coloured beads",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "vibrant coloured beads"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/Chain",
+      "value": "multi-strand gold chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "multi-strand gold chain"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P558.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P558/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "A timeless fusion of function and tradition — this stunning Kashmiri-style bracelet watch features intricate meenakari work, pearl accents, ghungroo bells, and vibrant coloured beads on a multi-strand gold chain. Perfect for weddings, festivals, sangeet, and ethnic occasions where you want to stand out effortlessly.",
+    "referenceTitle": "Kashmiri Meenakari Bracelet Watch for Women",
+    "originalId": "1024",
+    "originalSku": "MJ-361",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-361-kashmiri-meenakari-bracelet-watch-for-women-1024",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

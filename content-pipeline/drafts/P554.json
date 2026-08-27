@@ -1,0 +1,106 @@
+{
+  "productId": "P554",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "double-layer twisted snake chain bracelet in a rich gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Chain Style",
+      "value": "double-layer twisted snake chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this double-layer twisted snake chain bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp Type",
+      "value": "lobster clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "secured with a lobster clasp"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Charm/Tag",
+      "value": "Morchadi \"M\" coin tag",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a signature Morchadi \"M\" coin tag"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish/Coating",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish & versatile enough to wear solo or stacked"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P554.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P554/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P554-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P554/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a bold yet elegant statement with this double-layer twisted snake chain bracelet in a rich gold finish. Two intertwined flat snake chains flow beautifully together, secured with a lobster clasp and a signature Morchadi \"M\" coin tag. Anti-tarnish & versatile enough to wear solo or stacked.",
+    "referenceTitle": "Anti Tarnish Gold Double Layer Snake Chain Bracelet",
+    "originalId": "1020",
+    "originalSku": "MJ-037",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-037-anti-tarnish-gold-double-layer-snake-chain-bracelet-1020",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
