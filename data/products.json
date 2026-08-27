@@ -7211,5 +7211,336 @@
         "DC Ring"
       ]
     }
+  },
+  {
+    "id": "P145",
+    "name": "Star CZ Ring, Rosegold Tone",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P145.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A phone camera flattens most small jewellery into a blur of shine, with the actual shape lost somewhere in the zoom. A star survives that better than most motifs, because five points is a pattern the eye reads instantly whether it's looking at a screen or a hand. This rosegold-plated ring keeps its star clearly defined, cubic zirconia tracing each point rather than filling the whole shape into one dense sparkle.\n\nIt sits light on the finger, which matters more on a ring than on almost any other piece, since a finger notices weight faster than a wrist or an ear does. Brass keeps the actual metal light, and the rosegold plating over it does the visual work without adding bulk to the band itself.\n\nA star reads equally well on a teenager picking out her first going-out ring and on a woman rounding out a stack she has been adding to for years, which is part of why the shape keeps recurring in fashion jewellery. Wear it to a wedding function where a bit of sparkle is expected, or let it do quieter work with an everyday kurta on a day that doesn't call for anything special.\n\nKeep it clear of chemicals, water and ultrasonic cleaners, remove it before swimming, showering or gardening, and a soft or microfiber cloth is enough to keep the finish looking the way it did out of the box. Store it somewhere cool and dry between wears. At this price, a star ring like this earns its keep by being easy to reach for, not precious about when it comes out.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring for parties",
+      "secondaryKeywords": [
+        "cubic zirconia star ring",
+        "lightweight rosegold ring",
+        "star ring for teens and women"
+      ],
+      "metaTitle": "Star CZ Ring in Rosegold, Lightweight Band | Morchadi Gems",
+      "metaDescription": "A lightweight rosegold-plated star ring set with cubic zirconia, easy to wear daily or to a wedding function. From ₹59, with 7-day returns on every order.",
+      "imageAlt": "Rosegold-plated star ring with cubic zirconia stones tracing the points",
+      "ogTitle": "A Star Ring Light Enough to Forget You're Wearing, ₹59",
+      "ogDescription": "A rosegold-plated star ring in cubic zirconia, light on the finger and clear in a photo. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P145.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "175",
+      "originalSku": "MJ-173",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-173-dc-jewelry-key-themed-ring-175",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P147",
+    "name": "Star CZ Ring in Rosegold",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P147.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "Not every ring purchase needs a reason attached to it. This rosegold-plated star ring is built for the kind of buying decision that starts with liking how something looks rather than working backward from an event on the calendar, a small five-pointed shape picked out in cubic zirconia across the band.\n\nThe band is brass underneath the plating, kept light enough that a full day of wearing it barely registers, which suits a ring bought on impulse more than a ring bought for one specific outing where a little extra weight for a few hours wouldn't matter as much.\n\nIt still holds up when an occasion does show up, a festival or a friend's wedding function, sliding in as one more small sparkle without needing to be the main event on the hand. Teenagers and adult women both wear this kind of shape without it reading as chosen for the wrong age group.\n\nCare is the same as any plated cubic zirconia piece: a soft cloth after wear, no swimming or showering in it, no ultrasonic cleaner, and a cool, dry spot when it's off duty. None of that requires much thought once it becomes routine, which is really the point of a ring you didn't need a reason to buy in the first place.",
+    "seo": {
+      "primaryKeyword": "star ring for self gifting",
+      "secondaryKeywords": [
+        "rosegold cz ring for teens",
+        "brass star ring",
+        "cubic zirconia star ring rosegold"
+      ],
+      "metaTitle": "Rosegold Star CZ Ring, No Occasion Needed | Morchadi Gems",
+      "metaDescription": "A rosegold-plated star ring in cubic zirconia, light enough for daily wear and easy to buy without a specific occasion in mind. From ₹59, ships across India.",
+      "imageAlt": "Small star-shaped ring in rosegold plating with cubic zirconia stones",
+      "ogTitle": "A Star Ring You Don't Need a Reason to Buy, ₹59",
+      "ogDescription": "A rosegold-plated brass ring with a cubic zirconia star, light enough to wear on any ordinary day. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P147.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "177",
+      "originalSku": "MJ-189",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-189-dc-jewelry-teardrop-solitaire-ring-177",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P151",
+    "name": "Criss-Cross Solitaire Ring, Silver-Plated",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P151.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Criss-cross band with central solitaire-style stone",
+      "size": "Adjustable, fits most finger sizes",
+      "occasion": "Daily wear, casual outings, parties, gifting"
+    },
+    "description": "Not every ring needs a single job description. This one is built to move between a desk on an ordinary Tuesday and a friend's party on a Saturday without looking like it was chosen for either specifically, silver-plated brass shaped into two crossing bands that meet at a single cubic zirconia stone in the middle.\n\nThe crossing shape gives the stone somewhere to sit other than a plain claw setting, which is a small design choice that does a lot of the visual work here: from a short distance it reads as one continuous piece rather than a band with a stone stuck onto it.\n\nIt's adjustable rather than fixed to a single size, so it fits a working range of finger sizes without needing an exact number decided before you order, useful for a gift as much as for buying it for yourself when you're not certain which size to pick.\n\nDaily wear, casual outings, a party that isn't formal enough to need something heavier, or a gift for someone whose size you're guessing at: this ring covers that range comfortably instead of specialising in just one of them. Wipe it down after wear and keep it away from water and perfume, and the silver tone should hold up through all of that use rather than just one type of it.",
+    "seo": {
+      "primaryKeyword": "silver-plated criss-cross ring",
+      "secondaryKeywords": [
+        "adjustable cz solitaire ring",
+        "criss-cross ring for daily wear",
+        "silver-tone ring for gifting"
+      ],
+      "metaTitle": "Silver-Plated Adjustable Criss-Cross CZ Ring | Morchadi Gems",
+      "metaDescription": "An adjustable silver-plated ring with two crossing bands meeting at a cubic zirconia stone, built for daily wear and easy to gift. From ₹59, 7-day returns.",
+      "imageAlt": "Silver-plated criss-cross ring with a central cubic zirconia stone",
+      "ogTitle": "A Criss-Cross Ring That Fits Most Fingers, ₹59",
+      "ogDescription": "A silver-plated ring with two crossing bands and a cubic zirconia centre stone, adjustable and easy to gift. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P151.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "183",
+      "originalSku": "MJ-559",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-559-silver-plated-adjustable-ad-stone-criss-cross-ring-183",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P152",
+    "name": "Star CZ Ring, Rosegold Band",
+    "category": "rings",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P152.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Star-shaped",
+      "weight": "Lightweight",
+      "care": "Clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "occasion": "Gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits"
+    },
+    "description": "A jewellery box usually starts with one or two pieces bought without much planning, before it turns into an actual collection with a logic to it. A star ring like this is a reasonable place for that box to start: a rosegold-plated brass band, a star traced in cubic zirconia, nothing complicated enough to need explaining to anyone who asks.\n\nIt stays light on the finger, brass doing the structural work and the rosegold plating doing the visual work, so wearing it for a full day doesn't turn into a small daily negotiation with a heavy ring the way costume jewellery sometimes does.\n\nBecause the shape and the price both keep things simple, it suits a teenager building her first small collection just as easily as a woman adding to one she already has going, and it moves between a plain outfit and a festival without needing to be swapped out for something more serious.\n\nThe care list is short: a soft cloth, no water or perfume, no ultrasonic cleaner, and a dry spot to keep it in between wears. Small, honest pieces like this one are usually how a jewellery box actually grows, one unplanned ring at a time rather than one big purchase.",
+    "seo": {
+      "primaryKeyword": "rosegold star ring, budget pick",
+      "secondaryKeywords": [
+        "star ring for first jewellery box",
+        "lightweight cz ring",
+        "rosegold brass star ring"
+      ],
+      "metaTitle": "Star CZ Ring, Rosegold-Plated Brass Band | Morchadi Gems",
+      "metaDescription": "A lightweight rosegold-plated star ring in cubic zirconia, an easy first or extra piece for a growing jewellery box at home. From ₹59, with 7-day returns.",
+      "imageAlt": "Rosegold star ring with cubic zirconia stones on a plain brass band",
+      "ogTitle": "A Small Star Ring to Start a Jewellery Box, ₹59",
+      "ogDescription": "A rosegold-plated brass ring with a cubic zirconia star, simple enough to be the first piece in a growing collection. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P152.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "184",
+      "originalSku": "MJ-177",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-177-dc-jewelry-modern-bar-stone-ring-184",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P175",
+    "name": "Rose Gold-Plated CZ Ring, Adjustable Band",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P175.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated",
+      "stone": "Cubic zirconia",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+    },
+    "description": "Some rings do their whole job with two plain facts: a warm rose gold plating and a scatter of cubic zirconia stones worked into the band. This one doesn't try to be more complicated than that, which reads as its own kind of honesty at a price this low rather than as a piece with nothing more to say.\n\nA version of this same idea in solid gold with real stones would run into thousands of rupees before you got anywhere near the design, which is the whole reason cubic zirconia and plating exist as a category: the sparkle without the vault-worthy price tag, worn without the worry that real jewellery usually carries with it.\n\nIt's adjustable rather than cut to one fixed size, so it fits a working range of fingers without an exact measurement decided in advance, useful when you're buying it for yourself or guessing at someone else's size. Keep it away from water and perfume so the plating holds its shine as long as it reasonably can, and give it a dry spot to sit in when it's off your hand rather than leaving it loose in a bag.\n\nAt ₹59, a ring like this isn't asking to be the one piece you own. It's asking to be one of several, worn on rotation without much ceremony either way.",
+    "seo": {
+      "primaryKeyword": "rose gold cz ring, adjustable fit",
+      "secondaryKeywords": [
+        "affordable rose gold ring",
+        "cubic zirconia ring for daily wear",
+        "adjustable ring for gifting"
+      ],
+      "metaTitle": "Rose Gold-Plated CZ Ring, Adjustable | Morchadi Gems",
+      "metaDescription": "A rose gold-plated ring set with cubic zirconia stones, adjustable to fit most fingers without needing an exact size first. From ₹59, with 7-day returns.",
+      "imageAlt": "Rose gold-plated adjustable ring with cubic zirconia stones",
+      "ogTitle": "A Rose Gold Ring That Fits Without Guessing, ₹59",
+      "ogDescription": "An adjustable rose gold-plated ring with cubic zirconia stones, simple enough to wear on rotation. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P175.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "472",
+      "originalSku": "MJ-178",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-178-dc-jewelry-music-spark-ring-472",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P176",
+    "name": "Adjustable CZ Ring in Rose Gold Tone",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P176.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated",
+      "stone": "Cubic zirconia",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+    },
+    "description": "You put this kind of ring on the same way you put on a watch, without much ceremony, and that's really the use case it's built for. A rose gold-plated band carries a scatter of cubic zirconia stones, nothing precious enough to think twice about before running errands or heading into an ordinary workday.\n\nThe adjustable fit means it goes on without a size decided months in advance; it settles onto a working range of fingers rather than one exact measurement, which also makes it an easy choice to hand over as a small gift without asking anyone their ring size first.\n\nRose gold plating asks for basic care in return: no perfume sprayed directly onto it, no water sitting on the surface for long, and a dry spot to rest in once it comes off for the day. None of that takes more effort than remembering where you left it.\n\nAt ₹59, it isn't trying to be a special-occasion piece, and it doesn't need to be. A ring you can put on without thinking is worth more, in practice, than one you have to plan around.",
+    "seo": {
+      "primaryKeyword": "cz ring in rose gold tone",
+      "secondaryKeywords": [
+        "everyday rose gold ring",
+        "adjustable cz ring for gifting",
+        "rose gold ring under 100 rupees"
+      ],
+      "metaTitle": "Adjustable Rose Gold CZ Ring for Daily Wear | Morchadi Gems",
+      "metaDescription": "An adjustable rose gold-plated ring with cubic zirconia stones, made to put on without much thought most mornings. From ₹59, ships across India.",
+      "imageAlt": "Rose gold-toned ring with cubic zirconia stones on an adjustable band",
+      "ogTitle": "A Rose Gold Ring You Put On Without Thinking, ₹59",
+      "ogDescription": "A rose gold-plated adjustable ring with cubic zirconia stones, built for ordinary days rather than special ones. ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P176.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "473",
+      "originalSku": "MJ-190",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-190-dc-jewelry-trio-spark-ring-473",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
   }
 ]
