@@ -1,0 +1,112 @@
+{
+  "productId": "P291",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Colour",
+      "value": "gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Colour: Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "intricate rose design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Intricate Rose Design"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P291.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P291/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P291-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P291/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P291-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P291/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Pinterest Inspired Heart Pendant Necklace\nIntricate Rose Design\nPremium Quality | Anti-Tarnish\nBase Material: Stainless Steel\nPlating: 18K Gold\nBase Colour: Gold",
+    "referenceTitle": "Golden Rose Heart Necklace",
+    "originalId": "689",
+    "originalSku": "MJ-329",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-329-golden-rose-heart-necklace-689",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

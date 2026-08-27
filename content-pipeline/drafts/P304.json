@@ -1,0 +1,145 @@
+{
+  "productId": "P304",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring intricate details and a small dangling crystal"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Shape",
+      "value": "key",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Shape: Key"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; avoid contact with harsh chemicals, sprays, and perfumes; store in a flat box to prevent scratches; do not soak in water.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P304.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P304/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P304-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P304/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P304-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P304/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹214 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Unlock your style with this beautiful key pendant featuring intricate details and a small dangling crystal. It's the perfect accessory for a touch of timeless charm.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Key\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water",
+    "referenceTitle": "Vintage-Inspired Key Pendant Necklace",
+    "originalId": "715",
+    "originalSku": "MJ-616",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-616-vintage-inspired-key-pendant-necklace-715",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

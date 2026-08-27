@@ -1,0 +1,116 @@
+{
+  "productId": "P287",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium Glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Work: Stone-studded floral design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "olive green (with golden sheen)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Olive Green (with golden sheen)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "elegant glossy finish with stone embellishment",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Elegant glossy finish with stone embellishment"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle with care — these are glass bangles.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instruction: Handle with care as these are glass bangles"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P287.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P287/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P287-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P287/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Description:\nAdd a graceful touch to your ethnic style with these olive green glass bangles, beautifully embellished with sparkling stones. Ideal for festive occasions, weddings, or daily wear, these bangles pair perfectly with both traditional and modern outfits.\n-\nMaterial: Premium Glass\n-\nWork: Stone-studded floral design\n-\nColor: Olive Green (with golden sheen)\n-\nDesign: Elegant glossy finish with stone embellishment\n-\nSize/ Fit: Available in multiple sizes (2.4, 2.6, 2.8, etc.)\n-\nOccasion: Suitable for weddings, festivals, parties & daily wear\n-\nCare Instruction: Handle with care as these are glass bangles\nCrafted from premium-quality glass, this bangle set reflects authentic Indian craftsmanship while offering a comfortable fit for all-day wear. olive green glass bangle shade pairs beautifully with sarees, lehengas, salwar suits, and Indo-western outfits, making it a versatile accessory for any festive look.\nKey Features:\n-\nPremium-quality glass with durable finish\n-\nMustard yellow color with stone embellishments\n-\nLightweight and comfortable for extended wear\n-\nPerfect for weddings, festive occasions, and gifting\n-\nAvailable in multiple sizes for the perfect fit",
+    "referenceTitle": "Olive Green Glass Stone Bangles",
+    "originalId": "679",
+    "originalSku": "MJ-444",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-444-olive-green-glass-stone-bangles-679",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "source text states color inconsistently: spec list says 'Olive Green (with golden sheen)' but Key Features says 'Mustard yellow color' — used Olive Green as primary since referenceTitle also says 'Olive Green'; flagging the discrepancy for owner review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

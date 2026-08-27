@@ -1,0 +1,139 @@
+{
+  "productId": "P311",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Shape",
+      "value": "heart",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Shape: Heart"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "double heart design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Enchanting Double Heart Design ✨"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; avoid contact with harsh chemicals, sprays, and perfumes; store in a flat box to prevent scratches; do not soak in water.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P311.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P311/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P311-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P311/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Enchanting Double Heart Design ✨\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Heart\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water",
+    "referenceTitle": "Emerald Heart Pendant Necklace",
+    "originalId": "723",
+    "originalSku": "MJ-247",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-247-emerald-heart-pendant-necklace-723",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

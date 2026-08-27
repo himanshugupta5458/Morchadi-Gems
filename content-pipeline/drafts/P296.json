@@ -1,0 +1,146 @@
+{
+  "productId": "P296",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "framed by a delicate halo of sparkling crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Shape",
+      "value": "starburst flower",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Shape: Starburst Flower"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; avoid contact with harsh chemicals, sprays, and perfumes; store in a flat box to prevent scratches; do not soak in water.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P296.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P296/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P296-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P296/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P296-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P296/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Discover a celestial bloom with our elegant flower pendant necklace. Featuring a radiant starburst design at its center, framed by a delicate halo of sparkling crystals, this piece is a perfect blend of modern and classic. Crafted from durable anti-tarnish stainless steel and plated in 18K gold, it's a perfect accessory for everyday elegance or a special occasion.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Starburst Flower\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water\n- Gold necklace, starburst necklace, flower pendant, anti-tarnish jewelry, stainless steel, elegant jewelry, gift for her, delicate necklace, crystal necklace, 18k gold plated",
+    "referenceTitle": "Starburst Flower Pendant Necklace - Anti-Tarnish Gold Jewelry",
+    "originalId": "700",
+    "originalSku": "MJ-586",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-586-starburst-flower-pendant-necklace-anti-tarnish-gold-jewelry-700",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

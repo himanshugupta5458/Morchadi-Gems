@@ -1,0 +1,134 @@
+{
+  "productId": "P305",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Shape",
+      "value": "floral",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Shape: Floral"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Y-shaped chain with three floral charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "A delicate Y-shaped chain featuring three sparkling floral charms"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; avoid contact with harsh chemicals, sprays, and perfumes; store in a flat box to prevent scratches; do not soak in water.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in wate"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P305.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P305/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- A delicate Y-shaped chain featuring three sparkling floral charms, perfect for adding a touch of feminine elegance to your neckline.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Floral\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\nCare Tips:\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in wate\n-",
+    "referenceTitle": "Anti tarnish Charm Necklace",
+    "originalId": "717",
+    "originalSku": "MJ-057",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-057-anti-tarnish-charm-necklace-717",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "source rawContent's final care-tip line reads 'Do not soak in wate' (truncated/typo in source); quoted verbatim, value cleaned to standard phrasing."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

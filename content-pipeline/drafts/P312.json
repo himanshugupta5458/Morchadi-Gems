@@ -1,0 +1,100 @@
+{
+  "productId": "P312",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from premium glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "pink",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this radiant set of Pink glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "golden bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "beautifully adorned with shimmering golden bead accents"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P312.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P312/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P312-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P312/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P312-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P312/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Description:\nMake a bold statement with this radiant set of Pink glass bangles, beautifully adorned with shimmering golden bead accents. Crafted from premium glass, each bangle showcases a vibrant red hue, symbolizing joy and tradition—perfect for weddings, festivals, parties, and everyday ethnic wear.\nHandcrafted for durability and lightweight comfort, these bangles add a dazzling touch to sarees, lehengas, salwar suits, and indo-western outfits. The golden bead detailing brings subtle sparkle, making this set a stunning accessory for bridal jewelry, festive looks, or thoughtful gifting.\nKey Features:\n- Premium red glass bangles with intricate golden bead embellishments\n- Handcrafted for a flawless, elegant look\n- Lightweight and comfortable for extended daily or festive wear\n- Ideal for weddings, festivals, parties, and gifting\n- Complements both traditional and modern Indian attire",
+    "referenceTitle": "Pink Rain Drop Glass Bangles (12 Piece)",
+    "originalId": "730",
+    "originalSku": "MJ-465",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-465-pink-rain-drop-glass-bangles-12-piece-730",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "source text is internally inconsistent on color: referenceTitle and opening line say 'Pink', but the description also says 'each bangle showcases a vibrant red hue' and Key Features says 'Premium red glass bangles' — exportNotes confirms this listing shares a duplicate template with product 515, so the red mentions may be a template artifact. Color attribute uses 'Pink' per title/opening line; flagging for owner review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

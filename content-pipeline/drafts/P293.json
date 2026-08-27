@@ -1,0 +1,127 @@
+{
+  "productId": "P293",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "Artificial Stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Artificial Stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp Type",
+      "value": "lobster clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Closure: Lobster Clasp"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Length",
+      "value": "55.9 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Length: 55.9 cm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; store in a flat box to prevent scratches; keep away from sprays and perfumes; avoid soaking in water; clean with a soft brush dipped in jewellery cleaning solution.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Store in a flat box to prevent scratches\n- Keep away from sprays and perfumes\n- Avoid soaking in water\n- Clean with a soft brush dipped in jewellery cleaning solution"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P293.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P293/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P293-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P293/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Emerald Women's Round Pendant\n- Pinterest-inspired minimal design\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Stone Type: Artificial Stones\n- Closure: Lobster Clasp\n- Length: 55.9 cm\nCare Tips:\n- Wipe with a soft cloth after every use\n- Store in a flat box to prevent scratches\n- Keep away from sprays and perfumes\n- Avoid soaking in water\n- Clean with a soft brush dipped in jewellery cleaning solution",
+    "referenceTitle": "Emerald Women's Round Pendant",
+    "originalId": "692",
+    "originalSku": "MJ-249",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-249-emerald-women-s-round-pendant-692",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,92 @@
+{
+  "productId": "P290",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium glass bangles with sparkling stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted with premium-quality glass and embellished with fine stone detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "green, blue, maroon, orange, gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring rich shades of green, blue, maroon, orange, and gold"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P290.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P290/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P290-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P290/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Description:\nBring vibrant elegance to your ethnic style with this multicolor glass bangle set beautifully adorned with shimmering stones. Featuring rich shades of green, blue, maroon, orange, and gold, these bangles are perfect for adding a pop of color to weddings, festivals, and special occasions.\nHandcrafted with premium-quality glass and embellished with fine stone detailing, each bangle exudes traditional charm while offering a comfortable fit. The multicolor design makes this set a versatile accessory that pairs effortlessly with sarees, lehengas, salwar suits, and Indo-western outfits.\nAn excellent choice for bridal collections, festive gifting, and cultural celebrations, this bangle set is sure to become a timeless piece in your jewellery box.\nKey Features:\n-\nPremium glass bangles with sparkling stones\n-\nStunning multicolor design for versatile styling\n-\nLightweight and comfortable for all-day wear\n-\nIdeal for weddings, festivals, and special events\n-\nAvailable in multiple sizes for a perfect fit",
+    "referenceTitle": "Antique Multicolor Glass Bangles",
+    "originalId": "682",
+    "originalSku": "MJ-110",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-110-antique-multicolor-glass-bangles-682",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

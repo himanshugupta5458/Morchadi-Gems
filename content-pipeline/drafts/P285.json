@@ -1,0 +1,130 @@
+{
+  "productId": "P285",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium Glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "light golden transparent",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Light Golden Transparent"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Work: Golden floral stone-studded design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "glossy finish with fine stone detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Glossy traditional bangles with fine stone detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle gently — these are glass bangles.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instruction: Handle gently as these are glass bangles"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P285.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P285-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P285-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P285-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P285-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nGrace your ethnic look with these light golden transparent glass bangles, adorned with delicate golden stone work. Elegant, lightweight, and versatile—perfect for weddings, festive occasions, or daily traditional wear.\n-\nMaterial: Premium Glass\n-\nWork: Golden floral stone-studded design\n-\nColor: Light Golden Transparent\n-\nDesign: Glossy traditional bangles with fine stone detailing\n-\nSize/ Fit: Available in 2.4, 2.6, 2.8 (custom sizes on request)\n-\nOccasion: Ideal for weddings, festivals, parties & everyday wear\n-\nCare Instruction: Handle gently as these are glass bangles\nMade from high-quality glass, this bangle set is lightweight yet durable, offering comfort for extended wear. The clear glass with golden accents pairs effortlessly with sarees, lehengas, salwar suits, and fusion outfits, making it a versatile choice for every jewellery lover",
+    "referenceTitle": "Light Golden Transparent Glass Bangles",
+    "originalId": "677",
+    "originalSku": "MJ-395",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-395-light-golden-transparent-glass-bangles-677",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

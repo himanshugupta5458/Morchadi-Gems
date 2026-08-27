@@ -1,0 +1,112 @@
+{
+  "productId": "P286",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality Glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Work: Golden stone-studded floral design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "transparent with golden detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Transparent with golden detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Stylish ethnic bangles with glossy finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle with care — delicate glass bangles.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instruction: Handle with care as these are delicate glass bangles"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P286.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P286/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P286-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P286/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nAdd timeless elegance to your jewellery collection with this transparent glass bangles highlighted with golden stone work. Lightweight, elegant, and versatile—perfect for weddings, festivals, parties, or everyday ethnic wear.\n-\nMaterial: High-quality Glass\n-\nWork: Golden stone-studded floral design\n-\nColor: Transparent with golden detailing\n-\nDesign: Stylish ethnic bangles with glossy finish\n-\nSize/ Fit: Available in 2.4, 2.6, 2.8 (custom sizes on request)\n-\nOccasion: Ideal for weddings, festive celebrations, parties & daily wear\n-\nCare Instruction: Handle with care as these are delicate glass bangles",
+    "referenceTitle": "Transparent Golden Glass Stone Bangles",
+    "originalId": "678",
+    "originalSku": "MJ-598",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-598-transparent-golden-glass-stone-bangles-678",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

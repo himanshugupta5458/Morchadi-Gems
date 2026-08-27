@@ -1,0 +1,112 @@
+{
+  "productId": "P288",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium Glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Work: Stone-studded design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "dual-tone multicolor: green, yellow, pink, orange",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Colors: Dual-tone multicolor (Green, Yellow, Pink, Orange)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Stylish ethnic bangles with glossy finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle with care — these are glass bangles.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instruction: Handle with care as these are glass bangles"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P288.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P288/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P288-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P288/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nBring elegance to your ethnic look with these dual-tone multicolor glass bangles, beautifully studded with sparkling stones. Perfect for festivals, weddings, parties, or daily wear, they add a vibrant charm to every outfit.\n-\nMaterial: Premium Glass\n-\nWork: Stone-studded design\n-\nColors: Dual-tone multicolor (Green, Yellow, Pink, Orange)\n-\nDesign: Stylish ethnic bangles with glossy finish\n-\nSize/ Fit: Available in multiple sizes (2.4, 2.6, 2.8, etc.)\n-\nOccasion: Ideal for weddings, festivals, parties & daily wear\n-\nCare Instruction: Handle with care as these are glass bangles",
+    "referenceTitle": "Dual-Tone Glass Stone Bangles",
+    "originalId": "680",
+    "originalSku": "MJ-222",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-222-dual-tone-glass-stone-bangles-680",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

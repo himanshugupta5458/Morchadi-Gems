@@ -1,0 +1,139 @@
+{
+  "productId": "P302",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Treatment",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Base Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Base Material: Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: 18K Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Shape",
+      "value": "rectangle with north star",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Shape: Rectangle with North Star"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Wipe with a soft cloth after every use; avoid contact with harsh chemicals, sprays, and perfumes; store in a flat box to prevent scratches; do not soak in water.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P302.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P302/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P302-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P302/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P302-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P302/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P302-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P302/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Navigate your day in style with our elegant North Star pendant necklace. Crafted from premium anti-tarnish stainless steel with 18K gold plating, this minimalist rectangle charm adds a touch of celestial charm to any outfit. Perfect for everyday wear or layering. Shop our high-quality, durable gold jewelry online.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Rectangle with North Star\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water\n- gold necklace, star necklace, minimalist jewelry, anti-tarnish necklace, stainless steel jewelry, gold plated necklace, dainty necklace, everyday jewelry, celestial necklace, rectangle pendant, online jewelry shopping",
+    "referenceTitle": "Minimalist North Star Pendant Necklace - Anti-Tarnish Gold Jewelry",
+    "originalId": "712",
+    "originalSku": "MJ-426",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-426-minimalist-north-star-pendant-necklace-anti-tarnish-gold-jewelry-712",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
