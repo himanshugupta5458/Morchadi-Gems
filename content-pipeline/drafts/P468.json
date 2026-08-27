@@ -1,0 +1,79 @@
+{
+  "productId": "P468",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this chic gold-toned bracelet duo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "paperclip-link chain bracelet paired with heart-link chain bracelet, two-piece set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a bold paperclip link with a delicate heart chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep these pieces dry and store safely in a dry place after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P468.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P468/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "combo-set"
+  ],
+  "sourceNotes": {
+    "rawContent": "Double the charm with this chic gold-toned bracelet duo. Pairing a bold paperclip link with a delicate heart chain, this high-fashion set is perfect for effortless layering. To maintain its radiant golden luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "referenceTitle": "Gold Paperclip & Heart Chain Bracelet Combo",
+    "originalId": "924",
+    "originalSku": "MJ-292",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-292-gold-paperclip-heart-chain-bracelet-combo-924",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

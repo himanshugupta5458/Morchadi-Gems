@@ -1,0 +1,79 @@
+{
+  "productId": "P470",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this chic gold-toned bracelet duo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "ball-chain bracelet paired with beaded-strand chain bracelet, two-piece set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a timeless ball chain with a modern beaded strand"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep these pieces dry and store safely in a dry place after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P470.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P470/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "combo-set"
+  ],
+  "sourceNotes": {
+    "rawContent": "Elevate your everyday aesthetic with this chic gold-toned bracelet duo. Combining a timeless ball chain with a modern beaded strand, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Ball Chain & Beaded Link Duo",
+    "originalId": "926",
+    "originalSku": "MJ-274",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-274-gold-dainty-bracelet-combo-set-minimalist-ball-chain-beaded-link-duo-926",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

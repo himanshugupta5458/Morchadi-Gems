@@ -1,0 +1,79 @@
+{
+  "productId": "P467",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this chic gold-toned bracelet duo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "link-chain bracelet paired with leaf-motif chain bracelet, two-piece set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a timeless link chain with a modern leaf-motif strand"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep these pieces dry and store safely in a dry place after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P467.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P467/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "combo-set"
+  ],
+  "sourceNotes": {
+    "rawContent": "Blossom with style in this chic gold-toned bracelet duo. Combining a timeless link chain with a modern leaf-motif strand, this high-fashion set is perfect for effortless layering. To maintain its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Link Chain & Elegant Leaf Motif Duo",
+    "originalId": "923",
+    "originalSku": "MJ-276",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-276-gold-dainty-bracelet-combo-set-minimalist-link-chain-elegant-leaf-motif-duo-923",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

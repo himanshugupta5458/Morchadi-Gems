@@ -1,0 +1,88 @@
+{
+  "productId": "P445",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "round evil eye charm design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "our signature Round Evil Eye Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a vibrant blue center surrounded by a shimmering crystal halo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "silver-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "its brilliant silver-toned luster"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep it dry and store safely after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P445.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P445/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shield your energy in style with our signature Round Evil Eye Bracelet. Featuring a vibrant blue center surrounded by a shimmering crystal halo, this fashion-forward piece is perfect for daily layering. To maintain its brilliant silver-toned luster, keep it dry and store safely after every wear.",
+    "referenceTitle": "Classic Silver Round Evil Eye Bracelet",
+    "originalId": "899",
+    "originalSku": "MJ-141",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-141-classic-silver-round-evil-eye-bracelet-899",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

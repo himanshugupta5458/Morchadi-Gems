@@ -1,0 +1,90 @@
+{
+  "productId": "P465",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this chic gold-toned bracelet duo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "pearl-strand bracelet paired with textured-link chain bracelet, two-piece set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a classic pearl strand with a modern textured chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pearl (glass/faux or genuine, unclear from text)",
+      "displayTerm": "pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a classic pearl strand"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep these pieces dry and store safely after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P465.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P465/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "combo-set"
+  ],
+  "sourceNotes": {
+    "rawContent": "Refresh your accessory collection with this chic gold-toned bracelet duo. Combining a classic pearl strand with a modern textured chain, this high-fashion set is perfect for effortless layering. To maintain its radiant luster, keep these pieces dry and store safely after every wear.",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Pearl Strand & Textured Link Chain",
+    "originalId": "921",
+    "originalSku": "MJ-277",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-277-gold-dainty-bracelet-combo-set-minimalist-pearl-strand-textured-link-chain-921",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

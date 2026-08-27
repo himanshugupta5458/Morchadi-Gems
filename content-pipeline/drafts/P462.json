@@ -1,0 +1,89 @@
+{
+  "productId": "P462",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned Heartbeat Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "heartbeat/lifeline charm design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned Heartbeat Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a crystal-studded lifeline motif"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep it away from moisture and perfumes, and store it safely in a dry place after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P462.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P462/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Pulse with style in this exquisite gold-toned Heartbeat Bracelet. Featuring a crystal-studded lifeline motif, this trendy piece adds a sentimental glow to any look. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after every wear.",
+    "referenceTitle": "Gold Heartbeat Lifeline Bracelet",
+    "originalId": "918",
+    "originalSku": "MJ-283",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-283-gold-heartbeat-lifeline-bracelet-918",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one.",
+    "exportNotes on the raw block flagged this title as a duplicate shared with template 907 (P451) — likely a near-duplicate listing; confirm distinctness before publishing."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

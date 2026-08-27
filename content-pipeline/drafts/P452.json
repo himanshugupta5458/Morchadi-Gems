@@ -1,0 +1,88 @@
+{
+  "productId": "P452",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "winged heart lock charm design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "our Winged Heart Bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "gold-toned metal, base metal unspecified",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "This trendy golden piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a crystal-studded heart lock with delicate wings"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P452.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P452/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Unlock elegance with our Winged Heart Bracelet. This trendy golden piece features a crystal-studded heart lock with delicate wings for a whimsical, high-fashion look. To preserve its radiant luster, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use.",
+    "referenceTitle": "Gold Winged Heart Lock Bracelet",
+    "originalId": "908",
+    "originalSku": "MJ-300",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-300-gold-winged-heart-lock-bracelet-908",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
