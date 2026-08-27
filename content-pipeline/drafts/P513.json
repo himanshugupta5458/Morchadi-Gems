@@ -65,9 +65,9 @@
     "price": 499,
     "mrp": 499,
     "cost": null,
-    "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
+    "referencePrice": "\u20b9499 sale price (morchadijewels.com, reference only)"
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [
     "anti-tarnish"
   ],
@@ -85,7 +85,7 @@
   },
   "flaggedContent": [],
   "notes": [
-    "personalized: null — rawContent mentions customizing 'your style with replaceable accessories' (swappable openable-locket inserts), which is customization-adjacent but names no naming/engraving mechanism; originalCategories also tags this 'Personalised Item', reinforcing the ambiguity rather than resolving it."
+    "personalized: null \u2014 rawContent mentions customizing 'your style with replaceable accessories' (swappable openable-locket inserts), which is customization-adjacent but names no naming/engraving mechanism; originalCategories also tags this 'Personalised Item', reinforcing the ambiguity rather than resolving it."
   ],
   "status": "draft",
   "generatedBy": null

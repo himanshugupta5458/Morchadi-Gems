@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant Kundan & ruby stone detailing"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "rich ruby-colored accents"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P602.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P602/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 499,
+    "mrp": 499,
     "cost": null,
     "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
   },

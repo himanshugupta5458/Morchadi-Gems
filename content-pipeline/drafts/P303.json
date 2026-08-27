@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a sparkling diamond-like stone at its center"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Shape",
@@ -98,7 +98,7 @@
     "general": [
       {
         "path": "/products/P303.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P303/raw/main.webp",
         "role": "main"
       },
@@ -118,8 +118,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 219,
+    "mrp": 219,
     "cost": null,
     "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
   },

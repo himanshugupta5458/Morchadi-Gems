@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "with polki kundan centres"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "flanking a heavily CZ stone-encrusted watch dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Embellishment",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Intricate kundan medallion beads"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P391.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P391/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 399,
+    "mrp": 399,
     "cost": null,
     "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
   },

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "teardrop kundan centres"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial finish",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P388.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P388/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 369,
+    "mrp": 369,
     "cost": null,
     "referencePrice": "₹369 sale price (morchadijewels.com, reference only)"
   },

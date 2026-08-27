@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "lustrous faux pearls"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Colour",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P430.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P430/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
     "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

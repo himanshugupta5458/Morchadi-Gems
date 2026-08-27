@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Designed with premium white pearl beads, vibrant pink & green accents, and intricate meenakari-inspired charms"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P601.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P601/raw/main.webp",
         "role": "main"
       }
@@ -62,8 +62,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 249,
+    "mrp": 249,
     "cost": null,
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },

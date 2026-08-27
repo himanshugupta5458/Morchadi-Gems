@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "sparkling crystal-encrusted letter \"A\" pendant"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant design",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P628.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P628/raw/main.webp",
         "role": "main"
       },
@@ -63,12 +63,12 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 199,
+    "mrp": 199,
     "cost": null,
     "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [
     "anti-tarnish"
   ],

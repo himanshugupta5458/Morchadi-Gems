@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this baroque imitation pearl bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp type",
@@ -32,7 +32,7 @@
     "general": [
       {
         "path": "/products/P523.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P523/raw/main.webp",
         "role": "main"
       }
@@ -40,8 +40,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 199,
+    "mrp": 199,
     "cost": null,
     "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
   },

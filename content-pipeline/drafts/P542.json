@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "sparkling white crystal stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P542.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P542/raw/main.webp",
         "role": "main"
       },
@@ -68,8 +68,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 299,
+    "mrp": 299,
     "cost": null,
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },

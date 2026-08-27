@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "fine crystal accents"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P455.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P455/raw/main.webp",
         "role": "main"
       }
@@ -73,9 +73,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 49,
+    "mrp": 49,
+    "cost": 9.5,
     "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

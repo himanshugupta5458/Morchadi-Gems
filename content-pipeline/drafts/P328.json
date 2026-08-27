@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Featuring a radiant square-cut pink crystal set on a sleek gold-plated band"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P328.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P328/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 49,
+    "mrp": 49,
     "cost": null,
     "referencePrice": "₹49 sale price (morchadijewels.com, reference only)"
   },

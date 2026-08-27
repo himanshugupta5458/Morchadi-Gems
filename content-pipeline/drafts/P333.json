@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant Green gemstone statement ring"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P333.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P333/raw/main.webp",
         "role": "main"
       }
@@ -62,8 +62,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 35,
+    "mrp": 35,
     "cost": null,
     "referencePrice": "₹35 sale price (morchadijewels.com, reference only)"
   },

@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a brilliant marquise solitaire"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P457.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P457/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 49,
+    "mrp": 49,
+    "cost": 9.5,
     "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

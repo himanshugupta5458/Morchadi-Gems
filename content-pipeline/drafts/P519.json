@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a brilliant vine of shimmering marquise-cut crystals"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material/finish - chain",
@@ -32,7 +32,7 @@
     "general": [
       {
         "path": "/products/P519.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P519/raw/main.webp",
         "role": "main"
       }
@@ -40,8 +40,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 349,
+    "mrp": 349,
     "cost": null,
     "referencePrice": "₹349 sale price (morchadijewels.com, reference only)"
   },

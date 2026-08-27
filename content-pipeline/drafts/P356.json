@@ -23,7 +23,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "featuring tiny crystal stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -74,7 +74,7 @@
     "general": [
       {
         "path": "/products/P356.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P356/raw/main.webp",
         "role": "main"
       }
@@ -82,8 +82,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 160,
+    "mrp": 160,
     "cost": null,
     "referencePrice": "₹160 sale price (morchadijewels.com, reference only)"
   },

@@ -76,9 +76,9 @@
     "price": 209,
     "mrp": null,
     "cost": 125,
-    "referencePrice": "₹209 sale price (morchadijewels.com, reference only)"
+    "referencePrice": "\u20b9209 sale price (morchadijewels.com, reference only)"
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [
     "anti-tarnish",
     "gifting"
@@ -95,10 +95,10 @@
   },
   "flaggedContent": [],
   "notes": [
-    "personalized is left null deliberately: the title says \"Personalized Initial\" and the description sells \"an initial pendant\" that expresses \"your personal story\", which is explicit personalisation language — but the export carries NO initial-selection option or variant, so how a shopper chooses the letter is unknown. Owner must resolve at review: if buyers pick an initial, this needs an option/variant design before publish (personalized: true); if it ships one fixed letter, personalized: false and the title overpromises.",
+    "personalized is left null deliberately: the title says \"Personalized Initial\" and the description sells \"an initial pendant\" that expresses \"your personal story\", which is explicit personalisation language \u2014 but the export carries NO initial-selection option or variant, so how a shopper chooses the letter is unknown. Owner must resolve at review: if buyers pick an initial, this needs an option/variant design before publish (personalized: true); if it ships one fixed letter, personalized: false and the title overpromises.",
     "2026-08-25: Base material and Plating candidates merged into one maximal-phrase Material attribute (contiguous source bullets quoted together). The karat claim (\"18K\") is dropped from the published value: karat-on-plated is not a claim this catalogue may make (ADR-018/ADR-035). The quote preserves the source's exact wording.",
-    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
-    "2026-08-25: pricing.price set to ₹209, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹125 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) \u2014 every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to \u20b9209, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost \u20b9125 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
     "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
   ],
   "status": "draft",

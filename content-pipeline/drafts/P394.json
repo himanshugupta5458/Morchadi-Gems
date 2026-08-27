@@ -25,14 +25,14 @@
         "origin": "migrated-text",
         "quotedPhrase": "Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
     "general": [
       {
         "path": "/products/P394.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P394/raw/main.webp",
         "role": "main"
       },
@@ -46,8 +46,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 450,
+    "mrp": 450,
     "cost": null,
     "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
   },

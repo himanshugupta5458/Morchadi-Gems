@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Ruby & Crystal Pendant Necklace (Gold Tone)"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Multicolor Gemstone tulip Bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Personalization",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P599.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P599/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 1549,
+    "mrp": 1549,
     "cost": null,
     "referencePrice": "₹1549 sale price (morchadijewels.com, reference only)"
   },

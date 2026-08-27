@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "🌸 Blush pink + deep purple marquise CZ stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Set Contents — Necklace",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P569.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P569/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 320,
+    "mrp": 320,
     "cost": null,
     "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
   },

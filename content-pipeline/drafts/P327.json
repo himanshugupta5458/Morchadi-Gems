@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Featuring a vibrant mix of marquise and princess-cut stones in pink, mint green, amber, lavender, and clear CZ"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P327.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P327/raw/main.webp",
         "role": "main"
       }
@@ -62,8 +62,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 150,
+    "mrp": 150,
     "cost": null,
     "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
   },

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "with sparkling CZ stone centres"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial finish",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P392.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P392/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 350,
+    "mrp": 350,
     "cost": null,
     "referencePrice": "₹350 sale price (morchadijewels.com, reference only)"
   },

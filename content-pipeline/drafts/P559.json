@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "intricate kundan mandala medallions"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Craftsmanship Technique",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "bordered with delicate seed pearls"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain/Clasp",
@@ -87,7 +87,7 @@
     "general": [
       {
         "path": "/products/P559.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P559/raw/main.webp",
         "role": "main"
       }
@@ -95,8 +95,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 650,
+    "mrp": 650,
     "cost": null,
     "referencePrice": "₹650 sale price (morchadijewels.com, reference only)"
   },

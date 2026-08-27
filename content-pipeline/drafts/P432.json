@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "stone-studded tennis bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P432.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P432/raw/main.webp",
         "role": "main"
       },
@@ -57,9 +57,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 149,
+    "mrp": 149,
+    "cost": 20,
     "referencePrice": "₹149 sale price, ₹20 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

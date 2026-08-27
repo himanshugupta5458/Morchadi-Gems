@@ -6,7 +6,11 @@
   "variants": [
     {
       "optionName": "Size for bangles",
-      "values": ["2.4", "2.6", "2.8"]
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
     }
   ],
   "attributes": [],
@@ -14,7 +18,7 @@
     "general": [
       {
         "path": "/products/P414.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P414/raw/main.webp",
         "role": "main"
       }
@@ -22,8 +26,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 220,
+    "mrp": 220,
     "cost": null,
     "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
   },
@@ -35,7 +39,9 @@
     "originalId": "867",
     "originalSku": "MJ-539",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-539-set-of-8-viral-jelly-bangle-light-multi-867",
-    "originalCategories": ["jelly bangles"]
+    "originalCategories": [
+      "jelly bangles"
+    ]
   },
   "flaggedContent": [
     {

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "featuring a brilliant cluster of white stones and a delicate teardrop charm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P479.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P479/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 129,
+    "mrp": 129,
+    "cost": 60,
     "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "featuring vibrant ruby-colored stones and a delicate pearl drop"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a delicate pearl drop"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P483.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P483/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 109,
+    "mrp": 109,
+    "cost": 40,
     "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

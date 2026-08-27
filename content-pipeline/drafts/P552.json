@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this stunning CZ tennis bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone cut",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "full row of sparkling baguette-cut crystals"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp type",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P552.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P552/raw/main.webp",
         "role": "main"
       }
@@ -73,9 +73,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 299,
+    "mrp": 299,
+    "cost": 130,
     "referencePrice": "₹299 sale price, ₹130 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

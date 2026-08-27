@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "delicate crystal-style dotted embellishments"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -96,7 +96,7 @@
     "general": [
       {
         "path": "/products/P346.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P346/raw/main.webp",
         "role": "main"
       },
@@ -110,8 +110,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 189,
+    "mrp": 189,
     "cost": null,
     "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
   },

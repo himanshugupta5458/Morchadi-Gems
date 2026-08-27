@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "delicate red tulip kundan charms"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial finish",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a beautiful grey floral kundan pendant"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P389.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P389/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 399,
+    "mrp": 399,
     "cost": null,
     "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
   },

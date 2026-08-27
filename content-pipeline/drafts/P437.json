@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "delicate crystals"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material/Finish",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P437.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P437/raw/main.webp",
         "role": "main"
       }
@@ -51,8 +51,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 110,
+    "mrp": 110,
     "cost": null,
     "referencePrice": "₹110 sale price (morchadijewels.com, reference only)"
   },

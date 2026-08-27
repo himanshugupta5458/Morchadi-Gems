@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Featuring a radiant mix of multi-colored stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P487.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P487/raw/main.webp",
         "role": "main"
       }
@@ -51,9 +51,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 109,
+    "mrp": 109,
+    "cost": 40,
     "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "the choker is adorned with alternating mint stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P315.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P315/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 249,
+    "mrp": 249,
     "cost": null,
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },

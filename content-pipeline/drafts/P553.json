@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "dainty square CZ stone charm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain style",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P553.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P553/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 249,
+    "mrp": 249,
+    "cost": 97,
     "referencePrice": "₹249 sale price, ₹97 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

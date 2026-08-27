@@ -65,9 +65,9 @@
     "price": 399,
     "mrp": 399,
     "cost": null,
-    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+    "referencePrice": "\u20b9399 sale price (morchadijewels.com, reference only)"
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [
     "anti-tarnish"
   ],
@@ -84,7 +84,7 @@
   },
   "flaggedContent": [],
   "notes": [
-    "personalized is left null deliberately: the copy sells \"gold-leaf engravings\", and engraving is explicit personalisation language under skill rule 10 — but here it reads as a decorative pattern on the kada itself, and the export carries no engraving option, text field or any mechanism for a shopper to choose engraved content. Owner must resolve at review: if the engraving is purely decorative (most likely), set personalized: false; if buyers can request engraved content, an option design is needed before publish (personalized: true)."
+    "personalized is left null deliberately: the copy sells \"gold-leaf engravings\", and engraving is explicit personalisation language under skill rule 10 \u2014 but here it reads as a decorative pattern on the kada itself, and the export carries no engraving option, text field or any mechanism for a shopper to choose engraved content. Owner must resolve at review: if the engraving is purely decorative (most likely), set personalized: false; if buyers can request engraved content, an option design is needed before publish (personalized: true)."
   ],
   "status": "draft",
   "generatedBy": null

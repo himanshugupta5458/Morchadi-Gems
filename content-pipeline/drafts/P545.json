@@ -32,12 +32,12 @@
     "price": 399,
     "mrp": 399,
     "cost": null,
-    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+    "referencePrice": "\u20b9399 sale price (morchadijewels.com, reference only)"
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [],
   "sourceNotes": {
-    "rawContent": "Cute Birthday Hamper with Initial Ring, Hoop Earrings, Scrunchie, Flower Clip & Chocolate. Perfect gift for girlfriends, sisters, and best friends. 💖✨⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawContent": "Cute Birthday Hamper with Initial Ring, Hoop Earrings, Scrunchie, Flower Clip & Chocolate. Perfect gift for girlfriends, sisters, and best friends. \ud83d\udc96\u2728\u26a0\ufe0f Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
     "referenceTitle": "Birthday Hamper for Her",
     "originalId": "1011",
     "originalSku": "MJ-118",
@@ -50,7 +50,7 @@
     {
       "type": "boilerplate-discarded",
       "detail": "Removed prepaid-only payment restriction note",
-      "sourceContext": "💖✨⚠️ Prepaid only"
+      "sourceContext": "\ud83d\udc96\u2728\u26a0\ufe0f Prepaid only"
     },
     {
       "type": "boilerplate-discarded",
@@ -59,7 +59,7 @@
     }
   ],
   "notes": [
-    "personalized set to null — 'Initial Ring' component name suggests possible customization but the source text states no explicit choose-your-initial mechanism; ambiguous."
+    "personalized set to null \u2014 'Initial Ring' component name suggests possible customization but the source text states no explicit choose-your-initial mechanism; ambiguous."
   ],
   "status": "draft",
   "generatedBy": null

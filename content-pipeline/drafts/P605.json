@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Stone Type: Kundan & Crystal Stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial shape",
@@ -109,7 +109,7 @@
     "general": [
       {
         "path": "/products/P605.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P605/raw/main.webp",
         "role": "main"
       }
@@ -117,8 +117,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 249,
+    "mrp": 249,
     "cost": null,
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },

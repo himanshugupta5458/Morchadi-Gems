@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a shimmering cat's eye stone bud"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone - leaves",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "crystal-accented leaves"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Sizing/design",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P526.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P526/raw/main.webp",
         "role": "main"
       }
@@ -62,8 +62,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 220,
+    "mrp": 220,
     "cost": null,
     "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
   },

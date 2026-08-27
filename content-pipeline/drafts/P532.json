@@ -25,14 +25,14 @@
         "origin": "migrated-text",
         "quotedPhrase": "Anti-Tarnish Pearl Bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
     "general": [
       {
         "path": "/products/P532.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P532/raw/main.webp",
         "role": "main"
       },
@@ -52,8 +52,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 599,
+    "mrp": 599,
     "cost": null,
     "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
   },

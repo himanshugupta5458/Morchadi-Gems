@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "ruby red kundan centres"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "flanking a heavily CZ stone-encrusted dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Below flows a multicolour kundan chand pendant"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Embellishment",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P393.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P393/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 399,
+    "mrp": 399,
     "cost": null,
     "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
   },

@@ -34,7 +34,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Work: Golden stone-studded floral design"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Color",
@@ -74,7 +74,7 @@
     "general": [
       {
         "path": "/products/P286.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P286/raw/main.webp",
         "role": "main"
       },
@@ -88,8 +88,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 189,
+    "mrp": 189,
     "cost": null,
     "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
   },

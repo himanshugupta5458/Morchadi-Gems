@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "The lower section features multiple pastel pink marquise-cut stones arranged in an elegant, airy pattern"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P326.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P326/raw/main.webp",
         "role": "main"
       },
@@ -79,8 +79,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 150,
+    "mrp": 150,
     "cost": null,
     "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
   },

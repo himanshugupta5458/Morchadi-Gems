@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "💎 Sparkling clear white marquise CZ stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish/Plating",
@@ -65,7 +65,7 @@
     "general": [
       {
         "path": "/products/P566.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P566/raw/main.webp",
         "role": "main"
       }
@@ -73,8 +73,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 229,
+    "mrp": 229,
     "cost": null,
     "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
   },

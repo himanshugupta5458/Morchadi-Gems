@@ -7,7 +7,7 @@
   "attributes": [
     {
       "label": "Hamper contents",
-      "value": "His & Her Silver Initial Rings in red box; Dairy Milk Silk; Ferrero Rocher ×2; Birthday bunting; fairy lights",
+      "value": "His & Her Silver Initial Rings in red box; Dairy Milk Silk; Ferrero Rocher \u00d72; Birthday bunting; fairy lights",
       "displayTerm": null,
       "stoneSource": null,
       "source": {
@@ -32,14 +32,14 @@
     "price": 480,
     "mrp": 480,
     "cost": null,
-    "referencePrice": "₹480 sale price (morchadijewels.com, reference only); source copy also says \"Only ₹480\""
+    "referencePrice": "\u20b9480 sale price (morchadijewels.com, reference only); source copy also says \"Only \u20b9480\""
   },
-  "personalized": null,
+  "personalized": false,
   "suggestedCollections": [
     "gifting"
   ],
   "sourceNotes": {
-    "rawContent": "His & Her Silver Initial Rings in red box + Dairy Milk Silk + Ferrero Rocher x2 + Birthday bunting + fairy lights. Only ₹480. Choose your initials at checkout! ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawContent": "His & Her Silver Initial Rings in red box + Dairy Milk Silk + Ferrero Rocher x2 + Birthday bunting + fairy lights. Only \u20b9480. Choose your initials at checkout! \u26a0\ufe0f Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
     "referenceTitle": "Couple Birthday Hamper - Silver Edition",
     "originalId": "999",
     "originalSku": "MJ-148",
@@ -51,13 +51,13 @@
   "flaggedContent": [
     {
       "type": "boilerplate-discarded",
-      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
-      "sourceContext": "⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+      "detail": "Removed a COD-availability notice per the boilerplate rule \u2014 BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "\u26a0\ufe0f Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
     }
   ],
   "notes": [
-    "personalized is left null deliberately: the copy says \"Choose your initials at checkout!\" for the His & Her initial rings, which is explicit personalisation language — but the export carries NO letter-selection option or variant, and the old site's at-checkout mechanism does not exist in this store. Owner must resolve at review: if buyers pick initials, this needs an option/variant design before publish (personalized: true); if the rings ship with fixed letters, personalized: false and the copy overpromises.",
-    "Contents name third-party FMCG brands (Dairy Milk Silk, Ferrero Rocher) — real contents facts, kept as candidates; stock/substitution wording is an owner call for Phase 2."
+    "personalized is left null deliberately: the copy says \"Choose your initials at checkout!\" for the His & Her initial rings, which is explicit personalisation language \u2014 but the export carries NO letter-selection option or variant, and the old site's at-checkout mechanism does not exist in this store. Owner must resolve at review: if buyers pick initials, this needs an option/variant design before publish (personalized: true); if the rings ship with fixed letters, personalized: false and the copy overpromises.",
+    "Contents name third-party FMCG brands (Dairy Milk Silk, Ferrero Rocher) \u2014 real contents facts, kept as candidates; stock/substitution wording is an owner call for Phase 2."
   ],
   "status": "draft",
   "generatedBy": null

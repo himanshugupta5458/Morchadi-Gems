@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "💜 Deep amethyst purple oval CZ + emerald green leaf stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design Accent",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P568.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P568/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 229,
+    "mrp": 229,
     "cost": null,
     "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
   },

@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a delicate pearl strand"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P463.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P463/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 89,
+    "mrp": 89,
+    "cost": 19,
     "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

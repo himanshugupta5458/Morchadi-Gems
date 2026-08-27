@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "featuring a bold central pearl"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P259.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P259/raw/main.webp",
         "role": "main"
       },
@@ -87,8 +87,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 299,
+    "mrp": 299,
     "cost": null,
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },

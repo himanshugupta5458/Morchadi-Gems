@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Stone type:Pearls"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain length",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P383.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P383/raw/main.webp",
         "role": "main"
       },
@@ -96,8 +96,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 189,
+    "mrp": 189,
     "cost": null,
     "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
   },

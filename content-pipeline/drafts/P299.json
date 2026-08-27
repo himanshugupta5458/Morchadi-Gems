@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "features a lustrous pearl at its center, surrounded by beautifully detailed petals"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -76,7 +76,7 @@
     "general": [
       {
         "path": "/products/P299.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P299/raw/main.webp",
         "role": "main"
       }
@@ -84,8 +84,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 219,
+    "mrp": 219,
     "cost": null,
     "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
   },

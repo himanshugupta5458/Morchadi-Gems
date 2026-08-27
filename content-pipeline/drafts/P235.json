@@ -55,7 +55,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "smaller zircon stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -106,7 +106,7 @@
     "general": [
       {
         "path": "/products/P235.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P235/raw/main.webp",
         "role": "main"
       },
@@ -120,8 +120,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 249,
+    "mrp": 249,
     "cost": null,
     "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
   },

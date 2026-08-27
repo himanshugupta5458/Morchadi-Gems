@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a deep ruby-colored synthetic zirconia bud"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone - leaves",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "sparkling crystal leaves"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material/finish - chain",
@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P525.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P525/raw/main.webp",
         "role": "main"
       }
@@ -51,8 +51,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 259,
+    "mrp": 259,
     "cost": null,
     "referencePrice": "₹259 sale price (morchadijewels.com, reference only)"
   },

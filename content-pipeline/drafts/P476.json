@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "intricately studded with ruby and emerald-colored stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "intricately studded with ruby and emerald-colored stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",
@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P476.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P476/raw/main.webp",
         "role": "main"
       }
@@ -62,9 +62,9 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
-    "cost": null,
+    "price": 129,
+    "mrp": 129,
+    "cost": 60,
     "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,

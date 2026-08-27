@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "delicate designs with sparkling stones"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight/Quality",
@@ -51,7 +51,7 @@
     "general": [
       {
         "path": "/products/P338.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P338/raw/main.webp",
         "role": "main"
       }
@@ -59,8 +59,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 150,
+    "mrp": 150,
     "cost": null,
     "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
   },

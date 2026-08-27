@@ -22,14 +22,14 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adorned with Synthetic Synthetic Synthetic Zircon"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
     "general": [
       {
         "path": "/products/P398.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/main.webp",
         "role": "main"
       },
@@ -97,8 +97,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 450,
+    "mrp": 450,
     "cost": null,
     "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
   },

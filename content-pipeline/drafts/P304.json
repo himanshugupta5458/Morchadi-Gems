@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "featuring intricate details and a small dangling crystal"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Shape",
@@ -98,7 +98,7 @@
     "general": [
       {
         "path": "/products/P304.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P304/raw/main.webp",
         "role": "main"
       },
@@ -118,8 +118,8 @@
     "variantImages": {}
   },
   "pricing": {
-    "price": null,
-    "mrp": null,
+    "price": 214,
+    "mrp": 214,
     "cost": null,
     "referencePrice": "₹214 sale price (morchadijewels.com, reference only)"
   },
