@@ -19276,5 +19276,698 @@
         "Anti Tarnish bracelet"
       ]
     }
+  },
+  {
+    "id": "P280",
+    "name": "Multicolour Spiral Glass Bangles, Glossy Finish",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P280.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "dropdown",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour options": "Green, pink, yellow, blue, orange, peach (six hues)",
+      "design": "Spiral design",
+      "plating coating": "Glossy finish"
+    },
+    "description": "A spiral pattern runs around each bangle in this set, cast in glass with a glossy finish, and it comes in a choice of six hues: green, pink, yellow, blue, orange and peach. The spiral is what sets it apart from a plain round bangle, giving the surface a sense of movement even when the wrist is still.\n\nGlass bangles like this carry a specific kind of clink against each other that a metal bangle doesn't, part of why a stack of them reads as festive rather than everyday. Six colour options and six design numbers to choose from mean two people buying this set are unlikely to end up with identical ones, even at the same price.\n\nIt's available in two sizes, 2.6 and 2.8, so it's worth checking your usual bangle size before ordering since glass doesn't stretch the way some other materials do. Handled gently, glass holds its colour and shine without the fading a plated metal piece can show over time.\n\nAt ₹249, this suits weddings, festivals and everyday ethnic wear about equally, since a spiral design in a bright hue doesn't read as tied to one specific kind of occasion. Six colours in one listing also makes it easy to pick a shade that actually matches what you already own.",
+    "seo": {
+      "primaryKeyword": "multicolour spiral glass bangles glossy finish",
+      "secondaryKeywords": [
+        "glass kangan six colours",
+        "spiral design bangle set",
+        "ethnic glass bangles india"
+      ],
+      "metaTitle": "Multicolour Spiral Glass Bangles, Glossy Finish, ₹249",
+      "metaDescription": "Glass bangles with a spiral pattern and glossy finish, available in six hues and two sizes, priced at ₹249. Ships across India with 7-day returns.",
+      "imageAlt": "Multicolour glass bangles with a spiral pattern and glossy finish",
+      "ogTitle": "Spiral Glass Bangles, Six Colours, Glossy, ₹249",
+      "ogDescription": "Glossy glass bangles with a spiral pattern, in a choice of six colours and two sizes. ₹249 at Morchadi Gems, ships across India.",
+      "ogImage": "/products/P280.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "668",
+      "originalSku": "MJ-577",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-577-spiral-crystal-kangan-2-piece-668",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P281",
+    "name": "Glass Bangles, Traditional Festive Design, Pair of Two",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P281.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "dropdown",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "net quantity": "2 bangles (1 pair)",
+      "stone": "Unspecified stones - material unclear from text",
+      "design": "Stylish, traditional festive design",
+      "colour options": "Available in multiple colors"
+    },
+    "description": "This pair of glass bangles carries a traditional, festive-leaning design rather than a plain round shape, sold as a set of two so both wrists are covered from one purchase. A stone-set detail runs through the design, though the exact stone material isn't confirmed beyond that, so this description holds to what's certain: it's a stone-set detail rather than a plain glass surface.\n\nColour is available in multiple options, so there's a choice to make at checkout rather than a single fixed shade. Bought in a pair, it's built for the way bangles are usually worn in twos or stacked further with others from the same collection, rather than as a single standalone piece.\n\nIt's offered across six design numbers and two sizes, 2.6 and 2.8, so there's room to pick a specific look and a fit that suits your wrist rather than a single one-size option. Glass bangles ask for a bit of care: handle them gently, and they'll hold their finish through regular wear far better than a rougher handling would allow.\n\nAt ₹249 for the pair, this suits sarees, kurta sets and lehengas alike, a traditional design built for festive occasions as much as a dressed-up ordinary day.",
+    "seo": {
+      "primaryKeyword": "glass bangles traditional festive design pair",
+      "secondaryKeywords": [
+        "glass kangan pair",
+        "stone set bangles india",
+        "festive glass bangle set"
+      ],
+      "metaTitle": "Glass Bangles, Traditional Festive Design, Pair of Two",
+      "metaDescription": "A pair of glass bangles in a traditional festive design with a stone-set detail, six design numbers, two sizes to pick from, ₹249, dispatched in 2 days.",
+      "imageAlt": "Pair of glass bangles in a traditional festive design with stone-set detailing",
+      "ogTitle": "Traditional Glass Bangle Pair, Festive Design, ₹249",
+      "ogDescription": "A pair of glass bangles in a traditional festive design with a stone-set detail, six design options. ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P281.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "669",
+      "originalSku": "MJ-227",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-227-elegant-crystal-kangan-2-piece-669",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P283",
+    "name": "Multicolour Glass Bangles, Smooth Plain Finish, Set of Two",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P283.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "dropdown",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour options": "Yellow, green, pink, black, maroon, mint green (six hues)",
+      "plating coating": "Smooth, plain finish",
+      "net quantity": "Set of two bangles"
+    },
+    "description": "Where some of this shop's glass bangles lean into pattern and texture, this set keeps it plain: a smooth, unpatterned finish in a choice of six colours, yellow, green, pink, black, maroon and mint green. It's sold as a set of two, meant to be worn together rather than as a single standalone piece.\n\nA plain finish like this works well as the quieter half of a bigger bangle stack, sitting alongside more detailed pieces without competing for attention, or it can be worn on its own for a cleaner, simpler look. Six colours and six design numbers give real choice within that plainness, so \"plain\" here doesn't mean limited options.\n\nIt's available in two sizes, 2.6 and 2.8, worth checking against your usual bangle size before ordering. Glass doesn't flex the way some other bangle materials do, so an accurate size matters more here than it might for an adjustable piece.\n\nAt ₹249 for the set, this suits daily ethnic wear as comfortably as a festive occasion, since a smooth plain finish doesn't tie itself to one specific kind of event the way a heavily patterned piece might.",
+    "seo": {
+      "primaryKeyword": "multicolour glass bangles smooth plain finish",
+      "secondaryKeywords": [
+        "plain glass bangle set",
+        "glass kangan six colours plain",
+        "everyday ethnic bangles india"
+      ],
+      "metaTitle": "Multicolour Glass Bangles, Smooth Plain Finish, ₹249",
+      "metaDescription": "A set of two glass bangles with a smooth plain finish, available in six colours and two sizes, priced at ₹249, ships across India, 7-day returns.",
+      "imageAlt": "Multicolour glass bangles with a smooth plain finish, set of two",
+      "ogTitle": "Plain Glass Bangles, Six Colours, Set of Two, ₹249",
+      "ogDescription": "A set of two glass bangles with a smooth plain finish, in six colours and two sizes. ₹249 at Morchadi Gems, ships across India.",
+      "ogImage": "/products/P283.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "671",
+      "originalSku": "MJ-472",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-472-plain-crystal-kangan-2-piece-671",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P284",
+    "name": "Glass Bangles with Hand-Painted Striped Ends",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P284.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "dropdown",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Green, white, amber, lavender, black",
+      "plating coating": "Hand-painted striped ends"
+    },
+    "description": "The ends of these glass bangles carry hand-painted stripes, a detail that shows most clearly where the bangle catches the light at its curve, in a choice of five colours: green, white, amber, lavender and black. It's a more decorative finish than a plain glossy or smooth bangle, with the hand-painted work doing the visual heavy lifting.\n\nBecause the striping is applied by hand, expect small natural variation from one bangle to the next rather than machine-uniform lines; that's part of what a hand-painted finish means rather than a flaw to look out for. Five design numbers and two sizes, 2.6 and 2.8, are available, so there's a specific look and fit to choose at checkout.\n\nSuggested here for gifting, it works well in that role: a considered, detailed piece rather than a generic one, in colours that range from a soft lavender to a stark black-and-white contrast depending on which you pick. Handle glass gently, and the paintwork holds up well to normal wear.\n\nAt ₹249, the hand-painted ends are a specific craft detail that a plain-finished bangle at the same price doesn't offer.",
+    "seo": {
+      "primaryKeyword": "glass bangles hand-painted striped ends",
+      "secondaryKeywords": [
+        "hand painted glass kangan",
+        "striped glass bangles gift",
+        "five colour bangle set india"
+      ],
+      "metaTitle": "Glass Bangles with Hand-Painted Striped Ends, ₹249",
+      "metaDescription": "Glass bangles with hand-painted striped ends, available in five colours and two sizes, a considered gifting pick, priced simply at ₹249, ships across India.",
+      "imageAlt": "Glass bangles with hand-painted striped detailing at each end",
+      "ogTitle": "Hand-Painted Glass Bangles, Striped Ends, ₹249",
+      "ogDescription": "Glass bangles finished with hand-painted stripes at each end, in five colours. A considered gift at ₹249 from Morchadi Gems.",
+      "ogImage": "/products/P284.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "672",
+      "originalSku": "MJ-242",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-242-elephant-crystal-kangan-2-piece-672",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P285",
+    "name": "Light Golden Transparent Glass Bangles with Stone Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P285.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Light golden transparent",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "plating coating": "Glossy finish with fine stone detailing",
+      "care instructions": "Handle gently — these are glass bangles."
+    },
+    "description": "A light golden, transparent glass runs through this bangle, finished glossy and set with fine stone detailing along its surface. The stone material itself isn't confirmed beyond that description, so take the sparkle as decorative detail rather than a claim about a specific gem.\n\nTransparency is the defining trait here: light passes through the golden tint rather than being blocked by an opaque colour, which gives it a softer, warmer look than a solid-coloured bangle. It sits well against both a plain outfit, where it can be the one detail that catches the eye, and a more elaborate one, where it blends in as part of a fuller look.\n\nIt's available across three sizes, 2.4, 2.6 and 2.8, a wider range than some of this shop's other bangles, which makes finding an accurate fit more straightforward. Glass asks for gentle handling; treat it carefully rather than knocking it against hard surfaces, and it will hold its finish well.\n\nAt ₹189, this suits weddings and festive occasions especially well, where a warm, glowing tone reads as considered rather than as an everyday basic.",
+    "seo": {
+      "primaryKeyword": "light golden transparent glass bangles stone detailing",
+      "secondaryKeywords": [
+        "golden glass kangan",
+        "transparent bangle wedding",
+        "glass bangles three sizes india"
+      ],
+      "metaTitle": "Light Golden Transparent Glass Bangles, Stone Detail",
+      "metaDescription": "Light golden transparent glass bangles with fine stone detailing, glossy finish, available across three sizes to choose from, priced simply at just ₹189.",
+      "imageAlt": "Light golden transparent glass bangle with fine stone detailing",
+      "ogTitle": "Golden Transparent Glass Bangles, Stone Detail, ₹189",
+      "ogDescription": "A light golden, transparent glass bangle with fine stone detailing and a glossy finish. ₹189 at Morchadi Gems, three sizes.",
+      "ogImage": "/products/P285.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "677",
+      "originalSku": "MJ-395",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-395-light-golden-transparent-glass-bangles-677",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P286",
+    "name": "Transparent Glass Bangles with Golden Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P286.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "colour": "Transparent with golden detailing",
+      "plating coating": "Glossy finish",
+      "care instructions": "Handle with care — delicate glass bangles."
+    },
+    "description": "Clear glass carries golden detailing across the surface of this bangle, glossy in finish, with a stone-set element whose exact material isn't confirmed beyond a general stone description. Read the sparkle as a decorative accent rather than a claim about a specific gemstone.\n\nUnlike its light-golden-tinted sibling in this shop's bangle range, the base glass here stays properly transparent, with the gold sitting as a distinct detail against the clear background rather than tinting the whole piece. That contrast between clear glass and golden accent is what gives this one its particular look.\n\nIt comes in three sizes, 2.4, 2.6 and 2.8, so there's a genuine range to pick from rather than a single fixed fit. As with any glass piece, handle it with care rather than knocking it against hard surfaces, since a crack in glass isn't repairable the way a metal dent sometimes is.\n\nAt ₹189, this suits weddings, festivals, parties and regular ethnic wear about equally, the clear-and-gold combination working across more than one kind of outfit rather than only one.",
+    "seo": {
+      "primaryKeyword": "transparent glass bangles golden detailing",
+      "secondaryKeywords": [
+        "clear glass kangan gold accent",
+        "transparent bangle stone detail",
+        "glass bangles festive wear india"
+      ],
+      "metaTitle": "Transparent Glass Bangles with Golden Detailing, ₹189",
+      "metaDescription": "Transparent glass bangles with golden detailing and a glossy finish, available across three separate sizes, priced simply at ₹189 flat rate today.",
+      "imageAlt": "Transparent glass bangle with golden detailing and a glossy finish",
+      "ogTitle": "Clear Glass Bangles, Golden Detail, Glossy, ₹189",
+      "ogDescription": "Transparent glass bangles with golden detailing set against the clear glass, glossy finish. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P286.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "678",
+      "originalSku": "MJ-598",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-598-transparent-golden-glass-stone-bangles-678",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P287",
+    "name": "Olive Green Glass Bangles with Stone Embellishment",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P287.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "colour": "Olive green (with golden sheen)",
+      "plating coating": "Elegant glossy finish with stone embellishment",
+      "care instructions": "Handle with care — these are glass bangles."
+    },
+    "description": "Olive green glass carries a golden sheen and a stone-set embellishment on this bangle, finished elegant and glossy. The stone material itself isn't pinned down beyond that, so this description sticks to what's certain: a stone-set detail against an olive green base with a golden undertone.\n\nOlive isn't a colour this shop's other glass bangles carry, which makes it a useful pick if you're building a collection that already has the brighter greens, pinks and yellows covered and want something more muted to round it out. The golden sheen keeps it from reading as flat or dull despite being a deeper, more subdued shade.\n\nSuggested here for gifting, it works well for that: a single distinctive colour rather than a multi-hue set, easier to choose confidently for someone else than picking from six options at once. It's available across three sizes, 2.4, 2.6 and 2.8.\n\nHandle it gently, as with any glass piece, and it will hold its glossy finish through regular wear. At ₹189, it pairs well with both traditional and modern outfits, festive occasions and daily wear alike.",
+    "seo": {
+      "primaryKeyword": "olive green glass bangles stone embellishment",
+      "secondaryKeywords": [
+        "olive green kangan gift",
+        "glass bangle golden sheen",
+        "stone embellished bangle india"
+      ],
+      "metaTitle": "Olive Green Glass Bangles with Stone Embellishment",
+      "metaDescription": "Olive green glass bangles with a golden sheen and stone embellishment, glossy finish, available across three sizes, priced simply at ₹189 total.",
+      "imageAlt": "Olive green glass bangle with a golden sheen and stone embellishment",
+      "ogTitle": "Olive Green Glass Bangles, Golden Sheen, ₹189",
+      "ogDescription": "Olive green glass bangles with a golden sheen and stone-set embellishment. A distinctive ₹189 gift from Morchadi Gems.",
+      "ogImage": "/products/P287.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "679",
+      "originalSku": "MJ-444",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-444-olive-green-glass-stone-bangles-679",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P288",
+    "name": "Dual-Tone Multicolour Glass Bangles",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P288.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "colour": "Dual-tone multicolor: green, yellow, pink, orange",
+      "plating coating": "Glossy finish",
+      "care instructions": "Handle with care — these are glass bangles."
+    },
+    "description": "Each bangle in this set carries two colours rather than one, a dual-tone approach across green, yellow, pink and orange, finished glossy with a stone-set detail whose exact material isn't confirmed beyond a general description. Read the sparkle as decorative rather than a claim about a specific gemstone.\n\nA dual-tone bangle does more visual work than a single-colour one from the same glass base, since the colour shift across each piece catches the eye even before the stone detailing does. Worn as a stack, several dual-tone bangles together read as considerably more layered than the same number of plain single-colour ones would.\n\nIt's available in three sizes, 2.4, 2.6 and 2.8, so there's a genuine size range to choose an accurate fit from. Glass calls for gentle handling; avoid knocking it against hard surfaces, and it will hold its colour and shine well through normal wear.\n\nAt ₹149, this is one of the more accessible pieces in this shop's glass bangle range, suited to festivals, weddings, parties and daily wear without asking a higher price for the two-tone detail.",
+    "seo": {
+      "primaryKeyword": "dual-tone multicolour glass bangles",
+      "secondaryKeywords": [
+        "two tone glass kangan",
+        "glass bangle set affordable",
+        "multicolour bangles festive india"
+      ],
+      "metaTitle": "Dual-Tone Multicolour Glass Bangles, Priced at ₹149",
+      "metaDescription": "Dual-tone glass bangles across green, yellow, pink and orange, glossy finish, available across three sizes, priced simply at just ₹149 flat.",
+      "imageAlt": "Dual-tone glass bangle in green, yellow, pink and orange with a glossy finish",
+      "ogTitle": "Dual-Tone Glass Bangles, Multicolour, Glossy, ₹149",
+      "ogDescription": "Dual-tone glass bangles across four colours with a glossy finish and stone-set detail. ₹149 at Morchadi Gems, three sizes.",
+      "ogImage": "/products/P288.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "680",
+      "originalSku": "MJ-222",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-222-dual-tone-glass-stone-bangles-680",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P289",
+    "name": "Pastel Green Glass Bangles",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P289.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "colour": "Pastel green"
+    },
+    "description": "A single, soft pastel green runs through this glass bangle, a quieter shade than the brighter greens elsewhere in this shop's range. A stone-set detail sits along the surface, though the exact stone material isn't confirmed, so this description holds to what's certain rather than naming a specific gem.\n\nPastel tones read differently than saturated colour does: softer against the skin, and easier to pair with a wider range of outfit colours without clashing, since a muted green doesn't compete with what's around it the way a bold hue can. That makes it a reasonably safe pick if you're unsure what colour someone else already wears often.\n\nSuggested here for gifting, a single confirmed colour rather than a multi-option listing makes the decision simpler at checkout. It's available across three sizes, 2.4, 2.6 and 2.8, so there's a genuine fit range to pick from.\n\nAt ₹149, this is one of the shop's more accessible bangles, suited to weddings and festive occasions as well as a quieter, everyday ethnic look, given how easily a pastel shade like this one settles into either.",
+    "seo": {
+      "primaryKeyword": "pastel green glass bangles",
+      "secondaryKeywords": [
+        "pastel glass kangan gift",
+        "soft green bangle india",
+        "affordable glass bangle single colour"
+      ],
+      "metaTitle": "Pastel Green Glass Bangles, Stone-Set Detail, ₹149",
+      "metaDescription": "A single pastel green glass bangle with a stone-set detail, available across three separate sizes, an easy ₹149 pick for a festive occasion.",
+      "imageAlt": "Pastel green glass bangle with a stone-set surface detail",
+      "ogTitle": "Pastel Green Glass Bangle, Stone Detail, ₹149",
+      "ogDescription": "A soft pastel green glass bangle with a stone-set detail, in three sizes. A simple, easy ₹149 gift from Morchadi Gems.",
+      "ogImage": "/products/P289.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "681",
+      "originalSku": "MJ-450",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-450-pastel-green-antique-glass-bangle-set-681",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P290",
+    "name": "Multicolour Glass Bangles, Five Colour Options",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P290.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "colour": "Green, blue, maroon, orange, gold"
+    },
+    "description": "Five colours are available for this glass bangle: green, blue, maroon, orange and gold, each with a stone-set detail whose exact material isn't confirmed beyond a general description. That range gives real choice at checkout, from a cool blue to a warm gold, rather than a single fixed shade.\n\nCompared to the shop's dual-tone and pastel bangles, this one leans toward richer, more saturated colours across the board, maroon and gold in particular reading as festive rather than muted. Each colour option is its own single-tone piece rather than a blend, so the choice is about which one colour suits you best.\n\nIt's available in three sizes, 2.4, 2.6 and 2.8, worth checking against a bangle you already own for an accurate fit. Suggested here for gifting, five distinct colour options make it easy to pick one that matches what the recipient already wears, rather than guessing at a multicolour set.\n\nAt ₹149, glass calls for gentle handling as always, and in return holds its shine and colour well through regular wear, whether for a wedding, a festival, or a special occasion closer to home.",
+    "seo": {
+      "primaryKeyword": "multicolour glass bangles five colour options",
+      "secondaryKeywords": [
+        "glass kangan five colours gift",
+        "maroon gold glass bangle",
+        "affordable glass bangle single colour set"
+      ],
+      "metaTitle": "Multicolour Glass Bangles, Five Colour Options, ₹149",
+      "metaDescription": "Glass bangles in five colour options, green, blue, maroon, orange and gold, with stone-set detailing throughout, priced simply at just ₹149 total.",
+      "imageAlt": "Glass bangle in maroon with gold stone-set detailing, one of five colour options",
+      "ogTitle": "Glass Bangles, Five Colours, Stone Detail, ₹149",
+      "ogDescription": "Glass bangles available in five colours, green, blue, maroon, orange and gold, each with stone-set detailing. ₹149.",
+      "ogImage": "/products/P290.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "682",
+      "originalSku": "MJ-110",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-110-antique-multicolor-glass-bangles-682",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
   }
 ]
