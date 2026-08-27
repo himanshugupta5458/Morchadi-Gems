@@ -23905,5 +23905,547 @@
         "Bracelet under ₹99"
       ]
     }
+  },
+  {
+    "id": "P469",
+    "name": "Gold-Toned Beaded Twisted Chain and Box Chain Bracelet Set",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 19
+    },
+    "media": {
+      "images": [
+        "/products/P469.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-toned metal, base metal unspecified",
+      "design": "Beaded twisted-chain bracelet paired with box-chain bracelet, two-piece set",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "Two bracelets come together in this set: a beaded twisted chain on one wrist and a box chain on the other, or both stacked on the same arm if that's the look you're after. The beaded strand has visible texture running along it, while the box chain sits flatter and more uniform, so the pair reads as two different chain styles rather than a matched duo.\n\nBase metal isn't named beyond the gold tone itself, so treat this as a plated fashion piece priced accordingly rather than anything heavier. What the two-chain format buys you is variety without needing to shop for two separate bracelets: one textured, one sleek, both in the same warm tone so they don't clash if worn together.\n\nKeeping them dry is the whole care routine here: store both pieces somewhere dry after each wear, and they'll hold their gold tone longer for it. Neither chain is built to survive regular water or perfume contact, which is standard for a plated finish at this price.\n\nAt ₹89 for the pair, that's two bracelets for less than many single pieces cost, useful for someone building out a stack rather than buying one statement chain at a time.",
+    "seo": {
+      "primaryKeyword": "gold-toned beaded twisted chain box chain bracelet set",
+      "secondaryKeywords": [
+        "two piece bracelet set gold",
+        "layering bracelet duo affordable",
+        "beaded chain bracelet stacking"
+      ],
+      "metaTitle": "Gold-Toned Beaded Twist and Box Chain Bracelet Duo",
+      "metaDescription": "A two-piece gold-toned bracelet set pairing a textured beaded twist chain with a flat box chain, priced together at ₹89. Keep dry to hold colour.",
+      "imageAlt": "Gold-toned bracelet duo with a beaded twisted chain and a box chain",
+      "ogTitle": "Beaded Twist and Box Chain Bracelet Set, Gold, ₹89",
+      "ogDescription": "Two gold-toned bracelets in one set, a textured beaded twist and a flat box chain. ₹89 for the pair at Morchadi Gems.",
+      "ogImage": "/products/P469.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "925",
+      "originalSku": "MJ-275",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-275-gold-dainty-bracelet-combo-set-minimalist-beaded-twisted-chain-sleek-box-chain-925",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P470",
+    "name": "Gold-Toned Ball Chain and Beaded Strand Bracelet Set",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 19
+    },
+    "media": {
+      "images": [
+        "/products/P470.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-toned metal, base metal unspecified",
+      "design": "Ball-chain bracelet paired with beaded-strand chain bracelet, two-piece set",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "This set pairs a ball chain, small linked spheres running the length of the bracelet, with a beaded strand chain that carries a different, more textured rhythm. Worn together they give a stacked look without any actual stacking required; worn apart, each stands on its own as a plain gold-toned piece.\n\nNeither chain claims a specific base metal beyond its gold tone, which is typical for a fashion piece at this price. The ball chain's regular, repeating spheres photograph and catch light differently to the beaded strand's less uniform texture, which is really the whole point of pairing the two rather than selling two of the same chain.\n\nStore both pieces dry after wear and keep them away from moisture generally; that's the entire maintenance routine for a plated set like this. Skipping it just means the gold tone dulls sooner than it needs to, not that anything breaks outright.\n\nAt ₹89 for both bracelets, it's a straightforward way to add two distinct chain textures to a small collection in one purchase rather than two separate ones.",
+    "seo": {
+      "primaryKeyword": "gold-toned ball chain beaded strand bracelet set",
+      "secondaryKeywords": [
+        "ball chain bracelet gold",
+        "two piece chain bracelet duo",
+        "beaded strand bracelet stacking"
+      ],
+      "metaTitle": "Gold-Toned Ball Chain and Beaded Strand Bracelet Duo",
+      "metaDescription": "A two-piece gold-toned set pairing a ball chain with a beaded strand chain, sold together at ₹89. Store both dry to keep the gold tone longer.",
+      "imageAlt": "Gold-toned bracelet duo with a ball chain and a beaded strand chain",
+      "ogTitle": "Ball Chain and Beaded Strand Bracelet Set, Gold, ₹89",
+      "ogDescription": "Two gold-toned bracelets, a ball chain and a beaded strand, sold as one set. ₹89 for the pair at Morchadi Gems.",
+      "ogImage": "/products/P470.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "926",
+      "originalSku": "MJ-274",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-274-gold-dainty-bracelet-combo-set-minimalist-ball-chain-beaded-link-duo-926",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P471",
+    "name": "Gold-Toned Rope Chain and Box-Link Bracelet Set",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 19
+    },
+    "media": {
+      "images": [
+        "/products/P471.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-toned metal, base metal unspecified",
+      "design": "Rope-chain bracelet paired with box-link chain bracelet, two-piece set",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "A rope chain, twisted metal reading as a continuous braided line, pairs with a box-link chain in this set, the more traditional half sitting alongside the more structured one. Rope chains have a specific look, dense and rounded rather than flat, which sets it apart from the box-link's clean, uniform links.\n\nNeither piece names a specific base metal beyond its gold tone, in keeping with the rest of this shop's fashion-priced combo sets. The two chains work as a pair or separately: rope alone reads a bit more classic, box-link alone a bit more modern, and together they give a wrist two distinct textures rather than a single repeated one.\n\nBoth bracelets need the same basic upkeep: dry storage after wear, and no assumption they'll hold up to regular water or perfume contact the way a solid-metal piece might. That's standard for gold-toned plating at this price point.\n\nAt ₹89 for the set, two genuinely different chain styles in one purchase is a fair amount of variety for what a single mid-range bracelet often costs alone.",
+    "seo": {
+      "primaryKeyword": "gold-toned rope chain box link bracelet set",
+      "secondaryKeywords": [
+        "rope chain bracelet gold",
+        "box link bracelet duo",
+        "two piece chain set affordable"
+      ],
+      "metaTitle": "Gold-Toned Rope Chain and Box-Link Bracelet Duo Set",
+      "metaDescription": "A two-piece gold-toned bracelet set combining a twisted rope chain with a structured box-link chain, priced together at just ₹89 for the pair.",
+      "imageAlt": "Gold-toned bracelet duo with a rope chain and a box-link chain",
+      "ogTitle": "Rope Chain and Box-Link Bracelet Set, Gold, ₹89",
+      "ogDescription": "Two gold-toned bracelets, a twisted rope chain and a structured box-link chain, sold as one set. ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P471.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "927",
+      "originalSku": "MJ-271",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-271-gold-chain-bracelet-combo-elegant-rope-box-link-set-927",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P474",
+    "name": "Silver-Toned Tennis Bracelet with Solitaire Centrepiece",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P474.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Silver-toned",
+      "design": "Tennis bracelet with solitaire centerpiece",
+      "care instructions": "Avoid moisture and perfumes; store safely after each wear"
+    },
+    "description": "A single solitaire-style stone sits at the centre of this tennis bracelet, the one clear focal point along an otherwise continuous silver-toned band. Where a plain tennis bracelet spreads its sparkle evenly along the whole line, this one draws the eye to one spot before letting the rest of the band carry it outward.\n\nThe centrepiece format suits someone who wants a tennis bracelet with a bit more structure than an unbroken row of identical stones, something that reads as having a front rather than working the same from any angle. The silver tone keeps it cool rather than warm, which pairs easily with most other silver-toned pieces already in a small collection.\n\nMoisture and perfume are the two things to keep this away from, and it's worth storing safely after each wear rather than leaving it loose. That routine matters more for a piece with a set centre stone than for a plain band, since the setting itself is a bit more exposed to knocks.\n\nAt ₹49, a tennis bracelet with a defined centrepiece is a specific enough design that it earns a place beside the shop's plainer, single-line version rather than duplicating it.",
+    "seo": {
+      "primaryKeyword": "silver-toned tennis bracelet solitaire centrepiece",
+      "secondaryKeywords": [
+        "solitaire tennis bracelet silver",
+        "affordable tennis bracelet india",
+        "centre stone bracelet silver tone"
+      ],
+      "metaTitle": "Silver-Toned Tennis Bracelet with Solitaire Centre",
+      "metaDescription": "A silver-toned tennis bracelet with a solitaire-style centrepiece stone set along a continuous band, light on the wrist. ₹49, 7-day returns.",
+      "imageAlt": "Silver-toned tennis bracelet with a solitaire centrepiece stone",
+      "ogTitle": "Tennis Bracelet with Solitaire Centre, Silver, ₹49",
+      "ogDescription": "A silver-toned tennis bracelet with one solitaire-style stone as its centrepiece, on a continuous band. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P474.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "930",
+      "originalSku": "MJ-574",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-574-sparkling-silver-toned-tennis-bracelet-930",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P532",
+    "name": "Birthday Hamper with Halter Top and Anti-Tarnish Pearl Bracelet",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P532.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Halter Top, Anti-Tarnish Pearl Bracelet, Claw Clips x2, Scrunchies, Sticky Notes, Dairy Milk Silk, KitKat, Birthday Bunting + Fairy Lights",
+      "stone hamper bracelet component": "Pearl (real or faux, unclear from text)"
+    },
+    "description": "This hamper bundles a halter top with an anti-tarnish pearl-look bracelet, two claw clips, scrunchies, sticky notes, a Dairy Milk Silk bar, a KitKat, and a birthday bunting with fairy lights, put together as a single birthday gift rather than sold as separate pieces. The bracelet's stone is a pearl-look accent, real pearl or faux isn't settled either way, so it's described here as pearl-look rather than a guaranteed genuine one.\n\nPutting nine different items into one box does real work for anyone buying a birthday gift without wanting to assemble one from scratch: clothing, hair accessories, something to write on, two kinds of chocolate, and party decor all arrive together, covering more of a birthday than a single jewellery piece would on its own. The anti-tarnish finish on the bracelet means that one piece, at least, is built to outlast the day itself.\n\nBecause this is a mixed hamper with a food item included, it ships prepaid only; cash on delivery isn't available for this hamper. Worth knowing before checkout rather than after.\n\nAt ₹599, the range of items here, wearable, edible and decorative, adds up to more than most single-category gifts manage at a similar price, aimed at someone who wants one box to cover a birthday rather than several separate purchases.",
+    "seo": {
+      "primaryKeyword": "birthday hamper halter top pearl look bracelet",
+      "secondaryKeywords": [
+        "birthday gift hamper for her",
+        "pearl look bracelet gift set",
+        "aesthetic birthday gift box india"
+      ],
+      "metaTitle": "Birthday Hamper, Halter Top and Pearl-Look Bracelet",
+      "metaDescription": "A birthday hamper with a halter top, a pearl-look bracelet, claw clips, scrunchies, chocolate and party decor items. ₹599, prepaid orders only.",
+      "imageAlt": "Birthday gift hamper with a halter top, pearl-look bracelet and party decor items",
+      "ogTitle": "Birthday Hamper with Top and Pearl-Look Bracelet, ₹599",
+      "ogDescription": "A birthday hamper bundling a halter top, a pearl-look bracelet, chocolates and party decor for one gift box. ₹599, prepaid orders only.",
+      "ogImage": "/products/P532.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "995",
+      "originalSku": "MJ-471",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-471-pinteresty-birthday-hamper-995",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P543",
+    "name": "Gold-Toned Anti-Tarnish Vine Bracelet with Green Stones",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P543.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Green stones (material unspecified)",
+      "material": "Anti-tarnish finish",
+      "design": "Gold-toned vine design",
+      "packaging": "Comes without box"
+    },
+    "description": "A vine motif runs the length of this bracelet in gold-toned, anti-tarnish metal, set through with green stones whose exact material isn't specified beyond their colour. The vine shape gives the piece a botanical read rather than a geometric one, small leaf-like turns along the band instead of a straight line of stones.\n\nAnti-tarnish is the meaningful upgrade here over a plain plated piece: the base is built to resist the dulling that ordinary fashion jewellery shows within weeks of regular wear, so the gold tone and the green stones both hold their colour longer. Green against gold is a combination this shop doesn't repeat often, closer to an emerald-adjacent look without claiming the stone is one.\n\nIt arrives without a box, worth knowing if you're planning to gift it and want to add your own packaging. Daily wear or gifting both suit a piece this size and shape equally well.\n\nAt ₹299, the anti-tarnish base and the vine detailing put this a step above a plain stone-set bracelet, honest about the stone material being unconfirmed rather than naming something more specific than the data supports.",
+    "seo": {
+      "primaryKeyword": "gold-toned anti-tarnish vine bracelet green stones",
+      "secondaryKeywords": [
+        "green stone bracelet gold vine",
+        "anti tarnish bracelet gifting",
+        "botanical motif bracelet india"
+      ],
+      "metaTitle": "Gold-Toned Anti-Tarnish Vine Bracelet, Green Stones",
+      "metaDescription": "A gold-toned anti-tarnish bracelet with a vine motif set through with small green stones, arrives without a box. Priced at ₹299, daily wear.",
+      "imageAlt": "Gold-toned anti-tarnish vine bracelet set with green stones",
+      "ogTitle": "Vine Bracelet with Green Stones, Anti-Tarnish, ₹299",
+      "ogDescription": "A gold-toned anti-tarnish vine bracelet set through with green stones, a botanical look that holds its colour. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P543.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1009",
+      "originalSku": "MJ-248",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-248-emerald-vine-anti-tarnish-bracelet-1009",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P544",
+    "name": "Gold-Toned Anti-Tarnish Vine Bracelet with Crystal Stones",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P544.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Anti-tarnish finish",
+      "design": "Gold-toned vine design",
+      "packaging": "Comes without box"
+    },
+    "description": "This bracelet shares its vine shape with the shop's green-stone version, but carries crystal-look stones instead, glass or cubic zirconia without settling on one specifically, set along the same gold-toned, anti-tarnish band. The vine detail turns in small leaf-like sections rather than running as a straight line, giving the piece a botanical read.\n\nWhere the green-stone vine leans toward an emerald-adjacent colour story, this one stays closer to a clear, crystal sparkle, a different mood on the same underlying design. Anti-tarnish construction means the gold tone is built to resist the dulling a plain plated finish shows fairly quickly, so both the metal and the stones should hold their look through regular wear.\n\nIt arrives without a box, the same as its sibling piece, so plan your own packaging if this is meant as a gift rather than a keep-for-yourself purchase. It suits daily wear as easily as it does gifting.\n\nAt ₹299, this is the clearer-stone option in a two-colour vine bracelet line, priced identically to its green-stone counterpart and honest about the stone material being unconfirmed rather than a settled gem name.",
+    "seo": {
+      "primaryKeyword": "gold-toned anti-tarnish vine bracelet crystal stones",
+      "secondaryKeywords": [
+        "crystal vine bracelet gold",
+        "anti tarnish bracelet blush",
+        "clear stone bracelet gifting india"
+      ],
+      "metaTitle": "Gold-Toned Anti-Tarnish Vine Bracelet, Crystal Stones",
+      "metaDescription": "A gold-toned anti-tarnish vine bracelet set with crystal-look stones, the clearer-stone sibling to the green vine design. ₹299, arrives without box.",
+      "imageAlt": "Gold-toned anti-tarnish vine bracelet set with crystal-look stones",
+      "ogTitle": "Vine Bracelet with Crystal Stones, Anti-Tarnish, ₹299",
+      "ogDescription": "A gold-toned anti-tarnish vine bracelet set with crystal-look stones, a clearer take on the green-stone version. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P544.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1010",
+      "originalSku": "MJ-126",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-126-blush-crystal-vine-bracelet-1010",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P550",
+    "name": "Gold-Toned Anti-Tarnish Ball Charm Bracelet, Adjustable",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 86
+    },
+    "media": {
+      "images": [
+        "/products/P550.webp"
+      ]
+    },
+    "specs": {
+      "chain material": "Gold-toned chain",
+      "charm style": "Dangling ball charms",
+      "clasp type": "Adjustable lobster clasp",
+      "material": "Anti-tarnish finish"
+    },
+    "description": "Small ball charms dangle along this bracelet's gold-toned chain, moving separately from the chain itself rather than sitting fixed against it, which gives the piece a bit of motion a flat charm wouldn't have. The clasp is an adjustable lobster clasp, so fit isn't fixed to one wrist size.\n\nAnti-tarnish construction is the practical upgrade underneath the charm design: the finish is built to resist the fading a plain plated bracelet shows within weeks, which matters more here than on a plainer chain since the dangling charms catch more daily contact as they move. The lobster clasp itself is a small but real detail, easier to fasten one-handed than a spring-ring closure.\n\nBecause it's adjustable, sizing isn't a concern whether it's bought for yourself or as a gift for someone whose exact wrist size you don't know. It suits a range of settings without needing to be swapped for something dressier or more casual depending on the day.\n\nAt ₹220, the combination of anti-tarnish metal, a genuinely adjustable clasp and dangling charm movement is real, functional detail rather than decoration for its own sake.",
+    "seo": {
+      "primaryKeyword": "gold-toned anti-tarnish ball charm bracelet adjustable",
+      "secondaryKeywords": [
+        "dangling charm bracelet gold",
+        "lobster clasp bracelet women",
+        "anti tarnish bracelet everyday india"
+      ],
+      "metaTitle": "Gold-Toned Anti-Tarnish Ball Charm Bracelet, Adjustable",
+      "metaDescription": "A gold-toned anti-tarnish bracelet with dangling ball charms and an adjustable lobster clasp that fits most wrists comfortably. Priced at ₹220.",
+      "imageAlt": "Gold-toned anti-tarnish bracelet with dangling ball charms on a chain",
+      "ogTitle": "Ball Charm Bracelet, Anti-Tarnish, Adjustable, ₹220",
+      "ogDescription": "A gold-toned anti-tarnish bracelet with dangling ball charms on an adjustable lobster-clasp chain. ₹220 at Morchadi Gems.",
+      "ogImage": "/products/P550.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1016",
+      "originalSku": "MJ-033",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-033-anti-tarnish-gold-ball-charm-bracelet-for-women-1016",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P554",
+    "name": "Gold Anti-Tarnish Double-Layer Snake Chain Bracelet with Coin Tag",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P554.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold finish",
+      "chain style": "Double-layer twisted snake chain",
+      "clasp type": "Lobster clasp",
+      "charm tag": "Morchadi \"M\" coin tag",
+      "finish coating": "Anti-tarnish coating"
+    },
+    "description": "Two flat snake chains run side by side on this bracelet, twisted together rather than kept as two separate strands, in a gold finish over an anti-tarnish base. A small coin-shaped tag stamped with the shop's \"M\" mark hangs from the double chain, the one fixed detail against an otherwise fluid, moving design.\n\nSnake chain has a distinctive smooth, segmented feel that moves almost like fabric against the skin, and doubling it up gives the bracelet more visual width than a single-strand version would carry. The lobster clasp keeps the closure secure without needing two hands to manage, useful for a piece worn and removed daily.\n\nAnti-tarnish construction means the gold finish is built to resist the fading a plain-plated bracelet shows within weeks, which matters here given how much surface area two intertwined chains actually cover. It works stacked with other pieces or worn on its own, since the double-layer build already gives it enough visual weight to stand alone.\n\nAt ₹249, the combination of double-layer snake chain, a branded coin tag, and an anti-tarnish base is a specific, detailed piece rather than a plain single chain at the same price.",
+    "seo": {
+      "primaryKeyword": "gold anti-tarnish double-layer snake chain bracelet coin tag",
+      "secondaryKeywords": [
+        "snake chain bracelet gold layered",
+        "coin tag bracelet women",
+        "anti tarnish chain bracelet stacking"
+      ],
+      "metaTitle": "Gold Anti-Tarnish Double-Layer Snake Chain, Coin Tag",
+      "metaDescription": "A gold anti-tarnish bracelet with two intertwined snake chains and a small branded coin tag, secured with a lobster clasp. Priced simply at ₹249.",
+      "imageAlt": "Gold anti-tarnish double-layer snake chain bracelet with a coin tag",
+      "ogTitle": "Double-Layer Snake Chain Bracelet, Coin Tag, ₹249",
+      "ogDescription": "A gold anti-tarnish bracelet with two intertwined snake chains and a small coin tag charm. ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P554.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1020",
+      "originalSku": "MJ-037",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-037-anti-tarnish-gold-double-layer-snake-chain-bracelet-1020",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P555",
+    "name": "Gold-Tone Anti-Tarnish Bracelet with Pink Tulip Charms",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 289,
+      "mrp": 289,
+      "cost": 114
+    },
+    "media": {
+      "images": [
+        "/products/P555.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "charm design": "Pink tulip charms",
+      "material chain": "Gold-tone chain with gold bead accents",
+      "finish coating": "Anti-tarnish coating",
+      "fit": "Adjustable"
+    },
+    "description": "Pink tulip charms hang along this bracelet's gold-tone chain, set with cubic zirconia and finished with small gold bead accents between each charm. The tulip shape gives it a clear botanical read rather than an abstract one, small and specific enough to notice without dominating the wrist.\n\nCubic zirconia rather than a claimed gemstone keeps the sparkle honest at this price, a clean, consistent shine rather than the variable clarity a real stone would carry at a similar cost. The gold beads between the tulip charms add rhythm along the chain, breaking up the spacing rather than leaving the charms to float unevenly.\n\nIt's adjustable, so fit isn't a concern whether this is for you or a gift for someone else's wrist. Anti-tarnish construction underneath the gold tone means the finish is built to resist the dulling a plain plated chain shows within weeks of regular wear.\n\nAt ₹289, a botanical charm bracelet with genuine stone detail and an anti-tarnish base is a fair amount of specific work for the price, honest about cubic zirconia rather than a real gem.",
+    "seo": {
+      "primaryKeyword": "gold-tone anti-tarnish pink tulip charm bracelet",
+      "secondaryKeywords": [
+        "tulip charm bracelet gold",
+        "cubic zirconia bracelet floral",
+        "anti tarnish bracelet adjustable india"
+      ],
+      "metaTitle": "Gold-Tone Anti-Tarnish Bracelet, Pink Tulip Charms",
+      "metaDescription": "A gold-tone anti-tarnish bracelet with pink tulip charms set in cubic zirconia and small gold bead accents, adjustable fit. Priced simply at ₹289.",
+      "imageAlt": "Gold-tone anti-tarnish bracelet with pink tulip charms and gold bead accents",
+      "ogTitle": "Pink Tulip Charm Bracelet, Anti-Tarnish Gold, ₹289",
+      "ogDescription": "A gold-tone anti-tarnish bracelet with pink tulip charms in cubic zirconia and gold bead accents. ₹289 at Morchadi Gems.",
+      "ogImage": "/products/P555.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1021",
+      "originalSku": "MJ-049",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-049-anti-tarnish-pink-tulip-leaf-cz-bracelet-1021",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
   }
 ]
