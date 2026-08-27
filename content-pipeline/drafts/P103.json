@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Toggle Clasp"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Color Golden"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

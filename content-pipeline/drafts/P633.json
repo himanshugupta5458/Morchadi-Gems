@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Chain: Curb chain, adjustable length"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant size",

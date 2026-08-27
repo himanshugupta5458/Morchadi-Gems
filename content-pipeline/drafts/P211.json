@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Toggle Clasp"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Net quantity",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Avoid contact with water & perfume"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

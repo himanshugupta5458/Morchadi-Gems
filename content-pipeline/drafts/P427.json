@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "high-shine snake chain"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material/Finish",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "shines brightest when kept dry and away from perfumes. Simply store it in its original packaging after use"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

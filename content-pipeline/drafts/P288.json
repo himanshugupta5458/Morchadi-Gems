@@ -45,7 +45,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Colors: Dual-tone multicolor (Green, Yellow, Pink, Orange)"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Care Instruction: Handle with care as these are glass bangles"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

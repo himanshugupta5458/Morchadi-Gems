@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "adorned with dangling ball charms that catch the light beautifully"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp type",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable lobster clasp"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",

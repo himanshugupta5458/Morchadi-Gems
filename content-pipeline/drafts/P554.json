@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this double-layer twisted snake chain bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp Type",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "secured with a lobster clasp"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Charm/Tag",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a signature Morchadi \"M\" coin tag"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish/Coating",

@@ -34,7 +34,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Color: Light Golden Transparent"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Care Instruction: Handle gently as these are glass bangles"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

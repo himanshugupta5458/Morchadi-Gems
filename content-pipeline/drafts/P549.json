@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this stunning gold wheat chain bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Chain pattern",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "bold braided herringbone pattern"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp type",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "an adjustable lobster clasp"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",

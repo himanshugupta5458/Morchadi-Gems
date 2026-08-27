@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "thick, shimmering rope chain"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material/Finish",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "keep it away from moisture and store it in a dry, airtight place after your day of shine"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

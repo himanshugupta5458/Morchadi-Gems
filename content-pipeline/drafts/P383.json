@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Gold-toned chain"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Chain Length:45 cm + 5 cm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant dimensions",

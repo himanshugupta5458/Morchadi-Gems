@@ -45,7 +45,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Color: Olive Green (with golden sheen)"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Care Instruction: Handle with care as these are glass bangles"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

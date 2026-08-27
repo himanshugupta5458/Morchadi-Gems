@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this gold bead chain bracelet"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp type",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable lobster clasp with branded coin tag for a premium feel."
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",

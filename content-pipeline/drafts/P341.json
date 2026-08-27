@@ -45,7 +45,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Color: Royal Blue"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -78,7 +78,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Care Instructions: Handle gently and store in a soft pouch to prevent breakage"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
