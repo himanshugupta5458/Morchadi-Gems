@@ -64,25 +64,25 @@
   "pricing": {
     "price": 49,
     "mrp": 49,
-    "cost": 9.5,
-    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+    "cost": 10,
+    "referencePrice": "\u20b949 sale price, \u20b99.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [],
   "sourceNotes": {
-    "rawContent": "A delicate heart-in-circle bracelet with subtle crystal detailing, perfect for adding a romantic touch to your everyday style. Lightweight, trendy, and effortlessly chic—ideal for casual wear and special moments alike. To preserve its radiant silver-toned luster, keep this high-fashion piece away from moisture and perfumes, and store it in a dry place after every wear.",
+    "rawContent": "A delicate heart-in-circle bracelet with subtle crystal detailing, perfect for adding a romantic touch to your everyday style. Lightweight, trendy, and effortlessly chic\u2014ideal for casual wear and special moments alike. To preserve its radiant silver-toned luster, keep this high-fashion piece away from moisture and perfumes, and store it in a dry place after every wear.",
     "referenceTitle": "Heart Charm Gold Bracelet",
     "originalId": "906",
     "originalSku": "MJ-335",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-335-heart-charm-gold-bracelet-906",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],
   "notes": [
     "category guessed as 'bracelets' from source text; raw block did not supply one.",
-    "referenceTitle calls this a 'Heart Charm Gold Bracelet' but rawContent describes 'silver-toned luster' with no gold reference — a naming/material mismatch; carried through as-is, flag for owner review before assigning a material claim."
+    "referenceTitle calls this a 'Heart Charm Gold Bracelet' but rawContent describes 'silver-toned luster' with no gold reference \u2014 a naming/material mismatch; carried through as-is, flag for owner review before assigning a material claim."
   ],
   "status": "draft",
   "generatedBy": null

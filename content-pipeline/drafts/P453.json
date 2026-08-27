@@ -75,24 +75,24 @@
   "pricing": {
     "price": 49,
     "mrp": 49,
-    "cost": 9.5,
-    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+    "cost": 10,
+    "referencePrice": "\u20b949 sale price, \u20b99.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [],
   "sourceNotes": {
-    "rawContent": "Express your style with this elegant \"Love\" script bracelet featuring delicate crystal accents. Lightweight and trendy, it adds a romantic, modern touch to any outfit—perfect for daily wear and special occasions. To preserve its radiant luster, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use.",
+    "rawContent": "Express your style with this elegant \"Love\" script bracelet featuring delicate crystal accents. Lightweight and trendy, it adds a romantic, modern touch to any outfit\u2014perfect for daily wear and special occasions. To preserve its radiant luster, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use.",
     "referenceTitle": "Stylish \"Love\" Script Gold Bracelet",
     "originalId": "909",
     "originalSku": "MJ-588",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-588-stylish-love-script-gold-bracelet-909",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],
   "notes": [
-    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under ₹99\". Requires explicit owner confirmation at review.",
+    "category: \"bracelets\" is a PROPOSAL, not source data \u2014 the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under \u20b999\". Requires explicit owner confirmation at review.",
     "Title-only fact: the title calls this a gold bracelet, but rawContent states no colour or plating, so no Colour candidate is proposed (the title is not quotable as a source)."
   ],
   "status": "draft",

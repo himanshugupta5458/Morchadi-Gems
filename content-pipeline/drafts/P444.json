@@ -53,8 +53,8 @@
   "pricing": {
     "price": 49,
     "mrp": 49,
-    "cost": 9.5,
-    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+    "cost": 10,
+    "referencePrice": "\u20b949 sale price, \u20b99.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [],
@@ -65,7 +65,7 @@
     "originalSku": "MJ-557",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-557-silver-teardrop-evil-eye-bracelet-898",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],

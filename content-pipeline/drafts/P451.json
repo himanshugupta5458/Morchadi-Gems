@@ -64,8 +64,8 @@
   "pricing": {
     "price": 49,
     "mrp": 49,
-    "cost": 9.5,
-    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+    "cost": 10,
+    "referencePrice": "\u20b949 sale price, \u20b99.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [],
@@ -76,13 +76,13 @@
     "originalSku": "MJ-282",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-282-gold-heartbeat-lifeline-bracelet-907",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],
   "notes": [
     "category guessed as 'bracelets' from source text; raw block did not supply one.",
-    "exportNotes on the raw block flagged this title as a duplicate shared with template 918 (P462) — likely a near-duplicate listing; confirm distinctness before publishing."
+    "exportNotes on the raw block flagged this title as a duplicate shared with template 918 (P462) \u2014 likely a near-duplicate listing; confirm distinctness before publishing."
   ],
   "status": "draft",
   "generatedBy": null

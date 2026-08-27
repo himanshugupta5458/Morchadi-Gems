@@ -54,26 +54,24 @@
     "price": 89,
     "mrp": 89,
     "cost": 19,
-    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+    "referencePrice": "\u20b989 sale price, \u20b919 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": [
-    "combo-set"
-  ],
+  "suggestedCollections": [],
   "sourceNotes": {
     "rawContent": "Elevate your everyday style with this chic gold-toned bracelet duo. Combining a classic ball chain with a modern twisted link strand, this high-fashion set is perfect for effortless layering. To maintain its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
-    "referenceTitle": "old Dainty Bracelet Combo Set – Minimalist Ball Chain & Shimmering Twisted Link Duo",
+    "referenceTitle": "old Dainty Bracelet Combo Set \u2013 Minimalist Ball Chain & Shimmering Twisted Link Duo",
     "originalId": "922",
     "originalSku": "MJ-629",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-629-old-dainty-bracelet-combo-set-minimalist-ball-chain-shimmering-twisted-link-duo-922",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],
   "notes": [
     "category guessed as 'bracelets' from source text; raw block did not supply one.",
-    "referenceTitle reads 'old Dainty Bracelet Combo Set...' — likely a typo for 'Gold' given rawContent's consistent gold-toned material; carried through as-is, not corrected."
+    "referenceTitle reads 'old Dainty Bracelet Combo Set...' \u2014 likely a typo for 'Gold' given rawContent's consistent gold-toned material; carried through as-is, not corrected."
   ],
   "status": "draft",
   "generatedBy": null

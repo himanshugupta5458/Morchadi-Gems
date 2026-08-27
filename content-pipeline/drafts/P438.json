@@ -53,8 +53,8 @@
   "pricing": {
     "price": 49,
     "mrp": 49,
-    "cost": 9.5,
-    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+    "cost": 10,
+    "referencePrice": "\u20b949 sale price, \u20b99.5 cost (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [],
@@ -65,13 +65,13 @@
     "originalSku": "MJ-550",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-550-silver-evil-eye-bracelet-with-sparkling-crystals-892",
     "originalCategories": [
-      "Bracelet under ₹99"
+      "Bracelet under \u20b999"
     ]
   },
   "flaggedContent": [],
   "notes": [
-    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under ₹99'); raw block did not supply one.",
-    "referenceTitle mentions 'Sparkling Crystals' but rawContent itself never names the stone, so no stone attribute was proposed — quote provenance would not exist."
+    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under \u20b999'); raw block did not supply one.",
+    "referenceTitle mentions 'Sparkling Crystals' but rawContent itself never names the stone, so no stone attribute was proposed \u2014 quote provenance would not exist."
   ],
   "status": "draft",
   "generatedBy": null
