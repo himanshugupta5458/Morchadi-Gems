@@ -32,7 +32,7 @@
     "general": [
       {
         "path": "/products/P521.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P521/raw/main.webp",
         "role": "main"
       }

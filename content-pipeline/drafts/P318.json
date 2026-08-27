@@ -54,7 +54,7 @@
     "general": [
       {
         "path": "/products/P318.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P318/raw/main.webp",
         "role": "main"
       }

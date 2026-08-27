@@ -43,7 +43,7 @@
     "general": [
       {
         "path": "/products/P494.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P494/raw/main.webp",
         "role": "main"
       }
