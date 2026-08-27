@@ -1,0 +1,77 @@
+{
+  "productId": "P498",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these gold-toned stainless steel hoops"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "embossed pattern",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a chic embossed pattern"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; avoid contact with perfumes; store in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve their brilliant golden finish, ensure they stay dry, avoid contact with perfumes, and store them in a dry place after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P498.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P498/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹99 sale price, ₹28 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a modern edge to your look with these gold-toned stainless steel hoops, featuring a chic embossed pattern. These high-fashion earrings provide an instant style upgrade. To preserve their brilliant golden finish, ensure they stay dry, avoid contact with perfumes, and store them in a dry place after use.",
+    "referenceTitle": "Stainless Steel Embossed Hoop Earrings",
+    "originalId": "954",
+    "originalSku": "MJ-580",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-580-stainless-steel-embossed-hoop-earrings-954",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

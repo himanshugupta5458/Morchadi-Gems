@@ -1,0 +1,77 @@
+{
+  "productId": "P474",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning silver-toned tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "tennis bracelet with solitaire centerpiece",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a brilliant solitaire centerpiece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid moisture and perfumes; store safely after each wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its radiant shine and delicate finish, we recommend keeping it away from moisture and perfumes, and storing it safely after each wear."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P474.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P474/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your glamour with this stunning silver-toned tennis bracelet, featuring a brilliant solitaire centerpiece. This high-fashion statement piece adds instant sparkle to any outfit. To preserve its radiant shine and delicate finish, we recommend keeping it away from moisture and perfumes, and storing it safely after each wear.",
+    "referenceTitle": "Sparkling Silver-Toned Tennis Bracelet",
+    "originalId": "930",
+    "originalSku": "MJ-574",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-574-sparkling-silver-toned-tennis-bracelet-930",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text (\"silver-toned tennis bracelet\") and originalCategories value \"Bracelet under ₹99\"; raw block did not supply a category."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

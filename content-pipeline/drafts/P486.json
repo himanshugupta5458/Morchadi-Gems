@@ -1,0 +1,97 @@
+{
+  "productId": "P486",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned nath"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or synthetic ruby-colored stone, unclear from text",
+      "displayTerm": "ruby",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a vibrant mix of ruby, emerald, and white stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or synthetic emerald-colored stone, unclear from text",
+      "displayTerm": "emerald",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a vibrant mix of ruby, emerald, and white stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "white stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a vibrant mix of ruby, emerald, and white stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P486.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P486/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a pop of color to your ethnic ensemble with this exquisite gold-toned nath, featuring a vibrant mix of ruby, emerald, and white stones. This high-fashion piece is a perfect statement for festivities. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after use.",
+    "referenceTitle": "Gold-Plated Multi-Stone Traditional Nath – Vibrant Ruby, Emerald & White Stone",
+    "originalId": "942",
+    "originalSku": "MJ-315",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-315-gold-plated-multi-stone-traditional-nath-vibrant-ruby-emerald-white-stone-942",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

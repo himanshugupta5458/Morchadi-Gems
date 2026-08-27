@@ -1,0 +1,86 @@
+{
+  "productId": "P480",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning gold-toned nath"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "white stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a delicate circle of shimmering white stones and a dainty teardrop charm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "dainty teardrop charm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a dainty teardrop charm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid moisture and perfumes; store safely in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant golden luster and high-fashion finish, avoid contact with moisture or perfumes and store it safely in a dry place after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P480.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P480/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Complete your ethnic look with this stunning gold-toned nath, featuring a delicate circle of shimmering white stones and a dainty teardrop charm. To maintain its radiant golden luster and high-fashion finish, avoid contact with moisture or perfumes and store it safely in a dry place after use.",
+    "referenceTitle": "Gold-Plated Dainty Nath – Sparkling White Stone Studded",
+    "originalId": "936",
+    "originalSku": "MJ-306",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-306-gold-plated-dainty-nath-sparkling-white-stone-studded-936",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

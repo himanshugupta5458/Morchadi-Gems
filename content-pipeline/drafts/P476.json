@@ -1,0 +1,86 @@
+{
+  "productId": "P476",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning gold-toned nath"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or synthetic ruby-colored stone, unclear from text",
+      "displayTerm": "ruby-colored stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricately studded with ruby and emerald-colored stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or synthetic emerald-colored stone, unclear from text",
+      "displayTerm": "emerald-colored stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricately studded with ruby and emerald-colored stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid water and perfumes; store in a dry, airtight container after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To ensure its vibrant finish stays beautiful, avoid contact with water or perfumes and store in a dry, airtight container after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P476.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P476/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Embrace timeless tradition with this stunning gold-toned nath, intricately studded with ruby and emerald-colored stones. A perfect high-fashion accessory for festive occasions. To ensure its vibrant finish stays beautiful, avoid contact with water or perfumes and store in a dry, airtight container after use.",
+    "referenceTitle": "Gold- Plated Traditional Nath – Vibrant Ruby & Emerald Green Stone Studded",
+    "originalId": "932",
+    "originalSku": "MJ-301",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-301-gold-plated-traditional-nath-vibrant-ruby-emerald-green-stone-studded-932",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

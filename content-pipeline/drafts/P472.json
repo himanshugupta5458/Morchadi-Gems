@@ -1,0 +1,88 @@
+{
+  "productId": "P472",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this chic gold-toned bracelet duo"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a brilliant crystal-studded tennis strand"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design/Set Contents",
+      "value": "two-piece bracelet combo set: crystal-studded tennis strand and flat snake chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Combining a brilliant crystal-studded tennis strand with a modern flat snake chain, this high-fashion set is perfect for effortless layering."
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P472.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P472/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your glamour with this chic gold-toned bracelet duo. Combining a brilliant crystal-studded tennis strand with a modern flat snake chain, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "referenceTitle": "Gold Bracelet Combo Set – Sparkling Crystal Tennis Bracelet & Sleek Snake Chain",
+    "originalId": "928",
+    "originalSku": "MJ-269",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-269-gold-bracelet-combo-set-sparkling-crystal-tennis-bracelet-sleek-snake-chain-928",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from source text (\"bracelet duo\") and originalCategories value \"Bracelet under ₹99\"; raw block did not supply a category."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

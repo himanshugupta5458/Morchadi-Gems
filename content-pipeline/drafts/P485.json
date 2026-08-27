@@ -1,0 +1,86 @@
+{
+  "productId": "P485",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned floral nath"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "white stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a cluster of shimmering white stones and a graceful teardrop drop"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "floral nath design with teardrop drop",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned floral nath. Featuring a cluster of shimmering white stones and a graceful teardrop drop"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after use."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P485.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P485/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Enhance your traditional charm with this exquisite gold-toned floral nath. Featuring a cluster of shimmering white stones and a graceful teardrop drop, this high-fashion piece is perfect for celebrations. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after use.",
+    "referenceTitle": "Gold-Plated Floral Teardrop Nath – Sparkling White Stone Studded",
+    "originalId": "941",
+    "originalSku": "MJ-309",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-309-gold-plated-floral-teardrop-nath-sparkling-white-stone-studded-941",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
