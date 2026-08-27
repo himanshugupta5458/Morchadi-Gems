@@ -103,8 +103,8 @@
   "pricing": {
     "price": 199,
     "mrp": 199,
-    "cost": null,
-    "referencePrice": "\u20b9199 sale price (morchadijewels.com, reference only)"
+    "cost": 80,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
   "suggestedCollections": [
@@ -122,7 +122,7 @@
   },
   "flaggedContent": [],
   "notes": [
-    "text describes a fixed 'coin and initial charm' design and tags it 'personalized elements' / 'personalized necklace' in marketing copy, but no naming/engraving mechanism is described (the initial charm is not shown as customer-chosen) \u2014 treated as ambiguous, personalized left null."
+    "text describes a fixed 'coin and initial charm' design and tags it 'personalized elements' / 'personalized necklace' in marketing copy, but no naming/engraving mechanism is described (the initial charm is not shown as customer-chosen) — treated as ambiguous, personalized left null."
   ],
   "status": "draft",
   "generatedBy": null

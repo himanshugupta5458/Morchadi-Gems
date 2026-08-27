@@ -1,0 +1,2076 @@
+{
+  "purpose": "Products whose pricing.cost was set to a placeholder (40% of price) rather than a real procurement cost, pending owner bulk-replace. Generated 2026-08-27.",
+  "count": 345,
+  "products": [
+    {
+      "productId": "P103",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P105",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P107",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P111",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P112",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P113",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P124",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P125",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P126",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P127",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P129",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P130",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P131",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P132",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P133",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P134",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P137",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P139",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P140",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P143",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P145",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P147",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P151",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P152",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P153",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P154",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P155",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P156",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P158",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P161",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P162",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P163",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P164",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P165",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P166",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P170",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P172",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P173",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P174",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P175",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P176",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P178",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P180",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P181",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P182",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P183",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P184",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P185",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P186",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P187",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P188",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P189",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P190",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P191",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P192",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P193",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P194",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P195",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P196",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P197",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P198",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P199",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P200",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P201",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P202",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P203",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P205",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P206",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P207",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P208",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P209",
+      "price": 59,
+      "dummyCost": 24,
+      "realCost": null
+    },
+    {
+      "productId": "P210",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P211",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P214",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P215",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P216",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P217",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P218",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P220",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P221",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P222",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P223",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P224",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P226",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P227",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P228",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P229",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P230",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P232",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P233",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P234",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P235",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P236",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P238",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P239",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P240",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P242",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P243",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P244",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P245",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P246",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P247",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P248",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P249",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P250",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P251",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P252",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P253",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P254",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P255",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P256",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P257",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P258",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P259",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P260",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P261",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P262",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P263",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P264",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P265",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P266",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P269",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P270",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P271",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P272",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P273",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P274",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P275",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P276",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P277",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P278",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P280",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P281",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P283",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P284",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P285",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P286",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P287",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P288",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P289",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P290",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P291",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P293",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P296",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P298",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P299",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P300",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P301",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P302",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P303",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P304",
+      "price": 214,
+      "dummyCost": 86,
+      "realCost": null
+    },
+    {
+      "productId": "P305",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P306",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P307",
+      "price": 259,
+      "dummyCost": 104,
+      "realCost": null
+    },
+    {
+      "productId": "P308",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P310",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P311",
+      "price": 219,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P312",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P313",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P314",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P315",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P316",
+      "price": 799,
+      "dummyCost": 320,
+      "realCost": null
+    },
+    {
+      "productId": "P317",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P318",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P319",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P320",
+      "price": 250,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P323",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P324",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P325",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P326",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P327",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P328",
+      "price": 49,
+      "dummyCost": 20,
+      "realCost": null
+    },
+    {
+      "productId": "P329",
+      "price": 35,
+      "dummyCost": 14,
+      "realCost": null
+    },
+    {
+      "productId": "P330",
+      "price": 35,
+      "dummyCost": 14,
+      "realCost": null
+    },
+    {
+      "productId": "P331",
+      "price": 35,
+      "dummyCost": 14,
+      "realCost": null
+    },
+    {
+      "productId": "P332",
+      "price": 35,
+      "dummyCost": 14,
+      "realCost": null
+    },
+    {
+      "productId": "P333",
+      "price": 35,
+      "dummyCost": 14,
+      "realCost": null
+    },
+    {
+      "productId": "P334",
+      "price": 49,
+      "dummyCost": 20,
+      "realCost": null
+    },
+    {
+      "productId": "P338",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P339",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P340",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P341",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P342",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P343",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P344",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P345",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P346",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P347",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P348",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P349",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P350",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P351",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P352",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P353",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P355",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P356",
+      "price": 160,
+      "dummyCost": 64,
+      "realCost": null
+    },
+    {
+      "productId": "P357",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P364",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P365",
+      "price": 250,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P367",
+      "price": 150,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P368",
+      "price": 180,
+      "dummyCost": 72,
+      "realCost": null
+    },
+    {
+      "productId": "P369",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P370",
+      "price": 175,
+      "dummyCost": 70,
+      "realCost": null
+    },
+    {
+      "productId": "P382",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P383",
+      "price": 189,
+      "dummyCost": 76,
+      "realCost": null
+    },
+    {
+      "productId": "P384",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P386",
+      "price": 350,
+      "dummyCost": 140,
+      "realCost": null
+    },
+    {
+      "productId": "P387",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P388",
+      "price": 369,
+      "dummyCost": 148,
+      "realCost": null
+    },
+    {
+      "productId": "P389",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P390",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P391",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P392",
+      "price": 350,
+      "dummyCost": 140,
+      "realCost": null
+    },
+    {
+      "productId": "P393",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P394",
+      "price": 450,
+      "dummyCost": 180,
+      "realCost": null
+    },
+    {
+      "productId": "P398",
+      "price": 450,
+      "dummyCost": 180,
+      "realCost": null
+    },
+    {
+      "productId": "P399",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P404",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P408",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P409",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P410",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P411",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P412",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P413",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P414",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P415",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P416",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P417",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P418",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P419",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P420",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P421",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P422",
+      "price": 89,
+      "dummyCost": 36,
+      "realCost": null
+    },
+    {
+      "productId": "P437",
+      "price": 110,
+      "dummyCost": 44,
+      "realCost": null
+    },
+    {
+      "productId": "P507",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P508",
+      "price": 285,
+      "dummyCost": 114,
+      "realCost": null
+    },
+    {
+      "productId": "P509",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P510",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P511",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P512",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P513",
+      "price": 499,
+      "dummyCost": 200,
+      "realCost": null
+    },
+    {
+      "productId": "P516",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P517",
+      "price": 289,
+      "dummyCost": 116,
+      "realCost": null
+    },
+    {
+      "productId": "P518",
+      "price": 289,
+      "dummyCost": 116,
+      "realCost": null
+    },
+    {
+      "productId": "P519",
+      "price": 349,
+      "dummyCost": 140,
+      "realCost": null
+    },
+    {
+      "productId": "P520",
+      "price": 349,
+      "dummyCost": 140,
+      "realCost": null
+    },
+    {
+      "productId": "P521",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P522",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P523",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P524",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P525",
+      "price": 259,
+      "dummyCost": 104,
+      "realCost": null
+    },
+    {
+      "productId": "P526",
+      "price": 220,
+      "dummyCost": 88,
+      "realCost": null
+    },
+    {
+      "productId": "P527",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P528",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P529",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P530",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P532",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P534",
+      "price": 799,
+      "dummyCost": 320,
+      "realCost": null
+    },
+    {
+      "productId": "P535",
+      "price": 480,
+      "dummyCost": 192,
+      "realCost": null
+    },
+    {
+      "productId": "P536",
+      "price": 777,
+      "dummyCost": 311,
+      "realCost": null
+    },
+    {
+      "productId": "P537",
+      "price": 777,
+      "dummyCost": 311,
+      "realCost": null
+    },
+    {
+      "productId": "P538",
+      "price": 750,
+      "dummyCost": 300,
+      "realCost": null
+    },
+    {
+      "productId": "P539",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P540",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P541",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P542",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P543",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P544",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P545",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P546",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P547",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P548",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P554",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P557",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P558",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P559",
+      "price": 650,
+      "dummyCost": 260,
+      "realCost": null
+    },
+    {
+      "productId": "P564",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P565",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P566",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P567",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P568",
+      "price": 229,
+      "dummyCost": 92,
+      "realCost": null
+    },
+    {
+      "productId": "P569",
+      "price": 320,
+      "dummyCost": 128,
+      "realCost": null
+    },
+    {
+      "productId": "P570",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P571",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P572",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P573",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P574",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P575",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P576",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P577",
+      "price": 99,
+      "dummyCost": 40,
+      "realCost": null
+    },
+    {
+      "productId": "P584",
+      "price": 109,
+      "dummyCost": 44,
+      "realCost": null
+    },
+    {
+      "productId": "P585",
+      "price": 109,
+      "dummyCost": 44,
+      "realCost": null
+    },
+    {
+      "productId": "P587",
+      "price": 129,
+      "dummyCost": 52,
+      "realCost": null
+    },
+    {
+      "productId": "P588",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P589",
+      "price": 149,
+      "dummyCost": 60,
+      "realCost": null
+    },
+    {
+      "productId": "P590",
+      "price": 79,
+      "dummyCost": 32,
+      "realCost": null
+    },
+    {
+      "productId": "P591",
+      "price": 79,
+      "dummyCost": 32,
+      "realCost": null
+    },
+    {
+      "productId": "P592",
+      "price": 949,
+      "dummyCost": 380,
+      "realCost": null
+    },
+    {
+      "productId": "P593",
+      "price": 1799,
+      "dummyCost": 720,
+      "realCost": null
+    },
+    {
+      "productId": "P594",
+      "price": 379,
+      "dummyCost": 152,
+      "realCost": null
+    },
+    {
+      "productId": "P595",
+      "price": 399,
+      "dummyCost": 160,
+      "realCost": null
+    },
+    {
+      "productId": "P596",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P597",
+      "price": 819,
+      "dummyCost": 328,
+      "realCost": null
+    },
+    {
+      "productId": "P598",
+      "price": 1399,
+      "dummyCost": 560,
+      "realCost": null
+    },
+    {
+      "productId": "P599",
+      "price": 1549,
+      "dummyCost": 620,
+      "realCost": null
+    },
+    {
+      "productId": "P600",
+      "price": 1749,
+      "dummyCost": 700,
+      "realCost": null
+    },
+    {
+      "productId": "P601",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P602",
+      "price": 499,
+      "dummyCost": 200,
+      "realCost": null
+    },
+    {
+      "productId": "P603",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P604",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P605",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P607",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P609",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P610",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P611",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P612",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P613",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P614",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P615",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P616",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P617",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P619",
+      "price": 499,
+      "dummyCost": 200,
+      "realCost": null
+    },
+    {
+      "productId": "P620",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P621",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P622",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P623",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P624",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P625",
+      "price": 599,
+      "dummyCost": 240,
+      "realCost": null
+    },
+    {
+      "productId": "P626",
+      "price": 1199,
+      "dummyCost": 480,
+      "realCost": null
+    },
+    {
+      "productId": "P627",
+      "price": 2999,
+      "dummyCost": 1200,
+      "realCost": null
+    },
+    {
+      "productId": "P628",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P629",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P630",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P631",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P632",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P633",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P634",
+      "price": 210,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P635",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P636",
+      "price": 249,
+      "dummyCost": 100,
+      "realCost": null
+    },
+    {
+      "productId": "P637",
+      "price": 289,
+      "dummyCost": 116,
+      "realCost": null
+    },
+    {
+      "productId": "P638",
+      "price": 289,
+      "dummyCost": 116,
+      "realCost": null
+    },
+    {
+      "productId": "P639",
+      "price": 299,
+      "dummyCost": 120,
+      "realCost": null
+    },
+    {
+      "productId": "P640",
+      "price": 209,
+      "dummyCost": 84,
+      "realCost": null
+    },
+    {
+      "productId": "P641",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    },
+    {
+      "productId": "P642",
+      "price": 199,
+      "dummyCost": 80,
+      "realCost": null
+    }
+  ]
+}
