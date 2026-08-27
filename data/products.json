@@ -7698,5 +7698,194 @@
         "DC Ring"
       ]
     }
+  },
+  {
+    "id": "P215",
+    "name": "Blue Raindrop Glass Bangles",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P215.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Royal blue",
+      "embellishment": "Golden polka-dot detailing"
+    },
+    "description": "A dozen bangles in one shade sounds simple until the blue actually sits on the wrist: a deep, almost teal blue that reads darker in shadow and flashes clear in direct light, since every bangle here is cut from faceted glass rather than smooth. Small gold beads run in a dotted line along each bangle, breaking up the blue just enough that the stack doesn't read as one solid block of colour.\n\nTwelve bangles is enough to fill most of the lower arm on its own, the usual way this kind of set is meant to be worn rather than mixed piece by piece with something else. The faceting catches light with every small hand movement, so the set has more going on than a plain glass bangle at rest, without needing any stone or metal charm added to it.\n\nGlass keeps this kind of shine without doing anything special to earn it, which is worth knowing here specifically. No plating that could wear thin, no coating to chip, just colour and cut built into the material. The trade-off is the usual one: slip them on gently, over a soft cloth rather than bare knuckles, and keep them off hard countertops.\n\nSizes 2.4, 2.6 and 2.8 are available, and this shade of blue reads well against both a plain cotton kurta and something dressed up for a wedding, which is why a full stack like this earns its keep beyond a single season.",
+    "seo": {
+      "primaryKeyword": "blue raindrop glass bangles",
+      "secondaryKeywords": [
+        "glass bangle set for women",
+        "faceted glass bangles",
+        "gold-dot glass bangles"
+      ],
+      "metaTitle": "Blue Raindrop Glass Bangles, Set of Twelve | Morchadi Gems",
+      "metaDescription": "A set of twelve blue raindrop glass bangles, each faceted piece dotted with a line of small gold beads. From ₹149, with 7-day returns on every order.",
+      "imageAlt": "Deep blue faceted glass bangles stacked on a wrist, dotted with small gold beads",
+      "ogTitle": "A Full Stack of Blue Raindrop Glass Bangles, ₹149",
+      "ogDescription": "Twelve faceted glass bangles in deep blue, each one dotted with small gold beads along the surface. A ready-made stack for ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P215.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "514",
+      "originalSku": "MJ-124",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-124-blue-rain-drop-glass-bangles-12-piece-514",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P216",
+    "name": "Pink Raindrop Glass Bangles",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P216.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Bright pink",
+      "embellishment": "Golden bead accents"
+    },
+    "description": "Twelve bangles in a single bright pink land somewhere between playful and full-on festive, depending on what else is on the wrist that day. Each one is faceted glass in a hot magenta-pink, with small gold beads set in a line along the surface so the colour doesn't sit completely flat under indoor light.\n\nWorn as the full set, the pink reads solid from a short distance and detailed up close, since the facets throw small flashes of light with almost any hand movement. It's a look built for a full stack rather than a single bangle borrowed from the box. Two or three worn alone read as leftover rather than deliberate.\n\nFit follows the usual glass-bangle logic. Sizes 2.4, 2.6 and 2.8 are available, and the set should go on over a soft surface the first few times rather than knuckles alone, since a cracked glass bangle is a real risk with any tight wrist. Store the set where the bangles won't knock against each other overnight, and the colour and gloss should hold for a good while.\n\nPink like this suits a festival morning and an evening function about equally, and it pairs easily with gold jewellery already sitting in most wardrobes without fighting for attention.",
+    "seo": {
+      "primaryKeyword": "pink raindrop glass bangles",
+      "secondaryKeywords": [
+        "bright pink glass bangles",
+        "faceted glass bangles",
+        "glass bangle set for women"
+      ],
+      "metaTitle": "Pink Raindrop Glass Bangles, Set of Twelve | Morchadi Gems",
+      "metaDescription": "Twelve faceted glass bangles in bright pink, each one dotted with small gold beads along the surface. From ₹149, with easy 7-day returns on every order.",
+      "imageAlt": "Bright pink faceted glass bangles in a full stack, edged with small gold beads",
+      "ogTitle": "A Full Stack of Pink Raindrop Glass Bangles, ₹149",
+      "ogDescription": "A ready-made stack of twelve faceted pink glass bangles, each one lined with small gold beads. Festival-bright, ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P216.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "515",
+      "originalSku": "MJ-466",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-466-pink-rain-drop-glass-bangles-12-piece-515",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P218",
+    "name": "Satrangi Glitter Glass Bangles",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P218.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Multicolor (pink, orange, yellow, green)",
+      "stone": "Glass or cubic zirconia, unclear from text"
+    },
+    "description": "Satrangi means seven-shaded, and this bangle set earns the word honestly: pink, orange, yellow and green run together across a single stack, no two bangles quite the same shade as the light catches them differently through the glass. Small glitter clusters sit scattered across the surface, catching enough light on their own that the set doesn't need anything heavier layered over the colour.\n\nUnlike a faceted glass bangle, these have a smoother, rounder profile, so the colour does most of the work rather than the cut. Worn as the full set of twelve, the mixed shades read like one soft gradient down the wrist rather than four separate colours competing for attention.\n\nThe usual glass rules apply here too. Ease them on rather than forcing over the knuckle, keep them away from hard countertops and each other in storage, and the colour underneath won't fade the way a painted or dyed surface eventually does, since it's built into the glass itself.\n\nSizes 2.4, 2.6 and 2.8 are available. A mixed-colour set like this is an easy one to reach for without matching an outfit first, since there is already a shade in the stack for whatever else is on.",
+    "seo": {
+      "primaryKeyword": "satrangi glitter glass bangles",
+      "secondaryKeywords": [
+        "multicolor glass bangle set",
+        "glitter glass bangles for women",
+        "rainbow glass bangles"
+      ],
+      "metaTitle": "Satrangi Glitter Glass Bangles, Set of Twelve, ₹149",
+      "metaDescription": "A twelve-piece glass bangle set in pink, orange, yellow and green, each one flecked with small glitter clusters. ₹149 at Morchadi Gems, 7-day returns.",
+      "imageAlt": "Multicolour glass bangles in pink, orange, yellow and green with scattered glitter flecks",
+      "ogTitle": "Satrangi Multicolour Glitter Glass Bangles, ₹149",
+      "ogDescription": "A rainbow-toned stack of twelve glass bangles, pink through green, each one catching light from small glitter flecks. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P218.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "517",
+      "originalSku": "MJ-528",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-528-satrangi-sitare-multicolor-glitter-glass-bangle-set-of-12-517",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
   }
 ]
