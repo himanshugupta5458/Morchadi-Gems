@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Material: Stainless Steel\n- Plating: Gold-Plated"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -91,7 +91,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Wipe your jewelry with a soft cloth after every use.\n- Always store your jewelry in a flat box to avoid accidental scratches.\n- Keep sprays and perfumes away from your jewelry.\n- Do not soak your jewelry in water.\n- Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

@@ -23,7 +23,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating- 18k gold tone plated\n- Material- Stainless Steel"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -78,7 +78,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Sizes Available:\n-\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight",
