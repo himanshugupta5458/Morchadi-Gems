@@ -14436,5 +14436,827 @@
         "Vintage watch"
       ]
     }
+  },
+  {
+    "id": "P616",
+    "name": "Silver-Tone Mesh Bracelet Watch, Aqua Blue Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P616.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish silver-tone",
+      "dial colour": "Aqua blue",
+      "bracelet material": "Stainless-steel-style mesh (material not confirmed)",
+      "design detail": "Bow-inspired detailing around the dial",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "A small bow shape traces the edge of the dial on this one, worked into the case itself rather than sitting as a separate charm, an unusual detail on a watch case rather than on a chain or a clasp. The dial runs aqua blue, cooler and brighter than the deep blues seen elsewhere in this bracelet-watch range, set against a silver-tone finish that leans crisp rather than warm.\n\nThe bracelet is a fine mesh band, flexible enough to sit close to the wrist without the give of a chain-link style. Quartz movement keeps time underneath. There's no clasp to fasten, so it slips on and off like a bangle, one less step for a watch worn most days.\n\nSilver-tone plating asks for the same basic care most plated pieces do: away from perfume and heavy sweat, dry storage when it's off the wrist, since damp storage does more damage over time than a single humid afternoon out. The bow detail keeps this one a shade dressier than a plain round dial, without the mesh bracelet turning it into pure jewellery over function.\n\nAt this price, it reads as a watch that could go from an office desk on a Monday to a family lunch on a Sunday without anything else about the outfit needing to change, the aqua dial doing most of that work on its own.",
+    "seo": {
+      "primaryKeyword": "silver-tone mesh bracelet watch aqua blue dial",
+      "secondaryKeywords": [
+        "aqua blue dial watch",
+        "mesh bracelet watch women",
+        "bow detail watch",
+        "silver-tone quartz watch"
+      ],
+      "metaTitle": "Silver-Tone Mesh Bracelet Watch, Aqua Blue Dial, Bow",
+      "metaDescription": "A silver-tone mesh bracelet watch with an aqua blue dial and a bow shape worked into the case edge. Quartz movement, no clasp, ₹599 with 7-day returns.",
+      "imageAlt": "Silver-tone mesh bracelet watch with an aqua blue dial and bow-shaped detailing at the case edge",
+      "ogTitle": "Aqua Blue Dial Watch, Silver-Tone Mesh Band, ₹599",
+      "ogDescription": "A silver-tone mesh bracelet watch with a bow detail at the case and a bright aqua blue dial. Slips on like a bangle, no clasp. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P616.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1088",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-mesh-bracelet-watch-for-women-1088",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P617",
+    "name": "Gold-Tone Bracelet Watch, White Leaf Dial with Pearl-Look Beads",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P617.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "White",
+      "dial shape": "Leaf-shaped oval",
+      "stone": "Imitation pearl or glass beads, unclear from text",
+      "bracelet style": "Statement chain bracelet",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "Most dials in this range are round, oval or square. This one is shaped like a leaf, a soft asymmetric curve rather than a true oval, and it changes how the white face reads against the gold-tone case. Small pearl-look beads run along the chain bracelet rather than sitting only near the clasp, so the effect carries the length of the wrist instead of stopping at one point.\n\nThe bracelet is a bold, heavier-link chain, more visible than a plain link strap, which suits a shaped dial like this rather than fighting it, since a delicate bracelet under an unusual dial shape can end up looking unfinished. Quartz movement handles the actual timekeeping.\n\nWhether the beads are glass or a similar cast material isn't settled from the source listing, so take them as pearl-look rather than a specific material claim. Wipe the gold-tone finish after wear and keep it away from perfume, the same basic care any plated piece in this range asks for.\n\nA shaped dial like this reads more as jewellery that happens to tell time than a watch first, which suits it to a lunch or an evening out better than a desk day, though nothing stops it doing double duty there too.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch white leaf dial",
+      "secondaryKeywords": [
+        "leaf shaped dial watch",
+        "pearl look bracelet watch",
+        "bold chain watch women",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, White Leaf-Shaped Dial, Pearls",
+      "metaDescription": "A gold-tone bracelet watch with a leaf-shaped white dial and pearl-look beads running along a bold, heavier-link chain strap. Quartz, ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone bold-link chain bracelet watch with a leaf-shaped white dial and pearl-look beads",
+      "ogTitle": "Leaf-Shaped White Dial Watch, Gold-Tone, ₹599",
+      "ogDescription": "A gold-tone bracelet watch with an unusual leaf-shaped white dial and pearl-look beads along the chain. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P617.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1089",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-pearl-bracelet-watch-for-women-1089",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P619",
+    "name": "Gold-Tone Bracelet Watch, Emerald Green Rectangular-Oval Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 499,
+      "mrp": 499,
+      "cost": 200
+    },
+    "media": {
+      "images": [
+        "/products/P619.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Emerald green",
+      "bracelet style": "Polished bead bracelet",
+      "dial markers": "Numeral hour markers",
+      "dial shape": "Rectangular-oval",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "Round beads make up the bracelet here rather than a chain or mesh band, polished smooth and strung close enough together that the strap has real weight and movement on the wrist, closer to a beaded bracelet that happens to carry a watch face than the reverse. The dial sits at a soft rectangular-oval shape, neither a clean rectangle nor a true oval, in a rich emerald green with plain numeral markers rather than roman numerals or an unmarked face.\n\nGold-tone plating covers the case and the bead strand alike, and quartz movement runs underneath. The usual plating care applies here as it does across this range: away from perfume and heavy sweat, dry storage when it's off the wrist.\n\nDeep green reads well against most skin tones and doesn't compete with gold jewellery worn alongside it, worth knowing if this is going on with other pieces rather than alone. The beaded strap is really the detail that sets it apart from the round-link and mesh options nearby in this family, more textured under the fingers and more visible from a small distance.\n\nA watch built like this suits an outfit that already carries some colour, a kurta or a saree in a shade that can sit next to emerald rather than fight it.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch emerald green bead dial",
+      "secondaryKeywords": [
+        "beaded bracelet watch women",
+        "emerald green dial watch",
+        "rectangular oval dial watch",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Gold-Tone Beaded Bracelet Watch, Emerald Green Dial",
+      "metaDescription": "A gold-tone bracelet watch with a rectangular-oval emerald green dial and numeral markers, set on a polished bead bracelet strap. Quartz movement, ₹499.",
+      "imageAlt": "Gold-tone bead bracelet watch with an emerald green rectangular-oval dial and numeral markers",
+      "ogTitle": "Emerald Green Dial Watch, Beaded Band, ₹499",
+      "ogDescription": "A gold-tone bracelet watch with a rectangular-oval emerald green dial and a polished bead strap that has real weight on the wrist. ₹499 at Morchadi Gems.",
+      "ogImage": "/products/P619.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1091",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-beaded-bracelet-watch-for-women-1091",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P620",
+    "name": "Gold-Tone Bracelet Watch, Deep Red Dial with Roman Numerals",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P620.webp"
+      ]
+    },
+    "specs": {
+      "design": "Vintage-inspired bracelet watch",
+      "material": "Anti-tarnish gold-tone",
+      "dial": "Deep red with Roman numeral detailing",
+      "strap": "Flexible ribbed bracelet strap",
+      "movement": "Quartz",
+      "occasion": "Office wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting",
+      "care": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use"
+    },
+    "description": "Roman numerals ring a deep red dial on this one, deeper than most of the reds already in this watch range, closer to wine than to a bright cherry tone. The bracelet strap is ribbed rather than smooth or beaded, a series of raised lines running across a flexible gold-tone band that gives it a slightly more textured grip against the wrist than a plain chain would.\n\nQuartz movement handles the actual timekeeping. Keep the gold-tone finish dry and away from perfume and heavy sweat, the same care any plated piece in this range needs to hold its finish over ordinary wear.\n\nRed and gold together read as festive rather than office-neutral, so this one suits a wedding function or a bigger family gathering more naturally than a plain desk day, though the ribbed strap doesn't stop it working there too if that's what's wanted.\n\nThe strap is really the detail worth noticing here. A ribbed texture catches light differently to a flat link and reads a little more considered than a bare chain, which matters on a dial this rich in colour, since a plainer strap underneath can end up looking like an afterthought next to it.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch deep red dial ribbed strap",
+      "secondaryKeywords": [
+        "red dial watch roman numerals",
+        "ribbed bracelet watch",
+        "festive bracelet watch women",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Deep Red Dial, Ribbed Strap",
+      "metaDescription": "A gold-tone bracelet watch with a deep red roman-numeral dial on a ribbed, flexible strap, a festive colour with everyday quartz movement. ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone ribbed bracelet watch with a deep red dial and roman numeral markers",
+      "ogTitle": "Deep Red Dial Watch, Ribbed Gold-Tone Strap, ₹599",
+      "ogDescription": "A gold-tone bracelet watch with a wine-red roman-numeral dial and a ribbed, textured strap. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P620.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1092",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1092",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P621",
+    "name": "Gold-Tone Mesh Bracelet Watch, Green Square Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P621.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-tone",
+      "dial colour": "Green",
+      "dial shape": "Square",
+      "bracelet material": "Mesh (base material not specified)",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "Square is the less common shape in this watch range, where round, oval and rectangular dials make up most of the family. This one breaks from that with a clean square face in a solid green, no gradient or pattern across it. The bracelet is a fine mesh band in gold-tone, flexible enough to sit flush against the wrist without the individual links of a chain strap.\n\nQuartz movement runs the timekeeping. The mesh bracelet's base material isn't specified in the source listing, so take the gold-tone description as the finish rather than a claim about what sits underneath it, the same as most mesh bands at this price point, where the plating is the visible, honest fact and the base metal goes undisclosed.\n\nKeep it dry, away from perfume and heavy sweat, and store it somewhere it won't sit against other jewellery that could scratch the finish over time.\n\nA square dial reads a shade more structured and modern than the round faces nearby in this range, which suits a plainer outfit that can use a geometric note rather than one already busy with pattern or colour. It's a small design choice, but it's the one thing that actually sets this piece apart from its siblings.",
+    "seo": {
+      "primaryKeyword": "gold-tone mesh bracelet watch green square dial",
+      "secondaryKeywords": [
+        "square dial watch women",
+        "green dial mesh watch",
+        "gold-tone quartz watch",
+        "structured watch face"
+      ],
+      "metaTitle": "Gold-Tone Mesh Bracelet Watch, Green Square Dial Face",
+      "metaDescription": "A gold-tone mesh bracelet watch with a clean square green dial, a less common shape than the round faces nearby in this range. Quartz movement, ₹599.",
+      "imageAlt": "Gold-tone mesh bracelet watch with a solid green square dial",
+      "ogTitle": "Green Square Dial Watch, Gold-Tone Mesh Band, ₹599",
+      "ogDescription": "A gold-tone mesh bracelet watch with a clean, structured square green dial. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P621.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1093",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-gold-green-square-dial-mesh-bracelet-watch-1093",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P622",
+    "name": "Gold-Tone Bracelet Watch, Green Dial with Cross-Bezel",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P622.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Emerald green",
+      "dial markers": "Minimalist gold hour markers and hands",
+      "bracelet style": "Flexible mesh bracelet strap",
+      "bezel design": "Cross-bezel design",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "A cross pattern runs around the bezel on this one, a small decorative border between the case edge and the green dial rather than a plain ring, the detail that separates it from the other green-dialled watches in this family. The dial markers stay minimal, just gold hour markers and hands against the emerald face, so the bezel carries most of the visual interest rather than the dial itself.\n\nThe bracelet is a flexible mesh strap in the same gold tone as the case, comfortable for daily wear since mesh moves with the arm rather than sitting rigid. Quartz movement keeps time underneath.\n\nGold-tone plating needs the same care as the rest of this range: dry storage, no perfume directly on the metal, and a wipe after a day worn in humidity or heat.\n\nBecause the bezel does the decorative work here, the dial itself reads calmer and more legible at a glance than some of the busier options nearby, useful if the point is telling time quickly rather than layering detail on detail. It sits well under a sleeve for the office, and just as easily on its own for something less formal.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch green dial cross bezel",
+      "secondaryKeywords": [
+        "cross bezel watch women",
+        "mesh strap watch green dial",
+        "minimalist dial watch",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Green Dial, Cross-Bezel Trim",
+      "metaDescription": "A gold-tone mesh bracelet watch with a green dial framed by a decorative cross-bezel border and minimal gold hour markers. Quartz movement, ₹599.",
+      "imageAlt": "Gold-tone mesh bracelet watch with a green dial and a cross-pattern bezel border",
+      "ogTitle": "Green Dial Watch with Cross-Bezel, Gold-Tone, ₹599",
+      "ogDescription": "A gold-tone mesh bracelet watch, a green dial with minimal markers framed by a decorative cross-bezel. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P622.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1094",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-emerald-green-dial-bracelet-watch-1094",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P623",
+    "name": "Gold-Tone Bracelet Watch, Green Dial with Open-Oval Link Chain",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P623.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Emerald green",
+      "stone": "Green glass or cubic zirconia stones, unclear from text",
+      "bracelet style": "Open-oval link chain strap",
+      "chain extension": "Delicate adjustable chain extension",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "An open-oval link makes up the bracelet chain here, each link left hollow in the centre rather than solid, giving the strap a lighter, more see-through look against the wrist than a dense chain would. A small adjustable extension is built into the clasp end, so the fit can loosen or tighten by a link or two without a separate tool, useful on a bracelet style that doesn't stretch the way mesh does.\n\nThe dial runs emerald green, set with small green stones around the face, glass or cubic zirconia rather than anything more specific the source material confirms, so read them as green stone accents rather than a named gem. Quartz movement keeps time underneath a gold-tone finish that asks for the same basic care as the rest of this family: away from perfume and sweat, dry storage between wears.\n\nThe adjustable extension is worth knowing about before buying, since an open-link chain like this can otherwise run a touch loose or tight depending on wrist size, and this one gives room either way. Wear it with something that already leans green or gold rather than fighting the dial's colour, and the stones do the rest of the work without needing anything else to match.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch green dial open link chain",
+      "secondaryKeywords": [
+        "adjustable bracelet watch women",
+        "open oval link chain watch",
+        "green stone dial watch",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Green Dial, Open-Link Chain",
+      "metaDescription": "A gold-tone bracelet watch with a green stone-set dial on an adjustable open-oval link chain that gives extra room at the clasp. ₹599, quartz movement.",
+      "imageAlt": "Gold-tone open-oval link bracelet watch with a green stone-set dial",
+      "ogTitle": "Green Dial Watch, Open-Link Chain, Adjustable, ₹599",
+      "ogDescription": "A gold-tone bracelet watch with a green stone-set dial and an open-oval link chain with a built-in adjustable extension. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P623.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1095",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-oval-link-emerald-dial-bracelet-watch-1095",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P624",
+    "name": "Classic Mystery Jewellery Jar, 3-4 Surprise Pieces",
+    "category": "gift-hampers",
+    "subcategory": "mystery-jar",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P624.webp"
+      ]
+    },
+    "specs": {
+      "contents": "3-4 surprise jewellery pieces per jar, mix of anti-tarnish and Korean-style jewellery",
+      "contents disclaimer": "Contents are assorted and selected randomly; exact pieces vary from jar to jar"
+    },
+    "description": "Three to four pieces go into this jar, and none of them are chosen in advance, that's the whole idea of a mystery jar rather than a set gift box with a fixed contents list. The mix runs across anti-tarnish and Korean-style jewellery, so expect a blend of everyday, wearable pieces rather than one single style repeated across everything inside.\n\nExactly what lands in any one jar is random. The listing is upfront about that: designs, pieces and even the specific count within the 3-4 range vary from jar to jar, so this isn't the product for someone who needs to know precisely what they're getting before it arrives.\n\nWhat it suits well is a small, low-stakes gift, a birthday add-on or a treat for someone who likes a bit of surprise more than a guaranteed exact piece. At this size it's the smallest of the mystery jars in this range, a starting point rather than the full unboxing experience the bigger jars offer.\n\nIf a fixed, known set of jewellery matters more than the surprise element, a regular gift set is the better fit. If the unknown is part of the appeal, three or four pieces is enough to make opening it feel like an event without committing to a bigger box.",
+    "seo": {
+      "primaryKeyword": "mystery jewellery jar small surprise gift",
+      "secondaryKeywords": [
+        "surprise jewellery jar",
+        "korean style jewellery gift",
+        "small jewellery gift box",
+        "affordable jewellery surprise"
+      ],
+      "metaTitle": "Classic Mystery Jewellery Jar, 3-4 Surprise Pieces",
+      "metaDescription": "A small mystery jar with 3-4 surprise jewellery pieces in an assorted mix of styles, a different pick every time. ₹299, a low-stakes surprise gift.",
+      "imageAlt": "Small mystery jewellery jar holding a surprise mix of jewellery pieces",
+      "ogTitle": "Classic Mystery Jewellery Jar, 3-4 Pieces, ₹299",
+      "ogDescription": "A small jar of surprise jewellery, 3-4 pieces in an assorted mix of styles. A low-stakes surprise gift. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P624.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1096",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/classic-mystery-jewellery-jar-1096",
+      "originalCategories": [
+        "Mystery Jar"
+      ]
+    }
+  },
+  {
+    "id": "P625",
+    "name": "Surprise Mystery Jewellery Jar, 8-9 Items",
+    "category": "gift-hampers",
+    "subcategory": "mystery-jar",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P625.webp"
+      ]
+    },
+    "specs": {
+      "contents": "8-9 surprise jewellery items per jar, mix of anti-tarnish and Korean-style pieces",
+      "contents disclaimer": "Designs, colours and styles may vary from the images shown; each jar is curated individually so exact contents remain a surprise"
+    },
+    "description": "Where the smaller jar in this range holds three to four pieces, this one roughly doubles it: eight to nine surprise jewellery items in a single jar, still a mix of anti-tarnish and Korean-style pieces rather than a themed single-style set. More items means more chance of variety within one jar, several ring or earring pairs alongside chain pieces rather than just one or two things to open.\n\nThe randomness works the same way as the smaller jar: designs, colours and styles may differ from any reference photo, and each jar is put together individually, so the surprise is the actual point rather than a marketing line. Nobody, including whoever packs the jar, is choosing what goes in ahead of time for a specific order.\n\nAt close to double the item count of the entry jar, this sits in the middle of the mystery-jar range here, enough pieces that a genuine mixed collection builds up from one purchase rather than needing several. It works as a bigger gift on its own or as the anchor of a larger hamper alongside something else.\n\nThe trade-off is the same one every mystery format makes: more excitement in the unboxing, less certainty about the exact haul beforehand.",
+    "seo": {
+      "primaryKeyword": "mystery jewellery jar 8 to 9 pieces",
+      "secondaryKeywords": [
+        "surprise jewellery jar medium",
+        "korean style jewellery gift jar",
+        "bulk jewellery surprise gift",
+        "anti-tarnish jewellery jar"
+      ],
+      "metaTitle": "Surprise Mystery Jewellery Jar, 8 to 9 Items Inside",
+      "metaDescription": "A mid-size mystery jar with 8-9 surprise jewellery items in an assorted mix of styles, roughly double the smaller entry jar in this range. ₹599.",
+      "imageAlt": "Mid-size mystery jewellery jar with eight to nine surprise jewellery items",
+      "ogTitle": "Surprise Mystery Jewellery Jar, 8-9 Items, ₹599",
+      "ogDescription": "A mid-size jar of surprise jewellery, 8-9 pieces in an assorted mix of styles. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P625.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1097",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/surprise-mystery-jewellery-jar-1097",
+      "originalCategories": [
+        "Mystery Jar"
+      ]
+    }
+  },
+  {
+    "id": "P626",
+    "name": "Premium Mystery Jewellery Jar, 10-12 Items with a Watch Guaranteed",
+    "category": "gift-hampers",
+    "subcategory": "mystery-jar",
+    "status": "draft",
+    "pricing": {
+      "price": 1199,
+      "mrp": 1199,
+      "cost": 480
+    },
+    "media": {
+      "images": [
+        "/products/P626.webp"
+      ]
+    },
+    "specs": {
+      "contents": "10-12 jewellery and accessory items per jar: 1 vintage watch guaranteed, 3-4 anti-tarnish jewellery items, 6-7 Korean jewellery items",
+      "contents disclaimer": "Designs, colours and jewellery styles may vary from the images shown; every jar is curated individually so the contents will be a surprise"
+    },
+    "description": "Unlike the two smaller mystery jars in this range, this one guarantees one thing before the jar is even opened: a vintage watch, every time, alongside ten to twelve items in total. The rest of the mix runs three to four anti-tarnish jewellery pieces and six to seven Korean-style pieces, so the surprise here is which specific designs land rather than whether a watch shows up at all.\n\nThat guarantee is the real difference at this tier. The smaller jars are pure surprise across every item; this one fixes the one category most people would mind not getting, and leaves the rest of the mix to chance the same way the others do. Designs, colours and jewellery styles may vary from any reference image, and each jar is individually curated rather than pulled from a fixed template.\n\nAt twelve items and a guaranteed watch, this sits as a genuine gift on its own rather than an add-on, closer to what someone might buy for a friend's birthday than what they'd pick up as a small extra. It's still, at heart, a mystery format. What changes at this tier is that one part of the mystery gets resolved before the box is even opened.",
+    "seo": {
+      "primaryKeyword": "mystery jewellery jar with guaranteed watch",
+      "secondaryKeywords": [
+        "premium jewellery surprise jar",
+        "vintage watch gift jar",
+        "korean jewellery mystery box",
+        "birthday jewellery gift jar"
+      ],
+      "metaTitle": "Premium Mystery Jar, 10-12 Items, Watch Guaranteed",
+      "metaDescription": "A premium mystery jar with 10-12 items and one vintage watch guaranteed every time, the rest a surprise mix of styles. ₹1199, a genuine standalone gift.",
+      "imageAlt": "Premium mystery jewellery jar with a guaranteed vintage watch among ten to twelve items",
+      "ogTitle": "Premium Mystery Jar, Watch Guaranteed, ₹1199",
+      "ogDescription": "A premium mystery jar, 10-12 items with one vintage watch guaranteed and the rest a surprise mix. ₹1199 at Morchadi Gems.",
+      "ogImage": "/products/P626.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1098",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/premium-mystery-jewellery-jar-1098",
+      "originalCategories": [
+        "Mystery Jar"
+      ]
+    }
+  },
+  {
+    "id": "P627",
+    "name": "Ultra Premium Mystery Jewellery Jar, 18-20 Items with Two Watches Guaranteed",
+    "category": "gift-hampers",
+    "subcategory": "mystery-jar",
+    "status": "draft",
+    "pricing": {
+      "price": 2999,
+      "mrp": 2999,
+      "cost": 1200
+    },
+    "media": {
+      "images": [
+        "/products/P627.webp"
+      ]
+    },
+    "specs": {
+      "contents": "18-20 jewellery and accessory items per jar: 2 vintage watches guaranteed, 7-8 anti-tarnish jewellery pieces, 9-10 Korean jewellery pieces, beautifully decorated gift-ready premium jar",
+      "contents disclaimer": "Designs, colours, patterns and styles may vary from the images shown; each jar is individually curated so the exact contents remain a surprise; the counts given are guaranteed categories and approximate item counts"
+    },
+    "description": "At the top of this jar range sit two guarantees rather than one: two vintage watches, not one, alongside eighteen to twenty items altogether, the largest count across every mystery jar here. The rest breaks down as seven to eight anti-tarnish jewellery pieces and nine to ten Korean-style pieces, still assembled at random beyond those two fixed categories.\n\nThe jar itself arrives dressed for gifting, decorated rather than a plain container, so this one doesn't need wrapping on top to read as a present. Designs, patterns and styles may differ from any reference photo, and the counts given are guaranteed categories and approximate totals rather than an exact, numbered list, the same honesty the smaller jars carry through at a bigger scale.\n\nAt close to three thousand rupees, this sits well above the entry jars in this range, priced for someone who wants the full unboxing event rather than a small surprise add-on, a proper gift for someone who already has jewellery and wants more of it without picking every piece by hand.\n\nTwo watches guaranteed is the detail that actually separates this tier from the one below it. Everything past that is volume: more pieces, a bigger jar, and the same honest unpredictability about which exact designs turn up.",
+    "seo": {
+      "primaryKeyword": "ultra premium mystery jewellery jar two watches",
+      "secondaryKeywords": [
+        "biggest jewellery surprise jar",
+        "two vintage watches gift jar",
+        "large korean jewellery mystery box",
+        "premium jewellery gift jar"
+      ],
+      "metaTitle": "Ultra Premium Mystery Jar, 18-20 Items, Two Watches",
+      "metaDescription": "The largest mystery jar in this range: 18-20 items with two vintage watches guaranteed, arriving decorated and ready to gift. ₹2999 for the full unboxing.",
+      "imageAlt": "Ultra premium mystery jewellery jar with two guaranteed vintage watches among eighteen to twenty items",
+      "ogTitle": "Ultra Premium Mystery Jar, Two Watches, ₹2999",
+      "ogDescription": "The biggest mystery jar here, 18-20 items with two vintage watches guaranteed, arriving decorated and gift-ready. ₹2999 at Morchadi Gems.",
+      "ogImage": "/products/P627.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1099",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/ultra-premium-mystery-jewellery-jar-1099",
+      "originalCategories": [
+        "Mystery Jar"
+      ]
+    }
+  },
+  {
+    "id": "P630",
+    "name": "Gold-Tone Heart Wreath Necklace, Emerald-Green Stones",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P630.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "stone": "Emerald-green cubic zirconia",
+      "chain": "Adjustable snake chain",
+      "pendant size": "Approx. 1x1cm diameter"
+    },
+    "description": "A ring of small hearts forms the pendant here, joined edge to edge into a circle rather than hanging as a single charm, so the shape reads as a wreath rather than a locket or a drop. Emerald-green cubic zirconia sits inside each heart, small and evenly cut, giving the gold-tone metal a consistent point of colour all the way around the ring rather than one bright accent among plain metal.\n\nAt roughly a centimetre across, the pendant sits small and close to the collarbone rather than hanging low as the centre of attention, which keeps it wearable under a collar or against a higher neckline without getting in the way. The chain is a fine snake-link style, adjustable in length, gold-plated stainless steel underneath the finish.\n\nKeep it away from water, perfume and daily friction against skin or fabric where possible, the plating on any gold-tone piece wearing thinner with repeated contact over time rather than all at once.\n\nSmall, repeating shapes like this tend to layer well with a plainer chain or a second pendant sitting slightly lower, if that's the look someone's building toward, though it reads just as complete worn alone against a simple neckline.",
+    "seo": {
+      "primaryKeyword": "gold-tone heart wreath necklace emerald stones",
+      "secondaryKeywords": [
+        "heart pendant necklace women",
+        "emerald green cubic zirconia necklace",
+        "adjustable snake chain necklace",
+        "small pendant necklace gift"
+      ],
+      "metaTitle": "Gold-Tone Heart Wreath Necklace, Emerald-Green Stones",
+      "metaDescription": "A gold-tone necklace with a small wreath of hearts set with emerald-green cubic zirconia, worn close to the collarbone. ₹199, adjustable snake chain.",
+      "imageAlt": "Gold-tone heart wreath pendant necklace set with emerald-green cubic zirconia stones",
+      "ogTitle": "Heart Wreath Necklace, Emerald-Green Stones, ₹199",
+      "ogDescription": "A gold-tone necklace, a small wreath of hearts set with emerald-green cubic zirconia on an adjustable snake chain. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P630.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1102",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/gold-heart-wreath-necklace-1102",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P635",
+    "name": "Gold-Tone Sunburst Key Pendant Necklace, Clear Stone Accents",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 80
+    },
+    "media": {
+      "images": [
+        "/products/P635.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "stone": "Clear cubic zirconia accents",
+      "chain": "Fine link chain, adjustable length",
+      "pendant size": "Approx. 2cm x 1.5cm"
+    },
+    "description": "A key shape and a sunburst medallion sit combined in one pendant here, the medallion forming the key's head with a textured, radiating pattern across it, while a straight bar set with clear stones runs down to form the key's shaft. It's an unusual pairing of two motifs that don't often appear together, part symbolic key charm and part sunburst medallion, rather than a plain key outline on its own.\n\nThe stones are clear cubic zirconia, catching light along the narrow bar rather than clustering at one point, and the medallion's textured surface gives the gold-tone finish some depth beyond a flat, polished face. At around two centimetres by one and a half, the pendant reads as a proper centrepiece rather than something that disappears against the collarbone.\n\nThe chain is a fine link style, adjustable in length, in the same gold-plated stainless steel as the pendant. Keep it dry and away from perfume, and expect the usual gradual wear any plated piece takes on with regular contact against skin and fabric.\n\nA key motif carries an obvious meaning for anyone drawn to symbolic jewellery, and the sunburst detail keeps it from reading as a single flat charm, giving it more to look at than a plain outline would.",
+    "seo": {
+      "primaryKeyword": "gold-tone sunburst key pendant necklace",
+      "secondaryKeywords": [
+        "key pendant necklace women",
+        "symbolic pendant necklace",
+        "cubic zirconia bar pendant",
+        "textured medallion pendant"
+      ],
+      "metaTitle": "Gold-Tone Sunburst Key Pendant Necklace, CZ Stones",
+      "metaDescription": "A gold-tone pendant combining a textured sunburst medallion with a key shape and a clear cubic zirconia bar, on a fine adjustable chain. ₹199.",
+      "imageAlt": "Gold-tone key-shaped pendant with a textured sunburst medallion and clear cubic zirconia bar",
+      "ogTitle": "Sunburst Key Pendant Necklace, Gold-Tone, ₹199",
+      "ogDescription": "A gold-tone pendant pairing a textured sunburst medallion with a key shape and clear cubic zirconia stones. ₹199 at Morchadi Gems.",
+      "ogImage": "/products/P635.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1107",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/sunburst-key-pendant-necklace-1107",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P636",
+    "name": "Gold-Tone Bar Pendant Necklace, Amethyst-Purple Stone",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P636.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "stone": "Amethyst-purple cubic zirconia, bar bezel setting",
+      "chain": "Fine link chain, adjustable length",
+      "pendant size": "Approx. 1.2cm x 0.6cm"
+    },
+    "description": "A single rectangular bar makes up the whole pendant here, no charm shape or medallion behind it, just a smooth gold-tone bezel holding one amethyst-purple cubic zirconia stone along its length. It's the plainest silhouette in this small pendant group, and that plainness is really the point: a bar pendant reads as a quiet accent rather than a piece that asks to be noticed first.\n\nAt just over a centimetre long, the bar sits small and centred on a fine link chain, adjustable to sit at whatever length suits the neckline underneath it. The purple stone gives it a single note of colour against the gold-tone metal, without competing patterns or a cluster of smaller stones pulling attention in different directions.\n\nThe chain and bezel are both gold-plated stainless steel, and the same basic plating care applies here as with any piece in this finish: away from perfume and water where possible, a wipe after a day of heavy wear.\n\nSome pendants earn their keep through detail. This one earns it through restraint, one small purple stone on a plain bar doing one job without needing anything else added to justify the price.",
+    "seo": {
+      "primaryKeyword": "gold-tone bar pendant necklace amethyst-purple stone",
+      "secondaryKeywords": [
+        "minimalist bar pendant necklace",
+        "purple stone pendant women",
+        "cubic zirconia bar necklace",
+        "adjustable chain pendant"
+      ],
+      "metaTitle": "Gold-Tone Bar Pendant Necklace, Amethyst-Purple CZ",
+      "metaDescription": "A minimalist gold-tone bar pendant set with one amethyst-purple cubic zirconia stone, on a fine adjustable chain that suits any neckline. ₹249.",
+      "imageAlt": "Gold-tone rectangular bar pendant necklace set with an amethyst-purple cubic zirconia stone",
+      "ogTitle": "Minimalist Bar Pendant, Amethyst-Purple Stone, ₹249",
+      "ogDescription": "A plain gold-tone bar pendant set with one amethyst-purple cubic zirconia stone on a fine adjustable chain. ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P636.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1108",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/birthstone-purple-bar-pendant-necklace-1108",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P639",
+    "name": "Gold-Tone Tulip Charm Necklace, Pink and Green Stones",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P639.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated stainless steel",
+      "stone": "Pink and green cubic zirconia tulip charms",
+      "stone chain spacers": "Glass or cubic zirconia, unclear from text (clear crystal spacers)",
+      "chain": "Fine link chain with layered drop design, adjustable length",
+      "pendant size": "Largest charm approx. 1.5cm"
+    },
+    "description": "Three tulip-shaped charms hang at different lengths along this chain, an asymmetric, layered drop rather than a single pendant or a row of matching charms sitting level with each other. Each tulip carries pink and green cubic zirconia, the pink forming the petal and the green sitting at the base, so the colour pairing repeats across all three without any two charms reading as identical.\n\nClear crystal spacers sit along the chain between the drops, small enough to catch light without competing with the tulip charms themselves. The largest of the three charms measures around a centimetre and a half, and the chain is fine link, adjustable to length, in gold-plated stainless steel.\n\nBecause the drops sit at different heights, the necklace has real movement against the collarbone rather than settling flat, showing more of the layered effect than a single fixed-length chain would. Keep the plating away from perfume and water, and expect the same gradual wear over time any gold-tone piece takes on with regular contact.\n\nA botanical motif like this suits an everyday outfit as easily as a dressier one, the pink and green combination reading as a colour choice rather than something tied to one specific occasion, an easy pick for someone who wants one necklace that does more than one job.",
+    "seo": {
+      "primaryKeyword": "gold-tone tulip charm necklace layered drop",
+      "secondaryKeywords": [
+        "tulip pendant necklace women",
+        "layered drop necklace gold",
+        "pink green cubic zirconia necklace",
+        "botanical charm necklace"
+      ],
+      "metaTitle": "Gold-Tone Tulip Charm Necklace, Layered Drop Design",
+      "metaDescription": "A gold-tone necklace with three tulip charms in pink and green cubic zirconia, hung at different lengths along a fine adjustable chain. ₹299, 7-day returns.",
+      "imageAlt": "Gold-tone layered necklace with three tulip charms set with pink and green cubic zirconia",
+      "ogTitle": "Tulip Charm Necklace, Layered Drop, Gold-Tone, ₹299",
+      "ogDescription": "A gold-tone necklace with three asymmetric tulip charms in pink and green cubic zirconia on a fine adjustable chain. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P639.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1111",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/gold-tulip-necklace-with-ruby-1111",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
   }
 ]
