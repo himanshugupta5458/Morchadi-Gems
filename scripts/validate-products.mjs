@@ -26,7 +26,7 @@ const KEYWORD_MAP_PATH = join(REPO_ROOT, "data", "keyword-map.json");
  *
  * So the gate failing after you add a product is CORRECT, not a bug. Bump the number.
  */
-const EXPECTED_PRODUCT_COUNT = 422;
+const EXPECTED_PRODUCT_COUNT = 432;
 
 const MIN_FEATURED_COUNT = 4;
 const MIN_NEW_COUNT = 4;
