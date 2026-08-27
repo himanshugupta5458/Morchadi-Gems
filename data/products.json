@@ -22867,5 +22867,527 @@
         "Bracelet under ₹99"
       ]
     }
+  },
+  {
+    "id": "P448",
+    "name": "Silver-Toned Tennis Bracelet, Single Line of Stones",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P448.webp"
+      ]
+    },
+    "specs": {
+      "design": "Tennis bracelet design (single line of stones)",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Silver-toned metal, base metal unspecified",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry place after every wear"
+    },
+    "description": "A single unbroken line of small crystal-look stones runs the length of this bracelet, the classic tennis-bracelet layout rather than a charm or a motif. The exact stone material is honestly a bit uncertain, somewhere between glass and cubic zirconia, so this stays with \"crystal-look\" rather than naming one or the other outright.\n\nThe silver-toned metal underneath isn't specified further either, just a base metal finished to a silver tone, which keeps the sparkle the focus rather than any claim about the metal itself. A tennis bracelet's whole appeal is in that continuous line: no single stone dominates, and the eye reads it as one bright strip rather than a series of separate points.\n\nIt sits close to the wrist, light enough not to announce its own weight, and works equally well stacked with other pieces or worn alone against a plain sleeve. There's no fixed occasion tied to a shape this simple, so it moves between an ordinary day and something dressier without needing a change.\n\nKeep it away from moisture and perfume, and store it in a dry place after each wear, the same basic care any plated or glass-set piece needs. At ₹49, a full line of stones like this is a low-cost way to add a bit of continuous sparkle to the wrist.",
+    "seo": {
+      "primaryKeyword": "silver-toned tennis bracelet single line stones",
+      "secondaryKeywords": [
+        "crystal look bracelet affordable",
+        "silver tone bracelet stacking",
+        "tennis bracelet under 50 rupees"
+      ],
+      "metaTitle": "Silver-Toned Tennis Bracelet, Single Line of Stones",
+      "metaDescription": "A silver-toned tennis bracelet with a single unbroken line of crystal-look stones, light on the wrist. Priced at ₹49, stacks well with other pieces.",
+      "imageAlt": "Silver-toned tennis bracelet with a continuous line of crystal-look stones",
+      "ogTitle": "Tennis Bracelet, Silver-Toned, Single Stone Line, ₹49",
+      "ogDescription": "A silver-toned tennis bracelet with one continuous line of crystal-look stones, light and easy to stack. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P448.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "904",
+      "originalSku": "MJ-573",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-573-sparkling-silver-tennis-bracelet-904",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P450",
+    "name": "Silver-Toned Bracelet with Heart-in-Circle Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P450.webp"
+      ]
+    },
+    "specs": {
+      "design": "Heart-in-circle charm design",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Silver-toned metal, base metal unspecified",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry place after every wear"
+    },
+    "description": "A small heart sits inside a circle on this bracelet, one charm rather than a run of stones or a repeating motif, in a silver-toned metal without a more specific base named. The stone detail on the charm sits somewhere between glass and cubic zirconia, so this description holds to \"crystal-look\" rather than naming one.\n\nA single circular charm like this reads as understated compared with a full-line tennis bracelet or a busier charm cluster; it's a quiet detail rather than something meant to be the loudest piece on the wrist. The heart-in-circle shape is a common, easily read motif without needing any explanation.\n\nIt suits daily wear well precisely because it doesn't ask for a specific occasion to justify itself, and it layers easily alongside a plainer bangle or another thin bracelet without competing for attention.\n\nKeep it away from moisture and perfume, and store it dry after each wear, the standard care for a plated or glass-set piece at this price. At ₹49, a single well-shaped charm like this is a small, low-pressure way to add a bit of detail to an everyday wrist.",
+    "seo": {
+      "primaryKeyword": "silver-toned bracelet heart-in-circle charm",
+      "secondaryKeywords": [
+        "heart charm bracelet affordable",
+        "silver tone charm bracelet",
+        "everyday bracelet under 50 rupees"
+      ],
+      "metaTitle": "Silver-Toned Bracelet with Heart-in-Circle Charm, ₹49",
+      "metaDescription": "A silver-toned bracelet with a single heart-in-circle charm, crystal-look detailing, understated and easy to layer for daily wear. Just ₹49.",
+      "imageAlt": "Silver-toned bracelet with a heart-in-circle charm and crystal-look detailing",
+      "ogTitle": "Heart-in-Circle Charm Bracelet, Silver-Toned, ₹49",
+      "ogDescription": "A silver-toned bracelet with a single heart-in-circle charm, quiet and easy to layer. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P450.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "906",
+      "originalSku": "MJ-335",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-335-heart-charm-gold-bracelet-906",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P451",
+    "name": "Gold-Toned Bracelet with Heartbeat Lifeline Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P451.webp"
+      ]
+    },
+    "specs": {
+      "design": "Heartbeat/lifeline charm design",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material": "Gold-toned metal, base metal unspecified",
+      "care instructions": "Avoid contact with water and perfumes; store in a dry place after every wear"
+    },
+    "description": "A heartbeat line traces across this bracelet's charm, the pulse-line motif rather than a plain heart or a stone cluster, set in gold-toned metal. The stone detail worked into the design sits somewhere between glass and cubic zirconia, so this stays with \"crystal-look\" instead of naming the material outright.\n\nThe heartbeat motif reads as a specific choice rather than a generic charm shape, the kind of detail that carries a bit more meaning than a plain heart without needing to spell it out. It sits as a single focal charm rather than a repeating pattern, so the bracelet stays visually simple even with a shaped detail on it.\n\nIt's light enough for daily wear and doesn't lean toward any one occasion, so it works as easily under a work sleeve as it does with an evening outfit. A single-charm design like this also stacks comfortably next to a plainer bangle or chain.\n\nAvoid contact with water and perfume, and store it in a dry place after each wear. At ₹49, a specific motif like a heartbeat line offers a bit more to notice than a plain charm would at the same price.",
+    "seo": {
+      "primaryKeyword": "gold-toned bracelet heartbeat lifeline charm",
+      "secondaryKeywords": [
+        "pulse line charm bracelet",
+        "gold tone bracelet affordable",
+        "heartbeat bracelet under 50 rupees"
+      ],
+      "metaTitle": "Gold-Toned Bracelet with Heartbeat Lifeline Charm, ₹49",
+      "metaDescription": "A gold-toned bracelet with a heartbeat lifeline charm and crystal-look detailing, light and comfortable for all-day wear. Priced at just ₹49.",
+      "imageAlt": "Gold-toned bracelet with a heartbeat lifeline charm and crystal-look detailing",
+      "ogTitle": "Heartbeat Charm Bracelet, Gold-Toned Metal, ₹49",
+      "ogDescription": "A gold-toned bracelet with a heartbeat lifeline charm, a specific motif with real meaning. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P451.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "907",
+      "originalSku": "MJ-282",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-282-gold-heartbeat-lifeline-bracelet-907",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P452",
+    "name": "Gold-Toned Bracelet with Winged Heart Lock Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P452.webp"
+      ]
+    },
+    "specs": {
+      "design": "Winged heart lock charm design",
+      "material": "Gold-toned metal, base metal unspecified",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "care instructions": "Keep away from moisture and perfumes; store safely in a dry place after use"
+    },
+    "description": "Wings frame a small heart-shaped lock on this bracelet's charm, a more detailed shape than a plain heart, cast in gold-toned metal. The stone worked into the design sits somewhere between glass and cubic zirconia, so this description sticks to \"crystal-look\" rather than a firmer claim.\n\nA lock motif carries its own quiet suggestion, something kept safe or held onto, and the added wings give the charm more visual complexity than a single flat shape would. It's a single focal charm rather than a run of stones, so the bracelet reads as detailed without being busy.\n\nIt suits daily wear as comfortably as a specific occasion, since a winged-heart-lock shape doesn't tie itself to one calendar event the way a festival-specific motif might. It layers easily with a plainer chain or bangle without either piece competing for attention.\n\nKeep it away from moisture and perfume, and store it safely in a dry place after use, the standard care instruction for this kind of plated piece. At ₹49, the combined lock-and-wing shape is a fair bit of detail worked into one small charm.",
+    "seo": {
+      "primaryKeyword": "gold-toned bracelet winged heart lock charm",
+      "secondaryKeywords": [
+        "heart lock charm bracelet",
+        "winged charm bracelet gold",
+        "affordable charm bracelet india"
+      ],
+      "metaTitle": "Gold-Toned Bracelet with Winged Heart Lock Charm, ₹49",
+      "metaDescription": "A gold-toned bracelet with a winged heart lock charm and crystal-look detailing, a genuinely detailed single-charm piece, priced simply at ₹49.",
+      "imageAlt": "Gold-toned bracelet with a winged heart lock charm, crystal-look detailing",
+      "ogTitle": "Winged Heart Lock Bracelet, Gold-Toned, ₹49",
+      "ogDescription": "A gold-toned bracelet with a winged heart lock charm, more detailed than a plain heart shape. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P452.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "908",
+      "originalSku": "MJ-300",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-300-gold-winged-heart-lock-bracelet-908",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P453",
+    "name": "Gold-Toned Bracelet with 'Love' Script Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P453.webp"
+      ]
+    },
+    "specs": {
+      "design": "\"love\" script motif",
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "weight": "Lightweight",
+      "occasion": "Daily wear and special occasions",
+      "care": "Keep away from moisture and perfumes; store in a dry place after use"
+    },
+    "description": "The word \"love\" is spelled out in script across this bracelet's charm, a direct message rather than a symbolic shape, in gold-toned metal set with crystal-look stones. The material behind the sparkle sits somewhere between glass crystal and cubic zirconia, so the honest description here is \"crystal-look\" without settling on one.\n\nWhere a heart or a lock motif implies its message, a script word states it outright, which suits it well as a specific gift rather than a generic pick. The bracelet stays lightweight despite the shaped charm, which matters for something meant to be worn through a full day rather than taken off after a few hours.\n\nIts confirmed occasion range covers daily wear and special occasions, so it isn't reserved for one calendar event and can move between an ordinary day and something more considered without a change of jewellery.\n\nKeep it away from moisture and perfume, and store it in a dry place after use. At ₹49, a spelled-out word charm is a direct, low-cost way to give or wear something with a clear, unambiguous message.",
+    "seo": {
+      "primaryKeyword": "gold-toned bracelet love script charm",
+      "secondaryKeywords": [
+        "love word charm bracelet",
+        "script charm bracelet gold",
+        "affordable gift bracelet india"
+      ],
+      "metaTitle": "Gold-Toned Bracelet with 'Love' Script Charm Detail",
+      "metaDescription": "A gold-toned bracelet with a 'Love' script charm set in crystal-look stones, lightweight and comfortable for daily wear. Priced simply at ₹49.",
+      "imageAlt": "Gold-toned bracelet with a 'Love' script charm and crystal-look stones",
+      "ogTitle": "'Love' Script Charm Bracelet, Gold-Toned, ₹49",
+      "ogDescription": "A gold-toned bracelet spelling out 'Love' in script, a direct rather than symbolic message. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P453.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "909",
+      "originalSku": "MJ-588",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-588-stylish-love-script-gold-bracelet-909",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P454",
+    "name": "Gold-Toned Bracelet with Interlocking Double Heart Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P454.webp"
+      ]
+    },
+    "specs": {
+      "design": "Interlocking double heart motif",
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "colour": "Gold-toned",
+      "care": "Keep dry and away from perfumes; store safely after each wear"
+    },
+    "description": "Two hearts link together on this bracelet's charm rather than sitting as a single shape, one set with crystal-look stones and the other left plain, both in gold-toned metal. The stone material behind the sparkle is described only as glass crystal or cubic zirconia, unclear which, so \"crystal-look\" is the honest description here.\n\nAn interlocking pair reads differently to a single heart charm: it suggests connection between two things rather than one idea on its own, which suits it as a gift for a specific relationship rather than a general pick. The plain heart beside the stone-set one gives the charm a bit of contrast rather than uniform sparkle throughout.\n\nIt's a single-charm design, so the bracelet stays visually simple even with the detail of two linked shapes, and it layers easily with a plainer chain or bangle on the same wrist.\n\nKeep it dry and away from perfumes, storing it safely after each wear. At ₹49, two linked hearts with a mix of plain and stone-set metal is more specific detail than a single flat charm offers at the same price.",
+    "seo": {
+      "primaryKeyword": "gold-toned bracelet interlocking double heart charm",
+      "secondaryKeywords": [
+        "double heart charm bracelet",
+        "linked heart bracelet gold",
+        "affordable relationship gift bracelet"
+      ],
+      "metaTitle": "Gold-Toned Bracelet, Interlocking Double Heart Charm",
+      "metaDescription": "A gold-toned bracelet with two linked hearts, one crystal-look and one left entirely plain, a considered small gift priced simply at just ₹49.",
+      "imageAlt": "Gold-toned bracelet with an interlocking double heart charm, one stone-set and one plain",
+      "ogTitle": "Interlocking Double Heart Bracelet, Gold-Toned, ₹49",
+      "ogDescription": "A gold-toned bracelet with two linked heart charms, one crystal-look and one plain metal. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P454.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "910",
+      "originalSku": "MJ-288",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-288-gold-interlocking-double-heart-bracelet-910",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P455",
+    "name": "Gold-Toned Bracelet with Heart Motif Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P455.webp"
+      ]
+    },
+    "specs": {
+      "design": "Heart motif",
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "weight": "Lightweight",
+      "occasion": "Everyday wear and special occasions",
+      "care": "Keep dry and away from perfumes; store safely after each wear"
+    },
+    "description": "A single heart charm sits on this bracelet, plain in shape rather than layered with wings or a lock, set with crystal-look stones in gold-toned metal. As with the rest of this shop's charm bracelets, the exact stone material is described only as glass crystal or cubic zirconia, unclear which, so this description holds to \"crystal-look\" rather than a firmer claim.\n\nWhere some of the shop's other heart-based charms add a script word or a second linked shape, this one keeps to the plain heart outline, which suits someone who wants the motif without extra detailing layered on top. It's confirmed as lightweight, comfortable for a full day's wear rather than something that needs to come off after a few hours.\n\nIts occasion range covers everyday wear and special occasions both, so it isn't reserved for one specific event and moves easily between the two.\n\nKeep it dry and away from perfumes, and store it safely after each wear. At ₹49, a simple, well-shaped heart charm is a straightforward pick when you want the motif without anything more elaborate attached to it.",
+    "seo": {
+      "primaryKeyword": "gold-toned bracelet heart motif charm",
+      "secondaryKeywords": [
+        "plain heart charm bracelet",
+        "gold tone heart bracelet",
+        "everyday charm bracelet affordable"
+      ],
+      "metaTitle": "Gold-Toned Bracelet with Plain Heart Motif Charm, ₹49",
+      "metaDescription": "A gold-toned bracelet with a plain heart charm set in crystal-look stones, lightweight and comfortable for everyday wear, priced simply at ₹49.",
+      "imageAlt": "Gold-toned bracelet with a plain heart motif charm and crystal-look stones",
+      "ogTitle": "Heart Motif Charm Bracelet, Gold-Toned, ₹49",
+      "ogDescription": "A gold-toned bracelet with a simple heart charm, lightweight and suited to daily wear. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P455.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "911",
+      "originalSku": "MJ-232",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-232-elegant-heart-charm-gold-bracelet-911",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P456",
+    "name": "Rose Gold-Toned Tennis Bracelet with Solitaire",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P456.webp"
+      ]
+    },
+    "specs": {
+      "design": "Tennis bracelet with solitaire",
+      "colour": "Rose gold-toned",
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "care": "Keep away from moisture and perfumes; store in a dry place after every wear"
+    },
+    "description": "Where this shop's plain tennis bracelet runs a single line of stones the full length, this rose gold-toned version sets one solitaire-style crystal-look stone as its focal point instead. The stone material sits somewhere between glass crystal and cubic zirconia, so the honest description stays with \"crystal-look.\"\n\nRose gold's warmer tone gives the piece a different read to a plain silver or yellow-gold bracelet, sitting closer to the middle of the two. A single solitaire setting concentrates the sparkle at one point rather than spreading it evenly, which reads as a slightly more considered piece than an all-over stone line.\n\nIt's a design built to be noticed without being loud about it, suited to daily wear as much as a specific occasion, since a solitaire tennis bracelet doesn't tie itself to one particular event.\n\nKeep it away from moisture and perfume, and store it in a dry place after each wear. At ₹49, a rose gold tone with a dedicated solitaire setting is a specific enough combination to stand apart from a plain stone-lined bracelet.",
+    "seo": {
+      "primaryKeyword": "rose gold-toned tennis bracelet solitaire",
+      "secondaryKeywords": [
+        "solitaire crystal bracelet rose gold",
+        "tennis bracelet single stone",
+        "affordable bracelet rose gold tone"
+      ],
+      "metaTitle": "Rose Gold-Toned Tennis Bracelet with Solitaire Stone",
+      "metaDescription": "A rose gold-toned tennis bracelet with a single crystal-look solitaire stone as its focal point, light on the wrist. Priced quite simply at ₹49.",
+      "imageAlt": "Rose gold-toned tennis bracelet with a solitaire crystal-look stone",
+      "ogTitle": "Solitaire Tennis Bracelet, Rose Gold-Toned, ₹49",
+      "ogDescription": "A rose gold-toned tennis bracelet with one crystal-look solitaire stone as its focus. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P456.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "912",
+      "originalSku": "MJ-236",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-236-elegant-rose-gold-tennis-bracelet-912",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P457",
+    "name": "Rose Gold-Toned Tennis Bracelet with Marquise Solitaire",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P457.webp"
+      ]
+    },
+    "specs": {
+      "design": "Tennis bracelet with marquise solitaire",
+      "colour": "Rose gold-toned",
+      "stone": "Marquise-cut solitaire stone, material unclear from text",
+      "care": "Keep away from moisture and perfumes; store safely in a dry place"
+    },
+    "description": "This rose gold-toned tennis bracelet shares its shop sibling's single-solitaire layout, but the centre stone here is cut marquise, an elongated pointed-oval shape rather than round. The exact stone material behind the marquise cut isn't pinned to one thing, glass or cubic zirconia both being plausible, so this stays with \"crystal-look\" rather than naming one specifically.\n\nA marquise cut reads differently from a round stone at the same size, its length drawing the eye along the shape rather than settling on a single point, which gives this piece a slightly more distinctive profile than a round-solitaire version of the same idea.\n\nRose gold's warm tone sits between silver and yellow gold, and against a single elongated stone it keeps the whole piece from reading as too plain or too busy. It suits daily wear and doesn't lean toward one specific occasion over another.\n\nKeep it away from moisture and perfume, and store it safely in a dry place. At ₹49, the marquise-cut centre stone is the specific detail that sets this apart from a plainer round-solitaire tennis bracelet at the same price.",
+    "seo": {
+      "primaryKeyword": "rose gold-toned tennis bracelet marquise solitaire",
+      "secondaryKeywords": [
+        "marquise cut bracelet rose gold",
+        "elongated stone bracelet",
+        "affordable tennis bracelet marquise"
+      ],
+      "metaTitle": "Rose Gold Tennis Bracelet, Marquise Solitaire, ₹49",
+      "metaDescription": "A rose gold-toned tennis bracelet with a marquise-cut solitaire centre stone, an elongated rather than round shape, priced simply at just ₹49.",
+      "imageAlt": "Rose gold-toned tennis bracelet with a marquise-cut solitaire stone",
+      "ogTitle": "Marquise Solitaire Bracelet, Rose Gold-Toned, ₹49",
+      "ogDescription": "A rose gold-toned tennis bracelet with a marquise-cut centre stone, elongated rather than round. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P457.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "913",
+      "originalSku": "MJ-237",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-237-elegant-rose-gold-tennis-bracelet-sparkling-marquise-crystal-913",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P458",
+    "name": "Golden Bracelet with 'Love' Heart Motif Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P458.webp"
+      ]
+    },
+    "specs": {
+      "design": "\"love\" heart motif",
+      "stone": "Glass crystal or cubic zirconia, unclear from text",
+      "colour": "Golden",
+      "care": "Keep away from moisture and perfumes; store in a dry place after every wear"
+    },
+    "description": "This bracelet combines the word \"love\" with a heart shape in one charm, rather than spelling the word alone or using a plain heart outline, in golden-toned metal set with crystal-look stones. The stone material sits somewhere between glass crystal and cubic zirconia, so the honest description here is \"crystal-look.\"\n\nPairing the script word with the heart shape doubles down on the same message rather than leaving it implied, which suits it well as a gift for someone specific rather than a general pick off the shelf. It stays as a single focal charm, so the bracelet reads as a clear statement rather than a busy design.\n\nThere's no fixed occasion tied to a motif this direct, so it works for daily wear as much as it does for a specific date worth marking.\n\nKeep it away from moisture and perfume, and store it in a dry place after each wear. At ₹49, combining the word and the shape in one small charm gives this bracelet a more direct message than either element would carry alone.",
+    "seo": {
+      "primaryKeyword": "golden bracelet love heart motif charm",
+      "secondaryKeywords": [
+        "love heart charm bracelet gold",
+        "romantic charm bracelet affordable",
+        "gift bracelet under 50 rupees"
+      ],
+      "metaTitle": "Golden Bracelet with 'Love' Heart Motif Charm, ₹49",
+      "metaDescription": "A golden bracelet combining a 'Love' script word with a heart shape in one small charm, set with crystal-look stones. Priced simply at just ₹49.",
+      "imageAlt": "Golden bracelet with a 'Love' heart motif charm and crystal-look stones",
+      "ogTitle": "'Love' Heart Charm Bracelet, Golden Metal, ₹49",
+      "ogDescription": "A golden bracelet pairing the word 'Love' with a heart shape in one charm. ₹49 at Morchadi Gems.",
+      "ogImage": "/products/P458.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "914",
+      "originalSku": "MJ-290",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-290-gold-love-heart-bracelet-914",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
   }
 ]
