@@ -1,0 +1,111 @@
+{
+  "productId": "P226",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality stainless steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold tone plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18K gold tone plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish for lasting brilliance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystals",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "one embellished with sparkling crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "dual-band style (plain and crystal-studded)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Dual-band style (plain + crystal-studded)"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P226.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P226/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P226-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P226/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P226-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P226/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elevate your style with this Anti-Tarnish Double Band Ring, designed with a modern minimal twist. Crafted from premium stainless steel and finished with 18K gold tone plating, the ring features a sleek dual-band design — one polished gold band and one embellished with sparkling crystals for that perfect balance of elegance and shine.\n- Lightweight and durable, this ring is made to resist tarnishing, keeping its brilliance intact for everyday wear as well as special occasions. A versatile accessory that adds effortless charm to any outfit, delivered in a premium box for a perfect gifting experience.\n- Product: Anti-Tarnish Double Band Ring\n- Material: High-quality stainless steel\n- Plating: 18K gold tone plated\n- Finish: Anti-tarnish for lasting brilliance\n- Design: Dual-band style (plain + crystal-studded)\n- Style: Minimal, elegant & versatile\n- Comfort: Lightweight & easy to wear all day\n- Occasions: Perfect for daily wear, office, or celebrations",
+    "referenceTitle": "Anti-Tarnish Double Band Gold-Plated Ring",
+    "originalId": "527",
+    "originalSku": "MJ-068",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-068-anti-tarnish-double-band-gold-plated-ring-527",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,108 @@
+{
+  "productId": "P209",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Durable and premium-quality alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich silver plating for lasting brilliance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Radiant baguette and round cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "bow knot with layered band structure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Stylish bow knot with layered band structure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable for most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Clean gently with a microfiber or polishing cloth"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P209.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P209/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nAdd a touch of chic sophistication with the Bow Knot Designer CZ Silver-Plated Ring for Women. This elegant ring features a captivating bow knot design, sparkling with baguette and round CZ stones, all set on a radiant silver-plated band. The unique structure ensures the Bow Knot Designer CZ Silver-Plated Ring for Women stands out for parties, daily wear, or as a memorable gift.\nWhy You Will Love It:\n✨ Sophisticated bow knot motif with brilliant CZ sparkle\n✨ Elegant silver-plated finish for versatile style\n✨ Adjustable fit for all-day comfort\n✨ The perfect accessory for parties, daily looks, or gifting\nHighlights / Specifications:\n🔹 Material: Durable and premium-quality alloy\n🔹 Plating: Rich silver plating for lasting brilliance\n🔹 Stone Type: Radiant baguette and round cubic zirconia\n🔹 Design: Stylish bow knot with layered band structure\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Bow Knot Designer CZ Silver-Plated Ring",
+    "originalId": "508",
+    "originalSku": "MJ-131",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-131-bow-knot-designer-cz-silver-plated-ring-508",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,97 @@
+{
+  "productId": "P202",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "rose gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rose gold-plated floral burst AD ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "American Diamond (AD)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "floral burst design with studded band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Floral burst with studded band"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits comfortably on most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P202.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P202/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shine bright with this Rose gold-plated floral burst AD ring, featuring a stunning sparkling flower motif surrounded by shimmering American Diamonds. A stylish piece that adds the perfect sparkle to parties, weddings, or daily wear.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: American Diamond (AD)\n- Design: Floral burst with studded band\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Perfect for festive wear, parties, weddings, and gifting",
+    "referenceTitle": "Rose Gold-Plated Floral Burst AD Ring",
+    "originalId": "500",
+    "originalSku": "MJ-513",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-513-rose-gold-plated-floral-burst-ad-ring-500",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

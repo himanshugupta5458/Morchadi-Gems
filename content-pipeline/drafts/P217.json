@@ -1,0 +1,96 @@
+{
+  "productId": "P217",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "emerald green glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "golden bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate golden bead accents"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P217.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P217-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P217-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nAdd a touch of timeless elegance to your ethnic wear with this stunning set of emerald green glass bangles, beautifully embellished with delicate golden bead accents. Crafted from high-quality glass, each bangle radiates a rich green hue, making it the perfect accessory for sarees, lehengas, salwar suits, and festive indo-western outfits.\nDesigned for comfort and durability, these bangles are lightweight and suitable for daily wear, festivals, weddings, and parties. The intricate golden bead work enhances the vibrant color, creating a sparkling effect that elevates your look. Ideal for pairing with bridal jewelry sets or gifting on special occasions, this bangle set is a must-have for every jewelry lover.\nKey Features:\n- Premium emerald green glass bangles with golden bead detailing\n- Traditional handcrafted finish for a classic ethnic look\n- Lightweight, comfortable, and durable for everyday and festive occasions\n- Enhances wedding, festive, and party outfits\n- Thoughtful gift for birthdays, weddings, festivals, and celebrations\n- Complements all types of Indian and fusion attire",
+    "referenceTitle": "Green Rain Drop Glass Bangles (12 Piece)",
+    "originalId": "516",
+    "originalSku": "MJ-332",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-332-green-rain-drop-glass-bangles-12-piece-516",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

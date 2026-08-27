@@ -1,0 +1,114 @@
+{
+  "productId": "P211",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "rose gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rose Gold color"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp type",
+      "value": "toggle clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Toggle Clasp"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net quantity",
+      "value": "1 bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package contains: 1 bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Avoid contact with water and perfume.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Avoid contact with water & perfume"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P211.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P211/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P211-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P211/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "-\n- Avoid contact with water & perfume\n- Images may appear brighter than the actual product due to photographic effect.\n- Toggle Clasp\n- Brass\n- Package contains: 1 bracelet\n- Rose Gold color",
+    "referenceTitle": "Anti Tarnish Rose Gold-Plated Bracelet",
+    "originalId": "510",
+    "originalSku": "MJ-053",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-053-anti-tarnish-rose-gold-plated-bracelet-510",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed generic photographic-effect disclaimer",
+      "sourceContext": "Images may appear brighter than the actual product due to photographic effect."
+    }
+  ],
+  "notes": [
+    "rawContent's first bullet is an empty dash (\"-\") with no content — treated as an artifact of the source list markup, not a real fact.",
+    "exportNotes flags this as a duplicate title/description of P210 (originalId 509) — content is byte-identical; kept as its own Draft A object per rule 15."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,122 @@
+{
+  "productId": "P224",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold tone plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18K gold tone plating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish (long-lasting shine)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "one side of the band shines with delicate stone studs"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "open band with one plain and one stone-studded end",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Open band with one plain & one stone-studded end"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits any finger",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Fit: Adjustable – fits any finger"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P224.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P224/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P224-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P224/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P224-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P224/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- A sleek and modern open band ring that blends minimalism with sparkle. Crafted from durable stainless steel with 18K gold plating, one side of the band shines with delicate stone studs while the other side stays plain for a classy contrast.\n- With its anti-tarnish finish and adjustable fit, this ring is perfect for everyday wear or special occasions, adding effortless elegance to your style.\n- Product: Anti-Tarnish Open Band Ring\n- Material: Stainless steel\n- Plating: 18K gold tone plating\n- Finish: Anti-tarnish (long-lasting shine)\n- Design: Open band with one plain & one stone-studded end\n- Fit: Adjustable – fits any finger\n- Style: Minimalist, modern & versatile\n- Comfort: Lightweight & smooth finish\n- Occasions: Daily wear, casual outings, parties, gifting",
+    "referenceTitle": "Anti-Tarnish Gold-Plated Open Adjustable Stone-Studded Ring",
+    "originalId": "525",
+    "originalSku": "MJ-071",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-071-anti-tarnish-gold-plated-open-adjustable-stone-studded-ring-525",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,97 @@
+{
+  "productId": "P206",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "rose gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rose gold-plated adjustable ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sparkling American Diamond (AD)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "criss-cross multiple band with stone accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Criss-cross multiple band with stone accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P206.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P206/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with this Rose gold-plated adjustable ring, featuring a stunning criss-cross band design adorned with sparkling American Diamond stones. A blend of glamour and comfort, this ring is ideal for daily wear, festive occasions, and gifting.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: Sparkling American Diamond (AD)\n- Design: Criss-cross multiple band with stone accents\n- Size & Fit: Adjustable – fits most finger sizes\n- Style & Use: Perfect for daily wear, parties, weddings, and gifting",
+    "referenceTitle": "Rose Gold-Plated Adjustable AD Criss-Cross Band Ring",
+    "originalId": "504",
+    "originalSku": "MJ-512",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-512-rose-gold-plated-adjustable-ad-criss-cross-band-ring-504",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

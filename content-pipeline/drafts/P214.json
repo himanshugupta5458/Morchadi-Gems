@@ -1,0 +1,102 @@
+{
+  "productId": "P214",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from premium glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "red",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "vibrant red hue"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "golden bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering golden bead accents"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P214.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P214/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P214-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P214/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P214-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P214/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P214-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P214/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nMake a bold statement with this radiant set of red glass bangles, beautifully adorned with shimmering golden bead accents. Crafted from premium glass, each bangle showcases a vibrant red hue, symbolizing joy and tradition—perfect for weddings, festivals, parties, and everyday ethnic wear.\nHandcrafted for durability and lightweight comfort, these bangles add a dazzling touch to sarees, lehengas, salwar suits, and indo-western outfits. The golden bead detailing brings subtle sparkle, making this set a stunning accessory for bridal jewelry, festive looks, or thoughtful gifting.\nKey Features:\n- Premium red glass bangles with intricate golden bead embellishments\n- Handcrafted for a flawless, elegant look\n- Lightweight and comfortable for extended daily or festive wear\n- Ideal for weddings, festivals, parties, and gifting\n- Complements both traditional and modern Indian attire",
+    "referenceTitle": "Red Rain Drop Glass Bangles (12 Piece)",
+    "originalId": "513",
+    "originalSku": "MJ-491",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-491-red-rain-drop-glass-bangles-12-piece-513",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

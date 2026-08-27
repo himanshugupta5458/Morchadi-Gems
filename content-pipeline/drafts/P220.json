@@ -1,0 +1,120 @@
+{
+  "productId": "P220",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality stainless steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold tone plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18K gold tone plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "diamond-cut pattern studded with brilliant stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish – retains shine for long"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "diamond-cut geometric pattern with sparkling stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Diamond-cut geometric pattern with sparkling stones"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P220.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P220/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P220-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P220/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P220-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P220/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a refined sparkle to your jewelry collection with this Anti-Tarnish Geometric Band Ring, crafted to combine tradition with modern elegance. Made from premium stainless steel and plated in 18K gold tone, the sleek band features a unique diamond-cut pattern studded with brilliant stones that shine effortlessly with every movement.\nIts elegant yet versatile design makes it a perfect everyday accessory, while the anti-tarnish finish ensures long-lasting shine and durability. Lightweight, comfortable, and stylish, this band ring can be worn solo for a minimal chic look or stacked with other rings for a bold statement. Delivered in a premium box, it also makes a thoughtful gift for someone special.\n-\nProduct: Anti-Tarnish Geometric Stone Band Ring\n-\nMaterial: High-quality stainless steel\n-\nPlating: 18K gold tone plated\n-\nFinish: Anti-tarnish – retains shine for long\n-\nDesign: Diamond-cut geometric pattern with sparkling stones\n-\nStyle: Minimalist, chic & versatile – perfect for stacking\n-\nComfort: Lightweight & suitable for everyday wear\n-\nOccasions: Ideal for casual, party & gifting",
+    "referenceTitle": "Anti-Tarnish Geometric Band Ring",
+    "originalId": "520",
+    "originalSku": "MJ-069",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-069-anti-tarnish-geometric-band-ring-520",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

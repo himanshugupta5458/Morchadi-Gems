@@ -1,0 +1,97 @@
+{
+  "productId": "P203",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Gold-plated finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sparkling American Diamond (AD)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "knot-style band with studded stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Knot-style band with studded stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P203.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P203/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Make a bold yet elegant statement with this gold-plated adjustable knot ring, embellished with dazzling American Diamond stones. Its chic knot design symbolizes love and togetherness, making it perfect for daily wear, parties, or gifting.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: Sparkling American Diamond (AD)\n- Design: Knot-style band with studded stones\n- Size & Fit: Adjustable – fits most finger sizes\n- Style & Use: Suitable for daily wear, party looks, and gifting",
+    "referenceTitle": "Gold-Plated Adjustable AD Knot Design Ring",
+    "originalId": "501",
+    "originalSku": "MJ-302",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-302-gold-plated-adjustable-ad-knot-design-ring-501",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

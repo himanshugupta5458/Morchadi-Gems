@@ -1,0 +1,84 @@
+{
+  "productId": "P216",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "bright pink",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "bright pink glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Embellishment",
+      "value": "golden bead accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering golden bead accents"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P216.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P216/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nElevate your style with this dazzling set of bright pink glass bangles, exquisitely embellished with shimmering golden bead accents. Each bangle features a vibrant pink hue, expertly crafted from premium-quality glass for maximum shine and durability. The golden bead detailing adds a festive sparkle, making these bangles the perfect accessory for weddings, festivals, parties, and everyday ethnic wear.\nLightweight and comfortable to wear, these bangles are ideal for pairing with sarees, lehengas, salwar suits, and Indo-western outfits. Whether you're searching for bridal jewelry, festive additions, or a unique gift for someone special, this pink bangle set is an essential addition to any jewelry collection.\nKey Features:\n- Eye-catching bright pink glass bangles with golden bead embellishments\n- Traditional handcrafted finish for a classic ethnic look\n- Lightweight and durable for daily, festive, or party wear\n- Complements all Indian and fusion attire\n- Perfect for weddings, festivals, parties, and gifting",
+    "referenceTitle": "Pink Rain Drop Glass Bangles (12 Piece)",
+    "originalId": "515",
+    "originalSku": "MJ-466",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-466-pink-rain-drop-glass-bangles-12-piece-515",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

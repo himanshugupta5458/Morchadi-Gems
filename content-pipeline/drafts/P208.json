@@ -1,0 +1,108 @@
+{
+  "productId": "P208",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-tone metal alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium gold-tone metal alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality gold plating for enduring shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sparkling cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "elegant floral pattern with curved band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Elegant floral pattern with curved band"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care instructions",
+      "value": "Clean gently with a microfiber or polishing cloth; avoid chemicals, water, and ultrasonic cleaners; remove while swimming, showering, or gardening; store in a cool, dry place away from extreme temperatures.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Clean gently with a microfiber or polishing cloth"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P208.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P208/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of sophistication to your look with this stunning adjustable floral ring. Crafted with premium gold plating and studded with sparkling cubic zirconia stones, this eye-catching jewelry piece features a graceful flower motif that offers effortless charm and style. Perfect for daily wear, special occasions, and gifting, it is designed for comfort and is suitable for all finger sizes.\nWhy You'll Love It:\n✨ Lightweight & comfortable for daily wear\n✨ Trendy design for girls, teens, and women of all ages\n✨ A thoughtful gift that makes moments memorable\nHighlights & Specifications\n- Material: Premium gold-tone metal alloy\n- Plating: High-quality gold plating for enduring shine\n- Stone Type: Sparkling cubic zirconia\n- Design: Elegant floral pattern with curved band\n- Size/Fit: Adjustable – fits most finger sizes\n- Best Use: Suitable for daily wear, party wear, festive occasions, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Elegant Adjustable Floral Gold-Plated Ring",
+    "originalId": "507",
+    "originalSku": "MJ-225",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-225-elegant-adjustable-floral-gold-plated-ring-507",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

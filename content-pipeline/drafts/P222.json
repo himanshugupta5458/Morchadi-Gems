@@ -1,0 +1,126 @@
+{
+  "productId": "P222",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Colour",
+      "value": "gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Colour- Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "1.4gm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight - 1.4gm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Height",
+      "value": "1.8 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Height - 1.8 cm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18k gold tone plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "18k gold tone plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material- Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "delivered in a box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "You will receive the ring in a box."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P222.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P222/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P222-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P222/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Colour- Gold\n- Size- 6,7,8\n- Weight - 1.4gm\n- Height - 1.8 cm\n- Plating- 18k gold tone plated\n- Material- Stainless Steel\n- You will receive the ring in a box.\n- As this is a handmade product it is very rare to create identical items",
+    "referenceTitle": "Anti Tarnish Nova Ring",
+    "originalId": "523",
+    "originalSku": "MJ-047",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-047-anti-tarnish-nova-ring-523",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "raw block's variants (Size 7, 8) omit size 6 named in rawContent (\"Size- 6,7,8\"); left as carried through per rule 11 — flagging for review rather than re-deriving."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
