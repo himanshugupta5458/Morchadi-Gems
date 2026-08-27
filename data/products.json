@@ -7542,5 +7542,161 @@
         "DC Ring"
       ]
     }
+  },
+  {
+    "id": "P178",
+    "name": "Rose Gold Alternating Stone Band Ring",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P178.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated",
+      "stone": "Cubic zirconia",
+      "fit": "One size, fits most finger sizes",
+      "care instructions": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+    },
+    "description": "A stone band works best when the stones do something other than sit in a single flat row, and this one alternates instead: a round-cut cubic zirconia stone, then a slim baguette-cut stone laid sideways, repeating along a rose gold-plated band. The shift in shape catches light differently at every angle, which is the whole trick behind bands that read as more detailed than a plain row of matching stones.\n\nThis one comes in a single size built to fit most fingers rather than a range you choose from, so there's no size chart to consult before ordering, only a good guess based on what you normally wear. That trade-off suits a piece this affordable more than it would a costlier ring, since getting it slightly loose or snug isn't the setback it would be on something you paid ten times as much for.\n\nRose gold plating over the base metal reads warmer than a plain gold tone, closer to the colour that turns up on watches and thin chains rather than on heavier temple jewellery. It suits an office day as easily as a lunch outing, a band you forget you're wearing rather than one that asks you to dress around it.\n\nKeep it away from water and perfume, the two things that dull a plated finish fastest, and store it somewhere dry when it's off your hand rather than leaving it out. At ₹59 it's priced to wear without worrying about it, which is really the point of a band like this.",
+    "seo": {
+      "primaryKeyword": "rose gold-plated stone band ring",
+      "secondaryKeywords": [
+        "cubic zirconia band ring",
+        "one-size stone ring",
+        "affordable cz ring for women"
+      ],
+      "metaTitle": "Rose Gold Alternating Stone Band Ring | Morchadi Gems",
+      "metaDescription": "A rose gold-plated ring alternating round and baguette cubic zirconia stones across the band. One size, fits most fingers. From ₹59 at Morchadi Gems.",
+      "imageAlt": "Rose gold-plated band ring with alternating round and baguette cubic zirconia stones",
+      "ogTitle": "An Alternating Stone Ring in Rose Gold, ₹59",
+      "ogDescription": "Round and baguette cubic zirconia stones alternate across a rose gold-plated band. One size, fits most fingers, from ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P178.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "475",
+      "originalSku": "MJ-200",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-200-dc-jewelry-stone-band-ring-475",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P180",
+    "name": "Rose Gold Emerald-Cut Halo Ring",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P180.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated",
+      "stone": "Cubic zirconia",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+    },
+    "description": "An emerald-cut stone reads differently from a round one the moment light hits it: fewer facets, longer flat planes, a cleaner flash instead of an all-over sparkle. This ring sets one at the centre, rectangular and clear, then rings it with a halo of smaller cubic zirconia stones set into a rose gold-plated band, the kind of pairing usually reserved for rings with a much higher price tag attached.\n\nThe band itself is adjustable, built to fit most finger sizes rather than one exact measurement, which matters more on a ring like this than it would on a plain loop, since a halo setting needs to sit centred rather than sliding to one side through the day. Adjust it once after it arrives and it should hold that position through normal wear.\n\nA ring with this much visual weight at the centre reads as occasion jewellery more naturally than an everyday stacking piece, though nothing about wearing it daily is wrong either. It photographs well close up, which is the actual test most rings like this face now, held up to a phone camera before anything else.\n\nKeep it away from water and perfume, both of which dull plated metal faster than ordinary wear does, and store it in a dry spot when it's not on your hand. At ₹59, the look costs a fraction of what the same halo shape would in real stones, and the difference goes toward buying more than one ring rather than committing everything to a single piece.",
+    "seo": {
+      "primaryKeyword": "rose gold-plated emerald-cut halo ring",
+      "secondaryKeywords": [
+        "cubic zirconia halo ring",
+        "adjustable ring for women",
+        "rectangular stone ring"
+      ],
+      "metaTitle": "Rose Gold Emerald-Cut Halo Ring, Adjustable | Morchadi Gems",
+      "metaDescription": "A rectangular cubic zirconia stone ringed by a pave halo, set in a rose gold-plated adjustable band. Occasion-ready from ₹59 at Morchadi Gems.",
+      "imageAlt": "Rose gold-plated ring with an emerald-cut cubic zirconia stone framed by a halo",
+      "ogTitle": "An Emerald-Cut Halo Ring in Rose Gold, ₹59",
+      "ogDescription": "A rectangular cubic zirconia centre stone framed by a halo, on an adjustable rose gold-plated band. From ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P180.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "477",
+      "originalSku": "MJ-198",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-198-dc-jewelry-emerald-cut-adjustable-ring-477",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P181",
+    "name": "Rose Gold Flower Cluster Ring",
+    "category": "rings",
+    "status": "draft",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 24
+    },
+    "media": {
+      "images": [
+        "/products/P181.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated",
+      "stone": "Cubic zirconia",
+      "fit": "Adjustable, fits most finger sizes",
+      "care instructions": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+    },
+    "description": "Six baguette-cut cubic zirconia stones arranged point to point, framing one round stone at the centre: that's the whole geometry of this ring, closer to a cut flower or a compass rose than to anything literal, but reading clearly enough that it doesn't need explaining. The baguette shapes give the outer ring a faceted, angular edge instead of the softer look a round halo usually has.\n\nThe band is adjustable and built to fit most finger sizes, so there's some room to get the fit right without needing an exact measurement first. Because the design sits slightly raised at the centre, it's worth checking that it doesn't catch on gloves or a tight sleeve before wearing it under a long-sleeved outfit for a full day.\n\nRose gold plating carries the whole piece in a warmer tone than a plain silver or yellow gold setting would, and it works equally well against a plain kurta or a heavier festive outfit without looking out of place in either. A cluster ring like this earns its keep on days when a single round stone would look too plain and a full cocktail ring would be too much.\n\nCare is simple and worth sticking to: no water, no perfume directly on the piece, and a dry spot for storage between wears. At ₹59, it's an easy ring to buy without a specific occasion already picked out for it, festive or otherwise.",
+    "seo": {
+      "primaryKeyword": "rose gold-plated flower cluster ring",
+      "secondaryKeywords": [
+        "cubic zirconia cluster ring",
+        "adjustable flower ring",
+        "baguette stone ring"
+      ],
+      "metaTitle": "Rose Gold Flower Cluster Ring, Adjustable | Morchadi Gems",
+      "metaDescription": "Baguette cubic zirconia stones arranged around a round centre stone, on an adjustable rose gold-plated band. From ₹59, with easy 7-day returns.",
+      "imageAlt": "Rose gold-plated cluster ring with baguette cubic zirconia stones around a round centre stone",
+      "ogTitle": "A Flower Cluster Ring in Rose Gold, from ₹59",
+      "ogDescription": "Baguette cubic zirconia stones fan out around a round centre stone on an adjustable rose gold-plated band, from ₹59 at Morchadi Gems.",
+      "ogImage": "/products/P181.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "478",
+      "originalSku": "MJ-199",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-199-dc-jewelry-geometric-flower-adjustable-ring-478",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
   }
 ]
