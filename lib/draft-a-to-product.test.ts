@@ -596,8 +596,8 @@ describe("checkCandidatePrimaryKeyword", () => {
     generatedBy: "test",
     source: "test",
     productCount: 1,
-    primary: { "gold-plated initial ring": ["P001"] },
-    secondary: { "adjustable letter ring": ["P001"] },
+    primary: { "gold-plated initial ring": ["P906"] },
+    secondary: { "adjustable letter ring": ["P906"] },
   };
 
   function record(id: string, status: "draft" | "active", primaryKeyword: string): Product {
@@ -619,7 +619,7 @@ describe("checkCandidatePrimaryKeyword", () => {
   it("blocks on a published product's primary keyword", () => {
     const result = checkCandidatePrimaryKeyword("Gold-Plated Initial Ring", committed, []);
     expect(result.blocked).toBe(true);
-    expect(result.published.hard[0].productIds).toEqual(["P001"]);
+    expect(result.published.hard[0].productIds).toEqual(["P906"]);
   });
 
   it("blocks on an unpublished record's primary keyword, which the committed map cannot see", () => {

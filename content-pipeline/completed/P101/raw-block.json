@@ -1,0 +1,55 @@
+{
+  "productId": "P101",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "31",
+    "workingId": "odoo-31",
+    "originalSku": "MJ-540",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-540-set-of-8-viral-jelly-bangle-maroon-31",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Maroon)",
+    "rawContent": "Add a touch of elegance with these beautiful Green color glass bangles! Perfect for traditional and festive wear, this set includes 12 finely crafted bangles to complete your look.\n💰 Price includes 12 bangles only\n🚚 Delivery Time: 3-5 days (subject to stock availability)\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!",
+    "rawHtml": "<p data-oe-version=\"1.1\"><br></p><p>Add a touch of elegance with these beautiful Green color glass<strong> </strong>bangles! Perfect for traditional and festive wear, this set includes 12 finely<strong> </strong>crafted bangles to complete your look.</p>\n<p>💰 Price includes 12 bangles only</p>\n<p><strong>\n🚚 </strong>Delivery Time: 3-5 days (subject to stock availability)</p>\n<p><strong>\n📲 </strong>Need it urgently? WhatsApp us now on 7877866212 for inquiries!</p>\n<p><br></p>\n<p>\n\n</p>",
+    "originalCategories": [
+      "jelly bangles"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P101.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P101/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  }
+}

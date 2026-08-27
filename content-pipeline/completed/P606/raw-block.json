@@ -1,0 +1,47 @@
+{
+  "productId": "P606",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1078",
+    "workingId": "odoo-1078",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1078",
+    "referenceTitle": "Traditional Meenakari Bracelet Watch for Women",
+    "rawContent": "Celebrate timeless Indian craftsmanship with this Traditional Meenakari Bracelet Watch, featuring delicate floral meenakari artwork, a premium gold-plated finish, and charming ghungroo accents. Designed to resemble a beautiful ethnic bracelet, this elegant wristwatch is the perfect accessory for festive occasions, weddings, and everyday traditional wear.\nIts adjustable chain ensures a secure and comfortable fit, making it an ideal choice for women who love classic jewelry-inspired watches.\nFeatures\n-\nPremium gold-plated finish\n-\nHandcrafted Meenakari floral design\n-\nElegant ghungroo charm detailing\n-\nLightweight & comfortable\n-\nAdjustable chain closure\n-\nPerfect for weddings, festivals & parties\n-\nIdeal gift for women & girls\nPackage Includes: 1 Traditional Meenakari Bracelet Watch",
+    "rawHtml": "<p data-oe-version=\"2.0\">Celebrate timeless Indian craftsmanship with this <strong>Traditional Meenakari Bracelet Watch</strong>, featuring delicate floral meenakari artwork, a premium gold-plated finish, and charming ghungroo accents. Designed to resemble a beautiful ethnic bracelet, this elegant wristwatch is the perfect accessory for festive occasions, weddings, and everyday traditional wear.</p><p>Its adjustable chain ensures a secure and comfortable fit, making it an ideal choice for women who love classic jewelry-inspired watches.</p><h3>Features</h3><ul>\n<li>\nPremium gold-plated finish\n</li>\n<li>\nHandcrafted Meenakari floral design\n</li>\n<li>\nElegant ghungroo charm detailing\n</li>\n<li>\nLightweight &amp; comfortable\n</li>\n<li>\nAdjustable chain closure\n</li>\n<li>\nPerfect for weddings, festivals &amp; parties\n</li>\n<li>\nIdeal gift for women &amp; girls\n</li>\n</ul><p><strong>Package Includes:</strong> 1 Traditional Meenakari Bracelet Watch</p>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1080",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P606.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P606/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "productId": "P321",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold-plated (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these stunning gold-plated round stud earrings"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia halo",
+      "displayTerm": "CZ",
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Surrounded by a sparkling CZ-studded halo"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Centre stone",
+      "value": "square shimmer stone, type not stated in source",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "designed with a unique square shimmer stone at the center"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Style",
+      "value": "round studs",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-plated round stud earrings"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable, they pair beautifully with ethnic, Western, and Indo-western outfits"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear and special occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "making them perfect for both daily wear and special occasions"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P321.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P321-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P321-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P321-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": null,
+    "cost": 119,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Elevate your everyday elegance with these stunning gold-plated round stud earrings, designed with a unique square shimmer stone at the center. Surrounded by a sparkling CZ-studded halo, these earrings blend minimal style with luxurious detail, making them perfect for both daily wear and special occasions.\n- Lightweight and comfortable, they pair beautifully with ethnic, Western, and Indo-western outfits. The refined gold finish and lustrous central stone add sophistication to any look, making these studs a versatile must-have in your jewelry collection.\n- round stud earrings, gold-plated studs, CZ halo earrings, square center stone earrings, daily wear jewelry, party wear stud earrings, women's stylish earrings",
+    "referenceTitle": "Gold-Plated Round CZ Stud Earrings with Square Stone Center",
+    "originalId": "747",
+    "originalSku": "MJ-318",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-318-gold-plated-round-cz-stud-earrings-with-square-stone-center-747",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a trailing SEO keyword-stuffing list (search terms, not product copy).",
+      "sourceContext": "round stud earrings, gold-plated studs, CZ halo earrings, square center stone earrings, daily wear jewelry, party wear stud earrings, women's stylish earrings"
+    }
+  ],
+  "notes": [
+    "The export's originalMetaDescription describes a \"gold-tone love bracelet\" — a different product entirely (P322 carries the identical wrong meta). Not used as source; flagged so Phase 2 does not trust it.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹199, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹119 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

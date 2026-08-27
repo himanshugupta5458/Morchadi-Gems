@@ -1,0 +1,136 @@
+{
+  "productId": "P586",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1056",
+    "workingId": "odoo-1056",
+    "originalSku": "MJ-523",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-523-satin-rose-flower-hair-tie-1056",
+    "referenceTitle": "Satin Rose Flower Hair Tie",
+    "rawContent": "Elegant satin rose flower hair tie, available in 6 shades\nSoft stretchable elastic band, gentle on hair\nHandcrafted rosette design, adds a chic touch to any look\nPerfect for daily wear, office, college, parties & gifting\nDoubles as a bracelet/wrist accessory when not in hair\nLightweight, no-damage grip for all hair types",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elegant satin rose flower hair tie, available in 6 shades</div><div>Soft stretchable elastic band, gentle on hair</div><div>Handcrafted rosette design, adds a chic touch to any look</div><div>Perfect for daily wear, office, college, parties &amp; gifting</div><div>Doubles as a bracelet/wrist accessory when not in hair</div><div>Lightweight, no-damage grip for all hair types</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "Wine Red",
+        "Dusty Mauve",
+        "Pearl Champagne",
+        "Champagne Gold",
+        "Classic Black",
+        "Blush Pink"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P586.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P586-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P586-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P586-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P586-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P586-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P586-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P586-8.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-7.webp",
+        "role": "extra-7"
+      }
+    ],
+    "variantImages": {
+      "Color:Wine Red": {
+        "path": "/products/P586-wine-red.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-wine-red.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Dusty Mauve": {
+        "path": "/products/P586-dusty-mauve.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-dusty-mauve.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Pearl Champagne": {
+        "path": "/products/P586-pearl-champagne.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-pearl-champagne.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Champagne Gold": {
+        "path": "/products/P586-champagne-gold.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-champagne-gold.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Classic Black": {
+        "path": "/products/P586-classic-black.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-classic-black.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Blush Pink": {
+        "path": "/products/P586-blush-pink.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-blush-pink.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "referencePrice": "₹69 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P109",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "129",
+    "workingId": "odoo-129",
+    "originalSku": "MJ-500",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-500-rose-gold-plated-american-diamond-ring-129",
+    "referenceTitle": "Rose Gold Plated American Diamond Ring",
+    "rawContent": "Add a touch of elegance to your everyday look with this stunning Rose Gold AD Ring. Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.\nWhether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.\nProduct Details:\n- Plating: Premium Rose Gold\n- Stones: High-quality American Diamonds\n- Size: Adjustable (Fits most finger sizes)\n- Style: Minimal yet glamorous\n- Occasion: Daily wear, parties, gifting\nCare Instructions:\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use",
+    "rawHtml": "<p data-oe-version=\"1.2\">Add a touch of elegance to your everyday look with this stunning Rose Gold AD Ring. Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.</p><p>Whether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.</p><p><strong>Product Details:</strong></p><ul>\n<li><p><strong>Plating:</strong> Premium Rose Gold</p></li>\n<li><p><strong>Stones:</strong> High-quality American Diamonds</p></li>\n<li><p><strong>Size:</strong> Adjustable (Fits most finger sizes)</p></li>\n<li><p><strong>Style:</strong> Minimal yet glamorous</p></li>\n<li><p><strong>Occasion:</strong> Daily wear, parties, gifting</p></li>\n</ul><p><strong>Care Instructions:</strong></p><p>\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Elegant rose gold adjustable ring with brilliant AD stones. Timeless piece for parties, festive looks & daily sophistication.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 131, 145, 138, 141, 124, 142, 148, 143, 146, 128 - descriptions byte-identical",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P109.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P109/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

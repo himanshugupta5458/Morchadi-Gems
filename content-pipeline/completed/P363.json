@@ -1,0 +1,127 @@
+{
+  "productId": "P363",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "combo-set",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Colour",
+      "value": "gold (colour word; material/plating not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Gold"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Style",
+      "value": "minimal and elegant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Style: Minimal & Elegant"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Wearing style",
+      "value": "stackable — wear stacked or alone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for stacking or wearing alone for a classy look."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for daily wear."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P363.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P363/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P363-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P363/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P363-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P363/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P363-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P363/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P363-5.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P363/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 230,
+    "mrp": null,
+    "cost": 138,
+    "referencePrice": "₹230 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Upgrade your jewelry collection with these minimal gold rings. Perfect for stacking or wearing alone for a classy look.\n✨ Details:\n• Color: Gold\n• Style: Minimal & Elegant\n• Lightweight & comfortable\nPerfect for daily wear.",
+    "referenceTitle": "Minimal Gold Stackable Rings for Women & Girls",
+    "originalId": "803",
+    "originalSku": "MJ-412",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-412-minimal-gold-stackable-rings-for-women-girls-803",
+    "originalCategories": [
+      "combo"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category question surfaced deliberately (batch-2 selection flag): source category \"combo\" was mapped by Stage 0 to gift-hampers with subcategory \"combo-set\", but the product is a set of stackable finger rings, not a hamper. Owner should rule at review whether ring combos belong in gift-hampers, in rings, or in a future vocabulary addition — this draft carries the Stage 0 mapping unchanged so the decision stays visible.",
+    "The set count is not stated in the source text (title says \"Rings\" plural, no number) — no count candidate proposed.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹230, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹138 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

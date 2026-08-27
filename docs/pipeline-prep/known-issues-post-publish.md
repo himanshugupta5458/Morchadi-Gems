@@ -39,8 +39,13 @@ landing in this file.
 - **What was done:** the governing principle ("same as each product's reference price") was
   followed: P121 is priced at ₹99. If the owner intended ₹59 for P121, the fix is a one-line
   price edit and a re-run of the gate.
-- **Owner decision needed:** confirm ₹99 is correct for P121, or restate the price.
-- **Status:** open
+- **Owner decision:** confirmed 2026-08-24, during the approval of the post-pilot audit's
+  fixes — ₹99 is correct. The 2026-08-24 audit verified P121 at
+  `{price: 99, mrp: 99, cost: 59}`, matching its recorded reference price end to end from the
+  Stage 0 raw block through the draft; the batch summary's "nine at ₹59" tally was the error,
+  not the price. Not an actual issue.
+- **Status:** resolved (2026-08-24): P121 confirmed correctly priced at its real ₹99 reference
+  price; the batch summary's tally was what was wrong. No change to any file was needed.
 
 ## Format for new entries
 

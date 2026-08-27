@@ -1,0 +1,133 @@
+{
+  "productId": "P322",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "silver-plated (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these beautiful silver-plated floral stud earrings"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "petal-shaped pastel pink stones with a crystal centre — crystal is glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "designed with pastel pink petal stones and a sparkling crystal center"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "flower motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Their delicate flower motif brings a cute yet classy appeal"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable, these studs pair effortlessly with Western, Indo-western, and ethnic outfits"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear, casual outings, brunches, festive occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "making them perfect for daily wear as well as casual outings, brunches, and festive occasions"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P322.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P322-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P322-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P322-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P322-5.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 150,
+    "mrp": null,
+    "cost": 90,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Add a soft, feminine charm to your look with these beautiful silver-plated floral stud earrings, designed with pastel pink petal stones and a sparkling crystal center. Their delicate flower motif brings a cute yet classy appeal, making them perfect for daily wear as well as casual outings, brunches, and festive occasions.\n- Lightweight and comfortable, these studs pair effortlessly with Western, Indo-western, and ethnic outfits. The subtle shimmer of the petals combined with the high-polish silver finish makes them a versatile and elegant addition to your jewelry collection.\n- Keywords included: floral stud earrings, pink petal earrings, silver-plated studs, flower earrings for women, cute daily wear earrings, crystal center floral jewelry",
+    "referenceTitle": "Delicate Pink Petal Floral Earrings",
+    "originalId": "748",
+    "originalSku": "MJ-209",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-209-delicate-pink-petal-floral-earrings-748",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a trailing SEO keyword-stuffing list (search terms, not product copy).",
+      "sourceContext": "Keywords included: floral stud earrings, pink petal earrings, silver-plated studs, flower earrings for women, cute daily wear earrings, crystal center floral jewelry"
+    }
+  ],
+  "notes": [
+    "The export's originalMetaDescription describes a \"gold-tone love bracelet\" — a different product entirely (P321 carries the identical wrong meta). Not used as source; flagged so Phase 2 does not trust it.",
+    "OWNER ATTENTION — new finding from this run's keyword-collision check: this product's title is EXACTLY the name of live legacy product P029 (\"Delicate Pink Petal Floral Earrings\", active, ₹150 — the same price as this draft's ₹150 reference), and the design copy matches (silver-plated/silver-tone pink petal studs with a crystal centre). The photographs are NOT byte-identical (sha-verified), which is why the earlier queued-vs-live photo scan never surfaced this pair. Possible queued twin of a live product — owner must rule same-vs-distinct before this draft advances past review.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹150, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹90 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

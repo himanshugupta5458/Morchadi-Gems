@@ -1,0 +1,115 @@
+{
+  "productId": "P123",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "rose gold plating (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Premium Rose Gold"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: High-quality American Diamonds"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: Adjustable (Fits most finger sizes)"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Style",
+      "value": "minimal yet glamorous",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Style: Minimal yet glamorous"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear, parties, gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Occasion: Daily wear, parties, gifting"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "keep away from water and perfume; store in a dry place when not in use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P123.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P123/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 59,
+    "mrp": null,
+    "cost": 35,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of elegance to your everyday look with this stunning Rose Gold AD Ring. Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.\nWhether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.\nProduct Details:\n- Plating: Premium Rose Gold\n- Stones: High-quality American Diamonds\n- Size: Adjustable (Fits most finger sizes)\n- Style: Minimal yet glamorous\n- Occasion: Daily wear, parties, gifting\nCare Instructions:\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use",
+    "referenceTitle": "Stainless steel Golden ring",
+    "originalId": "151",
+    "originalSku": "MJ-584",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-584-stainless-steel-golden-ring-151",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"rings\" is a PROPOSAL, not source data — the source had no category. Basis: the title says \"ring\" and the description describes an adjustable ring throughout. Requires explicit owner confirmation at review.",
+    "OWNER ATTENTION — sourceNotes.rawContent is byte-identical (sha-verified in this run) to the shared description of the published 11-product pilot group P106–P122 (\"Rose Gold Plated American Diamond Ring\") — a twelfth instance of the same template copy, here under the unrelated title \"Stainless steel Golden ring\".",
+    "Title/description conflict for owner review: the title claims stainless steel with a golden finish; the description claims premium rose gold plating and never mentions stainless steel (the export meta description mixes both). The Plating candidate above quotes the description — the owner must rule which text describes the physical product before confirming it.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹59, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹35 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

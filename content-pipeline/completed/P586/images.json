@@ -1,0 +1,135 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 106042,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/1056/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 101494,
+      "converted": false,
+      "odooMediaId": 1307,
+      "odooName": "H7c80d069b845493aaea2ef4b43d04494v.webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1307/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 94908,
+      "converted": false,
+      "odooMediaId": 1308,
+      "odooName": "Hf3d9ac6c1baf41908f696978359e7984H.webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1308/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 89470,
+      "converted": false,
+      "odooMediaId": 1309,
+      "odooName": "H0c9e318a38454b3b926eb9b120a88edcf.webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1309/image_1920"
+    },
+    {
+      "file": "extra-4.webp",
+      "bytes": 88728,
+      "converted": false,
+      "odooMediaId": 1310,
+      "odooName": "H166d106f6671422c8003181e4476068dW.webp",
+      "sequence": "13",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1310/image_1920"
+    },
+    {
+      "file": "extra-5.webp",
+      "bytes": 86520,
+      "converted": false,
+      "odooMediaId": 1311,
+      "odooName": "H15435216dfc0463398cd60f66f970a49H.webp",
+      "sequence": "14",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1311/image_1920"
+    },
+    {
+      "file": "extra-6.webp",
+      "bytes": 67370,
+      "converted": false,
+      "odooMediaId": 1313,
+      "odooName": "H15435216dfc0463398cd60f66f970a49H (1).webp",
+      "sequence": "15",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1313/image_1920"
+    },
+    {
+      "file": "extra-7.webp",
+      "bytes": 78798,
+      "converted": false,
+      "odooMediaId": 1312,
+      "odooName": "H9ec103f577714d42b606c4bd027cac2bQ.jpg_960x960q80.webp",
+      "sequence": "16",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1312/image_1920"
+    }
+  ],
+  "variants": [
+    {
+      "file": "variant-wine-red.webp",
+      "bytes": 86520,
+      "converted": false,
+      "variantId": 2794,
+      "value": "Wine Red",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2794/image_1920"
+    },
+    {
+      "file": "variant-dusty-mauve.webp",
+      "bytes": 101494,
+      "converted": false,
+      "variantId": 2795,
+      "value": "Dusty Mauve",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2795/image_1920"
+    },
+    {
+      "file": "variant-pearl-champagne.webp",
+      "bytes": 88728,
+      "converted": false,
+      "variantId": 2796,
+      "value": "Pearl Champagne",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2796/image_1920"
+    },
+    {
+      "file": "variant-champagne-gold.webp",
+      "bytes": 94908,
+      "converted": false,
+      "variantId": 2797,
+      "value": "Champagne Gold",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2797/image_1920"
+    },
+    {
+      "file": "variant-classic-black.webp",
+      "bytes": 89470,
+      "converted": false,
+      "variantId": 2798,
+      "value": "Classic Black",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2798/image_1920"
+    },
+    {
+      "file": "variant-blush-pink.webp",
+      "bytes": 91654,
+      "converted": false,
+      "variantId": 2823,
+      "value": "Blush Pink",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2823/image_1920"
+    }
+  ]
+}

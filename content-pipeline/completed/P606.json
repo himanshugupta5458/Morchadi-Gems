@@ -1,0 +1,128 @@
+{
+  "productId": "P606",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold-plated finish (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium gold-plated finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Craft",
+      "value": "handcrafted meenakari floral design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted Meenakari floral design"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Detailing",
+      "value": "ghungroo charm detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant ghungroo charm detailing"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "adjustable chain closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain closure"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "weddings, festivals, parties",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for weddings, festivals & parties"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Traditional Meenakari Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Traditional Meenakari Bracelet Watch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P606.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P606/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 189,
+    "mrp": null,
+    "cost": 113,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Celebrate timeless Indian craftsmanship with this Traditional Meenakari Bracelet Watch, featuring delicate floral meenakari artwork, a premium gold-plated finish, and charming ghungroo accents. Designed to resemble a beautiful ethnic bracelet, this elegant wristwatch is the perfect accessory for festive occasions, weddings, and everyday traditional wear.\nIts adjustable chain ensures a secure and comfortable fit, making it an ideal choice for women who love classic jewelry-inspired watches.\nFeatures\n-\nPremium gold-plated finish\n-\nHandcrafted Meenakari floral design\n-\nElegant ghungroo charm detailing\n-\nLightweight & comfortable\n-\nAdjustable chain closure\n-\nPerfect for weddings, festivals & parties\n-\nIdeal gift for women & girls\nPackage Includes: 1 Traditional Meenakari Bracelet Watch",
+    "referenceTitle": "Traditional Meenakari Bracelet Watch for Women",
+    "originalId": "1078",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1078",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Traditional Meenakari Bracelet Watch for Women\" — P606 (Odoo 1078) and P608 (Odoo 1080). The two descriptions are NOT byte-identical: P606 describes a gold-plated floral-meenakari watch with ghungroo accents, P608 an antique-gold watch with ivory meenakari, red & green stones and pearl drops — likely two genuinely different designs sharing one title. Candidate sets differ honestly.",
+    "Watch movement type is not stated anywhere in the source — no mechanism attribute is proposed (nothing inferred).",
+    "originalSku is null in the export for this record — carried as null.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹189, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹113 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

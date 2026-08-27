@@ -1,0 +1,77 @@
+{
+  "productId": "P212",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "511",
+    "workingId": "odoo-511",
+    "originalSku": "MJ-608",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-608-twisted-crystal-kangan-2-piece-511",
+    "referenceTitle": "Twisted Crystal Kangan (2 piece)",
+    "rawContent": "Description:\nMake a bold and stylish statement with this creative set of multicolor wave-design glass bangles, available in six fresh and vibrant shades: green, pink, blue, violet, red, yellow, and more. Each bangle showcases a unique wavy silhouette and glossy finish, capturing the spirit of modern fashion alongside traditional elegance. These bangles offer a lively twist to any ethnic or fusion ensemble and are perfect for parties, festivals, weddings, and daily wear.\nHandcrafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for all-day use. Their playful wave design and radiant colors add a contemporary touch to classic attire, making them an excellent choice for bridal jewelry, festive accessories, or thoughtful gifting.\nKey Features:\n- Artistic wave-shaped glass bangles in vibrant multicolor tones\n- Unique contemporary silhouette with high-gloss finish\n- Handcrafted for durability and smooth comfort\n- Lightweight; perfect for everyday, parties, weddings, and festivals\n- Complements sarees, lehengas, salwar suits, and fusion outfits\n- Excellent as bridal or festive jewelry and as a special gift",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Make a bold and stylish statement with this creative set of <strong>multicolor wave-design glass bangles</strong>, available in six fresh and vibrant shades: green, pink, blue, violet, red, yellow, and more. Each bangle showcases a unique wavy silhouette and glossy finish, capturing the spirit of modern fashion alongside traditional elegance. These bangles offer a lively twist to any ethnic or fusion ensemble and are perfect for parties, festivals, weddings, and daily wear.</p><p>Handcrafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for all-day use. Their playful wave design and radiant colors add a contemporary touch to classic attire, making them an excellent choice for bridal jewelry, festive accessories, or thoughtful gifting.</p><p><strong>Key Features:</strong></p><ul><li>Artistic wave-shaped glass bangles in vibrant multicolor tones</li><li>Unique contemporary silhouette with high-gloss finish</li><li>Handcrafted for durability and smooth comfort</li><li>Lightweight; perfect for everyday, parties, weddings, and festivals</li><li>Complements sarees, lehengas, salwar suits, and fusion outfits</li><li>Excellent as bridal or festive jewelry and as a special gift</li></ul></div>",
+    "originalCategories": [
+      "jelly bangles"
+    ],
+    "originalMetaDescription": "Vibrant wave-design multicolor glass bangles. Lightweight handcrafted festive jewelry, ideal for weddings & traditional looks.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 667, 670"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P212.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P212-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P212-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

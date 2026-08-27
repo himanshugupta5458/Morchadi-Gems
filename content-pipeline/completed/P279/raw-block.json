@@ -1,0 +1,88 @@
+{
+  "productId": "P279",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "667",
+    "workingId": "odoo-667",
+    "originalSku": "MJ-607",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-607-twisted-crystal-kangan-2-piece-667",
+    "referenceTitle": "Twisted Crystal Kangan (2 piece)",
+    "rawContent": "Description:\nAdd a playful twist to your accessory collection with this vibrant set of multicolor designer glass bangles! Each bangle features a gorgeous twisted pattern and glossy finish, offered in a spectrum of delightful hues: orange, purple, pink, green, yellow-green, and red. These bangles stand out as the perfect accent for weddings, parties, festivals, and daily ethnic or fusion wear.\nSkillfully handcrafted from premium-quality glass, these bangles boast exceptional durability and comfort for all-day wear. The unique twisted design and brilliant colors add a fashion-forward appeal to sarees, lehengas, salwar suits, and Indo-western outfits. This set is an excellent choice for bridal jewelry, festive accessories, or gifting.\nKey Features:\n- Multicolor designer glass bangles with an eye-catching twisted pattern\n- High-gloss finish for enduring shine\n- Handcrafted from premium glass for durability and comfort\n- Lightweight for festive occasions and daily use\n- Vibrant mix: orange, purple, pink, green, yellow-green, and red\n- Complements traditional and modern outfits; perfect for weddings, parties, festivals, and gifting",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Add a playful twist to your accessory collection with this vibrant set of <strong>multicolor designer glass bangles</strong>! Each bangle features a gorgeous twisted pattern and glossy finish, offered in a spectrum of delightful hues: orange, purple, pink, green, yellow-green, and red. These bangles stand out as the perfect accent for weddings, parties, festivals, and daily ethnic or fusion wear.</p><p>Skillfully handcrafted from premium-quality glass, these bangles boast exceptional durability and comfort for all-day wear. The unique twisted design and brilliant colors add a fashion-forward appeal to sarees, lehengas, salwar suits, and Indo-western outfits. This set is an excellent choice for bridal jewelry, festive accessories, or gifting.</p><p><strong>Key Features:</strong></p><ul><li>Multicolor designer glass bangles with an eye-catching twisted pattern</li><li>High-gloss finish for enduring shine</li><li>Handcrafted from premium glass for durability and comfort</li><li>Lightweight for festive occasions and daily use</li><li>Vibrant mix: orange, purple, pink, green, yellow-green, and red</li><li>Complements traditional and modern outfits; perfect for weddings, parties, festivals, and gifting</li></ul></div>",
+    "originalCategories": [],
+    "originalMetaDescription": "Colorful spiral design multicolor glass bangles. Handcrafted, glossy ethnic & fusion accessory perfect for weddings & festivals.",
+    "exportNotes": [
+      "product had no source category",
+      "duplicate title shared with template(s) 670, 511"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P279.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P279/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P279-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P279/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P279-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P279/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P279-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P279/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P279-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P279/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

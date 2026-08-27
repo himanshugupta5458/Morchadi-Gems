@@ -26,7 +26,7 @@ const KEYWORD_MAP_PATH = join(REPO_ROOT, "data", "keyword-map.json");
  *
  * So the gate failing after you add a product is CORRECT, not a bug. Bump the number.
  */
-const EXPECTED_PRODUCT_COUNT = 60;
+const EXPECTED_PRODUCT_COUNT = 98;
 
 const MIN_FEATURED_COUNT = 4;
 const MIN_NEW_COUNT = 4;
@@ -114,7 +114,7 @@ const CATEGORIES = [
   { slug: "nose-pins", status: "surfaced" },
   { slug: "watches", status: "surfaced" },
   { slug: "hair-accessories", status: "surfaced" },
-  { slug: "gift-hampers", status: "pending" },
+  { slug: "gift-hampers", status: "surfaced" },
 ];
 
 /** Every slug a product record may carry. The vocabulary. */

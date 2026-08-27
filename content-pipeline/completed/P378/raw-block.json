@@ -1,0 +1,47 @@
+{
+  "productId": "P378",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "826",
+    "workingId": "odoo-826",
+    "originalSku": "MJ-409",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-409-male-doll-charm-826",
+    "referenceTitle": "Male doll charm",
+    "rawContent": "Male doll",
+    "rawHtml": "<div data-oe-version=\"2.0\">Male doll</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 9 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P378.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P378/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹239 sale price (morchadijewels.com, reference only)"
+  }
+}

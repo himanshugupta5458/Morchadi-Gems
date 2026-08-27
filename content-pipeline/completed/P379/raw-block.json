@@ -1,0 +1,47 @@
+{
+  "productId": "P379",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "827",
+    "workingId": "odoo-827",
+    "originalSku": "MJ-410",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-410-mama-charm-827",
+    "referenceTitle": "Mama charm",
+    "rawContent": "Mama",
+    "rawHtml": "<div data-oe-version=\"2.0\">Mama</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 4 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P379.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P379/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹239 sale price (morchadijewels.com, reference only)"
+  }
+}

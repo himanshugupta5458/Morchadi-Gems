@@ -1,0 +1,55 @@
+{
+  "productId": "P213",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "512",
+    "workingId": "odoo-512",
+    "originalSku": "MJ-207",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-207-dark-rainbow-rain-drop-glass-bangles-12-piece-512",
+    "referenceTitle": "Dark Rainbow Rain Drop Glass Bangles (12 Piece)",
+    "rawContent": "Description:\nBrighten up your festive look with this stunning multicolor glass bangle set, beautifully adorned with golden polka-dot accents. Featuring a vibrant mix of pink, yellow, blue, and orange hues, these bangles add an instant pop of color to any ethnic outfit.\nHandcrafted from premium-quality glass, this bangle set combines traditional artistry with a playful modern touch, making it perfect for weddings, festivals, parties, and everyday ethnic wear. The golden dotted detailing adds a subtle sparkle, enhancing your festive charm.\nLightweight yet durable, these bangles are comfortable for long wear and versatile enough to pair with sarees, lehengas, salwar suits, and indo-western ensembles. Whether you're shopping for bridal jewellery, festive accessories, or a unique gift, this multicolor bangle set is a must-have in every jewellery collection.\nKey Features:\n-\nVibrant multicolor glass bangles with golden polka dots\n-\nHandcrafted for a unique and elegant look\n-\nLightweight and comfortable for daily or festive wear\n-\nPerfect for weddings, cultural events, and gifting\n-\nComplements all types of ethnic and fusion outfits",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Brighten up your festive look with this stunning <strong>multicolor glass bangle set</strong>, beautifully adorned with <strong>golden polka-dot accents</strong>. Featuring a vibrant mix of <strong>pink, yellow, blue, and orange hues</strong>, these bangles add an instant pop of color to any ethnic outfit.</p><p>Handcrafted from premium-quality glass, this bangle set combines <strong>traditional artistry</strong> with a playful modern touch, making it perfect for weddings, festivals, parties, and everyday ethnic wear. The <strong>golden dotted detailing</strong> adds a subtle sparkle, enhancing your festive charm.</p><p>Lightweight yet durable, these bangles are comfortable for long wear and versatile enough to pair with sarees, lehengas, salwar suits, and indo-western ensembles. Whether you're shopping for <strong>bridal jewellery, festive accessories, or a unique gift</strong>, this multicolor bangle set is a must-have in every jewellery collection.</p><p><strong>Key Features:</strong></p><ul><li>\nVibrant multicolor glass bangles with golden polka dots\n</li><li>\nHandcrafted for a unique and elegant look\n</li><li>\nLightweight and comfortable for daily or festive wear\n</li><li>\nPerfect for weddings, cultural events, and gifting\n</li><li>\nComplements all types of ethnic and fusion outfits</li></ul></div>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Vibrant multicolor glass bangle set with golden accents. Lightweight, traditional yet modern for weddings, festivals & gifts.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P213.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P213/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

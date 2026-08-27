@@ -27,16 +27,19 @@ kind of file that can be the first one.
 | Path | The file that reserves the id | Range |
 | --- | --- | --- |
 | Fresh / hand-made | `content-pipeline/drafts/PNNN.json` — this directory | The next unused number **above the highest id the migration has assigned** — read it from the register, never assume it. A fresh id may not land inside the migration's range |
-| Odoo migration (Stage 0) | `content-pipeline/incoming/{batch-id}/PNNN/raw-block.json` | **P101 upward**, one id per accepted record. The 542-record Phase B export is expected to occupy **P101–P642** |
+| Odoo migration (Stage 0) | `content-pipeline/incoming/{batch-id}/PNNN/raw-block.json` | **P101 upward**, one id per accepted record. The 542-record Phase B export occupies **P101–P642**, all assigned on 2026-08-24 |
 
-`data/products.json` holds P001–P049. **P050–P100 are permanently retired** — the gap is a
+`data/products.json` holds P001–P049 plus the migrated products published so far (11 ids
+between P106 and P122 as of 2026-08-24 — read
+[`products-completed.md`](../../docs/pipeline-prep/products-completed.md) for the current list).
+**P050–P100 are permanently retired** — the gap is a
 legible boundary between original catalogue products and migrated Odoo listings, and ADR-051
 decision 4 already established that gaps are correct and that a retired number never comes back.
 
-**P642 is an expectation, not a reservation.** It is what 542 accepted records starting at P101
-work out to, and the export has not arrived. Fewer records means a lower ceiling and more means a
-higher one, so the next fresh id is whatever sits above the highest number the register actually
-shows — which is why the fresh row above names the register rather than a figure.
+**P101–P642 are now all reserved.** The Phase B export arrived and Stage 0 queued all 542
+accepted records on 2026-08-24, so P642 is the migration's actual ceiling, not an expectation.
+The next fresh id is whatever sits above the highest number the register actually shows — which
+is why the fresh row above names the register rather than a figure.
 The example row in the register still names P050 for illustration only; it is not a reservation
 and never was.
 

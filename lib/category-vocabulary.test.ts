@@ -268,41 +268,44 @@ describe("a gift-hampers product passes the record-level validators", () => {
   });
 });
 
-describe("surfacing — a valid category a shopper cannot yet reach", () => {
-  it("surfaces ten of the eleven", () => {
-    expect(SURFACED_CATEGORY_SLUGS).toHaveLength(10);
-    expect(sorted(SURFACED_CATEGORY_SLUGS)).not.toContain("gift-hampers");
+describe("surfacing — gift-hampers reached shoppers with its first published products", () => {
+  it("surfaces all eleven", () => {
+    expect(SURFACED_CATEGORY_SLUGS).toHaveLength(11);
+    expect(sorted(SURFACED_CATEGORY_SLUGS)).toContain("gift-hampers");
   });
 
-  it("marks gift-hampers pending, not surfaced", () => {
+  it("marks gift-hampers surfaced, not pending", () => {
     const giftHampers = CATEGORIES.find((category) => category.slug === "gift-hampers");
 
-    expect(giftHampers?.status).toBe("pending");
-    expect(isSurfacedCategory("gift-hampers")).toBe(false);
+    expect(giftHampers?.status).toBe("surfaced");
+    expect(isSurfacedCategory("gift-hampers")).toBe(true);
     expect(isCategory("gift-hampers")).toBe(true);
   });
 
-  it("keeps it out of the category nav menu", () => {
-    expect(CATEGORY_MENU.items.map((item) => item.key)).not.toContain("gift-hampers");
-    expect(CATEGORY_MENU.items).toHaveLength(10);
+  it("appears in the category nav menu", () => {
+    expect(CATEGORY_MENU.items.map((item) => item.key)).toContain("gift-hampers");
+    expect(CATEGORY_MENU.items).toHaveLength(11);
   });
 
-  it("keeps it out of the sitemap, so nothing crawls an empty listing", () => {
+  it("appears in the sitemap, now that its listing has something to crawl", () => {
     const urls = buildSitemap().map((entry) => entry.url);
 
-    expect(urls.some((url) => url.includes("category=gift-hampers"))).toBe(false);
+    expect(urls.some((url) => url.includes("category=gift-hampers"))).toBe(true);
     expect(urls.some((url) => url.includes("category=rings"))).toBe(true);
   });
 
-  it("ignores a hand-typed ?category=gift-hampers rather than rendering an empty shop", () => {
-    expect(parseShopQuery({ category: "gift-hampers" }).categories).toEqual([]);
+  it("honours ?category=gift-hampers rather than falling back to the whole shop", () => {
+    expect(parseShopQuery({ category: "gift-hampers" }).categories).toEqual(["gift-hampers"]);
     expect(parseShopQuery({ category: "rings" }).categories).toEqual(["rings"]);
   });
 
-  it("has no published products behind it — the invariant validate-products enforces", () => {
-    const published = getAllProducts().filter((product) => product.category === "gift-hampers");
+  it("has published products behind it — the invariant validate-products enforces for a surfaced category", () => {
+    const published = getAllProducts()
+      .filter((product) => product.category === "gift-hampers")
+      .map((product) => product.id)
+      .sort();
 
-    expect(published).toEqual([]);
+    expect(published).toEqual(["P363", "P533"]);
   });
 
   it("every surfaced category does have published products", () => {
@@ -313,8 +316,7 @@ describe("surfacing — a valid category a shopper cannot yet reach", () => {
     }
   });
 
-  it("has its tile image ready, so flipping the flag needs no asset work", () => {
-    expect(SURFACED_CATEGORIES.length).toBeLessThan(CATEGORIES.length);
+  it("had its tile image ready, so flipping the flag needed no asset work", () => {
     expect(readFileSync(join(REPO_ROOT, "public/categories/gift-hampers.webp")).length).toBeGreaterThan(0);
   });
 });

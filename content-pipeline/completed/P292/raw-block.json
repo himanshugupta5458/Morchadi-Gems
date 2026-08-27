@@ -1,0 +1,74 @@
+{
+  "productId": "P292",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "690",
+    "workingId": "odoo-690",
+    "originalSku": "MJ-205",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-205-dainty-sun-rays-pendant-690",
+    "referenceTitle": "Dainty Sun Rays Pendant",
+    "rawContent": "- Elegant sun rays design with sparkling stone-studded detailing\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Stone Type: Artificial Stones\n- Closure: Lobster Clasp\n- Length: 45 cm (Adjustable)\n- Perfect for layering or wearing solo for a statement look\nCare Tips:\n- Wipe with a soft cloth after every use\n- Store in a flat box to avoid scratches\n- Keep away from sprays and perfumes\n- Do not soak in water\n- Clean gently with a soft brush and jewellery cleaning solution",
+    "rawHtml": "<ul data-oe-version=\"2.0\"><li><p>Elegant sun rays design with sparkling stone-studded detailing</p></li>\n<li><p>Premium Quality | Anti-Tarnish</p></li>\n<li><p>Base Material: Stainless Steel</p></li>\n<li><p>Plating: 18K Gold-Plated</p></li>\n<li><p>Stone Type: Artificial Stones</p></li>\n<li><p>Closure: Lobster Clasp</p></li>\n<li><p>Length: 45 cm (Adjustable)</p></li>\n<li><p>Perfect for layering or wearing solo for a statement look</p></li>\n</ul><p><strong>Care Tips:</strong></p><ul>\n<li><p>Wipe with a soft cloth after every use</p></li>\n<li><p>Store in a flat box to avoid scratches</p></li>\n<li><p>Keep away from sprays and perfumes</p></li>\n<li><p>Do not soak in water</p></li>\n<li><p>Clean gently with a soft brush and jewellery cleaning solution</p></li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold-plated sun rays pendant with stones. Anti-tarnish, versatile layering piece for daily chic & festive elegance.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P292.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P292-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P292-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P292-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P292-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

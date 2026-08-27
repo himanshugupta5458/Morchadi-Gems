@@ -1,0 +1,46 @@
+{
+  "productId": "P478",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "934",
+    "workingId": "odoo-934",
+    "originalSku": "MJ-566",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-566-silver-plated-floral-nath-shimmering-white-zirconia-studded-934",
+    "referenceTitle": "Silver-Plated Floral Nath – Shimmering White Zirconia Studded",
+    "rawContent": "Dazzle with this silver-toned floral nath, intricately studded with sparkling white zirconia. This high-fashion accessory is perfect for adding a modern ethnic touch to any look. To maintain its brilliant shine, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Dazzle with this silver-toned floral nath, intricately studded with sparkling white zirconia. This high-fashion accessory is perfect for adding a modern ethnic touch to any look. To maintain its brilliant shine, keep it away from moisture and perfumes, and store it safely in a dry place after use.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P478.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P478/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  }
+}

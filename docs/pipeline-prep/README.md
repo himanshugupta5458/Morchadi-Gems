@@ -43,7 +43,7 @@ states the rule it used, so the owner can overrule it rather than guess at it.
 | [`fresh-listing-image-prompt.md`](fresh-listing-image-prompt.md) | The owner-authored companion prompt for the fresh intake path — turns product photographs into the text the Draft A skill reads. Forbids the descriptive pass from naming any metal or stone (`gold-toned`, never `gold`) |
 | [`similarity-calibration-report.md`](similarity-calibration-report.md) | Phase-three calibration measurements over the 49 live products. **Measurements only — no threshold is set by it**, and ADR-051's "not calibrated" state is unchanged |
 | [`similarity-scores-all-pairs.json`](similarity-scores-all-pairs.json) | The raw pairwise scores behind that report. Nothing reads it |
-| [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the six-stage vocabulary — `queued` through `published`, per [ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md) — and the retired-id list |
+| [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the six-stage vocabulary — `queued` through `awaiting-publish`, per [ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md) — and the retired-id list |
 | [`known-issues-post-publish.md`](known-issues-post-publish.md) | The durable record of issues the owner has **explicitly accepted publishing with**, each with evidence, the acceptance decision and an open/resolved status. The post-publish review pass works through this file |
 | [`products-completed.md`](products-completed.md) | Manual register of drafts whose product has been published into `data/products.json` |
 
@@ -62,15 +62,15 @@ operating procedure for the part of it that can be run today.
 | --- | --- | --- | --- |
 | 0 | **Stage 0, migration path only.** `node scripts/prepare-migration-batch.mjs <export.jsonl> <batch-id>` validates the Phase B JSONL export, refuses bad records into `needs-attention.md`, assigns real product ids from **P101**, transforms the Odoo variant and image shapes, and writes one `raw-block.json` per queued product into `content-pipeline/incoming/`. It runs **no extraction**. Stage `queued` ([ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md)) | Script | ✔ |
 | 1 | **Raw content** is assembled — a listing's original copy from the `Latest.xlsx` export (`sourceType: "migrated"`), or photographs put through [`fresh-listing-image-prompt.md`](fresh-listing-image-prompt.md) plus an `<owner-stated-facts>` block (`sourceType: "fresh"`) | Owner | ✔ |
-| 2 | **Draft A skill** ([`.claude/skills/draft-a-skills.md`](../../.claude/skills/draft-a-skills.md)) converts it to one structured object. Every material, treatment and stone value is a candidate carrying the exact source phrase it came from; prices are quarantined to `pricing.referencePrice` as a string; images stay empty | Skill, run by hand | ✔ |
+| 2 | **Draft A skill** ([`.claude/skills/draft-a-skills.md`](../../.claude/skills/draft-a-skills.md)) converts it to one structured object. Every material, treatment and stone value is a candidate carrying the exact source phrase it came from; prices are quarantined to `pricing.referencePrice` as a string; image suggestions are carried through unconfirmed — `confirmed: false` on every entry ([ADR-056](../decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md)) | Skill, run by hand | ✔ |
 | 3 | **Saved as `content-pipeline/drafts/PNNN.json`** — one object per file, filename matching the object's own `productId`. On the migration path the id was already assigned at step 0 and the draft inherits it; on the fresh path it is still chosen by hand, above the migrated range. **P050–P100 are retired** | Owner | folder ✔, id-assignment code ✔ **on the migration path only** |
 | 4 | **Validated:** `node scripts/validate-draft-a.mjs content-pipeline/drafts` — structure and provenance, including the check that every `quotedPhrase` appears verbatim in `sourceNotes.rawContent` | Script | ✔ |
 | 5 | **Row added to [`drafts-in-progress.md`](drafts-in-progress.md)** at stage `extracted`. On the migration path the row already exists at `queued` from step 0 and is advanced by hand instead | Owner | ✔ |
 | 6 | **Owner reviews and confirms** each candidate against its quoted source phrase, flipping `confirmed` to `true` one attribute at a time. Stage moves `in-review` → `confirmed`. Nothing bypasses this step; there is no auto-trusted path | Owner | ✔ |
-| 7 | **Price and images assigned by hand.** Stage `priced-and-shot`. This sits *between* the two validator passes, which is why a value that fails the first check is required by the second | Owner | ✔ |
+| 7 | **Price and images assigned by hand.** Stage `priced-and-shot`. Confirming an image means flipping its suggestion's `confirmed` to `true` in the draft (deleting suggestions that are declined) **and copying the staged `sourceFile` to its suggested path under `public/products/`** — no script performs the copy; `npm run validate:products` is what verifies every confirmed path has a file. This sits *between* the two validator passes, which is why a value that fails the first check is required by the second | Owner | ✔ |
 | 8 | **Phase 2 orchestration** turns the confirmed draft into a `data/products.json` entry — the honesty rules of [ADR-018](../decisions/ADR-018-honest-product-description.md) and [ADR-035](../decisions/ADR-035-catalogue-content-pass.md), and the SEO metadata of [ADR-036](../decisions/ADR-036-product-seo-metadata-pass.md) | Skill ([ADR-053](../decisions/ADR-053-draft-a-to-product-orchestration.md)), run by hand | ✔ |
 | 9 | **Owner approves** the finished product entry | Owner | ✔ |
-| 10 | **Publish step** flips the entry's `status` from `"draft"` to `"active"`, regenerates the keyword map and moves the file from `content-pipeline/drafts/` to `content-pipeline/completed/` — `node scripts/publish-product.mjs PNNN` ([ADR-052](../decisions/ADR-052-product-status-field.md)) | Script, run by hand | ✔ |
+| 10 | **Publish step** flips the entry's `status` from `"draft"` to `"active"`, regenerates the keyword map, moves the file from `content-pipeline/drafts/` to `content-pipeline/completed/`, and archives the product's whole staging directory `incoming/{batch}/PNNN/` into `completed/PNNN/` ([ADR-057](../decisions/ADR-057-staging-colocation-and-completed-tracking.md)) — `node scripts/publish-product.mjs PNNN` ([ADR-052](../decisions/ADR-052-product-status-field.md)) | Script, run by hand | ✔ |
 | 11 | **Row moved by hand** out of `drafts-in-progress.md` and into [`products-completed.md`](products-completed.md) | Owner | ✔ |
 
 ### Where this stops today
@@ -103,11 +103,15 @@ absent from it still produces a candidate, and `scripts/validate-draft-a.mjs` st
 read it. The shape is the flat trade-name-to-technical-value map that skill rule 3 describes,
 matched by exact string equality on the trade name.
 
-**The pipeline has now run on real data, end to end short of publish.** Step 0 ran for real on
+**The pipeline has now run on real data, end to end, publish included.** Step 0 ran for real on
 2026-08-24 (542 records queued from `2026-08-23-batch-01`), the 11-product pilot group
 (P106–P122, the duplicate-title ring group) went through extraction, owner review, pricing and
 image assignment, and Phase 2 wrote all 11 into `data/products.json` as `status: "draft"`
 ([RESULT-2026-08-24-phase2-pilot-batch.md](../testing/RESULT-2026-08-24-phase2-pilot-batch.md)).
+All 11 were then published the same day — `scripts/publish-product.mjs` flipped each to
+`status: "active"`, filed their drafts into `content-pipeline/completed/`, and their rows moved
+to [`products-completed.md`](products-completed.md); the accepted deviations are recorded in
+[`known-issues-post-publish.md`](known-issues-post-publish.md).
 Before that, one synthetic product was taken through the whole workflow in prompt 70 and removed
 again ([RESULT-2026-08-23-content-pipeline-e2e.md](../testing/RESULT-2026-08-23-content-pipeline-e2e.md)).
 Note that landing P106–P122 in the catalogue **spent the Stage 0 one-time override by its own
@@ -115,45 +119,41 @@ design**: `scripts/prepare-migration-batch.mjs` now refuses to run, correctly, b
 catalogue's maximum id is past P049. The already-queued raw blocks are unaffected; a future
 export batch needs a new decision, not a loosened assertion.
 
-## Tracking recommendation — owner decision needed
+## Tracking decision
 
-`content-pipeline/` holds unpublished and unconfirmed product data: candidate claims nobody has
-approved, source text quoted out of a third-party export, and prices that are not real prices.
-The recommendation is to keep it **untracked**, the way `.env.local` is — working files, not
-committed history.
+Decided by the owner on 2026-08-24
+([ADR-057](../decisions/ADR-057-staging-colocation-and-completed-tracking.md)), taking what an
+earlier revision of this section called "the middle option": **`completed/` is tracked in
+full**, while `incoming/` and `drafts/` stay untracked the way `.env.local` is. Unpublished and
+unconfirmed product data — candidate claims nobody has approved, source text quoted out of a
+third-party export, prices that are not real prices — never enters git history; the provenance
+bundle behind a product (draft, raw block, source images) is committed at the moment of
+publish, exactly when its claims go live.
 
-`.gitignore` implements that as a contents-level ignore with three exceptions, rather than
-ignoring the directory outright:
+`.gitignore` implements this as a contents-level ignore with exceptions, rather than ignoring
+the directory outright:
 
 ```
 /content-pipeline/*
 !/content-pipeline/README.md
 !/content-pipeline/drafts/
 !/content-pipeline/completed/
+!/content-pipeline/incoming/
 /content-pipeline/drafts/*
 !/content-pipeline/drafts/README.md
-/content-pipeline/completed/*
-!/content-pipeline/completed/README.md
+/content-pipeline/incoming/*
+!/content-pipeline/incoming/README.md
 ```
 
 The shape matters: git does not descend into an ignored *directory*, so `/content-pipeline/`
-would make every negation below it dead and a fresh clone would have no folders at all. Ignoring
-the contents and re-admitting the three `README.md` files means the structure and its
-explanation survive a clone while none of the working data does.
+would make every negation below it dead and a fresh clone would have no folders at all.
+Ignoring the contents and re-admitting the untracked folders' `README.md` files means the
+structure and its explanation survive a clone; `completed/` has no ignore line at all, so
+everything the publish step files there is tracked.
 
-**This is a proposal, not a settled rule, and the owner should decide it.** The argument the
-other way is real and worth stating rather than burying:
-
-| Untracked (recommended) | Tracked |
-| --- | --- |
-| Unconfirmed claims never enter git history, where they are awkward to remove | The draft is the **provenance trail** behind a live product — the only mechanical evidence of where a published claim came from. Untracked, it exists on one machine |
-| A rejected draft leaves no trace, matching the "its number dies with it" rule | A lost `content-pipeline/completed/` cannot be rebuilt; `sourceNotes.rawContent` is not recoverable from the published product |
-| Source text quoted from `Latest.xlsx` is owner-supplied third-party data | The validator's containment check proves a quote is real, but only while the draft still exists to check |
-| Registers stay small and readable | The two registers in this folder are tracked precisely because the drafts are not — they are the fallback record, and they are hand-maintained, which is a weaker guarantee than git |
-
-A middle option the owner may prefer: ignore `drafts/` and **track** `completed/`, so
-work-in-progress stays local but the provenance behind anything actually published is committed.
-That is a one-line change to the block above and is not what ships today.
+The durability of the ~1,000 still-queued source images in `incoming/` is handled outside the
+repository: an external backup taken 2026-08-24, to be refreshed after each sub-batch's review
+edits (audit finding B-1).
 
 ### One stale sentence above, flagged rather than rewritten
 

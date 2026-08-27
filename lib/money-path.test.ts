@@ -216,8 +216,23 @@ describe("the single-image products", () => {
       (product) =>
         product.media.images.length > 1 || product.media.variantImages !== undefined,
     );
-    expect(touched.map((product) => product.id).sort()).toEqual(["P002", "P010", "P108"]);
-    expect(untouched.length).toBe(getAllProducts().length - 3);
+    expect(touched.map((product) => product.id).sort()).toEqual([
+      "P002",
+      "P010",
+      "P108",
+      "P212",
+      "P241",
+      "P279",
+      "P282",
+      "P292",
+      "P295",
+      "P321",
+      "P322",
+      "P363",
+      "P395",
+      "P586",
+    ]);
+    expect(untouched.length).toBe(getAllProducts().length - 14);
 
     for (const product of untouched) {
       if (!product.stock.inStock) continue;

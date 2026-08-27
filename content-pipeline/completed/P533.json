@@ -1,0 +1,76 @@
+{
+  "productId": "P533",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "pomegranate face mask; nose strip; wet wipes; lip balm; glass bangles; jhumka earrings; pearl hair pin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pomegranate face mask, nose strip, wet wipes, lip balm, glass bangles, jhumka earrings and pearl hair pin"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Theme",
+      "value": "birthday hamper — skincare + glam",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Birthday hamper for girls who love skincare + glam"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P533.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P533/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 750,
+    "mrp": null,
+    "cost": 450,
+    "referencePrice": "₹750 sale price (morchadijewels.com, reference only); source copy also says \"Only ₹750\""
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Birthday hamper for girls who love skincare + glam ✨ Pomegranate face mask, nose strip, wet wipes, lip balm, glass bangles, jhumka earrings and pearl hair pin. Only ₹750.\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Glow & Glam Birthday Hamper",
+    "originalId": "997",
+    "originalSku": "MJ-264",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-264-glow-glam-birthday-hamper-997",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only). Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy).",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹750, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹450 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

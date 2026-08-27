@@ -35,7 +35,7 @@ afterEach(() => {
  * category matches nothing a shopper can find. If a gifting-tagged watch ever ships, point
  * this at whatever combination is empty then.
  */
-const EMPTY_FACET: ShopSearchParams = { category: "watches", collection: "gifting" };
+const EMPTY_FACET: ShopSearchParams = { category: "hair-accessories", collection: "anti-tarnish" };
 
 function metadataFor(params: ShopSearchParams): ReturnType<typeof generateMetadata> {
   return generateMetadata({ searchParams: { ...params } });

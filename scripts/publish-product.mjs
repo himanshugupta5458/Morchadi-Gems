@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -13,7 +13,7 @@ const DEFAULT_REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
  * ([ADR-053](../docs/decisions/ADR-053-draft-a-to-product-orchestration.md)) — and this script
  * turns it on.
  *
- * Three things happen together and none of them makes sense without the others:
+ * Four things happen together and none of them makes sense without the others:
  *
  * 1. `status` flips `draft` → `active`, which is the whole of what publishing means (ADR-052).
  * 2. `data/keyword-map.json` is regenerated, because the map indexes published products only.
@@ -22,6 +22,11 @@ const DEFAULT_REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
  *    without it the next `npm run validate:products` fails on a change this script made.
  * 3. The draft moves from `content-pipeline/drafts/` to `content-pipeline/completed/`, so the
  *    provenance trail behind a live product survives rather than being deleted.
+ * 4. The product's staging directory — `content-pipeline/incoming/{batch}/PNNN/`, holding the
+ *    raw block and the source images co-located with it (ADR-057) — moves to
+ *    `content-pipeline/completed/PNNN/`. Staging then empties as products ship, and `completed/`
+ *    holds the full provenance bundle behind each live product. A product with no staging
+ *    directory (the fresh, hand-made path) publishes exactly as before.
  *
  * What it deliberately does not do is touch the two tracking registers under
  * `docs/pipeline-prep/`. Those are hand-maintained human indexes over an untracked directory
@@ -47,6 +52,28 @@ export function completedPath(productId, repoRoot = DEFAULT_REPO_ROOT) {
 
 export function similarityReportPath(productId, repoRoot = DEFAULT_REPO_ROOT) {
   return join(repoRoot, "content-pipeline", "drafts", `${productId}-similarity.json`);
+}
+
+/**
+ * Finds the product's staging directory by scanning every batch under
+ * `content-pipeline/incoming/` for a `PNNN/` directory carrying a `raw-block.json`, so the
+ * publish step stays batch-agnostic. Returns null when the product has no staging directory,
+ * which is the normal case for the fresh, hand-made intake path.
+ */
+export function stagingDirPath(productId, repoRoot = DEFAULT_REPO_ROOT) {
+  const incomingRoot = join(repoRoot, "content-pipeline", "incoming");
+  if (!existsSync(incomingRoot)) return null;
+
+  for (const entry of readdirSync(incomingRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const candidate = join(incomingRoot, entry.name, productId);
+    if (existsSync(join(candidate, "raw-block.json"))) return candidate;
+  }
+  return null;
+}
+
+export function completedStagingPath(productId, repoRoot = DEFAULT_REPO_ROOT) {
+  return join(repoRoot, "content-pipeline", "completed", productId);
 }
 
 /** Byte-identical to how `data/products.json` is already written, so a publish is a one-line diff. */
@@ -156,6 +183,18 @@ export function publishProduct(productId, options = {}) {
     return { published: false, errors: [activation.error], warnings: [] };
   }
 
+  const stagingDir = stagingDirPath(productId, repoRoot);
+  const stagingDestination = completedStagingPath(productId, repoRoot);
+  if (stagingDir !== null && existsSync(stagingDestination)) {
+    return {
+      published: false,
+      errors: [
+        `content-pipeline/completed/${productId}/ already exists, but ${productId}'s staging directory is still in incoming/. Resolve the duplicate before publishing`,
+      ],
+      warnings: [],
+    };
+  }
+
   const keywordMap = buildKeywordMap(activation.catalogue);
   const duplicatePrimary = Object.entries(keywordMap.primary).filter(([, ids]) => ids.length > 1);
   if (duplicatePrimary.length > 0) {
@@ -176,6 +215,12 @@ export function publishProduct(productId, options = {}) {
   mkdirSync(dirname(destination), { recursive: true });
   renameSync(draftPath(productId, repoRoot), destination);
 
+  let stagingMovedTo = null;
+  if (stagingDir !== null) {
+    renameSync(stagingDir, stagingDestination);
+    stagingMovedTo = `content-pipeline/completed/${productId}/`;
+  }
+
   const warnings = [];
   const similarityReport = similarityReportPath(productId, repoRoot);
   if (existsSync(similarityReport)) {
@@ -193,6 +238,7 @@ export function publishProduct(productId, options = {}) {
     category: activation.product.category,
     publishedProductCount: keywordMap.productCount,
     movedTo: `content-pipeline/completed/${productId}.json`,
+    stagingMovedTo,
   };
 }
 
@@ -230,6 +276,9 @@ function runCli(argv) {
   console.log(`  name              ${result.name}`);
   console.log(`  keyword map       rewritten, ${result.publishedProductCount} published product(s)`);
   console.log(`  draft filed       ${result.movedTo}`);
+  if (result.stagingMovedTo !== null) {
+    console.log(`  staging filed     ${result.stagingMovedTo}`);
+  }
 
   for (const warning of result.warnings) console.log(`\nNOTE — ${warning}`);
 

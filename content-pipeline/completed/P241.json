@@ -1,0 +1,112 @@
+{
+  "productId": "P241",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "anti-tarnish metal (type not stated in source); rust-resistant, long-lasting shine",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality anti-tarnish metal"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "openable kada with clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Openable clasp for ease of wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "casual, festive, party wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ideal For: Casual, festive, and party wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "wipe with a soft cloth after use; store in a dry place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Tip: Wipe with a soft cloth after use and store in a dry place"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P241.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P241/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P241-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P241/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P241-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P241/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P241-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P241/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 320,
+    "mrp": null,
+    "cost": 192,
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elevate your style with our Premium Anti-Tarnish Openable Kada – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.\n- Features:\n- Material: High-quality anti-tarnish metal\n- Design: Openable clasp for ease of wear\n- Finish: Long-lasting shine & rust-resistant\n- Ideal For: Casual, festive, and party wear\n- Care Tip: Wipe with a soft cloth after use and store in a dry place",
+    "referenceTitle": "Greek Key Red Enamel Bracelet",
+    "originalId": "626",
+    "originalSku": "MJ-330",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-330-greek-key-red-enamel-bracelet-626",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "The description is a generic anti-tarnish openable-kada template (\"Available in a variety of unique designs and colors\") and never mentions the title's Greek-key motif or red enamel. The export meta description does (\"red enamel on gold plating\"), but a meta description is not extraction source text — no enamel or gold-plating candidate is proposed. Owner should state the real motif/colour facts at review.",
+    "2026-08-25: Material and Finish candidates merged into one maximal-phrase Material attribute for the Phase 2 spec mapping. The folded Finish quote was \"Finish: Long-lasting shine & rust-resistant\".",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹320, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹192 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P377",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "825",
+    "workingId": "odoo-825",
+    "originalSku": "MJ-470",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-470-pink-doll-charm-825",
+    "referenceTitle": "Pink doll charm",
+    "rawContent": "Pink doll",
+    "rawHtml": "<div data-oe-version=\"2.0\">Pink doll</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 9 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P377.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P377/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹239 sale price (morchadijewels.com, reference only)"
+  }
+}

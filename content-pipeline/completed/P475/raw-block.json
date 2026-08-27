@@ -1,0 +1,46 @@
+{
+  "productId": "P475",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "931",
+    "workingId": "odoo-931",
+    "originalSku": "MJ-308",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-308-gold-plated-floral-nath-sparkling-ruby-red-white-stone-studded-931",
+    "referenceTitle": "Gold-Plated Floral Nath – Sparkling Ruby Red & White Stone Studded",
+    "rawContent": "Add a touch of ethnic glamour with this exquisite gold-toned floral nath. Adorned with shimmering red and white stones, it is a perfect high-fashion statement for weddings. To maintain its radiant luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of ethnic glamour with this exquisite gold-toned floral nath. Adorned with shimmering red and white stones, it is a perfect high-fashion statement for weddings. To maintain its radiant luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P475.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P475/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  }
+}

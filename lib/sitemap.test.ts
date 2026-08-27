@@ -64,7 +64,7 @@ describe("the sitemap", () => {
 
   it("lists every surfaced category, and no pending one", () => {
     const urls = urlsOf();
-    expect(SURFACED_CATEGORIES).toHaveLength(10);
+    expect(SURFACED_CATEGORIES).toHaveLength(11);
 
     for (const category of SURFACED_CATEGORIES) {
       expect(urls).toContain(`${PRODUCTION_ORIGIN}/shop?category=${category.slug}`);

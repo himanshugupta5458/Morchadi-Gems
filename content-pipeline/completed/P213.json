@@ -1,0 +1,113 @@
+{
+  "productId": "P213",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted from premium-quality glass"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colours",
+      "value": "multicolor — pink, yellow, blue, orange",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a vibrant mix of pink, yellow, blue, and orange hues"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "golden polka-dot accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "beautifully adorned with golden polka-dot accents"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight yet durable, these bangles are comfortable for long wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "weddings, festivals, parties, everyday ethnic wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "perfect for weddings, festivals, parties, and everyday ethnic wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P213.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P213/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 149,
+    "mrp": null,
+    "cost": 89,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Description:\nBrighten up your festive look with this stunning multicolor glass bangle set, beautifully adorned with golden polka-dot accents. Featuring a vibrant mix of pink, yellow, blue, and orange hues, these bangles add an instant pop of color to any ethnic outfit.\nHandcrafted from premium-quality glass, this bangle set combines traditional artistry with a playful modern touch, making it perfect for weddings, festivals, parties, and everyday ethnic wear. The golden dotted detailing adds a subtle sparkle, enhancing your festive charm.\nLightweight yet durable, these bangles are comfortable for long wear and versatile enough to pair with sarees, lehengas, salwar suits, and indo-western ensembles. Whether you're shopping for bridal jewellery, festive accessories, or a unique gift, this multicolor bangle set is a must-have in every jewellery collection.\nKey Features:\n-\nVibrant multicolor glass bangles with golden polka dots\n-\nHandcrafted for a unique and elegant look\n-\nLightweight and comfortable for daily or festive wear\n-\nPerfect for weddings, cultural events, and gifting\n-\nComplements all types of ethnic and fusion outfits",
+    "referenceTitle": "Dark Rainbow Rain Drop Glass Bangles (12 Piece)",
+    "originalId": "512",
+    "originalSku": "MJ-207",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-207-dark-rainbow-rain-drop-glass-bangles-12-piece-512",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "The \"(12 Piece)\" count appears only in the reference title, not in the description text — no set-count candidate is proposed (candidates quote the description only); carry the count question to review.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹149, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹89 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

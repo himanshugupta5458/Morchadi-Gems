@@ -37,11 +37,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Draft A content pipeline working files (ADR-051). Unpublished and unconfirmed product data —
-# treated like .env.local rather than like source. The four README.md files stay tracked so a
-# fresh clone gets the folder structure; git will not descend into an ignored *directory*, which
-# is why the contents are ignored rather than the directory itself. Recommendation pending owner
-# confirmation — see docs/pipeline-prep/README.md.
+# Draft A content pipeline working files (ADR-051, narrowed by ADR-057). Unpublished and
+# unconfirmed product data in incoming/ and drafts/ stays untracked, treated like .env.local
+# rather than like source. completed/ is tracked in full: it holds only the provenance bundles
+# (draft + raw block + source images) behind products already published, which enter git at the
+# moment of publish. Git will not descend into an ignored *directory*, which is why contents are
+# ignored rather than the directories themselves — the untracked folders keep their README.md
+# tracked so a fresh clone gets the structure.
 /content-pipeline/*
 !/content-pipeline/README.md
 !/content-pipeline/drafts/
@@ -49,8 +51,8 @@ next-env.d.ts
 !/content-pipeline/incoming/
 /content-pipeline/drafts/*
 !/content-pipeline/drafts/README.md
-/content-pipeline/completed/*
-!/content-pipeline/completed/README.md
 /content-pipeline/incoming/*
 !/content-pipeline/incoming/README.md
+!/content-pipeline/pending-review/
+/content-pipeline/pending-review/**/*.webp
 Latest.xlsx

@@ -1,0 +1,47 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 53718,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/803/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 51632,
+      "converted": false,
+      "odooMediaId": 762,
+      "odooName": "13.webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/762/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 51058,
+      "converted": false,
+      "odooMediaId": 763,
+      "odooName": "10.webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/763/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 22656,
+      "converted": false,
+      "odooMediaId": 764,
+      "odooName": "12.webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/764/image_1920"
+    },
+    {
+      "file": "extra-4.webp",
+      "bytes": 24520,
+      "converted": false,
+      "odooMediaId": 765,
+      "odooName": "11.webp",
+      "sequence": "13",
+      "source": "https://www.morchadijewels.com/web/image/product.image/765/image_1920"
+    }
+  ],
+  "variants": []
+}

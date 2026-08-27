@@ -1,0 +1,46 @@
+{
+  "productId": "P104",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "121",
+    "workingId": "odoo-121",
+    "originalSku": "MJ-201",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-201-dc-jewelry-zig-zag-adjustable-ring-121",
+    "referenceTitle": "DC Jewelry | Zig-Zag Adjustable Ring",
+    "rawContent": "A sleek zig-zag design with shimmering CZ stones — minimal yet eye-catching for daily wear or special occasions.\nHighlights:\n- Lightweight & comfortable\n- Trendy geometric design\n- Great for casual & festive looks\nDetails:\n- Plating: Rosegold\n- Material: Brass\n- Stones: American Diamonds\nCare:\nAvoid water, perfumes & harsh chemicals. Clean with a soft cloth",
+    "rawHtml": "<p data-oe-version=\"2.0\">A sleek zig-zag design with shimmering CZ stones — minimal yet eye-catching for daily wear or special occasions.</p><p><strong>Highlights:</strong></p><ul>\n<li><p>Lightweight &amp; comfortable</p></li>\n<li><p>Trendy geometric design</p></li>\n<li><p>Great for casual &amp; festive looks</p></li>\n</ul><p><strong>Details:</strong></p><ul>\n<li><p>Plating: Rosegold</p></li>\n<li><p>Material: Brass</p></li>\n<li><p>Stones: American Diamonds</p></li>\n</ul><p><strong>Care:</strong></p><p>\nAvoid water, perfumes &amp; harsh chemicals. Clean with a soft cloth</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Zig-Zag Adjustable Ring – Rose Gold CZ Jewelry",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P104.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P104/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

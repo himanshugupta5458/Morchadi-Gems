@@ -1445,9 +1445,11 @@ describe("Part A — the needs-attention report", () => {
 });
 
 /**
- * The register's real structure, reproduced: the `## Register` heading, the table with its example
- * row, **the paragraph that sits between the table and the next heading**, then `## Rejected ids`
- * with a table of its own.
+ * The register's real structure, reproduced: the `## Register` heading, the table,
+ * **the paragraph that sits between the table and the next heading**, then `## Rejected ids`
+ * with a table of its own. The fixture keeps a struck-through example row that the real file
+ * deleted on 2026-08-24 (the row's own text said to delete it once real rows existed) — here it
+ * stands in for any non-queued row an append must flow around and leave untouched.
  *
  * That paragraph is the whole reason this fixture exists in this form. The old one ran the table
  * straight into the next heading, so an insertion above that heading looked correct — and against
@@ -1497,6 +1499,15 @@ function registerTableOf(markdown: string) {
   return table;
 }
 
+function rejectedTableOf(markdown: string) {
+  const table = parseMarkdownTables(markdown).tables.find(
+    (candidate) =>
+      candidate.headerCells[0] === "Product ID" && candidate.headerCells.includes("Rejected"),
+  );
+  if (table === undefined) throw new Error("no rejected-ids table in the parsed output");
+  return table;
+}
+
 describe("the register fixture matches the real file", () => {
   const realRegister = readFileSync(join(REPO_ROOT, "docs/pipeline-prep/drafts-in-progress.md"), "utf8");
 
@@ -1520,24 +1531,44 @@ describe("the register fixture matches the real file", () => {
   });
 
   /**
-   * Before Stage 0 ran for real, the table held only the struck-through example row while the
-   * prose already said the migration "starts at P101" — proving a prose mention is not a
-   * reservation. Since the 2026-08-24 run, P101–P642 are reserved by rows of their own; the
-   * prose sentence is still there, and the prose-is-not-a-reservation guard now lives in the
-   * synthetic test below. The eleven pilot products published on 2026-08-24 moved to
-   * `products-completed.md`, per the register convention that the two files never hold the
-   * same id at the same time — their reservation now lives in `data/products.json` itself,
-   * where the ids are active records.
+   * The expected register state is DERIVED, never hardcoded: an earlier version of this test
+   * pinned the exact 542-minus-11 id list as a literal, which meant every future publish broke
+   * the gate until someone hand-edited the list — contradicting ADR-053's promise that
+   * `EXPECTED_PRODUCT_COUNT` is the only line a publish updates. The invariant asserted instead:
+   * the register holds exactly the contiguous block from P101 up to its own highest row, minus
+   * ids that have been PUBLISHED into `data/products.json` and minus ids in the rejected table
+   * below it. Publishing a product removes its row and adds it to the catalogue, so both sides
+   * of the comparison move together; a row forgotten after a publish, an id present in both
+   * files, or a gap that neither the catalogue nor the rejected table accounts for all still
+   * fail loudly. A `status: "draft"` record does NOT remove its row: the register's own stage
+   * vocabulary keeps an `awaiting-publish` row until `publish-product.mjs` flips the record
+   * active, so only published records are subtracted here.
    */
-  it("the real file reserves the example row plus the still-queued migration batch, nothing else", () => {
+  it("the real file reserves every assigned id not yet published or rejected, nothing else", () => {
     const reserved = registerTableOf(realRegister).rows.map((row) => row[0]);
-    const publishedPilot = new Set([
-      "P106", "P108", "P109", "P110", "P115", "P117", "P118", "P119", "P120", "P121", "P122",
-    ]);
-    const queuedBatch = Array.from({ length: 542 }, (_unused, index) => `P${101 + index}`)
-      .filter((id) => !publishedPilot.has(id));
+    expect(reserved.length).toBeGreaterThan(0);
+    expect(reserved.every((id) => /^P\d{3,}$/.test(id))).toBe(true);
 
-    expect(reserved).toEqual(["~~P050~~", ...queuedBatch]);
+    const catalogue = JSON.parse(
+      readFileSync(join(REPO_ROOT, "data/products.json"), "utf8"),
+    ) as { id: string; status?: string }[];
+    const publishedIds = new Set(
+      catalogue.filter((record) => record.status !== "draft").map((record) => record.id),
+    );
+    const rejectedIds = new Set(
+      rejectedTableOf(realRegister)
+        .rows.map((row) => row[0])
+        .filter((cell) => /^P\d{3,}$/.test(cell)),
+    );
+
+    const highestReserved = Math.max(...reserved.map((id) => Number(id.slice(1))));
+    const expected: string[] = [];
+    for (let numeric = 101; numeric <= highestReserved; numeric += 1) {
+      const id = `P${numeric}`;
+      if (!publishedIds.has(id) && !rejectedIds.has(id)) expected.push(id);
+    }
+
+    expect(reserved).toEqual(expected);
     expect(realRegister).toContain("**P101**");
   });
 });
@@ -1909,9 +1940,17 @@ describe("runCli --dry-run", () => {
       errored.mockRestore();
     }
 
+    const realCatalogue = JSON.parse(
+      readFileSync(join(REPO_ROOT, "data/products.json"), "utf8"),
+    ) as { id: string }[];
+    const highestCatalogueId = realCatalogue
+      .map((record) => record.id)
+      .sort((left, right) => Number(left.slice(1)) - Number(right.slice(1)))
+      .at(-1);
+
     const errorOutput = errorLines.join("\n");
     expect(errorOutput).toContain("REFUSING TO RUN");
-    expect(errorOutput).toContain("P122");
+    expect(errorOutput).toContain(String(highestCatalogueId));
     expect(logLines.join("\n")).not.toContain("DRY RUN — nothing written.");
   });
 

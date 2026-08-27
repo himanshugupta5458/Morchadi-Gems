@@ -44,7 +44,7 @@ export const CATEGORIES: readonly CategoryOption[] = [
   { slug: "nose-pins", label: "Nose Pins", status: "surfaced" },
   { slug: "watches", label: "Watches", status: "surfaced" },
   { slug: "hair-accessories", label: "Hair Accessories", status: "surfaced" },
-  { slug: "gift-hampers", label: "Gift Hampers", status: "pending" },
+  { slug: "gift-hampers", label: "Gift Hampers", status: "surfaced" },
 ] as const;
 
 export const CATEGORY_SLUGS: readonly Category[] = CATEGORIES.map(

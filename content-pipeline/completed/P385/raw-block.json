@@ -1,0 +1,46 @@
+{
+  "productId": "P385",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "834",
+    "workingId": "odoo-834",
+    "originalSku": "MJ-362",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-362-kashmiri-multicolour-meenakari-crown-kundan-bracelet-watch-834",
+    "referenceTitle": "Kashmiri Multicolour Meenakari Crown Kundan Bracelet Watch",
+    "rawContent": "Fit for a queen — this extraordinary Kashmiri bracelet watch is a true work of art featuring a bold kundan crown charm on top, intricate pink & red meenakari square panels with pearl borders, a heavily CZ-encrusted dial, and a multicolour chand pendant with cascading ghungroo chains below. Every element tells a story of royal Indian craftsmanship. An absolute showstopper for brides, sangeet nights, and grand festive celebrations.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Fit for a queen — this extraordinary Kashmiri bracelet watch is a true work of art featuring a bold kundan crown charm on top, intricate pink &amp; red meenakari square panels with pearl borders, a heavily CZ-encrusted dial, and a multicolour chand pendant with cascading ghungroo chains below. Every element tells a story of royal Indian craftsmanship. An absolute showstopper for brides, sangeet nights, and grand festive celebrations.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P385.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P385/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

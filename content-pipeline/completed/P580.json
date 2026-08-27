@@ -1,0 +1,127 @@
+{
+  "productId": "P580",
+  "sourceType": "migrated",
+  "category": "anklets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold-plated with anti-tarnish coating (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated with anti-tarnish coating"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "3-in-1 layered — herringbone + bead satellite + box chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "3-in-1 layered design — herringbone + bead satellite + box chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chains",
+      "value": "flat herringbone snake chain, satellite bead chain, thin box chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a flat herringbone snake chain, a delicate satellite bead chain, and a thin box chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable extender chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable extender chain for a perfect fit"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "lobster clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure lobster clasp"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "beach, casual wear, gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for beach, casual wear & gifting"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "avoid water, perfume and chemicals",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Avoid contact with water, perfume, and chemicals to maintain shine."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P580.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P580/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 220,
+    "mrp": null,
+    "cost": 132,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Minimal, modern, and effortlessly stylish — our Triple Layer Herringbone & Bead Anklet combines three chain styles in one: a flat herringbone snake chain, a delicate satellite bead chain, and a thin box chain, all layered together for a rich stacked look without the fuss of wearing multiple pieces separately.\n- 💛 Gold-plated with anti-tarnish coating — lasting everyday shine\n- ✨ 3-in-1 layered design — herringbone + bead satellite + box chain\n- 🔗 Flat herringbone chain — smooth, sleek & modern\n- 📿 Satellite bead chain — adds subtle texture and dimension\n- 📏 Adjustable extender chain for a perfect fit\n- 🔒 Secure lobster clasp\n- 🎁 Perfect for beach, casual wear & gifting\nPairs beautifully with: Bare feet, sandals, flowy dresses, kurtis, and western co-ords.\nAvoid contact with water, perfume, and chemicals to maintain shine.",
+    "referenceTitle": "Double Layer Herringbone Gold Anti-Tarnish Anklet",
+    "originalId": "1050",
+    "originalSku": "MJ-219",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-219-double-layer-herringbone-gold-anti-tarnish-anklet-1050",
+    "originalCategories": [
+      "anklet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "OWNER ATTENTION — the title says \"Double Layer\" but the description says \"Triple Layer\" and describes \"three chain styles in one\". The layer count must be resolved by the owner before any copy is written.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹220, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹132 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

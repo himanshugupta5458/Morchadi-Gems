@@ -1,0 +1,62 @@
+{
+  "productId": "P381",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "clover charm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Clover charm"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P381.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P381/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 250,
+    "mrp": null,
+    "cost": 150,
+    "referencePrice": "₹250 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Clover charm",
+    "referenceTitle": "Clover charm",
+    "originalId": "829",
+    "originalSku": "MJ-143",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-143-clover-charm-829",
+    "originalCategories": [
+      "Charm"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Honestly sparse by design: the source text is 12 characters — the product name (\"Clover charm\") and nothing else (accepted at Stage 0 as a knownStub). No material, stone, plating, size, occasion or care information exists in the source, so no attribute candidate is proposed.",
+    "Nothing was inferred from the staged photograph (skill rule 4 — material/stone identity is never image-derived, and that bar applies to every other attribute here too). Meaningful content for this product must come from the owner during review: owner-supplied facts read off the piece itself (Path B practice), which then feed description work in Phase 2. This draft cannot proceed past review without that input.",
+    "category \"pendants\" is Stage 0's mapping of the source category \"Charm\" — confirm at review that this charm is actually sold as a pendant/charm.",
+    "One of the 10-product charm-locket group (P372–P381, Odoo ids 818–821 and 824–829), all extracted equally sparse in this batch-2 run — the group was deliberately processed last.",
+    "2026-08-25: one Type attribute added at review-application time — the only fact the source text (the product name) supports — so the record can carry at least one spec. Quote is the entire source text. No material, stone or other claim was added; those still require owner input.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹250, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹150 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

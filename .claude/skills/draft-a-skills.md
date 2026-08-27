@@ -129,10 +129,12 @@ review carries more weight for those specific candidates.
     convention, is assigned once per candidate at Draft A creation, and
     is PERMANENTLY reserved even if later rejected. The ranges, which
     this skill never chooses and only ever reads:
-    `data/products.json` holds **P001–P049**; **P050–P100 are
-    permanently retired** and are never assigned to anything; the Odoo
-    migration takes **P101 upward**, one id per accepted record, so its
-    542-record Phase B export is expected to occupy **P101–P642**. A
+    `data/products.json` holds **60 published records** — P001–P049
+    plus the first 11 migrated ids; **P050–P100 are permanently
+    retired** and are never assigned to anything; the Odoo migration
+    takes **P101 upward**, one id per accepted record — its 542-record
+    Phase B export occupies **P101–P642**, of which 11 are published
+    and **531 are still queued** in `content-pipeline/incoming/`. A
     fresh hand-made draft takes the next unused number **above the
     highest id the migration has actually assigned** — read that from
     `docs/pipeline-prep/drafts-in-progress.md` rather than assuming
@@ -263,11 +265,11 @@ A fresh draft has none of them. See
   "images": {
     "general": [
       { "path": "/products/P101.webp", "confirmed": false,
-        "sourceFile": "2026-08-23-batch-01/odoo-1002/raw/main.webp", "role": "main" }
+        "sourceFile": "2026-08-23-batch-01/P101/raw/main.webp", "role": "main" }
     ],
     "variantImages": {
       "Colour:Golden": { "path": "/products/P101-golden.webp", "confirmed": false,
-                         "sourceFile": "2026-08-23-batch-01/odoo-1002/raw/variant-golden.webp",
+                         "sourceFile": "2026-08-23-batch-01/P101/raw/variant-golden.webp",
                          "verifiedDistinct": true }
     }
   },

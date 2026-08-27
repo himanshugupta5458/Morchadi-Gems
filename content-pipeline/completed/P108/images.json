@@ -1,0 +1,29 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 122600,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/128/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 45068,
+      "converted": false,
+      "odooMediaId": 595,
+      "odooName": "AD Ring (1).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/595/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 45122,
+      "converted": false,
+      "odooMediaId": 596,
+      "odooName": "AD Ring (13).webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/596/image_1920"
+    }
+  ],
+  "variants": []
+}

@@ -1,0 +1,73 @@
+{
+  "productId": "P397",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "synthetic zircon — likely cubic zirconia; the source repeats \"Synthetic\" three times (garbled copy)",
+      "displayTerm": "Synthetic Zircon",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adorned with Synthetic Synthetic Synthetic Zircon"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "everyday wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for Women'S Everyday Wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P397.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P397/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": null,
+    "cost": 179,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear",
+    "referenceTitle": "Luxurious Tulip Flower Bracelet",
+    "originalId": "849",
+    "originalSku": "MJ-403",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-403-luxurious-tulip-flower-bracelet-849",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Luxurious Tulip Flower Bracelet\" — P395 (Odoo 847), P396 (Odoo 848), P397 (Odoo 849). The source descriptions are byte-identical across the group, so identical candidate sets across these drafts are expected and correct (pilot precedent, skill rule 17): the only per-product differentiator in the source is the photograph(s).",
+    "The one-sentence source is garbled (\"Synthetic Synthetic Synthetic Zircon\", with zero-width characters after \"Zircon\") — quoted around the artefacts, flagged for the owner. No material/plating candidate exists in the text; the anti-tarnish signal comes only from the source category \"Anti Tarnish bracelet\", which is why subcategory and suggested collection carry it while no attribute claims it.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹299, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹179 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

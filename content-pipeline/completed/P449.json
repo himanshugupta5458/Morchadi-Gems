@@ -1,0 +1,92 @@
+{
+  "productId": "P449",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "heart-shaped evil eye with crystal halo",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "This chic heart-shaped evil eye bracelet features a shimmering crystal halo for effortless daily glamour."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "crystal — glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a shimmering crystal halo"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "silver-toned (base material not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its radiant silver-toned luster"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "keep away from moisture and perfume; store in a dry place after wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep this high-fashion piece away from moisture and perfumes, and store it in a dry place after every wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P449.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P449/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 49,
+    "mrp": null,
+    "cost": 10,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shield your energy with love. This chic heart-shaped evil eye bracelet features a shimmering crystal halo for effortless daily glamour. To preserve its radiant silver-toned luster, keep this high-fashion piece away from moisture and perfumes, and store it in a dry place after every wear.",
+    "referenceTitle": "Silver Heart Evil Eye Bracelet",
+    "originalId": "905",
+    "originalSku": "MJ-552",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-552-silver-heart-evil-eye-bracelet-905",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — Stage 0 could not map the source category \"Bracelet under ₹99\". Basis: title, description and source category all say bracelet. Requires explicit owner confirmation at review.",
+    "Duplicate-title group \"Silver Heart Evil Eye Bracelet\" — P447 (Odoo 902), P449 (Odoo 905). The source descriptions are byte-identical across the pair, so identical candidate sets are expected and correct; the only per-product differentiator in the source is the photograph.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹49, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹10 is the export's real reference cost ₹9.5 rounded up to a whole rupee (the catalogue requires whole rupees); pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

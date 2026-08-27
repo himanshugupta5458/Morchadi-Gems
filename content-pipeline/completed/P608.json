@@ -1,0 +1,139 @@
+{
+  "productId": "P608",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "antique gold finish (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium antique gold finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Craft",
+      "value": "meenakari craftsmanship with ivory detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate ivory meenakari detailing"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stones",
+      "value": "red and green decorative stones, type not stated in source",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Red & green stone embellishments"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Detailing",
+      "value": "pearl bead drops (material not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "charming pearl bead drops"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "adjustable chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain for a comfortable fit"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight, skin-friendly",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & skin-friendly"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "weddings, Navratri, Teej, Karwa Chauth, Diwali, festive and party wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ideal for weddings, festive occasions, Navratri, Teej, Karwa Chauth, Diwali, and party wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Traditional Meenakari Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Traditional Meenakari Bracelet Watch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P608.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P608/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 289,
+    "mrp": null,
+    "cost": 173,
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add timeless elegance to your jewellery collection with this beautifully crafted Traditional Meenakari Bracelet Watch. Designed with an antique gold finish, delicate ivory meenakari detailing, sparkling red and green stones, and charming pearl bead drops, this bracelet watch is a perfect blend of traditional artistry and modern functionality.\nIdeal for weddings, festive occasions, Navratri, Teej, Karwa Chauth, Diwali, and party wear, this adjustable bracelet watch pairs beautifully with sarees, lehengas, salwar suits, and Indo-western outfits.\nFeatures\n-\nPremium antique gold finish\n-\nElegant Meenakari craftsmanship\n-\nRed & green stone embellishments\n-\nPearl drop detailing\n-\nAdjustable chain for a comfortable fit\n-\nLightweight & skin-friendly\n-\nPerfect for festive, bridal & party wear\n-\nGreat gifting option for women & girls\nPackage Includes: 1 Traditional Meenakari Bracelet Watch",
+    "referenceTitle": "Traditional Meenakari Bracelet Watch for Women",
+    "originalId": "1080",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1080",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Traditional Meenakari Bracelet Watch for Women\" — P606 (Odoo 1078) and P608 (Odoo 1080). The two descriptions are NOT byte-identical — likely two genuinely different designs sharing one title. Candidate sets differ honestly.",
+    "Watch movement type is not stated anywhere in the source — no mechanism attribute is proposed (nothing inferred).",
+    "originalSku is null in the export for this record — carried as null.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹289, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹173 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

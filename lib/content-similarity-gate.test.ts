@@ -28,9 +28,9 @@ function entry(id: string, description: string): SimilarityInput {
 }
 
 const NEIGHBOURS: SimilarityInput[] = [
-  entry("P001", CATALOGUE_DESCRIPTION),
+  entry("P906", CATALOGUE_DESCRIPTION),
   entry(
-    "P002",
+    "P907",
     "A glass-fronted locket on a fine chain, opening to hold a photograph small enough to keep private.",
   ),
 ];
@@ -46,7 +46,7 @@ const NEIGHBOURS: SimilarityInput[] = [
  */
 const SYNTHETIC_ID = "P900";
 
-/** Word-for-word the same as P001. Nothing scores higher than this, so it is the ceiling case. */
+/** Word-for-word the same as P906. Nothing scores higher than this, so it is the ceiling case. */
 const VERBATIM_COPY = entry(SYNTHETIC_ID, CATALOGUE_DESCRIPTION);
 
 /** Shares nothing but function words with either neighbour. */
@@ -84,14 +84,14 @@ describe("compareAgainstCatalogue", () => {
     const comparisons = compareAgainstCatalogue(VERBATIM_COPY, NEIGHBOURS);
 
     expect(comparisons).toHaveLength(2);
-    expect(comparisons[0].againstProductId).toBe("P001");
+    expect(comparisons[0].againstProductId).toBe("P906");
     expect(comparisons[0].scores.raw).toBe(1);
     expect(comparisons[0].peak.score).toBeGreaterThan(comparisons[1].peak.score);
   });
 
   it("excludes any entry carrying the candidate's own id", () => {
-    const comparisons = compareAgainstCatalogue(entry("P001", "Anything at all."), NEIGHBOURS);
-    expect(comparisons.map((comparison) => comparison.againstProductId)).toEqual(["P002"]);
+    const comparisons = compareAgainstCatalogue(entry("P906", "Anything at all."), NEIGHBOURS);
+    expect(comparisons.map((comparison) => comparison.againstProductId)).toEqual(["P907"]);
   });
 
   it("carries all three scores of the existing engine on every comparison", () => {
@@ -137,7 +137,7 @@ describe("the gate with a threshold set", () => {
     expect(report.blocked).toBe(true);
     expect(report.advisory).toBe(false);
     expect(report.exceeded).toHaveLength(1);
-    expect(report.exceeded[0].againstProductId).toBe("P001");
+    expect(report.exceeded[0].againstProductId).toBe("P906");
   });
 
   it("passes copy that scores below it", () => {
@@ -269,7 +269,7 @@ describe("draft-to-draft comparison", () => {
   }
 
   const CATALOGUE: Product[] = [
-    product("P001", "active", CATALOGUE_DESCRIPTION),
+    product("P906", "active", CATALOGUE_DESCRIPTION),
     product("P901", "draft", TEMPLATED),
     product("P902", "draft", TEMPLATED),
   ];
@@ -285,9 +285,9 @@ describe("draft-to-draft comparison", () => {
     expect(report.comparedAgainstActive).toBe(1);
     expect(report.comparedAgainstDraft).toBe(2);
     expect(report.comparisons.map((comparison) => comparison.againstProductId).sort()).toEqual([
-      "P001",
       "P901",
       "P902",
+      "P906",
     ]);
   });
 

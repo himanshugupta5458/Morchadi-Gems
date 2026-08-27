@@ -1,0 +1,47 @@
+{
+  "productId": "P608",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1080",
+    "workingId": "odoo-1080",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1080",
+    "referenceTitle": "Traditional Meenakari Bracelet Watch for Women",
+    "rawContent": "Add timeless elegance to your jewellery collection with this beautifully crafted Traditional Meenakari Bracelet Watch. Designed with an antique gold finish, delicate ivory meenakari detailing, sparkling red and green stones, and charming pearl bead drops, this bracelet watch is a perfect blend of traditional artistry and modern functionality.\nIdeal for weddings, festive occasions, Navratri, Teej, Karwa Chauth, Diwali, and party wear, this adjustable bracelet watch pairs beautifully with sarees, lehengas, salwar suits, and Indo-western outfits.\nFeatures\n-\nPremium antique gold finish\n-\nElegant Meenakari craftsmanship\n-\nRed & green stone embellishments\n-\nPearl drop detailing\n-\nAdjustable chain for a comfortable fit\n-\nLightweight & skin-friendly\n-\nPerfect for festive, bridal & party wear\n-\nGreat gifting option for women & girls\nPackage Includes: 1 Traditional Meenakari Bracelet Watch",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add timeless elegance to your jewellery collection with this beautifully crafted <strong>Traditional Meenakari Bracelet Watch</strong>. Designed with an antique gold finish, delicate ivory meenakari detailing, sparkling red and green stones, and charming pearl bead drops, this bracelet watch is a perfect blend of traditional artistry and modern functionality.</p><p>Ideal for weddings, festive occasions, Navratri, Teej, Karwa Chauth, Diwali, and party wear, this adjustable bracelet watch pairs beautifully with sarees, lehengas, salwar suits, and Indo-western outfits.</p><h3>Features</h3><ul>\n<li>\nPremium antique gold finish\n</li>\n<li>\nElegant Meenakari craftsmanship\n</li>\n<li>\nRed &amp; green stone embellishments\n</li>\n<li>\nPearl drop detailing\n</li>\n<li>\nAdjustable chain for a comfortable fit\n</li>\n<li>\nLightweight &amp; skin-friendly\n</li>\n<li>\nPerfect for festive, bridal &amp; party wear\n</li>\n<li>\nGreat gifting option for women &amp; girls\n</li>\n</ul><p><strong>Package Includes:</strong> 1 Traditional Meenakari Bracelet Watch</p>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1078",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P608.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P608/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -9,19 +9,21 @@ reads this directory.
 
 | Path | Holds |
 | --- | --- |
-| [`incoming/`](incoming/) | Stage 0 migration batches ([ADR-054](../docs/decisions/ADR-054-stage-0-migration-batch-preparation.md)) — raw blocks with real product ids assigned, **before** Draft A extraction has run. `{batch-id}/PNNN/raw-block.json`, plus a manifest and a needs-attention report |
+| [`incoming/`](incoming/) | Stage 0 migration batches ([ADR-054](../docs/decisions/ADR-054-stage-0-migration-batch-preparation.md)) — raw blocks with real product ids assigned, **before** Draft A extraction has run. One directory per product — `{batch-id}/PNNN/` holds the raw block *and* its staged source images ([ADR-057](../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md)) — plus a manifest and a needs-attention report |
 | [`drafts/`](drafts/) | Draft A objects awaiting or undergoing owner review — `PNNN.json`, one object per file |
-| [`completed/`](completed/) | Draft A objects whose product has been published into `data/products.json` — moved here, not deleted, so the provenance trail behind a live product survives |
+| [`completed/`](completed/) | The provenance bundle behind every published product — the draft (`PNNN.json`) and its whole staging directory (`PNNN/`), both moved here at publish, not deleted, so the trail behind a live product survives |
 
-All three start empty. Their `README.md` files are the only tracked contents; see
-[Tracking](#tracking-and-gitignore) below.
+All three start empty; `incoming/` empties again as products publish. See
+[Tracking](#tracking-and-gitignore) below for what git holds.
 
 ## What is not here
 
-- **No prices and no images.** Phase 1 quarantines a source price to
+- **No prices and no confirmed images.** Phase 1 quarantines a source price to
   `pricing.referencePrice` as a descriptive string and leaves `pricing.price` and `pricing.mrp`
-  null; `images.general` and `images.variantImages` stay empty. Both are assigned by hand
-  between the two validator passes. A raw block in `incoming/` does carry *suggested* image
+  null; `images.general` and `images.variantImages` carry only unconfirmed suggestions —
+  `confirmed: false` on every entry
+  ([ADR-056](../docs/decisions/ADR-056-image-confirmation-provenance-and-draft-similarity.md)).
+  Prices and image confirmations are assigned by hand between the two validator passes. A raw block in `incoming/` does carry *suggested* image
   paths with their source provenance attached — that is a proposal being carried to the manual
   assignment step, not a value it has already made, and it is why a raw block is not a draft.
 - **No product records.** Nothing in this directory is a `Product`. A draft becomes a catalogue
@@ -33,11 +35,14 @@ All three start empty. Their `README.md` files are the only tracked contents; se
 
 ## Tracking and gitignore
 
-`.gitignore` ignores the *contents* of this directory while keeping the four `README.md` files
-tracked, so a fresh clone gets the folder structure and its explanation but none of the working
-data. The recommendation and the argument against it are written up in
-[`docs/pipeline-prep/README.md`](../docs/pipeline-prep/README.md#tracking-recommendation--owner-decision-needed);
-**it is a proposal awaiting the owner's decision, not a settled rule.**
+Decided by the owner on 2026-08-24
+([ADR-057](../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md)):
+**`completed/` is tracked in full** — a product's source images and provenance enter git
+history at the moment its claims go live — while `incoming/` and `drafts/` stay untracked,
+with only their `README.md` files committed so a fresh clone gets the structure. Unpublished,
+unconfirmed candidate data never enters history; everything behind a published product does.
+The argument that settled it is in
+[`docs/pipeline-prep/README.md`](../docs/pipeline-prep/README.md#tracking-decision).
 
 ## Preparing a migration batch
 
@@ -80,7 +85,20 @@ npm run publish:product PNNN
 ```
 
 Flips `PNNN` from `draft` to `active` in `data/products.json`, regenerates `data/keyword-map.json`,
-moves `drafts/PNNN.json` to `completed/PNNN.json`, and prints the two register rows to update by
-hand. It refuses if the readiness check fails, if the record is not in the catalogue, if it is
-already active, or if publishing would give one primary keyword two owners. The record itself is
-written into `data/products.json` beforehand by the orchestration skill, always as a draft.
+moves `drafts/PNNN.json` to `completed/PNNN.json`, moves the product's staging directory
+`incoming/{batch}/PNNN/` to `completed/PNNN/`
+([ADR-057](../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md)), and prints
+the two register rows to update by hand. It refuses if the readiness check fails, if the record
+is not in the catalogue, if it is already active, or if publishing would give one primary
+keyword two owners. The record itself is written into `data/products.json` beforehand by the
+orchestration skill, always as a draft.
+
+## Surveying the staged images
+
+```
+npm run report:images
+```
+
+Read-only: per-product confirmation counts, cross-product duplicate-hash groups (byte-identical
+photographs shared between products, including already-published ones), confirmed paths missing
+under `public/`, and orphaned staging entries. Run it before starting a review sub-batch.

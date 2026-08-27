@@ -1,0 +1,47 @@
+{
+  "productId": "P375",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "821",
+    "workingId": "odoo-821",
+    "originalSku": "MJ-136",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-136-cherry-charm-821",
+    "referenceTitle": "Cherry charm",
+    "rawContent": "Cherry",
+    "rawHtml": "<div data-oe-version=\"2.0\">Cherry</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 6 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P375.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P375/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P533",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "997",
+    "workingId": "odoo-997",
+    "originalSku": "MJ-264",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-264-glow-glam-birthday-hamper-997",
+    "referenceTitle": "Glow & Glam Birthday Hamper",
+    "rawContent": "Birthday hamper for girls who love skincare + glam ✨ Pomegranate face mask, nose strip, wet wipes, lip balm, glass bangles, jhumka earrings and pearl hair pin. Only ₹750.\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Birthday hamper for girls who love skincare + glam ✨ Pomegranate face mask, nose strip, wet wipes, lip balm, glass bangles, jhumka earrings and pearl hair pin. Only ₹750.<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P533.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P533/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹750 sale price (morchadijewels.com, reference only)"
+  }
+}

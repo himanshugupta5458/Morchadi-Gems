@@ -1,0 +1,50 @@
+{
+  "productId": "P397",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "849",
+    "workingId": "odoo-849",
+    "originalSku": "MJ-403",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-403-luxurious-tulip-flower-bracelet-849",
+    "referenceTitle": "Luxurious Tulip Flower Bracelet",
+    "rawContent": "A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 848, 847 - descriptions byte-identical",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P397.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P397/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

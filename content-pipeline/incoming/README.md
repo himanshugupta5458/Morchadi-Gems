@@ -10,17 +10,27 @@ record. **This directory starts empty**, and this file is the only thing in it t
 {batch-id}/
 ├── manifest.json         one entry per record READ — queued and refused alike
 ├── needs-attention.md    every refused record, with the field and the reason
-├── odoo-{originalId}/    the downloader's output, read but never written by Stage 0
-│   └── raw/main.webp, extra-N.webp, variant-*.webp
 └── P101/
-    └── raw-block.json    the assigned id, the source notes, the transformed shapes
+    ├── raw-block.json    the assigned id, the source notes, the transformed shapes
+    ├── images.json       the downloader's per-image manifest (file, bytes, source URL)
+    └── raw/              main.webp, extra-N.webp, variant-*.webp — the staged source images
 ```
+
+One directory per product, holding everything about it
+([ADR-057](../../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md)): the
+downloader's `odoo-{originalId}/` sibling directories were merged into their products'
+directories on 2026-08-24, with every suggestion's `sourceFile` rewritten to match — the Odoo
+identity lives on in `sourceNotes.workingId`. When a product is published,
+`scripts/publish-product.mjs` moves its whole directory to
+[`../completed/`](../completed/), so this directory's product count *is* the
+work-remaining list. `npm run report:images` is the read-only survey of everything staged
+here — confirmation counts, cross-product duplicate photographs, orphans.
 
 ## A raw block is not a Draft A object
 
 `raw-block.json` is the input extraction will read, not its output. It carries `sourceNotes`, the
 pre-mapped category / subcategory / `suggestedCollections`, `pricing.referencePrice`, the
-transformed `variants`, and *suggested* `images` with their provenance beside them. It carries no
+transformed `variants`, and *suggested* `images` with their provenance inside them. It carries no
 `attributes`, no `flaggedContent`, no `personalized` verdict and no `status`, because every one of
 those is produced by Draft A extraction, which has not run.
 

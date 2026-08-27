@@ -1,0 +1,47 @@
+{
+  "productId": "P374",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "820",
+    "workingId": "odoo-820",
+    "originalSku": "MJ-145",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-145-coconut-tree-charm-820",
+    "referenceTitle": "Coconut tree Charm",
+    "rawContent": "Coconut tree Charm",
+    "rawHtml": "<div data-oe-version=\"2.0\">Coconut tree Charm</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 18 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P374.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P374/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

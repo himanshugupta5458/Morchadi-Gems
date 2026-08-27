@@ -45,12 +45,12 @@ const FIXTURE_MAP: KeywordMap = {
   source: "fixture",
   productCount: 3,
   primary: {
-    "gold-plated initial ring": ["P001"],
-    "cubic zirconia stud earrings": ["P002"],
+    "gold-plated initial ring": ["P906"],
+    "cubic zirconia stud earrings": ["P907"],
   },
   secondary: {
-    "adjustable ring for women": ["P001", "P003"],
-    "everyday studs": ["P002"],
+    "adjustable ring for women": ["P906", "P908"],
+    "everyday studs": ["P907"],
   },
 };
 
@@ -101,7 +101,7 @@ describe("hard collisions — the only blocking case", () => {
     expect(report.blocked).toBe(true);
     expect(report.hard).toHaveLength(1);
     expect(report.hard[0].kind).toBe("primary-duplicate");
-    expect(report.hard[0].productIds).toEqual(["P001"]);
+    expect(report.hard[0].productIds).toEqual(["P906"]);
   });
 
   it("blocks regardless of case and surrounding whitespace", () => {
@@ -115,7 +115,7 @@ describe("hard collisions — the only blocking case", () => {
 
   it("does not block a product colliding with its own existing keyword", () => {
     const report = checkPrimaryKeywordCollision("gold-plated initial ring", FIXTURE_MAP, {
-      ignoreProductId: "P001",
+      ignoreProductId: "P906",
     });
 
     expect(report.blocked).toBe(false);
@@ -139,7 +139,7 @@ describe("advisory overlaps — reported, never blocking", () => {
     expect(report.hard).toHaveLength(0);
     expect(report.advisory).toHaveLength(1);
     expect(report.advisory[0].kind).toBe("secondary-overlap");
-    expect(report.advisory[0].productIds).toEqual(["P001", "P003"]);
+    expect(report.advisory[0].productIds).toEqual(["P906", "P908"]);
   });
 
   it("reports a near-match against a primary keyword without blocking", () => {
@@ -160,7 +160,7 @@ describe("advisory overlaps — reported, never blocking", () => {
 
   it("suppresses an advisory that only names the product being written for", () => {
     const report = checkPrimaryKeywordCollision("everyday studs", FIXTURE_MAP, {
-      ignoreProductId: "P002",
+      ignoreProductId: "P907",
     });
 
     expect(report.advisory).toHaveLength(0);
@@ -176,8 +176,8 @@ describe("advisory overlaps — reported, never blocking", () => {
 describe("a hard collision and an advisory can coexist", () => {
   const map: KeywordMap = {
     ...FIXTURE_MAP,
-    primary: { "everyday studs": ["P009"] },
-    secondary: { "everyday studs": ["P002"] },
+    primary: { "everyday studs": ["P909"] },
+    secondary: { "everyday studs": ["P907"] },
   };
 
   it("blocks on the primary while still reporting the secondary overlap", () => {

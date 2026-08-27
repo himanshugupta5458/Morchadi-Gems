@@ -1,0 +1,102 @@
+{
+  "productId": "P475",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold-toned (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this exquisite gold-toned floral nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stones",
+      "value": "red and white stones, type not stated in source",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adorned with shimmering red and white stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "floral nath",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-toned floral nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "weddings",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "it is a perfect high-fashion statement for weddings"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "keep away from moisture and perfume; store in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep it away from moisture and perfumes, and store it safely in a dry place after use"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P475.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P475/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 129,
+    "mrp": null,
+    "cost": 60,
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of ethnic glamour with this exquisite gold-toned floral nath. Adorned with shimmering red and white stones, it is a perfect high-fashion statement for weddings. To maintain its radiant luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "referenceTitle": "Gold-Plated Floral Nath – Sparkling Ruby Red & White Stone Studded",
+    "originalId": "931",
+    "originalSku": "MJ-308",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-308-gold-plated-floral-nath-sparkling-ruby-red-white-stone-studded-931",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "The title's \"Ruby Red\" is a colour word in the title only — the description says just \"red and white stones\", so no ruby identity is proposed. If \"ruby\" ever surfaces at review it must come from the owner, not this text.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹129, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹60 is the export's real reference cost figure; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

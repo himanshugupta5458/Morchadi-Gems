@@ -1,0 +1,45 @@
+{
+  "productId": "P204",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "502",
+    "workingId": "odoo-502",
+    "originalSku": "MJ-510",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-510-rose-gold-v-shaped-adjustable-ring-502",
+    "referenceTitle": "Rose Gold V-Shaped Adjustable Ring",
+    "rawContent": "Fashioned in a chic rose-gold tone, this V-shaped minimalist ring is accentuated with sparkling cubic zirconia stones along the band. The sleek curve adds a modern flair and looks beautiful worn alone or stacked with other rings.\n- Material: Alloy base\n- Plating: Rose gold plated\n- Stone Type: Cubic zirconia stones\n- Design: V-shaped crystal band ring\n- Size / Fit: Free size – adjustable\n- Best Suitable For: Everyday wear, party wear, gift for women",
+    "rawHtml": "<p data-oe-version=\"2.0\">Fashioned in a chic rose-gold tone, this V-shaped minimalist ring is accentuated with sparkling cubic zirconia stones along the band. The sleek curve adds a modern flair and looks beautiful worn alone or stacked with other rings.</p><ul>\n<li><p><strong>Material:</strong> Alloy base</p></li>\n<li><p><strong>Plating:</strong> Rose gold plated</p></li>\n<li><p><strong>Stone Type:</strong> Cubic zirconia stones</p></li>\n<li><p><strong>Design:</strong> V-shaped crystal band ring</p></li>\n<li><p><strong>Size / Fit:</strong> Free size – adjustable</p></li>\n<li><p><strong>Best Suitable For:</strong> Everyday wear, party wear, gift for women</p></li></ul>",
+    "originalCategories": [],
+    "originalMetaDescription": "Chic rose gold V-shaped ring with CZ stones. Minimalist & elegant style perfect for stacking, daily wear & gifting.",
+    "exportNotes": [
+      "product had no source category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P204.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P204/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹85 sale price (morchadijewels.com, reference only)"
+  }
+}

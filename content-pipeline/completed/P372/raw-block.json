@@ -1,0 +1,47 @@
+{
+  "productId": "P372",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "818",
+    "workingId": "odoo-818",
+    "originalSku": "MJ-390",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-390-large-tree-charm-818",
+    "referenceTitle": "Large Tree charm",
+    "rawContent": "Large Tree",
+    "rawHtml": "<div data-oe-version=\"2.0\">Large Tree</div>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "source description is only 10 characters - needs description written, not extracted",
+      "only one image available from source"
+    ],
+    "knownStub": true
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P372.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P372/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

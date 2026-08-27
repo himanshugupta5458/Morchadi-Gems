@@ -1,0 +1,208 @@
+{
+  "productId": "P586",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "Wine Red",
+        "Dusty Mauve",
+        "Pearl Champagne",
+        "Champagne Gold",
+        "Classic Black",
+        "Blush Pink"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "satin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant satin rose flower hair tie, available in 6 shades"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Band",
+      "value": "soft stretchable elastic, gentle on hair",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Soft stretchable elastic band, gentle on hair"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "handcrafted rosette",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted rosette design, adds a chic touch to any look"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dual use",
+      "value": "doubles as a bracelet/wrist accessory",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Doubles as a bracelet/wrist accessory when not in hair"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Grip",
+      "value": "lightweight, no-damage grip for all hair types",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight, no-damage grip for all hair types"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear, office, college, parties, gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for daily wear, office, college, parties & gifting"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P586.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P586-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P586-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P586-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P586-5.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P586-6.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P586-7.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P586-8.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/extra-7.webp",
+        "role": "extra-7"
+      }
+    ],
+    "variantImages": {
+      "Color:Wine Red": {
+        "path": "/products/P586-wine-red.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-wine-red.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Dusty Mauve": {
+        "path": "/products/P586-dusty-mauve.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-dusty-mauve.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Pearl Champagne": {
+        "path": "/products/P586-pearl-champagne.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-pearl-champagne.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Champagne Gold": {
+        "path": "/products/P586-champagne-gold.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-champagne-gold.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Classic Black": {
+        "path": "/products/P586-classic-black.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-classic-black.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Blush Pink": {
+        "path": "/products/P586-blush-pink.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P586/raw/variant-blush-pink.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "price": 69,
+    "mrp": null,
+    "cost": 41,
+    "referencePrice": "₹69 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Elegant satin rose flower hair tie, available in 6 shades\nSoft stretchable elastic band, gentle on hair\nHandcrafted rosette design, adds a chic touch to any look\nPerfect for daily wear, office, college, parties & gifting\nDoubles as a bracelet/wrist accessory when not in hair\nLightweight, no-damage grip for all hair types",
+    "referenceTitle": "Satin Rose Flower Hair Tie",
+    "originalId": "1056",
+    "originalSku": "MJ-523",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-523-satin-rose-flower-hair-tie-1056",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Source says \"available in 6 shades\" while the carried Color option lists seven values — the extra value is \"Combo\", presumably the full set; confirm at review.",
+    "For the manual image-assignment step (verified by sha-256 in this run): five of the six carried variant images are byte-identical to gallery extras — variant-wine-red=extra-5, variant-dusty-mauve=extra-1, variant-champagne-gold=extra-2, variant-classic-black=extra-3, variant-pearl-champagne=extra-4; only variant-blush-pink is unique. The raw block's verifiedDistinct flags mean distinct-from-each-other, not distinct-from-gallery. Internal duplicates to reconcile at image review; carried verbatim here per the skill's carry-never-decide rule.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹69, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹41 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

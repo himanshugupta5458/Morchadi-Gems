@@ -1,0 +1,62 @@
+{
+  "productId": "P321",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "747",
+    "workingId": "odoo-747",
+    "originalSku": "MJ-318",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-318-gold-plated-round-cz-stud-earrings-with-square-stone-center-747",
+    "referenceTitle": "Gold-Plated Round CZ Stud Earrings with Square Stone Center",
+    "rawContent": "- Elevate your everyday elegance with these stunning gold-plated round stud earrings, designed with a unique square shimmer stone at the center. Surrounded by a sparkling CZ-studded halo, these earrings blend minimal style with luxurious detail, making them perfect for both daily wear and special occasions.\n- Lightweight and comfortable, they pair beautifully with ethnic, Western, and Indo-western outfits. The refined gold finish and lustrous central stone add sophistication to any look, making these studs a versatile must-have in your jewelry collection.\n- round stud earrings, gold-plated studs, CZ halo earrings, square center stone earrings, daily wear jewelry, party wear stud earrings, women's stylish earrings",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Elevate your everyday elegance with these stunning <strong>gold-plated round stud earrings</strong>, designed with a unique square shimmer stone at the center. Surrounded by a sparkling CZ-studded halo, these earrings blend minimal style with luxurious detail, making them perfect for both daily wear and special occasions.</li><li>Lightweight and comfortable, they pair beautifully with ethnic, Western, and Indo-western outfits. The refined gold finish and lustrous central stone add sophistication to any look, making these studs a versatile must-have in your jewelry collection.</li><li>round stud earrings, gold-plated studs, CZ halo earrings, square center stone earrings, daily wear jewelry, party wear stud earrings, women's stylish earrings</li></ul></div>",
+    "originalCategories": [
+      "Traditional Earrings"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P321.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P321-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P321-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P321-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P321/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

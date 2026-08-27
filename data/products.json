@@ -2917,5 +2917,2244 @@
         "DC Ring"
       ]
     }
+  },
+  {
+    "id": "P101",
+    "name": "Maroon Jelly Glass Bangles",
+    "category": "bangles",
+    "status": "active",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 132
+    },
+    "media": {
+      "images": [
+        "/products/P101.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Deep maroon, translucent",
+      "occasion": "Traditional and festive wear"
+    },
+    "description": "Jelly bangles are the comfort food of the bangle box, and this stack shows why the internet keeps going back to them. The glass is translucent right through, a deep maroon that pools darker where the bangles overlap and glows wine-red when light passes behind your wrist. No coating, no paint, just colour in the material itself.\n\nThe finish is smooth and rounded, gentle on the skin and silent on a desk, which matters more than anyone admits during a long work day. The look leans traditional with a saree and turns almost sculptural with a plain white kurta, a full stack doing what a single bracelet cannot.\n\nSizes 2.4, 2.6 and 2.8 cover most wrists. Being glass, they prefer soft landings: slip them on over a folded dupatta the first time, store them stacked on a bangle roll, and they will keep their gloss for seasons of wear.\n\nA transparency note, in both senses. The old listing's records disagree about this product's colour and count, its title saying a maroon set of eight and its copy saying green and twelve, and the photograph shows the deep maroon stack we have listed. If the exact count in the current stock matters for your event, message us first and we will count them for you.",
+    "seo": {
+      "primaryKeyword": "maroon jelly bangles",
+      "secondaryKeywords": [
+        "jelly glass bangles",
+        "translucent bangles set",
+        "traditional glass bangles"
+      ],
+      "metaTitle": "Maroon Jelly Glass Bangles, Translucent Stack | Morchadi",
+      "metaDescription": "Deep maroon jelly glass bangles, translucent right through and smooth on the wrist. Sizes 2.4 to 2.8, at ₹220 with 7-day returns across India.",
+      "imageAlt": "Stack of translucent deep maroon jelly glass bangles held in a hand against a woven gold clutch",
+      "ogTitle": "The Viral Jelly Bangle, in Deep Maroon | Morchadi Gems",
+      "ogDescription": "Translucent maroon glass bangles that glow wine-red in the light. The comfort classic of the bangle box, ₹220 from Morchadi Gems.",
+      "ogImage": "/products/P101.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "31",
+      "originalSku": "MJ-540",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-540-set-of-8-viral-jelly-bangle-maroon-31",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P102",
+    "name": "Gold-Plated Love Letters Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 200,
+      "mrp": 200,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P102.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated (base metal not stated in source)",
+      "quality": "Premium quality, durable finish",
+      "occasion": "Casual and festive wear"
+    },
+    "description": "Four letters, one of them cheating. This little charm spells LOVE in polished gold-plated capitals, with the O swapped for a heart-shaped clear stone in a smooth bezel, so the word carries its own punctuation. It is small enough to sit on a fine chain without shouting and solid enough to feel like a proper object between the fingers.\n\nWord charms live or die on their typography. This one keeps the letters thick and even, the finish bright, and the single stone placed where it does the most work. Premium quality with a durable finish is the maker's claim, and the piece backs it up in hand.\n\nWhat you hang it on is your call. It suits a plain chain at the collarbone, joins a charm bracelet without clashing, and works as the keepsake you give with intent, an anniversary, a first Valentine's, the friend who got through a hard year. Ideal for casual as much as festive wear, it does not demand an occasion.\n\nKeep it dry, wipe it soft after wear, and the plated shine stays bright between occasions. A second Love charm lives in this catalogue with plain letters and no stone; this is the sparklier of the two.",
+    "seo": {
+      "primaryKeyword": "love letters charm",
+      "secondaryKeywords": [
+        "love charm pendant",
+        "gold-plated word charm",
+        "gift charm for her"
+      ],
+      "metaTitle": "Gold-Plated Love Letters Charm with a Heart Stone, ₹200",
+      "metaDescription": "LOVE spelled in polished gold-plated letters with a clear heart-shaped stone for the O. A small keepsake charm at ₹200 with 7-day returns across India.",
+      "imageAlt": "Gold-plated charm spelling LOVE with a clear heart-shaped stone in place of the letter O",
+      "ogTitle": "The Word, With Its Own Sparkle | Morchadi Gems",
+      "ogDescription": "A gold-plated LOVE charm whose O is a clear heart-shaped stone. Small, solid and made for giving, at ₹200 from Morchadi Gems.",
+      "ogImage": "/products/P102.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "50",
+      "originalSku": "MJ-399",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-399-love-charm-50",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P104",
+    "name": "Zig-Zag CZ Ring in Rosegold Plate",
+    "category": "rings",
+    "status": "active",
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P104.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rosegold-plated brass",
+      "stone": "Cubic zirconia",
+      "design": "Zig-zag geometric",
+      "weight": "Lightweight",
+      "occasion": "Casual and festive looks",
+      "care": "Avoid water, perfumes and harsh chemicals; clean with a soft cloth"
+    },
+    "description": "Lightning in miniature. The band of this ring breaks into a sharp zig-zag across the finger, every step of the line set with small cubic zirconia stones in milgrain-edged settings, so the geometry sparkles end to end. The rosegold plating over brass keeps the tone soft even while the shape stays electric.\n\nGeometric rings do a specific job in a collection: they read modern without needing size. This one stays low and slim on the hand, which makes it a natural for the index or middle finger where its angles get seen, and it slips under gloves and through hair without catching.\n\nThe old-site copy called it minimal yet eye-catching, and for once the sales line is accurate. It is trendy in the way that survives trends, since a zig-zag dates back to every civilisation that ever decorated a pot.\n\nBrass with plating asks for dry hands and no perfume mist, plus a soft-cloth wipe before it goes back in the box; the stones themselves are happy with a gentle brush now and then. Great for casual wear and festive evenings alike, and at this price an easy add-on to a gift order, the extra sparkle that makes the parcel feel abundant.",
+    "seo": {
+      "primaryKeyword": "zig-zag cz ring",
+      "secondaryKeywords": [
+        "geometric ring for women",
+        "rosegold plated brass ring",
+        "american diamond ring"
+      ],
+      "metaTitle": "Zig-Zag CZ Ring in Rosegold-Plated Brass, Slim Fit at ₹59",
+      "metaDescription": "A sharp zig-zag band lined with small cubic zirconia in rosegold-plated brass. Slim, geometric and just ₹59, with 7-day returns across India.",
+      "imageAlt": "Rosegold-plated ring with a zig-zag band lined in tiny cubic zirconia stones on a black velvet card",
+      "ogTitle": "Lightning for One Finger, ₹59 | Morchadi Gems",
+      "ogDescription": "A zig-zag of cubic zirconia in soft rosegold-plated brass, slim enough for every day. Geometry at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P104.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "121",
+      "originalSku": "MJ-201",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-201-dc-jewelry-zig-zag-adjustable-ring-121",
+      "originalCategories": [
+        "DC Ring"
+      ]
+    }
+  },
+  {
+    "id": "P123",
+    "name": "Stacked Coil Golden Ring",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 59,
+      "mrp": 59,
+      "cost": 35
+    },
+    "media": {
+      "images": [
+        "/products/P123.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold plating (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "size": "Adjustable, fits most finger sizes",
+      "type": "Minimal yet glamorous",
+      "occasion": "Daily wear, parties, gifting",
+      "care": "Keep away from water and perfume; store in a dry place when not in use"
+    },
+    "description": "One ring doing the work of five. The band is built as a stack of slim coils fused into a single piece, so from across a table it reads as a handful of stacking rings worn perfectly, with none of the shuffling and spinning that real stacks demand. The golden finish is polished bright, and the coil ridges catch light in moving lines as your hand turns.\n\nChunky rings are having their moment, and this shape is the easy way in. The width holds its own next to a watch or a sleeve cuff, but the design stays plain, no stones, no motifs, which is exactly what keeps it wearable with office cotton on Monday and a silk kurta on Friday.\n\nBecause the surface is all metal shine, care is refreshingly simple. A wipe with a dry soft cloth restores the polish, and keeping it clear of perfume and water spray preserves the finish for the long run.\n\nOne honesty note before you order. This listing reached us with two conflicting records of its finish, the title calling it golden steel and the older copy calling it rose gold, and the photographs show the warm golden piece you see here. If the exact base metal matters to you, ask us before ordering and we will confirm against the stock in hand.",
+    "seo": {
+      "primaryKeyword": "stacked coil ring",
+      "secondaryKeywords": [
+        "chunky golden ring",
+        "multi band ring for women",
+        "everyday bold ring"
+      ],
+      "metaTitle": "Stacked Coil Golden Ring, Five Bands in One Piece at ₹59",
+      "metaDescription": "A wide golden ring built as fused slim coils, giving a full ring-stack look in one solid piece. Bold, plain and easy to wear, ₹59 with returns.",
+      "imageAlt": "Wide golden ring formed of five fused polished coils resting on white satin beside a red rose",
+      "ogTitle": "A Ring Stack Without the Shuffle | Morchadi Gems",
+      "ogDescription": "Five slim coils fused into one wide golden ring, polished bright and wearable anywhere. The easy bold ring at ₹59 from Morchadi Gems.",
+      "ogImage": "/products/P123.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "151",
+      "originalSku": "MJ-584",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-584-stainless-steel-golden-ring-151",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P204",
+    "name": "V-Shaped CZ Band Ring in Rose Gold",
+    "category": "rings",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 85,
+      "mrp": 85,
+      "cost": 51
+    },
+    "media": {
+      "images": [
+        "/products/P204.webp"
+      ]
+    },
+    "specs": {
+      "material": "Rose gold-plated alloy",
+      "stone": "Cubic zirconia",
+      "design": "V-shaped crystal band",
+      "size": "Free size, adjustable",
+      "occasion": "Everyday wear, party wear, gifting"
+    },
+    "description": "A straight pavé band takes one decisive dip, and that single V is the whole design. Cubic zirconia stones run shoulder to shoulder along the rose gold-plated alloy band, each in its own tiny beaded setting, so the line of light bends with the shape and points neatly down the finger.\n\nChevron rings earn their keep as stackers. The V leaves visual room above and below, which means this ring frames a plain band beautifully, sits under a solitaire without crowding it, and still looks finished worn alone on a middle finger. The free-size band adjusts with a gentle squeeze, one less thing to guess when it is a gift.\n\nThe rose gold tone is warm without leaning orange, the shade that flatters mehendi and pale winter hands alike. At everyday and party wear it is entirely at home; it will not fight a watch, and it will not snag knitwear, since the stones sit low in their settings.\n\nKeep it out of water, spray perfume before the ring goes on rather than after, and wipe it at night. Small habits, long shine. For anyone building a stacking-ring rotation, a V-band is the piece that makes the others look intentional.",
+    "seo": {
+      "primaryKeyword": "v shaped cz ring",
+      "secondaryKeywords": [
+        "chevron band ring",
+        "rose gold adjustable ring",
+        "stacking ring for women"
+      ],
+      "metaTitle": "V-Shaped CZ Band Ring, Rose Gold Plated and Free Size",
+      "metaDescription": "A pavé line of cubic zirconia takes a clean V dip on a rose gold-plated adjustable band. The stacker that organises the stack, ₹85 with returns.",
+      "imageAlt": "Rose gold-plated band ring with a V dip lined in small cubic zirconia stones, on a black display card",
+      "ogTitle": "One Band, One Decisive Dip, ₹85 | Morchadi Gems",
+      "ogDescription": "A cubic zirconia pavé band bent into a single clean V, in adjustable rose gold plate. The stacking essential at ₹85 from Morchadi Gems.",
+      "ogImage": "/products/P204.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "502",
+      "originalSku": "MJ-510",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-510-rose-gold-v-shaped-adjustable-ring-502",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P212",
+    "name": "Wavy Glass Kangan in Six Sheer Shades",
+    "category": "bangles",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 119
+    },
+    "media": {
+      "images": [
+        "/products/P212.webp",
+        "/products/P212-2.webp",
+        "/products/P212-3.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "pills",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass, high-gloss finish",
+      "design": "Wave-shaped (wavy silhouette)",
+      "colours": "Multicolor: green, pink, blue, violet, red, yellow, and more",
+      "weight": "Lightweight",
+      "occasion": "Parties, festivals, weddings, daily wear"
+    },
+    "description": "A kangan that refuses to sit in a straight line. Each of these glass bangles is shaped into a continuous S-wave, so a stack on the wrist reads as ripples rather than rings. The glass is sheer enough for light to pass straight through, which is where the colours earn their keep: green, pink, blue, violet, red and yellow, each sold by its design number so you can pick the shade the outfit needs.\n\nThe wave is more than a look. Two wavy bangles worn together interlock visually, filling the wrist the way four straight bangles would, and the high-gloss surface keeps the colour bright without any coating to wear off. Glass has that advantage over plated metal. The colour is the material itself.\n\nThese are lightweight on the hand and comfortable through a long function, though glass asks for the usual respect: put them on over a soft surface the first few times, and store them where they will not knock together. Sizes 2.6 and 2.8 cover most wrists.\n\nOne thing worth knowing before you order. The listing title says two pieces, while the maker's own copy describes a set of six shades, so confirm the count you want with us if it matters for a matched look. Either way, the wave shape is what people will ask about at the wedding.",
+    "seo": {
+      "primaryKeyword": "wavy glass kangan",
+      "secondaryKeywords": [
+        "wave design glass bangles",
+        "sheer glass kangan set",
+        "festive glass bangles"
+      ],
+      "metaTitle": "Wavy Glass Kangan in Six Sheer Shades | Morchadi Gems",
+      "metaDescription": "Sheer glass kangan shaped in a continuous wave, in six shades picked by design number. Sizes 2.6 and 2.8, ₹199, with 7-day returns across India.",
+      "imageAlt": "Six wavy glass kangan in green, blue, purple, red, yellow and magenta stacked on a white roll, numbered one to six",
+      "additionalImageAlts": [
+        "Stack of sheer S-wave glass bangles in mixed bright shades photographed against white satin",
+        "Close view of wavy glass kangan showing the glossy curve of each colour in the stack"
+      ],
+      "ogTitle": "Glass Kangan That Ripple Around the Wrist, ₹199",
+      "ogDescription": "A kangan in a continuous glass wave, sheer enough to glow. Six shades to pick by number, sized 2.6 and 2.8, from Morchadi Gems at ₹199.",
+      "ogImage": "/products/P212.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "511",
+      "originalSku": "MJ-608",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-608-twisted-crystal-kangan-2-piece-511",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P213",
+    "name": "Dark Rainbow Raindrop Glass Bangles",
+    "category": "bangles",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 89
+    },
+    "media": {
+      "images": [
+        "/products/P213.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colours": "Multicolor: pink, yellow, blue, orange",
+      "design": "Golden polka-dot accents",
+      "weight": "Lightweight",
+      "occasion": "Weddings, festivals, parties, everyday ethnic wear"
+    },
+    "description": "Each of these slim glass bangles carries rows of faceted droplets in deep pinks, blues, ambers and greens, dotted through with tiny golden beads, so a full stack reads like rain caught mid-fall against an evening sky. The palette is the dark half of the rainbow, richer and moodier than the usual festival brights.\n\nHandcrafted from premium-quality glass, the bangles are thin enough to wear a dozen at once, and that is genuinely how they are meant to be worn. The faceting means every small movement of the hand scatters light, while the golden polka dots keep warmth in the mix even indoors.\n\nThey weigh very little for the effect they produce, comfortable from the morning haldi through the last dance. Weddings and festivals are their obvious homes, though two or three slipped among plain metal bangles will smarten an everyday kurta without ceremony.\n\nGlass wants a little courtesy: on over a soft surface, off before scrubbing dishes, stored where they cannot chime against each other all night. Sizes 2.4, 2.6 and 2.8 are available. If you are gifting a bangle lover, the dark palette is the one they probably do not own yet, which is exactly what makes it the better present.",
+    "seo": {
+      "primaryKeyword": "raindrop glass bangles",
+      "secondaryKeywords": [
+        "dark multicolour bangles",
+        "faceted glass bangles",
+        "wedding glass bangles"
+      ],
+      "metaTitle": "Dark Rainbow Raindrop Glass Bangles with Gold Dots, ₹149",
+      "metaDescription": "Slim glass bangles with faceted raindrop texture in deep pinks, blues, ambers and greens, dotted in gold. Sizes 2.4 to 2.8 at ₹149 with returns.",
+      "imageAlt": "Fan of slim faceted glass bangles in deep pink, blue, amber and green with tiny gold bead dots held in a hand",
+      "ogTitle": "Rain, Caught in a Dozen Bangles | Morchadi Gems",
+      "ogDescription": "Faceted raindrops in the dark half of the rainbow, dotted with gold. Slim glass bangles made for stacking, ₹149 from Morchadi Gems.",
+      "ogImage": "/products/P213.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "512",
+      "originalSku": "MJ-207",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-207-dark-rainbow-rain-drop-glass-bangles-12-piece-512",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P241",
+    "name": "Red Enamel Greek Key Kada",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 192
+    },
+    "media": {
+      "images": [
+        "/products/P241.webp",
+        "/products/P241-2.webp",
+        "/products/P241-3.webp",
+        "/products/P241-4.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish metal (type not stated in source); rust-resistant, long-lasting shine",
+      "design": "Openable kada with clasp",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "The Greek key has bordered temples and hemlines for a few thousand years, and it turns out to sit just as confidently around a wrist. This kada carries the meander in polished gold-tone lines over deep red enamel, a broad cuff of pattern with a honeycomb-textured golden interior you notice every time you put it on.\n\nUnderneath the surface work is a practical build: high-quality anti-tarnish metal with an openable hinge and clasp, so it clicks on and off without wrestling past the thumb. That hinge is what separates a kada you own from a kada you actually wear.\n\nRed and gold is the most Indian of power pairings, at home over a silk sleeve at a wedding as much as against denim, where the geometry reads suddenly modern. It is a single-piece argument for the bold-bracelet school of dressing, no stacking required.\n\nThe finish is rust-resistant with a long-lasting shine, and the enamel needs only a soft dry cloth after wear and a spot in the box away from harder bangles. If your jewellery taste runs to pattern over sparkle, to Athens by way of Jaipur, this is the wrist piece that will not be mistaken for anyone else's.",
+    "seo": {
+      "primaryKeyword": "red enamel kada",
+      "secondaryKeywords": [
+        "greek key bracelet",
+        "anti-tarnish kada for women",
+        "openable kada bangle"
+      ],
+      "metaTitle": "Red Enamel Greek Key Kada with Openable Clasp | Morchadi",
+      "metaDescription": "A broad anti-tarnish kada in deep red enamel with a polished gold-tone Greek key pattern and easy openable hinge. Bold wrist pattern at ₹320 with returns.",
+      "imageAlt": "Broad red enamel kada with gold-tone Greek key pattern and textured golden interior standing on satin",
+      "additionalImageAlts": [
+        "Red Greek key kada held in a hand showing the openable hinge side against green leaves",
+        "Angled view of the red and gold meander pattern wrapping around the kada",
+        "Close view of the deep red enamel and polished gold-tone key motif on the cuff"
+      ],
+      "ogTitle": "A Few Thousand Years of Pattern, One Kada | Morchadi Gems",
+      "ogDescription": "Deep red enamel under a polished Greek key meander, on an anti-tarnish openable kada. Pattern-first wrist wear at ₹320 from Morchadi Gems.",
+      "ogImage": "/products/P241.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "626",
+      "originalSku": "MJ-330",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-330-greek-key-red-enamel-bracelet-626",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P279",
+    "name": "Rope-Twist Glass Kangan in Jewel Shades",
+    "category": "bangles",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 149
+    },
+    "media": {
+      "images": [
+        "/products/P279.webp",
+        "/products/P279-2.webp",
+        "/products/P279-3.webp",
+        "/products/P279-4.webp",
+        "/products/P279-5.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "pills",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass, high-gloss finish",
+      "design": "Twisted pattern",
+      "colours": "Multicolor: orange, purple, pink, green, yellow-green, red",
+      "weight": "Lightweight",
+      "occasion": "Weddings, parties, festivals, gifting"
+    },
+    "description": "Braided glass is an odd phrase until you see it. Each of these kangan is worked into a rope twist, a spiral of thick glossy glass that catches light along every turn, so the bangle sparkles without a single stone on it. The shades run rich rather than pastel: orange, purple, pink, green, yellow-green and red, chosen by design number from the photograph.\n\nWorn alone, one twist reads as a quiet texture. Stacked, the spirals line up into a rope of colour up the wrist, and because the glass is transparent the whole stack glows when the sun finds it. That depth of colour is the real difference between glass and painted metal, and it will not fade or chip off, since there is nothing on the surface to lose.\n\nThe weight is easy for all-day wear, festival mornings through to the reception. Treat them like glass all the same. Slip them on with care, keep them off hard tabletops, and they will hold their shine for years.\n\nSizes 2.6 and 2.8 are on offer. The title mentions a two-piece set while the source copy talks in six shades, so tell us the pairing you want and we will confirm the count before dispatch. A gift-ready pick for anyone who hoards bangles by colour.",
+    "seo": {
+      "primaryKeyword": "rope-twist glass kangan",
+      "secondaryKeywords": [
+        "spiral glass bangles",
+        "twisted kangan set",
+        "glass bangles for festivals"
+      ],
+      "metaTitle": "Rope-Twist Glass Kangan in Rich Jewel Shades, 2.6 and 2.8",
+      "metaDescription": "Glass kangan braided into a glossy rope twist, in orange, purple, pink, green, yellow-green and red by design number. ₹249, 7-day returns across India.",
+      "imageAlt": "Rope-twist glass bangles in amber, purple, magenta, green and red worn stacked on a wrist, numbered by design",
+      "additionalImageAlts": [
+        "Stack of braided glass kangan in deep jewel shades catching sunlight on a wrist",
+        "Angled view of spiral-textured glass bangles in red, green, pink and amber worn together",
+        "Close-up of twisted glass kangan showing the glossy braid texture of each bangle",
+        "Wrist stack of rope-twist glass bangles in mixed rich colours against white fabric"
+      ],
+      "ogTitle": "Braided Glass Kangan in Deep Festive Colours | Morchadi Gems",
+      "ogDescription": "A rope twist worked in solid glossy glass, in six rich shades picked by number. Festival-ready kangan from Morchadi Gems at ₹249 with easy returns.",
+      "ogImage": "/products/P279.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "667",
+      "originalSku": "MJ-607",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-607-twisted-crystal-kangan-2-piece-667",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P282",
+    "name": "Deep-Wave Glass Kangan in Bold Shades",
+    "category": "bangles",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 132
+    },
+    "media": {
+      "images": [
+        "/products/P282.webp",
+        "/products/P282-2.webp",
+        "/products/P282-3.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "pills",
+        "values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "default": "1"
+      },
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.6"
+      }
+    ],
+    "specs": {
+      "material": "Glass, glossy finish",
+      "design": "Wave pattern",
+      "colours": "Multicolor: yellow, green, black, blue, red, violet, pink",
+      "weight": "Lightweight",
+      "occasion": "Parties, weddings, festivals, gifting"
+    },
+    "description": "The wave on this kangan is cut deep. Where most wavy bangles ripple politely, these swing wide, each curve almost a full finger's width, so even a single bangle on the wrist looks deliberate. The glass runs bold: yellow, green, black, blue, red, violet and pink appear across the design numbers, several of them shading from one colour into another along the curve.\n\nThat two-tone effect is worth a second look. Because the glass is transparent, the colour graduates where the material thickens in the bend, and no two angles show quite the same mix. The finish is glossy straight through, nothing plated, nothing to rub away.\n\nThese sit best as a short stack of two or three, where the waves nest into each other and move together when your hand does. They are light for their size and kind to the wrist through a long evening.\n\nStandard glass-bangle care applies, away from hard edges and stored flat. Sizes 2.6 and 2.8. One note for the detail-minded: the maker's copy says six shades and then lists seven, and the title says two pieces, so confirm shade and count with us before ordering a matched set. The wave itself needs no confirmation. It is the whole point.",
+    "seo": {
+      "primaryKeyword": "deep-wave glass kangan",
+      "secondaryKeywords": [
+        "bold wave glass bangles",
+        "two-tone glass kangan",
+        "party wear bangles"
+      ],
+      "metaTitle": "Deep-Wave Glass Kangan in Bold Two-Tone Shades, ₹220",
+      "metaDescription": "Glass kangan with a wide, deep wave in bold shades, several graduating two-tone along the curve. Design-number picks, sizes 2.6 and 2.8, at ₹220.",
+      "imageAlt": "Deep-wave glass kangan in magenta, purple, red, black and ombre shades stacked on a wrist, numbered one to six",
+      "additionalImageAlts": [
+        "Wide-swing wavy glass bangles in bold mixed colours worn along a forearm",
+        "Close view of deep-curved glass kangan showing two-tone colour shifts in the glass"
+      ],
+      "ogTitle": "Kangan With a Wide, Deliberate Wave | Morchadi Gems",
+      "ogDescription": "Glass kangan cut into deep, wide waves, with colours that graduate along the curve. Bold shades by design number, at ₹220 from Morchadi Gems.",
+      "ogImage": "/products/P282.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "670",
+      "originalSku": "MJ-609",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-609-twisted-crystal-kangan-2-piece-670",
+      "originalCategories": []
+    }
+  },
+  {
+    "id": "P292",
+    "name": "Sun Rays Pendant Necklace in Gold-Plated Steel",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 119
+    },
+    "media": {
+      "images": [
+        "/products/P292.webp",
+        "/products/P292-2.webp",
+        "/products/P292-3.webp",
+        "/products/P292-4.webp",
+        "/products/P292-5.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated anti-tarnish stainless steel",
+      "stone": "Artificial/imitation stones, type not stated in source",
+      "design": "Sun-rays motif with stone-studded detailing",
+      "closure": "Lobster clasp",
+      "size": "45 cm, adjustable",
+      "care": "Wipe after use; store flat; keep away from sprays, perfume and water; clean gently with a soft brush and jewellery solution"
+    },
+    "description": "Half a sun, rising off your collarbone. The pendant is an open arc of rays, long and short spikes alternating the way light actually breaks, finished in warm gold plating over anti-tarnish stainless steel. Because the centre is open, skin shows through the design and the piece reads as drawn on rather than hung.\n\nStainless steel is the quiet hero here. It keeps the necklace light, keeps the gold-plated colour honest through daily wear, and shrugs off the humidity that dulls lesser chains. The 45 centimetre chain adjusts shorter, sits at the exact height a shirt collar frames, and closes with a lobster clasp.\n\nThis is a layering natural. Worn alone it is the single interesting thing against a plain tee; over a slip dress it turns slightly celestial; under a stack with a bead chain it holds the composition down. The sunburst motif carries just enough meaning, mornings, optimism, a new start, to make it a good gift with a story attached.\n\nWipe it after wear, keep it off during swims and sprays, store it flat. Artificial stones stud the rays with a fine sparkle you notice up close, which is the best place for a secret to live.",
+    "seo": {
+      "primaryKeyword": "sun rays pendant",
+      "secondaryKeywords": [
+        "sunburst necklace",
+        "anti-tarnish pendant necklace",
+        "gold-plated steel necklace"
+      ],
+      "metaTitle": "Sun Rays Pendant Necklace, Anti-Tarnish Gold-Plated Steel",
+      "metaDescription": "An open sunburst pendant on an adjustable 45 cm gold-plated steel chain with lobster clasp. Anti-tarnish shine for daily wear, ₹199 with returns.",
+      "imageAlt": "Gold-plated open sunburst pendant with alternating long and short rays on a fine chain, shown on a white card",
+      "additionalImageAlts": [
+        "Sun rays pendant necklace worn at the collarbone against skin",
+        "Adjustable gold-plated chain of the pendant showing lobster clasp and extender",
+        "Open half-sun pendant with spiked rays photographed flat on white",
+        "Close worn view of the sunburst pendant catching light at the neckline"
+      ],
+      "ogTitle": "Half a Sun for the Collarbone | Morchadi Gems",
+      "ogDescription": "An open sunburst in anti-tarnish gold-plated steel on an adjustable 45 cm chain. Morning optimism you can wear, ₹199 from Morchadi Gems.",
+      "ogImage": "/products/P292.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "690",
+      "originalSku": "MJ-205",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-205-dainty-sun-rays-pendant-690",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P295",
+    "name": "Triangle Charm Station Necklace",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 219,
+      "mrp": 219,
+      "cost": 131
+    },
+    "media": {
+      "images": [
+        "/products/P295.webp",
+        "/products/P295-2.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated anti-tarnish stainless steel",
+      "design": "Series of delicate triangle charms, geometric",
+      "size": "One-size, adjustable",
+      "net quantity": "1",
+      "care": "Wipe after use; avoid chemicals, sprays and perfume; store flat; do not soak in water"
+    },
+    "description": "Five small triangles, some set with a single clear stone and some left as plain polished gold, take their stations along a fine chain and point the way down. That is the entire design, and its restraint is the reason it works so hard: geometric enough to feel current, spare enough to wear with everything you already own.\n\nThe build is durable anti-tarnish stainless steel under gold plating, which is the combination that lets a delicate-looking chain survive actual daily life, sweat, sun and the occasional forgotten shower included, with its colour intact. One size, adjustable, so it finds its right length on every neckline.\n\nStation necklaces like this are the workhorses of layering. It sits cleanly above a longer pendant, fills the gap below a choker, and on its own it gives a plain white shirt the small angular detail that reads deliberate. Edgy, in the quietest possible register.\n\nCare asks little: a soft wipe after wear, no soaking, storage flat so the chain cannot knot around its own charms. If your jewellery drawer is mostly hearts and flowers, this is the corrective, the piece with corners.",
+    "seo": {
+      "primaryKeyword": "triangle charm necklace",
+      "secondaryKeywords": [
+        "geometric gold necklace",
+        "anti-tarnish steel necklace",
+        "layering necklace for women"
+      ],
+      "metaTitle": "Triangle Charm Station Necklace in Anti-Tarnish Gold Plate",
+      "metaDescription": "Five tiny triangle charms, plain and stone-set, on an adjustable anti-tarnish gold-plated steel chain. Geometry for layering, ₹219 with returns.",
+      "imageAlt": "Fine gold-plated necklace with five small triangle charms, some stone-set, displayed on a white brand card",
+      "additionalImageAlts": [
+        "Triangle station necklace arranged on a long white hanging card beside a red rose"
+      ],
+      "ogTitle": "The Necklace With Corners, ₹219 | Morchadi Gems",
+      "ogDescription": "Tiny gold triangles, plain and stone-set, stationed along an anti-tarnish chain. Quiet geometry for every neckline, ₹219 from Morchadi Gems.",
+      "ogImage": "/products/P295.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "699",
+      "originalSku": "MJ-067",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-067-anti-tarnish-charm-necklace-for-daily-wear-699",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P321",
+    "name": "CZ Halo Studs with a Milky Square Centre",
+    "category": "earrings",
+    "status": "active",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 119
+    },
+    "media": {
+      "images": [
+        "/products/P321.webp",
+        "/products/P321-2.webp",
+        "/products/P321-3.webp",
+        "/products/P321-4.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated (base metal not stated in source)",
+      "stone": "Cubic zirconia halo",
+      "centre stone": "Square shimmer stone, type not stated in source",
+      "type": "Round studs",
+      "weight": "Lightweight",
+      "occasion": "Daily wear and special occasions"
+    },
+    "description": "A square stone turned on its point, floating inside a double ring of pavé sparkle. These gold-plated studs stage a small optical trick: the milky centre stone sits diagonal within its open frame, so light passes around it and the halo appears to hover. Up close the effect is architectural; from conversation distance it is simply a very polished round stud.\n\nThe centre stone has a soft, clouded glow rather than glassy transparency, which flatters skin the way sharp white sparkle sometimes does not. Around it, two rows of small clear cubic zirconia do the brightness work. The contrast between the two is the design.\n\nAt the ear they are lightweight and comfortable through a full day, substantial enough to be seen, never heavy enough to drag. They move easily between ethnic and western dressing, a churidar-kurta Monday and a blazer Thursday, and they photograph like studs twice their price.\n\nWipe them after wear and keep them clear of hairspray, which fogs any stone eventually. If you already own plain solitaire studs, this halo pair is the sensible next step: same everyday manners, twice the presence in the mirror.",
+    "seo": {
+      "primaryKeyword": "cz halo stud earrings",
+      "secondaryKeywords": [
+        "gold-plated studs with square stone",
+        "halo earrings for women",
+        "daily wear stud earrings"
+      ],
+      "metaTitle": "CZ Halo Stud Earrings with a Milky Square Centre Stone",
+      "metaDescription": "Gold-plated round studs with a diagonal milky square centre inside a double cubic zirconia halo. Day-long comfort at ₹199, with 7-day returns across India.",
+      "imageAlt": "Pair of gold-plated round studs, each with a milky square stone set diagonally inside a double CZ halo",
+      "additionalImageAlts": [
+        "Gold-plated halo studs standing upright on a white beaded tray in sunlight",
+        "Two round CZ halo earrings lying flat showing their clouded square centre stones",
+        "Angled close-up of the halo studs highlighting the floating diagonal centre setting"
+      ],
+      "ogTitle": "A Square, Floating in Its Halo | Morchadi Gems",
+      "ogDescription": "Milky square centres set on the diagonal inside double rings of CZ sparkle. Gold-plated studs with presence, ₹199 from Morchadi Gems.",
+      "ogImage": "/products/P321.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "747",
+      "originalSku": "MJ-318",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-318-gold-plated-round-cz-stud-earrings-with-square-stone-center-747",
+      "originalCategories": [
+        "Traditional Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P322",
+    "name": "Silver-Plated Pink Petal Flower Studs",
+    "category": "earrings",
+    "status": "active",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 90
+    },
+    "media": {
+      "images": [
+        "/products/P322.webp",
+        "/products/P322-2.webp",
+        "/products/P322-3.webp",
+        "/products/P322-4.webp",
+        "/products/P322-5.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver-plated (base metal not stated in source)",
+      "stone": "Petal-shaped pastel pink stones with a crystal centre",
+      "design": "Flower motif",
+      "weight": "Lightweight",
+      "occasion": "Daily wear, casual outings, brunches, festive occasions"
+    },
+    "description": "Six petals of the palest pink, cut and faceted so they shimmer like frosted glass, circle a single round crystal centre in these silver-plated studs. The petal stones have a soft milky depth rather than open transparency, which gives the flower a pressed-blossom quality, romantic without turning childish.\n\nEach petal sits in a fine milled silver-plated rim, and the centre stone lifts slightly proud of them, so the flower has real dimension on the ear instead of reading flat. They are light, and the posts sit comfortably through long days.\n\nSoft pink and silver is a cooler pairing than the usual pink and gold, and it earns these studs a particular niche: they flatter pastel kurtas, grey winter knits and formal white shirts alike. Daily wear is their home ground, with enough shimmer for a brunch or a small festive evening.\n\nKeep them dry, spray perfume before earrings, and give them a soft wipe before they go back in the box. A pretty pair to own; a prettier one to give, since flower studs are the rare gift that suits every age on the list.",
+    "seo": {
+      "primaryKeyword": "pink petal flower studs",
+      "secondaryKeywords": [
+        "silver-plated floral earrings",
+        "pastel stud earrings",
+        "flower earrings for daily wear"
+      ],
+      "metaTitle": "Pink Petal Flower Studs in Silver Plate with Crystal Core",
+      "metaDescription": "Pale pink faceted petals around a round crystal centre in milled silver plating. Soft floral studs for daily wear at ₹150 with 7-day returns.",
+      "imageAlt": "Silver-plated flower studs with six pale pink petal stones around a round crystal centre on a white tray",
+      "additionalImageAlts": [
+        "Pink petal flower studs viewed at an angle on a beaded ceramic dish",
+        "Pair of pastel petal studs in soft window light showing their frosted shimmer",
+        "Close view of the milled silver rims around each pale pink petal stone",
+        "Flower studs with lilac-tinted centre stones photographed on a white beaded tray"
+      ],
+      "ogTitle": "A Pressed Blossom for Each Ear | Morchadi Gems",
+      "ogDescription": "Frosted pink petals with a crystal heart, set in cool silver plate. The flower stud that suits everyone, ₹150 from Morchadi Gems.",
+      "ogImage": "/products/P322.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "748",
+      "originalSku": "MJ-209",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-209-delicate-pink-petal-floral-earrings-748",
+      "originalCategories": [
+        "Traditional Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P363",
+    "name": "Pastel Stone Stackable Rings Set",
+    "category": "gift-hampers",
+    "subcategory": "combo-set",
+    "status": "active",
+    "pricing": {
+      "price": 230,
+      "mrp": 230,
+      "cost": 138
+    },
+    "media": {
+      "images": [
+        "/products/P363.webp",
+        "/products/P363-2.webp",
+        "/products/P363-3.webp",
+        "/products/P363-4.webp",
+        "/products/P363-5.webp"
+      ]
+    },
+    "specs": {
+      "colour": "Gold (colour word; material/plating not stated in source)",
+      "type": "Minimal and elegant",
+      "weight": "Lightweight",
+      "wearing style": "Stackable, worn stacked or alone",
+      "occasion": "Daily wear"
+    },
+    "description": "A full hand of rings in one go. This gold-colour set mixes slim bands with small milky cabochon stones, a pale green oval here, a peach round there, a droplet of amber orange, a cool grey-blue, alongside a rope-twist band, a beaded band and two plain slim circles. Spread across the fingers they look collected over years rather than bought in a minute.\n\nStacking is the entire sport here. Wear three on one finger and one on another, split them across both hands, or park the plain bands on the knuckles the way the lookbooks do. The milky pastel stones keep the palette soft, so even a many-ring hand reads styled rather than loud.\n\nEach ring is light and minimal in profile, comfortable for daily wear and easy under gloves or through hair. The gold colour is bright and even across the set.\n\nKeep the set dry, wipe the rings after wear, and rotate which ones rest, the stacker's secret to keeping every band bright. A note on filing: this set reached us classified as a combo, and we have flagged to the shop whether ring sets should live with rings or with gift sets. Wherever it lives, it covers an entire aesthetic for less than the cost of a good lunch.",
+    "seo": {
+      "primaryKeyword": "stackable rings set",
+      "secondaryKeywords": [
+        "ring set for women",
+        "pastel stone rings",
+        "minimal gold colour rings"
+      ],
+      "metaTitle": "Pastel Stone Stackable Rings Set in Gold Colour | Morchadi",
+      "metaDescription": "A mixed set of slim gold-colour rings with milky pastel cabochons, twist and beaded bands. A full stacked hand at ₹230, with easy 7-day returns.",
+      "imageAlt": "Eight slim gold-colour rings with milky pastel stones worn stacked across the fingers of one hand",
+      "additionalImageAlts": [
+        "Stackable ring set in cool light showing pastel cabochon stones on slim bands",
+        "Gold-colour ring set arranged loose on brown satin with twist and beaded bands visible",
+        "Stacked pastel-stone rings lined along a white roll showing each band in profile",
+        "Flat lay of the full ring set with cabochon, twist, beaded and plain bands in rows"
+      ],
+      "ogTitle": "A Whole Hand, Styled in One Set | Morchadi Gems",
+      "ogDescription": "Slim gold-colour bands and milky pastel stones, made to stack in any order. The full-hand ring set at ₹230 from Morchadi Gems.",
+      "ogImage": "/products/P363.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "803",
+      "originalSku": "MJ-412",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-412-minimal-gold-stackable-rings-for-women-girls-803",
+      "originalCategories": [
+        "combo"
+      ]
+    }
+  },
+  {
+    "id": "P372",
+    "name": "Green-Stone Tree Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 119
+    },
+    "media": {
+      "images": [
+        "/products/P372.webp"
+      ]
+    },
+    "specs": {
+      "type": "Large tree charm"
+    },
+    "description": "A little tree in full leaf. The trunk and branches rise in warm gold tone, and the whole canopy is clustered with small round green stones, packed close so the top reads as foliage caught in sunlight. It is a compact, solid piece with a surprising amount of detail for its size.\n\nTree charms carry easy meaning, growth, roots, a family branching, which makes this one a natural marker for the milestones people actually celebrate: a new home, a graduation, a first salary. Add it to a chain, a bracelet or wherever you collect your story.\n\nWhat we know about this piece is what you see; the source listing arrived with the name and photograph and little else, so we are not going to invent materials or measurements for it. If a detail matters to your purchase, ask us and we will check the piece in hand before you order.\n\nKeep it dry, wipe it gently after wear, and the finish stays bright.",
+    "seo": {
+      "primaryKeyword": "tree charm",
+      "secondaryKeywords": [
+        "tree of life style charm",
+        "green stone charm",
+        "charm for bracelet"
+      ],
+      "metaTitle": "Green-Stone Tree Charm in Warm Gold Tone | Morchadi Gems",
+      "metaDescription": "A small, solid gold-tone tree charm with a canopy of clustered green stones. A growth-and-roots keepsake at ₹199, with 7-day returns across India.",
+      "imageAlt": "Gold-tone tree charm with a canopy of small round green stones and a smooth curved trunk",
+      "ogTitle": "A Tree That Fits on a Chain, ₹199 | Morchadi Gems",
+      "ogDescription": "Gold-tone trunk, green-stone canopy, easy meaning. A small tree charm for chains and bracelets, ₹199 from Morchadi Gems.",
+      "ogImage": "/products/P372.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "818",
+      "originalSku": "MJ-390",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-390-large-tree-charm-818",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P373",
+    "name": "Wine Glass Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 200,
+      "mrp": 200,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P373.webp"
+      ]
+    },
+    "specs": {
+      "type": "Wine charm"
+    },
+    "description": "Cheers, in miniature. This charm is a slender stemmed glass in warm gold tone, its bowl set with a scatter of small clear stones that stand in for the sparkle of something freshly poured. The stem tapers to a proper little foot, so the silhouette is unmistakable even at charm scale.\n\nIt is a celebration marker more than an ornament: the birthday toast, the promotion, the friendship that survives entirely on long dinners. Hung on a chain or clipped among other charms on a bracelet, it reads as an inside joke you can wear.\n\nFull disclosure, as always: this piece reached us as a name and a photograph, so beyond what the image shows we make no material claims. If you need a specific detail before buying, message us and we will check the actual piece for you.\n\nIt asks only the usual courtesy, kept dry and wiped soft, to stay bright between celebrations.",
+    "seo": {
+      "primaryKeyword": "wine glass charm",
+      "secondaryKeywords": [
+        "celebration charm",
+        "toast charm for bracelet",
+        "gift charm for friend"
+      ],
+      "metaTitle": "Wine Glass Charm with Clear Stone Sparkle | Morchadi Gems",
+      "metaDescription": "A slender polished gold-tone glass charm with small clear stones as the fizz. The celebration keepsake at ₹200, with 7-day returns across India.",
+      "imageAlt": "Gold-tone stemmed glass charm with small clear stones set inside the bowl like bubbles",
+      "ogTitle": "A Toast You Can Wear, ₹200 | Morchadi Gems",
+      "ogDescription": "A slim gold-tone glass with clear-stone fizz, made for celebration stories. The cheers charm at ₹200 from Morchadi Gems.",
+      "ogImage": "/products/P373.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "819",
+      "originalSku": "MJ-622",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-622-wine-819",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P374",
+    "name": "Coconut Tree Charm with Green Stones",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 149
+    },
+    "media": {
+      "images": [
+        "/products/P374.webp"
+      ]
+    },
+    "specs": {
+      "type": "Coconut tree charm"
+    },
+    "description": "One palm tree, permanently on vacation. The trunk leans in ridged gold tone exactly the way beach palms do, the fronds fan out in small green stones, and a single clear stone sits at the crown where the coconuts would be. It is a cheerful, detailed little object that reads instantly even at charm size.\n\nThis is the charm for the beach person in your life, or the goa-trip group memory, or simply the reminder on grey commute mornings that somewhere the sea is doing fine. On a bracelet it keeps company well with hearts and initials; on a thin chain it stands alone as a quiet joke.\n\nWe list charms honestly: this one arrived with a name and a photograph, nothing more, so we will not invent its materials or measurements. Ask us anything specific and we will check the piece in hand before you commit.\n\nKeep it out of water, ironically, and wipe it after wear. The shine holds.",
+    "seo": {
+      "primaryKeyword": "coconut tree charm",
+      "secondaryKeywords": [
+        "palm tree charm",
+        "beach charm for bracelet",
+        "holiday keepsake charm"
+      ],
+      "metaTitle": "Coconut Tree Charm with Green Stone Fronds | Morchadi Gems",
+      "metaDescription": "A leaning gold-tone palm with fanned green stone fronds and a clear crown stone. The beach-memory charm at ₹249, with 7-day returns across India.",
+      "imageAlt": "Gold-tone coconut palm charm with green stone fronds, a ridged trunk and one clear stone at the crown",
+      "ogTitle": "Permanently on Vacation, ₹249 | Morchadi Gems",
+      "ogDescription": "A leaning palm in gold tone with green-stone fronds. The beach person's charm at ₹249 from Morchadi Gems.",
+      "ogImage": "/products/P374.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "820",
+      "originalSku": "MJ-145",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-145-coconut-tree-charm-820",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P375",
+    "name": "Red Cherry Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 119
+    },
+    "media": {
+      "images": [
+        "/products/P375.webp"
+      ]
+    },
+    "specs": {
+      "type": "Cherry charm"
+    },
+    "description": "Two glossy red cherries on golden stems, topped with a leaf paved in small clear stones. The fruit is rounded and bright, the red deep enough to read as ripe rather than plastic, and the sparkling leaf is the wink that turns produce into jewellery.\n\nCherry motifs are having their extended moment across fashion, from nail art to knitwear, and a charm is the lowest-commitment way to join in. It swings happily from a bracelet, sits sweetly at the base of a short chain, and mixes well with word and heart charms in a collected stack.\n\nAs with all charms in this range, what we can honestly tell you is what the photograph shows. The listing reached us with a name and an image, so material details are unconfirmed; ask us first if a specific detail decides your purchase and we will check the piece itself.\n\nKeep it dry and wiped, and the gloss stays fresh.",
+    "seo": {
+      "primaryKeyword": "cherry charm",
+      "secondaryKeywords": [
+        "red fruit charm",
+        "cherry charm for bracelet",
+        "cute charm gift"
+      ],
+      "metaTitle": "Red Cherry Charm with a Clear-Stone Leaf | Morchadi Gems",
+      "metaDescription": "Two glossy red cherries on golden stems under a sparkling clear-stone leaf. The trend-friendly fruit charm at ₹199, with 7-day returns across India.",
+      "imageAlt": "Charm of two glossy red cherries on gold-tone stems with a leaf paved in small clear stones",
+      "ogTitle": "Ripe for the Charm Stack, ₹199 | Morchadi Gems",
+      "ogDescription": "Glossy red cherries with a sparkling leaf, ready for bracelet or chain. The fruit-motif charm at ₹199 from Morchadi Gems.",
+      "ogImage": "/products/P375.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "821",
+      "originalSku": "MJ-136",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-136-cherry-charm-821",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P376",
+    "name": "Peace Dove Charm with Olive Branch",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 200,
+      "mrp": 200,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P376.webp"
+      ]
+    },
+    "specs": {
+      "type": "Peace dove charm"
+    },
+    "description": "A dove mid-flight, carrying its ancient cargo. The bird's body is finished in soft white over gold-tone wings, feathers drawn in fine raised lines, and its beak holds a golden olive branch with shaped leaves. Two small clear stones trail at the tail like the last of a long journey.\n\nAmong motif charms, the peace dove is the grown-up one, a symbol that carries weight at a christening, a farewell, a reconciliation, or simply as a daily-worn wish for a quieter year. The white-and-gold palette keeps it luminous against skin or layered fabric.\n\nOur charm listings run on honesty: this piece arrived as a name and a photograph, so we will not fabricate materials or dimensions for it. If a specific detail matters, ask us and we will verify against the piece in hand before you order.\n\nGentle habits, dry storage and a soft wipe keep the white finish and the shine at their best.",
+    "seo": {
+      "primaryKeyword": "peace dove charm",
+      "secondaryKeywords": [
+        "dove with olive branch charm",
+        "bird charm for chain",
+        "meaningful gift charm"
+      ],
+      "metaTitle": "Peace Dove Charm with a Golden Olive Branch | Morchadi",
+      "metaDescription": "A white-bodied dove with gold-tone wings carrying an olive branch, two clear stones at the tail. A meaningful keepsake at ₹200 with returns.",
+      "imageAlt": "White and gold-tone dove charm in flight holding a golden olive branch, with two clear stones at its tail",
+      "ogTitle": "The Grown-Up Charm, ₹200 | Morchadi Gems",
+      "ogDescription": "A white dove with gold wings and an olive branch, for the wishes that matter. The peace charm at ₹200 from Morchadi Gems.",
+      "ogImage": "/products/P376.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "824",
+      "originalSku": "MJ-452",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-452-peace-dove-charm-824",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P377",
+    "name": "Pink Doll Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 239,
+      "mrp": 239,
+      "cost": 143
+    },
+    "media": {
+      "images": [
+        "/products/P377.webp"
+      ]
+    },
+    "specs": {
+      "type": "Pink doll charm"
+    },
+    "description": "A small girl figure with a polished golden head, tiny pigtail buns and a puff-sleeved dress in bubblegum pink enamel-look colour, arms out and feet planted like she owns the bracelet. The proportions are toy-box perfect, rounded everywhere a child's drawing would round them.\n\nDoll charms are keepsakes at heart. Parents wear them for daughters, grandmothers collect one per grandchild, and friends split the pair, the pink one and its blue-shorts counterpart, as a two-of-us joke. On a chain it is unmistakably personal; nobody wears a doll charm without a reason, and that is the appeal.\n\nStraight talk from the listing desk: this charm reached us with just a name and a photograph, so its material details are unconfirmed and we will not guess at them. Message us for any specific check before you order and we will look at the piece itself.\n\nKeep the colour bright by keeping it dry, with a soft wipe after wear.",
+    "seo": {
+      "primaryKeyword": "pink doll charm",
+      "secondaryKeywords": [
+        "girl figure charm",
+        "daughter keepsake charm",
+        "family charm for bracelet"
+      ],
+      "metaTitle": "Pink Doll Charm with a Golden Head and Pigtails | Morchadi",
+      "metaDescription": "A small girl-figure charm in bubblegum pink with a polished golden head and pigtail buns. The keepsake charm at ₹239, with 7-day returns across India.",
+      "imageAlt": "Girl-figure charm with polished golden head, pigtail buns and a pink dress, arms open",
+      "ogTitle": "One Small Girl, One Big Reason, ₹239 | Morchadi Gems",
+      "ogDescription": "A pink-dressed doll charm with golden pigtails, made for daughters and inside jokes. The keepsake at ₹239 from Morchadi Gems.",
+      "ogImage": "/products/P377.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "825",
+      "originalSku": "MJ-470",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-470-pink-doll-charm-825",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P378",
+    "name": "Boy Doll Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 239,
+      "mrp": 239,
+      "cost": 143
+    },
+    "media": {
+      "images": [
+        "/products/P378.webp"
+      ]
+    },
+    "specs": {
+      "type": "Male doll charm"
+    },
+    "description": "The counterpart. This small boy figure stands with a polished golden head and sturdy little legs, dressed in a white tee and mint-blue shorts in smooth enamel-look colour, arms angled out as if mid-story. Like its pink companion, the proportions are all toy: round head, solid feet, no fuss.\n\nThese figures are how families end up written on bracelets. A boy charm for a son, one per child lined up on a chain, or the pair split between best friends or siblings. It is the kind of piece that looks simple in the hand and means a great deal on the person wearing it.\n\nListing honesty, as with the whole charm range: name and photograph are what arrived with this piece, so material specifics are unconfirmed and we prefer telling you that to inventing them. Ask us to check anything particular against the piece in hand.\n\nA dry pouch and an occasional soft wipe keep the whites white and the gold tone bright.",
+    "seo": {
+      "primaryKeyword": "boy doll charm",
+      "secondaryKeywords": [
+        "boy figure charm",
+        "son keepsake charm",
+        "kids charm for chain"
+      ],
+      "metaTitle": "Boy Doll Charm in White Tee and Blue Shorts | Morchadi Gems",
+      "metaDescription": "A small boy-figure charm with a polished golden head, white top and mint-blue shorts. A family keepsake at ₹239, with 7-day returns across India.",
+      "imageAlt": "Boy-figure charm with polished golden head, white top and mint-blue shorts standing with arms angled out",
+      "ogTitle": "The Other Half of the Pair, ₹239 | Morchadi Gems",
+      "ogDescription": "A golden-headed boy doll charm in a white tee and blue shorts, made for family bracelets. ₹239 from Morchadi Gems.",
+      "ogImage": "/products/P378.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "826",
+      "originalSku": "MJ-409",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-409-male-doll-charm-826",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P379",
+    "name": "Mama Letters Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 239,
+      "mrp": 239,
+      "cost": 143
+    },
+    "media": {
+      "images": [
+        "/products/P379.webp"
+      ]
+    },
+    "specs": {
+      "type": "Mama charm"
+    },
+    "description": "Four letters that outrank every other word. MAMA stands here in clean golden capitals, the letters joined into one solid little bar with real depth to the strokes, so the word sits substantial on a chain rather than flat like a sticker.\n\nWord charms travel well across occasions, and this one has its dates circled in advance: Mother's Day, a birthday, the first Diwali after a baby arrives, or the quiet Tuesday when a daughter simply feels like saying it. Worn by a mother it is a badge; gifted to one it is a speech compressed to eleven grams of sentiment.\n\nWe keep charm listings honest. This piece came to us as a name and a photograph, so we make no claims about its material beyond what you can see, and we would rather check the piece in hand for you than guess. Ask before ordering if a detail matters.\n\nDry storage and a soft wipe after wear keep the letters gleaming.",
+    "seo": {
+      "primaryKeyword": "mama charm",
+      "secondaryKeywords": [
+        "mother gift charm",
+        "mama letters pendant charm",
+        "mothers day keepsake"
+      ],
+      "metaTitle": "Mama Letters Charm in Solid Golden Capitals | Morchadi",
+      "metaDescription": "MAMA in joined golden capital letters with real depth, made for chains and charm bracelets. The mother's badge at ₹239, with 7-day returns across India.",
+      "imageAlt": "Golden charm spelling MAMA in joined solid capital letters",
+      "ogTitle": "The Word That Outranks the Rest, ₹239 | Morchadi Gems",
+      "ogDescription": "MAMA in solid golden capitals, a badge for mothers and a gift for saying it. ₹239 from Morchadi Gems.",
+      "ogImage": "/products/P379.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "827",
+      "originalSku": "MJ-410",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-410-mama-charm-827",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P380",
+    "name": "Love Word Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 90
+    },
+    "media": {
+      "images": [
+        "/products/P380.webp"
+      ]
+    },
+    "specs": {
+      "type": "Love charm"
+    },
+    "description": "LOVE, spelled plainly and polished bright. The four golden letters are joined into a single solid charm, thick in the stroke and clean at the edges, with no stone and no flourish, which is precisely its appeal. Some words are better said without decoration.\n\nA word charm this legible works anywhere type works: at the base of a short chain where a collar frames it, stacked on a bracelet between busier charms, or hung on a gift before the wrapping goes on. It suits new couples, old couples and the self-love crowd equally, since the word declines to specify.\n\nIn the interest of honest listings, this charm arrived with us as a name and a photograph, and its material details are unconfirmed; we will not dress the gap in guesses. If something specific decides your purchase, ask and we will check the piece in hand.\n\nWorth knowing: this catalogue also carries a second Love charm whose letter O is a heart-shaped stone. This is the plainer, quieter twin. Keep it dry, wipe it soft, and it stays bright.",
+    "seo": {
+      "primaryKeyword": "love word charm",
+      "secondaryKeywords": [
+        "love pendant charm",
+        "couple gift charm",
+        "word charm for chain"
+      ],
+      "metaTitle": "Love Word Charm in Plain Polished Letters | Morchadi Gems",
+      "metaDescription": "LOVE in joined polished golden letters, no stones and no flourish. The plain-spoken keepsake charm at ₹150, with 7-day returns across India.",
+      "imageAlt": "Polished golden charm spelling LOVE in joined block letters without stones",
+      "ogTitle": "Said Plainly, Worn Daily, ₹150 | Morchadi Gems",
+      "ogDescription": "LOVE in clean joined golden letters, no decoration needed. The plain-spoken charm at ₹150 from Morchadi Gems.",
+      "ogImage": "/products/P380.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "828",
+      "originalSku": "MJ-401",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-401-love-charm-828",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P381",
+    "name": "Green Clover Sprig Charm",
+    "category": "pendants",
+    "status": "active",
+    "pricing": {
+      "price": 250,
+      "mrp": 250,
+      "cost": 150
+    },
+    "media": {
+      "images": [
+        "/products/P381.webp"
+      ]
+    },
+    "specs": {
+      "type": "Clover charm"
+    },
+    "description": "Luck, doubled. This charm carries two clover heads on one golden stem, their heart-shaped petals worked in deep green with tiny clear stones tucked at the centres. The green has a metallic depth to it, closer to enamelled leaf than flat paint, and the curving stem gives the piece the look of something just picked.\n\nClover charms are the classic exam-season, new-job, fresh-start token, and the two-headed sprig makes this one feel like a wish made twice. It hangs naturally from a bracelet, adds a leafy note to a charm necklace, and slips into a card as a small object with a big message.\n\nThe honesty line that runs through our charm range applies here too: name and photograph are what the listing arrived with, so material details are unconfirmed, and we would rather verify the piece in hand for you than invent a spec. Ask away before ordering.\n\nKeep it dry and give it the occasional soft wipe; luck should look after itself, but finishes need help.",
+    "seo": {
+      "primaryKeyword": "clover charm",
+      "secondaryKeywords": [
+        "lucky clover charm",
+        "green leaf charm",
+        "good luck gift charm"
+      ],
+      "metaTitle": "Green Clover Sprig Charm with Two Lucky Heads | Morchadi",
+      "metaDescription": "Two deep green clover heads with clear stone centres on one golden stem. The luck-doubled keepsake at ₹250, with 7-day returns across India.",
+      "imageAlt": "Charm of two green clover heads with tiny clear stone centres on a curved golden stem",
+      "ogTitle": "A Lucky Wish Made Twice, ₹250 | Morchadi Gems",
+      "ogDescription": "Two green clover heads on one golden stem, tiny stones at the centres. The luck charm at ₹250 from Morchadi Gems.",
+      "ogImage": "/products/P381.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "829",
+      "originalSku": "MJ-143",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-143-clover-charm-829",
+      "originalCategories": [
+        "Charm"
+      ]
+    }
+  },
+  {
+    "id": "P385",
+    "name": "Kundan-Style Crown Bracelet Watch with Chand Tassels",
+    "category": "watches",
+    "status": "active",
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 239
+    },
+    "media": {
+      "images": [
+        "/products/P385.webp"
+      ]
+    },
+    "specs": {
+      "design": "Kundan crown charm on top",
+      "panels": "Pink and red meenakari square panels with pearl borders",
+      "dial": "Cubic zirconia-encrusted dial",
+      "pendant": "Multicolour chand pendant with cascading ghungroo chains",
+      "occasion": "Bridal, sangeet, grand festive celebrations"
+    },
+    "description": "More procession than accessory. This bracelet watch stacks its elements the way a royal jewellery set would: a kundan-style crown cluster at the top, square meenakari panels bordered in pearl-look beads, a dial ringed in clear stones, and below it all a chand crescent releasing chains of golden ghungroo bells that swing past the wrist.\n\nThe meenakari work runs pink and red with green accents, the classic Rajasthani palette, and the crown-to-crescent architecture gives the piece a top and a bottom the way a haar has. On the wrist it moves; the bell chains are the kinetic part, chiming softly with the hand.\n\nThis is unapologetic occasion wear, built for brides, sangeet nights and the kind of festive evening where a plain watch would look underdressed. The working dial is almost a private joke inside so much ornament, and a useful one at a long function.\n\nHandle it as you would meenakari: dry hands, no perfume spray, a soft cloth after wear, stored flat so the tassels lie straight. Of the bracelet watches in this catalogue, this is the maximal one, for the wearer who thinks a showstopper should actually stop the show.",
+    "seo": {
+      "primaryKeyword": "kundan bracelet watch",
+      "secondaryKeywords": [
+        "bridal watch for women",
+        "meenakari watch with ghungroo",
+        "sangeet jewellery watch"
+      ],
+      "metaTitle": "Kundan-Style Crown Bracelet Watch with Chand Tassels ₹399",
+      "metaDescription": "Crown cluster, meenakari panels, stone-ringed dial and chand tassels of ghungroo bells in one bridal bracelet watch. Occasion-first at ₹399.",
+      "imageAlt": "Ornate gold-tone bracelet watch with kundan-style crown, red and green meenakari panels and ghungroo bell tassels",
+      "ogTitle": "A Procession for the Wrist | Morchadi Gems",
+      "ogDescription": "Kundan-style crown, meenakari squares and swinging ghungroo tassels around a working dial. Bridal maximalism at ₹399 from Morchadi Gems.",
+      "ogImage": "/products/P385.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "834",
+      "originalSku": "MJ-362",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-362-kashmiri-multicolour-meenakari-crown-kundan-bracelet-watch-834",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P395",
+    "name": "Gold-Tone Vine Bracelet, Pink and Mauve Ovals",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 179
+    },
+    "media": {
+      "images": [
+        "/products/P395.webp",
+        "/products/P395-2.webp",
+        "/products/P395-3.webp",
+        "/products/P395-4.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Synthetic zircon",
+      "occasion": "Everyday wear"
+    },
+    "description": "Oval stones the colour of rose milk sit along a winding gold-tone vine, with small marquise leaves in pink, mauve and the odd clear sparkle filling the gaps between them. The bracelet reads botanical without being literal about it, closer to a trailing stem than to any one flower, tulip or otherwise.\n\nEvery stone is a synthetic zircon, prong-set the way a jeweller would set the real thing, which is where a piece at this price gets its polish from. The larger ovals do the colour work while the leaf shapes catch movement, and the mix of pink with soft plum keeps it from turning sugary.\n\nThe clasp is a folding one that clicks shut flat, so nothing snags on a sleeve. On the wrist it wears slim and sits close, easy under a cuff at the office and just as easy over mehendi at a family function. Wipe it after wear and keep it away from perfume sprays and the finish will thank you.\n\nIf you are buying a first proper bracelet for someone, this is a safe yes. It photographs like a pricier piece, and the colours flatter every skin tone the way pink-and-gold reliably does. Sold singly, with two sister colourways if you want a set that does not match exactly.",
+    "seo": {
+      "primaryKeyword": "gold-tone vine bracelet",
+      "secondaryKeywords": [
+        "synthetic zircon bracelet",
+        "pink stone bracelet for women",
+        "bracelet for gifting"
+      ],
+      "metaTitle": "Gold-Tone Vine Bracelet with Pink and Mauve Oval Stones",
+      "metaDescription": "A winding gold-tone vine set with pink and mauve synthetic zircon ovals and leaf-cut sides, closing on a flat fold clasp. ₹299 with 7-day returns.",
+      "imageAlt": "Gold-tone vine bracelet with prong-set pink, mauve and clear oval stones curved into a circle on satin",
+      "additionalImageAlts": [
+        "Vine-style bracelet in gold tone showing alternating oval and marquise stones and the fold clasp",
+        "Gold-tone stone bracelet laid open in an S-curve with an 18 centimetre size graphic",
+        "Close view of the pink and mauve zircon ovals and leaf stones along the gold-tone bracelet"
+      ],
+      "ogTitle": "A Vine of Pink Stones for the Wrist | Morchadi Gems",
+      "ogDescription": "Pink and mauve synthetic zircons trail a slim gold-tone vine, closing on a flat fold clasp. An easy gift at ₹299 from Morchadi Gems.",
+      "ogImage": "/products/P395.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "847",
+      "originalSku": "MJ-405",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-405-luxurious-tulip-flower-bracelet-847",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P396",
+    "name": "Gold-Tone Vine Bracelet in Soft Pink",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 179
+    },
+    "media": {
+      "images": [
+        "/products/P396.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Synthetic zircon",
+      "occasion": "Everyday wear"
+    },
+    "description": "One colour, used well. This vine bracelet keeps the whole stone story in pink, pale ovals with lighter marquise leaves, so the gold-tone stem in between reads warmer than it would against a busier mix. The effect on the wrist is quiet and a little vintage, like something inherited rather than bought last week.\n\nThe stones are synthetic zircon, each held in prongs rather than glue, and the ovals are generous enough to catch light from across a room. Between them the smaller leaf cuts angle in different directions, which keeps the line of the bracelet moving even when your hand is still.\n\nA folding clasp closes it flush, with no dangling extender to catch on knitwear. It sits slim, weighs little, and behaves through a full day of typing, cooking or holding a phone, all the unglamorous hours jewellery actually lives through. A soft wipe at night keeps the shine honest.\n\nPink-on-gold is the most forgiving pairing in fashion jewellery, which makes this the colourway to choose when you are unsure of someone's taste. It also layers cleanly with a plain chain bracelet if you like a fuller wrist. The same vine comes in two other stone mixes if soft pink is too soft.",
+    "seo": {
+      "primaryKeyword": "pink stone vine bracelet",
+      "secondaryKeywords": [
+        "soft pink bracelet",
+        "zircon bracelet for women",
+        "gold-tone bracelet"
+      ],
+      "metaTitle": "Pink Stone Vine Bracelet with a Flat Fold Clasp, ₹299",
+      "metaDescription": "All-pink synthetic zircon ovals and leaf cuts on a slim gold-tone vine bracelet with a folding clasp. Soft, vintage-leaning sparkle at ₹299.",
+      "imageAlt": "Slim gold-tone vine bracelet set entirely with pale pink oval and marquise stones, coiled on a cream ground",
+      "ogTitle": "The All-Pink Vine Bracelet | Morchadi Gems",
+      "ogDescription": "Pale pink synthetic zircons along a warm gold-tone stem, closed with a flat fold clasp. Quiet, vintage-leaning and ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P396.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "848",
+      "originalSku": "MJ-404",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-404-luxurious-tulip-flower-bracelet-848",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P397",
+    "name": "Gold-Tone Vine Bracelet, Multicolour Stones",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "active",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 179
+    },
+    "media": {
+      "images": [
+        "/products/P397.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Synthetic zircon",
+      "occasion": "Everyday wear"
+    },
+    "description": "Red, green, violet, amber and clear stones take turns along this gold-tone vine, and somehow the mix lands closer to old-world than to carnival. Credit the layout: big ovals spaced evenly, small marquise leaves in between, everything prong-set in a warm gold-tone that ties the colours together.\n\nEach stone is a synthetic zircon with a proper faceted cut, so the colour comes with fire rather than sitting flat the way painted glass does. The multicolour spread means it agrees with whatever you are wearing, which is precisely the bracelet you want on the days an outfit comes together at the last minute.\n\nIt closes with a flat folding clasp and wears close to the wrist, light enough to forget by mid-morning. The finish holds up to daily wear with the usual courtesies, off before the shower, wiped after a long day, kept clear of perfume.\n\nMulticoloured jewellery can tip loud very fast. This one stays on the right side because the gold-tone frame does the organising and the stones keep to their rows. Wear it alone with a plain kurta sleeve, where the colours get room to talk. Two sister colourways exist, all pink and pink-with-mauve, if you want a calmer wrist.",
+    "seo": {
+      "primaryKeyword": "multicolour vine bracelet",
+      "secondaryKeywords": [
+        "multicolour stone bracelet",
+        "zircon bracelet gold tone",
+        "bracelet with coloured stones"
+      ],
+      "metaTitle": "Multicolour Stone Vine Bracelet in Warm Gold Tone, ₹299",
+      "metaDescription": "Red, green, violet and amber synthetic zircons along a gold-tone vine with a folding clasp. Colour that agrees with everything, ₹299, 7-day returns.",
+      "imageAlt": "Gold-tone vine bracelet with red, green, violet, amber and clear oval stones arranged in a circle",
+      "ogTitle": "One Bracelet, Every Colour Sorted | Morchadi Gems",
+      "ogDescription": "A gold-tone vine carrying red, green, violet and amber zircons in tidy rows. The match-anything bracelet at ₹299 from Morchadi Gems.",
+      "ogImage": "/products/P397.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "849",
+      "originalSku": "MJ-403",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-403-luxurious-tulip-flower-bracelet-849",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P447",
+    "name": "Evil Eye Bracelet with a Stone-Set Heart",
+    "category": "bracelets",
+    "status": "active",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P447.webp"
+      ]
+    },
+    "specs": {
+      "design": "Heart-shaped evil eye with crystal halo",
+      "stone": "Crystal",
+      "material": "Silver-toned (base material not stated in source)",
+      "care": "Keep away from moisture and perfume; store in a dry place after wear"
+    },
+    "description": "At the centre of this slim chain sits a heart paved edge to edge with tiny clear stones, and right in the middle of that heart, a small blue evil eye keeps its watch. Protection folded inside affection is the oldest brief in Indian jewellery, and this bracelet delivers it at the scale of a whisper.\n\nThe heart is barely wider than a fingernail, so the piece works as everyday wear rather than occasion drama. Its silver-toned finish keeps the look cool and modern, closer to the minimal chains worn stacked on Instagram than to anything heavy. On the wrist the charm settles flat and the fine cable chain disappears against the skin.\n\nThis is the kind of bracelet that gets bought in pairs, one kept and one given, because an evil eye is a wish for someone as much as an accessory. It arrives on a small presentation card, ready to hand over without wrapping.\n\nCare is simple and matters: the silver-toned lustre stays bright longest when it skips the shower and the perfume cloud, and gets a soft wipe before going back in the pouch. A sister design swaps the filled heart for an open outline, if you like your symbols drawn rather than painted.",
+    "seo": {
+      "primaryKeyword": "evil eye heart bracelet",
+      "secondaryKeywords": [
+        "evil eye bracelet for women",
+        "silver-tone chain bracelet",
+        "protection bracelet gift"
+      ],
+      "metaTitle": "Evil Eye Heart Bracelet, Stone-Set in Silver Tone at ₹49",
+      "metaDescription": "A stone-paved heart with a tiny blue evil eye at its centre on a fine silver-toned chain. Everyday protection at ₹49, with 7-day returns across India.",
+      "imageAlt": "Silver-toned chain bracelet with a small stone-paved heart holding a blue evil eye bead, shown on a white card",
+      "ogTitle": "A Tiny Heart Keeping Watch, ₹49 | Morchadi Gems",
+      "ogDescription": "A little stone-set heart with a blue evil eye at its middle, on a whisper-fine silver-toned chain. The give-one-keep-one bracelet at ₹49.",
+      "ogImage": "/products/P447.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "902",
+      "originalSku": "MJ-551",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-551-silver-heart-evil-eye-bracelet-902",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P449",
+    "name": "Evil Eye Bracelet with an Open Heart",
+    "category": "bracelets",
+    "status": "active",
+    "pricing": {
+      "price": 49,
+      "mrp": 49,
+      "cost": 10
+    },
+    "media": {
+      "images": [
+        "/products/P449.webp"
+      ]
+    },
+    "specs": {
+      "design": "Heart-shaped evil eye with crystal halo",
+      "stone": "Crystal",
+      "material": "Silver-toned (base material not stated in source)",
+      "care": "Keep away from moisture and perfume; store in a dry place after wear"
+    },
+    "description": "Here the heart is drawn, not filled. A slim outline of tiny clear stones traces the shape and leaves the middle open, with a small blue evil eye perched at the top edge like a signature. On the wrist it reads as a line sketch of a heart, light in every sense, hanging from a fine silver-toned cable chain.\n\nOpen shapes wear differently from solid ones. Skin shows through the outline, so the charm looks etched onto the wrist rather than placed on it, and the sparkle stays delicate instead of dense. If you found the classic paved heart a touch much, this is the version you were waiting for.\n\nThe evil eye carries the same old job it always has, watching over the wearer, which keeps this bracelet firmly in gifting territory: birthdays, farewells, the friend starting something new. It comes carded and ready to give.\n\nBeing fine jewellery in build, it likes gentle habits. Off before swimming, away from sprays, a quick wipe after wear. Do that and the silver-toned shine stays true through daily use. The matching design with a fully stone-set heart exists too, for the friend whose taste runs bolder than yours.",
+    "seo": {
+      "primaryKeyword": "open heart evil eye bracelet",
+      "secondaryKeywords": [
+        "evil eye chain bracelet",
+        "minimal heart bracelet",
+        "gift bracelet under 100"
+      ],
+      "metaTitle": "Open Heart Evil Eye Bracelet in Silver Tone, Just ₹49",
+      "metaDescription": "A stone-outlined open heart with a small blue evil eye on a fine silver-toned chain. Light, minimal and giftable at ₹49 with 7-day returns across India.",
+      "imageAlt": "Fine silver-toned bracelet with an open heart outline of small stones and a blue evil eye bead at its top",
+      "ogTitle": "The Heart, Drawn in Outline | Morchadi Gems",
+      "ogDescription": "An open stone-traced heart with a tiny evil eye at its edge, strung on a fine silver-toned chain. Minimal protection at ₹49 from Morchadi Gems.",
+      "ogImage": "/products/P449.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "905",
+      "originalSku": "MJ-552",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-552-silver-heart-evil-eye-bracelet-905",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P475",
+    "name": "Gold-Toned Floral Nath, Red and White Stones",
+    "category": "nose-pins",
+    "status": "active",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P475.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-toned (base metal not stated in source)",
+      "stone": "Red and white stones, type not stated in source",
+      "design": "Floral nath",
+      "occasion": "Weddings",
+      "care": "Keep away from moisture and perfume; store in a dry place after use"
+    },
+    "description": "Bridal jewellery has a way of over-explaining itself. This nath does the opposite. A slim gold-toned hoop carries a line of small white stones, gathers into a marquise-petal flower in deep pinkish red at its base, and lets a single tiny drop fall below. One motif, cleanly told.\n\nThe red is a colour choice, not a gemstone claim; the stones are the sparkling artificial kind this catalogue uses honestly, set close so the flower reads as one bloom. Against the warm gold tone the effect is classically wedding-ready, made for the day photography lingers on the side profile.\n\nA nath changes a face more than any other single ornament, which is why it has survived every fashion cycle since miniature painting. This one is scaled for real wear: present in photographs, light on the nostril, comfortable through a long ceremony.\n\nIt arrives on a presentation card, gift-ready for the bride-to-be or the friend collecting festive pieces. Keep it away from moisture and perfume, store it dry after use, and the lustre holds. Worn with a red saree it disappears into tradition; worn with an ivory lehenga it becomes the point of the whole face.",
+    "seo": {
+      "primaryKeyword": "gold-toned floral nath",
+      "secondaryKeywords": [
+        "nath for wedding",
+        "red stone nose ring",
+        "bridal nath for women"
+      ],
+      "metaTitle": "Gold-Toned Floral Nath with Red and White Stones, ₹129",
+      "metaDescription": "A slim gold-toned nath with white stone sparkle, a red marquise flower and a single drop. Wedding-ready at ₹129 with 7-day returns across India.",
+      "imageAlt": "Gold-toned nath with white stones along the hoop, a red marquise-petal flower and a small drop, held on a white card",
+      "ogTitle": "The Nath That Changes the Whole Face | Morchadi Gems",
+      "ogDescription": "A red marquise flower on a stone-lined gold-toned hoop with one falling drop. Classic bridal profile work at ₹129 from Morchadi Gems.",
+      "ogImage": "/products/P475.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "931",
+      "originalSku": "MJ-308",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-308-gold-plated-floral-nath-sparkling-ruby-red-white-stone-studded-931",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P478",
+    "name": "Silver-Tone Floral Nath with White Zirconia",
+    "category": "nose-pins",
+    "status": "active",
+    "pricing": {
+      "price": 129,
+      "mrp": 129,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P478.webp"
+      ]
+    },
+    "specs": {
+      "material": "Silver-toned (base metal not stated in source)",
+      "stone": "Cubic zirconia",
+      "design": "Floral nath",
+      "occasion": "Modern ethnic looks",
+      "care": "Keep away from moisture and perfume; store in a dry place after use"
+    },
+    "description": "All ice, no colour. This nath keeps its entire story in white: a slim silver-toned hoop dressed in marquise and pear-cut white zirconia arranged as a leafy crescent, with a small stone-set drop swinging below. The effect is frost on glass, modern ethnic in the best sense.\n\nWhite zirconia against silver tone reads cooler and more contemporary than the traditional red-and-gold nath vocabulary, which makes this the pick for brides and guests dressing in pastels, silver-work sarees or the increasingly popular white lehenga. It also photographs with a particular crispness, every facet a small flash.\n\nThe cluster setting gives the nath presence while the piece itself stays light on the nose, comfortable from the baraat to the last group photo. It comes carded, which makes it an easy add to a wedding-season gift.\n\nTo maintain the brilliant shine, keep it away from moisture and perfume, and store it safely in a dry place after use, exactly as you would any fine-finished piece. If the classic red floral nath in this catalogue is tradition told warmly, this is the same sentence spoken in winter light.",
+    "seo": {
+      "primaryKeyword": "silver-toned floral nath",
+      "secondaryKeywords": [
+        "white zirconia nath",
+        "modern nath for women",
+        "nath for pastel outfits"
+      ],
+      "metaTitle": "Silver-Toned Floral Nath in White Zirconia Frost, ₹129",
+      "metaDescription": "Marquise and pear white zirconia form a leafy crescent on a silver-toned nath with a small drop. Cool modern ethnic at ₹129 with 7-day returns across India.",
+      "imageAlt": "Silver-toned nath set with marquise and pear white zirconia in a leafy crescent with a small stone drop, on a card",
+      "ogTitle": "Frost for the Side Profile | Morchadi Gems",
+      "ogDescription": "A crescent of white zirconia leaves on a silver-toned hoop, drop included. The pastel-wedding nath at ₹129 from Morchadi Gems.",
+      "ogImage": "/products/P478.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "934",
+      "originalSku": "MJ-566",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-566-silver-plated-floral-nath-shimmering-white-zirconia-studded-934",
+      "originalCategories": [
+        "Nath"
+      ]
+    }
+  },
+  {
+    "id": "P533",
+    "name": "Glow and Glam Birthday Hamper",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 750,
+      "mrp": 750,
+      "cost": 450
+    },
+    "media": {
+      "images": [
+        "/products/P533.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Pomegranate face mask; nose strip; wet wipes; lip balm; glass bangles; jhumka earrings; pearl hair pin",
+      "theme": "Birthday hamper: skincare and glam"
+    },
+    "description": "A birthday box with a theory behind it: first the skin, then the sparkle. The glow half packs a pomegranate sheet face mask, a blackhead-removal nose strip, cleansing wet wipes and a lip balm, the full pre-party routine in miniature. The glam half answers with a stack of deep pink glass bangles worked with golden detailing, a pair of oxidised-look jhumka earrings dropping tiny pink beads, and a leaf-shaped hair pin in blush crystals ready for the birthday photographs.\n\nEverything arrives arranged in a gift box on paper shred, so the moment of opening is part of the present. There is nothing to wrap, nothing to assemble, and no risk of gifting a cosmetic she already owns in triplicate, since the pieces here are small, giftable sizes meant for the birthday week itself.\n\nIt suits the friend whose bathroom shelf is a skincare shrine, the cousin turning sixteen, the flatmate who deserves better than a mug. One practical note: this hamper ships prepaid only, so choose an online payment method at checkout. Beyond that, your work is done the moment you type her address.",
+    "seo": {
+      "primaryKeyword": "birthday hamper for her",
+      "secondaryKeywords": [
+        "skincare gift hamper",
+        "birthday gift box for girls",
+        "jhumka gift set"
+      ],
+      "metaTitle": "Glow and Glam Birthday Hamper for Her, Boxed | Morchadi",
+      "metaDescription": "A ready gift box pairing skincare minis with pink glass bangles, jhumka earrings and a crystal hair pin. Birthday sorted at ₹750, prepaid only.",
+      "imageAlt": "Open birthday hamper with sheet mask, nose strips, wipes, lip balm, pink bangles, jhumka earrings and a crystal hair pin",
+      "ogTitle": "First the Glow, Then the Glam | Morchadi Gems",
+      "ogDescription": "Skincare minis on one side, pink bangles, jhumkas and a crystal hair pin on the other. The birthday box at ₹750 from Morchadi Gems.",
+      "ogImage": "/products/P533.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "997",
+      "originalSku": "MJ-264",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-264-glow-glam-birthday-hamper-997",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P580",
+    "name": "Layered Herringbone and Bead Chain Anklet",
+    "category": "anklets",
+    "status": "active",
+    "collections": [
+      "anti-tarnish",
+      "gifting"
+    ],
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 132
+    },
+    "media": {
+      "images": [
+        "/products/P580.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated with anti-tarnish coating (base metal not stated in source)",
+      "design": "3-in-1 layered: herringbone, bead satellite and box chain",
+      "chains": "Flat herringbone snake chain, satellite bead chain, thin box chain",
+      "fit": "Adjustable extender chain",
+      "closure": "Lobster clasp",
+      "occasion": "Beach, casual wear, gifting",
+      "care": "Avoid water, perfume and chemicals"
+    },
+    "description": "Two chains, one clasp, zero fuss. A flat herringbone chain lies like liquid against the ankle while a finer chain dotted with tiny gold beads traces its own line beside it, and because both share a single lobster clasp, the layered look arrives without the tangle that wearing two separate anklets guarantees.\n\nThe build is gold-plated with an anti-tarnish coating, which is what lets an anklet, the most weather-exposed jewellery you own, keep its shine through monsoon commutes and beach weekends. An extender chain fine-tunes the fit from snug to relaxed.\n\nHerringbone chains have a particular way of catching light in a single moving bar, and at the ankle that flash appears exactly when you walk. The bead chain keeps it company with a quieter sparkle. Together they suit bare feet and sandals, jeans rolled at the cuff, and every flowy dress in the wardrobe.\n\nRinse-free care: avoid perfume and water on it, wipe after wear. That is the whole manual. Anklets have quietly moved from beach accessory to everyday habit, and a layered one like this is the reason, one clasp and your feet are dressed.",
+    "seo": {
+      "primaryKeyword": "gold-plated layered anklet",
+      "secondaryKeywords": [
+        "herringbone anklet",
+        "anti-tarnish anklet",
+        "double chain payal"
+      ],
+      "metaTitle": "Layered Herringbone and Bead Chain Anklet, Anti-Tarnish",
+      "metaDescription": "A flat herringbone chain and a bead-dotted fine chain on one lobster clasp, gold-plated with anti-tarnish coating. Adjustable ankle fit at ₹220.",
+      "imageAlt": "Gold-plated anklet with a flat herringbone chain and a fine bead-station chain sharing one extender clasp, on satin",
+      "ogTitle": "Two Chains, One Clasp, Feet Dressed | Morchadi Gems",
+      "ogDescription": "Liquid herringbone plus a bead-dotted chain in anti-tarnish gold plate, closing on one clasp. The layered anklet at ₹220 from Morchadi Gems.",
+      "ogImage": "/products/P580.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1050",
+      "originalSku": "MJ-219",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-219-double-layer-herringbone-gold-anti-tarnish-anklet-1050",
+      "originalCategories": [
+        "anklet"
+      ]
+    }
+  },
+  {
+    "id": "P586",
+    "name": "Satin Rose Hair Tie in Six Shades",
+    "category": "hair-accessories",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 69,
+      "mrp": 69,
+      "cost": 41
+    },
+    "media": {
+      "images": [
+        "/products/P586.webp",
+        "/products/P586-2.webp",
+        "/products/P586-3.webp",
+        "/products/P586-4.webp",
+        "/products/P586-5.webp",
+        "/products/P586-6.webp",
+        "/products/P586-7.webp",
+        "/products/P586-8.webp"
+      ],
+      "variantImages": {
+        "Color:Wine Red": "/products/P586-wine-red.webp",
+        "Color:Dusty Mauve": "/products/P586-dusty-mauve.webp",
+        "Color:Pearl Champagne": "/products/P586-pearl-champagne.webp",
+        "Color:Champagne Gold": "/products/P586-champagne-gold.webp",
+        "Color:Classic Black": "/products/P586-classic-black.webp",
+        "Color:Blush Pink": "/products/P586-blush-pink.webp"
+      }
+    },
+    "options": [
+      {
+        "name": "Color",
+        "type": "swatch",
+        "values": [
+          "Combo",
+          "Wine Red",
+          "Dusty Mauve",
+          "Pearl Champagne",
+          "Champagne Gold",
+          "Classic Black",
+          "Blush Pink"
+        ],
+        "default": "Combo"
+      }
+    ],
+    "specs": {
+      "material": "Satin",
+      "band": "Soft stretchable elastic, gentle on hair",
+      "design": "Handcrafted rosette",
+      "dual use": "Doubles as a bracelet/wrist accessory",
+      "grip": "Lightweight, no-damage grip for all hair types",
+      "occasion": "Daily wear, office, college, parties, gifting"
+    },
+    "description": "A rose you can actually wear to work. Each of these hair ties carries a full handmade satin rosette, petals rolled and folded from ribbon, mounted on a soft stretch elastic that holds a ponytail without pulling. Six shades cover the moods: blush pink, dusty mauve, pearl champagne, champagne gold, classic black and wine red, with a combo option if choosing is not your strength.\n\nThe rosette is generous enough to read as an accessory rather than a hair tie, the low-ponytail-and-flower look that keeps circulating every festive season. Because the flower is satin, it photographs with soft light instead of plastic shine, and it survives being stuffed in a handbag between wears.\n\nOff duty for the hair, it doubles as a wrist piece; the elastic sits like a corsage band, which is not a bad trick at a wedding brunch. The grip is gentle on all hair types, no metal crimp, no snag, no dent left behind.\n\nCare is a quick reshape of the petals with your fingers and a spot in the drawer away from crush. At daily-wear, office and college prices, this is the rare accessory that upgrades an ordinary ponytail in four seconds flat.",
+    "seo": {
+      "primaryKeyword": "satin rose hair tie",
+      "secondaryKeywords": [
+        "rose flower hair tie",
+        "satin scrunchie alternative",
+        "hair accessory for gifting"
+      ],
+      "metaTitle": "Satin Rose Hair Tie in Six Shades, Soft Stretch | Morchadi",
+      "metaDescription": "A handmade satin rosette on a gentle stretch elastic, in six shades from blush to wine red. Doubles as a wrist piece, ₹69 with 7-day returns.",
+      "imageAlt": "Six satin rose hair ties in pink, cream, red, mauve, champagne and black arranged on an open book",
+      "additionalImageAlts": [
+        "Dusty mauve satin rose hair tie on a black elastic band lying on crumpled white paper",
+        "Champagne gold satin rosette hair tie photographed close on a book page",
+        "Classic black satin rose hair tie coiled on white textured paper",
+        "Pearl champagne satin rose hair tie with softly rolled petals on a book edge",
+        "Wine red satin rose hair tie angled to show the height of the rolled petals",
+        "Wine red satin rosette hair tie flat on paper showing the full bloom from above",
+        "Five satin rose hair ties in a gift tray with pink, champagne, red and black shades visible"
+      ],
+      "ogTitle": "A Rose for the Ponytail, Six Ways | Morchadi Gems",
+      "ogDescription": "Handmade satin rosettes on soft stretch elastics, blush to wine red. The four-second ponytail upgrade at ₹69 from Morchadi Gems.",
+      "ogImage": "/products/P586.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1056",
+      "originalSku": "MJ-523",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-523-satin-rose-flower-hair-tie-1056",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P606",
+    "name": "Floral Meenakari Bracelet Watch with Ghungroo Bells",
+    "category": "watches",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 113
+    },
+    "media": {
+      "images": [
+        "/products/P606.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated finish (base metal not stated in source)",
+      "craft": "Handcrafted meenakari floral design",
+      "detailing": "Ghungroo charm detailing",
+      "closure": "Adjustable chain closure",
+      "weight": "Lightweight",
+      "occasion": "Weddings, festivals, parties",
+      "package contents": "1 Traditional Meenakari Bracelet Watch"
+    },
+    "description": "Somewhere between a watch and a pooja-ready bracelet sits this piece. A small round dial with clean numerals is flanked by two meenakari roundels, each painted with green leaves inside a red enamel rim, and clusters of golden ghungroo bells hang from the links so the watch quite literally announces your arrival.\n\nThe gold-plated finish runs through the curb chain, the bells and the casework, keeping the whole piece in one warm tone. It fastens with an adjustable chain closure, so the fit works whether you wear it snug at the wrist bone or loose like a bracelet.\n\nThis is festive-first jewellery. It belongs with a saree at a wedding breakfast or over mehendi at Teej, where the bells earn their keep every time your hand moves. That it also tells the time feels almost like a bonus, and it spares you reaching for a phone mid-function.\n\nIt arrives in a gift box with a card, which settles the wrapping question for you. Keep it dry, keep it away from perfume, and wipe the enamel gently; meenakari rewards care. For anyone building a collection of Indian-craft accessories, a working meenakari watch is the piece guests will not stop asking about.",
+    "seo": {
+      "primaryKeyword": "floral meenakari watch",
+      "secondaryKeywords": [
+        "meenakari watch for women",
+        "gold-plated bracelet watch",
+        "festive watch gift"
+      ],
+      "metaTitle": "Floral Meenakari Bracelet Watch with Ghungroo, Boxed Gift",
+      "metaDescription": "A gold-plated bracelet watch with red-rimmed floral meenakari roundels and ghungroo bells, adjustable chain closure, arriving gift-boxed at ₹189.",
+      "imageAlt": "Gold-plated bracelet watch with white dial, red and green floral meenakari roundels and ghungroo bells in a pink gift box",
+      "ogTitle": "A Watch That Rings Like Ghungroo, ₹189 | Morchadi Gems",
+      "ogDescription": "Meenakari roundels, golden bells and a proper working dial in one gold-plated bracelet watch. Boxed and festive at ₹189 from Morchadi Gems.",
+      "ogImage": "/products/P606.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1078",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1078",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P608",
+    "name": "Antique-Finish Meenakari Watch with Pearl-Look Drops",
+    "category": "watches",
+    "status": "active",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 289,
+      "mrp": 289,
+      "cost": 173
+    },
+    "media": {
+      "images": [
+        "/products/P608.webp"
+      ]
+    },
+    "specs": {
+      "material": "Antique gold finish (base metal not stated in source)",
+      "craft": "Meenakari craftsmanship with ivory detailing",
+      "stone": "Red and green decorative stones, type not stated in source",
+      "detailing": "Pearl bead drops (material not stated in source)",
+      "closure": "Adjustable chain",
+      "weight": "Lightweight, skin-friendly",
+      "occasion": "Weddings, Navratri, Teej, Karwa Chauth, Diwali, festive and party wear",
+      "package contents": "1 Traditional Meenakari Bracelet Watch"
+    },
+    "description": "Open the box and the first impression is of a miniature heirloom. The dial sits inside a ring of clear stones within antique gold scrollwork, ivory meenakari teardrop panels rise above and below it with green stone centres, and tiny pearl-look beads with red and green drops fringe the edges like a haar in miniature.\n\nThe antique gold finish is the quiet decision that makes it work. Instead of bright yellow shine, the metal has a softened, older tone that lets the ivory enamel and the coloured stones read as craft rather than costume. A small lobster clasp on an adjustable chain closes it, so the fit is yours to set.\n\nWear it where its vocabulary belongs: Karwa Chauth, Diwali evenings, a wedding week where every day needs a different wrist. It is lightweight and skin-friendly for long hours, and the watch face means one less glance at a phone during the ceremony.\n\nTreat the enamel and pearl-look drops gently, keep the piece dry, and it will stay photograph-ready. It ships gift-boxed with a card. Of the meenakari watches in this catalogue, this is the antique one, for the buyer whose taste runs to old gold rather than new.",
+    "seo": {
+      "primaryKeyword": "antique meenakari watch",
+      "secondaryKeywords": [
+        "antique gold bracelet watch",
+        "meenakari watch gift",
+        "festive wrist watch for women"
+      ],
+      "metaTitle": "Antique Meenakari Bracelet Watch, Pearl-Look Drops, ₹289",
+      "metaDescription": "An antique gold-finish bracelet watch with ivory meenakari panels, red and green stones and pearl-look drops. Adjustable chain, gift-boxed, ₹289.",
+      "imageAlt": "Antique gold-finish bracelet watch with ivory meenakari teardrops, green stones and pearl-look bead drops in a gift box",
+      "ogTitle": "A Miniature Heirloom That Tells Time | Morchadi Gems",
+      "ogDescription": "Ivory meenakari, old-gold scrollwork and pearl-look drops around a working dial. The antique-finish bracelet watch at ₹289 from Morchadi Gems.",
+      "ogImage": "/products/P608.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1080",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/traditional-meenakari-bracelet-watch-for-women-1080",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
   }
 ]

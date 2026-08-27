@@ -15,6 +15,7 @@
     "backfill:keyword-map": "node scripts/backfill-keyword-map.mjs",
     "calibrate:similarity": "node scripts/calibrate-similarity.mjs",
     "publish:product": "node scripts/publish-product.mjs",
+    "report:images": "node scripts/report-images.mjs",
     "seed:admin": "node scripts/seed-admin.mjs",
     "generate:placeholders": "node scripts/generate-placeholders.mjs",
     "generate:brand-assets": "node scripts/generate-brand-assets.mjs"

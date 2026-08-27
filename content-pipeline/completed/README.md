@@ -1,7 +1,12 @@
 # content-pipeline/completed
 
-Draft A objects whose product has been published into `data/products.json`. **This directory
-starts empty**, and this file is the only thing in it that git tracks.
+The provenance bundle behind every product published into `data/products.json`: the Draft A
+object (`PNNN.json`) and, since
+[ADR-057](../../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md), the
+product's whole staging directory (`PNNN/` — raw block, downloader manifest and source images),
+both moved here by `scripts/publish-product.mjs` at publish. **Unlike its siblings, this
+directory is tracked in git**: what it holds is the evidence behind claims that are already
+live, and it enters history in the same change that publishes them.
 
 ## Why these are kept rather than deleted
 
@@ -15,10 +20,15 @@ Moving rather than copying is deliberate: a draft in
 [`../drafts/`](../drafts/) is work in progress and a draft here is closed, and one file cannot
 be both.
 
+The same reasoning covers the staging bundle: `sourceFile` provenance in a draft points into
+`PNNN/raw/`, and the source photographs behind the published `public/products/` files exist
+nowhere else once `incoming/` empties.
+
 ## Convention
 
 Same filename as in `drafts/` — `PNNN.json`, unchanged on the move, so a product id resolves to
-one file wherever it currently sits. Every file here should have a row in
+one file wherever it currently sits; its staging directory keeps its `PNNN/` name beside it.
+Every file here should have a row in
 [`docs/pipeline-prep/products-completed.md`](../../docs/pipeline-prep/products-completed.md) and
 should no longer have one in `drafts-in-progress.md`.
 
@@ -26,5 +36,7 @@ should no longer have one in `drafts-in-progress.md`.
 
 It has passed `validatePublishReadiness` — every attribute `confirmed: true`, a positive numeric
 `pricing.price`, at least one `images.general` entry, a non-null fixed-slug `category`, and
-`personalized` resolved to `true` or `false`. Note that this check is **exported but not wired to
-any CLI or pipeline**, because Phase 2 is not designed; today it is run, if at all, by hand.
+`personalized` resolved to `true` or `false`. This check now has two callers, both from Phase 2
+([ADR-053](../../docs/decisions/ADR-053-draft-a-to-product-orchestration.md)): the orchestration
+skill runs it as its first gate, and `scripts/publish-product.mjs` runs it again at publish,
+because the draft file is hand-edited between those two points and publishing cannot be undone.

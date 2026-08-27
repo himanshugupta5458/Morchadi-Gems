@@ -1,0 +1,140 @@
+{
+  "productId": "P292",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated anti-tarnish stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "artificial/imitation stones, type not stated in source",
+      "displayTerm": "Artificial Stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Artificial Stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "sun-rays motif with stone-studded detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant sun rays design with sparkling stone-studded detailing"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "lobster clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Closure: Lobster Clasp"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Length",
+      "value": "45 cm, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Length: 45 cm (Adjustable)"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "wipe after use; store flat; keep away from sprays, perfume and water; clean gently with a soft brush and jewellery solution",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Store in a flat box to avoid scratches\n- Keep away from sprays and perfumes\n- Do not soak in water\n- Clean gently with a soft brush and jewellery cleaning solution"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P292.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P292-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P292-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P292-4.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P292-5.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P292/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": null,
+    "cost": 119,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elegant sun rays design with sparkling stone-studded detailing\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Stone Type: Artificial Stones\n- Closure: Lobster Clasp\n- Length: 45 cm (Adjustable)\n- Perfect for layering or wearing solo for a statement look\nCare Tips:\n- Wipe with a soft cloth after every use\n- Store in a flat box to avoid scratches\n- Keep away from sprays and perfumes\n- Do not soak in water\n- Clean gently with a soft brush and jewellery cleaning solution",
+    "referenceTitle": "Dainty Sun Rays Pendant",
+    "originalId": "690",
+    "originalSku": "MJ-205",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-205-dainty-sun-rays-pendant-690",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "2026-08-25: Base material, Plating and Finish candidates merged into one maximal-phrase Material attribute (contiguous source bullets quoted together). The source's karat claim (\"18K Gold-Plated\") is dropped from the published value: karat-on-plated is not a claim this catalogue may make (ADR-018/ADR-035; validate-products hard-fails it). The quote preserves the source's exact wording.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹199, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹119 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

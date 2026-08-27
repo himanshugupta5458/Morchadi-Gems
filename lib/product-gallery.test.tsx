@@ -33,23 +33,23 @@ vi.mock("next/link", () => ({
   ),
 }));
 
-const NECKLACE_IMAGES = ["/products/P002.webp", "/products/P002-2.webp"];
+const NECKLACE_IMAGES = ["/products/P907.webp", "/products/P907-2.webp"];
 
 const WATCH_RING: CatalogueEntry = {
-  id: "P010",
+  id: "P910",
   name: "Mini Watch Ring",
   price: 300,
   mrp: 500,
-  image: "/products/P010.webp",
+  image: "/products/P910.webp",
   inStock: true,
   options: [
     { name: "Colour", type: "swatch", values: ["Silver", "Golden"], default: "Silver" },
   ],
-  variantImages: { "Colour:Golden": "/products/P010-golden.webp" },
+  variantImages: { "Colour:Golden": "/products/P910-golden.webp" },
 };
 
 const NECKLACE: CatalogueEntry = {
-  id: "P002",
+  id: "P907",
   name: "Teardrop Glass Locket Necklace",
   price: 450,
   mrp: 999,
@@ -234,7 +234,7 @@ describe("the thumbnail strip", () => {
     render(<Gallery item={NECKLACE} images={NECKLACE_IMAGES} />);
 
     expect(thumbnails()).toHaveLength(2);
-    expect(mainImageSrc()).toContain("P002.webp");
+    expect(mainImageSrc()).toContain("P907.webp");
   });
 
   it("swaps the main image when a thumbnail is clicked", () => {
@@ -242,7 +242,7 @@ describe("the thumbnail strip", () => {
 
     fireEvent.click(thumbnails()[1]);
 
-    expect(mainImageSrc()).toContain("P002-2.webp");
+    expect(mainImageSrc()).toContain("P907-2.webp");
   });
 
   it("marks the shown image as current, and only that one", () => {
@@ -274,7 +274,7 @@ describe("the thumbnail strip", () => {
 
 describe("the unified strip", () => {
   it("gives every mapped photograph a thumbnail of its own", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
     expect(thumbnails()).toHaveLength(2);
     expect(thumbnailFor("Show image 2 of 2, Colour Golden")).toBeTruthy();
@@ -291,15 +291,15 @@ describe("the unified strip", () => {
   });
 
   it("shows a mapped photograph when its own thumbnail is clicked", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
     fireEvent.click(thumbnailFor(/Colour Golden$/));
 
-    expect(mainImageSrc()).toContain("P010-golden.webp");
+    expect(mainImageSrc()).toContain("P910-golden.webp");
   });
 
   it("records the option value that a clicked mapped thumbnail stands for", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
     expect(isChosen("Silver")).toBe(true);
     fireEvent.click(thumbnailFor(/Colour Golden$/));
@@ -332,7 +332,7 @@ describe("the unified strip", () => {
   });
 
   it("always marks exactly one thumbnail as current, including on a mapped image", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
     chooseColour("Golden");
 
@@ -356,20 +356,20 @@ describe("the unified strip", () => {
 
 describe("the per-variant image", () => {
   it("swaps the main image when the mapped value is chosen", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
-    expect(mainImageSrc()).toContain("P010.webp");
+    expect(mainImageSrc()).toContain("P910.webp");
     chooseColour("Golden");
-    expect(mainImageSrc()).toContain("P010-golden.webp");
+    expect(mainImageSrc()).toContain("P910-golden.webp");
   });
 
   it("falls back to the product's own image for an unmapped value", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
 
     chooseColour("Golden");
     chooseColour("Silver");
 
-    expect(mainImageSrc()).toContain("P010.webp");
+    expect(mainImageSrc()).toContain("P910.webp");
     expect(mainImageSrc()).not.toContain("golden");
   });
 
@@ -480,12 +480,12 @@ describe("the strip's arrow keys", () => {
   });
 
   it("record the option value when they land on a mapped photograph", () => {
-    render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+    render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
     const strip = thumbnails()[0].closest("ul") as HTMLUListElement;
 
     fireEvent.keyDown(strip, { key: "ArrowRight" });
 
-    expect(mainImageSrc()).toContain("P010-golden.webp");
+    expect(mainImageSrc()).toContain("P910-golden.webp");
     expect(isChosen("Golden")).toBe(true);
   });
 
@@ -525,8 +525,8 @@ describe("the strip's arrow keys", () => {
 describe("buildGalleryImages", () => {
   it("is just the images for a product that maps nothing", () => {
     expect(buildGalleryImages(NECKLACE_IMAGES, undefined)).toEqual([
-      { src: "/products/P002.webp", variant: null },
-      { src: "/products/P002-2.webp", variant: null },
+      { src: "/products/P907.webp", variant: null },
+      { src: "/products/P907-2.webp", variant: null },
     ]);
   });
 
@@ -563,15 +563,15 @@ describe("resolveVariantImage", () => {
 
   it("falls through to the default image at the call site", () => {
     expect(
-      selectDisplayImage("/products/P010.webp", WATCH_RING.variantImages, {
+      selectDisplayImage("/products/P910.webp", WATCH_RING.variantImages, {
         Colour: "Silver",
       }),
-    ).toBe("/products/P010.webp");
+    ).toBe("/products/P910.webp");
     expect(
-      selectDisplayImage("/products/P010.webp", WATCH_RING.variantImages, {
+      selectDisplayImage("/products/P910.webp", WATCH_RING.variantImages, {
         Colour: "Golden",
       }),
-    ).toBe("/products/P010-golden.webp");
+    ).toBe("/products/P910-golden.webp");
   });
 });
 
@@ -579,30 +579,30 @@ describe("the cart line's thumbnail", () => {
   it("shows the photograph of the variant the line records", () => {
     const lines = buildCartLines(
       [
-        { productId: "P010", name: "Mini Watch Ring", price: 300, image: "", qty: 1,
+        { productId: "P910", name: "Mini Watch Ring", price: 300, image: "", qty: 1,
           selectedOptions: { Colour: "Golden" } },
-        { productId: "P010", name: "Mini Watch Ring", price: 300, image: "", qty: 1,
+        { productId: "P910", name: "Mini Watch Ring", price: 300, image: "", qty: 1,
           selectedOptions: { Colour: "Silver" } },
       ],
       CATALOGUE,
     );
 
-    expect(lines[0].image).toBe("/products/P010-golden.webp");
-    expect(lines[1].image).toBe("/products/P010.webp");
+    expect(lines[0].image).toBe("/products/P910-golden.webp");
+    expect(lines[1].image).toBe("/products/P910.webp");
   });
 
   it("shows the product's own photograph when nothing is mapped", () => {
     const lines = buildCartLines(
-      [{ productId: "P002", name: NECKLACE.name, price: 450, image: "", qty: 1 }],
+      [{ productId: "P907", name: NECKLACE.name, price: 450, image: "", qty: 1 }],
       CATALOGUE,
     );
 
-    expect(lines[0].image).toBe("/products/P002.webp");
+    expect(lines[0].image).toBe("/products/P907.webp");
   });
 
   it("reaches the rendered cart line, one line per finish", async () => {
     await act(async () => {
-      render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+      render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
     });
 
     fireEvent.click(screen.getByRole("button", { name: "Add to cart" }));
@@ -617,13 +617,13 @@ describe("the cart line's thumbnail", () => {
       return decodeURIComponent(image?.getAttribute("src") ?? "");
     });
 
-    expect(sources[0]).toContain("P010.webp");
-    expect(sources[1]).toContain("P010-golden.webp");
+    expect(sources[0]).toContain("P910.webp");
+    expect(sources[1]).toContain("P910-golden.webp");
   });
 
   it("records the finish a clicked thumbnail stands for", async () => {
     await act(async () => {
-      render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+      render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
     });
 
     fireEvent.click(thumbnailFor(/Colour Golden$/));
@@ -638,7 +638,7 @@ describe("the cart line's thumbnail", () => {
 
   it("stores the variant photograph on the persisted line", async () => {
     await act(async () => {
-      render(<Gallery item={WATCH_RING} images={["/products/P010.webp"]} />);
+      render(<Gallery item={WATCH_RING} images={["/products/P910.webp"]} />);
     });
 
     chooseColour("Golden");
@@ -648,6 +648,6 @@ describe("the cart line's thumbnail", () => {
       window.localStorage.getItem(CART_STORAGE_KEY) ?? "[]",
     ) as { image: string }[];
 
-    expect(stored[0].image).toBe("/products/P010-golden.webp");
+    expect(stored[0].image).toBe("/products/P910-golden.webp");
   });
 });

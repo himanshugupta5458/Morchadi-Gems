@@ -1,0 +1,102 @@
+{
+  "productId": "P385",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "kundan crown charm on top",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a bold kundan crown charm on top"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Panels",
+      "value": "pink and red meenakari square panels with pearl borders",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricate pink & red meenakari square panels with pearl borders"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial",
+      "value": "cubic zirconia-encrusted dial",
+      "displayTerm": "CZ",
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a heavily CZ-encrusted dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Pendant",
+      "value": "multicolour chand pendant with cascading ghungroo chains",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a multicolour chand pendant with cascading ghungroo chains below"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "bridal, sangeet, grand festive celebrations",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "An absolute showstopper for brides, sangeet nights, and grand festive celebrations."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P385.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P385/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 399,
+    "mrp": null,
+    "cost": 239,
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Fit for a queen — this extraordinary Kashmiri bracelet watch is a true work of art featuring a bold kundan crown charm on top, intricate pink & red meenakari square panels with pearl borders, a heavily CZ-encrusted dial, and a multicolour chand pendant with cascading ghungroo chains below. Every element tells a story of royal Indian craftsmanship. An absolute showstopper for brides, sangeet nights, and grand festive celebrations.",
+    "referenceTitle": "Kashmiri Multicolour Meenakari Crown Kundan Bracelet Watch",
+    "originalId": "834",
+    "originalSku": "MJ-362",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-362-kashmiri-multicolour-meenakari-crown-kundan-bracelet-watch-834",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Watch movement type is not stated anywhere in the source — no mechanism attribute is proposed (nothing inferred).",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹399, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹239 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,116 @@
+{
+  "productId": "P295",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated anti-tarnish stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "durable anti-tarnish stainless steel with 18K gold plating"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "series of delicate triangle charms, geometric",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a series of delicate triangle charms"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Net quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "wipe after use; avoid chemicals, sprays and perfume; store flat; do not soak in water",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P295.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P295/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P295-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P295/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 219,
+    "mrp": null,
+    "cost": 131,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- A modern and edgy statement piece, this gold necklace features a series of delicate triangle charms. The multi-point design creates a unique geometric pattern, adding a contemporary touch to your style. Made from durable anti-tarnish stainless steel with 18K gold plating, it's perfect for those who love bold, yet minimalist, accessories.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Triangle\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water\n- Geometric necklace, triangle necklace, gold jewelry, anti-tarnish, stainless steel, minimalist necklace, edgy jewelry, statement piece, modern accessory, gift for her, online jewelry store",
+    "referenceTitle": "Anti-Tarnish Charm Necklace for Daily wear",
+    "originalId": "699",
+    "originalSku": "MJ-067",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-067-anti-tarnish-charm-necklace-for-daily-wear-699",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a trailing SEO keyword-stuffing list (search terms, not product copy). Recorded here so the terms are not silently lost, but none was treated as a product fact.",
+      "sourceContext": "Geometric necklace, triangle necklace, gold jewelry, anti-tarnish, stainless steel, minimalist necklace, edgy jewelry, statement piece, modern accessory, gift for her, online jewelry store"
+    }
+  ],
+  "notes": [
+    "2026-08-25: Base material and Plating candidates merged into one maximal-phrase Material attribute quoting the source's own contiguous prose. The karat claim (\"18K\") is dropped from the published value: karat-on-plated is not a claim this catalogue may make (ADR-018/ADR-035). The quote preserves the source's exact wording.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹219, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹131 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

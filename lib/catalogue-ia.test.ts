@@ -26,13 +26,13 @@ import {
 } from "@/lib/navigation";
 
 /**
- * Eleven slugs a product record may carry; ten of them reachable by a shopper. The two numbers
- * differ because `gift-hampers` was agreed before its products exist — see
+ * Eleven slugs a product record may carry, and since batch 2 published the first gift hampers,
+ * all eleven reachable by a shopper — see
  * [ADR-055](../docs/decisions/ADR-055-category-vocabulary-and-surfacing.md) and
- * `lib/category-vocabulary.test.ts`, which owns that split in full.
+ * `lib/category-vocabulary.test.ts`, which owns the surfacing rule in full.
  */
 const EXPECTED_CATEGORY_COUNT = 11;
-const EXPECTED_SURFACED_CATEGORY_COUNT = 10;
+const EXPECTED_SURFACED_CATEGORY_COUNT = 11;
 const EXPECTED_COLLECTION_COUNT = 4;
 
 describe("the category tier", () => {

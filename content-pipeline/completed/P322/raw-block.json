@@ -1,0 +1,68 @@
+{
+  "productId": "P322",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "748",
+    "workingId": "odoo-748",
+    "originalSku": "MJ-209",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-209-delicate-pink-petal-floral-earrings-748",
+    "referenceTitle": "Delicate Pink Petal Floral Earrings",
+    "rawContent": "- Add a soft, feminine charm to your look with these beautiful silver-plated floral stud earrings, designed with pastel pink petal stones and a sparkling crystal center. Their delicate flower motif brings a cute yet classy appeal, making them perfect for daily wear as well as casual outings, brunches, and festive occasions.\n- Lightweight and comfortable, these studs pair effortlessly with Western, Indo-western, and ethnic outfits. The subtle shimmer of the petals combined with the high-polish silver finish makes them a versatile and elegant addition to your jewelry collection.\n- Keywords included: floral stud earrings, pink petal earrings, silver-plated studs, flower earrings for women, cute daily wear earrings, crystal center floral jewelry",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Add a soft, feminine charm to your look with these beautiful <strong>silver-plated floral stud earrings</strong>, designed with pastel pink petal stones and a sparkling crystal center. Their delicate flower motif brings a cute yet classy appeal, making them perfect for daily wear as well as casual outings, brunches, and festive occasions.</li><li>Lightweight and comfortable, these studs pair effortlessly with Western, Indo-western, and ethnic outfits. The subtle shimmer of the petals combined with the high-polish silver finish makes them a versatile and elegant addition to your jewelry collection.</li><li><strong>Keywords included:</strong> floral stud earrings, pink petal earrings, silver-plated studs, flower earrings for women, cute daily wear earrings, crystal center floral jewelry</li></ul></div>",
+    "originalCategories": [
+      "Traditional Earrings"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P322.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P322-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P322-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P322-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P322-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P322/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

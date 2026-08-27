@@ -1,0 +1,47 @@
+{
+  "productId": "P102",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "50",
+    "workingId": "odoo-50",
+    "originalSku": "MJ-399",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-399-love-charm-50",
+    "referenceTitle": "Love Charm",
+    "rawContent": "Make a bold statement with this stunning gold-plated design ring! Perfect for jewelry lovers , this intricately crafted ring adds a touch of luxury to any look. Ideal for casual and festive wear, it's a must-have for those who love unique accessories!\n💰 Premium quality & durable finish\n🚚 Delivery Time: 3-5 days (subject to stock availability)\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!",
+    "rawHtml": "<p data-oe-version=\"1.1\"><br></p><p>Make a bold statement with this stunning gold-plated &nbsp;design ring! Perfect for&nbsp;jewelry lovers , this intricately crafted ring adds a touch of luxury to any look. Ideal for casual and festive wear, it's a must-have for those who love unique accessories!</p><p>💰 Premium quality &amp; durable finish</p><p>\n🚚 Delivery Time: 3-5 days (subject to stock availability)</p><p>\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!</p>",
+    "originalCategories": [
+      "Charm"
+    ],
+    "originalMetaDescription": "Bold gold-plated men's ring with intricate design. Durable and premium finish, perfect for festive, party or daily statement wear.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 828",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P102.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P102/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹200 sale price (morchadijewels.com, reference only)"
+  }
+}

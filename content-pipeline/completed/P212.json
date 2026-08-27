@@ -1,0 +1,137 @@
+{
+  "productId": "P212",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass, high-gloss finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Handcrafted from premium-quality glass"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "wave-shaped (wavy silhouette)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Artistic wave-shaped glass bangles in vibrant multicolor tones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colours",
+      "value": "multicolor — green, pink, blue, violet, red, yellow, and more",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "available in six fresh and vibrant shades: green, pink, blue, violet, red, yellow, and more"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight; perfect for everyday, parties, weddings, and festivals"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "parties, festivals, weddings, daily wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "perfect for parties, festivals, weddings, and daily wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P212.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P212-2.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P212-3.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P212/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": null,
+    "cost": 119,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Description:\nMake a bold and stylish statement with this creative set of multicolor wave-design glass bangles, available in six fresh and vibrant shades: green, pink, blue, violet, red, yellow, and more. Each bangle showcases a unique wavy silhouette and glossy finish, capturing the spirit of modern fashion alongside traditional elegance. These bangles offer a lively twist to any ethnic or fusion ensemble and are perfect for parties, festivals, weddings, and daily wear.\nHandcrafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for all-day use. Their playful wave design and radiant colors add a contemporary touch to classic attire, making them an excellent choice for bridal jewelry, festive accessories, or thoughtful gifting.\nKey Features:\n- Artistic wave-shaped glass bangles in vibrant multicolor tones\n- Unique contemporary silhouette with high-gloss finish\n- Handcrafted for durability and smooth comfort\n- Lightweight; perfect for everyday, parties, weddings, and festivals\n- Complements sarees, lehengas, salwar suits, and fusion outfits\n- Excellent as bridal or festive jewelry and as a special gift",
+    "referenceTitle": "Twisted Crystal Kangan (2 piece)",
+    "originalId": "511",
+    "originalSku": "MJ-608",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-608-twisted-crystal-kangan-2-piece-511",
+    "originalCategories": [
+      "jelly bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Twisted Crystal Kangan (2 piece)\" — P212 (Odoo 511), P279 (Odoo 667), P282 (Odoo 670). Unlike the pilot group, the three descriptions are NOT byte-identical: each describes a different pattern (wave-design / twisted / wave-pattern) and a different colour list, so the candidate sets legitimately differ per product. The shared title is the only collision.",
+    "Title/description mismatch for owner review: the title says \"Twisted Crystal Kangan (2 piece)\" but the description describes a multicolor wave-design glass-bangle set in six shades, and the carried Design Number variant runs 1–6. Whether this is a 2-piece kangan or a bangle set is the owner's call.",
+    "2026-08-25: Material and Finish candidates merged into one maximal-phrase Material attribute for the Phase 2 spec mapping (Draft A rule 2 / mapper rule 3). Both halves were owner-confirmed as proposed; the folded Finish quote was \"Unique contemporary silhouette with high-gloss finish\".",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹199, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹119 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

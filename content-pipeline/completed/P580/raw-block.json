@@ -1,0 +1,46 @@
+{
+  "productId": "P580",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1050",
+    "workingId": "odoo-1050",
+    "originalSku": "MJ-219",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-219-double-layer-herringbone-gold-anti-tarnish-anklet-1050",
+    "referenceTitle": "Double Layer Herringbone Gold Anti-Tarnish Anklet",
+    "rawContent": "Minimal, modern, and effortlessly stylish — our Triple Layer Herringbone & Bead Anklet combines three chain styles in one: a flat herringbone snake chain, a delicate satellite bead chain, and a thin box chain, all layered together for a rich stacked look without the fuss of wearing multiple pieces separately.\n- 💛 Gold-plated with anti-tarnish coating — lasting everyday shine\n- ✨ 3-in-1 layered design — herringbone + bead satellite + box chain\n- 🔗 Flat herringbone chain — smooth, sleek & modern\n- 📿 Satellite bead chain — adds subtle texture and dimension\n- 📏 Adjustable extender chain for a perfect fit\n- 🔒 Secure lobster clasp\n- 🎁 Perfect for beach, casual wear & gifting\nPairs beautifully with: Bare feet, sandals, flowy dresses, kurtis, and western co-ords.\nAvoid contact with water, perfume, and chemicals to maintain shine.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Minimal, modern, and effortlessly stylish — our Triple Layer Herringbone &amp; Bead Anklet combines three chain styles in one: a flat herringbone snake chain, a delicate satellite bead chain, and a thin box chain, all layered together for a rich stacked look without the fuss of wearing multiple pieces separately.</p><ul>\n<li>💛 Gold-plated with anti-tarnish coating — lasting everyday shine</li>\n<li>✨ 3-in-1 layered design — herringbone + bead satellite + box chain</li>\n<li>🔗 Flat herringbone chain — smooth, sleek &amp; modern</li>\n<li>📿 Satellite bead chain — adds subtle texture and dimension</li>\n<li>📏 Adjustable extender chain for a perfect fit</li>\n<li>🔒 Secure lobster clasp</li>\n<li>🎁 Perfect for beach, casual wear &amp; gifting</li>\n</ul><p><em>Pairs beautifully with: Bare feet, sandals, flowy dresses, kurtis, and western co-ords.</em></p><p>\n<em>Avoid contact with water, perfume, and chemicals to maintain shine.</em></p>",
+    "originalCategories": [
+      "anklet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "anklets",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P580.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P580/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  }
+}

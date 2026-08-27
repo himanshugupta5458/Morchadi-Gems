@@ -1,0 +1,113 @@
+{
+  "productId": "P104",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "rosegold-plated brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rosegold\n- Material: Brass"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: American Diamonds"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "zig-zag geometric",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "A sleek zig-zag design with shimmering CZ stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "casual and festive looks",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Great for casual & festive looks"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "avoid water, perfumes and harsh chemicals; clean with a soft cloth",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Avoid water, perfumes & harsh chemicals. Clean with a soft cloth"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P104.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P104/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 59,
+    "mrp": null,
+    "cost": 35,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "A sleek zig-zag design with shimmering CZ stones — minimal yet eye-catching for daily wear or special occasions.\nHighlights:\n- Lightweight & comfortable\n- Trendy geometric design\n- Great for casual & festive looks\nDetails:\n- Plating: Rosegold\n- Material: Brass\n- Stones: American Diamonds\nCare:\nAvoid water, perfumes & harsh chemicals. Clean with a soft cloth",
+    "referenceTitle": "DC Jewelry | Zig-Zag Adjustable Ring",
+    "originalId": "121",
+    "originalSku": "MJ-201",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-201-dc-jewelry-zig-zag-adjustable-ring-121",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "2026-08-25: Plating and Material candidates merged into one maximal-phrase Material attribute (contiguous source bullets quoted together) for the Phase 2 spec mapping.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹59, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹35 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

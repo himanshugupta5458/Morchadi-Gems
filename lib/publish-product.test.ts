@@ -97,6 +97,13 @@ function seedRepository(catalogue: unknown[], drafts: Record<string, unknown>): 
   }
 }
 
+function seedStagingDir(batchId: string, id: string): void {
+  const productDir = join(root, "content-pipeline", "incoming", batchId, id);
+  mkdirSync(join(productDir, "raw"), { recursive: true });
+  writeJson(join(productDir, "raw-block.json"), { productId: id, stage: "queued" });
+  writeFileSync(join(productDir, "raw", "main.webp"), "not-a-real-image", "utf8");
+}
+
 function draftFile(id: string): string {
   return join(root, "content-pipeline", "drafts", `${id}.json`);
 }
@@ -120,7 +127,7 @@ afterEach(() => {
 
 describe("activateProduct", () => {
   it("flips draft to active and leaves the input array untouched", () => {
-    const catalogue = [product("P001", "active", "gold-plated initial ring"), product("P900", "draft")];
+    const catalogue = [product("P906", "active", "gold-plated initial ring"), product("P900", "draft")];
     const result = activateProduct(catalogue, "P900");
 
     expect(result.error).toBeNull();
@@ -165,7 +172,7 @@ describe("publishProduct", () => {
   });
 
   it("leaves every other product exactly as it was", () => {
-    const others = [product("P001", "active", "gold-plated initial ring"), product("P002", "draft", "glass locket necklace")];
+    const others = [product("P906", "active", "gold-plated initial ring"), product("P907", "draft", "glass locket necklace")];
     seedRepository([...others, product("P900", "draft")], { P900: readyDraft("P900") });
 
     publishProduct("P900", { repoRoot: root });
@@ -248,7 +255,7 @@ describe("publishProduct", () => {
 
   it("refuses when publishing would give one primary keyword two owners", () => {
     seedRepository(
-      [product("P001", "active"), product("P900", "draft")],
+      [product("P906", "active"), product("P900", "draft")],
       { P900: readyDraft("P900") },
     );
 
@@ -269,6 +276,42 @@ describe("publishProduct", () => {
     expect(result.published).toBe(true);
     expect(result.warnings.join(" ")).toContain("P900-similarity.json");
     expect(existsSync(join(root, "content-pipeline", "drafts", "P900-similarity.json"))).toBe(true);
+  });
+
+  it("moves the staging directory to completed alongside the draft", () => {
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
+    seedStagingDir("2026-08-23-batch-01", "P900");
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(true);
+    expect(result.stagingMovedTo).toBe("content-pipeline/completed/P900/");
+    expect(existsSync(join(root, "content-pipeline", "incoming", "2026-08-23-batch-01", "P900"))).toBe(false);
+    expect(existsSync(join(root, "content-pipeline", "completed", "P900", "raw-block.json"))).toBe(true);
+    expect(existsSync(join(root, "content-pipeline", "completed", "P900", "raw", "main.webp"))).toBe(true);
+  });
+
+  it("publishes a product with no staging directory exactly as before", () => {
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(true);
+    expect(result.stagingMovedTo).toBeNull();
+  });
+
+  it("refuses when completed already holds the product's staging directory, changing nothing", () => {
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
+    seedStagingDir("2026-08-23-batch-01", "P900");
+    mkdirSync(join(root, "content-pipeline", "completed", "P900"), { recursive: true });
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(false);
+    expect(result.errors[0]).toContain("already exists");
+    expect(statusOf("P900")).toBe("draft");
+    expect(existsSync(draftFile("P900"))).toBe(true);
+    expect(existsSync(join(root, "content-pipeline", "incoming", "2026-08-23-batch-01", "P900", "raw-block.json"))).toBe(true);
   });
 
   it("names the row the owner has to write by hand", () => {

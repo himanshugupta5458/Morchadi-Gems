@@ -1,0 +1,102 @@
+{
+  "productId": "P478",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "silver-toned (base metal not stated in source)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this silver-toned floral nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "white zirconia",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricately studded with sparkling white zirconia"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "floral nath",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "silver-toned floral nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "modern ethnic looks",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "perfect for adding a modern ethnic touch to any look"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "keep away from moisture and perfume; store in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep it away from moisture and perfumes, and store it safely in a dry place after use"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P478.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P478/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 129,
+    "mrp": null,
+    "cost": 60,
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Dazzle with this silver-toned floral nath, intricately studded with sparkling white zirconia. This high-fashion accessory is perfect for adding a modern ethnic touch to any look. To maintain its brilliant shine, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "referenceTitle": "Silver-Plated Floral Nath – Shimmering White Zirconia Studded",
+    "originalId": "934",
+    "originalSku": "MJ-566",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-566-silver-plated-floral-nath-shimmering-white-zirconia-studded-934",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Stone candidate: source says \"white zirconia\" — proposed as cubic zirconia (the standard reading) but marked unverified-guess because \"zirconia\" alone is not an exact data/stone-terms.json entry.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹129, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹60 is the export's real reference cost figure; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

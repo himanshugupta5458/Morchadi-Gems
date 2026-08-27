@@ -1,0 +1,106 @@
+{
+  "productId": "P101",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "beautiful Green color glass bangles"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colour",
+      "value": "green (per description — conflicts with the title's \"Maroon\")",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Add a touch of elegance with these beautiful Green color glass bangles!"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Set contents",
+      "value": "12 bangles (per description — conflicts with the title's \"Set of 8\")",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this set includes 12 finely crafted bangles"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "traditional and festive wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for traditional and festive wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P101.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P101/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 220,
+    "mrp": null,
+    "cost": 132,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of elegance with these beautiful Green color glass bangles! Perfect for traditional and festive wear, this set includes 12 finely crafted bangles to complete your look.\n💰 Price includes 12 bangles only\n🚚 Delivery Time: 3-5 days (subject to stock availability)\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Maroon)",
+    "originalId": "31",
+    "originalSku": "MJ-540",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-540-set-of-8-viral-jelly-bangle-maroon-31",
+    "originalCategories": [
+      "jelly bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed delivery-timeline and WhatsApp-enquiry lines (site boilerplate, not product facts). The \"Price includes 12 bangles only\" line was kept as a quantity fact, not discarded.",
+      "sourceContext": "🚚 Delivery Time: 3-5 days (subject to stock availability)\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!"
+    }
+  ],
+  "notes": [
+    "OWNER ATTENTION — the title and description contradict each other twice: title says \"Set of 8 … (Maroon)\", description says green bangles in a set of 12 (\"Price includes 12 bangles only\"). The description looks like template copy from a different bangle listing. Both the Colour and Set-contents candidates quote the description; the owner must rule which is true of the physical product.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹220, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹132 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,103 @@
+{
+  "productId": "P204",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "rose gold-plated alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Alloy base\n- Plating: Rose gold plated"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Cubic zirconia stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "V-shaped crystal band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: V-shaped crystal band ring"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "free size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size / Fit: Free size – adjustable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "everyday wear, party wear, gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Best Suitable For: Everyday wear, party wear, gift for women"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P204.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P204/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 85,
+    "mrp": null,
+    "cost": 51,
+    "referencePrice": "₹85 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Fashioned in a chic rose-gold tone, this V-shaped minimalist ring is accentuated with sparkling cubic zirconia stones along the band. The sleek curve adds a modern flair and looks beautiful worn alone or stacked with other rings.\n- Material: Alloy base\n- Plating: Rose gold plated\n- Stone Type: Cubic zirconia stones\n- Design: V-shaped crystal band ring\n- Size / Fit: Free size – adjustable\n- Best Suitable For: Everyday wear, party wear, gift for women",
+    "referenceTitle": "Rose Gold V-Shaped Adjustable Ring",
+    "originalId": "502",
+    "originalSku": "MJ-510",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-510-rose-gold-v-shaped-adjustable-ring-502",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"rings\" is a PROPOSAL, not source data — the source had no category. Basis: the title says \"Adjustable Ring\" and the description describes a V-shaped band ring. Requires explicit owner confirmation at review.",
+    "2026-08-25: Material and Plating candidates merged into one maximal-phrase Material attribute (contiguous source bullets quoted together) for the Phase 2 spec mapping.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹85, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹51 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
