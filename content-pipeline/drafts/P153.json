@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Material: Brass"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -80,7 +80,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

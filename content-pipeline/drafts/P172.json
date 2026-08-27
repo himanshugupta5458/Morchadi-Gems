@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Material: Brass base"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating: Premium Gold-plated finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Size & Fit: Adjustable – fits most finger sizes"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

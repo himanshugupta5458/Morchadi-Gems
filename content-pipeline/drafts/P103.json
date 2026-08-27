@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Brass"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Net quantity",

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "High-quality gold plating for enduring shine"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable – fits most finger sizes"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care instructions",

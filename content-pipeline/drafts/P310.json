@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium Quality | Anti-Tarnish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Base Material",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Base Material: Stainless Steel"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating: 18K Gold-Plated"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Shape",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Size: One-size & Adjustable"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Net Quantity",
@@ -91,7 +91,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
