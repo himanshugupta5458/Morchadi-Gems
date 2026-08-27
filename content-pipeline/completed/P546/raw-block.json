@@ -1,0 +1,49 @@
+{
+  "productId": "P546",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1012",
+    "workingId": "odoo-1012",
+    "originalSku": "MJ-458",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-458-pink-blossom-bow-bracelet-for-women-1012",
+    "referenceTitle": "Pink Blossom Bow Bracelet for Women",
+    "rawContent": "🎀 Delicate pink floral bracelet featuring sparkling blossom charms and an elegant bow design. Perfect for everyday wear, gifting, and Pinterest-inspired styling.",
+    "rawHtml": "<p data-oe-version=\"2.0\">🎀 Delicate pink floral bracelet featuring sparkling blossom charms and an elegant bow design. Perfect for everyday wear, gifting, and Pinterest-inspired styling.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P546.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P546/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

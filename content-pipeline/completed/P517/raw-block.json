@@ -1,0 +1,50 @@
+{
+  "productId": "P517",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "979",
+    "workingId": "odoo-979",
+    "originalSku": "MJ-479",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-479-purple-enamel-floral-gold-pendant-necklace-979",
+    "referenceTitle": "Purple Enamel Floral Gold Pendant Necklace",
+    "rawContent": "Make a statement with this vibrant purple enamel flower necklace. Featuring a lustrous metallic finish and a dainty gold-toned chain, this anti-tarnish pendant adds a bold yet feminine touch to your style. It is the perfect durable accessory for elevating your everyday look",
+    "rawHtml": "<div data-oe-version=\"2.0\">Make a statement with this vibrant purple enamel flower necklace. Featuring a lustrous metallic finish and a dainty gold-toned chain, this anti-tarnish pendant adds a bold yet feminine touch to your style. It is the perfect durable accessory for elevating your everyday look</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P517.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P517/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  }
+}

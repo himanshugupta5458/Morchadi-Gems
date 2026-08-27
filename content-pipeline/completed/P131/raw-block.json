@@ -1,0 +1,46 @@
+{
+  "productId": "P131",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "161",
+    "workingId": "odoo-161",
+    "originalSku": "MJ-164",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-164-dc-jewelry-double-t-cz-ring-rosegold-finish-adjustable-statement-finger-ring-161",
+    "referenceTitle": "DC Jewelry Double T CZ Ring – Rosegold Finish | Adjustable Statement Finger Ring",
+    "rawContent": "Shine bright with our DC Jewelry Double T CZ Ring – Rosegold Finish | Adjustable Statement Finger Ring — a charming symbol of elegance and grace. Whether it's a special celebration or everyday style, this ring brings a subtle sparkle to your look. It's an ideal gift for your loved ones on birthdays, weddings, anniversaries, Valentine's Day, or any festive occasion.\nWhy You'll Love It:\n✨ Lightweight & comfortable for daily wear\n✨ Trendy design for girls, teens, and women of all ages\n✨ A thoughtful gift that makes moments memorable\nProduct Details:\n🔹 Brand: DC Jewelry\n🔹 Collection: All Occasions\n🔹 Type: Finger Ring\n🔹 Plating: Rosegold Polished\n🔹 Material: Brass\n🔹 Stones: Premium American Diamonds\n🔹 Design: Star-shaped – a minimalist and chic addition to your collection\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p data-oe-version=\"2.0\">Shine bright with our <strong>DC Jewelry Double T CZ Ring – Rosegold Finish | Adjustable Statement Finger Ring</strong> — a charming symbol of elegance and grace. Whether it's a special celebration or everyday style, this ring brings a subtle sparkle to your look. It's an ideal gift for your loved ones on birthdays, weddings, anniversaries, Valentine's Day, or any festive occasion.</p><p><strong>Why You'll Love It:</strong></p><p>\n✨ Lightweight &amp; comfortable for daily wear</p><p>\n✨ Trendy design for girls, teens, and women of all ages</p><p>\n✨ A thoughtful gift that makes moments memorable</p><p><strong>Product Details:</strong></p><p>\n🔹 <strong>Brand:</strong> DC Jewelry</p><p>\n🔹 <strong>Collection:</strong> All Occasions</p><p>\n🔹 <strong>Type:</strong> Finger Ring</p><p>\n🔹 <strong>Plating:</strong> Rosegold Polished</p><p>\n🔹 <strong>Material:</strong> Brass</p><p>\n🔹 <strong>Stones:</strong> Premium American Diamonds</p><p>\n🔹 <strong>Design:</strong> Star-shaped – a minimalist and chic addition to your collection</p><p><strong>Care Instructions:</strong></p><p>\n💎 Clean gently with a microfiber or polishing cloth</p><p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p><p>\n🛑 Remove while swimming, showering, or gardening</p><p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p><p><strong>Perfect For:</strong></p><p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p><p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p><p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Chic rose gold Double T adjustable ring with CZ stones. Modern statement piece perfect for birthdays, parties & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P131.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P131/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "productId": "P528",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "990",
+    "workingId": "odoo-990",
+    "originalSku": "MJ-570",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-570-soft-rose-enamel-tulip-floral-bracelet-990",
+    "referenceTitle": "Soft Rose Enamel Tulip Floral Bracelet",
+    "rawContent": "This elegant tulip bracelet features a soft rose enamel bud and detailed green leaves on a sleek lobster clasp chain. Crafted with a classic gold-plated finish, it serves as a sophisticated and sentimental Mother's Day gift. A timeless floral piece designed for versatile, everyday elegance.",
+    "rawHtml": "<div data-oe-version=\"2.0\">This elegant tulip bracelet features a soft rose enamel bud and detailed green leaves on a sleek lobster clasp chain. Crafted with a classic gold-plated finish, it serves as a sophisticated and sentimental Mother's Day gift. A timeless floral piece designed for versatile, everyday elegance.</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P528.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P528/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

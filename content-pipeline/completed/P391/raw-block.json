@@ -1,0 +1,46 @@
+{
+  "productId": "P391",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "841",
+    "workingId": "odoo-841",
+    "originalSku": "MJ-355",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-355-kashmiri-blue-meenakari-kundan-bracelet-watch-841",
+    "referenceTitle": "Kashmiri Blue Meenakari Kundan Bracelet Watch",
+    "rawContent": "Bold, regal, and breathtakingly beautiful — this Kashmiri bracelet watch features deep royal blue meenakari floral charms with polki kundan centres, flanking a heavily CZ stone-encrusted watch dial that shines like royalty. Intricate kundan medallion beads and cascading ghungroo bell chains complete this truly statement piece. Perfect for brides, reception looks, and festive occasions where you want to be remembered.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Bold, regal, and breathtakingly beautiful — this Kashmiri bracelet watch features deep royal blue meenakari floral charms with polki kundan centres, flanking a heavily CZ stone-encrusted watch dial that shines like royalty. Intricate kundan medallion beads and cascading ghungroo bell chains complete this truly statement piece. Perfect for brides, reception looks, and festive occasions where you want to be remembered.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P391.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P391/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

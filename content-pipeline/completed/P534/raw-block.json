@@ -1,0 +1,46 @@
+{
+  "productId": "P534",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "998",
+    "workingId": "odoo-998",
+    "originalSku": "MJ-223",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-223-eid-mubarak-gift-hamper-998",
+    "referenceTitle": "Eid Mubarak Gift Hamper",
+    "rawContent": "Shop Eid Mubarak Gift Hamper at ₹799. Includes bracelet, jhumka earrings, scrunchie, rose oil face mask, wet wipes, Dairy Milk Silk and Ferrero Rocher. Prepaid only.\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Shop Eid Mubarak Gift Hamper at ₹799. Includes bracelet, jhumka earrings, scrunchie, rose oil face mask, wet wipes, Dairy Milk Silk and Ferrero Rocher. Prepaid only.&nbsp;<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P534.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P534/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹799 sale price (morchadijewels.com, reference only)"
+  }
+}

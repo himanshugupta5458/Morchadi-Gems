@@ -1,0 +1,49 @@
+{
+  "productId": "P525",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "987",
+    "workingId": "odoo-987",
+    "originalSku": "MJ-495",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-495-red-zirconia-tulip-gold-clavicle-chain-987",
+    "referenceTitle": "Red Zirconia Tulip Gold Clavicle Chain",
+    "rawContent": "Add a romantic touch to your jewelry collection with this elegant red tulip pendant necklace. Featuring a deep ruby-colored synthetic zirconia bud and sparkling crystal leaves on a gold-finished chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a bold, feminine accent to any outfit",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a romantic touch to your jewelry collection with this elegant red tulip pendant necklace. Featuring a deep ruby-colored synthetic zirconia bud and sparkling crystal leaves on a gold-finished chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a bold, feminine accent to any outfit</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P525.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P525/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹259 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "productId": "P516",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "978",
+    "workingId": "odoo-978",
+    "originalSku": "MJ-235",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-235-elegant-red-rose-gold-stem-necklace-978",
+    "referenceTitle": "Elegant Red Rose Gold Stem Necklace",
+    "rawContent": "Add a touch of timeless romance to your look with this dainty red rose necklace. Featuring a vibrant crimson bud on a minimalist gold-toned stem, this anti-tarnish piece offers a sophisticated, feminine aesthetic. It's the perfect lightweight accessory for everyday elegance or a meaningful gift for someone special",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of timeless romance to your look with this dainty red rose necklace. Featuring a vibrant crimson bud on a minimalist gold-toned stem, this anti-tarnish piece offers a sophisticated, feminine aesthetic. It's the perfect lightweight accessory for everyday elegance or a meaningful gift for someone special</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P516.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P516/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

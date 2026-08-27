@@ -1,0 +1,47 @@
+{
+  "productId": "P300",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "708",
+    "workingId": "odoo-708",
+    "originalSku": "MJ-210",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-210-designer-charm-bracelet-with-key-and-lock-anti-tarnish-gold-jewelry-708",
+    "referenceTitle": "Designer Charm Bracelet with Key and Lock - Anti-Tarnish Gold Jewelry",
+    "rawContent": "- This stylish gold-toned bracelet features a unique collection of designer-inspired charms, including a key, a lock, a high-heeled shoe, and a heart. It's a fashionable and whimsical accessory to elevate your everyday look.\n-\n- Material: Stainless Steel\n- Plating: Gold-Plated\n- Stone type: Not applicable\n- Closure: Lobster closure\n- Warranty: 1 month, provided by brand owner/manufacturer\n- Size & Fit: The Length of the Bracelet Is 17Cm. The Length of the Adjustable Chain Is 5Cm. Weight Is 5G.\n- Care Instructions:\n- Wipe your jewelry with a soft cloth after every use.\n- Always store your jewelry in a flat box to avoid accidental scratches.\n- Keep sprays and perfumes away from your jewelry.\n- Do not soak your jewelry in water.\n- Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only.\n- Keywords: charm bracelet, designer bracelet, gold bracelet, anti-tarnish jewelry, key charm, lock charm, shoe charm, heart charm, fashion bracelet, gift for her",
+    "rawHtml": "<ul><li>This stylish gold-toned bracelet features a unique collection of designer-inspired charms, including a key, a lock, a high-heeled shoe, and a heart. It's a fashionable and whimsical accessory to elevate your everyday look.</li><li class=\"oe-nested\"><ul><li><b>Material:</b> Stainless Steel</li><li><b>Plating:</b> Gold-Plated</li><li><b>Stone type:</b> Not applicable</li><li><b>Closure:</b> Lobster closure</li><li><b>Warranty:</b> 1 month, provided by brand owner/manufacturer</li><li><b>Size &amp; Fit:</b> The Length of the Bracelet Is 17Cm. The Length of the Adjustable Chain Is 5Cm. Weight Is 5G.</li><li><b>Care Instructions:</b><ul><li>Wipe your jewelry with a soft cloth after every use.</li><li>Always store your jewelry in a flat box to avoid accidental scratches.</li><li>Keep sprays and perfumes away from your jewelry.</li><li>Do not soak your jewelry in water.</li><li>Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only.</li></ul></li></ul></li><li><b>Keywords:</b> charm bracelet, designer bracelet, gold bracelet, anti-tarnish jewelry, key charm, lock charm, shoe charm, heart charm, fashion bracelet, gift for her</li></ul>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": "Fashionable gold anti-tarnish charm bracelet with key, lock & heart details. Lightweight, trendy & perfect for parties or gifting.",
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P300.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P300/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
+  }
+}

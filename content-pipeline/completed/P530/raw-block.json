@@ -1,0 +1,50 @@
+{
+  "productId": "P530",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "992",
+    "workingId": "odoo-992",
+    "originalSku": "MJ-488",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-488-red-enamel-tulip-gold-pendant-necklace-992",
+    "referenceTitle": "Red Enamel Tulip Gold Pendant Necklace",
+    "rawContent": "Make a romantic statement with this striking red enamel tulip necklace. The vibrant crimson bud and lustrous green leaves are set against a premium gold-toned chain, offering a bold yet classic floral aesthetic. This durable, anti-tarnish piece is an ideal gift for special occasions or everyday elegance.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a romantic statement with this striking red enamel tulip necklace. The vibrant crimson bud and lustrous green leaves are set against a premium gold-toned chain, offering a bold yet classic floral aesthetic. This durable, anti-tarnish piece is an ideal gift for special occasions or everyday elegance.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P530.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P530/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

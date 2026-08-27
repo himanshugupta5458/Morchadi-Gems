@@ -1,0 +1,51 @@
+{
+  "productId": "P635",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1107",
+    "workingId": "odoo-1107",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/sunburst-key-pendant-necklace-1107",
+    "referenceTitle": "Sunburst Key Pendant Necklace",
+    "rawContent": "A unique key-shaped pendant featuring a textured sunburst medallion top, paired with a sleek crystal-lined bar for the key's shaft. The mix of hammered gold detailing and sparkling stones gives this piece a bold, symbolic feel — perfect for anyone drawn to meaningful, statement jewelry. It hangs from a fine gold chain, making it easy to wear alone or layered with other necklaces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nA striking conversation piece with a hint of symbolism, this necklace makes a memorable gift for milestones or just because.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Clear cubic zirconia accents\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 2cm x 1.5cm",
+    "rawHtml": "<p data-oe-version=\"2.0\">A unique key-shaped pendant featuring a textured sunburst medallion top, paired with a sleek crystal-lined bar for the key's shaft. The mix of hammered gold detailing and sparkling stones gives this piece a bold, symbolic feel — perfect for anyone drawn to meaningful, statement jewelry. It hangs from a fine gold chain, making it easy to wear alone or layered with other necklaces. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.</p><p>A striking conversation piece with a hint of symbolism, this necklace makes a memorable gift for milestones or just because.</p><p><strong>Details:</strong></p><ul>\n<li>Material: 18K gold-plated stainless steel, tarnish and water resistant</li>\n<li>Stone: Clear cubic zirconia accents</li>\n<li>Chain: Fine link chain, adjustable length</li>\n<li>Pendant size: Approx. 2cm x 1.5cm</li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P635.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P635/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

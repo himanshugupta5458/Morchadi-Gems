@@ -1,0 +1,57 @@
+{
+  "productId": "P591",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1061",
+    "workingId": "odoo-1061",
+    "originalSku": "MJ-605",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-605-tulip-bow-hair-clip-1061",
+    "referenceTitle": "Tulip Bow Hair Clip",
+    "rawContent": "Soft organza bow with hanging satin tulip bud(s)\nSecure alligator clip, holds all hair types\nAesthetic, trending Korean-style hair accessory\nAvailable in Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige\nPerfect for daily wear, college, parties & festivals\nGreat gift for girls & women who love cute accessories",
+    "rawHtml": "<div data-oe-version=\"2.0\">Soft organza bow with hanging satin tulip bud(s)</div><div>Secure alligator clip, holds all hair types</div><div>Aesthetic, trending Korean-style hair accessory</div><div>Available in Coral Pink, Ivory Cream, Lilac Purple &amp; Champagne Beige</div><div>Perfect for daily wear, college, parties &amp; festivals</div><div>Great gift for girls &amp; women who love cute accessories</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "Coral Pink (top-left)",
+        "Ivory Cream (top-right)",
+        "Lilac Purple (bottom-left)",
+        "Beige (bottom-right)"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P591.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P591/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹79 sale price (morchadijewels.com, reference only)"
+  }
+}

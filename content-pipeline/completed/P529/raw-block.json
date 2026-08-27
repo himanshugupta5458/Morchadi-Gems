@@ -1,0 +1,50 @@
+{
+  "productId": "P529",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "991",
+    "workingId": "odoo-991",
+    "originalSku": "MJ-460",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-460-pink-enamel-tulip-gold-pendant-necklace-991",
+    "referenceTitle": "Pink Enamel Tulip Gold Pendant Necklace",
+    "rawContent": "Embrace a soft, feminine look with this elegant pink enamel tulip necklace. Featuring high-shine \"dripping oil\" petals and vibrant green leaves on a sleek gold-finished chain, this dainty pendant is a perfect gift for any flower lover or a charming addition to your daily style.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Embrace a soft, feminine look with this elegant pink enamel tulip necklace. Featuring high-shine \"dripping oil\" petals and vibrant green leaves on a sleek gold-finished chain, this dainty pendant is a perfect gift for any flower lover or a charming addition to your daily style.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P529.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P529/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

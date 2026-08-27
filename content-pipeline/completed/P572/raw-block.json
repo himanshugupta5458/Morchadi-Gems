@@ -1,0 +1,48 @@
+{
+  "productId": "P572",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1042",
+    "workingId": "odoo-1042",
+    "originalSku": "MJ-575",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-575-spiral-texture-gold-stainless-steel-hoop-earrings-1042",
+    "referenceTitle": "Spiral Texture Gold Stainless Steel Hoop Earrings",
+    "rawContent": "Go bigger, go bolder — our Large Spiral Texture Chunky Hoop Earrings feature the same gorgeous concentric swirl pattern as our small version, scaled up for a more dramatic, fashion-forward look. The oversized crescent silhouette is a true style statement.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Large concentric spiral texture — maximalist design\n- Oversized chunky hoop — bold yet comfortable all-day\nPairs with: Solid kurtas, co-ords, blazers, sarees, and fusion outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Go bigger, go bolder — our Large Spiral Texture Chunky Hoop Earrings feature the same gorgeous concentric swirl pattern as our small version, scaled up for a more dramatic, fashion-forward look. The oversized crescent silhouette is a true style statement.</p><ul>\n<li>316L Stainless Steel — rust-proof, tarnish-proof &amp; skin-safe</li>\n<li>Gold-plated finish — rich, long-lasting shine</li>\n<li>Waterproof &amp; sweat-resistant — built for everyday wear</li>\n<li>Large concentric spiral texture — maximalist design</li>\n<li>Oversized chunky hoop — bold yet comfortable all-day</li>\n</ul><p><em>Pairs with: Solid kurtas, co-ords, blazers, sarees, and fusion outfits.</em></p><p>\n<em>Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.</em></p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P572.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P572/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

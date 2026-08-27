@@ -1,0 +1,48 @@
+{
+  "productId": "P570",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1040",
+    "workingId": "odoo-1040",
+    "originalSku": "MJ-213",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-213-diamond-petal-fringe-gold-stainless-steel-hoop-earrings-1040",
+    "referenceTitle": "Diamond Petal Fringe Gold Stainless Steel Hoop Earrings",
+    "rawContent": "Bold, structured, and strikingly unique — our Diamond Petal Fringe Hoop Earrings feature a cascading row of raised oval petals along the hoop with a standout diamond-shaped centrepiece at the base. A modern architectural design that brings serious style to any outfit.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Diamond shape centrepiece + layered petal detail\n- Statement hoop — lightweight despite bold appearance\nPairs with: Solid colour ethnic wear, blazers, off-shoulder tops, and sarees.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Bold, structured, and strikingly unique — our Diamond Petal Fringe Hoop Earrings feature a cascading row of raised oval petals along the hoop with a standout diamond-shaped centrepiece at the base. A modern architectural design that brings serious style to any outfit.</p><ul>\n<li>316L Stainless Steel — rust-proof, tarnish-proof &amp; skin-safe</li>\n<li>Gold-plated finish — rich, long-lasting shine</li>\n<li>Waterproof &amp; sweat-resistant — built for everyday wear</li>\n<li>Diamond shape centrepiece + layered petal detail</li>\n<li>Statement hoop — lightweight despite bold appearance</li>\n</ul><p><em>Pairs with: Solid colour ethnic wear, blazers, off-shoulder tops, and sarees.</em></p><p>\n<em>Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.</em></p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P570.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P570/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

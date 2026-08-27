@@ -1,0 +1,46 @@
+{
+  "productId": "P559",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1026",
+    "workingId": "odoo-1026",
+    "originalSku": "MJ-357",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-357-kashmiri-green-meenakari-kundan-pearl-mandala-bracelet-watch-1026",
+    "referenceTitle": "Kashmiri Green Meenakari Kundan Pearl Mandala Bracelet Watch",
+    "rawContent": "Pure bridal opulence — this extraordinary Kashmiri bracelet watch is adorned with intricate kundan mandala medallions framed in deep green meenakari and bordered with delicate seed pearls, flanking a unique square star-dial quartz watch face. An adjustable pearl-drop slider chain with ghungroo bells ensures a perfect fit on every wrist. This is not just a watch — it is a heritage jewellery piece that tells a story of royal Indian craftsmanship with every glance. A dream piece for brides, bridesmaids, and festive queens alike.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Pure bridal opulence — this extraordinary Kashmiri bracelet watch is adorned with intricate kundan mandala medallions framed in deep green meenakari and bordered with delicate seed pearls, flanking a unique square star-dial quartz watch face. An adjustable pearl-drop slider chain with ghungroo bells ensures a perfect fit on every wrist. This is not just a watch — it is a heritage jewellery piece that tells a story of royal Indian craftsmanship with every glance. A dream piece for brides, bridesmaids, and festive queens alike.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P559.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P559/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹650 sale price (morchadijewels.com, reference only)"
+  }
+}

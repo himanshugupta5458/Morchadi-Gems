@@ -1,0 +1,46 @@
+{
+  "productId": "P319",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "741",
+    "workingId": "odoo-741",
+    "originalSku": "MJ-459",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-459-pink-cz-tennis-necklace-set-741",
+    "referenceTitle": "Pink CZ Tennis Necklace Set",
+    "rawContent": "- Add a pop of color to your style with this beautiful pink CZ tennis necklace set, crafted with sparkling pink zircon stones set in a sleek silver-plated finish. The necklace features a refined row of uniformly cut stones, creating a timeless and elegant silhouette perfect for both daily wear and special occasions.\n- The matching earrings complement the necklace with the same vibrant pink stones, offering a coordinated and classy look. Lightweight, comfortable, and versatile, this set pairs effortlessly with Western, Indo-Western, and festive outfits.\n- Whether you're dressing up for celebrations, gifting someone special, or elevating your everyday look, this pink tennis necklace set brings just the right amount of shine and sophistication.\n- pink tennis necklace, CZ jewelry set, silver-plated necklace, pink stone necklace, party wear jewelry, elegant women's jewelry, zircon necklace set.",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Add a pop of color to your style with this beautiful <strong>pink CZ tennis necklace set</strong>, crafted with sparkling pink zircon stones set in a sleek silver-plated finish. The necklace features a refined row of uniformly cut stones, creating a timeless and elegant silhouette perfect for both daily wear and special occasions.</li><li>The matching earrings complement the necklace with the same vibrant pink stones, offering a coordinated and classy look. Lightweight, comfortable, and versatile, this set pairs effortlessly with Western, Indo-Western, and festive outfits.</li><li>Whether you're dressing up for celebrations, gifting someone special, or elevating your everyday look, this pink tennis necklace set brings just the right amount of shine and sophistication.</li><li>&nbsp;pink tennis necklace, CZ jewelry set, silver-plated necklace, pink stone necklace, party wear jewelry, elegant women's jewelry, zircon necklace set.</li></ul></div>",
+    "originalCategories": [
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P319.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P319/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

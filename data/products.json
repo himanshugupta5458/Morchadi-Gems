@@ -5161,7 +5161,7 @@
     "id": "P426",
     "name": "Gold-Toned Bow Pendant Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5211,7 +5211,7 @@
     "id": "P427",
     "name": "Gold-Toned Snake Chain Bow Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5262,7 +5262,7 @@
     "id": "P428",
     "name": "Gold-Toned Beaded Chain Bow Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5313,7 +5313,7 @@
     "id": "P429",
     "name": "Textured Gold Bow Pendant Necklace",
     "category": "pendants",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5363,7 +5363,7 @@
     "id": "P431",
     "name": "Gold-Toned Heart Lariat Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5413,7 +5413,7 @@
     "id": "P435",
     "name": "Gold-Toned Elongated Heart Pendant Necklace",
     "category": "pendants",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5464,7 +5464,7 @@
     "id": "P436",
     "name": "Gold-Toned Filigree Heart Pendant on Rope Chain",
     "category": "pendants",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5515,7 +5515,7 @@
     "id": "P473",
     "name": "Gold-Toned Snake and Figaro Chain Bracelet Set",
     "category": "bracelets",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -5567,7 +5567,7 @@
     "name": "Anti-Tarnish Ribbed Hoop Earrings",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -5622,7 +5622,7 @@
     "name": "Anti-Tarnish Engraved Hoop Earrings",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -5677,7 +5677,7 @@
     "name": "Anti-Tarnish Swirl Texture Hoop Earrings",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -5732,7 +5732,7 @@
     "name": "Anti-Tarnish Bamboo-Style Hoop Earrings",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -5787,7 +5787,7 @@
     "name": "Anti-Tarnish Embossed Hoop Earrings",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -5841,7 +5841,7 @@
     "id": "P499",
     "name": "Pink Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -5891,7 +5891,7 @@
     "id": "P500",
     "name": "Lavender Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -5941,7 +5941,7 @@
     "id": "P501",
     "name": "Sage Green Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -5991,7 +5991,7 @@
     "id": "P502",
     "name": "Deep Purple Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -6041,7 +6041,7 @@
     "id": "P503",
     "name": "Maroon Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -6091,7 +6091,7 @@
     "id": "P504",
     "name": "Grey Glass Bangle Set with Gold-Toned Ghungroo Charms",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -6142,7 +6142,7 @@
     "name": "Anti-Tarnish Gold Wheat Chain Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -6198,7 +6198,7 @@
     "id": "P103",
     "name": "Golden Toggle Clasp Bracelet",
     "category": "bracelets",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -6251,7 +6251,7 @@
     "id": "P105",
     "name": "Star and Square Ring Set",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -6306,7 +6306,7 @@
     "id": "P107",
     "name": "Gold-Plated Heart Pattern Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6361,7 +6361,7 @@
     "id": "P111",
     "name": "Rosegold Bloom-Inspired CZ Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6418,7 +6418,7 @@
     "id": "P112",
     "name": "Rose Gold CZ Ring, Minimal Yet Glamorous",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6475,7 +6475,7 @@
     "id": "P113",
     "name": "Adjustable Rose Gold CZ Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6532,7 +6532,7 @@
     "id": "P124",
     "name": "Rosegold-Plated Star CZ Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6589,7 +6589,7 @@
     "id": "P125",
     "name": "Star CZ Ring for Gifting, Rosegold Tone",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6646,7 +6646,7 @@
     "id": "P126",
     "name": "Rosegold-Plated Star Ring for Teens and Women",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6703,7 +6703,7 @@
     "id": "P130",
     "name": "Lightweight Rosegold Star CZ Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6760,7 +6760,7 @@
     "id": "P131",
     "name": "Rosegold Star Ring with CZ Detailing",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6817,7 +6817,7 @@
     "id": "P132",
     "name": "Star-Shaped CZ Ring, Rosegold Plate",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6874,7 +6874,7 @@
     "id": "P133",
     "name": "Rosegold CZ Ring, Star Outline",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6931,7 +6931,7 @@
     "id": "P134",
     "name": "Star CZ Ring for Festive Wear, Rosegold",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -6988,7 +6988,7 @@
     "id": "P137",
     "name": "Rosegold Star Ring, CZ Set",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7045,7 +7045,7 @@
     "id": "P139",
     "name": "Rosegold Star Ring for Stacking",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7102,7 +7102,7 @@
     "id": "P140",
     "name": "Star CZ Ring in Warm Rosegold",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7159,7 +7159,7 @@
     "id": "P143",
     "name": "Rosegold-Plated Star Ring, CZ Accent",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7216,7 +7216,7 @@
     "id": "P145",
     "name": "Star CZ Ring, Rosegold Tone",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7273,7 +7273,7 @@
     "id": "P147",
     "name": "Star CZ Ring in Rosegold",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7330,7 +7330,7 @@
     "id": "P151",
     "name": "Criss-Cross Solitaire Ring, Silver-Plated",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7386,7 +7386,7 @@
     "id": "P152",
     "name": "Star CZ Ring, Rosegold Band",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -7443,7 +7443,7 @@
     "id": "P175",
     "name": "Rose Gold-Plated CZ Ring, Adjustable Band",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -7495,7 +7495,7 @@
     "id": "P176",
     "name": "Adjustable CZ Ring in Rose Gold Tone",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -7547,7 +7547,7 @@
     "id": "P178",
     "name": "Rose Gold Alternating Stone Band Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -7599,7 +7599,7 @@
     "id": "P180",
     "name": "Rose Gold Emerald-Cut Halo Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -7651,7 +7651,7 @@
     "id": "P181",
     "name": "Rose Gold Flower Cluster Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 59,
       "mrp": 59,
@@ -7703,7 +7703,7 @@
     "id": "P215",
     "name": "Blue Raindrop Glass Bangles",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 149,
@@ -7766,7 +7766,7 @@
     "id": "P216",
     "name": "Pink Raindrop Glass Bangles",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 149,
@@ -7829,7 +7829,7 @@
     "id": "P218",
     "name": "Satrangi Glitter Glass Bangles",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 149,
@@ -7893,7 +7893,7 @@
     "name": "Infinity Ring, Silver-Tone Anti-Tarnish",
     "category": "rings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -7950,7 +7950,7 @@
     "name": "Blue Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -8004,7 +8004,7 @@
     "name": "Pink Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -8058,7 +8058,7 @@
     "name": "Neutral Ombre Enamel Kada, Gold-Plated Anti-Tarnish",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -8112,7 +8112,7 @@
     "name": "Daisy Pearl-Look Pendant Necklace, Gold-Plated Anti-Tarnish",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -8170,7 +8170,7 @@
     "id": "P300",
     "name": "Key, Lock and Heart Charm Bracelet, Gold-Plated",
     "category": "bracelets",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 229,
       "mrp": 229,
@@ -8225,7 +8225,7 @@
     "id": "P319",
     "name": "Pink Stone Tennis Necklace and Earring Set, Silver-Plated",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8281,7 +8281,7 @@
     "id": "P320",
     "name": "Gold-Plated Multicolor Drop Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 250,
       "mrp": 250,
@@ -8333,7 +8333,7 @@
     "id": "P327",
     "name": "Multicolor Crystal Cluster Stud Earrings, Gold-Plated",
     "category": "earrings",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 150,
@@ -8385,7 +8385,7 @@
     "id": "P328",
     "name": "Pink Square Stone Solitaire Ring, Gold-Plated",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8439,7 +8439,7 @@
     "id": "P329",
     "name": "Oval Black Stone Silver-Finish Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8492,7 +8492,7 @@
     "id": "P330",
     "name": "Rectangular Maroon Stone Silver-Finish Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8545,7 +8545,7 @@
     "id": "P331",
     "name": "Oval Red Stone Silver-Finish Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8598,7 +8598,7 @@
     "id": "P332",
     "name": "Square Black Stone Two-Tone Ring, Silver-Finish",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8651,7 +8651,7 @@
     "id": "P333",
     "name": "Rectangular Green Stone Silver-Finish Ring",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8704,7 +8704,7 @@
     "id": "P334",
     "name": "Rectangular Green Stone Ring, Gold-Tone Bezel",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8758,7 +8758,7 @@
     "id": "P338",
     "name": "Rose Gold Rings, Set of Twelve",
     "category": "rings",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -8812,7 +8812,7 @@
     "name": "Double Rectangular Stone Open Ring, Silver-Plated",
     "category": "rings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -8866,7 +8866,7 @@
     "name": "Thin Gold Band Ring with Clear Stones",
     "category": "rings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 160,
       "mrp": 160,
@@ -8932,7 +8932,7 @@
     "name": "Adjustable Thin Ring with Clear Stones, Gold Finish",
     "category": "rings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 150,
       "mrp": 150,
@@ -8997,7 +8997,7 @@
     "name": "Gold Solitaire Pendant Necklace, Skin-Friendly Chain",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -9055,7 +9055,7 @@
     "id": "P386",
     "name": "Green Meenakari Floral Kundan Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -9113,7 +9113,7 @@
     "id": "P387",
     "name": "Green Enamel Kundan Square Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -9169,7 +9169,7 @@
     "id": "P388",
     "name": "Red Meenakari Tulip Kundan Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 369,
       "mrp": 369,
@@ -9224,7 +9224,7 @@
     "id": "P389",
     "name": "Red Kundan Charm Bracelet Watch, Floral Pendant",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 399,
       "mrp": 399,
@@ -9279,7 +9279,7 @@
     "id": "P390",
     "name": "Yellow Lotus Meenakari Bracelet Watch, Elephant Pendant",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -9336,7 +9336,7 @@
     "id": "P391",
     "name": "Blue Meenakari Polki Kundan Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 399,
       "mrp": 399,
@@ -9390,7 +9390,7 @@
     "id": "P392",
     "name": "Dark Green Meenakari CZ Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 350,
       "mrp": 350,
@@ -9445,7 +9445,7 @@
     "id": "P393",
     "name": "Pink Meenakari Kundan Bracelet Watch, Chand Pendant",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 399,
       "mrp": 399,
@@ -9500,7 +9500,7 @@
     "id": "P417",
     "name": "Blush Pink Glass Jelly Bangles, Set of Eight",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -9562,7 +9562,7 @@
     "id": "P418",
     "name": "Rose Pink Glass Jelly Bangles, Set of Eight",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -9624,7 +9624,7 @@
     "id": "P419",
     "name": "Peach Glass Jelly Bangles, Set of Eight",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -9686,7 +9686,7 @@
     "id": "P420",
     "name": "Pistachio Green Glass Jelly Bangles, Set of Eight",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -9748,7 +9748,7 @@
     "id": "P421",
     "name": "Caramel Glass Jelly Bangles, Set of Eight",
     "category": "bangles",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -9810,7 +9810,7 @@
     "id": "P430",
     "name": "Gold-Toned Pearl Station Necklace",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -9863,7 +9863,7 @@
     "id": "P434",
     "name": "Gold-Toned Heart Pendant Necklace, Pearl-Look Centre",
     "category": "necklaces",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -9917,7 +9917,7 @@
     "name": "Fan-Shaped Crystal Pendant Necklace, Gold-Toned",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 110,
       "mrp": 110,
@@ -9970,7 +9970,7 @@
     "id": "P472",
     "name": "Gold-Toned Crystal Tennis Bracelet & Snake Chain Combo",
     "category": "bracelets",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 89,
       "mrp": 89,
@@ -10023,7 +10023,7 @@
     "id": "P477",
     "name": "Gold-Toned Halo Nath with Clear Stones",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 129,
@@ -10076,7 +10076,7 @@
     "id": "P479",
     "name": "Silver-Toned Halo Nath with Clear Stones",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 129,
@@ -10129,7 +10129,7 @@
     "id": "P480",
     "name": "Gold-Toned Small Cluster Nath with Teardrop Charm",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 129,
@@ -10182,7 +10182,7 @@
     "id": "P481",
     "name": "Silver-Toned Baguette Nath with Double Drop",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 129,
@@ -10234,7 +10234,7 @@
     "id": "P482",
     "name": "Gold-Toned Cluster Nath with Drop Charm",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -10287,7 +10287,7 @@
     "id": "P483",
     "name": "Gold-Toned Nath with Ruby-Red and Clear Stones",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -10340,7 +10340,7 @@
     "id": "P484",
     "name": "Gold-Toned Clear-Stone Nath with a Pearl-Look Drop",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -10393,7 +10393,7 @@
     "id": "P485",
     "name": "Gold-Toned Floral Cluster Nath with a Clear-Stone Teardrop",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -10446,7 +10446,7 @@
     "id": "P487",
     "name": "Gold-Toned Nath with Multicolour Stones",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -10498,7 +10498,7 @@
     "id": "P488",
     "name": "Silver-Toned Wide Halo Nath with a Clear-Stone Teardrop",
     "category": "nose-pins",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 129,
       "mrp": 129,
@@ -10552,7 +10552,7 @@
     "name": "Pink Flower Pendant Necklace with Stud Earrings",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 210,
@@ -10603,7 +10603,7 @@
     "name": "Blush Enamel Luo Shen Flower Necklace and Earring Set",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 285,
       "mrp": 285,
@@ -10657,7 +10657,7 @@
     "name": "Green Floral Enamel Kada",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -10713,7 +10713,7 @@
     "name": "Pink Floral Enamel Kada",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -10771,7 +10771,7 @@
     "name": "Aqua Floral Enamel Kada",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -10827,7 +10827,7 @@
     "name": "Pink Tulip Pendant Necklace",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 210,
@@ -10879,7 +10879,7 @@
     "name": "Heart Locket Adjustable Open Ring",
     "category": "rings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 499,
       "mrp": 499,
@@ -10935,7 +10935,7 @@
     "name": "Crimson Rose Stem Pendant Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -10991,7 +10991,7 @@
     "name": "Purple Enamel Flower Pendant Necklace",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -11047,7 +11047,7 @@
     "name": "White Enamel Magnolia Pendant Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -11103,7 +11103,7 @@
     "name": "Clear Crystal Vine Collar Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -11159,7 +11159,7 @@
     "name": "Emerald-Green Stone Vine Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -11215,7 +11215,7 @@
     "name": "Red and Green Leaf Vine Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -11268,7 +11268,7 @@
     "name": "Multicolour Leaf Necklace and Earring Set",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 399,
       "mrp": 399,
@@ -11322,7 +11322,7 @@
     "name": "Pearl-Look Tulip Toggle Clasp Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -11375,7 +11375,7 @@
     "name": "Yellow Tulip Pendant Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 249,
       "mrp": 249,
@@ -11429,7 +11429,7 @@
     "name": "Ruby-Red Tulip Pendant Necklace",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 259,
       "mrp": 259,
@@ -11483,7 +11483,7 @@
     "name": "Cat's-Eye Vine Pull Chain Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 220,
       "mrp": 220,
@@ -11538,7 +11538,7 @@
     "name": "Pink Enamel Tulip Charm Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -11591,7 +11591,7 @@
     "name": "Rose Enamel Tulip Charm Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -11645,7 +11645,7 @@
     "name": "Blush Enamel Tulip Pendant Necklace",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 210,
       "mrp": 210,
@@ -11698,7 +11698,7 @@
     "name": "Red Enamel Tulip Pendant Necklace, Anti-Tarnish",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -11755,7 +11755,7 @@
     "name": "Eid Mubarak Gift Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 799,
       "mrp": 799,
@@ -11806,7 +11806,7 @@
     "name": "Silver Initial Ring Birthday Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -11860,7 +11860,7 @@
     "name": "Gold Initial Ring Birthday Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -11914,7 +11914,7 @@
     "name": "Luxury Birthday Jewellery Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -11969,7 +11969,7 @@
     "name": "Premium Eid Gift Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -12024,7 +12024,7 @@
     "name": "Multicolour Flower Vine Bracelet, Anti-Tarnish",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12080,7 +12080,7 @@
     "name": "Birthday Hamper with Initial Ring",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 399,
       "mrp": 399,
@@ -12131,7 +12131,7 @@
     "name": "Pink Blossom Bow Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -12183,7 +12183,7 @@
     "name": "Purple Blossom Bow Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -12236,7 +12236,7 @@
     "name": "White Blossom Bow Bracelet",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -12289,7 +12289,7 @@
     "name": "Gold Bead Bracelet with Cubic Zirconia Square Stone",
     "category": "bracelets",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12346,7 +12346,7 @@
     "id": "P557",
     "name": "Lotus Kundan-Style Bracelet Watch, Ghungroo Chain",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 249,
       "mrp": 249,
@@ -12399,7 +12399,7 @@
     "id": "P558",
     "name": "Meenakari Beaded Bracelet Watch, Pearl-Look Accents",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 320,
       "mrp": 320,
@@ -12452,7 +12452,7 @@
     "id": "P559",
     "name": "Star-Dial Kundan Meenakari Bracelet Watch, Slider Chain",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 650,
       "mrp": 650,
@@ -12508,7 +12508,7 @@
     "name": "Red and Emerald Vine Necklace, Anti-Tarnish Gold",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12566,7 +12566,7 @@
     "name": "Lavender and Emerald Vine Necklace, Anti-Tarnish Gold",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12624,7 +12624,7 @@
     "name": "Clear CZ Vine Necklace, Anti-Tarnish Gold",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12681,7 +12681,7 @@
     "name": "Blush Pink and Emerald Vine Necklace, Anti-Tarnish Gold",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12739,7 +12739,7 @@
     "name": "Deep Purple and Emerald Vine Necklace, Anti-Tarnish Gold",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -12797,7 +12797,7 @@
     "name": "Diamond Petal Fringe Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -12851,7 +12851,7 @@
     "name": "Spiral Texture Crescent Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -12905,7 +12905,7 @@
     "name": "Oversized Spiral Texture Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -12960,7 +12960,7 @@
     "name": "Crosshatch Texture Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -13015,7 +13015,7 @@
     "name": "Twisted Rope Heart Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -13070,7 +13070,7 @@
     "name": "Crescent Moon Cutout Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -13125,7 +13125,7 @@
     "name": "Croissant Ribbed C-Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -13181,7 +13181,7 @@
     "name": "Quilted Grid Hoop Earrings, Gold-Plated Steel",
     "category": "earrings",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 99,
       "mrp": 99,
@@ -13236,7 +13236,7 @@
     "id": "P584",
     "name": "Satin Rosette Hair Tie Set, Pink and Cream",
     "category": "hair-accessories",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -13290,7 +13290,7 @@
     "id": "P585",
     "name": "Satin Rosette Hair Tie Set, Black and White",
     "category": "hair-accessories",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 109,
       "mrp": 109,
@@ -13344,7 +13344,7 @@
     "id": "P591",
     "name": "Tulip Bud Organza Bow Hair Clip, Four Colourways",
     "category": "hair-accessories",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 79,
       "mrp": 79,
@@ -13412,7 +13412,7 @@
     "name": "Scrunchie and Chocolate Gift Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13467,7 +13467,7 @@
     "name": "Complete Jewellery and Accessories Gift Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting",
       "anti-tarnish"
@@ -13523,7 +13523,7 @@
     "id": "P588",
     "name": "Blush and Black Satin Scrunchie Set, Pack of Four",
     "category": "hair-accessories",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 149,
@@ -13589,7 +13589,7 @@
     "id": "P589",
     "name": "Ivory and Champagne Satin Scrunchie Set, Pack of Four",
     "category": "hair-accessories",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 149,
       "mrp": 149,
@@ -13656,7 +13656,7 @@
     "name": "Pearl Necklace Friendship Day Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13712,7 +13712,7 @@
     "name": "Gold-Tone Hoop Earrings Friendship Hamper",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13769,7 +13769,7 @@
     "name": "Budget Friendship Day Hamper with Pearl Necklace",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13825,7 +13825,7 @@
     "name": "Self Care Gift Hamper with Crystal Jewellery Set",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13881,7 +13881,7 @@
     "name": "Birthday Jewellery Hamper with Chocolates",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13937,7 +13937,7 @@
     "name": "Raksha Bandhan Gift Hamper with Initial Ring",
     "category": "gift-hampers",
     "subcategory": "hamper",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -13992,7 +13992,7 @@
     "id": "P601",
     "name": "Rajasthani Pearl Bead Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 249,
       "mrp": 249,
@@ -14045,7 +14045,7 @@
     "id": "P609",
     "name": "Silver-Tone Anti-Tarnish Watch, Deep Blue Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -14102,7 +14102,7 @@
     "id": "P610",
     "name": "Gold-Tone Anti-Tarnish Watch, Red Oval Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "anti-tarnish"
     ],
@@ -14162,7 +14162,7 @@
     "id": "P603",
     "name": "Antique Gold Kundan-Style Bracelet Watch",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -14217,7 +14217,7 @@
     "id": "P612",
     "name": "Gold-Tone Bracelet Watch, Green Round Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14272,7 +14272,7 @@
     "id": "P613",
     "name": "Gold-Tone Bracelet Watch, Green Oval Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14328,7 +14328,7 @@
     "id": "P614",
     "name": "Gold-Tone Bracelet Watch, Green Rectangular Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14384,7 +14384,7 @@
     "id": "P615",
     "name": "Gold-Tone Bracelet Watch, White Oval Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14441,7 +14441,7 @@
     "id": "P616",
     "name": "Silver-Tone Mesh Bracelet Watch, Aqua Blue Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14496,7 +14496,7 @@
     "id": "P617",
     "name": "Gold-Tone Bracelet Watch, White Leaf Dial with Pearl-Look Beads",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14552,7 +14552,7 @@
     "id": "P619",
     "name": "Gold-Tone Bracelet Watch, Emerald Green Rectangular-Oval Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 499,
       "mrp": 499,
@@ -14608,7 +14608,7 @@
     "id": "P620",
     "name": "Gold-Tone Bracelet Watch, Deep Red Dial with Roman Numerals",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "collections": [
       "gifting"
     ],
@@ -14667,7 +14667,7 @@
     "id": "P621",
     "name": "Gold-Tone Mesh Bracelet Watch, Green Square Dial",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14722,7 +14722,7 @@
     "id": "P622",
     "name": "Gold-Tone Bracelet Watch, Green Dial with Cross-Bezel",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14778,7 +14778,7 @@
     "id": "P623",
     "name": "Gold-Tone Bracelet Watch, Green Dial with Open-Oval Link Chain",
     "category": "watches",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14835,7 +14835,7 @@
     "name": "Classic Mystery Jewellery Jar, 3-4 Surprise Pieces",
     "category": "gift-hampers",
     "subcategory": "mystery-jar",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,
@@ -14887,7 +14887,7 @@
     "name": "Surprise Mystery Jewellery Jar, 8-9 Items",
     "category": "gift-hampers",
     "subcategory": "mystery-jar",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 599,
       "mrp": 599,
@@ -14939,7 +14939,7 @@
     "name": "Premium Mystery Jewellery Jar, 10-12 Items with a Watch Guaranteed",
     "category": "gift-hampers",
     "subcategory": "mystery-jar",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 1199,
       "mrp": 1199,
@@ -14991,7 +14991,7 @@
     "name": "Ultra Premium Mystery Jewellery Jar, 18-20 Items with Two Watches Guaranteed",
     "category": "gift-hampers",
     "subcategory": "mystery-jar",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 2999,
       "mrp": 2999,
@@ -15043,7 +15043,7 @@
     "name": "Gold-Tone Heart Wreath Necklace, Emerald-Green Stones",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -15098,7 +15098,7 @@
     "name": "Gold-Tone Sunburst Key Pendant Necklace, Clear Stone Accents",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 199,
       "mrp": 199,
@@ -15153,7 +15153,7 @@
     "name": "Gold-Tone Bar Pendant Necklace, Amethyst-Purple Stone",
     "category": "pendants",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 249,
       "mrp": 249,
@@ -15208,7 +15208,7 @@
     "name": "Gold-Tone Tulip Charm Necklace, Pink and Green Stones",
     "category": "necklaces",
     "subcategory": "anti-tarnish",
-    "status": "draft",
+    "status": "active",
     "pricing": {
       "price": 299,
       "mrp": 299,

@@ -1,0 +1,58 @@
+{
+  "productId": "P357",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "793",
+    "workingId": "odoo-793",
+    "originalSku": "MJ-417",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-417-minimal-thin-band-gold-ring-for-girls-793",
+    "referenceTitle": "Minimal Thin Band Gold Ring for Girls",
+    "rawContent": "Enhance your everyday look with this elegant thin band ring featuring tiny crystal stones. Designed for minimal lovers, this lightweight gold-finish ring pairs beautifully with all outfits.\n✨ Slim & Stylish Design\n✨ Sparkling Stones\n✨ Adjustable Fit\n✨ Comfortable for Daily Use",
+    "rawHtml": "<p data-oe-version=\"2.0\">Enhance your everyday look with this elegant thin band ring featuring tiny crystal stones. Designed for minimal lovers, this lightweight gold-finish ring pairs beautifully with all outfits.</p><p>✨ Slim &amp; Stylish Design</p><p>\n✨ Sparkling Stones</p><p>\n✨ Adjustable Fit</p><p>\n✨ Comfortable for Daily Use</p>",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Stylish anti-tarnish gold Elara ring with zircon sparkle & open design. Durable & classy, perfect for daily wear & parties.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 792 - descriptions byte-identical",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P357.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P357/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

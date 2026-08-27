@@ -1,0 +1,49 @@
+{
+  "productId": "P523",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "985",
+    "workingId": "odoo-985",
+    "originalSku": "MJ-117",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-117-baroque-pearl-tulip-toggle-clasp-bracelet-985",
+    "referenceTitle": "Baroque Pearl Tulip Toggle Clasp Bracelet",
+    "rawContent": "Embrace a sweet, minimalist look with this baroque imitation pearl bracelet. Featuring a unique tulip-themed OT toggle clasp, this elegant piece is designed for girls and teenagers who love a touch of vintage charm. Perfect for daily wear, it makes a lovely and versatile gift for any occasion",
+    "rawHtml": "<div data-oe-version=\"2.0\">Embrace a sweet, minimalist look with this baroque imitation pearl bracelet. Featuring a unique tulip-themed OT toggle clasp, this elegant piece is designed for girls and teenagers who love a touch of vintage charm. Perfect for daily wear, it makes a lovely and versatile gift for any occasion</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P523.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P523/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

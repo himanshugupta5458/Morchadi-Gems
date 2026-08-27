@@ -1,0 +1,49 @@
+{
+  "productId": "P549",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1015",
+    "workingId": "odoo-1015",
+    "originalSku": "MJ-038",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-038-anti-tarnish-gold-wheat-chain-bracelet-1015",
+    "referenceTitle": "Anti Tarnish Gold Wheat Chain Bracelet",
+    "rawContent": "Elevate your everyday look with this stunning gold wheat chain bracelet, crafted for women who love effortless style. Featuring a bold braided herringbone pattern with an adjustable lobster clasp, this anti-tarnish bracelet stays shine-fresh wear after wear. A perfect gifting choice or daily staple — lightweight, durable, and forever gold.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your everyday look with this stunning gold wheat chain bracelet, crafted for women who love effortless style. Featuring a bold braided herringbone pattern with an adjustable lobster clasp, this anti-tarnish bracelet stays shine-fresh wear after wear. A perfect gifting choice or daily staple — lightweight, durable, and forever gold.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P549.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P549/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price, ₹97 cost (morchadijewels.com, reference only)"
+  }
+}

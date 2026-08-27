@@ -1,0 +1,56 @@
+{
+  "productId": "P589",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1059",
+    "workingId": "odoo-1059",
+    "originalSku": "MJ-526",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-526-satin-scrunchies-set-of-4-1059",
+    "referenceTitle": "Satin Scrunchies Set of 4",
+    "rawContent": "satin scrunchies, soft ruffled volume, set of 4 colors\nGentle on hair, reduces frizz, breakage & tangles\nColors: Ivory Cream, Lilac Shimmer, Blush Rose, Champagne Beige\nPerfect for thick, long or curly hair — secure no-damage hold\nGreat for daily wear, gifting & sleepover sets\nDoubles as a wrist accessory when not tying hair",
+    "rawHtml": "<div data-oe-version=\"2.0\">satin scrunchies, soft ruffled volume, set of 4 colors</div><div>Gentle on hair, reduces frizz, breakage &amp; tangles</div><div>Colors: Ivory Cream, Lilac Shimmer, Blush Rose, Champagne Beige</div><div>Perfect for thick, long or curly hair — secure no-damage hold</div><div>Great for daily wear, gifting &amp; sleepover sets</div><div>Doubles as a wrist accessory when not tying hair</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1058",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "size",
+      "values": [
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P589.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P589/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

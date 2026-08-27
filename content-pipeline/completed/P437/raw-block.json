@@ -1,0 +1,51 @@
+{
+  "productId": "P437",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "891",
+    "workingId": "odoo-891",
+    "originalSku": "MJ-250",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-250-fan-shaped-crystal-pendant-necklace-891",
+    "referenceTitle": "Fan-Shaped Crystal Pendant Necklace",
+    "rawContent": "Bring a touch of classic sophistication to your jewelry collection with our Exquisite Fan Pendant Necklace. This high-fashion statement piece features a shimmering geometric drop adorned with delicate crystals, perfect for adding instant glamour to any outfit. Designed for trend-focused styling, this necklace is crafted to be a standout accessory in your rotation. To maintain its brilliant golden luster and protect its intricate finish, we recommend keeping it away from moisture and perfumes, and storing it in a dry, safe place after each wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">Bring a touch of classic sophistication to your jewelry collection with our Exquisite Fan Pendant Necklace. This high-fashion statement piece features a shimmering geometric drop adorned with delicate crystals, perfect for adding instant glamour to any outfit. Designed for trend-focused styling, this necklace is crafted to be a standout accessory in your rotation. To maintain its brilliant golden luster and protect its intricate finish, we recommend keeping it away from moisture and perfumes, and storing it in a dry, safe place after each wear</div>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P437.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P437/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹110 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "productId": "P215",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "514",
+    "workingId": "odoo-514",
+    "originalSku": "MJ-124",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-124-blue-rain-drop-glass-bangles-12-piece-514",
+    "referenceTitle": "Blue Rain Drop Glass Bangles (12 piece)",
+    "rawContent": "Description:\nElevate your ethnic look with this royal blue glass bangle set adorned with delicate golden polka-dot detailing. Crafted from premium-quality glass, these bangles bring together traditional charm and contemporary elegance, making them perfect for any festive or special occasion.\nThe rich blue hue beautifully complements Indian outfits such as sarees, lehengas, and salwar suits, while the golden dotted accents add a subtle sparkle. Lightweight yet durable, these bangles are comfortable for all-day wear and ideal for weddings, festivals, and cultural celebrations.\nWhether you're looking for bridal jewellery, festive accessories, or a thoughtful gift, this bangle set makes a timeless addition to any jewellery collection.\nKey Features:\n-\nElegant royal blue glass bangles with golden polka dots\n-\nHandcrafted for a traditional yet stylish appeal\n-\nComfortable and lightweight for long wear\n-\nMatches with all festive and ethnic outfits\n-\nPerfect for weddings, parties, and gifting",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Elevate your ethnic look with this <strong>royal blue glass bangle set</strong> adorned with delicate <strong>golden polka-dot detailing</strong>. Crafted from premium-quality glass, these bangles bring together <strong>traditional charm and contemporary elegance</strong>, making them perfect for any festive or special occasion.</p><p>The <strong>rich blue hue</strong> beautifully complements Indian outfits such as sarees, lehengas, and salwar suits, while the golden dotted accents add a subtle sparkle. Lightweight yet durable, these bangles are comfortable for all-day wear and ideal for weddings, festivals, and cultural celebrations.</p><p>Whether you're looking for <strong>bridal jewellery, festive accessories, or a thoughtful gift</strong>, this bangle set makes a timeless addition to any jewellery collection.</p><p><strong>Key Features:</strong></p><ul><li>\nElegant royal blue glass bangles with golden polka dots\n</li><li>\nHandcrafted for a traditional yet stylish appeal\n</li><li>\nComfortable and lightweight for long wear\n</li><li>\nMatches with all festive and ethnic outfits\n</li><li>\nPerfect for weddings, parties, and gifting</li></ul></div>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Royal blue glass bangle set with golden polka accents. Lightweight, stylish & perfect for weddings, festivals & cultural wear.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P215.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P215/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

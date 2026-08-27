@@ -1,0 +1,51 @@
+{
+  "productId": "P636",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1108",
+    "workingId": "odoo-1108",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/birthstone-purple-bar-pendant-necklace-1108",
+    "referenceTitle": "Birthstone Purple Bar Pendant Necklace",
+    "rawContent": "A minimalist rectangular bar pendant set with a rich amethyst-purple stone, finished with a smooth gold bezel. The horizontal bar design sits centered on a fine gold chain, adding a modern, understated pop of color to any look. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nSimple, elegant, and versatile, this necklace works beautifully as a birthstone piece for February or as an everyday accent for anyone drawn to purple hues.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Amethyst-purple cubic zirconia, bar bezel setting\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 1.2cm x 0.6cm",
+    "rawHtml": "<p data-oe-version=\"2.0\">\nA minimalist rectangular bar pendant set with a rich amethyst-purple stone, finished with a smooth gold bezel. The horizontal bar design sits centered on a fine gold chain, adding a modern, understated pop of color to any look. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.</p><p>Simple, elegant, and versatile, this necklace works beautifully as a birthstone piece for February or as an everyday accent for anyone drawn to purple hues.</p><p><strong>Details:</strong></p><ul>\n<li>Material: 18K gold-plated stainless steel, tarnish and water resistant</li>\n<li>Stone: Amethyst-purple cubic zirconia, bar bezel setting</li>\n<li>Chain: Fine link chain, adjustable length</li>\n<li>Pendant size: Approx. 1.2cm x 0.6cm</li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P636.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P636/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "productId": "P247",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "632",
+    "workingId": "odoo-632",
+    "originalSku": "MJ-062",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-062-anti-tarnish-blue-ombre-enamel-kada-632",
+    "referenceTitle": "Anti-Tarnish Blue Ombre Enamel Kada",
+    "rawContent": "Dive into elegance with this premium blue ombre enamel kada. Crafted with a high-quality gold-plated finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic, modern statement piece seamlessly transitions from daily wear to special occasions while maintaining its stunning luster.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Dive into elegance with this premium blue ombre enamel kada. Crafted with a high-quality gold-plated finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic, modern statement piece seamlessly transitions from daily wear to special occasions while maintaining its stunning luster.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P247.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P247/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

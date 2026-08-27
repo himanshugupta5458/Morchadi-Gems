@@ -1,0 +1,46 @@
+{
+  "productId": "P107",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "126",
+    "workingId": "odoo-126",
+    "originalSku": "MJ-170",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-170-dc-jewelry-golden-heart-band-adjustable-ring-126",
+    "referenceTitle": "DC Jewelry Golden Heart Band Adjustable Ring",
+    "rawContent": "Romantic and chic, this heart band ring adds a golden glow to your everyday or festive look.\nHighlights:\n- Elegant heart pattern\n- Comfortable for daily wear\n- A lovely gift for her\nDetails:\n- Plating: Gold Polished\n- Material: Brass\n- Stones: American Diamonds\nCare:\nAvoid moisture & chemicals. Clean with a soft cloth after use",
+    "rawHtml": "<p data-oe-version=\"2.0\">Romantic and chic, this heart band ring adds a golden glow to your everyday or festive look.</p><p><strong>Highlights:</strong></p><ul>\n<li><p>Elegant heart pattern</p></li>\n<li><p>Comfortable for daily wear</p></li>\n<li><p>A lovely gift for her</p></li>\n</ul><p><strong>Details:</strong></p><ul>\n<li><p>Plating: Gold Polished</p></li>\n<li><p>Material: Brass</p></li>\n<li><p>Stones: American Diamonds</p></li>\n</ul><p><strong>Care:</strong></p><p>\nAvoid moisture &amp; chemicals. Clean with a soft cloth after use</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Romantic golden heart band adjustable ring with American diamonds. Chic & comfortable, ideal for daily wear & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P107.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P107/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

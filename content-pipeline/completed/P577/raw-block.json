@@ -1,0 +1,48 @@
+{
+  "productId": "P577",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1047",
+    "workingId": "odoo-1047",
+    "originalSku": "MJ-482",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-482-quilted-grid-gold-stainless-steel-hoop-earrings-1047",
+    "referenceTitle": "Quilted Grid Gold Stainless Steel Hoop Earrings",
+    "rawContent": "Luxe, bold, and instantly recognisable — our Quilted Grid Chunky Hoop Earrings feature a raised grid-quilt pattern across a wide crescent-shaped hoop, giving a premium designer-inspired look. The structured texture adds dimension and catches light from every angle, making these a standout piece for any outfit.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Raised quilted grid texture — luxury designer-inspired look\n- Wide crescent silhouette — bold and flattering\n- Secure latch-back clasp — lightweight & comfortable all-day\nPairs with: Solid kurtas, co-ords, blazers, sarees, jeans, and monochrome outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Luxe, bold, and instantly recognisable — our Quilted Grid Chunky Hoop Earrings feature a raised grid-quilt pattern across a wide crescent-shaped hoop, giving a premium designer-inspired look. The structured texture adds dimension and catches light from every angle, making these a standout piece for any outfit.</p><ul>\n<li>316L Stainless Steel — rust-proof, tarnish-proof &amp; skin-safe</li>\n<li>Gold-plated finish — rich, long-lasting shine</li>\n<li>Waterproof &amp; sweat-resistant — built for everyday wear</li>\n<li>Raised quilted grid texture — luxury designer-inspired look</li>\n<li>Wide crescent silhouette — bold and flattering</li>\n<li>Secure latch-back clasp — lightweight &amp; comfortable all-day</li>\n</ul><p><em>Pairs with: Solid kurtas, co-ords, blazers, sarees, jeans, and monochrome outfits.</em></p><p>\n<em>Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.</em></p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P577.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P577/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

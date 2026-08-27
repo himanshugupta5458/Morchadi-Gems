@@ -1,0 +1,46 @@
+{
+  "productId": "P592",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1062",
+    "workingId": "odoo-1062",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/satin-scrunchie-chocolate-hamper-for-her-1062",
+    "referenceTitle": "Satin Scrunchie & Chocolate Hamper for Her",
+    "rawContent": "A thoughtfully curated gift hamper packed with pretty accessories, indulgent treats, and a relaxing skincare treat — perfect for birthdays, anniversaries, Rakhi, or just because. Beautifully packed in a kraft gift box with dried flower fillers for that premium unboxing feel.\nWhat's Inside:\n- Satin Rose Hair Ties (Set of 2)\n- Satin Bow Hair Clip – Ivory\n- Satin Scrunchies (Set of 4 – Assorted Colours)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Natural Collection Pomegranate Sheet Face Mask\nWhy She'll Love It:\n- Handpicked mix of beauty, self-care & sweet treats\n- Ready-to-gift packaging, no extra wrapping needed\n- Ideal for birthdays, anniversaries, Rakhi, Karwa Chauth, or a surprise \"just because\" gift\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A thoughtfully curated gift hamper packed with pretty accessories, indulgent treats, and a relaxing skincare treat — perfect for birthdays, anniversaries, Rakhi, or just because. Beautifully packed in a kraft gift box with dried flower fillers for that premium unboxing feel.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Satin Rose Hair Ties (Set of 2)</li>\n<li>Satin Bow Hair Clip – Ivory</li>\n<li>Satin Scrunchies (Set of 4 – Assorted Colours)</li>\n<li>Sunfeast Dark Fantasy Choco Fills</li>\n<li>Hershey's Kisses – Hazelnut 'n' Cookies</li>\n<li>Naliao Natural Collection Pomegranate Sheet Face Mask</li>\n</ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>Handpicked mix of beauty, self-care &amp; sweet treats</li>\n<li>Ready-to-gift packaging, no extra wrapping needed</li>\n<li>Ideal for birthdays, anniversaries, Rakhi, Karwa Chauth, or a surprise \"just because\" gift<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</li></ul>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P592.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P592/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹949 sale price (morchadijewels.com, reference only)"
+  }
+}

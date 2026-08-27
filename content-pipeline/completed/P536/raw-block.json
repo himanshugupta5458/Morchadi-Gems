@@ -1,0 +1,46 @@
+{
+  "productId": "P536",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1000",
+    "workingId": "odoo-1000",
+    "originalSku": "MJ-147",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-147-couple-birthday-hamper-gold-edition-1000",
+    "referenceTitle": "Couple Birthday Hamper - Gold Edition",
+    "rawContent": "His & Her Gold Initial Rings in red velvet box + Dairy Milk Silk + Ferrero Rocher x3 + Birthday bunting + fairy lights. Only ₹499. Choose your initials! ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">His &amp; Her Gold Initial Rings in red velvet box + Dairy Milk Silk + Ferrero Rocher x3 + Birthday bunting + fairy lights. Only ₹499. Choose your initials! ⚠️ Prepaid only&nbsp;<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P536.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P536/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹480 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P597",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1067",
+    "workingId": "odoo-1067",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/self-care-gift-hamper-for-her-1067",
+    "referenceTitle": "Self Care Gift Hamper for Her",
+    "rawContent": "A pretty, thoughtfully packed gift hamper combining jewellery, indulgent treats, and a relaxing skincare treat. Beautifully packed in a kraft gift box with dried flower styling for a premium unboxing experience — perfect for birthdays, anniversaries, or a sweet surprise.\nWhat's Inside:\n- Crystal Drop Necklace & Earring Set (Gift Box Included)\n- Satin Rose Hair Ties (Set of 2 – Pink & Ivory)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Rose Oil Face Mask (Hydrating & Revitalizing)\nWhy She'll Love It:\n- A complete gifting mix — jewellery, sweet treats & self-care\n- Necklace & earring set comes in its own gift box, ready to wear or re-gift\n- Ready-to-gift packaging, no extra wrapping needed\n- Ideal for birthdays, anniversaries, or a \"just because\" surprise\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A pretty, thoughtfully packed gift hamper combining jewellery, indulgent treats, and a relaxing skincare treat. Beautifully packed in a kraft gift box with dried flower styling for a premium unboxing experience — perfect for birthdays, anniversaries, or a sweet surprise.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Crystal Drop Necklace &amp; Earring Set (Gift Box Included)</li>\n<li>Satin Rose Hair Ties (Set of 2 – Pink &amp; Ivory)</li>\n<li>Sunfeast Dark Fantasy Choco Fills</li>\n<li>Hershey's Kisses – Hazelnut 'n' Cookies</li>\n<li>Naliao Rose Oil Face Mask (Hydrating &amp; Revitalizing)</li>\n</ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>A complete gifting mix — jewellery, sweet treats &amp; self-care</li>\n<li>Necklace &amp; earring set comes in its own gift box, ready to wear or re-gift</li>\n<li>Ready-to-gift packaging, no extra wrapping needed</li>\n<li>Ideal for birthdays, anniversaries, or a \"just because\" surprise</li>\n</ul><p><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</p>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P597.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P597/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹819 sale price (morchadijewels.com, reference only)"
+  }
+}

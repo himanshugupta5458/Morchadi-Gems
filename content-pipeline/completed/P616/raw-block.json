@@ -1,0 +1,46 @@
+{
+  "productId": "P616",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1088",
+    "workingId": "odoo-1088",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-mesh-bracelet-watch-for-women-1088",
+    "referenceTitle": "Vintage Anti-Tarnish Silver Blue Dial Mesh Bracelet Watch for Women",
+    "rawContent": "Add a chic vintage touch to your everyday look with this Vintage Anti-Tarnish Silver Bracelet Watch, featuring a beautiful aqua blue dial and a sleek silver mesh bracelet. The delicate round dial, elegant metallic finish and unique bow-inspired detailing around the dial give this watch a refined and feminine appearance.\nThe fine mesh strap creates a lightweight, comfortable look while the soft blue dial adds a subtle pop of colour. Perfect for women who love minimal yet distinctive vintage-inspired accessories that can be styled effortlessly with both western and ethnic outfits.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 🤍 Anti-tarnish silver-tone finish\n- 💙 Elegant aqua blue dial\n- 🔗 Fine stainless-steel-style mesh bracelet\n- 🎀 Unique bow-inspired detailing around the dial\n- ⌚ Quartz movement\n- 💎 Elegant jewellery-inspired design\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Perfect gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nCollege, office, casual outings, date nights, parties, festive occasions and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a chic vintage touch to your everyday look with this <strong>Vintage Anti-Tarnish Silver Bracelet Watch</strong>, featuring a beautiful aqua blue dial and a sleek silver mesh bracelet. The delicate round dial, elegant metallic finish and unique bow-inspired detailing around the dial give this watch a refined and feminine appearance.</p><p>The fine mesh strap creates a lightweight, comfortable look while the soft blue dial adds a subtle pop of colour. Perfect for women who love minimal yet distinctive vintage-inspired accessories that can be styled effortlessly with both western and ethnic outfits.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired bracelet watch</li><li>🤍 Anti-tarnish silver-tone finish</li><li>💙 Elegant aqua blue dial</li><li>🔗 Fine stainless-steel-style mesh bracelet</li><li>🎀 Unique bow-inspired detailing around the dial</li><li>⌚ Quartz movement</li><li>💎 Elegant jewellery-inspired design</li><li>👗 Easy to style with ethnic and western outfits</li><li>🎁 Perfect gifting option for women</li><li>✨ Suitable for everyday wear and special occasions</li></ul><h3>Perfect For</h3><p>College, office, casual outings, date nights, parties, festive occasions and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P616.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P616/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

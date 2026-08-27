@@ -1,0 +1,49 @@
+{
+  "productId": "P526",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "988",
+    "workingId": "odoo-988",
+    "originalSku": "MJ-298",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-298-gold-tulip-cat-s-eye-pull-bracelet-988",
+    "referenceTitle": "Gold Tulip Cat's Eye Pull Bracelet",
+    "rawContent": "Embrace effortless elegance with this stunning tulip floral bracelet. Crafted from 14K gold-plated copper, it features a shimmering cat's eye stone bud and crystal-accented leaves. The adjustable pull-chain design ensures a perfect fit for any wrist, making it a versatile accessory and a beautiful gift for someone special",
+    "rawHtml": "<div data-oe-version=\"2.0\">Embrace effortless elegance with this stunning tulip floral bracelet. Crafted from 14K gold-plated copper, it features a shimmering cat's eye stone bud and crystal-accented leaves. The adjustable pull-chain design ensures a perfect fit for any wrist, making it a versatile accessory and a beautiful gift for someone special</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P526.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P526/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  }
+}

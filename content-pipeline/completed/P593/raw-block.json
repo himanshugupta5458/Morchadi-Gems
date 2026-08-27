@@ -1,0 +1,46 @@
+{
+  "productId": "P593",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1063",
+    "workingId": "odoo-1063",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/luxury-jewellery-gift-hamper-for-her-1063",
+    "referenceTitle": "Luxury Jewellery Gift Hamper for Her",
+    "rawContent": "An elegant, fully-loaded gift hamper designed for someone truly special. Packed in a signature pink gift box with a satin ribbon closure — this hamper is a complete jewellery and accessories collection, perfect for birthdays, anniversaries, weddings, or festive gifting.\nWhat's Inside:\n- Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design)\n- D'Pary Kundan Drop Earrings – Pink Stone\n- Kashmiri Watch Jewellery Set – Traditional Gold-Tone\n- Satin Fabric Rose Hair Clip – Ivory\n- Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber & Peach)\n- Satin Fabric Flower Hair Clip – Yellow\n- Nail Polish Remover\n- Paper Soap Sheets\n- Black Velvet Box with 12 Pairs of Earrings\nWhy She'll Love It:\n- A complete jewellery wardrobe in one box – ethnic, western & everyday pieces\n- Anti-tarnish bracelets that stay shiny longer – no fading, no colour loss\n- 12 pairs of earrings included in a velvet storage box – ready to mix & match\n- Travel-friendly essentials like paper soap & nail polish remover included\n- Perfect for weddings, Karwa Chauth, birthdays, Rakhi, or bridal shower gifting\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">An elegant, fully-loaded gift hamper designed for someone truly special. Packed in a signature pink gift box with a satin ribbon closure — this hamper is a complete jewellery and accessories collection, perfect for birthdays, anniversaries, weddings, or festive gifting.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design)</li>\n<li>D'Pary Kundan Drop Earrings – Pink Stone</li>\n<li>Kashmiri Watch Jewellery Set – Traditional Gold-Tone</li>\n<li>Satin Fabric Rose Hair Clip – Ivory</li>\n<li>Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber &amp; Peach)</li>\n<li>Satin Fabric Flower Hair Clip – Yellow</li>\n<li>Nail Polish Remover</li>\n<li>Paper Soap Sheets</li>\n<li>Black Velvet Box with 12 Pairs of Earrings</li>\n</ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>A complete jewellery wardrobe in one box – ethnic, western &amp; everyday pieces</li>\n<li>Anti-tarnish bracelets that stay shiny longer – no fading, no colour loss</li>\n<li>12 pairs of earrings included in a velvet storage box – ready to mix &amp; match</li>\n<li>Travel-friendly essentials like paper soap &amp; nail polish remover included</li>\n<li>Perfect for weddings, Karwa Chauth, birthdays, Rakhi, or bridal shower gifting<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</li></ul>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P593.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P593/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹1799 sale price (morchadijewels.com, reference only)"
+  }
+}

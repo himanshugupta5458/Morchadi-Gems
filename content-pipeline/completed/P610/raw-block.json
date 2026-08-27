@@ -1,0 +1,47 @@
+{
+  "productId": "P610",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1082",
+    "workingId": "odoo-1082",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1082",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Red Dial Bracelet Watch for Women",
+    "rawContent": "Make a statement with this elegant Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich red dial, classic Roman numeral detailing and a sleek jewellery-inspired bracelet strap. The warm gold-tone finish paired with the deep red dial creates a luxurious vintage look that instantly elevates any outfit.\nDesigned with an anti-tarnish finish, this watch is perfect for women who love elegant accessories with a timeless, statement-making appeal. Its unique oval-shaped dial and textured bracelet give it a distinctive vintage charm, making it more than just a timepiece—it's a stylish piece of jewellery.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 💛 Anti-tarnish gold-tone finish\n- ❤️ Elegant red dial\n- 🕰️ Classic Roman numeral detailing\n- 🔗 Stylish textured link bracelet strap\n- ⌚ Quartz movement\n- 💎 Jewellery-inspired statement design\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal for gifting\n- 🌸 Suitable for everyday wear, parties, dates & special occasions\nPerfect For\nOffice wear, college looks, festive outfits, parties, casual outings, date nights and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry, dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a statement with this elegant <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a rich red dial, classic Roman numeral detailing and a sleek jewellery-inspired bracelet strap. The warm gold-tone finish paired with the deep red dial creates a luxurious vintage look that instantly elevates any outfit.</p><p>Designed with an <strong>anti-tarnish finish</strong>, this watch is perfect for women who love elegant accessories with a timeless, statement-making appeal. Its unique oval-shaped dial and textured bracelet give it a distinctive vintage charm, making it more than just a timepiece—it's a stylish piece of jewellery.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired bracelet watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>❤️ Elegant red dial</li><li>🕰️ Classic Roman numeral detailing</li><li>🔗 Stylish textured link bracelet strap</li><li>⌚ Quartz movement</li><li>💎 Jewellery-inspired statement design</li><li>👗 Perfect for ethnic and western outfits</li><li>🎁 Ideal for gifting</li><li>🌸 Suitable for everyday wear, parties, dates &amp; special occasions</li></ul><h3>Perfect For</h3><p>Office wear, college looks, festive outfits, parties, casual outings, date nights and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry, dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1092",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P610.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P610/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

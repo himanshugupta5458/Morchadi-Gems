@@ -1,0 +1,47 @@
+{
+  "productId": "P429",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "882",
+    "workingId": "odoo-882",
+    "originalSku": "MJ-590",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-590-textured-gold-bow-pendant-necklace-882",
+    "referenceTitle": "Textured Gold Bow Pendant Necklace",
+    "rawContent": "Add a touch of vintage-inspired charm to your daily look with our Textured Bow Necklace. Featuring a beautifully detailed ribbon pendant and a shimmering twisted chain, this piece is the ultimate high-fashion accessory for those who love romantic, trendy styling. To keep its golden glow radiant for as long as possible, we recommend treating this delicate piece with love: keep it away from moisture and store it in a dry, safe place after each wear.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of vintage-inspired charm to your daily look with our Textured Bow Necklace. Featuring a beautifully detailed ribbon pendant and a shimmering twisted chain, this piece is the ultimate high-fashion accessory for those who love romantic, trendy styling. To keep its golden glow radiant for as long as possible, we recommend treating this delicate piece with love: keep it away from moisture and store it in a dry, safe place after each wear.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P429.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P429/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

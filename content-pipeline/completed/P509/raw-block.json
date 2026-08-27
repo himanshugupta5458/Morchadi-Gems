@@ -1,0 +1,49 @@
+{
+  "productId": "P509",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "970",
+    "workingId": "odoo-970",
+    "originalSku": "MJ-245",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-245-emerald-green-floral-anti-tarnish-kada-970",
+    "referenceTitle": "Emerald Green Floral Anti-Tarnish Kada",
+    "rawContent": "Make a bold statement with this emerald green floral kada. The rich, marbled green enamel is beautifully paired with textured gold-toned vine work and dark floral accents. Designed with an anti-tarnish coating, this luxurious bangle brings a sophisticated, nature-inspired vibe to any jewelry collection",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a bold statement with this emerald green floral kada. The rich, marbled green enamel is beautifully paired with textured gold-toned vine work and dark floral accents. Designed with an anti-tarnish coating, this luxurious bangle brings a sophisticated, nature-inspired vibe to any jewelry collection</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P509.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P509/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

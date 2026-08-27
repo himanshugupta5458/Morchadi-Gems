@@ -1,0 +1,48 @@
+{
+  "productId": "P496",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "952",
+    "workingId": "odoo-952",
+    "originalSku": "MJ-582",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-582-stainless-steel-swirl-texture-hoop-earrings-952",
+    "referenceTitle": "Stainless Steel Swirl Texture Hoop Earrings",
+    "rawContent": "Make a statement with these gold-toned stainless-steel hoops, featuring an eye-catching swirl texture. These fashionable earrings add a bold touch to your ensemble. To preserve their brilliant golden finish and intricate design, keep them away from moisture and perfumes, and store them safely in a dry place after use.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a statement with these gold-toned stainless-steel hoops, featuring an eye-catching swirl texture. These fashionable earrings add a bold touch to your ensemble. To preserve their brilliant golden finish and intricate design, keep them away from moisture and perfumes, and store them safely in a dry place after use.</p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P496.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P496/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price, ₹28 cost (morchadijewels.com, reference only)"
+  }
+}

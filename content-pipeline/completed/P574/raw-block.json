@@ -1,0 +1,48 @@
+{
+  "productId": "P574",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1044",
+    "workingId": "odoo-1044",
+    "originalSku": "MJ-610",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-610-twisted-rope-heart-gold-stainless-steel-hoop-earrings-1044",
+    "referenceTitle": "Twisted Rope Heart Gold Stainless Steel Hoop Earrings",
+    "rawContent": "Romantic and bold — our Twisted Rope Heart Hoop Earrings feature a thick twisted rope-style gold hoop with a raised heart charm at the bottom centre. The combination of texture and sentiment makes this a standout piece that is both trendy and meaningful.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Twisted rope texture + raised heart charm at base\n- Oval hoop silhouette — modern and flattering\nPairs with: Casual western, indo-western, date night outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Romantic and bold — our Twisted Rope Heart Hoop Earrings feature a thick twisted rope-style gold hoop with a raised heart charm at the bottom centre. The combination of texture and sentiment makes this a standout piece that is both trendy and meaningful.</p><ul>\n<li>316L Stainless Steel — rust-proof, tarnish-proof &amp; skin-safe</li>\n<li>Gold-plated finish — rich, long-lasting shine</li>\n<li>Waterproof &amp; sweat-resistant — built for everyday wear</li>\n<li>Twisted rope texture + raised heart charm at base</li>\n<li>Oval hoop silhouette — modern and flattering</li>\n</ul><p><em>Pairs with: Casual western, indo-western, date night outfits.</em></p><p>\n<em>Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.</em></p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P574.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P574/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

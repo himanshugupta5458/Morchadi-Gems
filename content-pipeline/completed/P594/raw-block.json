@@ -1,0 +1,46 @@
+{
+  "productId": "P594",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1064",
+    "workingId": "odoo-1064",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/forever-friends-hamper-1064",
+    "referenceTitle": "Forever Friends Hamper",
+    "rawContent": "A dreamy pastel-toned hamper made for your favourite person — perfect for Friendship Day, birthdays, or just to say \"you are my best friend.\" Comes with cute quote cards and a mix of everyday jewellery pieces she can actually wear on repeat.\nWhat's Inside:\n- Morchadi Jewels Pearl Beaded Chain Necklace\n- Morchadi Jewels Stud Earrings Set (6 Pairs – Gold & Silver Tone)\n- Peach & Pearl Beaded Flower Charm Bracelet\n- Gold-Tone Twisted Ring\n- Satin Scrunchie – Peach\n- Orange Acrylic Flower Hair Claw Clip\n-\nWhy She'll Love It:\n- A complete jewellery set — necklace, 6 earring pairs, bracelet & ring in one box\n- Soft, wearable everyday pieces in a cohesive pastel palette\n- Comes with cute friendship-themed quote cards, ready to gift\n- Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A dreamy pastel-toned hamper made for your favourite person — perfect for Friendship Day, birthdays, or just to say \"you are my best friend.\" Comes with cute quote cards and a mix of everyday jewellery pieces she can actually wear on repeat.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Morchadi Jewels Pearl Beaded Chain Necklace</li>\n<li>Morchadi Jewels Stud Earrings Set (6 Pairs – Gold &amp; Silver Tone)</li>\n<li>Peach &amp; Pearl Beaded Flower Charm Bracelet</li>\n<li>Gold-Tone Twisted Ring</li>\n<li>Satin Scrunchie – Peach</li>\n<li>Orange Acrylic Flower Hair Claw Clip</li>\n<li class=\"oe-nested\"><br></li>\n</ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>A complete jewellery set — necklace, 6 earring pairs, bracelet &amp; ring in one box</li>\n<li>Soft, wearable everyday pieces in a cohesive pastel palette</li>\n<li>Comes with cute friendship-themed quote cards, ready to gift</li>\n<li>Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</li></ul>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P594.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P594/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹379 sale price (morchadijewels.com, reference only)"
+  }
+}

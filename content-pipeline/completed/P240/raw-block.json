@@ -1,0 +1,48 @@
+{
+  "productId": "P240",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "541",
+    "workingId": "odoo-541",
+    "originalSku": "MJ-343",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-343-infinity-adjustable-silver-ring-for-women-541",
+    "referenceTitle": "Infinity Adjustable Silver Ring for Women",
+    "rawContent": "Symbolize endless love and elegance with this beautiful infinity design ring. Crafted with sparkling crystals and a smooth silver finish, this adjustable ring is perfect for parties, office wear, and special occasions. A timeless accessory for every woman.\n✨ Adjustable Fit\n✨ Shining Crystal Stones\n✨ Anti-Tarnish Finish\n✨ Perfect Gift for Her",
+    "rawHtml": "<p data-oe-version=\"2.0\">\nSymbolize endless love and elegance with this beautiful infinity design ring. Crafted with sparkling crystals and a smooth silver finish, this adjustable ring is perfect for parties, office wear, and special occasions. A timeless accessory for every woman.</p><p>✨ Adjustable Fit</p><p>\n✨ Shining Crystal Stones</p><p>\n✨ Anti-Tarnish Finish</p><p>\n✨ Perfect Gift for Her</p>",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Stylish anti-tarnish gold Elara ring with zircon sparkle & open design. Durable & classy, perfect for daily wear & parties.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P240.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P240/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

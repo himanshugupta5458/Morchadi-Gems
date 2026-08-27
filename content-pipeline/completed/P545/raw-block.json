@@ -1,0 +1,46 @@
+{
+  "productId": "P545",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1011",
+    "workingId": "odoo-1011",
+    "originalSku": "MJ-118",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-118-birthday-hamper-for-her-1011",
+    "referenceTitle": "Birthday Hamper for Her",
+    "rawContent": "Cute Birthday Hamper with Initial Ring, Hoop Earrings, Scrunchie, Flower Clip & Chocolate. Perfect gift for girlfriends, sisters, and best friends. 💖✨⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div plerdy-tracking-id=\"66016002801\" data-oe-version=\"2.0\"> Cute Birthday Hamper with Initial Ring, Hoop Earrings, Scrunchie, Flower Clip &amp; Chocolate. Perfect gift for girlfriends, sisters, and best friends. 💖✨⚠️ Prepaid only<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P545.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P545/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

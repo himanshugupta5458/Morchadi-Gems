@@ -1,0 +1,46 @@
+{
+  "productId": "P393",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "844",
+    "workingId": "odoo-844",
+    "originalSku": "MJ-365",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-365-kashmiri-pink-meenakari-square-kundan-cz-bracelet-watch-844",
+    "referenceTitle": "Kashmiri Pink Meenakari Square Kundan CZ Bracelet Watch",
+    "rawContent": "A bridal masterpiece crafted in the finest Kashmiri tradition — this showstopper bracelet watch features soft pink meenakari square panels with pearl borders and ruby red kundan centres, flanking a heavily CZ stone-encrusted dial that dazzles from every angle. Below flows a multicolour kundan chand pendant with cascading triple ghungroo chains — dramatic, regal, and unforgettable. Made for brides, reception nights, sangeet, and every grand occasion that deserves nothing less than extraordinary.",
+    "rawHtml": "<div data-oe-version=\"2.0\">A bridal masterpiece crafted in the finest Kashmiri tradition — this showstopper bracelet watch features soft pink meenakari square panels with pearl borders and ruby red kundan centres, flanking a heavily CZ stone-encrusted dial that dazzles from every angle. Below flows a multicolour kundan chand pendant with cascading triple ghungroo chains — dramatic, regal, and unforgettable. Made for brides, reception nights, sangeet, and every grand occasion that deserves nothing less than extraordinary.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P393.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P393/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

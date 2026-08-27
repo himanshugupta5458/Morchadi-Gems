@@ -1,0 +1,48 @@
+{
+  "productId": "P355",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "790",
+    "workingId": "odoo-790",
+    "originalSku": "MJ-220",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-220-double-stone-adjustable-ring-for-girls-790",
+    "referenceTitle": "Double Stone Adjustable Ring for Girls",
+    "rawContent": "Upgrade your fashion game with this modern double-rectangle stone ring. Designed with a sleek open style and premium silver finish, this adjustable ring offers a classy and minimalist look for everyday and party wear.\n✨ Open Adjustable Design\n✨ Premium Silver Plating\n✨ Lightweight & Comfortable\n✨ Stylish & Modern Look",
+    "rawHtml": "<p data-oe-version=\"2.0\">\nUpgrade your fashion game with this modern double-rectangle stone ring. Designed with a sleek open style and premium silver finish, this adjustable ring offers a classy and minimalist look for everyday and party wear.</p><p>✨ Open Adjustable Design</p><p>\n✨ Premium Silver Plating</p><p>\n✨ Lightweight &amp; Comfortable</p><p>\n✨ Stylish &amp; Modern Look</p>",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Stylish anti-tarnish gold Elara ring with zircon sparkle & open design. Durable & classy, perfect for daily wear & parties.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P355.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P355/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "productId": "P510",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "971",
+    "workingId": "odoo-971",
+    "originalSku": "MJ-127",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-127-blush-pink-floral-anti-tarnish-kada-971",
+    "referenceTitle": "Blush Pink Floral Anti-Tarnish Kada",
+    "rawContent": "Add a feminine touch to your look with this blush pink floral kada. Featuring delicate red flower accents and gold-leaf engravings, this anti-tarnish bangle offers a vintage-inspired aesthetic. Durable and stylish, it's the perfect accessory for both festive celebrations and elegant everyday wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a feminine touch to your look with this blush pink floral kada. Featuring delicate red flower accents and gold-leaf engravings, this anti-tarnish bangle offers a vintage-inspired aesthetic. Durable and stylish, it's the perfect accessory for both festive celebrations and elegant everyday wear</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P510.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P510/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}

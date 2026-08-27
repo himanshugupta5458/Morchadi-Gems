@@ -1,0 +1,46 @@
+{
+  "productId": "P558",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1024",
+    "workingId": "odoo-1024",
+    "originalSku": "MJ-361",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-361-kashmiri-meenakari-bracelet-watch-for-women-1024",
+    "referenceTitle": "Kashmiri Meenakari Bracelet Watch for Women",
+    "rawContent": "A timeless fusion of function and tradition — this stunning Kashmiri-style bracelet watch features intricate meenakari work, pearl accents, ghungroo bells, and vibrant coloured beads on a multi-strand gold chain. Perfect for weddings, festivals, sangeet, and ethnic occasions where you want to stand out effortlessly.",
+    "rawHtml": "<div data-oe-version=\"2.0\">A timeless fusion of function and tradition — this stunning Kashmiri-style bracelet watch features intricate meenakari work, pearl accents, ghungroo bells, and vibrant coloured beads on a multi-strand gold chain. Perfect for weddings, festivals, sangeet, and ethnic occasions where you want to stand out effortlessly.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P558.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P558/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  }
+}

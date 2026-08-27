@@ -1,0 +1,46 @@
+{
+  "productId": "P151",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "183",
+    "workingId": "odoo-183",
+    "originalSku": "MJ-559",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-559-silver-plated-adjustable-ad-stone-criss-cross-ring-183",
+    "referenceTitle": "Silver-Plated Adjustable AD Stone Criss-Cross Ring",
+    "rawContent": "Add a touch of elegance to your collection with this silver-plated adjustable ring, beautifully designed with a sparkling American Diamond (AD) stone at the center and a stylish criss-cross band. Perfect for daily wear, party looks, or gifting, this ring blends minimalism with sophistication.\n- Material: Brass base\n- Plating: Premium Silver-plated finish\n- Stone Type: Sparkling American Diamond (AD)\n- Design: Criss-cross band with central solitaire-style stone\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Ideal for daily wear, casual outings, parties, and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of elegance to your collection with this <strong>silver-plated adjustable ring</strong>, beautifully designed with a sparkling <strong>American Diamond (AD) stone</strong> at the center and a stylish <strong>criss-cross band</strong>. Perfect for <strong>daily wear, party looks, or gifting</strong>, this ring blends minimalism with sophistication.</p><ul>\n<li><p><strong>Material:</strong> Brass base</p></li>\n<li><p><strong>Plating:</strong> Premium Silver-plated finish</p></li>\n<li><p><strong>Stone Type:</strong> Sparkling American Diamond (AD)</p></li>\n<li><p><strong>Design:</strong> Criss-cross band with central solitaire-style stone</p></li>\n<li><p><strong>Size &amp; Fit:</strong> Adjustable – fits comfortably on most finger sizes</p></li>\n<li><p><strong>Style &amp; Use:</strong> Ideal for daily wear, casual outings, parties, and gifting</p></li>\n</ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Sleek silver-plated criss-cross ring with AD stone center. Adjustable fit, versatile design for daily chic, parties & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P151.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P151/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

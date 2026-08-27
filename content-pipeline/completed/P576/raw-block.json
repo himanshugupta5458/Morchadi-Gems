@@ -1,0 +1,48 @@
+{
+  "productId": "P576",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1046",
+    "workingId": "odoo-1046",
+    "originalSku": "MJ-151",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-151-croissant-ribbed-gold-stainless-steel-c-hoop-earrings-1046",
+    "referenceTitle": "Croissant Ribbed Gold Stainless Steel C-Hoop Earrings",
+    "rawContent": "Effortlessly chic and endlessly wearable — our Croissant Ribbed C-Hoop Earrings feature a chunky open C-shaped hoop with raised diagonal ribbing running the full length, inspired by the classic croissant texture. The puffy, sculpted silhouette looks rich and premium while staying lightweight on the ear.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Diagonal ribbed croissant texture — chunky & sculpted\n- Open C-hoop silhouette — modern and flattering\n- Secure push-back stud clasp — easy and comfortable to wear\nPairs with: Everything — casual kurtis, western outfits, co-ords, sarees, and date night looks.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Effortlessly chic and endlessly wearable — our Croissant Ribbed C-Hoop Earrings feature a chunky open C-shaped hoop with raised diagonal ribbing running the full length, inspired by the classic croissant texture. The puffy, sculpted silhouette looks rich and premium while staying lightweight on the ear.</p><ul>\n<li>316L Stainless Steel — rust-proof, tarnish-proof &amp; skin-safe</li>\n<li>Gold-plated finish — rich, long-lasting shine</li>\n<li>Waterproof &amp; sweat-resistant — built for everyday wear</li>\n<li>Diagonal ribbed croissant texture — chunky &amp; sculpted</li>\n<li>Open C-hoop silhouette — modern and flattering</li>\n<li>Secure push-back stud clasp — easy and comfortable to wear</li>\n</ul><p><em>Pairs with: Everything — casual kurtis, western outfits, co-ords, sarees, and date night looks.</em></p><p>\n<em>Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.</em></p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P576.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P576/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

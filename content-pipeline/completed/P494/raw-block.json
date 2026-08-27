@@ -1,0 +1,48 @@
+{
+  "productId": "P494",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "950",
+    "workingId": "odoo-950",
+    "originalSku": "MJ-583",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-583-stainless-steel-textured-hoop-earrings-950",
+    "referenceTitle": "Stainless Steel Textured Hoop Earrings",
+    "rawContent": "Elevate your everyday style with these stunning gold-toned stainless steel textured hoops. Their unique ribbed design offers a bold, modern twist on a classic silhouette. To ensure their vibrant finish stays beautiful, avoid contact with water or perfumes and store in a dry, airtight container after use.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your everyday style with these stunning gold-toned stainless steel textured hoops. Their unique ribbed design offers a bold, modern twist on a classic silhouette. To ensure their vibrant finish stays beautiful, avoid contact with water or perfumes and store in a dry, airtight container after use.</p>",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P494.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P494/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price, ₹28 cost (morchadijewels.com, reference only)"
+  }
+}

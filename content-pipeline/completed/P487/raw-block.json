@@ -1,0 +1,46 @@
+{
+  "productId": "P487",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "943",
+    "workingId": "odoo-943",
+    "originalSku": "MJ-314",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-314-gold-plated-multi-color-stone-traditional-nath-vibrant-ruby-emerald-green-943",
+    "referenceTitle": "Gold-Plated Multi-Color Stone Traditional Nath – Vibrant Ruby & Emerald Green",
+    "rawContent": "Add a festive pop of color with this exquisite gold-toned nath. Featuring a radiant mix of multi-colored stones, this high-fashion piece is a stunning ethnic statement. To maintain its brilliant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a festive pop of color with this exquisite gold-toned nath. Featuring a radiant mix of multi-colored stones, this high-fashion piece is a stunning ethnic statement. To maintain its brilliant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P487.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P487/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  }
+}

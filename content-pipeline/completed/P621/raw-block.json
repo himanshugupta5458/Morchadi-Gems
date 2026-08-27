@@ -1,0 +1,46 @@
+{
+  "productId": "P621",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1093",
+    "workingId": "odoo-1093",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-gold-green-square-dial-mesh-bracelet-watch-1093",
+    "referenceTitle": "Vintage Gold Green Square Dial Mesh Bracelet Watch",
+    "rawContent": "Give your everyday look a sophisticated upgrade with this Vintage Gold Green Square Dial Mesh Bracelet Watch, featuring a rich green dial, elegant detailing and a sleek gold-tone mesh bracelet.\nThe structured square dial gives the watch a chic retro-inspired appearance, while the fine mesh strap adds a delicate and polished finish. Its versatile design makes it perfect for styling with both western and traditional outfits.\nProduct Highlights\n-\n✨ Vintage-inspired square dial watch\n-\n💛 Elegant gold-tone finish\n-\n💚 Rich green dial\n-\n🔗 Fine mesh bracelet strap\n-\n⌚ Quartz movement\n-\n💎 Chic jewellery-inspired design\n-\n👗 Perfect for ethnic and western outfits\n-\n✨ Elegant everyday accessory\n-\n🎁 Ideal gifting option for women\n-\n💫 Suitable for casual and special occasions\nPerfect For\nOffice wear, college, casual outings, brunches, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Give your everyday look a sophisticated upgrade with this <strong>Vintage Gold Green Square Dial Mesh Bracelet Watch</strong>, featuring a rich green dial, elegant detailing and a sleek gold-tone mesh bracelet.</p><p>The structured square dial gives the watch a chic retro-inspired appearance, while the fine mesh strap adds a delicate and polished finish. Its versatile design makes it perfect for styling with both western and traditional outfits.</p><h3>Product Highlights</h3><ul>\n<li>\n✨ Vintage-inspired square dial watch\n</li>\n<li>\n💛 Elegant gold-tone finish\n</li>\n<li>\n💚 Rich green dial\n</li>\n<li>\n🔗 Fine mesh bracelet strap\n</li>\n<li>\n⌚ Quartz movement\n</li>\n<li>\n💎 Chic jewellery-inspired design\n</li>\n<li>\n👗 Perfect for ethnic and western outfits\n</li>\n<li>\n✨ Elegant everyday accessory\n</li>\n<li>\n🎁 Ideal gifting option for women\n</li>\n<li>\n💫 Suitable for casual and special occasions\n</li>\n</ul><h3>Perfect For</h3><p>Office wear, college, casual outings, brunches, festive occasions, parties, date nights, weddings and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P621.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P621/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

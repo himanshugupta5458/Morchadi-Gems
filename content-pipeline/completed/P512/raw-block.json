@@ -1,0 +1,49 @@
+{
+  "productId": "P512",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "973",
+    "workingId": "odoo-973",
+    "originalSku": "MJ-128",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-128-blush-pink-crystal-tulip-pendant-973",
+    "referenceTitle": "Blush pink Crystal Tulip Pendant",
+    "rawContent": "Elevate your style with this elegant tulip pendant necklace. Featuring a sparkling pink crystal bud on a sleek gold-finished snake chain, this pastoral-style accessory adds a touch of versatile luxury to any outfit. Perfect for daily wear or as a thoughtful gift for someone special.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your style with this elegant tulip pendant necklace. Featuring a sparkling pink crystal bud on a sleek gold-finished snake chain, this pastoral-style accessory adds a touch of versatile luxury to any outfit. Perfect for daily wear or as a thoughtful gift for someone special.</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P512.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P512/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

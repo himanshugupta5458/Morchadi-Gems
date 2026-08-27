@@ -1,0 +1,46 @@
+{
+  "productId": "P612",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1084",
+    "workingId": "odoo-1084",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-chain-bracelet-watch-for-women-1084",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Chain Bracelet Watch for Women",
+    "rawContent": "Make a statement with this elegant Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich green round dial and a beautifully detailed interlocking chain bracelet. The gold-tone finish, sparkling accents and deep green dial create a luxurious vintage-inspired look that feels like jewellery on your wrist.\nDesigned for women who love unique and elegant accessories, this watch combines the functionality of a classic timepiece with the glamour of a statement bracelet. Its intricate chain detailing makes it perfect for adding a sophisticated touch to both everyday and occasion looks.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Elegant deep green dial\n- 💎 Sparkling stone detailing on the bracelet\n- 🔗 Stylish interlocking chain-link design\n- ⌚ Quartz movement\n- 🌸 Jewellery-inspired statement look\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Perfect gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nCollege, office, casual outings, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a statement with this elegant <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a rich green round dial and a beautifully detailed interlocking chain bracelet. The gold-tone finish, sparkling accents and deep green dial create a luxurious vintage-inspired look that feels like jewellery on your wrist.</p><p>Designed for women who love unique and elegant accessories, this watch combines the functionality of a classic timepiece with the glamour of a statement bracelet. Its intricate chain detailing makes it perfect for adding a sophisticated touch to both everyday and occasion looks.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired bracelet watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>💚 Elegant deep green dial</li><li>💎 Sparkling stone detailing on the bracelet</li><li>🔗 Stylish interlocking chain-link design</li><li>⌚ Quartz movement</li><li>🌸 Jewellery-inspired statement look</li><li>👗 Easy to style with ethnic and western outfits</li><li>🎁 Perfect gifting option for women</li><li>✨ Suitable for everyday wear and special occasions</li></ul><h3>Perfect For</h3><p>College, office, casual outings, festive occasions, parties, date nights, weddings and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P612.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P612/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

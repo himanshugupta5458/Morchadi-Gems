@@ -1,0 +1,46 @@
+{
+  "productId": "P557",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1023",
+    "workingId": "odoo-1023",
+    "originalSku": "MJ-359",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-359-kashmiri-lotus-kundan-bracelet-watch-1023",
+    "referenceTitle": "Kashmiri Lotus Kundan Bracelet Watch",
+    "rawContent": "Elegance that jingles — this dainty Kashmiri bracelet watch features delicate red & green lotus kundan charms flanking a clean white quartz dial, all strung together on a gold chain adorned with cheerful ghungroo bells. Lighter and more subtle than traditional styles, yet deeply rooted in Indian craft heritage. Pairs effortlessly with festive ethnic wear — sarees, suits, and lehengas alike.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elegance that jingles — this dainty Kashmiri bracelet watch features delicate red &amp; green lotus kundan charms flanking a clean white quartz dial, all strung together on a gold chain adorned with cheerful ghungroo bells. Lighter and more subtle than traditional styles, yet deeply rooted in Indian craft heritage. Pairs effortlessly with festive ethnic wear — sarees, suits, and lehengas alike.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P557.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P557/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

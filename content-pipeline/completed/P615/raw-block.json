@@ -1,0 +1,46 @@
+{
+  "productId": "P615",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1087",
+    "workingId": "odoo-1087",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-crystal-bracelet-watch-for-women-1087",
+    "referenceTitle": "Vintage Anti-Tarnish Gold White Dial Crystal Bracelet Watch for Women",
+    "rawContent": "Add a touch of timeless elegance to your look with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a classic white dial with Roman numeral detailing and a beautiful crystal-inspired bracelet design. The combination of the elegant gold-tone finish, soft white dial and translucent crystal accents creates a sophisticated jewellery-inspired look.\nThe unique oval-shaped dial and decorative bracelet make this watch a stylish statement accessory, perfect for women who love vintage-inspired pieces with a luxurious finish. It effortlessly complements both traditional and western outfits.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 🤍 Elegant white dial\n- 🕰️ Classic Roman numeral hour markers\n- 💎 Translucent crystal-style bracelet detailing\n- 🔗 Unique decorative link bracelet\n- ⌚ Quartz movement\n- 🌸 Jewellery-inspired statement design\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Perfect gifting option for women\nPerfect For\nFestive occasions, weddings, parties, office wear, date nights, casual outings and everyday styling.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of timeless elegance to your look with this <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a classic white dial with Roman numeral detailing and a beautiful crystal-inspired bracelet design. The combination of the elegant gold-tone finish, soft white dial and translucent crystal accents creates a sophisticated jewellery-inspired look.</p><p>The unique oval-shaped dial and decorative bracelet make this watch a stylish statement accessory, perfect for women who love vintage-inspired pieces with a luxurious finish. It effortlessly complements both traditional and western outfits.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired jewellery watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>🤍 Elegant white dial</li><li>🕰️ Classic Roman numeral hour markers</li><li>💎 Translucent crystal-style bracelet detailing</li><li>🔗 Unique decorative link bracelet</li><li>⌚ Quartz movement</li><li>🌸 Jewellery-inspired statement design</li><li>👗 Easy to style with ethnic and western outfits</li><li>🎁 Perfect gifting option for women</li></ul><h3>Perfect For</h3><p>Festive occasions, weddings, parties, office wear, date nights, casual outings and everyday styling.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P615.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P615/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

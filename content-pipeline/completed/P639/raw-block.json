@@ -1,0 +1,50 @@
+{
+  "productId": "P639",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1111",
+    "workingId": "odoo-1111",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/gold-tulip-necklace-with-ruby-1111",
+    "referenceTitle": "Gold Tulip Necklace with Ruby",
+    "rawContent": "A delicate layered-look necklace featuring three tulip-shaped charms, each set with a vibrant fuchsia-pink crystal petal and a emerald-green crystal base, finished with sparkling clear crystal spacers along the chain. The asymmetrical, multi-drop design gives the necklace a botanical, nature-inspired feel with a pop of jewel-toned color. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nRomantic and colorful, this necklace is a beautiful statement piece for spring and summer looks, and makes a thoughtful gift for any flower lover.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Pink and green cubic zirconia tulip charms, clear crystal spacers\n- Chain: Fine link chain with layered drop design, adjustable length\n- Pendant size: Largest charm approx. 1.5cm",
+    "rawHtml": "<p data-oe-version=\"2.0\">\nA delicate layered-look necklace featuring three tulip-shaped charms, each set with a vibrant fuchsia-pink crystal petal and a emerald-green crystal base, finished with sparkling clear crystal spacers along the chain. The asymmetrical, multi-drop design gives the necklace a botanical, nature-inspired feel with a pop of jewel-toned color. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.</p><p>Romantic and colorful, this necklace is a beautiful statement piece for spring and summer looks, and makes a thoughtful gift for any flower lover.</p><p><strong>Details:</strong></p><ul>\n<li>Material: 18K gold-plated stainless steel, tarnish and water resistant</li>\n<li>Stone: Pink and green cubic zirconia tulip charms, clear crystal spacers</li>\n<li>Chain: Fine link chain with layered drop design, adjustable length</li>\n<li>Pendant size: Largest charm approx. 1.5cm</li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P639.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P639/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

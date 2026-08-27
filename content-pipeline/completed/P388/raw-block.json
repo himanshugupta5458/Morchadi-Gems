@@ -1,0 +1,46 @@
+{
+  "productId": "P388",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "837",
+    "workingId": "odoo-837",
+    "originalSku": "MJ-367",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-367-kashmiri-red-meenakari-tulip-kundan-bracelet-watch-837",
+    "referenceTitle": "Kashmiri Red Meenakari Tulip Kundan Bracelet Watch",
+    "rawContent": "Dripping in tradition and grace — this striking Kashmiri bracelet watch features bold red meenakari tulip motifs with teardrop kundan centres, elegantly framing a classic white quartz dial. Triple gold chains adorned with cascading ghungroo bells on both ends create a dramatic yet deeply rooted Indian aesthetic. A must-have for brides, festival queens, and every woman who wears her culture like jewellery",
+    "rawHtml": "<div data-oe-version=\"2.0\">Dripping in tradition and grace — this striking Kashmiri bracelet watch features bold red meenakari tulip motifs with teardrop kundan centres, elegantly framing a classic white quartz dial. Triple gold chains adorned with cascading ghungroo bells on both ends create a dramatic yet deeply rooted Indian aesthetic. A must-have for brides, festival queens, and every woman who wears her culture like jewellery</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P388.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P388/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹369 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "productId": "P567",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1036",
+    "workingId": "odoo-1036",
+    "originalSku": "MJ-467",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-467-pink-rose-emerald-cz-gold-plated-anti-tarnish-necklace-1036",
+    "referenceTitle": "Pink Rose & Emerald CZ Gold-Plated Anti-Tarnish Necklace",
+    "rawContent": "Romantic and refreshing — our Pink Rose & Emerald Vine Anti-Tarnish Necklace features soft blush pink oval CZ stones nestled between lush emerald green leaf accents on a gold-plated V-shaped vine design. Fresh, feminine, and full of charm — it's the kind of necklace that makes you smile every time you wear it.\n- 💛 Gold-plated with anti-tarnish coating\n- 🌸 Blush pink oval CZ + emerald green leaf stones\n- 🌿 V-shaped vine pendant — soft and graceful\n- 🔗 Delicate gold chain with secure clasp\n- 🎁 Ideal for birthdays, anniversaries & festive gifting\nPairs beautifully with: Pastel pink, mint green, white, or floral ethnic and western outfits.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Romantic and refreshing — our <strong>Pink Rose &amp; Emerald Vine Anti-Tarnish Necklace</strong> features soft blush pink oval CZ stones nestled between lush emerald green leaf accents on a gold-plated V-shaped vine design. Fresh, feminine, and full of charm — it's the kind of necklace that makes you smile every time you wear it.</p><ul>\n<li>💛 Gold-plated with anti-tarnish coating</li>\n<li>🌸 Blush pink oval CZ + emerald green leaf stones</li>\n<li>🌿 V-shaped vine pendant — soft and graceful</li>\n<li>🔗 Delicate gold chain with secure clasp</li>\n<li>🎁 Ideal for birthdays, anniversaries &amp; festive gifting</li>\n</ul><p><em>Pairs beautifully with:</em> Pastel pink, mint green, white, or floral ethnic and western outfits.</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P567.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P567/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
+  }
+}

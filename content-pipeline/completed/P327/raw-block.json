@@ -1,0 +1,46 @@
+{
+  "productId": "P327",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "753",
+    "workingId": "odoo-753",
+    "originalSku": "MJ-439",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-439-multicolor-crystal-cluster-stud-earrings-753",
+    "referenceTitle": "Multicolor Crystal Cluster Stud Earrings",
+    "rawContent": "- Brighten up your look with these stunning multicolor crystal cluster stud earrings, crafted with a luxurious gold-plated finish. Featuring a vibrant mix of marquise and princess-cut stones in pink, mint green, amber, lavender, and clear CZ, these earrings create a dazzling floral burst design that instantly catches the eye.\n- Lightweight yet glamorous, these studs are perfect for festive celebrations, parties, weddings, and special occasions. Their colorful and versatile style pairs beautifully with ethnic, Indo-western, and modern outfits, adding a bold and fashionable pop of color.\n- Keywords included: multicolor earrings, crystal cluster studs, gold-plated jewelry, festive earrings for women, colorful stone earrings, party wear studs, statement earrings",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Brighten up your look with these stunning <strong>multicolor crystal cluster stud earrings</strong>, crafted with a luxurious gold-plated finish. Featuring a vibrant mix of marquise and princess-cut stones in pink, mint green, amber, lavender, and clear CZ, these earrings create a dazzling floral burst design that instantly catches the eye.</li><li>Lightweight yet glamorous, these studs are perfect for festive celebrations, parties, weddings, and special occasions. Their colorful and versatile style pairs beautifully with ethnic, Indo-western, and modern outfits, adding a bold and fashionable pop of color.</li><li><strong>Keywords included:</strong> multicolor earrings, crystal cluster studs, gold-plated jewelry, festive earrings for women, colorful stone earrings, party wear studs, statement earrings</li></ul></div>",
+    "originalCategories": [
+      "Traditional Earrings"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "earrings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P327.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P327/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

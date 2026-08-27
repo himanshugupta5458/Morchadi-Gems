@@ -1,0 +1,46 @@
+{
+  "productId": "P596",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1066",
+    "workingId": "odoo-1066",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/best-friends-forever-hamper-1066",
+    "referenceTitle": "Best Friends Forever Hamper",
+    "rawContent": "A dreamy pastel gift hamper made for your favourite person — perfect for Friendship Day, birthdays, or just to say \"you are my best friend.\" A mix of everyday jewellery pieces she can wear on repeat, paired with cute quote cards.\nWhat's Inside:\n- Morchadi Jewels Pearl Beaded Chain Necklace\n- Morchadi Jewels Stud & Hoop Earrings Set (6 Pairs – Gold Tone)\n- Peach & Pearl Beaded Flower Charm Bracelet\n- Gold-Tone Twisted Ring\n- Satin Scrunchie – Ivory Rose\nWhy She'll Love It:\n- A complete jewellery set — necklace, 6 earring pairs, bracelet & ring in one box\n- Soft, wearable everyday pieces in a cohesive gold & pastel palette\n- Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A dreamy pastel gift hamper made for your favourite person — perfect for Friendship Day, birthdays, or just to say \"you are my best friend.\" A mix of everyday jewellery pieces she can wear on repeat, paired with cute quote cards.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Morchadi Jewels Pearl Beaded Chain Necklace</li>\n<li>Morchadi Jewels Stud &amp; Hoop Earrings Set (6 Pairs – Gold Tone)</li>\n<li>Peach &amp; Pearl Beaded Flower Charm Bracelet</li>\n<li>Gold-Tone Twisted Ring</li>\n<li>Satin Scrunchie – Ivory Rose</li></ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>A complete jewellery set — necklace, 6 earring pairs, bracelet &amp; ring in one box</li>\n<li>Soft, wearable everyday pieces in a cohesive gold &amp; pastel palette</li><li>Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</li></ul>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P596.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P596/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

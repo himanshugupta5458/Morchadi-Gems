@@ -1,0 +1,46 @@
+{
+  "productId": "P626",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1098",
+    "workingId": "odoo-1098",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/premium-mystery-jewellery-jar-1098",
+    "referenceTitle": "Premium Mystery Jewellery Jar",
+    "rawContent": "✨ Unbox a little jar of happiness with the Premium Mystery Jewellery Jar by Morchadi Jewels! 🫙🤍\nLove surprises, trendy jewellery and vintage accessories? Our Premium Mystery Jar is carefully packed with a beautiful mix of vintage, anti-tarnish and Korean-inspired jewellery pieces, making every unboxing a fun little surprise.\n🎁 What's Inside Every Premium Mystery Jar?\nEach jar contains 10–12 jewellery & accessory items, including:\n- ⌚ 1 Vintage Watch – Confirmed in Every Jar\n- ✨ 3–4 Anti-Tarnish Jewellery Products\n- 🌸 6–7 Korean Jewellery Items\n- 💎 A curated mix of trendy, cute & statement styles\nEvery jar is different, so the exact designs and styles remain a mystery until you open it! 💌\n🤍 Why You'll Love It\n✔️ 10–12 surprise jewellery items in every jar\n✔️ 1 vintage watch guaranteed\n✔️ Anti-tarnish jewellery included\n✔️ Trendy Korean-inspired jewellery styles\n✔️ Perfect for jewellery lovers & collectors\n✔️ Aesthetic premium gift-ready packaging\n✔️ Amazing surprise value at just ₹1,199\nWhether you're treating yourself or looking for a unique birthday, anniversary, friendship or surprise gift, this mystery jar is made to turn an ordinary unboxing into an exciting experience. 🎀\nOne little jar. 10–12 surprises. A whole lot of sparkle. ✨\nDesigns, colours and jewellery styles may vary from the images shown. Every jar is curated individually, so the contents will be a surprise.\nPlease Note : Cash on delivery is not available for this Product",
+    "rawHtml": "<p data-oe-version=\"2.0\">✨ Unbox a little jar of happiness with the Premium Mystery Jewellery Jar by Morchadi Jewels! 🫙🤍</p><p>Love surprises, trendy jewellery and vintage accessories? Our <strong>Premium Mystery Jar</strong> is carefully packed with a beautiful mix of <strong>vintage, anti-tarnish and Korean-inspired jewellery pieces</strong>, making every unboxing a fun little surprise.</p><h3>🎁 What's Inside Every Premium Mystery Jar?</h3><p>Each jar contains <strong>10–12 jewellery &amp; accessory items</strong>, including:</p><ul><li><p>⌚ <strong>1 Vintage Watch – Confirmed in Every Jar</strong></p></li><li><p>✨ <strong>3–4 Anti-Tarnish Jewellery Products</strong></p></li><li><p>🌸 <strong>6–7 Korean Jewellery Items</strong></p></li><li><p>💎 A curated mix of trendy, cute &amp; statement styles</p></li></ul><p>Every jar is different, so the exact designs and styles remain a <strong>mystery until you open it!</strong> 💌</p><h3>🤍 Why You'll Love It</h3><p>✔️ 10–12 surprise jewellery items in every jar</p><p>✔️ 1 vintage watch guaranteed</p><p>✔️ Anti-tarnish jewellery included</p><p>✔️ Trendy Korean-inspired jewellery styles</p><p>✔️ Perfect for jewellery lovers &amp; collectors</p><p>✔️ Aesthetic premium gift-ready packaging</p><p>✔️ Amazing surprise value at <strong>just ₹1,199</strong></p><p>Whether you're treating yourself or looking for a <strong>unique birthday, anniversary, friendship or surprise gift</strong>, this mystery jar is made to turn an ordinary unboxing into an exciting experience. 🎀</p><p><strong>One little jar. 10–12 surprises. A whole lot of sparkle. ✨</strong></p><p><em>Designs, colours and jewellery styles may vary from the images shown. Every jar is curated individually, so the contents will be a surprise.<br><br><em><strong>Please Note : Cash on delivery is not available for this Product</strong></em></em></p>",
+    "originalCategories": [
+      "Mystery Jar"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "mystery-jar",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P626.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P626/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹1199 sale price (morchadijewels.com, reference only)"
+  }
+}

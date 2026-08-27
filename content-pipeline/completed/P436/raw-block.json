@@ -1,0 +1,47 @@
+{
+  "productId": "P436",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "889",
+    "workingId": "odoo-889",
+    "originalSku": "MJ-617",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-617-vintage-style-filigree-heart-pendant-on-chunky-rope-chain-889",
+    "referenceTitle": "Vintage-Style Filigree Heart Pendant on Chunky Rope Chain",
+    "rawContent": "Make a bold, romantic statement with our Vintage Filigree Heart Necklace. This stunning piece features an intricately detailed heart pendant suspended on a thick, shimmering rope chain, blending classic charm with modern trend. Perfectly weighted for a premium feel, it's a high-fashion accessory designed to be the centerpiece of any outfit. To preserve its rich golden finish and intricate detailing, we recommend treating it as a special occasion piece—keep it away from moisture and store it in a dry, airtight place after your day of shine.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Make a bold, romantic statement with our Vintage Filigree Heart Necklace. This stunning piece features an intricately detailed heart pendant suspended on a thick, shimmering rope chain, blending classic charm with modern trend. Perfectly weighted for a premium feel, it's a high-fashion accessory designed to be the centerpiece of any outfit. To preserve its rich golden finish and intricate detailing, we recommend treating it as a special occasion piece—keep it away from moisture and store it in a dry, airtight place after your day of shine.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P436.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P436/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

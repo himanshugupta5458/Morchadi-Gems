@@ -1,0 +1,46 @@
+{
+  "productId": "P392",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "842",
+    "workingId": "odoo-842",
+    "originalSku": "MJ-372",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-372-kashmiri-dark-green-meenakari-cz-square-bracelet-watch-for-women-842",
+    "referenceTitle": "Kashmiri dark Green Meenakari CZ Square Bracelet Watch for Women",
+    "rawContent": "Dark, dramatic, and deeply beautiful — this bold Kashmiri bracelet watch features striking dark green meenakari square panels with sparkling CZ stone centres, flanking a classic gold-tone quartz dial. Triple gold chains lined with ghungroo bells on both ends create an elegant cascading effect. A unique and powerful ethnic statement piece for women who love standing out at weddings, festivals, and special celebrations.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Dark, dramatic, and deeply beautiful — this bold Kashmiri bracelet watch features striking dark&nbsp;green meenakari square panels with sparkling CZ stone centres, flanking a classic gold-tone quartz dial. Triple gold chains lined with ghungroo bells on both ends create an elegant cascading effect. A unique and powerful ethnic statement piece for women who love standing out at weddings, festivals, and special celebrations.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P392.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P392/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹350 sale price (morchadijewels.com, reference only)"
+  }
+}

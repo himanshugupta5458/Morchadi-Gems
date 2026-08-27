@@ -1,0 +1,46 @@
+{
+  "productId": "P624",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1096",
+    "workingId": "odoo-1096",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/classic-mystery-jewellery-jar-1096",
+    "referenceTitle": "Classic Mystery Jewellery Jar ✨",
+    "rawContent": "A little jar of beautiful surprises! 💛 Our Classic Mystery Jewellery Jar is thoughtfully filled with 3–4 surprise jewellery pieces featuring a mix of trendy anti-tarnish and Korean-style jewellery.\nEvery jar is a fun mystery — you won't know exactly which designs you'll receive until you open it! From cute everyday pieces to trendy statement styles, each jar brings a little sparkle to your jewellery collection.\nWhat's Inside?\n- ✨ 3–4 Jewellery Items in every jar\n- 💛 Mix of Anti-Tarnish & Korean-Style Jewellery\n- 🎀 Different trendy designs in every jar\n- 💎 Perfect for everyday styling\n- 🎁 A fun and affordable gifting option\n- 💰 Only ₹299\nWhy You'll Love It\nThe Classic Mystery Jar is perfect for anyone who loves trying new jewellery without spending a lot. Whether you're treating yourself or surprising someone special, every jar is a tiny unboxing experience filled with sparkle and excitement.\nPlease Note: Cash on delivery is not available for this Product\nAnd Jewellery designs are assorted and selected randomly. The exact pieces may vary from jar to jar.\n✨ Unbox the surprise. Discover your sparkle",
+    "rawHtml": "<p data-oe-version=\"2.0\">A little jar of beautiful surprises! 💛 Our <strong>Classic Mystery Jewellery Jar</strong> is thoughtfully filled with <strong>3–4 surprise jewellery pieces</strong> featuring a mix of trendy <strong>anti-tarnish and Korean-style jewellery</strong>.</p><p>Every jar is a fun mystery — you won't know exactly which designs you'll receive until you open it! From cute everyday pieces to trendy statement styles, each jar brings a little sparkle to your jewellery collection.</p><h3>What's Inside?</h3><ul><li>✨ <strong>3–4 Jewellery Items</strong> in every jar</li><li>💛 Mix of <strong>Anti-Tarnish &amp; Korean-Style Jewellery</strong></li><li>🎀 Different trendy designs in every jar</li><li>💎 Perfect for everyday styling</li><li>🎁 A fun and affordable gifting option</li><li>💰 <strong>Only ₹299</strong></li></ul><h3>Why You'll Love It</h3><p>The <strong>Classic Mystery Jar</strong> is perfect for anyone who loves trying new jewellery without spending a lot. Whether you're treating yourself or surprising someone special, every jar is a tiny unboxing experience filled with sparkle and excitement.</p><p><strong>Please Note:</strong>&nbsp;Cash on delivery is not available for this Product<br>And Jewellery designs are assorted and selected randomly. The exact pieces may vary from jar to jar.</p><p>✨ <strong>Unbox the surprise. Discover your sparkle</strong></p>",
+    "originalCategories": [
+      "Mystery Jar"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "mystery-jar",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P624.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P624/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

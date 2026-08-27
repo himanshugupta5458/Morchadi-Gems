@@ -1,0 +1,46 @@
+{
+  "productId": "P111",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "133",
+    "workingId": "odoo-133",
+    "originalSku": "MJ-166",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-166-dc-jewelry-floral-adjustable-ring-133",
+    "referenceTitle": "DC Jewelry Floral Adjustable Ring",
+    "rawContent": "A delicate floral ring with sparkling CZ stones, crafted for elegance and charm — perfect for festive or daily wear.\nHighlights:\n- Bloom-inspired design\n- Lightweight & adjustable\n- Ideal gift for her\nDetails:\n- Plating: Rosegold\n- Material: Brass\n- Stones: American Diamonds\nCare:\nAvoid contact with water or perfumes. Clean with a soft cloth.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A delicate floral ring with sparkling CZ stones, crafted for elegance and charm — perfect for festive or daily wear.</p><p><strong>Highlights:</strong></p><ul>\n<li><p>Bloom-inspired design</p></li>\n<li><p>Lightweight &amp; adjustable</p></li>\n<li><p>Ideal gift for her</p></li>\n</ul><p><strong>Details:</strong></p><ul>\n<li><p>Plating: Rosegold</p></li>\n<li><p>Material: Brass</p></li>\n<li><p>Stones: American Diamonds</p></li>\n</ul><p><strong>Care:</strong></p><p>\nAvoid contact with water or perfumes. Clean with a soft cloth.</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Delicate floral adjustable ring with American diamonds. Rosegold finish, lightweight & perfect for gifting or festive wear.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P111.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P111/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

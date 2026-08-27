@@ -1,0 +1,46 @@
+{
+  "productId": "P623",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1095",
+    "workingId": "odoo-1095",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-oval-link-emerald-dial-bracelet-watch-1095",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Oval Link Emerald Dial Bracelet Watch",
+    "rawContent": "Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich emerald green dial, delicate stone accents, and a distinctive open-oval link chain strap. The deep green dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.\nIts petite round dial and artistic oval-link bracelet embellished with matching green crystal studs give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.\nProduct Highlights\n✨ Vintage-inspired bracelet watch\n💛 Anti-tarnish gold-tone finish\n💚 Elegant deep emerald green dial\n💎 Oval link chain embedded with green stone accents\n🔗 Delicate adjustable chain extension\n⌚ Quartz movement\n✨ Jewellery-inspired statement bracelet design\n👗 Perfect for ethnic and western outfits\n🎁 Ideal gifting option for women\n✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings, and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich emerald green dial, delicate stone accents, and a distinctive open-oval link chain strap. The deep green dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.</p><p>Its petite round dial and artistic oval-link bracelet embellished with matching green crystal studs give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.</p><p><b>Product Highlights</b>\n✨ Vintage-inspired bracelet watch</p><p>💛 Anti-tarnish gold-tone finish</p><p>💚 Elegant deep emerald green dial</p><p>💎 Oval link chain embedded with green stone accents</p><p>🔗 Delicate adjustable chain extension</p><p>⌚ Quartz movement</p><p>✨ Jewellery-inspired statement bracelet design</p><p>👗 Perfect for ethnic and western outfits</p><p>🎁 Ideal gifting option for women</p><p>✨ Suitable for everyday wear and special occasions</p><p><b>Perfect For</b>\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings, and gifting.</p><p><b>Care Tip:</b> Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P623.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P623/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P434",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "887",
+    "workingId": "odoo-887",
+    "originalSku": "MJ-436",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-436-mother-of-pearl-heart-necklace-in-gold-887",
+    "referenceTitle": "Mother of Pearl Heart Necklace in Gold",
+    "rawContent": "Celebrate timeless romance with our exquisite Heart Pendant Necklace. Featuring a shimmering, pearl-like heart centerpiece on a polished gold-toned link chain, this piece is the ultimate accessory for effortless, trend-forward styling. Designed to capture the light and elevate any ensemble, it is a perfect high-fashion choice for those who love to refresh their look with the latest styles. To preserve its radiant golden luster and delicate finish for all your special moments, we recommend keeping it away from water, perfumes, and lotions, and storing it in a dry, safe place.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Celebrate timeless romance with our exquisite Heart Pendant Necklace. Featuring a shimmering, pearl-like heart centerpiece on a polished gold-toned link chain, this piece is the ultimate accessory for effortless, trend-forward styling. Designed to capture the light and elevate any ensemble, it is a perfect high-fashion choice for those who love to refresh their look with the latest styles. To preserve its radiant golden luster and delicate finish for all your special moments, we recommend keeping it away from water, perfumes, and lotions, and storing it in a dry, safe place.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P434.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P434/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

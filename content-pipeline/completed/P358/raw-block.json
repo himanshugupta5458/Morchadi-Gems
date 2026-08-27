@@ -1,0 +1,52 @@
+{
+  "productId": "P358",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "794",
+    "workingId": "odoo-794",
+    "originalSku": "MJ-416",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-416-minimal-solitaire-pendant-necklace-for-women-794",
+    "referenceTitle": "Minimal Solitaire Pendant Necklace for Women",
+    "rawContent": "Add elegance to your neckline with this beautiful solitaire pendant necklace. Featuring a delicate gold chain and sparkling stone, this necklace is ideal for daily wear, office outfits, and special occasions.\n✨ Lightweight Gold Chain\n✨ Sparkling Solitaire Pendant\n✨ Skin-Friendly Material\n✨ Perfect Gift Option",
+    "rawHtml": "<p data-oe-version=\"2.0\">\nAdd elegance to your neckline with this beautiful solitaire pendant necklace. Featuring a delicate gold chain and sparkling stone, this necklace is ideal for daily wear, office outfits, and special occasions.</p><p>✨ Lightweight Gold Chain</p><p>\n✨ Sparkling Solitaire Pendant</p><p>\n✨ Skin-Friendly Material</p><p>\n✨ Perfect Gift Option</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Stylish anti-tarnish gold Elara ring with zircon sparkle & open design. Durable & classy, perfect for daily wear & parties.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P358.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P358/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price, ₹70 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "productId": "P513",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "974",
+    "workingId": "odoo-974",
+    "originalSku": "MJ-280",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-280-gold-heart-locket-adjustable-open-ring-974",
+    "referenceTitle": "Gold Heart Locket Adjustable Open Ring",
+    "rawContent": "This innovative gold-finished copper ring features a unique, openable heart or round locket design. Lightweight and adjustable, it allows you to customize your style with replaceable accessories. Comfortable for daily wear, it's the perfect sentimental gift for any modern jewelry collection.",
+    "rawHtml": "<p data-oe-version=\"2.0\">This innovative gold-finished copper ring features a unique, openable heart or round locket design. Lightweight and adjustable, it allows you to customize your style with replaceable accessories. Comfortable for daily wear, it's the perfect sentimental gift for any modern jewelry collection.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Personalised Item",
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Personalised silver initial letter ring with anti-tarnish finish. Adjustable, handcrafted in Jaipur. A thoughtful gift under ₹500. Shop Morchadi Jewels.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P513.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P513/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
+  }
+}

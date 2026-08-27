@@ -1,0 +1,46 @@
+{
+  "productId": "P535",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "999",
+    "workingId": "odoo-999",
+    "originalSku": "MJ-148",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-148-couple-birthday-hamper-silver-edition-999",
+    "referenceTitle": "Couple Birthday Hamper - Silver Edition",
+    "rawContent": "His & Her Silver Initial Rings in red box + Dairy Milk Silk + Ferrero Rocher x2 + Birthday bunting + fairy lights. Only ₹480. Choose your initials at checkout! ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">His &amp; Her Silver Initial Rings in red box + Dairy Milk Silk + Ferrero Rocher x2 + Birthday bunting + fairy lights. Only ₹480. Choose your initials at checkout! ⚠️ Prepaid only<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P535.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P535/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹480 sale price (morchadijewels.com, reference only)"
+  }
+}

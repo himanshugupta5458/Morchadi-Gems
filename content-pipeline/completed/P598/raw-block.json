@@ -1,0 +1,46 @@
+{
+  "productId": "P598",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1068",
+    "workingId": "odoo-1068",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/birthday-decorated-jewelry-hamper-for-her-1068",
+    "referenceTitle": "Birthday Decorated Jewelry Hamper for her",
+    "rawContent": "A rich, gold-toned gift hamper that brings together elegant everyday jewellery with indulgent chocolate treats. Packed in a signature pink gift box with satin and dried flower styling — perfect for birthdays, anniversaries, or a luxe \"just because\" surprise.\nWhat's Inside:\n- Gold-Tone Rope Chain Bracelet\n- Ruby & Emerald Stone Necklace\n- Gold-Tone Twisted Hoop Earrings\n- Satin Scrunchie – Rose Gold\n- Gold-Tone Acrylic Bangle/Cuff\n- Hershey's Kisses – Milk Chocolate\n- Sunfeast Dark Fantasy Coffee Fills\n- Decorative Pink Flower Accent\nWhy She'll Love It:\n- A complete gold jewellery set — bracelet, necklace & earrings in one box\n- Elegant, wearable pieces styled with premium branded cards\n- Indulgent chocolate treats included for that extra sweet touch\n- Comes fully gift-ready in a luxe pink box — no extra wrapping needed\n- Perfect for birthdays, anniversaries, or premium corporate/festive gifting\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<p data-oe-version=\"2.0\">A rich, gold-toned gift hamper that brings together elegant everyday jewellery with indulgent chocolate treats. Packed in a signature pink gift box with satin and dried flower styling — perfect for birthdays, anniversaries, or a luxe \"just because\" surprise.</p><p><strong>What's Inside:</strong></p><ul>\n<li>Gold-Tone Rope Chain Bracelet</li>\n<li>Ruby &amp; Emerald Stone Necklace</li>\n<li>Gold-Tone Twisted Hoop Earrings</li>\n<li>Satin Scrunchie – Rose Gold</li>\n<li>Gold-Tone Acrylic Bangle/Cuff</li>\n<li>Hershey's Kisses – Milk Chocolate</li>\n<li>Sunfeast Dark Fantasy Coffee Fills</li>\n<li>Decorative Pink Flower Accent</li>\n</ul><p><strong>Why She'll Love It:</strong></p><ul>\n<li>A complete gold jewellery set — bracelet, necklace &amp; earrings in one box</li>\n<li>Elegant, wearable pieces styled with premium branded cards</li>\n<li>Indulgent chocolate treats included for that extra sweet touch</li>\n<li>Comes fully gift-ready in a luxe pink box — no extra wrapping needed</li>\n<li>Perfect for birthdays, anniversaries, or premium corporate/festive gifting</li>\n</ul><p><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</p>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P598.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P598/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹1399 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "productId": "P630",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1102",
+    "workingId": "odoo-1102",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/gold-heart-wreath-necklace-1102",
+    "referenceTitle": "Gold Heart Wreath Necklace",
+    "rawContent": "A delicate circle of gold hearts and sparkling emerald-green stones, linked together to form a beautiful wreath pendant. Crafted in 18K gold-plated stainless steel, this piece hangs from a sleek snake chain that sits perfectly at the collarbone. The alternating pattern of polished gold hearts and rich green crystals adds a touch of color and romance to everyday layering, while the tarnish-resistant finish keeps it looking radiant for years to come.\nPerfect for gifting or treating yourself, this necklace pairs effortlessly with both casual and dressed-up looks.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Emerald-green cubic zirconia\n- Chain: Adjustable snake chain\n- Pendant size: Approx. 1x1cm diameter",
+    "rawHtml": "<p data-oe-version=\"2.0\">A delicate circle of gold hearts and sparkling emerald-green stones, linked together to form a beautiful wreath pendant. Crafted in 18K gold-plated stainless steel, this piece hangs from a sleek snake chain that sits perfectly at the collarbone. The alternating pattern of polished gold hearts and rich green crystals adds a touch of color and romance to everyday layering, while the tarnish-resistant finish keeps it looking radiant for years to come.</p><p>Perfect for gifting or treating yourself, this necklace pairs effortlessly with both casual and dressed-up looks.</p><p><strong>Details:</strong></p><ul>\n<li>Material: 18K gold-plated stainless steel, tarnish and water resistant</li>\n<li>Stone: Emerald-green cubic zirconia</li>\n<li>Chain: Adjustable snake chain</li>\n<li>Pendant size: Approx. 1x1cm diameter</li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P630.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P630/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

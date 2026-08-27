@@ -1,0 +1,46 @@
+{
+  "productId": "P609",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1081",
+    "workingId": "odoo-1081",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-bracelet-watch-1081",
+    "referenceTitle": "Vintage Anti-Tarnish Silver Blue Dial Bracelet Watch",
+    "rawContent": "Add timeless elegance to your everyday style with this Vintage Anti-Tarnish Silver Bracelet Watch, featuring a stunning deep blue round dial and an intricate chain-link bracelet design. With its jewellery-inspired vintage aesthetic, this watch effortlessly combines the charm of a classic timepiece with the beauty of a statement accessory.\nThe anti-tarnish finish helps maintain its elegant silver-tone appearance with proper care, while the rich blue dial adds a sophisticated touch to your look. Perfect for women who love unique, vintage-inspired accessories that stand out without being over the top.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch design\n- 💎 Anti-tarnish silver-tone finish\n- 💙 Elegant deep blue round dial\n- ⌚ Quartz movement\n- 🔗 Detailed chain-link bracelet strap\n- 🌸 Stylish combination of watch and jewellery\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Great gifting option for girls and women\n- ✨ Ideal for everyday wear, parties, outings & special occasions\nPerfect For\nCollege, office, casual outings, festive occasions, parties, date nights and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add timeless elegance to your everyday style with this <strong>Vintage Anti-Tarnish Silver Bracelet Watch</strong>, featuring a stunning deep blue round dial and an intricate chain-link bracelet design. With its jewellery-inspired vintage aesthetic, this watch effortlessly combines the charm of a classic timepiece with the beauty of a statement accessory.</p><p>The <strong>anti-tarnish finish</strong> helps maintain its elegant silver-tone appearance with proper care, while the rich blue dial adds a sophisticated touch to your look. Perfect for women who love unique, vintage-inspired accessories that stand out without being over the top.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired jewellery watch design</li><li>💎 Anti-tarnish silver-tone finish</li><li>💙 Elegant deep blue round dial</li><li>⌚ Quartz movement</li><li>🔗 Detailed chain-link bracelet strap</li><li>🌸 Stylish combination of watch and jewellery</li><li>👗 Perfect for ethnic and western outfits</li><li>🎁 Great gifting option for girls and women</li><li>✨ Ideal for everyday wear, parties, outings &amp; special occasions</li></ul><h3>Perfect For</h3><p>College, office, casual outings, festive occasions, parties, date nights and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P609.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P609/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P484",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "940",
+    "workingId": "odoo-940",
+    "originalSku": "MJ-327",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-327-gold-plated-traditional-white-stone-nath-sparkling-nose-ring-with-pearl-drop-940",
+    "referenceTitle": "Gold-Plated Traditional White Stone Nath – Sparkling Nose Ring with Pearl Drop",
+    "rawContent": "Radiate timeless charm with this gold-toned nath, beautifully accented with shimmering white stones and a delicate pearl drop. This high-fashion piece is a perfect addition to your ethnic wardrobe. To preserve its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Radiate timeless charm with this gold-toned nath, beautifully accented with shimmering white stones and a delicate pearl drop. This high-fashion piece is a perfect addition to your ethnic wardrobe. To preserve its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P484.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P484/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  }
+}

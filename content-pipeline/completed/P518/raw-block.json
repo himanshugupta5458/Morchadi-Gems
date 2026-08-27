@@ -1,0 +1,49 @@
+{
+  "productId": "P518",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "980",
+    "workingId": "odoo-980",
+    "originalSku": "MJ-621",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-621-white-enamel-magnolia-flower-gold-necklace-980",
+    "referenceTitle": "White Enamel Magnolia Flower Gold Necklace",
+    "rawContent": "Capture the essence of spring with this elegant white enamel flower necklace. Featuring pearlescent petals and a detailed gold-toned center, this anti-tarnish pendant hangs from a delicate gold chain for a sophisticated, natural look. It is a timeless accessory that adds a fresh, feminine touch to any outfit",
+    "rawHtml": "<div data-oe-version=\"2.0\">Capture the essence of spring with this elegant white enamel flower necklace. Featuring pearlescent petals and a detailed gold-toned center, this anti-tarnish pendant hangs from a delicate gold chain for a sophisticated, natural look. It is a timeless accessory that adds a fresh, feminine touch to any outfit</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P518.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P518/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹289 sale price (morchadijewels.com, reference only)"
+  }
+}

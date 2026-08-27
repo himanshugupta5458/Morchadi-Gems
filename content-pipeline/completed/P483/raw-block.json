@@ -1,0 +1,46 @@
+{
+  "productId": "P483",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "939",
+    "workingId": "odoo-939",
+    "originalSku": "MJ-324",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-324-gold-plated-traditional-nath-ruby-red-white-stone-studded-939",
+    "referenceTitle": "Gold-Plated Traditional Nath – Ruby Red & White Stone Studded",
+    "rawContent": "Embrace traditional elegance with this gold-toned nath, featuring vibrant ruby-colored stones and a delicate pearl drop. This high-fashion piece is a stunning addition to any ethnic attire. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Embrace traditional elegance with this gold-toned nath, featuring vibrant ruby-colored stones and a delicate pearl drop. This high-fashion piece is a stunning addition to any ethnic attire. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P483.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P483/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  }
+}

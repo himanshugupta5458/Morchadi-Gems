@@ -1,0 +1,48 @@
+{
+  "productId": "P103",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "62",
+    "workingId": "odoo-62",
+    "originalSku": "MJ-044",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-044-anti-tarnish-love-bracelet-62",
+    "referenceTitle": "Anti Tarnish Love Bracelet",
+    "rawContent": "- Avoid contact with water & perfume\n- Images may appear brighter than the actual product due to photographic effect.\n- Toggle Clasp\n- Brass\n- Package contains: 1 bracelet\n- Color Golden",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Avoid contact with water &amp; perfume</li><li>Images may appear brighter than the actual product due to photographic effect.&nbsp;</li><li>Toggle Clasp</li><li>Brass</li><li>Package contains: 1 bracelet</li><li>Color Golden</li></ul></div>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P103.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P103/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

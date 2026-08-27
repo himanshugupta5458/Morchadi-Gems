@@ -1,0 +1,46 @@
+{
+  "productId": "P105",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "123",
+    "workingId": "odoo-123",
+    "originalSku": "MJ-192",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-192-dc-jewelry-twinkle-duo-ring-star-square-123",
+    "referenceTitle": "DC Jewelry Twinkle Duo Ring – Star & Square",
+    "rawContent": "A stylish combo of star and square-shaped rings with sparkling CZ stones — perfect for stacking or wearing solo.\nHighlights:\n- Trendy 2-piece ring set\n- Adjustable & lightweight\n- Perfect for teens, girls & everyday glam\nDetails:\n- Plating: Rosegold\n- Material: Brass\n- Stones: American Diamonds\nCare:\nKeep away from water & perfumes. Wipe gently after use",
+    "rawHtml": "<p data-oe-version=\"2.0\">A stylish combo of star and square-shaped rings with sparkling CZ stones — perfect for stacking or wearing solo.</p><p><strong>Highlights:</strong></p><ul>\n<li><p>Trendy 2-piece ring set</p></li>\n<li><p>Adjustable &amp; lightweight</p></li>\n<li><p>Perfect for teens, girls &amp; everyday glam</p></li>\n</ul><p><strong>Details:</strong></p><ul>\n<li><p>Plating: Rosegold</p></li>\n<li><p>Material: Brass</p></li>\n<li><p>Stones: American Diamonds</p></li>\n</ul><p><strong>Care:</strong></p><p>\nKeep away from water &amp; perfumes. Wipe gently after use</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P105.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P105/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

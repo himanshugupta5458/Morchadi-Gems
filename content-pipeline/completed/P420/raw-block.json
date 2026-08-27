@@ -1,0 +1,55 @@
+{
+  "productId": "P420",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "873",
+    "workingId": "odoo-873",
+    "originalSku": "MJ-544",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-544-set-of-8-viral-jelly-bangle-pistachio-tint-873",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Pistachio Tint)",
+    "rawContent": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only",
+    "rawHtml": "<p data-oe-version=\"2.0\">Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only</p>",
+    "originalCategories": [
+      "jelly bangles"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P420.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P420/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  }
+}

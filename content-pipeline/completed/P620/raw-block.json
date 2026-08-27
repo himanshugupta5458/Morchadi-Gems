@@ -1,0 +1,47 @@
+{
+  "productId": "P620",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1092",
+    "workingId": "odoo-1092",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1092",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Red Dial Bracelet Watch for Women",
+    "rawContent": "Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich red dial, classic Roman numeral detailing and a sleek flexible gold-tone bracelet strap. The deep red dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.\nIts slim oval dial and elegant ribbed bracelet give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 💛 Anti-tarnish gold-tone finish\n- ❤️ Elegant deep red dial\n- 🕰️ Classic Roman numeral detailing\n- 🔗 Sleek flexible ribbed bracelet strap\n- ⌚ Quartz movement\n- 💎 Jewellery-inspired elegant design\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your style with this <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a rich red dial, classic Roman numeral detailing and a sleek flexible gold-tone bracelet strap. The deep red dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.</p><p>Its slim oval dial and elegant ribbed bracelet give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired bracelet watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>❤️ Elegant deep red dial</li><li>🕰️ Classic Roman numeral detailing</li><li>🔗 Sleek flexible ribbed bracelet strap</li><li>⌚ Quartz movement</li><li>💎 Jewellery-inspired elegant design</li><li>👗 Perfect for ethnic and western outfits</li><li>🎁 Ideal gifting option for women</li><li>✨ Suitable for everyday wear and special occasions</li></ul><h3>Perfect For</h3><p>Office wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1082",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P620.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P620/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

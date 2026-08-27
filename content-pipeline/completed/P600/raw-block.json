@@ -1,0 +1,46 @@
+{
+  "productId": "P600",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1070",
+    "workingId": "odoo-1070",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/luxury-raksha-bandhan-gift-hamper-1070",
+    "referenceTitle": "Luxury Raksha Bandhan Gift Hamper",
+    "rawContent": "The most beautiful Raksha Bandhan gift for your sister 🥹🎀 3 traditional rakhis, initial letter ring, pearl bracelet, face mask, perfume, chocolates and more — all in a pink luxury gift box. Only ₹1,749. ⚠️ Prepaid only —",
+    "rawHtml": "<div data-oe-version=\"2.0\">The most beautiful Raksha Bandhan gift for your sister 🥹🎀 3&nbsp;traditional rakhis, initial letter ring, pearl bracelet, face mask, perfume, chocolates and more — all in a pink luxury gift box. Only ₹1,749. ⚠️ Prepaid only —&nbsp;</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P600.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P600/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹1749 sale price (morchadijewels.com, reference only)"
+  }
+}

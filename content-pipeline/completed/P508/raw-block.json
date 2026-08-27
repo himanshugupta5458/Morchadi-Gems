@@ -1,0 +1,50 @@
+{
+  "productId": "P508",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "969",
+    "workingId": "odoo-969",
+    "originalSku": "MJ-490",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-490-red-luo-shen-flower-necklace-with-earrings-969",
+    "referenceTitle": "Red Luo Shen Flower Necklace with Earrings",
+    "rawContent": "3pcs Set: 1pc Necklace, Enamel Flower Stud Earrings for Women, Red Luo Shen Flower Earrings, Niche Light Luxury High-End Vintage Ear Jewelry",
+    "rawHtml": "<p data-oe-version=\"2.0\">3pcs Set: 1pc Necklace, Enamel Flower Stud Earrings for Women, Red Luo Shen Flower Earrings, Niche Light Luxury High-End Vintage Ear Jewelry</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "combo"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: combo->gift-hampers)",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P508.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P508/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹285 sale price (morchadijewels.com, reference only)"
+  }
+}

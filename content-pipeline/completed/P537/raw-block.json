@@ -1,0 +1,46 @@
+{
+  "productId": "P537",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1001",
+    "workingId": "odoo-1001",
+    "originalSku": "MJ-407",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-407-luxury-birthday-jewellery-hamper-1001",
+    "referenceTitle": "Luxury Birthday Jewellery Hamper",
+    "rawContent": "Premium birthday jewellery hamper with pink stone bracelet, heart necklace, bamboo hoop earrings, pearl bracelet with tulip charm, scrunchie, baby breath flowers, Dairy Milk Silk and Ferrero Rocher . Only ₹799. ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Premium birthday jewellery hamper with pink stone bracelet, heart necklace, bamboo hoop earrings, pearl bracelet with tulip charm, scrunchie, baby breath flowers, Dairy Milk Silk and Ferrero Rocher . Only ₹799. ⚠️ Prepaid only<br><br><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</div>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P537.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P537/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹849 sale price (morchadijewels.com, reference only)"
+  }
+}

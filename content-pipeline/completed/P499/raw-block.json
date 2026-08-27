@@ -1,0 +1,46 @@
+{
+  "productId": "P499",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "955",
+    "workingId": "odoo-955",
+    "originalSku": "MJ-613",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-613-vibrant-pink-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-955",
+    "referenceTitle": "Vibrant Pink Glass Bangle Set with Golden Ghoonghroo Accents – 16-Piece",
+    "rawContent": "Elevate your ethnic grace with this stunning set of 12 pink glass bangles paired with 4 golden ghoonghroo bangles. This fashionable ensemble adds a melodic charm to your movement. To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use.\nTo ensure safe delivery, prepaid payment is mandatory as this is a fragile item",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your ethnic grace with this stunning set of 12 pink glass bangles paired with 4 golden ghoonghroo bangles. This fashionable ensemble adds a melodic charm to your movement. To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use.</p><p>To ensure safe delivery, prepaid payment is mandatory as this is a fragile item</p>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P499.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P499/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price, ₹165 cost (morchadijewels.com, reference only)"
+  }
+}

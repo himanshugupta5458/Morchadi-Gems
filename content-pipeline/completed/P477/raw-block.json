@@ -1,0 +1,46 @@
+{
+  "productId": "P477",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "933",
+    "workingId": "odoo-933",
+    "originalSku": "MJ-311",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-311-gold-plated-minimalist-nath-sparkling-white-stone-studded-933",
+    "referenceTitle": "Gold-Plated Minimalist Nath – Sparkling White Stone Studded",
+    "rawContent": "Radiate elegance with this exquisite gold-toned white stone nath. This high-fashion accessory features a delicate drop design, perfect for weddings and festivities. To maintain its brilliant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after every wear.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Radiate elegance with this exquisite gold-toned white stone nath. This high-fashion accessory features a delicate drop design, perfect for weddings and festivities. To maintain its brilliant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after every wear.</p>",
+    "originalCategories": [
+      "Nath"
+    ],
+    "originalMetaDescription": "Stylish duo ring set with star & square American diamond accents. Adjustable, trendy & perfect for stacking or daily glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "nose-pins",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P477.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P477/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  }
+}

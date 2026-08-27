@@ -1,0 +1,49 @@
+{
+  "productId": "P520",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "982",
+    "workingId": "odoo-982",
+    "originalSku": "MJ-279",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-279-gold-emerald-crystal-leaf-vine-necklace-982",
+    "referenceTitle": "Gold Emerald Crystal Leaf Vine Necklace",
+    "rawContent": "Add a touch of enchantment to your style with this emerald crystal vine necklace. Featuring a vibrant green oval centerpiece flanked by shimmering crystal-encrusted leaves, this anti-tarnish gold chain is a perfect reminder that life is magical. A beautiful, nature-inspired accessory ideal for gifting or everyday elegance",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of enchantment to your style with this emerald crystal vine necklace. Featuring a vibrant green oval centerpiece flanked by shimmering crystal-encrusted leaves, this anti-tarnish gold chain is a perfect reminder that life is magical. A beautiful, nature-inspired accessory ideal for gifting or everyday elegance</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P520.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P520/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹349 sale price (morchadijewels.com, reference only)"
+  }
+}

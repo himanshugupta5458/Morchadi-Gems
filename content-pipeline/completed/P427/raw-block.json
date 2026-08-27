@@ -1,0 +1,46 @@
+{
+  "productId": "P427",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "880",
+    "workingId": "odoo-880",
+    "originalSku": "MJ-228",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-228-elegant-gold-snake-chain-bow-necklace-880",
+    "referenceTitle": "Elegant Gold Snake Chain Bow Necklace",
+    "rawContent": "Capture the essence of modern romance with our Fluid Ribbon Bow Necklace. Featuring a sleek, high-shine snake chain and a beautifully draped bow pendant, this piece is the ultimate accessory for the fashion-forward minimalist. Designed to be a seasonal statement, this jewelry shines brightest when kept dry and away from perfumes. Simply store it in its original packaging after use to maintain its golden luster for all your special occasions.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Capture the essence of modern romance with our Fluid Ribbon Bow Necklace. Featuring a sleek, high-shine snake chain and a beautifully draped bow pendant, this piece is the ultimate accessory for the fashion-forward minimalist. Designed to be a seasonal statement, this jewelry shines brightest when kept dry and away from perfumes. Simply store it in its original packaging after use to maintain its golden luster for all your special occasions.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P427.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P427/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

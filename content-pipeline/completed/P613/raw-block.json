@@ -1,0 +1,47 @@
+{
+  "productId": "P613",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1085",
+    "workingId": "odoo-1085",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-bracelet-watch-for-women-1085",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Bracelet Watch for Women",
+    "rawContent": "Elevate your everyday style with this elegant Vintage Anti-Tarnish Gold Bracelet Watch, featuring a sophisticated deep green dial, classic Roman numeral detailing and a sleek rectangular-link bracelet. The combination of the rich green dial and gold-tone finish gives this watch a timeless, luxurious look.\nDesigned with a jewellery-inspired vintage aesthetic, this watch is perfect for women who love elegant and statement-making accessories. The compact oval-shaped dial and structured bracelet make it easy to pair with both ethnic and western outfits.\nProduct Highlights\n- ✨ Vintage-inspired watch design\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Elegant deep green dial\n- 🕰️ Classic Roman numeral markers\n- 🔗 Sleek rectangular-link bracelet strap\n- ⌚ Quartz movement\n- 💎 Elegant jewellery-inspired appearance\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college looks, casual outings, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your everyday style with this elegant <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a sophisticated deep green dial, classic Roman numeral detailing and a sleek rectangular-link bracelet. The combination of the rich green dial and gold-tone finish gives this watch a timeless, luxurious look.</p><p>Designed with a <strong>jewellery-inspired vintage aesthetic</strong>, this watch is perfect for women who love elegant and statement-making accessories. The compact oval-shaped dial and structured bracelet make it easy to pair with both ethnic and western outfits.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired watch design</li><li>💛 Anti-tarnish gold-tone finish</li><li>💚 Elegant deep green dial</li><li>🕰️ Classic Roman numeral markers</li><li>🔗 Sleek rectangular-link bracelet strap</li><li>⌚ Quartz movement</li><li>💎 Elegant jewellery-inspired appearance</li><li>👗 Perfect for ethnic and western outfits</li><li>🎁 Ideal gifting option for women</li><li>✨ Suitable for everyday wear and special occasions</li></ul><h3>Perfect For</h3><p>Office wear, college looks, casual outings, festive occasions, parties, date nights, weddings and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "duplicate title shared with template(s) 1086",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P613.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P613/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

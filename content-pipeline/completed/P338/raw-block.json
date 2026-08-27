@@ -1,0 +1,45 @@
+{
+  "productId": "P338",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "768",
+    "workingId": "odoo-768",
+    "originalSku": "MJ-238",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-238-elegant-rose-gold-rings-set-of-12-768",
+    "referenceTitle": "Elegant Rose gold Rings Set of 12",
+    "rawContent": "Upgrade your jewelry collection with this gorgeous set of Rose gold rings! Featuring delicate designs with sparkling stones, these rings add a touch of elegance and charm to any outfit. Perfect for daily wear, gifting, or special occasions!\n💰 Premium quality & lightweight\n🚚 Delivery Time: 3-5 days (subject to stock availability)\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!",
+    "rawHtml": "<p data-oe-version=\"1.1\"><br></p><p>Upgrade your jewelry collection with this gorgeous set of Rose gold rings! Featuring delicate designs with sparkling stones, these rings add a touch of elegance and charm to any outfit. Perfect for daily wear, gifting, or special occasions!</p><p>💰 Premium quality &amp; lightweight</p><p>\n🚚 Delivery Time: 3-5 days (subject to stock availability)</p><p>\n📲 Need it urgently? WhatsApp us now on 7877866212 for inquiries!</p>",
+    "originalCategories": [],
+    "originalMetaDescription": "Gorgeous set of 12 rose gold rings with delicate designs. Lightweight, versatile & perfect for gifting or stylish daily wear.",
+    "exportNotes": [
+      "product had no source category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P338.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P338/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

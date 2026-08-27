@@ -1,0 +1,45 @@
+{
+  "productId": "P330",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "756",
+    "workingId": "odoo-756",
+    "originalSku": "MJ-614",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-614-vintage-stone-silver-ring-756",
+    "referenceTitle": "Vintage Stone Silver Ring",
+    "rawContent": "- Elegant Maroon gemstone statement ring\n- Premium silver-finish with classic detailing\n- Minimal yet bold design for effortless styling\n- Lightweight & comfortable for daily wear\n- Perfect for parties, office & evening looks\n- Pairs beautifully with western & ethnic outfits\n- Ideal gifting choice for women",
+    "rawHtml": "<ul data-oe-version=\"2.0\"><li><p>Elegant Maroon&nbsp; gemstone statement ring</p></li>\n<li><p>Premium silver-finish with classic detailing</p></li>\n<li><p>Minimal yet bold design for effortless styling</p></li>\n<li><p>Lightweight &amp; comfortable for daily wear</p></li>\n<li><p>Perfect for parties, office &amp; evening looks</p></li>\n<li><p>Pairs beautifully with western &amp; ethnic outfits</p></li>\n<li><p>Ideal gifting choice for women</p></li>\n</ul>",
+    "originalCategories": [],
+    "originalMetaDescription": "Chic pink square-cut crystal ring on gold adjustable band. Romantic Korean style accessory ideal for parties, weddings & gifting.",
+    "exportNotes": [
+      "product had no source category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P330.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P330/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹35 sale price (morchadijewels.com, reference only)"
+  }
+}

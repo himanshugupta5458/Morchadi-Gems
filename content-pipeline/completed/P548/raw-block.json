@@ -1,0 +1,49 @@
+{
+  "productId": "P548",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1014",
+    "workingId": "odoo-1014",
+    "originalSku": "MJ-620",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-620-white-blossom-bow-bracelet-for-women-1014",
+    "referenceTitle": "White Blossom Bow Bracelet for Women",
+    "rawContent": "🤍 Delicate floral bracelet featuring sparkling white blossom charms, crystal leaf accents, and an elegant bow centerpiece. A timeless accessory perfect for gifting and everyday wear.",
+    "rawHtml": "<p data-oe-version=\"2.0\">🤍 Delicate floral bracelet featuring sparkling white blossom charms, crystal leaf accents, and an elegant bow centerpiece. A timeless accessory perfect for gifting and everyday wear.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P548.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P548/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

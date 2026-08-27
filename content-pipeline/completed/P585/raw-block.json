@@ -1,0 +1,46 @@
+{
+  "productId": "P585",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1055",
+    "workingId": "odoo-1055",
+    "originalSku": "MJ-524",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-524-satin-rose-flower-hair-tie-black-white-set-of-2-1055",
+    "referenceTitle": "Satin Rose Flower Hair Tie – Black & White Set of 2",
+    "rawContent": "Elegant satin rose flower hair tie, set of 2 (black & white)\nSoft stretchable elastic band, gentle on hair\nClassic monochrome rosette design, pairs with any outfit\nPerfect for daily wear, office, college & gifting\nDoubles as a bracelet/wrist accessory when not in hair\nLightweight, no-damage grip for all hair types",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elegant satin rose flower hair tie, set of 2 (black &amp; white)</div><div>Soft stretchable elastic band, gentle on hair</div><div>Classic monochrome rosette design, pairs with any outfit</div><div>Perfect for daily wear, office, college &amp; gifting</div><div>Doubles as a bracelet/wrist accessory when not in hair</div><div>Lightweight, no-damage grip for all hair types</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P585.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P585/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹109 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P435",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "888",
+    "workingId": "odoo-888",
+    "originalSku": "MJ-243",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-243-elongated-heart-pendant-necklace-888",
+    "referenceTitle": "Elongated Heart Pendant Necklace",
+    "rawContent": "Make a modern statement with our Elongated Heart Necklace. This chic, high-fashion piece features a sleek, polished heart pendant suspended on a delicate beaded-snake chain, perfect for elevating your daily style or adding a touch of romance to an evening look. To ensure this trend-focused piece keeps its brilliant golden glow for all your special occasions, we recommend keeping it tucked away in a dry place after use and avoiding direct contact with water, perfumes, and sprays.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Make a modern statement with our Elongated Heart Necklace. This chic, high-fashion piece features a sleek, polished heart pendant suspended on a delicate beaded-snake chain, perfect for elevating your daily style or adding a touch of romance to an evening look. To ensure this trend-focused piece keeps its brilliant golden glow for all your special occasions, we recommend keeping it tucked away in a dry place after use and avoiding direct contact with water, perfumes, and sprays.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P435.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P435/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

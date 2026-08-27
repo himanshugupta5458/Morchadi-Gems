@@ -1,0 +1,49 @@
+{
+  "productId": "P519",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "981",
+    "workingId": "odoo-981",
+    "originalSku": "MJ-273",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-273-gold-crystal-floral-vine-cluster-necklace-981",
+    "referenceTitle": "Gold Crystal Floral Vine Cluster Necklace",
+    "rawContent": "Illuminate your neckline with this radiant crystal floral necklace. Featuring a dainty gold-toned chain and a brilliant vine of shimmering marquise-cut crystals, this anti-tarnish piece offers a high-end, sophisticated sparkle. It is the perfect elegant accessory for weddings, special events, or adding a touch of luxury to your daily style",
+    "rawHtml": "<div data-oe-version=\"2.0\">Illuminate your neckline with this radiant crystal floral necklace. Featuring a dainty gold-toned chain and a brilliant vine of shimmering marquise-cut crystals, this anti-tarnish piece offers a high-end, sophisticated sparkle. It is the perfect elegant accessory for weddings, special events, or adding a touch of luxury to your daily style</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P519.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P519/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹349 sale price (morchadijewels.com, reference only)"
+  }
+}

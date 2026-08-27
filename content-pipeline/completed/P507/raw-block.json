@@ -1,0 +1,48 @@
+{
+  "productId": "P507",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "968",
+    "workingId": "odoo-968",
+    "originalSku": "MJ-258",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-258-flower-leaf-design-shiny-colorful-necklace-968",
+    "referenceTitle": "Flower Leaf Design Shiny Colorful Necklace",
+    "rawContent": "1set Exquisite Flower Leaf Design Shiny Colorful Earrings Necklace, Elegant Cute Style Jewelry Set for Daughter Christmas Birthday Gift",
+    "rawHtml": "<p data-oe-version=\"2.0\">1set Exquisite Flower Leaf Design Shiny Colorful Earrings Necklace, Elegant Cute Style Jewelry Set for Daughter Christmas Birthday Gift</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P507.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P507/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

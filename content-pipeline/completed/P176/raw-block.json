@@ -1,0 +1,46 @@
+{
+  "productId": "P176",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "473",
+    "workingId": "odoo-473",
+    "originalSku": "MJ-190",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-190-dc-jewelry-trio-spark-ring-473",
+    "referenceTitle": "DC Jewelry Trio Spark Ring",
+    "rawContent": "Add a touch of elegance to your everyday look with this stunning DC Jewelry Trio Spark Ring Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.\nWhether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.\nProduct Details:\n- Plating: Premium Rose Gold\n- Stones: High-quality American Diamonds\n- Size: Adjustable (Fits most finger sizes)\n- Style: Minimal yet glamorous\n- Occasion: Daily wear, parties, gifting\nCare Instructions:\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of elegance to your everyday look with this stunning <strong>DC Jewelry Trio Spark Ring</strong>&nbsp;Crafted with precision and adorned with sparkling American diamonds, this ring beautifully combines timeless charm and modern style. The delicate rose gold finish gives it a luxurious appeal, making it a perfect accessory for both daily wear and special occasions.</p><p>Whether you're dressing up for a party or gifting someone special, this adjustable ring ensures a perfect fit and adds a graceful sparkle to any outfit.</p><p><strong>Product Details:</strong></p><ul>\n<li><p><strong>Plating:</strong> Premium Rose Gold</p></li>\n<li><p><strong>Stones:</strong> High-quality American Diamonds</p></li>\n<li><p><strong>Size:</strong> Adjustable (Fits most finger sizes)</p></li>\n<li><p><strong>Style:</strong> Minimal yet glamorous</p></li>\n<li><p><strong>Occasion:</strong> Daily wear, parties, gifting</p></li>\n</ul><p><strong>Care Instructions:</strong></p><p>\nKeep away from water and perfumes for long-lasting shine. Store in a dry place when not in use</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Modern trio spark ring in rosegold with dazzling American diamonds. Adjustable fit, versatile for parties, weddings & daily use.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P176.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P176/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

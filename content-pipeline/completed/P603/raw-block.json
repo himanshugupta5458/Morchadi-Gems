@@ -1,0 +1,46 @@
+{
+  "productId": "P603",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1073",
+    "workingId": "odoo-1073",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-kundan-bracelet-watch-for-women-1073",
+    "referenceTitle": "Traditional Kundan Bracelet Watch for Women",
+    "rawContent": "Make every festive look unforgettable with this Traditional Kundan Bracelet Watch, featuring an elegant antique gold finish, sparkling Kundan stones, vibrant red & green accents, and delicate hanging bead details. Designed to resemble a statement bracelet, this watch beautifully combines traditional Indian craftsmanship with everyday functionality.\nWhether paired with a saree, lehenga, salwar suit, or Indo-western outfit, this designer watch adds a regal charm to every occasion.\nFeatures\n-\nPremium antique gold finish\n-\nTraditional Kundan stone craftsmanship\n-\nRed & green stone embellishments\n-\nElegant dangling bead detailing\n-\nAdjustable chain for a comfortable fit\n-\nLightweight & skin-friendly\n-\nPerfect for weddings, festivals, parties & gifting\nPackage Includes: 1 Traditional Bracelet Watch",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make every festive look unforgettable with this <strong>Traditional Kundan Bracelet Watch</strong>, featuring an elegant antique gold finish, sparkling Kundan stones, vibrant red &amp; green accents, and delicate hanging bead details. Designed to resemble a statement bracelet, this watch beautifully combines traditional Indian craftsmanship with everyday functionality.</p><p>Whether paired with a saree, lehenga, salwar suit, or Indo-western outfit, this designer watch adds a regal charm to every occasion.</p><h3>Features</h3><ul>\n<li>\nPremium antique gold finish\n</li>\n<li>\nTraditional Kundan stone craftsmanship\n</li>\n<li>\nRed &amp; green stone embellishments\n</li>\n<li>\nElegant dangling bead detailing\n</li>\n<li>\nAdjustable chain for a comfortable fit\n</li>\n<li>\nLightweight &amp; skin-friendly\n</li>\n<li>\nPerfect for weddings, festivals, parties &amp; gifting\n</li>\n</ul><p><strong>Package Includes:</strong> 1 Traditional Bracelet Watch</p>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P603.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P603/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "productId": "P218",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "517",
+    "workingId": "odoo-517",
+    "originalSku": "MJ-528",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-528-satrangi-sitare-multicolor-glitter-glass-bangle-set-of-12-517",
+    "referenceTitle": "Satrangi Sitare | Multicolor Glitter Glass Bangle Set of 12",
+    "rawContent": "Description:\nAdd a sparkling touch to your ethnic style with this stunning set of multicolor shimmer glass bangles, featuring eye-catching crystal embellishments. Each bangle showcases a vibrant palette of pink, orange, yellow, and green, finished with shimmering crystal accents that reflect light beautifully, making these bangles the perfect accessory for festive occasions, weddings, parties, and daily wear.\nExpertly handcrafted from high-quality glass, these bangles are lightweight, comfortable, and durable, suitable for pairing with sarees, lehengas, salwar suits, and fusion outfits. The playful mix of colors and glittering crystals make this set an excellent choice for bridal jewelry, festive accessories, or gifting to someone special.\nKey Features:\n- Multicolor glass bangles with shimmering crystal accents\n- Handcrafted for superior quality and shine\n- Lightweight, comfortable, and durable for everyday and festive occasions\n- Vibrant blend of pink, orange, yellow, and green hues\n- Ideal for weddings, festivals, parties, and gifting\n- Complements all types of traditional and modern outfits",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Add a sparkling touch to your ethnic style with this stunning set of <strong>multicolor shimmer glass bangles</strong>, featuring eye-catching crystal embellishments. Each bangle showcases a vibrant palette of pink, orange, yellow, and green, finished with shimmering crystal accents that reflect light beautifully, making these bangles the perfect accessory for festive occasions, weddings, parties, and daily wear.</p><p>Expertly handcrafted from high-quality glass, these bangles are lightweight, comfortable, and durable, suitable for pairing with sarees, lehengas, salwar suits, and fusion outfits. The playful mix of colors and glittering crystals make this set an excellent choice for bridal jewelry, festive accessories, or gifting to someone special.</p><p><strong>Key Features:</strong></p><ul><li>Multicolor glass bangles with shimmering crystal accents</li><li>Handcrafted for superior quality and shine</li><li>Lightweight, comfortable, and durable for everyday and festive occasions</li><li>Vibrant blend of pink, orange, yellow, and green hues</li><li>Ideal for weddings, festivals, parties, and gifting</li><li>Complements all types of traditional and modern outfits</li></ul></div>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Shimmering multicolor glass bangles with crystal accents. Handcrafted festive jewelry for weddings, parties & everyday glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P218.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P218/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

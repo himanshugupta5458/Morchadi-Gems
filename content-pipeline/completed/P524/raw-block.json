@@ -1,0 +1,49 @@
+{
+  "productId": "P524",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "986",
+    "workingId": "odoo-986",
+    "originalSku": "MJ-623",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-623-yellow-zirconia-tulip-gold-clavicle-chain-986",
+    "referenceTitle": "Yellow Zirconia Tulip Gold Clavicle Chain",
+    "rawContent": "Brighten your jewelry collection with this elegant yellow tulip pendant necklace. Featuring a vibrant synthetic zirconia bud and shimmering crystal leaves on a gold-finished copper chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a sunny, feminine touch to any outfit",
+    "rawHtml": "<div data-oe-version=\"2.0\">Brighten your jewelry collection with this elegant yellow tulip pendant necklace. Featuring a vibrant synthetic zirconia bud and shimmering crystal leaves on a gold-finished copper chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a sunny, feminine touch to any outfit</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P524.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P524/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P617",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1089",
+    "workingId": "odoo-1089",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-pearl-bracelet-watch-for-women-1089",
+    "referenceTitle": "Vintage Anti-Tarnish Gold White Dial Pearl Bracelet Watch for Women",
+    "rawContent": "Add a touch of timeless elegance to your everyday style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a classic white dial, elegant gold-tone detailing and a beautiful pearl-accented bracelet.\nThe unique leaf-shaped oval dial gives the watch a distinctive vintage charm, while the delicate pearl-style detailing throughout the bracelet creates a sophisticated jewellery-inspired look. Perfect for women who love graceful accessories that make a subtle yet elegant statement.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 🤍 Elegant white dial\n- 🌿 Unique leaf-shaped oval dial\n- 🤍 Pearl-style detailing on the bracelet\n- 🔗 Stylish statement chain bracelet\n- ⌚ Quartz movement\n- 💎 Combines the elegance of jewellery with a classic watch\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Beautiful gifting option for women\nPerfect For\nEveryday wear, office looks, college, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of timeless elegance to your everyday style with this <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a classic white dial, elegant gold-tone detailing and a beautiful pearl-accented bracelet.</p><p>The unique leaf-shaped oval dial gives the watch a distinctive vintage charm, while the delicate pearl-style detailing throughout the bracelet creates a sophisticated jewellery-inspired look. Perfect for women who love graceful accessories that make a subtle yet elegant statement.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired jewellery watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>🤍 Elegant white dial</li><li>🌿 Unique leaf-shaped oval dial</li><li>🤍 Pearl-style detailing on the bracelet</li><li>🔗 Stylish statement chain bracelet</li><li>⌚ Quartz movement</li><li>💎 Combines the elegance of jewellery with a classic watch</li><li>👗 Easy to style with ethnic and western outfits</li><li>🎁 Beautiful gifting option for women</li></ul><h3>Perfect For</h3><p>Everyday wear, office looks, college, festive occasions, parties, date nights, weddings and gifting.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P617.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P617/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

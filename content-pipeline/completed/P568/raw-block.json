@@ -1,0 +1,48 @@
+{
+  "productId": "P568",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1037",
+    "workingId": "odoo-1037",
+    "originalSku": "MJ-027",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-027-amethyst-purple-emerald-cz-gold-plated-anti-tarnish-necklace-1037",
+    "referenceTitle": "Amethyst Purple & Emerald CZ Gold-Plated Anti-Tarnish Necklace",
+    "rawContent": "Bold and beautiful — our Amethyst Purple & Emerald Vine Anti-Tarnish Necklace features rich deep purple oval CZ stones set against vibrant emerald green leaf accents on a gold-plated V-vine design. Regal, confident, and strikingly gorgeous — this necklace commands attention.\n- 💛 Gold-plated with anti-tarnish coating\n- 💜 Deep amethyst purple oval CZ + emerald green leaf stones\n- 🌿 V-shaped vine pendant — bold yet elegant\n- 🔗 Delicate gold chain with secure clasp\n- 🎁 Perfect for parties, weddings & festive gifting\nPairs beautifully with: Deep purple, magenta, navy, or black ethnic and western outfits.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Bold and beautiful — our <strong>Amethyst Purple &amp; Emerald Vine Anti-Tarnish Necklace</strong> features rich deep purple oval CZ stones set against vibrant emerald green leaf accents on a gold-plated V-vine design. Regal, confident, and strikingly gorgeous — this necklace commands attention.</p><ul>\n<li>💛 Gold-plated with anti-tarnish coating</li>\n<li>💜 Deep amethyst purple oval CZ + emerald green leaf stones</li>\n<li>🌿 V-shaped vine pendant — bold yet elegant</li>\n<li>🔗 Delicate gold chain with secure clasp</li>\n<li>🎁 Perfect for parties, weddings &amp; festive gifting</li>\n</ul><p><em>Pairs beautifully with:</em> Deep purple, magenta, navy, or black ethnic and western outfits.</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P568.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P568/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹229 sale price (morchadijewels.com, reference only)"
+  }
+}

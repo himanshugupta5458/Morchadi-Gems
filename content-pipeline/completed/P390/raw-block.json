@@ -1,0 +1,46 @@
+{
+  "productId": "P390",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "840",
+    "workingId": "odoo-840",
+    "originalSku": "MJ-370",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-370-kashmiri-yellow-lotus-elephant-meenakari-bracelet-watch-840",
+    "referenceTitle": "Kashmiri Yellow Lotus Elephant Meenakari Bracelet Watch",
+    "rawContent": "Vibrant, joyful, and rooted in Indian folk art — this unique Kashmiri bracelet watch features bright yellow lotus flower charms with green leaf accents flanking a pearl-bordered white quartz dial, leading to an adorable green meenakari elephant pendant with cascading ghungroo chains. A truly festive and one-of-a-kind piece that celebrates the colours and symbols of Indian heritage. Perfect for Haldi ceremonies, Navratri, folk-themed events, and gifting.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Vibrant, joyful, and rooted in Indian folk art — this unique Kashmiri bracelet watch features bright yellow lotus flower charms with green leaf accents flanking a pearl-bordered white quartz dial, leading to an adorable green meenakari elephant pendant with cascading ghungroo chains. A truly festive and one-of-a-kind piece that celebrates the colours and symbols of Indian heritage. Perfect for Haldi ceremonies, Navratri, folk-themed events, and gifting.</div>",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P390.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P390/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  }
+}
