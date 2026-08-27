@@ -10546,5 +10546,775 @@
         "Nath"
       ]
     }
+  },
+  {
+    "id": "P507",
+    "name": "Pink Flower Pendant Necklace with Stud Earrings",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 210,
+      "mrp": 210,
+      "cost": 84
+    },
+    "media": {
+      "images": [
+        "/products/P507.webp"
+      ]
+    },
+    "specs": {
+      "set contents": "1-set necklace and earrings jewelry set with flower/leaf design"
+    },
+    "description": "A single flower sits at the centre of this pendant, pink petals wrapped around a red centre point, with two green leaf shapes forming a short stem below. The palette reads as a garden colour rather than anything metallic, small enough that it sits close to the collarbone rather than announcing itself the way a bigger piece would.\n\nIt comes as a set: a matching pair of stud earrings ships alongside the necklace rather than being sold separately, so there's a full look rather than a single piece to build around. The chain itself is a fine gold-toned cable link, plain enough to layer under something else if that's how you'd rather wear it, or to let it stand on its own against a plain neckline.\n\nA flower pendant like this suits daytime wear more naturally than an evening one; the scale and the soft colour read as everyday rather than occasion-only, which makes it easy to reach for without much thought. It pairs fine with a kurta or western wear equally, since nothing about the design ties it to one style of dressing.\n\nWipe the pendant after wear and keep it away from perfume and water, the same care any plated piece needs regardless of what sits at its centre. At ₹210 for a necklace and earrings together, the per-piece cost works out lower than buying either alone.",
+    "seo": {
+      "primaryKeyword": "pink flower pendant necklace set",
+      "secondaryKeywords": [
+        "necklace and earring set",
+        "flower pendant necklace",
+        "gold-toned pendant chain",
+        "everyday flower necklace"
+      ],
+      "metaTitle": "Pink Flower Pendant Necklace with Matching Stud Earrings",
+      "metaDescription": "A small pink flower pendant with a red centre point and green leaf accents, on a gold-toned chain, with matching stud earrings included. ₹210 for both.",
+      "imageAlt": "Gold-toned pendant necklace with a pink flower charm, red centre and green leaf accents",
+      "ogTitle": "Pink Flower Necklace and Earring Set, ₹210",
+      "ogDescription": "A small pink flower pendant with a red centre and green leaves, plus a matching pair of stud earrings. Gold-toned, ₹210 at Morchadi Gems.",
+      "ogImage": "/products/P507.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "968",
+      "originalSku": "MJ-258",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-258-flower-leaf-design-shiny-colorful-necklace-968",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P508",
+    "name": "Blush Enamel Luo Shen Flower Necklace and Earring Set",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 285,
+      "mrp": 285,
+      "cost": 114
+    },
+    "media": {
+      "images": [
+        "/products/P508.webp"
+      ]
+    },
+    "specs": {
+      "net quantity": "3-piece set: 1 necklace and flower stud earrings",
+      "design": "Enamel red Luo Shen flower motif",
+      "type": "Vintage, light-luxury"
+    },
+    "description": "Luo Shen is a name borrowed from a river goddess in Chinese mythology, and the flower named after her here is a four-petal enamel bloom in soft blush pink, with a small textured gold centre standing in for pollen. The set comes as three pieces: a pendant necklace and a matching pair of stud earrings, both carrying the same flower.\n\nEach petal is smooth, high-gloss enamel rather than a set stone, so there's nothing to catch or snag on clothing the way a prong-set stone piece sometimes can. The chain is a fine gold-toned cable link, light enough that the pendant sits without pulling at the neck through a full day of wear.\n\nThe style leans toward what the source material calls vintage, light-luxury, which in practice means restrained rather than busy: one flower on the chain, matching studs, nothing layered or stacked into the design. That makes it easy to wear with something already detailed, a printed kurta or a patterned saree, without the jewellery competing for attention.\n\nEnamel wants gentler handling than a plated stone-set piece; avoid contact with perfume, keep it away from direct water, and store it somewhere it won't rub against harder jewellery, since a chip in enamel doesn't come back the way a scratch on plating sometimes fades. At ₹285 for three pieces working as a set, that's roughly what a single well-made pendant costs elsewhere.",
+    "seo": {
+      "primaryKeyword": "blush enamel flower necklace set",
+      "secondaryKeywords": [
+        "three piece jewellery set",
+        "enamel flower pendant",
+        "vintage style necklace",
+        "stud earring set"
+      ],
+      "metaTitle": "Blush Enamel Luo Shen Flower Necklace and Earring Set",
+      "metaDescription": "A three-piece set: a soft pink enamel flower pendant necklace with a matching pair of stud earrings, on a gold-toned chain. Vintage-inspired style. ₹285.",
+      "imageAlt": "Gold-toned necklace and stud earrings with a soft pink enamel four-petal flower design",
+      "ogTitle": "Blush Flower Necklace and Earrings, ₹285",
+      "ogDescription": "A four-petal blush enamel flower on a pendant necklace, with matching stud earrings in the same design. Vintage-inspired, ₹285 at Morchadi Gems.",
+      "ogImage": "/products/P508.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "969",
+      "originalSku": "MJ-490",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-490-red-luo-shen-flower-necklace-with-earrings-969",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "combo"
+      ]
+    }
+  },
+  {
+    "id": "P509",
+    "name": "Green Floral Enamel Kada",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P509.webp"
+      ]
+    },
+    "specs": {
+      "design": "Emerald green floral kada with marbled green enamel, textured gold-toned vine work and dark floral accents",
+      "material": "Anti-tarnish coating"
+    },
+    "description": "Green is the least expected colour in a kada drawer built mostly around gold, red and pink, and this one leans into it with a marbled enamel finish that reads more like jade than a flat paint fill. Gold-toned vine work climbs across the surface, small flowers with dark centres worked into the metal rather than sitting as separate stones.\n\nIt's a rigid, hinged bangle rather than a flexible bracelet, the kind that opens on one side and closes shut around the wrist instead of sliding on. The enamel sits over an anti-tarnish base, so the colour is built to hold rather than fade the way cheaper painted finishes tend to after a few months of wear.\n\nA design this detailed carries its own weight visually, close to what a plain gold kada would do for an outfit but with the added texture of the vine engraving underneath the colour. It suits festive dressing, a saree or a heavier kurta set, more naturally than everyday wear, since the green reads as a considered colour choice rather than a neutral one.\n\nKeep it away from water and perfume even with the anti-tarnish base doing its job; enamel finishes still benefit from being treated gently rather than knocked against other jewellery in a bag. At ₹399 it sits at the higher end of this catalogue's bracelets, and the hand-worked look of the vine detail is where that price goes.",
+    "seo": {
+      "primaryKeyword": "green floral enamel kada",
+      "secondaryKeywords": [
+        "anti-tarnish kada",
+        "hinged bangle for women",
+        "gold-toned vine kada",
+        "festive kada bracelet"
+      ],
+      "metaTitle": "Green Floral Enamel Kada, Anti-Tarnish Gold Vine Work",
+      "metaDescription": "A rigid, hinged kada in marbled green enamel with gold-toned vine and small flower engraving, set over an anti-tarnish base for festive wear. ₹399.",
+      "imageAlt": "Green marbled enamel kada with gold-toned floral vine engraving and a hinged opening",
+      "ogTitle": "Green Enamel Kada with Gold Vine Detail, ₹399",
+      "ogDescription": "A hinged kada in marbled green enamel with gold-toned vine and flower engraving over an anti-tarnish base. ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P509.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "970",
+      "originalSku": "MJ-245",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-245-emerald-green-floral-anti-tarnish-kada-970",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P510",
+    "name": "Pink Floral Enamel Kada",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P510.webp"
+      ]
+    },
+    "specs": {
+      "design": "Blush pink floral kada with red flower accents and gold-leaf engravings",
+      "material": "Anti-tarnish",
+      "type": "Vintage-inspired",
+      "occasion": "Festive celebrations; everyday wear"
+    },
+    "description": "A blush pink base with a faint pearlescent shimmer sets this kada apart from a flat-colour enamel piece; the pink shifts slightly depending on the light rather than sitting as one uniform tone. Small red-centred flowers and gold-toned leaf engravings trace across the surface, following the same rigid, hinged construction as the rest of this kada range.\n\nThe source material calls the style vintage-inspired, and the floral engraving supports that read, dense enough to look considered rather than sparse, without crowding the pink base into invisibility. It sits over an anti-tarnish finish, so the colour is built to outlast the usual few-months fade that plain painted bangles run into.\n\nUnusually for a piece this detailed, the confirmed occasion notes list both festive celebrations and everyday wear, so this isn't strictly saved-for-a-wedding jewellery the way some heavier kadas in this range are. It works with a saree or lehenga for something bigger, and just as reasonably with a kurta on a day that calls for one nice thing rather than a full look.\n\nKeep it dry and away from perfume, same as any enamel piece, and give it its own space in a jewellery box rather than letting it knock against harder metal. At ₹399, the pearlescent finish and the vintage-style engraving together are what the price pays for, past the colour alone.",
+    "seo": {
+      "primaryKeyword": "pink floral enamel kada",
+      "secondaryKeywords": [
+        "anti-tarnish kada",
+        "vintage-inspired bangle",
+        "pearlescent enamel kada",
+        "festive and everyday kada"
+      ],
+      "metaTitle": "Pink Floral Enamel Kada, Pearlescent Vintage Finish",
+      "metaDescription": "A hinged kada in pearlescent blush pink enamel with red-centred flowers and gold-toned leaf engraving, set over an anti-tarnish base finish. ₹399.",
+      "imageAlt": "Pearlescent pink enamel kada with red-centred flowers and gold-toned leaf engraving",
+      "ogTitle": "Pink Pearlescent Enamel Kada, from ₹399 Only",
+      "ogDescription": "A hinged kada in blush pink enamel with a pearlescent shimmer, red-centred flowers and gold-toned leaves. Anti-tarnish, ₹399.",
+      "ogImage": "/products/P510.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "971",
+      "originalSku": "MJ-127",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-127-blush-pink-floral-anti-tarnish-kada-971",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P511",
+    "name": "Aqua Floral Enamel Kada",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P511.webp"
+      ]
+    },
+    "specs": {
+      "design": "Aqua blue floral kada with intricate gold botanical patterns and deep blue floral centers",
+      "material": "Anti-tarnish gold base"
+    },
+    "description": "Pale aqua sits between the green and the pink kadas in this range, cooler than either and closer to the colour of sea glass than a bright turquoise. Gold-toned botanical patterns, leaves and small flowers with deep blue centres, trace across the enamel in the same hand-engraved style as the rest of the range.\n\nThe base itself is confirmed anti-tarnish gold, so the shine underneath the enamel is built to hold rather than dull the way an untreated base metal would after regular wear. Construction is rigid and hinged, opening on one side to close around the wrist rather than stretching or sliding on.\n\nAqua is a colder colour than most festive jewellery leans toward, which makes it an easier match for cooler-toned outfits, whites, silvers, pale blues, than the warmer greens and pinks nearby it in this range. It still carries enough gold detail in the engraving to avoid reading as too plain for a bigger occasion.\n\nTreat it the way any enamel piece needs: away from water and perfume, stored somewhere it won't knock against harder jewellery, since a chip in the enamel surface doesn't recover the way a scuff on plain metal can be buffed out. At ₹399, this is priced with its two enamel siblings, and the aqua colourway is simply the coolest option of the three.",
+    "seo": {
+      "primaryKeyword": "aqua floral enamel kada",
+      "secondaryKeywords": [
+        "anti-tarnish kada",
+        "gold botanical bangle",
+        "blue enamel kada",
+        "hinged kada bracelet"
+      ],
+      "metaTitle": "Aqua Floral Enamel Kada, Anti-Tarnish Gold Tone Base",
+      "metaDescription": "A hinged kada in pale aqua enamel with gold-toned botanical leaf patterns and deep blue flower centres, over an anti-tarnish gold base. ₹399.",
+      "imageAlt": "Pale aqua enamel kada with gold-toned botanical vine pattern and deep blue flower centres",
+      "ogTitle": "Aqua Enamel Kada with Gold Botanical Work, ₹399",
+      "ogDescription": "A hinged kada in pale aqua enamel with gold-toned leaves and deep blue flower centres, anti-tarnish gold base. ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P511.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "972",
+      "originalSku": "MJ-113",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-113-aqua-blue-floral-anti-tarnish-kada-972",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P512",
+    "name": "Pink Tulip Pendant Necklace",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 210,
+      "mrp": 210,
+      "cost": 84
+    },
+    "media": {
+      "images": [
+        "/products/P512.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish chain": "Gold-finished snake chain (base metal unspecified)"
+    },
+    "description": "A tulip is a literal shape to build a pendant around, and this one commits to it: a single pink stone forms the closed bud, cut to a point at the top the way a tulip petal folds, with two small clear stones angled below as leaves on a curved gold-toned stem. Nothing about the shape is abstracted into a vaguer flower motif; it reads as a tulip immediately.\n\nThe stones are cubic zirconia or glass rather than anything gem-grade, set into a gold-finished snake chain, the tightly coiled link style that lies flatter against the skin than an open cable chain does. That flatness matters more on a longer pendant like this one, where the chain does more visible work than a short choker chain would.\n\nTulips carry a slightly different weight than roses do in jewellery, less bound to romance specifically and more to spring and renewal generally, which makes this a fair pick for a birthday or a small gift rather than only a romantic one. It sits well against a plain neckline, kurta or western wear equally, since the pink is soft enough not to fight with most other colours nearby it.\n\nKeep it dry and away from perfume, and give the chain occasional care since a snake chain can kink if it's balled up rather than laid flat in storage. At ₹210, the literal tulip shape is doing more design work than an abstract flower pendant at the same price usually manages.",
+    "seo": {
+      "primaryKeyword": "pink tulip pendant necklace",
+      "secondaryKeywords": [
+        "gold snake chain necklace",
+        "cubic zirconia pendant",
+        "flower pendant for gifting",
+        "everyday tulip necklace"
+      ],
+      "metaTitle": "Pink Tulip Pendant Necklace, Gold-Finished Snake Chain",
+      "metaDescription": "A pink stone tulip pendant with two clear leaf stones set just below it, on a gold-finished snake chain, in cubic zirconia or glass. From ₹210.",
+      "imageAlt": "Gold-toned snake chain necklace with a pink tulip-shaped pendant and clear leaf stones",
+      "ogTitle": "Pink Tulip Pendant on a Snake Chain, ₹210",
+      "ogDescription": "A pink stone tulip bud with clear leaf stones below it, set on a gold-finished snake chain. ₹210 at Morchadi Gems.",
+      "ogImage": "/products/P512.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "973",
+      "originalSku": "MJ-128",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-128-blush-pink-crystal-tulip-pendant-973",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P513",
+    "name": "Heart Locket Adjustable Open Ring",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 499,
+      "mrp": 499,
+      "cost": 200
+    },
+    "media": {
+      "images": [
+        "/products/P513.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-finished copper",
+      "design feature": "Openable heart or round locket design",
+      "customization mechanism": "Replaceable locket accessories (not name/engraving personalization)",
+      "sizing": "Adjustable (open ring, one-size-fits-most)"
+    },
+    "description": "Most lockets in this catalogue hang from a chain; this one sits on a ring instead, a heart-shaped, openable locket built into an adjustable band rather than a pendant. The band is gold-finished copper, open at the back so it isn't sized to a specific finger, and adjusts to fit most hands the way an open ring does.\n\nWhat opens is genuinely functional rather than decorative: the source material confirms the locket takes replaceable inserts, a different mechanism from the name-engraving personalisation some lockets offer. This one is built to swap what sits inside rather than have anything written on it. The heart itself has a faceted, glass-like clear front over whatever's placed inside, catching light the way a cut surface does rather than sitting flat.\n\nA ring built around a locket rather than a stone is an unusual enough shape that it works better as a considered gift than an everyday basic; the open-back sizing also makes it easy to give without knowing an exact ring size in advance, which most rings don't allow for. It suits someone who already has enough plain rings and wants one that does something different.\n\nKeep it away from water where possible, since an openable mechanism has more places for moisture to sit than a solid band does, and check the fit stays snug rather than loose after the first few wears. At ₹499, this is one of the pricier pieces in the range, and the working locket mechanism is the reason why.",
+    "seo": {
+      "primaryKeyword": "heart locket open ring",
+      "secondaryKeywords": [
+        "gold-finished copper ring",
+        "adjustable ring for women",
+        "openable locket ring",
+        "unique gift ring"
+      ],
+      "metaTitle": "Heart Locket Adjustable Open Ring, Gold Finished Copper",
+      "metaDescription": "An adjustable, gold-finished copper open ring built around a heart-shaped, openable locket that takes small, replaceable charm inserts. ₹499.",
+      "imageAlt": "Gold-finished open ring with a faceted heart-shaped locket front, adjustable band",
+      "ogTitle": "Openable Heart Locket Open Ring, from ₹499",
+      "ogDescription": "An adjustable, gold-finished copper ring built around a heart-shaped locket that takes replaceable inserts. ₹499 at Morchadi Gems.",
+      "ogImage": "/products/P513.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "974",
+      "originalSku": "MJ-280",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-280-gold-heart-locket-adjustable-open-ring-974",
+      "originalCategories": [
+        "Best selling",
+        "Personalised Item",
+        "Anti Tarnish ring"
+      ]
+    }
+  },
+  {
+    "id": "P516",
+    "name": "Crimson Rose Stem Pendant Necklace",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 210,
+      "mrp": 210,
+      "cost": 84
+    },
+    "media": {
+      "images": [
+        "/products/P516.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned metal stem, anti-tarnish finish",
+      "design": "Rose flower pendant with crimson-colored bud"
+    },
+    "description": "A rose stem hangs upside down from this necklace's chain rather than sitting upright the way a flower usually would, the bud pointing toward the ground and two small leaves branching off the gold-toned stem above it. The bud itself is a crimson colour, deep rather than bright, textured to read as petals rather than a smooth dome.\n\nThe stem and chain share the same anti-tarnish gold-toned finish, so the shine is built to hold through regular wear rather than needing to be babied. Construction is simple: a fine cable chain, one pendant, nothing layered onto it, which lets the rose shape do all the visual work without competition from the chain itself.\n\nAn upside-down rose carries a specific, slightly wistful reading in flower symbolism, generally taken as remembrance rather than a fresh bloom, which makes this a fair pick for jewellery bought to mark something rather than to simply decorate an outfit. It reads equally well as a plain everyday piece if that meaning isn't the point for you.\n\nKeep it away from moisture and perfume and give it a wipe after wear; the crimson colour on the bud will hold its depth longer with that habit than without it. At ₹210, a single-pendant piece like this one earns its price through the specificity of the rose shape rather than through size or stone count.",
+    "seo": {
+      "primaryKeyword": "red rose stem pendant necklace",
+      "secondaryKeywords": [
+        "anti-tarnish necklace",
+        "gold-toned rose pendant",
+        "remembrance jewellery",
+        "single flower pendant"
+      ],
+      "metaTitle": "Crimson Rose Stem Pendant Necklace, Anti-Tarnish Gold",
+      "metaDescription": "A gold-toned rose stem pendant with a crimson-coloured bud, hanging upside down from a fine chain, finished with an anti-tarnish coating. ₹210.",
+      "imageAlt": "Gold-toned pendant necklace shaped like an upside-down rose stem with a crimson bud",
+      "ogTitle": "Upside-Down Rose Pendant in Gold Tone, ₹210",
+      "ogDescription": "A rose stem pendant with a crimson bud, hanging upside down from a fine gold-toned chain. Anti-tarnish, ₹210 at Morchadi Gems.",
+      "ogImage": "/products/P516.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "978",
+      "originalSku": "MJ-235",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-235-elegant-red-rose-gold-stem-necklace-978",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P517",
+    "name": "Purple Enamel Flower Pendant Necklace",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 289,
+      "mrp": 289,
+      "cost": 116
+    },
+    "media": {
+      "images": [
+        "/products/P517.webp"
+      ]
+    },
+    "specs": {
+      "material": "Enamel (purple), flower-shaped pendant with lustrous metallic finish",
+      "material finish chain": "Gold-toned metal chain, anti-tarnish finish"
+    },
+    "description": "Purple is a colour that shows up rarely in this catalogue's flower pendants, most of which lean pink, white or gold, and this one uses a deep magenta-purple enamel with a visible gradient across each petal rather than one flat shade. Five petals fan out from a small textured centre, each one carved with a vein line down the middle the way a real petal catches a crease.\n\nThe chain is a flat, faceted link style rather than a plain round cable, which catches more light along its own length than a simple chain would, and it carries the same anti-tarnish finish as the pendant. Enamel work like this asks for slightly more care than a plated metal piece alone; keep it away from water and perfume, and avoid letting it knock against harder jewellery in storage since enamel can chip where plating would just scuff.\n\nThe purple reads jewel-toned rather than soft, closer to what you'd reach for with a darker outfit, festive black, deep green, a rich saree colour, than with something pale. It's a fair pick for an evening occasion specifically, more than the pastel florals nearby it in this range which lean toward daytime.\n\nAt ₹289, the combination of the gradient enamel and the textured chain link is where the price sits above the plainer pendant necklaces in this catalogue, and the colour is distinctive enough to be worth it if purple is a shade you actually reach for.",
+    "seo": {
+      "primaryKeyword": "purple enamel flower pendant necklace",
+      "secondaryKeywords": [
+        "anti-tarnish necklace",
+        "gradient enamel pendant",
+        "evening wear pendant",
+        "five petal flower necklace"
+      ],
+      "metaTitle": "Purple Enamel Flower Pendant Necklace, Anti-Tarnish",
+      "metaDescription": "A five-petal enamel flower pendant in a purple-to-magenta colour gradient, set on a flat-link gold-toned chain with an anti-tarnish finish. ₹289.",
+      "imageAlt": "Gold-toned necklace with a five-petal purple gradient enamel flower pendant",
+      "ogTitle": "Purple Gradient Flower Pendant, from ₹289",
+      "ogDescription": "A five-petal enamel flower in a deep purple-to-magenta gradient, on a flat-link gold-toned chain. Anti-tarnish, ₹289 at Morchadi Gems.",
+      "ogImage": "/products/P517.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "979",
+      "originalSku": "MJ-479",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-479-purple-enamel-floral-gold-pendant-necklace-979",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P518",
+    "name": "White Enamel Magnolia Pendant Necklace",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 289,
+      "mrp": 289,
+      "cost": 116
+    },
+    "media": {
+      "images": [
+        "/products/P518.webp"
+      ]
+    },
+    "specs": {
+      "material": "Enamel (white, pearlescent finish), flower-shaped pendant with gold-toned center",
+      "material finish chain": "Gold-toned metal chain, anti-tarnish finish"
+    },
+    "description": "Most enamel flowers in this range use a regular, symmetrical petal shape; this one doesn't. The magnolia pendant here has five irregular petals, each a slightly different size and curve, in a white enamel with a pearlescent shimmer rather than a flat white. A small gold-toned textured centre sits where the petals meet, standing in for the stamen a real magnolia carries.\n\nThat irregularity is the point: a magnolia bloom in nature isn't perfectly symmetrical either, and the asymmetry here reads as more botanical than a neat, even flower shape would. The chain is a simple gold-toned oval link, plain enough that the pendant stays the obvious focus rather than competing with a more detailed chain style.\n\nWhite enamel pairs more neutrally than a coloured flower would, working against nearly any outfit colour rather than needing to be matched, which suits both daytime and evening wear without much thought either way.\n\nThe chain carries an anti-tarnish finish, so the gold tone holds through regular wear; the enamel petals still want the usual gentle handling, away from perfume and water, stored apart from harder jewellery that could chip the surface. At ₹289, the irregular magnolia shape is a more considered design than a standard round flower pendant at a similar price.",
+    "seo": {
+      "primaryKeyword": "white enamel flower pendant necklace",
+      "secondaryKeywords": [
+        "anti-tarnish necklace",
+        "magnolia pendant",
+        "pearlescent enamel pendant",
+        "neutral flower necklace"
+      ],
+      "metaTitle": "White Enamel Magnolia Pendant Necklace, Anti-Tarnish",
+      "metaDescription": "An irregular five-petal magnolia pendant in pearlescent white enamel, set on a gold-toned oval-link chain with an anti-tarnish finish. ₹289.",
+      "imageAlt": "Gold-toned necklace with an irregular white enamel magnolia flower pendant",
+      "ogTitle": "White Magnolia Enamel Pendant, from ₹289",
+      "ogDescription": "An irregular five-petal magnolia pendant in pearlescent white enamel, on a gold-toned oval-link chain. ₹289 at Morchadi Gems.",
+      "ogImage": "/products/P518.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "980",
+      "originalSku": "MJ-621",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-621-white-enamel-magnolia-flower-gold-necklace-980",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P519",
+    "name": "Clear Crystal Vine Collar Necklace",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 349,
+      "mrp": 349,
+      "cost": 140
+    },
+    "media": {
+      "images": [
+        "/products/P519.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish chain": "Gold-toned metal chain, anti-tarnish finish"
+    },
+    "description": "Instead of a single pendant hanging from a drop, this necklace sets its stones directly along the front of the chain, a cluster of small marquise and round clear stones arranged like a short vine or spray sitting just below the collarbone. There's no separate charm swinging free; the stones themselves become the design.\n\nThat construction means it sits flatter and closer to the neck than a drop pendant does, which suits a higher neckline or a collared outfit better than a piece that needs open space to hang properly. The stones read as cubic zirconia or glass rather than anything gem-grade, set in a gold-toned chain that carries an anti-tarnish finish.\n\nA stone cluster like this catches more light across its width than a single pendant would, since there are more facets working at once rather than one central stone doing the job alone. It suits an evening occasion more naturally than daytime, a wedding function or a dressier dinner, where a bit more sparkle at the collarbone earns its place.\n\nKeep it dry and away from perfume, and lay the chain flat in storage rather than letting the clustered section tangle with anything else, since the stones sit close enough together that a snag could pull one loose. At ₹349, the density of stones along the chain is what separates this from a simpler single-pendant necklace at a lower price point.",
+    "seo": {
+      "primaryKeyword": "clear crystal vine collar necklace",
+      "secondaryKeywords": [
+        "anti-tarnish necklace",
+        "cubic zirconia necklace",
+        "stone cluster necklace",
+        "evening wear necklace"
+      ],
+      "metaTitle": "Clear Crystal Vine Collar Necklace, Anti-Tarnish Gold",
+      "metaDescription": "Small marquise and round clear stones are set directly along the chain like a short vine, sitting flat at the collarbone. Anti-tarnish. ₹349.",
+      "imageAlt": "Gold-toned necklace with a cluster of clear marquise and round stones set along the chain",
+      "ogTitle": "Crystal Vine Cluster Necklace, from ₹349",
+      "ogDescription": "Clear marquise and round stones set directly along the chain in a short vine cluster, sitting flat at the collarbone. ₹349.",
+      "ogImage": "/products/P519.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "981",
+      "originalSku": "MJ-273",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-273-gold-crystal-floral-vine-cluster-necklace-981",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P520",
+    "name": "Emerald-Green Stone Vine Necklace",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 349,
+      "mrp": 349,
+      "cost": 140
+    },
+    "media": {
+      "images": [
+        "/products/P520.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia (emerald-green colored), unclear from text",
+      "material finish chain": "Gold-toned metal chain, anti-tarnish finish"
+    },
+    "description": "This necklace uses the same along-the-chain construction as its clear-stone sibling in this range, small stones set directly into the front of the chain rather than hanging from a separate drop, but built around one central oval stone in emerald-green rather than an all-clear cluster. Marquise-cut clear stones branch off it on either side like leaves on a short vine.\n\nThe green stone reads as cubic zirconia or glass in an emerald-green colour rather than anything gem-grade, framed by a small gold-toned setting that lifts it slightly above the clear leaf stones around it. The chain carries an anti-tarnish finish, so the gold tone holds through regular wear rather than needing much upkeep.\n\nA single colour accent against an otherwise clear, gold-toned piece does more visual work than an all-clear cluster does, drawing the eye to one point rather than spreading attention evenly along the chain. Green pairs naturally with gold in a way that suits both festive dressing and a plainer outfit that could use one considered colour note.\n\nKeep it dry and away from perfume, and store it flat rather than letting the vine section tangle against other jewellery. At ₹349, this sits alongside the clear-stone version in this range at the same price, and the choice between them comes down to whether a colour accent or an all-clear sparkle suits what's already in your jewellery box.",
+    "seo": {
+      "primaryKeyword": "emerald-green stone vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish necklace",
+        "cubic zirconia necklace",
+        "green stone collar necklace",
+        "gold-toned vine necklace"
+      ],
+      "metaTitle": "Emerald-Green Stone Vine Necklace, Anti-Tarnish Gold",
+      "metaDescription": "A central emerald-green stone with clear marquise leaf stones is set along the necklace chain like a short vine, finished anti-tarnish. ₹349.",
+      "imageAlt": "Gold-toned necklace with a central emerald-green oval stone and clear marquise leaf stones",
+      "ogTitle": "Emerald-Green Vine Necklace in Gold Tone, ₹349",
+      "ogDescription": "A central emerald-green stone flanked by clear marquise leaf stones set along the chain like a vine. ₹349 at Morchadi Gems.",
+      "ogImage": "/products/P520.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "982",
+      "originalSku": "MJ-279",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-279-gold-emerald-crystal-leaf-vine-necklace-982",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P521",
+    "name": "Red and Green Leaf Vine Bracelet",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P521.webp"
+      ]
+    },
+    "specs": {
+      "design": "Nature-inspired vine bracelet with red and green leaf motifs, open (adjustable) design",
+      "material": "Chain-link bracelet (base material unspecified)"
+    },
+    "description": "Red and green together read unmistakably festive, and this bracelet leans into that pairing directly: oval-cut red stones sit at intervals along a gold-toned vine, with small green marquise shapes worked in between like leaves. The vine curves rather than running in a straight line, which is more visible once it's actually on the wrist than it looks lying flat.\n\nThe base material isn't specified beyond a gold-toned chain-link construction, and the source material doesn't confirm what the red and green pieces themselves are made of, so this description stops at colour and shape rather than naming a stone type. What is clear from the piece itself is the open, adjustable design, a chain-link build rather than a rigid band, so it isn't sized to one wrist measurement.\n\nThe colour pairing suits a festive season more than a plain everyday stack; think Diwali or a wedding function where red and green both already have a place in the rest of what's being worn, rather than a piece built for a single plain outfit. It layers reasonably with a plainer bracelet on the same wrist if the rest of the stack stays quiet.\n\nKeep it dry and away from perfume, and check the clasp sits secure before a full day of wear, since an open chain-link build has more moving parts than a solid bangle does. At ₹299, the two-colour stone work along the vine is doing the job a single-colour bracelet at this price usually can't.",
+    "seo": {
+      "primaryKeyword": "red and green leaf vine bracelet",
+      "secondaryKeywords": [
+        "festive bracelet for women",
+        "gold-toned chain-link bracelet",
+        "Diwali bracelet",
+        "adjustable vine bracelet"
+      ],
+      "metaTitle": "Red and Green Leaf Vine Bracelet, Adjustable Fit for Women",
+      "metaDescription": "Red oval stones and green leaf-shaped accents are set along a gold-toned vine chain bracelet, an open-back design that adjusts to fit. ₹299.",
+      "imageAlt": "Gold-toned chain-link bracelet with red oval stones and green leaf accents along a vine design",
+      "ogTitle": "Red and Green Leaf Vine Bracelet, from ₹299",
+      "ogDescription": "Red oval stones alternate with green leaf accents along this gold-toned vine bracelet, open and adjustable. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P521.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "983",
+      "originalSku": "MJ-402",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-402-luxurious-fairy-bloom-floral-tulip-bracelet-with-red-green-stones-983",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P522",
+    "name": "Multicolour Leaf Necklace and Earring Set",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P522.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia (multi-colored, synthetic)",
+      "material": "Copper (leaf-shaped design elements)",
+      "set contents": "Necklace and earring set"
+    },
+    "description": "Four colours sit along this necklace's front in a single leaf-shaped spray: pink, champagne, lavender and green marquise-cut stones, each one angled like an individual leaf rather than repeating the same shade across the piece. Small copper leaf shapes fill the gaps between the coloured stones, adding texture without adding another colour to track.\n\nThe stones are cubic zirconia, confirmed multi-coloured and synthetic rather than natural, set along a gold-toned chain with the cluster sitting at the front rather than hanging as a separate drop. A matching pair of stud earrings ships with the necklace, each one carrying the same small leaf-and-stone cluster at a smaller scale, so the full look is built in rather than something to assemble separately.\n\nMulticolour pieces like this one work best when the rest of an outfit stays relatively plain, since the jewellery itself is already carrying four colours; a solid-colour kurta or saree gives the necklace room to be the detail that does the talking. It suits daytime as easily as an evening occasion, since none of the four colours reads as more formal than the others.\n\nKeep the set dry and away from perfume, and store the earrings separately from anything that could catch on the small prongs holding each stone. At ₹399 for three pieces working together, the four-colour stone mix and the matching earrings are where that price goes rather than any one large centre stone.",
+    "seo": {
+      "primaryKeyword": "multicolour leaf necklace set",
+      "secondaryKeywords": [
+        "cubic zirconia necklace set",
+        "necklace and earring set",
+        "copper leaf jewellery",
+        "colourful stone necklace"
+      ],
+      "metaTitle": "Multicolour Leaf Necklace and Earring Set, Gold Tone",
+      "metaDescription": "Pink, champagne, lavender and green cubic zirconia stones sit in a leaf spray, with copper leaf accents and a matching pair of stud earrings. ₹399.",
+      "imageAlt": "Gold-toned necklace and stud earrings with pink, champagne, lavender and green leaf-shaped stones",
+      "ogTitle": "Multicolour Leaf Necklace and Earrings, ₹399",
+      "ogDescription": "A four-colour cubic zirconia leaf spray on a gold-toned chain, with matching stud earrings included. ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P522.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "984",
+      "originalSku": "MJ-146",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-146-colorful-zirconia-leaf-jewelry-set-984",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "combo"
+      ]
+    }
   }
 ]
