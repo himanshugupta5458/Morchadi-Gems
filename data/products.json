@@ -12341,5 +12341,1003 @@
         "Anti Tarnish bracelet"
       ]
     }
+  },
+  {
+    "id": "P557",
+    "name": "Lotus Kundan-Style Bracelet Watch, Ghungroo Chain",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P557.webp"
+      ]
+    },
+    "specs": {
+      "movement type": "Quartz",
+      "stone setting": "Kundan work (glass or stone set in gold foil, exact material unclear from text)",
+      "charm design": "Lotus-shaped charms",
+      "material chain": "Gold chain",
+      "embellishment": "Ghungroo bells"
+    },
+    "description": "Skip the enamel work and what's left on this one is kundan and sound. Small lotus-shaped charms, set with kundan-style stones worked into gold foil, sit either side of a plain white quartz dial, and ghungroo bells run the length of the gold chain rather than clustering at one end. It's the simplest construction in this range of bracelet watches: no meenakari colour, no separate charm pendant, just the lotus motif repeated in metal and stone.\n\nThat simplicity reads lighter on the wrist too. Where a heavier panelled watch asks for a full festive outfit to match it, this one moves comfortably between an office kurta and an evening one, the bells giving a small, deliberate sound rather than a loud jingle with every turn of the hand. The quartz movement keeps time the way any watch should, which is easy to forget matters on a piece built mostly for how it looks.\n\nThe kundan-style setting is glass or stone worked into gold foil rather than the stone-setting technique the word technically names, honest as trade terms go but worth saying plainly. Wipe the chain after wear and keep it away from perfume, the usual care a plated piece asks for. At ₹249, it's priced for someone who wants the bracelet-watch look without taking on the busiest version of it.",
+    "seo": {
+      "primaryKeyword": "lotus kundan bracelet watch",
+      "secondaryKeywords": [
+        "kundan-style charm watch",
+        "ghungroo bell bracelet watch",
+        "gold chain watch for women"
+      ],
+      "metaTitle": "Lotus Kundan-Style Bracelet Watch with Ghungroo Bells",
+      "metaDescription": "A lotus kundan-style charm bracelet watch on a gold chain with ghungroo bells, quartz movement, ₹249. The simplest piece in this bracelet-watch range.",
+      "imageAlt": "Gold chain bracelet watch with lotus-shaped kundan-style charms and ghungroo bells either side of a white dial",
+      "ogTitle": "Lotus Kundan-Style Bracelet Watch with Ghungroo Bells, ₹249",
+      "ogDescription": "A simple kundan-style bracelet watch, lotus charms and ghungroo bells on a gold chain, quartz dial. ₹249 at Morchadi Gems, no enamel work, just kundan and sound.",
+      "ogImage": "/products/P557.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1023",
+      "originalSku": "MJ-359",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-359-kashmiri-lotus-kundan-bracelet-watch-1023",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P558",
+    "name": "Meenakari Beaded Bracelet Watch, Pearl-Look Accents",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P558.webp"
+      ]
+    },
+    "specs": {
+      "craftsmanship technique": "Meenakari (enamel) work",
+      "stone material": "Pearl (real or imitation unclear from text)",
+      "embellishment": "Ghungroo bells",
+      "beadwork": "Vibrant coloured beads",
+      "material chain": "Multi-strand gold chain"
+    },
+    "description": "Vibrant coloured beads run alongside a single strand of pearl-look accents on this one, threaded onto a multi-strand gold chain wide enough that no single strand carries the whole design. Meenakari enamelling does the colour work instead of any stonework, fired panels either side of a plain quartz dial, worked into the metal rather than painted over it afterward. Ghungroo bells close out both ends of the chain, small enough to sit quietly against the wrist rather than swing loose.\n\nMulti-strand construction is the real difference from a single-chain watch. It spreads the beads and pearl-look accents across width instead of length, so the design reads as a cluster on the wrist rather than a line running along it. That makes it sit a little fuller than the plainer pieces nearby, closer to a cuff than a strap, while the watch face itself stays small and out of the way.\n\nThe pearl-look beads are exactly that, beads finished to resemble pearl rather than the real thing, so there's no claim to make beyond how they look strung between the coloured glass. Meenakari work like this asks for the same care as any plated piece: keep it away from perfume and water, and store it flat rather than tangled with heavier jewellery. At ₹320, it sits toward the higher end for the extra width alone.",
+    "seo": {
+      "primaryKeyword": "meenakari beaded bracelet watch",
+      "secondaryKeywords": [
+        "multi-strand chain watch",
+        "pearl-look bead bracelet watch",
+        "coloured bead watch for women"
+      ],
+      "metaTitle": "Meenakari Beaded Bracelet Watch, Pearl-Look Accents",
+      "metaDescription": "A multi-strand meenakari bracelet watch with pearl-look accents and coloured beads on a gold chain, ghungroo bells, ₹320. Fuller than a single-chain watch.",
+      "imageAlt": "Multi-strand gold chain bracelet watch with meenakari enamel panels, coloured beads and pearl-look accents",
+      "ogTitle": "Meenakari Beaded Bracelet Watch with Pearl-Look Beads, ₹320",
+      "ogDescription": "Coloured beads and pearl-look accents on a wide multi-strand gold chain, meenakari panels either side of a quartz dial. ₹320 at Morchadi Gems.",
+      "ogImage": "/products/P558.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1024",
+      "originalSku": "MJ-361",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-361-kashmiri-meenakari-bracelet-watch-for-women-1024",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P559",
+    "name": "Star-Dial Kundan Meenakari Bracelet Watch, Slider Chain",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 650,
+      "mrp": 650,
+      "cost": 260
+    },
+    "media": {
+      "images": [
+        "/products/P559.webp"
+      ]
+    },
+    "specs": {
+      "movement type": "Quartz",
+      "dial shape": "Square star-shaped dial",
+      "stone setting": "Kundan work (glass or stone set in gold foil, exact material unclear from text)",
+      "craftsmanship technique": "Meenakari (enamel) work — green",
+      "stone material": "Seed pearls (real or imitation unclear from text)",
+      "chain clasp": "Adjustable pearl-drop slider chain",
+      "embellishment": "Ghungroo bells"
+    },
+    "description": "The dial on this one breaks from the plain round quartz faces elsewhere in this range: a square face cut into a star shape, small enough that it still reads as a watch rather than a medallion. Around it, green meenakari panels carry kundan-style stonework at their centres, bordered with small pearl-look seed beads, and the whole thing sits on a slider-style chain that adjusts rather than fastening at a fixed length.\n\nThat slider construction is the other real departure from the rest of the range. Most of the other bracelet watches close with a standard clasp; this one slides along itself to loosen or tighten, which suits a piece this detailed since it can sit exactly where the weight of the panels feels balanced rather than wherever a fixed link happens to land. Pearl-look drops hang from the slider itself, and ghungroo bells run along both ends of the chain.\n\nBetween the dial shape, the two techniques worked side by side, the pearl border and the slider closure, this is the most detailed watch in the range, and at ₹650 it's priced that way too. The kundan-style stones sit in gold foil rather than being cut and mounted the way the word technically implies, and the pearl-look beads are exactly that, finished to resemble pearl. Keep it away from perfume and water and store it flat. It suits a full festive outfit better than an everyday one, close to what a wedding-season wrist wants.",
+    "seo": {
+      "primaryKeyword": "star dial kundan meenakari bracelet watch",
+      "secondaryKeywords": [
+        "slider chain bracelet watch",
+        "green meenakari kundan watch",
+        "bridal bracelet watch"
+      ],
+      "metaTitle": "Star-Dial Kundan Meenakari Bracelet Watch, Slider Chain",
+      "metaDescription": "A star-shaped dial, green kundan-style meenakari panels and a pearl-look slider chain, ghungroo bells. ₹650, the most detailed watch in this range.",
+      "imageAlt": "Green meenakari and kundan-style bracelet watch with a square star-shaped dial and pearl-look slider chain",
+      "ogTitle": "Star-Dial Kundan Meenakari Bracelet Watch, ₹650",
+      "ogDescription": "A square star-shaped dial, green kundan meenakari panels and a slider chain with pearl-look drops and ghungroo bells. ₹650 at Morchadi Gems.",
+      "ogImage": "/products/P559.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1026",
+      "originalSku": "MJ-357",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-357-kashmiri-green-meenakari-kundan-pearl-mandala-bracelet-watch-1026",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P564",
+    "name": "Red and Emerald Vine Necklace, Anti-Tarnish Gold",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P564.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "design accent": "Emerald-green leaf-shaped accents",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "pendant design shape": "V-shaped vine pendant design",
+      "chain clasp": "Delicate gold chain with secure clasp"
+    },
+    "description": "The chain here traces a V down to a point, small emerald-green leaf shapes nested between red cubic zirconia stones the whole way down, close enough together that the vine reads as one continuous line rather than a series of separate charms. The red runs warm and saturated rather than pale, closer to how a deep red actually looks than a washed-out imitation would.\n\nA necklace like this sits close to the collarbone, nearer to perfume and skin than most other jewellery gets, which is exactly where anti-tarnish plating earns its keep rather than being a nice extra. The gold base is confirmed anti-tarnish, so the chain doesn't need retouching between one wear and the next the way a cheaper vine chain tends to.\n\nThe clasp is a standard secure fastening, nothing you need to learn, and the chain itself is delicate enough to layer under a collar or wear alone over a plain neckline. It suits festive wear best, somewhere a saree or a heavier kurta gives the red and green room to actually read from a few feet away rather than getting lost against a busy print.\n\nOne honest note: the red is cubic zirconia, not ruby, whatever a listing elsewhere might call it. The stones are cut and set the same way either way, and at ₹229 the difference in price between the two is most of the reason to choose this.",
+    "seo": {
+      "primaryKeyword": "red and emerald vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish gold necklace",
+        "cubic zirconia vine necklace",
+        "festive vine necklace"
+      ],
+      "metaTitle": "Red and Emerald Vine Necklace, Anti-Tarnish Gold Plating",
+      "metaDescription": "A red and emerald cubic zirconia vine necklace on anti-tarnish gold plating, ₹229. Continuous V-shaped chain, suits festive wear best of all.",
+      "imageAlt": "Gold-plated V-shaped vine necklace with red cubic zirconia stones and emerald-green leaf accents",
+      "ogTitle": "Red and Emerald Vine Necklace, Anti-Tarnish, ₹229",
+      "ogDescription": "A V-shaped vine necklace in red and emerald cubic zirconia on anti-tarnish gold plating. ₹229 at Morchadi Gems, honest colour, no ruby claim.",
+      "ogImage": "/products/P564.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1033",
+      "originalSku": "MJ-493",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-493-red-ruby-emerald-vine-necklace-1033",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P565",
+    "name": "Lavender and Emerald Vine Necklace, Anti-Tarnish Gold",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P565.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "design accent": "Emerald-green leaf-shaped accents",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "pendant design shape": "V-shaped vine pendant design — light and graceful",
+      "chain clasp": "Delicate gold chain with secure clasp"
+    },
+    "description": "Same V-shaped vine as the red version in this pair, same emerald-green leaf shapes threaded between the stones, but the cubic zirconia here runs a soft lavender instead, pale enough that it reads as a wash of colour rather than a solid block. It's the quieter half of the two, better suited to daytime wear than the red's more festive pull.\n\nThe gold base carries the same confirmed anti-tarnish plating as its sibling, which matters most exactly where a necklace sits, close against the collarbone where perfume and body warmth do the most damage to an untreated chain over a season of wear. You get the colour without the upkeep a plain gold-toned vine chain would otherwise ask for.\n\nClosure is a standard secure clasp, and the chain length suits layering under a collar or wearing alone against a plain neckline the same way the red version does. Lavender reads well against both warm and cool-toned outfits, which the more saturated red can't always manage, and it works equally for an office day or a lighter festive one without needing to match anything specific.\n\nThe stones are cubic zirconia set in gold-plated metal, nothing gem-grade behind the colour, and at ₹229 that's the honest trade a lavender vine necklace like this makes for the price.",
+    "seo": {
+      "primaryKeyword": "lavender and emerald vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish gold necklace",
+        "lavender cubic zirconia necklace",
+        "everyday vine necklace"
+      ],
+      "metaTitle": "Lavender and Emerald Vine Necklace, Anti-Tarnish Gold",
+      "metaDescription": "A lavender and emerald cubic zirconia vine necklace on anti-tarnish gold plating, ₹229. The quieter, everyday shade in this vine necklace family.",
+      "imageAlt": "Gold-plated V-shaped vine necklace with pale lavender cubic zirconia stones and emerald-green leaf accents",
+      "ogTitle": "Lavender and Emerald Vine Necklace, Anti-Tarnish, ₹229",
+      "ogDescription": "A soft lavender and emerald cubic zirconia vine necklace on anti-tarnish gold plating. ₹229 at Morchadi Gems, quieter than its red sibling.",
+      "ogImage": "/products/P565.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1034",
+      "originalSku": "MJ-477",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-477-purple-emerald-cz-gold-plated-anti-tarnish-necklace-1034",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P566",
+    "name": "Clear CZ Vine Necklace, Anti-Tarnish Gold",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P566.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "pendant design shape": "Minimalist V-shaped vine design",
+      "chain clasp": "Delicate gold chain with secure clasp"
+    },
+    "description": "Drop the leaf accents and the colour pairing that the rest of this vine family uses, and what's left is a plainer idea: clear cubic zirconia stones alone, tracing the same V-shaped vine down toward the collarbone, no green, no second colour to balance against. It's the one necklace in this set that doesn't ask you to think about how a colour will sit against a particular outfit.\n\nThat simplicity is the actual selling point. A single clear-stone vine goes under almost anything without a second thought, work clothes included, where a coloured version might read a shade too festive for a Tuesday. The gold base still carries the same confirmed anti-tarnish plating as its coloured siblings, so skipping the colour doesn't mean skipping the part that actually protects the chain at the neckline, where perfume gets applied most days.\n\nClasp and chain length match the rest of the family, a standard secure fastening and a length built for layering or wearing solo. The stones are cubic zirconia, cut small and set close enough together that the line reads continuous rather than beaded. At ₹229, it's priced the same as its coloured siblings, so the choice between clear and colour comes down to nothing but what an outfit actually needs that day.",
+    "seo": {
+      "primaryKeyword": "clear cz vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish gold necklace",
+        "minimalist cubic zirconia necklace",
+        "everyday vine necklace"
+      ],
+      "metaTitle": "Clear CZ Vine Necklace, Minimalist Anti-Tarnish Gold",
+      "metaDescription": "A clear cubic zirconia vine necklace on anti-tarnish gold plating, no colour pairing, ₹229. The plainest, easiest-to-wear piece in this vine family.",
+      "imageAlt": "Gold-plated V-shaped vine necklace set with clear cubic zirconia stones and no colour accents",
+      "ogTitle": "Clear CZ Vine Necklace, Anti-Tarnish Gold, ₹229",
+      "ogDescription": "A plain clear cubic zirconia vine necklace on anti-tarnish gold plating, no leaf accents. ₹229 at Morchadi Gems, goes under almost anything.",
+      "ogImage": "/products/P566.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1035",
+      "originalSku": "MJ-153",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-153-crystal-white-cz-gold-plated-anti-tarnish-vine-necklace-1035",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P567",
+    "name": "Blush Pink and Emerald Vine Necklace, Anti-Tarnish Gold",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P567.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "design accent": "Emerald-green leaf-shaped accents",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "pendant design shape": "V-shaped vine pendant design — soft and graceful",
+      "chain clasp": "Delicate gold chain with secure clasp"
+    },
+    "description": "Blush is the softest colour in this vine family, a pale pink rather than anything bold, paired here with the same small emerald-green leaf shapes that run along the chain between stones. It sits closer to the red version in construction than the clear one, same V-shaped vine, same leaf placement, just a gentler colour doing the work.\n\nPink like this tends to photograph warmer than it looks in hand, worth knowing if you're buying for photos as much as for wearing. The gold base is confirmed anti-tarnish, so the chain holds its finish through the kind of daily contact a necklace gets that a bracelet or ring doesn't quite match: perfume at the collarbone, scarves, a jacket collar rubbing against the clasp.\n\nThe clasp itself is a standard secure fastening, and the chain suits both layering under something heavier and wearing on its own against a plain neckline. It leans toward daytime and softer festive wear rather than a full wedding function, where the deeper colours in this family carry more visual weight. At ₹229, the price matches every other stone colour in the set, so this one's really just about which shade suits the wearer best.",
+    "seo": {
+      "primaryKeyword": "blush pink and emerald vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish gold necklace",
+        "pink cubic zirconia necklace",
+        "soft pink vine necklace"
+      ],
+      "metaTitle": "Blush Pink and Emerald Vine Necklace, Anti-Tarnish Gold",
+      "metaDescription": "A blush pink and emerald cubic zirconia vine necklace on anti-tarnish gold plating, ₹229. The softest, gentlest shade in this vine necklace family.",
+      "imageAlt": "Gold-plated V-shaped vine necklace with blush pink cubic zirconia stones and emerald-green leaf accents",
+      "ogTitle": "Blush Pink and Emerald Vine Necklace, Anti-Tarnish, ₹229",
+      "ogDescription": "A soft blush pink and emerald cubic zirconia vine necklace on anti-tarnish gold plating. ₹229 at Morchadi Gems, the gentlest shade of the set.",
+      "ogImage": "/products/P567.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1036",
+      "originalSku": "MJ-467",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-467-pink-rose-emerald-cz-gold-plated-anti-tarnish-necklace-1036",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P568",
+    "name": "Deep Purple and Emerald Vine Necklace, Anti-Tarnish Gold",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 229,
+      "mrp": 229,
+      "cost": 92
+    },
+    "media": {
+      "images": [
+        "/products/P568.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Cubic zirconia",
+      "design accent": "Emerald-green leaf-shaped accents",
+      "finish plating": "Gold-plated",
+      "finish coating": "Anti-tarnish coating",
+      "pendant design shape": "V-shaped vine pendant design — bold yet elegant",
+      "chain clasp": "Delicate gold chain with secure clasp"
+    },
+    "description": "This is the richest colour in the vine family, a deep, almost wine-toned purple rather than the paler lavender elsewhere in the range, paired with the same emerald-green leaf accents and V-shaped chain construction as its siblings. Where the lavender version reads soft and the red reads bold, this one sits somewhere more formal, closer to what an evening outfit wants than a daytime one.\n\nThe stones are cubic zirconia, set close together enough along the chain that the colour reads as continuous rather than a scatter of individual points. Gold plating underneath carries a confirmed anti-tarnish base, which matters most at exactly the spot a necklace sits, against the collarbone, where skin oils and perfume do more damage to an untreated chain over months than almost anywhere else on the body.\n\nClasp and construction match the rest of the family: a standard secure fastening, a chain length that layers or stands alone. Deep purple suits an evening event or a heavier festive outfit better than it suits daytime wear, where the paler shades in this set do more of the everyday work. At ₹229, it costs the same as every other colour here, so the choice is purely which shade the occasion calls for.",
+    "seo": {
+      "primaryKeyword": "deep purple and emerald vine necklace",
+      "secondaryKeywords": [
+        "anti-tarnish gold necklace",
+        "purple cubic zirconia necklace",
+        "evening vine necklace"
+      ],
+      "metaTitle": "Deep Purple and Emerald Vine Necklace, Anti-Tarnish Gold",
+      "metaDescription": "A deep purple and emerald cubic zirconia vine necklace on anti-tarnish gold plating, ₹229. The richest, most formal shade in this vine family.",
+      "imageAlt": "Gold-plated V-shaped vine necklace with deep purple cubic zirconia stones and emerald-green leaf accents",
+      "ogTitle": "Deep Purple and Emerald Vine Necklace, Anti-Tarnish, ₹229",
+      "ogDescription": "A rich deep purple and emerald cubic zirconia vine necklace on anti-tarnish gold plating. ₹229 at Morchadi Gems, the boldest shade of the set.",
+      "ogImage": "/products/P568.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1037",
+      "originalSku": "MJ-027",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-027-amethyst-purple-emerald-cz-gold-plated-anti-tarnish-necklace-1037",
+      "originalCategories": [
+        "Anti Tarnish Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P570",
+    "name": "Diamond Petal Fringe Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P570.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Diamond-shaped centrepiece with layered petal detail",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "A row of raised oval petals runs the length of this hoop like fringe, cascading down to a diamond-shaped centrepiece at the base where the earring closes. The petals stand slightly proud of the metal rather than sitting flat, catching light differently depending on the angle you tilt your head.\n\nUnderneath the gold plating is 316L stainless steel, the kind used for pieces meant to survive actual wear rather than sit in a box between occasions. It's rated waterproof and sweat-resistant, which matters more for hoops than studs since they're the earring most likely to still be in when you shower or forget to take them off before a workout.\n\nThe silhouette itself is architectural rather than delicate, a fuller hoop shape that holds its structure instead of swinging loose, and it reads as more detailed than a plain hoop without tipping into costume-jewellery territory. Wear it with a plain kurta or office wear where the texture does the talking and nothing else on the ear needs to compete.\n\nAvoid prolonged contact with harsh chemicals and perfume, the one care instruction that actually matters here since the steel base itself isn't the weak point. At ₹99, the petal detailing is more work than a plain hoop usually gets at this price.",
+    "seo": {
+      "primaryKeyword": "diamond petal fringe hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "waterproof hoop earrings",
+        "textured hoop earrings for women"
+      ],
+      "metaTitle": "Diamond Petal Fringe Hoop Earrings, Gold-Plated Steel",
+      "metaDescription": "Raised petal fringe hoop earrings with a diamond centrepiece, gold-plated 316L steel, waterproof and sweat-resistant. ₹99 at Morchadi Gems store.",
+      "imageAlt": "Gold-plated steel hoop earrings with raised oval petal fringe and a diamond-shaped centrepiece",
+      "ogTitle": "Diamond Petal Fringe Hoop Earrings, Gold, ₹99",
+      "ogDescription": "Raised petal fringe on a gold-plated steel hoop with a diamond centrepiece, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P570.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1040",
+      "originalSku": "MJ-213",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-213-diamond-petal-fringe-gold-stainless-steel-hoop-earrings-1040",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P571",
+    "name": "Spiral Texture Crescent Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P571.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Concentric spiral/swirl texture on a crescent-shaped hoop",
+      "clasp type": "Secure latch-back clasp"
+    },
+    "description": "Concentric circles are etched across this hoop in a tight spiral, deep enough to actually catch light rather than reading as a faint scratch pattern. It's the smaller of two spiral-texture hoops in this range, sized for everyday wear rather than the bigger, chunkier version sitting alongside it.\n\nLike the rest of this run of hoops, it's 316L stainless steel under gold plating, rated waterproof and sweat-resistant, so it's built to stay in through a full day rather than needing to come off before you wash your face or head out in the rain. The crescent shape keeps the hoop close to the ear rather than swinging wide, which suits a smaller hoop's actual size better than an open loop would.\n\nA latch-back clasp holds it secure, nothing fiddly to manage getting it on in the morning. It works as an everyday earring more than an occasion one, the kind you'd forget you're wearing by midday, and the spiral texture adds enough visual interest that it doesn't read as a plain hoop despite the simple shape.\n\nKeep it away from harsh chemicals and perfume for as long as possible, same as any plated piece. At ₹99, it's priced to be worn daily without a second thought.",
+    "seo": {
+      "primaryKeyword": "spiral texture crescent hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "waterproof hoop earrings",
+        "small everyday hoop earrings"
+      ],
+      "metaTitle": "Spiral Texture Crescent Hoop Earrings, Gold-Plated",
+      "metaDescription": "Concentric spiral-etched crescent hoop earrings, gold-plated 316L steel, waterproof and sweat-resistant, ₹99. The smaller of two spiral hoops.",
+      "imageAlt": "Small gold-plated steel crescent hoop earrings with a tight concentric spiral texture",
+      "ogTitle": "Spiral Texture Crescent Hoop Earrings, ₹99",
+      "ogDescription": "A tight concentric spiral etched into a small gold-plated steel crescent hoop, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P571.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1041",
+      "originalSku": "MJ-576",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-576-spiral-textured-chunky-gold-plated-anti-tarnish-hoop-earrings-1041",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P572",
+    "name": "Oversized Spiral Texture Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P572.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Large concentric spiral/swirl texture, oversized chunky hoop",
+      "size silhouette": "Oversized chunky hoop",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "This is the larger of the two spiral-texture hoops in this range, the same tight concentric swirl pattern scaled up onto an oversized, chunky crescent that sits with real weight and presence rather than close to the ear. Where the smaller version disappears into an everyday look, this one is built to be noticed.\n\nThe construction underneath doesn't change with the size: 316L stainless steel, gold-plated, waterproof and sweat-resistant, the same base every hoop in this set shares. What changes is how it wears. A hoop this size sits lower and moves more with the head, so it suits an evening out or a festive day better than a full workday at a desk, where a smaller hoop stays out of the way more easily.\n\nIt's a hoop built to stay on for a full day without needing adjusting by evening, unlike a heavier statement earring that can start to pull by then. The spiral texture reads clearly even from a distance thanks to the larger scale, which a finer pattern on a smaller hoop can't always manage.\n\nAvoid harsh chemicals and perfume where possible. At ₹99, the size difference from its smaller sibling doesn't come with a price difference, just a bolder look.",
+    "seo": {
+      "primaryKeyword": "oversized spiral texture hoop earrings",
+      "secondaryKeywords": [
+        "chunky gold-plated hoop earrings",
+        "waterproof hoop earrings",
+        "statement hoop earrings for women"
+      ],
+      "metaTitle": "Oversized Spiral Texture Hoop Earrings, Gold-Plated",
+      "metaDescription": "A chunky, oversized spiral-textured crescent hoop, gold-plated 316L steel, waterproof and sweat-resistant. ₹99, the bolder of two spiral hoops.",
+      "imageAlt": "Oversized chunky gold-plated steel crescent hoop earrings with a concentric spiral texture",
+      "ogTitle": "Oversized Spiral Texture Hoop Earrings, ₹99",
+      "ogDescription": "A bold, oversized spiral-textured crescent hoop in gold-plated steel, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P572.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1042",
+      "originalSku": "MJ-575",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-575-spiral-texture-gold-stainless-steel-hoop-earrings-1042",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P573",
+    "name": "Crosshatch Texture Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P573.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Crosshatch engraving on polished gold surface",
+      "size": "Medium hoop",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "Fine diagonal lines cross each other in a grid across this hoop's surface, subtle enough to read as texture rather than pattern from more than a foot away, which is the point. It's a medium-sized hoop in this range, smaller than the chunky oversized pieces here and less busy than the ones with raised charms or cutouts.\n\nThe base is 316L stainless steel under gold plating, waterproof and sweat-resistant like the rest of this run, so it holds up to a full day worn without thinking about when it needs to come off. The crosshatch itself is engraved rather than raised, which keeps the surface smooth to the touch even where the pattern reads visually busy.\n\nThis is closer to an everyday earring than an occasion one, understated enough for a work day, plain enough that it goes under a dupatta or a scarf without catching on the fabric the way a more textured hoop might. It's the kind of piece you put on once and stop noticing, which for a hoop worn daily is usually the goal.\n\nKeep it away from harsh chemicals and perfume for as long as possible. At ₹99, it's the plainest design in this set of hoops, priced the same as the busier ones.",
+    "seo": {
+      "primaryKeyword": "crosshatch texture hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "medium hoop earrings for women",
+        "everyday textured hoops"
+      ],
+      "metaTitle": "Crosshatch Texture Hoop Earrings, Gold-Plated Steel",
+      "metaDescription": "A medium gold-plated hoop with engraved crosshatch texture, 316L steel, waterproof and sweat-resistant, ₹99. The plainest piece in this hoop set.",
+      "imageAlt": "Medium gold-plated steel hoop earrings with an engraved diagonal crosshatch pattern",
+      "ogTitle": "Crosshatch Texture Hoop Earrings, Gold, ₹99",
+      "ogDescription": "A medium gold-plated steel hoop with a fine engraved crosshatch pattern, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P573.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1043",
+      "originalSku": "MJ-152",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-152-cross-hatch-gold-stainless-steel-hoop-earrings-1043",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P574",
+    "name": "Twisted Rope Heart Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P574.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Twisted rope texture with raised heart charm",
+      "hoop shape": "Oval hoop silhouette",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "A thick twisted-rope texture runs the length of this oval hoop, with a small raised heart sitting at the bottom centre where the two ends of the rope pattern meet. It's the only earring in this set with a charm shape rather than a repeating surface pattern, which makes it read a touch more sentimental than the others.\n\nUnderneath, it's the same 316L stainless steel and gold plating as the rest of this hoop range, rated waterproof and sweat-resistant so it survives a full day without needing to come off for a shower or a workout. The oval shape sits a little differently on the ear than a round or crescent hoop, closer and slightly elongated rather than perfectly circular.\n\nThe heart is small enough that it reads as a detail rather than the whole point, so it works for daily wear as easily as it would for a gift. It pairs well with something simple, a plain kurta or office wear, since the texture and the charm together already carry enough visual interest on their own.\n\nAvoid harsh chemicals and perfume where you can. At ₹99, the heart detail doesn't push this past the price of the plainer hoops in the same set.",
+    "seo": {
+      "primaryKeyword": "twisted rope heart hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "heart charm hoop earrings",
+        "oval hoop earrings for women"
+      ],
+      "metaTitle": "Twisted Rope Heart Hoop Earrings, Gold-Plated Steel",
+      "metaDescription": "A twisted-rope oval hoop with a raised heart charm, gold-plated 316L steel, waterproof and sweat-resistant, ₹99. The only heart shape in this set.",
+      "imageAlt": "Gold-plated steel oval hoop earrings with a twisted rope texture and a small raised heart charm",
+      "ogTitle": "Twisted Rope Heart Hoop Earrings, Gold, ₹99",
+      "ogDescription": "A twisted-rope gold-plated steel hoop with a small raised heart charm, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P574.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1044",
+      "originalSku": "MJ-610",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-610-twisted-rope-heart-gold-stainless-steel-hoop-earrings-1044",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P575",
+    "name": "Crescent Moon Cutout Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P575.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Oval cutout pattern, crescent moon-inspired design",
+      "surface finish": "High-gloss finish",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "Oval cutouts run along the lower edge of this teardrop-shaped hoop, spaced evenly enough that the negative space reads as its own crescent-moon shape underneath the gold. The high-gloss finish on the metal itself catches more light than a brushed or matte surface would, which matters more on a piece that leans on shape rather than texture for its detail.\n\nIt shares the same build as the rest of this hoop set: 316L stainless steel, gold-plated, waterproof and sweat-resistant, so it's meant to stay in for a full day rather than come off between wears. The teardrop silhouette is a little more architectural than a plain round hoop, structured enough to hold its shape rather than swinging loosely.\n\nThe cutout pattern makes this one read lighter than its actual size suggests, since the negative space cuts down on how much solid metal is actually visible at any angle. It suits a cleaner, more minimal outfit where the shape can stand out rather than compete with other detail.\n\nKeep it away from harsh chemicals and perfume for as long as possible. At ₹99, the cutout detailing is more design work than most hoops at this price bother with.",
+    "seo": {
+      "primaryKeyword": "crescent moon cutout hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "high-gloss hoop earrings",
+        "minimal hoop earrings for women"
+      ],
+      "metaTitle": "Crescent Moon Cutout Hoop Earrings, Gold-Plated Steel",
+      "metaDescription": "A teardrop hoop with crescent-moon cutouts and a high-gloss finish, gold-plated 316L steel, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "imageAlt": "Gold-plated steel teardrop hoop earrings with oval cutouts forming a crescent-moon shape",
+      "ogTitle": "Crescent Moon Cutout Hoop Earrings, Gold, ₹99",
+      "ogDescription": "A high-gloss gold-plated steel hoop with crescent-moon cutouts along its lower edge, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P575.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1045",
+      "originalSku": "MJ-150",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-150-crescent-moon-cutout-gold-stainless-steel-hoop-earrings-1045",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P576",
+    "name": "Croissant Ribbed C-Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P576.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Diagonal ribbed croissant texture, open C-hoop shape",
+      "hoop shape": "Open C-hoop silhouette",
+      "clasp type": "Secure push-back stud clasp",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "Raised diagonal ribbing runs the full length of this hoop, giving it a puffy, sculpted look closer to a croissant's texture than a flat metal surface, on an open C-shaped hoop rather than a closed circle. The ribbing adds real dimension without adding real weight, since the shape underneath is hollow rather than solid.\n\nIt's built from 316L stainless steel with gold plating over it, waterproof and sweat-resistant like the rest of this hoop set, and closes with a secure push-back stud clasp, no latch to fumble with in a mirror. The open C-shape means it doesn't fully close around the earlobe, which keeps it lighter on the ear than a full hoop of the same visual size would be.\n\nThis is one of the chunkier-looking pieces in the set despite the light actual weight, closer to what a statement earring usually costs than what this one does. It suits an outfit that can carry a bolder hoop, an evening look or a festive day, more than it suits a plain desk day where a smaller hoop stays out of the way better.\n\nAvoid harsh chemicals and perfume where possible. At ₹99, the ribbed texture and the open shape together read as more design than the price usually buys.",
+    "seo": {
+      "primaryKeyword": "croissant ribbed c-hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "chunky c-hoop earrings",
+        "textured hoop earrings for women"
+      ],
+      "metaTitle": "Croissant Ribbed C-Hoop Earrings, Gold-Plated Steel",
+      "metaDescription": "A puffy, ribbed open C-hoop in gold-plated 316L steel, waterproof and sweat-resistant, push-back clasp, ₹99. Chunky look, light actual weight.",
+      "imageAlt": "Gold-plated steel open C-hoop earrings with raised diagonal croissant-style ribbing",
+      "ogTitle": "Croissant Ribbed C-Hoop Earrings, Gold, ₹99",
+      "ogDescription": "A puffy, ribbed open C-shaped hoop in gold-plated steel, waterproof and sweat-resistant, light despite the chunky look. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P576.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1046",
+      "originalSku": "MJ-151",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-151-croissant-ribbed-gold-stainless-steel-c-hoop-earrings-1046",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P577",
+    "name": "Quilted Grid Hoop Earrings, Gold-Plated Steel",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P577.webp"
+      ]
+    },
+    "specs": {
+      "material": "316L stainless steel",
+      "finish plating": "Gold-plated",
+      "water resistance": "Waterproof & sweat-resistant",
+      "design detail": "Raised quilted grid texture",
+      "hoop shape": "Wide crescent silhouette",
+      "clasp type": "Secure latch-back clasp",
+      "care instructions": "Avoid prolonged exposure to harsh chemicals and perfumes"
+    },
+    "description": "A raised grid pattern runs across this hoop like a quilted surface, a repeating diamond-stitch texture rather than a smooth or engraved finish, set on a wide crescent shape that gives the pattern room to actually read clearly. It's one of the wider hoops in this set, closer to a statement size than the medium or small pieces nearby.\n\nThe build matches the rest of this range: 316L stainless steel under gold plating, waterproof and sweat-resistant, closing with a secure latch-back clasp that's simple to manage without a mirror once you're used to it. The quilted texture catches light from more angles than a flat surface would, which matters on a wider hoop where a plain surface can otherwise look a little empty.\n\nIt reads as more detailed than the price suggests, mostly because of how much surface texture the quilting adds without needing stones or charms to do the work. It suits a fuller outfit, something with its own detail already, a saree or a heavier kurta, rather than getting lost against something plainer.\n\nKeep it away from harsh chemicals and perfume where you can. At ₹99, the quilted texture is doing more visual work than most hoops manage at this price point.",
+    "seo": {
+      "primaryKeyword": "quilted grid hoop earrings",
+      "secondaryKeywords": [
+        "gold-plated steel hoop earrings",
+        "wide crescent hoop earrings",
+        "textured hoop earrings for women"
+      ],
+      "metaTitle": "Quilted Grid Hoop Earrings, Gold-Plated Steel, ₹99",
+      "metaDescription": "A wide crescent hoop with a raised quilted-grid texture, gold-plated 316L steel, waterproof and sweat-resistant, ₹99. One of the wider hoops here.",
+      "imageAlt": "Wide gold-plated steel crescent hoop earrings with a raised quilted diamond-grid texture",
+      "ogTitle": "Quilted Grid Hoop Earrings, Wide Crescent, ₹99",
+      "ogDescription": "A wide gold-plated steel hoop with a raised quilted-grid texture, waterproof and sweat-resistant. ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P577.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1047",
+      "originalSku": "MJ-482",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-482-quilted-grid-gold-stainless-steel-hoop-earrings-1047",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P584",
+    "name": "Satin Rosette Hair Tie Set, Pink and Cream",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 109,
+      "mrp": 109,
+      "cost": 44
+    },
+    "media": {
+      "images": [
+        "/products/P584.webp"
+      ]
+    },
+    "specs": {
+      "material": "Satin fabric",
+      "set quantity": "Set of 2 (pink & cream)",
+      "band type": "Soft stretchable elastic band",
+      "design": "Rosette flower design",
+      "additional use": "Doubles as a bracelet/wrist accessory",
+      "grip": "Lightweight, no-damage grip suitable for all hair types"
+    },
+    "description": "Two satin rosettes sit on soft stretchable bands here, one in a warm pink, the other in a cream that reads almost ivory against dark hair. Both are shaped like small roses, layered petals rather than a flat bow, which gives them more visual presence than a plain fabric hair tie usually has.\n\nThe elastic underneath is gentle enough not to snag or pull at hair the way some cheaper ties do, described as no-damage grip and suited to most hair types, fine or thick. Being satin rather than plain elastic also means it doesn't leave the usual crease-mark ring after a few hours the way a basic hair tie can.\n\nBeyond hair, the band stretches enough to double as a simple bracelet on the wrist when it's not in use, one rosette resting against the skin instead of sitting in a bun or ponytail. That makes the set genuinely useful rather than a single-purpose accessory, worth keeping a few in a bag rather than just at a vanity.\n\nThey suit daily wear as easily as they'd suit a gift, college, office, or a casual day out, and the pink-and-cream pairing goes with most outfits without needing to be matched carefully. At ₹109 for the pair, that's two accessories doing the work of one hair tie and one bracelet.",
+    "seo": {
+      "primaryKeyword": "pink and cream satin hair tie set",
+      "secondaryKeywords": [
+        "satin rosette hair tie",
+        "hair tie doubles as bracelet",
+        "hair accessory gift set"
+      ],
+      "metaTitle": "Satin Rosette Hair Tie Duo, Pink and Cream Colours, ₹109",
+      "metaDescription": "A set of two satin rosette hair ties in pink and cream, gentle no-damage elastic, doubles as a bracelet. ₹109 for the pair at Morchadi Gems.",
+      "imageAlt": "Two satin rosette hair ties in pink and cream on soft stretch elastic bands",
+      "ogTitle": "Pink and Cream Satin Rosette Hair Tie Set, ₹109",
+      "ogDescription": "Two satin rosette hair ties, pink and cream, gentle elastic that doubles as a bracelet. ₹109 for the pair at Morchadi Gems.",
+      "ogImage": "/products/P584.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1054",
+      "originalSku": "MJ-525",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-525-satin-rose-flower-hair-tie-set-of-2-1054",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P585",
+    "name": "Satin Rosette Hair Tie Set, Black and White",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 109,
+      "mrp": 109,
+      "cost": 44
+    },
+    "media": {
+      "images": [
+        "/products/P585.webp"
+      ]
+    },
+    "specs": {
+      "material": "Satin",
+      "colour": "Black & White",
+      "set contents": "Set of 2",
+      "design": "Monochrome rosette design",
+      "band type": "Soft stretchable elastic band",
+      "dual use": "Doubles as a bracelet/wrist accessory when not in hair"
+    },
+    "description": "Same rosette shape and soft stretch band as the pink-and-cream set in this pair, but here the colour drops to a strict black and white, monochrome rather than warm-toned, which reads a shade more polished and works against a wider range of outfit colours without needing to match anything specific.\n\nThe satin fabric and gentle elastic grip are identical to its sibling set: no-damage hold suited to most hair types, and no crease-ring left behind the way a plain elastic band tends to leave after a few hours. Both rosettes are layered rather than flat, giving them the same dimensional look regardless of which colourway you pick.\n\nIt doubles as a bracelet the same way too, worn on the wrist when it isn't holding hair back, which makes the set worth keeping more than one of in a bag. Black and white suits an office day or a plainer outfit especially well, where a warmer colour pairing might read a touch too casual.\n\nAt ₹109 for the set of two, it's priced identically to the pink-and-cream version, so the choice comes down to which colourway actually matches the wardrobe it needs to go with.",
+    "seo": {
+      "primaryKeyword": "black and white satin hair tie set",
+      "secondaryKeywords": [
+        "satin rosette hair tie",
+        "monochrome hair tie set",
+        "hair tie doubles as bracelet"
+      ],
+      "metaTitle": "Satin Rosette Hair Tie Duo, Black and White Colours, ₹109",
+      "metaDescription": "A set of two satin rosette hair ties in black and white, gentle no-damage elastic, doubles as a bracelet. ₹109 for the pair at Morchadi Gems.",
+      "imageAlt": "Two satin rosette hair ties in black and white on soft stretch elastic bands",
+      "ogTitle": "Black and White Satin Rosette Hair Tie Set, ₹109",
+      "ogDescription": "Two satin rosette hair ties, black and white, gentle elastic that doubles as a bracelet. ₹109 for the pair at Morchadi Gems.",
+      "ogImage": "/products/P585.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1055",
+      "originalSku": "MJ-524",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-524-satin-rose-flower-hair-tie-black-white-set-of-2-1055",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
   }
 ]

@@ -1,0 +1,3002 @@
+{
+  "productId": "P558",
+  "threshold": null,
+  "advisory": true,
+  "blocked": false,
+  "comparedAgainst": 230,
+  "comparedAgainstActive": 98,
+  "comparedAgainstDraft": 132,
+  "comparisons": [
+    {
+      "againstProductId": "P010",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0.04
+      },
+      "peak": {
+        "measure": "opening",
+        "score": 0.04
+      }
+    },
+    {
+      "againstProductId": "P557",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008948545861297539,
+        "normalised": 0.008948545861297539,
+        "opening": 0.03125
+      },
+      "peak": {
+        "measure": "opening",
+        "score": 0.03125
+      }
+    },
+    {
+      "againstProductId": "P329",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0.02702702702702703
+      },
+      "peak": {
+        "measure": "opening",
+        "score": 0.02702702702702703
+      }
+    },
+    {
+      "againstProductId": "P480",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006787330316742082,
+        "normalised": 0.006787330316742082,
+        "opening": 0.02631578947368421
+      },
+      "peak": {
+        "measure": "opening",
+        "score": 0.02631578947368421
+      }
+    },
+    {
+      "againstProductId": "P358",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.019148936170212766,
+        "normalised": 0.016985138004246284,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.019148936170212766
+      }
+    },
+    {
+      "againstProductId": "P386",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.012903225806451613,
+        "normalised": 0.012903225806451613,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.012903225806451613
+      }
+    },
+    {
+      "againstProductId": "P523",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.012072434607645875,
+        "normalised": 0.012072434607645875,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.012072434607645875
+      }
+    },
+    {
+      "againstProductId": "P509",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008639308855291577,
+        "normalised": 0.010822510822510822,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "normalised",
+        "score": 0.010822510822510822
+      }
+    },
+    {
+      "againstProductId": "P539",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.010416666666666666,
+        "normalised": 0.010416666666666666,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.010416666666666666
+      }
+    },
+    {
+      "againstProductId": "P525",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.01016260162601626,
+        "normalised": 0.01016260162601626,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.01016260162601626
+      }
+    },
+    {
+      "againstProductId": "P507",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008791208791208791,
+        "normalised": 0.008791208791208791,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.008791208791208791
+      }
+    },
+    {
+      "againstProductId": "P299",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008733624454148471,
+        "normalised": 0.008733624454148471,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.008733624454148471
+      }
+    },
+    {
+      "againstProductId": "P520",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008658008658008658,
+        "normalised": 0.008658008658008658,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.008658008658008658
+      }
+    },
+    {
+      "againstProductId": "P527",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008456659619450317,
+        "normalised": 0.008456659619450317,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.008456659619450317
+      }
+    },
+    {
+      "againstProductId": "P528",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.008298755186721992,
+        "normalised": 0.008298755186721992,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.008298755186721992
+      }
+    },
+    {
+      "againstProductId": "P487",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0081799591002045,
+        "normalised": 0.0081799591002045,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0081799591002045
+      }
+    },
+    {
+      "againstProductId": "P606",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.007042253521126761,
+        "normalised": 0.007042253521126761,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.007042253521126761
+      }
+    },
+    {
+      "againstProductId": "P048",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.00702576112412178,
+        "normalised": 0.00702576112412178,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00702576112412178
+      }
+    },
+    {
+      "againstProductId": "P003",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.00663716814159292,
+        "normalised": 0.00663716814159292,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00663716814159292
+      }
+    },
+    {
+      "againstProductId": "P392",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006423982869379015,
+        "normalised": 0.006423982869379015,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.006423982869379015
+      }
+    },
+    {
+      "againstProductId": "P517",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006382978723404255,
+        "normalised": 0.006382978723404255,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.006382978723404255
+      }
+    },
+    {
+      "againstProductId": "P357",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006237006237006237,
+        "normalised": 0.006237006237006237,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.006237006237006237
+      }
+    },
+    {
+      "againstProductId": "P112",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004123711340206186,
+        "normalised": 0.006198347107438017,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "normalised",
+        "score": 0.006198347107438017
+      }
+    },
+    {
+      "againstProductId": "P485",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006198347107438017,
+        "normalised": 0.006198347107438017,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.006198347107438017
+      }
+    },
+    {
+      "againstProductId": "P530",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.006048387096774193,
+        "normalised": 0.006048387096774193,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.006048387096774193
+      }
+    },
+    {
+      "againstProductId": "P103",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.003838771593090211,
+        "normalised": 0.0057692307692307696,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "normalised",
+        "score": 0.0057692307692307696
+      }
+    },
+    {
+      "againstProductId": "P426",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004629629629629629,
+        "normalised": 0.004629629629629629,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004629629629629629
+      }
+    },
+    {
+      "againstProductId": "P518",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004576659038901602,
+        "normalised": 0.004576659038901602,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004576659038901602
+      }
+    },
+    {
+      "againstProductId": "P395",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.004545454545454545,
+        "normalised": 0.004545454545454545,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004545454545454545
+      }
+    },
+    {
+      "againstProductId": "P482",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0044943820224719105,
+        "normalised": 0.0044943820224719105,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0044943820224719105
+      }
+    },
+    {
+      "againstProductId": "P479",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004424778761061947,
+        "normalised": 0.004424778761061947,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004424778761061947
+      }
+    },
+    {
+      "againstProductId": "P130",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.00437636761487965,
+        "normalised": 0.00437636761487965,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00437636761487965
+      }
+    },
+    {
+      "againstProductId": "P393",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.00437636761487965,
+        "normalised": 0.00437636761487965,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00437636761487965
+      }
+    },
+    {
+      "againstProductId": "P387",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004338394793926247,
+        "normalised": 0.004338394793926247,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004338394793926247
+      }
+    },
+    {
+      "againstProductId": "P417",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004301075268817204,
+        "normalised": 0.004301075268817204,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004301075268817204
+      }
+    },
+    {
+      "againstProductId": "P508",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004301075268817204,
+        "normalised": 0.004301075268817204,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004301075268817204
+      }
+    },
+    {
+      "againstProductId": "P391",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.00423728813559322,
+        "normalised": 0.00423728813559322,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00423728813559322
+      }
+    },
+    {
+      "againstProductId": "P430",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004228329809725159,
+        "normalised": 0.004228329809725159,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004228329809725159
+      }
+    },
+    {
+      "againstProductId": "P529",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004140786749482402,
+        "normalised": 0.004140786749482402,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004140786749482402
+      }
+    },
+    {
+      "againstProductId": "P546",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004132231404958678,
+        "normalised": 0.004132231404958678,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004132231404958678
+      }
+    },
+    {
+      "againstProductId": "P548",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004132231404958678,
+        "normalised": 0.004132231404958678,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004132231404958678
+      }
+    },
+    {
+      "againstProductId": "P178",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004123711340206186,
+        "normalised": 0.004123711340206186,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004123711340206186
+      }
+    },
+    {
+      "againstProductId": "P547",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004056795131845842,
+        "normalised": 0.004056795131845842,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004056795131845842
+      }
+    },
+    {
+      "againstProductId": "P534",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.00404040404040404,
+        "normalised": 0.00404040404040404,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.00404040404040404
+      }
+    },
+    {
+      "againstProductId": "P524",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.004008016032064128,
+        "normalised": 0.004008016032064128,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.004008016032064128
+      }
+    },
+    {
+      "againstProductId": "P502",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0025380710659898475,
+        "normalised": 0.0025380710659898475,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0025380710659898475
+      }
+    },
+    {
+      "againstProductId": "P495",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002457002457002457,
+        "normalised": 0.002457002457002457,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002457002457002457
+      }
+    },
+    {
+      "againstProductId": "P436",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002421307506053269,
+        "normalised": 0.002421307506053269,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002421307506053269
+      }
+    },
+    {
+      "againstProductId": "P478",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.0024096385542168677,
+        "normalised": 0.0024096385542168677,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0024096385542168677
+      }
+    },
+    {
+      "againstProductId": "P034",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.002369668246445498,
+        "normalised": 0.002369668246445498,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002369668246445498
+      }
+    },
+    {
+      "againstProductId": "P449",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.002364066193853428,
+        "normalised": 0.002364066193853428,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002364066193853428
+      }
+    },
+    {
+      "againstProductId": "P475",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.0023584905660377358,
+        "normalised": 0.0023584905660377358,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0023584905660377358
+      }
+    },
+    {
+      "againstProductId": "P549",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0.002347417840375587,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "normalised",
+        "score": 0.002347417840375587
+      }
+    },
+    {
+      "againstProductId": "P039",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.002336448598130841,
+        "normalised": 0.002336448598130841,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002336448598130841
+      }
+    },
+    {
+      "againstProductId": "P102",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.002331002331002331,
+        "normalised": 0.002331002331002331,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002331002331002331
+      }
+    },
+    {
+      "againstProductId": "P218",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002325581395348837,
+        "normalised": 0.002325581395348837,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002325581395348837
+      }
+    },
+    {
+      "againstProductId": "P429",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0023148148148148147,
+        "normalised": 0.0023148148148148147,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0023148148148148147
+      }
+    },
+    {
+      "againstProductId": "P011",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.0023094688221709007,
+        "normalised": 0.0023094688221709007,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0023094688221709007
+      }
+    },
+    {
+      "againstProductId": "P024",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.0023094688221709007,
+        "normalised": 0.0023094688221709007,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0023094688221709007
+      }
+    },
+    {
+      "againstProductId": "P279",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.002257336343115124,
+        "normalised": 0.002257336343115124,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002257336343115124
+      }
+    },
+    {
+      "againstProductId": "P356",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002257336343115124,
+        "normalised": 0.002257336343115124,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002257336343115124
+      }
+    },
+    {
+      "againstProductId": "P330",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0.0022271714922048997,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "normalised",
+        "score": 0.0022271714922048997
+      }
+    },
+    {
+      "againstProductId": "P481",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0022222222222222222,
+        "normalised": 0.0022222222222222222,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0022222222222222222
+      }
+    },
+    {
+      "againstProductId": "P511",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0022222222222222222,
+        "normalised": 0.0022222222222222222,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0022222222222222222
+      }
+    },
+    {
+      "againstProductId": "P151",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0022172949002217295,
+        "normalised": 0.0022172949002217295,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0022172949002217295
+      }
+    },
+    {
+      "againstProductId": "P434",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0022123893805309734,
+        "normalised": 0.0022123893805309734,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0022123893805309734
+      }
+    },
+    {
+      "againstProductId": "P175",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0022026431718061676,
+        "normalised": 0.0022026431718061676,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0022026431718061676
+      }
+    },
+    {
+      "againstProductId": "P012",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0.0021929824561403508,
+        "normalised": 0.0021929824561403508,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021929824561403508
+      }
+    },
+    {
+      "againstProductId": "P516",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021929824561403508,
+        "normalised": 0.0021929824561403508,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021929824561403508
+      }
+    },
+    {
+      "againstProductId": "P437",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002188183807439825,
+        "normalised": 0.002188183807439825,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002188183807439825
+      }
+    },
+    {
+      "againstProductId": "P519",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021691973969631237,
+        "normalised": 0.0021691973969631237,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021691973969631237
+      }
+    },
+    {
+      "againstProductId": "P390",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021598272138228943,
+        "normalised": 0.0021598272138228943,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021598272138228943
+      }
+    },
+    {
+      "againstProductId": "P137",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021551724137931034,
+        "normalised": 0.0021551724137931034,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021551724137931034
+      }
+    },
+    {
+      "againstProductId": "P389",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021551724137931034,
+        "normalised": 0.0021551724137931034,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021551724137931034
+      }
+    },
+    {
+      "againstProductId": "P131",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002150537634408602,
+        "normalised": 0.002150537634408602,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002150537634408602
+      }
+    },
+    {
+      "againstProductId": "P488",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002150537634408602,
+        "normalised": 0.002150537634408602,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002150537634408602
+      }
+    },
+    {
+      "againstProductId": "P143",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002145922746781116,
+        "normalised": 0.002145922746781116,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002145922746781116
+      }
+    },
+    {
+      "againstProductId": "P240",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021413276231263384,
+        "normalised": 0.0021413276231263384,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021413276231263384
+      }
+    },
+    {
+      "againstProductId": "P328",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002136752136752137,
+        "normalised": 0.002136752136752137,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002136752136752137
+      }
+    },
+    {
+      "againstProductId": "P522",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002136752136752137,
+        "normalised": 0.002136752136752137,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002136752136752137
+      }
+    },
+    {
+      "againstProductId": "P125",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021321961620469083,
+        "normalised": 0.0021321961620469083,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021321961620469083
+      }
+    },
+    {
+      "againstProductId": "P477",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0021321961620469083,
+        "normalised": 0.0021321961620469083,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0021321961620469083
+      }
+    },
+    {
+      "againstProductId": "P388",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002109704641350211,
+        "normalised": 0.002109704641350211,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002109704641350211
+      }
+    },
+    {
+      "againstProductId": "P512",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002109704641350211,
+        "normalised": 0.002109704641350211,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002109704641350211
+      }
+    },
+    {
+      "againstProductId": "P247",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020920502092050207,
+        "normalised": 0.0020920502092050207,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020920502092050207
+      }
+    },
+    {
+      "againstProductId": "P140",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020876826722338203,
+        "normalised": 0.0020876826722338203,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020876826722338203
+      }
+    },
+    {
+      "againstProductId": "P300",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020876826722338203,
+        "normalised": 0.0020876826722338203,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020876826722338203
+      }
+    },
+    {
+      "againstProductId": "P180",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020833333333333333,
+        "normalised": 0.0020833333333333333,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020833333333333333
+      }
+    },
+    {
+      "againstProductId": "P537",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020833333333333333,
+        "normalised": 0.0020833333333333333,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020833333333333333
+      }
+    },
+    {
+      "againstProductId": "P513",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002079002079002079,
+        "normalised": 0.002079002079002079,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002079002079002079
+      }
+    },
+    {
+      "againstProductId": "P521",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002070393374741201,
+        "normalised": 0.002070393374741201,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002070393374741201
+      }
+    },
+    {
+      "againstProductId": "P526",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0020491803278688526,
+        "normalised": 0.0020491803278688526,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0020491803278688526
+      }
+    },
+    {
+      "againstProductId": "P538",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.002028397565922921,
+        "normalised": 0.002028397565922921,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.002028397565922921
+      }
+    },
+    {
+      "againstProductId": "P472",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0019569471624266144,
+        "normalised": 0.0019569471624266144,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0019569471624266144
+      }
+    },
+    {
+      "againstProductId": "P483",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0019342359767891683,
+        "normalised": 0.0019342359767891683,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0019342359767891683
+      }
+    },
+    {
+      "againstProductId": "P111",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0.0019157088122605363,
+        "normalised": 0.0019157088122605363,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0.0019157088122605363
+      }
+    },
+    {
+      "againstProductId": "P001",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P002",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P004",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P005",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P006",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P007",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P008",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P009",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P013",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P014",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P015",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P016",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P017",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P018",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P019",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P020",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P021",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P022",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P023",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P025",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P026",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P027",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P028",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P029",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P030",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P031",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P032",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P033",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P035",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P036",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P037",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P038",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P040",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P041",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P042",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P043",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P044",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P045",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P046",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P047",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P049",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P101",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P104",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P105",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P106",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P107",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P108",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P109",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P110",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P113",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P115",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P117",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P118",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P119",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P120",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P121",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P122",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P123",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P124",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P126",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P132",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P133",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P134",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P139",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P145",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P147",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P152",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P176",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P181",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P204",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P212",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P213",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P215",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P216",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P241",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P248",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P249",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P282",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P292",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P295",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P319",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P320",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P321",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P322",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P327",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P331",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P332",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P333",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P334",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P338",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P355",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P363",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P372",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P373",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P374",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P375",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P376",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P377",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P378",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P379",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P380",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P381",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P385",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P396",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P397",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P418",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P419",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P420",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P421",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P427",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P428",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P431",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P435",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P447",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P473",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P484",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P494",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P496",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P497",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P498",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P499",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P500",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P501",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P503",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P504",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P510",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P533",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P535",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P536",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P545",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P553",
+      "againstPopulation": "draft",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P580",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P586",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    },
+    {
+      "againstProductId": "P608",
+      "againstPopulation": "active",
+      "scores": {
+        "raw": 0,
+        "normalised": 0,
+        "opening": 0
+      },
+      "peak": {
+        "measure": "raw",
+        "score": 0
+      }
+    }
+  ],
+  "exceeded": []
+}
