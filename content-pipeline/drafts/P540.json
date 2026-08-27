@@ -1,0 +1,84 @@
+{
+  "productId": "P540",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti tarnish rose vine bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "classy gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "comes without box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Product comes without box."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P540.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P540/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P540-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P540/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "legant and feminine, this anti tarnish rose vine bracelet features delicate red floral accents with green leaf detailing on a classy gold finish. Perfect for daily wear, date nights, gifting, and aesthetic jewelry lovers. Lightweight, stylish, and comfortable to wear.\nNote: Product comes without box.",
+    "referenceTitle": "Rose Vine Anti Tarnish tulip Bracelet for Women",
+    "originalId": "1006",
+    "originalSku": "MJ-515",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-515-rose-vine-anti-tarnish-tulip-bracelet-for-women-1006",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

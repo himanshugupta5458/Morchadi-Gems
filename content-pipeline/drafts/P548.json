@@ -1,0 +1,67 @@
+{
+  "productId": "P548",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "crystal leaf accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "blossom charms with bow centerpiece",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling white blossom charms, crystal leaf accents, and an elegant bow centerpiece"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P548.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P548/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "🤍 Delicate floral bracelet featuring sparkling white blossom charms, crystal leaf accents, and an elegant bow centerpiece. A timeless accessory perfect for gifting and everyday wear.",
+    "referenceTitle": "White Blossom Bow Bracelet for Women",
+    "originalId": "1014",
+    "originalSku": "MJ-620",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-620-white-blossom-bow-bracelet-for-women-1014",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

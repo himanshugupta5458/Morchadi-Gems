@@ -1,0 +1,95 @@
+{
+  "productId": "P550",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Chain material",
+      "value": "gold-toned chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold chain bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Charm style",
+      "value": "dangling ball charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "adorned with dangling ball charms that catch the light beautifully"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp type",
+      "value": "adjustable lobster clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable lobster clasp"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P550.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P550/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P550-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P550/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price, ₹86 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Meet your new everyday favourite — a delicate gold chain bracelet adorned with dangling ball charms that catch the light beautifully. Adjustable lobster clasp ensures a perfect fit for all wrist sizes. Anti-tarnish finish keeps it looking brand new, from casual brunches to festive occasions.",
+    "referenceTitle": "Anti Tarnish Gold Ball Charm Bracelet for Women",
+    "originalId": "1016",
+    "originalSku": "MJ-033",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-033-anti-tarnish-gold-ball-charm-bracelet-for-women-1016",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

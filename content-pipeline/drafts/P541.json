@@ -1,0 +1,90 @@
+{
+  "productId": "P541",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti tarnish purple floral bow bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "comes without box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Product comes without box."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P541.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P541/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P541-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P541/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P541-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P541/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a cute luxury touch to your look with this anti tarnish purple floral bow bracelet. Designed with sparkling floral details and a delicate gold finish, this bracelet is perfect for daily wear, gifting, and special occasions. Lightweight, elegant, and stylish.\nNote: Product comes without box.",
+    "referenceTitle": "Purple Floral Bow Anti Tarnish Bracelet",
+    "originalId": "1007",
+    "originalSku": "MJ-480",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-480-purple-floral-bow-anti-tarnish-bracelet-1007",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

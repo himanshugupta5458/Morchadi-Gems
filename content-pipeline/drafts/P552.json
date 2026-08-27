@@ -1,0 +1,100 @@
+{
+  "productId": "P552",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning CZ tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone cut",
+      "value": "square solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "bold square solitaire centerpiece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "baguette-cut crystals (glass or cubic zirconia, unclear from text)",
+      "displayTerm": "crystals",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "full row of sparkling baguette-cut crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp type",
+      "value": "box clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "box clasp ensures a secure, elegant closure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P552.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P552/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price, ₹130 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Turn heads with this stunning CZ tennis bracelet featuring a bold square solitaire centerpiece surrounded by a full row of sparkling baguette-cut crystals. The box clasp ensures a secure, elegant closure. Anti-tarnish finish makes it ideal for brides, bridesmaids, or anyone who loves timeless glamour.",
+    "referenceTitle": "Anti Tarnish Gold CZ Tennis Bracelet with Square Solitaire Stone",
+    "originalId": "1018",
+    "originalSku": "MJ-036",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-036-anti-tarnish-gold-cz-tennis-bracelet-with-square-solitaire-stone-1018",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

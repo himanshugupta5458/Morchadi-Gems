@@ -1,0 +1,82 @@
+{
+  "productId": "P532",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "Halter Top, Anti-Tarnish Pearl Bracelet, Claw Clips x2, Scrunchies, Sticky Notes, Dairy Milk Silk, KitKat, Birthday Bunting + Fairy Lights",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "👗 Halter Top | 💎 Anti-Tarnish Pearl Bracelet | 🌸 Claw Clips x2 | 🎀 Scrunchies | 📝 Sticky Notes | 🍫 Dairy Milk Silk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone (hamper bracelet component)",
+      "value": "pearl (real or faux, unclear from text)",
+      "displayTerm": "Pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-Tarnish Pearl Bracelet"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P532.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P532-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P532-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "The most aesthetic Pinterest-y birthday hamper for her ✨\n👗 Halter Top | 💎 Anti-Tarnish Pearl Bracelet | 🌸 Claw Clips x2 | 🎀 Scrunchies | 📝 Sticky Notes | 🍫 Dairy Milk Silk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Pinteresty Birthday Hamper 🎀",
+    "originalId": "995",
+    "originalSku": "MJ-471",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-471-pinteresty-birthday-hamper-995",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
