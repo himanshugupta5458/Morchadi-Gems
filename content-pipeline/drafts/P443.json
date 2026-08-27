@@ -1,0 +1,88 @@
+{
+  "productId": "P443",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystals",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering crystals"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "brilliant silver luster"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Eyelash and Evil Eye motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "uniquely detailed eyelash evil eye bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it away from moisture and perfumes, storing it safely in a dry place after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P443.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P443/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Make a chic statement with this uniquely detailed eyelash evil eye bracelet. Adorned with shimmering crystals, this high-fashion charm is the perfect protective accessory. To maintain its brilliant silver luster, we recommend keeping it away from moisture and perfumes, storing it safely in a dry place after every wear.",
+    "referenceTitle": "Sparkling Silver Eyelash Evil Eye Bracelet",
+    "originalId": "897",
+    "originalSku": "MJ-572",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-572-sparkling-silver-eyelash-evil-eye-bracelet-897",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under ₹99'); raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

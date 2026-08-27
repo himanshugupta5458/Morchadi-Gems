@@ -1,0 +1,88 @@
+{
+  "productId": "P442",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling crystal accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "radiant silver-toned luster"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Tree of Life and Evil Eye motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stunning Tree of Life evil eye bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store in a dry, safe place after each wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "kept away from moisture and perfumes. Store in a dry, safe place after each wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P442.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P442/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Celebrate growth and protection with this stunning Tree of Life evil eye bracelet. Featuring sparkling crystal accents, this high-fashion statement piece maintains its radiant silver-toned luster best when kept away from moisture and perfumes. Store in a dry, safe place after each wear to preserve its brilliant finish.",
+    "referenceTitle": "Silver Tree of Life Evil Eye Bracelet",
+    "originalId": "896",
+    "originalSku": "MJ-558",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-558-silver-tree-of-life-evil-eye-bracelet-896",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under ₹99'); raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

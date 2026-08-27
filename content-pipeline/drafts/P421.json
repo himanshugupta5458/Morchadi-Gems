@@ -1,0 +1,70 @@
+{
+  "productId": "P421",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "glass bangles"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P421.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P421/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Caramel Tint)",
+    "originalId": "874",
+    "originalSku": "MJ-535",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-535-set-of-8-viral-jelly-bangle-caramel-tint-874",
+    "originalCategories": [
+      "jelly bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only"
+    }
+  ],
+  "notes": [
+    "referenceTitle and originalCategories call this a 'Jelly' bangle, but rawContent explicitly describes it as 'glass bangles' (fragile) — flagged for review; material captured as stated in source text."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

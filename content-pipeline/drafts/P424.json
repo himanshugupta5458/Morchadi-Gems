@@ -1,0 +1,70 @@
+{
+  "productId": "P424",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-toned piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and store in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping this fashionable piece away from moisture and storing it in a dry place after use"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P424.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P424/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P424-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P424/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of celestial charm to your look with our Cut-out Star Pendant Necklace. This dainty, gold-toned piece is designed for the modern trendsetter, offering a chic and lightweight aesthetic that's perfect for layering or wearing solo as a fashion statement. To ensure your stars stay shining bright, we recommend keeping this fashionable piece away from moisture and storing it in a dry place after use.",
+    "referenceTitle": "Star Pendant Necklace in Gold Finish",
+    "originalId": "877",
+    "originalSku": "MJ-585",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-585-star-pendant-necklace-in-gold-finish-877",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

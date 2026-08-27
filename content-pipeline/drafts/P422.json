@@ -1,0 +1,70 @@
+{
+  "productId": "P422",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-toned necklace"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from water and perfumes to maintain the golden glow",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it away from water and perfumes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P422.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P422/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P422-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P422/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Embrace effortless elegance with our Sparkling Butterfly Necklace. Designed as a high-fashion statement piece, this delicate gold-toned necklace adds a touch of whimsical charm to any outfit. Perfect for occasion-based styling and trend-forward looks, this piece is crafted for those who love to refresh their jewelry collection with the latest seasonal styles. To maintain its brilliant golden glow, we recommend keeping it away from water and perfumes",
+    "referenceTitle": "Dainty Sparkling Butterfly Pendant Necklace",
+    "originalId": "875",
+    "originalSku": "MJ-204",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-204-dainty-sparkling-butterfly-pendant-necklace-875",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

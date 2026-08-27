@@ -1,0 +1,64 @@
+{
+  "productId": "P426",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "golden glow"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep tucked away in a dry place and avoid direct contact with perfumes and moisture",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it tucked away in a dry place after each use and avoiding direct contact with perfumes and moisture"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P426.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P426/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of feminine charm to your jewelry collection with our exquisite Gold Bow Necklace. This delicate ribbon-style pendant is a must-have fashion statement, designed to catch the light and complement any outfit. To ensure this trend-setting piece remains a staple in your wardrobe, we recommend keeping it tucked away in a dry place after each use and avoiding direct contact with perfumes and moisture to preserve its brilliant golden glow",
+    "referenceTitle": "Gold Bow Necklace",
+    "originalId": "879",
+    "originalSku": "MJ-267",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-267-gold-bow-necklace-879",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

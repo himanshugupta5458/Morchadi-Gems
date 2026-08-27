@@ -1,0 +1,77 @@
+{
+  "productId": "P439",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "brilliant silver shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Anchor and Evil Eye motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anchor and evil eye charm bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid moisture and perfumes; store in original packaging after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "avoid moisture and perfumes, and store in its original packaging after use"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P439.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P439/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Stay grounded and protected with this chic anchor and evil eye charm bracelet. A perfect high-fashion accessory for coastal-inspired looks, it keeps its brilliant silver shine best when kept dry. To preserve its luster, avoid moisture and perfumes, and store in its original packaging after use.",
+    "referenceTitle": "Sparkling Silver Anchor & Evil Eye Bracelet",
+    "originalId": "893",
+    "originalSku": "MJ-571",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-571-sparkling-silver-anchor-evil-eye-bracelet-893",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under ₹99'); raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

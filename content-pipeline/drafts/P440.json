@@ -1,0 +1,77 @@
+{
+  "productId": "P440",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "dainty silver-toned bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Ship Wheel and Evil Eye motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling ship wheel with a protective evil eye center"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely away from perfumes and moisture after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "maintains its radiant shine best when kept dry and stored safely away from perfumes and moisture after every wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P440.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P440/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Navigate your day with style and protection. This dainty silver-toned bracelet features a sparkling ship wheel with a protective evil eye center. A high-fashion statement piece, it maintains its radiant shine best when kept dry and stored safely away from perfumes and moisture after every wear.",
+    "referenceTitle": "Silver Ship Wheel Evil Eye Bracelet",
+    "originalId": "894",
+    "originalSku": "MJ-555",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-555-silver-ship-wheel-evil-eye-bracelet-894",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bracelets' from rawContent/originalCategories ('Bracelet under ₹99'); raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

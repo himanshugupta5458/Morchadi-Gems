@@ -1,0 +1,70 @@
+{
+  "productId": "P425",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "golden luster"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep tucked away in a dry place and avoid contact with perfumes or water",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it tucked away in a dry place after your day's adventures and avoiding contact with perfumes or water"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P425.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P425/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P425-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P425/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Step into the 'Coquette' trend with our exquisite Gold Bow Pendant Necklace. This ultra-feminine piece features a fluid ribbon design that adds a soft, romantic touch to any ensemble. Crafted as a high-fashion statement, it's the perfect accessory for light-catching everyday wear. To preserve the brilliant golden luster of this delicate piece, we recommend keeping it tucked away in a dry place after your day's adventures and avoiding contact with perfumes or water.",
+    "referenceTitle": "Dainty Gold Bow Pendant Necklace",
+    "originalId": "878",
+    "originalSku": "MJ-203",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-203-dainty-gold-bow-pendant-necklace-878",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
