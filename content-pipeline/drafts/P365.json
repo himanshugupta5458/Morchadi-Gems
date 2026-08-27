@@ -1,0 +1,84 @@
+{
+  "productId": "P365",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Set Contents",
+      "value": "Necklace, Bracelet, and Ring (3-piece set)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Includes:\n• Necklace\n• Bracelet\n• Ring"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P365.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P365/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P365-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P365/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P365-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P365/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P365-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P365/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P365-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P365/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹250 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "This elegant Infinity Set represents forever love and connection. Perfect for daily wear and gifting.\n✨ Includes:\n• Necklace\n• Bracelet\n• Ring\nPerfect gift for girlfriend or wife.",
+    "referenceTitle": "Infinity Necklace Bracelet Ring Set",
+    "originalId": "805",
+    "originalSku": "MJ-347",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-347-infinity-necklace-bracelet-ring-set-805",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "This is a 3-piece combo set (necklace + bracelet + ring) categorized as 'necklaces' by Stage 0 (multiple mapped source categories). Category carried through unmodified per pipeline rules since it was non-null; flagging for owner review — 'gift-hampers' (combo-set) may be a better fit."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

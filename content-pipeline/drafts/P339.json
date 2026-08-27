@@ -1,0 +1,101 @@
+{
+  "productId": "P339",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "emerald green glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "emerald green glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "golden dotted detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate golden dotted detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "smooth, glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "smooth, glossy glass finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P339.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P339/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P339-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P339/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of timeless elegance to your look with these emerald green glass bangles, beautifully adorned with delicate golden dotted detailing. Crafted with a smooth, glossy glass finish, these bangles reflect light gracefully and enhance their rich green hue. Perfectly stacked for a luxurious appearance, they are ideal for festive occasions, weddings, sangeet, mehndi, or traditional daily wear. Pair them with sarees, lehengas, or ethnic suits to elevate your Indian ethnic style effortlessly. A must-have accessory for women who love classic yet elegant jewelry.",
+    "referenceTitle": "Raindrop Green Glass Bangles",
+    "originalId": "773",
+    "originalSku": "MJ-484",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-484-raindrop-green-glass-bangles-773",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

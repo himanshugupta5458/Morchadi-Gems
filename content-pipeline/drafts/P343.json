@@ -1,0 +1,125 @@
+{
+  "productId": "P343",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set Includes: 12 Glass Bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Emerald Green"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "golden dotted detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Golden dotted detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "smooth, glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Finish: Smooth & glossy glass finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle gently and store in a soft pouch to prevent breakage",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instructions: Handle gently and store in a soft pouch to prevent breakage"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P343.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P343/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P343-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P343/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of classic Indian elegance to your jewelry collection with this stunning emerald green glass bangles set, featuring 12 beautifully crafted bangles. Designed with delicate golden dotted embellishments, each bangle reflects traditional artistry and adds a graceful sparkle to the rich green hue.\nCrafted from premium-quality glass, these bangles have a smooth, glossy finish that enhances their shine and makes them comfortable to wear as a complete stack. The vibrant emerald green color symbolizes prosperity and tradition, making this set a perfect choice for weddings, festivals, pooja ceremonies, sangeet, mehndi, and cultural celebrations.\nWhether styled with a saree, lehenga, or ethnic suit, these bangles effortlessly elevate your look with timeless charm. Elegant yet versatile, this green bangle set is ideal for women who love traditional jewelry and also makes a thoughtful gift for festivals, weddings, and special occasions.\nProduct Highlights:\n- Set Includes: 12 Glass Bangles\n- Material: High-quality glass\n- Color: Emerald Green\n- Design: Golden dotted detailing\n- Finish: Smooth & glossy glass finish\n- Style: Traditional / Ethnic / Festive\n- Occasions: Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle gently and store in a soft pouch to prevent breakage",
+    "referenceTitle": "Emerald Green Glass Bangles Set of 12 with Golden Dotted Work",
+    "originalId": "777",
+    "originalSku": "MJ-246",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-246-emerald-green-glass-bangles-set-of-12-with-golden-dotted-work-777",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

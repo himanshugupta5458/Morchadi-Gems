@@ -1,0 +1,114 @@
+{
+  "productId": "P340",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Premium quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "multicolor (blue, pink, green, gold tones)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Multicolor (Blue, Pink, Green, Gold tones)"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "golden dotted detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Elegant golden dotted detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "smooth, glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Finish: Smooth, glossy glass finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle with care, store in a soft pouch to avoid breakage",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instructions: Handle with care, store in a soft pouch to avoid breakage"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P340.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P340/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P340-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P340/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Bring vibrant elegance to your ethnic wardrobe with this beautifully crafted multicolor glass bangles set. Designed with a harmonious blend of rich hues including royal blue, deep pink, emerald green, and golden tones, these bangles instantly elevate any traditional outfit. Each bangle is adorned with delicate golden dotted embellishments, adding a refined handcrafted touch and a luxurious finish.\nMade from high-quality glass, the bangles feature a smooth, glossy surface that reflects light gracefully, enhancing their color and shine. The perfectly aligned stack creates a bold yet elegant look, making this set an ideal choice for festive occasions, weddings, sangeet, mehndi, pooja ceremonies, and cultural celebrations. Whether paired with a saree, lehenga, or ethnic suit, these bangles add timeless Indian charm and sophistication.\nA versatile and eye-catching accessory, this multicolor bangle set is perfect for women who love traditional jewelry with a modern colorful twist. It also makes a thoughtful gift for festivals, weddings, and special occasions.\nProduct Highlights:\n- Material: Premium quality glass\n- Color: Multicolor (Blue, Pink, Green, Gold tones)\n- Design: Elegant golden dotted detailing\n- Finish: Smooth, glossy glass finish\n- Style: Traditional Indian / Festive / Ethnic\n- Occasions: Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle with care, store in a soft pouch to avoid breakage",
+    "referenceTitle": "Set of 12 Multicolor Glass Bangles",
+    "originalId": "774",
+    "originalSku": "MJ-530",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-530-set-of-12-multicolor-glass-bangles-774",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,79 @@
+{
+  "productId": "P367",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "combo-set",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Metal/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Set Contents",
+      "value": "3 stackable finger rings",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 3 Stackable Finger Rings"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P367.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P367/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P367-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P367/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P367-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P367/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "This Trending Gold Plated Set of 3 Stackable Finger Rings balances design, versatility, and craftsmanship, making it an ideal addition to any collection",
+    "referenceTitle": "Trending Gold Plated Set of 3 Stackable Finger Rings",
+    "originalId": "808",
+    "originalSku": "MJ-599",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-599-trending-gold-plated-set-of-3-stackable-finger-rings-808",
+    "originalCategories": [
+      "Best selling",
+      "combo"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Source description is a single generic marketing sentence; only material and set-quantity facts are honestly extractable from it."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

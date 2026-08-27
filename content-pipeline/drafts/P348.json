@@ -1,0 +1,114 @@
+{
+  "productId": "P348",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "rust orange",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "rust orange glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold bead embellishments",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "fine gold bead embellishments"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight, smooth, and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these bangles are lightweight, smooth, and comfortable for all-day wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P348.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P348/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P348-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P348/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add warmth and vibrance to your jewelry collection with this elegant set of 12 rust orange glass bangles. Featuring a rich, earthy orange tone with fine gold bead embellishments, this bangle set offers a perfect balance of traditional charm and contemporary appeal. The subtle shimmer and detailed finish enhance their beauty, making them ideal for festive wear and special occasions.\nCrafted from high-quality glass, these bangles are lightweight, smooth, and comfortable for all-day wear. The bold rust orange shade pairs beautifully with ethnic outfits in neutral, gold, green, or contrasting hues, making this set a versatile accessory for weddings, festivals, poojas, and celebrations. Whether styled alone or paired with other bangles, this set adds a graceful and polished touch to any look.\nPerfect for personal use or gifting, these bangles reflect timeless craftsmanship and effortless elegance.\nKey Points:\n- Set of 12 premium glass bangles\n- Rich rust orange color with delicate gold bead detailing\n- Subtle shimmer for an elegant festive look\n- Lightweight and comfortable for extended wear\n- Ideal for weddings, festivals, poojas, and celebrations\n- Complements sarees, lehengas, and traditional outfits\n- A beautiful gifting option for special occasions",
+    "referenceTitle": "Rust Orange Glass Bangles – Set of 12 with Gold Bead Accents",
+    "originalId": "782",
+    "originalSku": "MJ-521",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-521-rust-orange-glass-bangles-set-of-12-with-gold-bead-accents-782",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

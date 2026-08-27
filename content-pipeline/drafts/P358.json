@@ -1,0 +1,91 @@
+{
+  "productId": "P358",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Metal",
+      "value": "gold-tone chain (plating/base metal unclear from text)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold chain and sparkling stone"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold chain and sparkling stone"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight Gold Chain"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material Property",
+      "value": "skin-friendly",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Skin-Friendly Material"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P358.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P358/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price, ₹70 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add elegance to your neckline with this beautiful solitaire pendant necklace. Featuring a delicate gold chain and sparkling stone, this necklace is ideal for daily wear, office outfits, and special occasions.\n✨ Lightweight Gold Chain\n✨ Sparkling Solitaire Pendant\n✨ Skin-Friendly Material\n✨ Perfect Gift Option",
+    "referenceTitle": "Minimal Solitaire Pendant Necklace for Women",
+    "originalId": "794",
+    "originalSku": "MJ-416",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-416-minimal-solitaire-pendant-necklace-for-women-794",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

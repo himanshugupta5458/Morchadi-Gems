@@ -1,0 +1,114 @@
+{
+  "productId": "P351",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from premium-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "royal purple",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "royal purple glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold bead detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold bead detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight, smooth, and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these bangles are lightweight, smooth, and comfortable for extended wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P351.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P351/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P351-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P351/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of regal elegance to your jewelry collection with this stunning set of 12 royal purple glass bangles. Designed in a rich, deep purple hue and embellished with delicate gold bead detailing, these bangles offer a luxurious look with a subtle festive shimmer. The intricate finish and vibrant color make them a perfect choice for weddings, festivals, and special celebrations.\nCrafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for extended wear. The royal purple shade pairs beautifully with gold, cream, pink, and contrasting ethnic outfits, making this set a versatile addition to your accessory collection. Whether styled on their own or layered with complementary bangles, they bring sophistication and charm to any ensemble.\nIdeal for festive styling or gifting, these bangles reflect timeless tradition blended with modern elegance.\nKey Points:\n- Set of 12 premium glass bangles\n- Rich royal purple color with gold bead accents\n- Subtle shimmer for an elegant, festive look\n- Lightweight and comfortable for all-day wear\n- Perfect for weddings, festivals, and special occasions\n- Complements ethnic and festive outfits beautifully\n- A thoughtful gifting option for celebrations",
+    "referenceTitle": "Royal Purple Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "originalId": "785",
+    "originalSku": "MJ-520",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-520-royal-purple-glass-bangles-set-of-12-with-gold-bead-detailing-785",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

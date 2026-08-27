@@ -1,0 +1,125 @@
+{
+  "productId": "P347",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "olive green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "olive green glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold bead detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "fine gold bead detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "soft shimmer finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a soft shimmer that catches the light beautifully"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable to wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P347.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P347/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P347-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P347/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Enhance your jewelry collection with this elegant set of 12 olive green glass bangles, designed to bring timeless beauty and sophistication to your traditional and fusion outfits. Crafted from high-quality glass, these bangles feature a rich olive green base highlighted with fine gold bead detailing and a soft shimmer that catches the light beautifully.\nThe harmonious blend of earthy green tones and gold accents makes this bangle set a versatile choice for festive celebrations, weddings, cultural events, and special occasions. Whether paired with a classic saree, a graceful lehenga, or a stylish salwar suit, these bangles add a refined finishing touch to your look. Lightweight and comfortable to wear, they are ideal for long hours while still making a statement.\nThis set is perfect for those who appreciate traditional craftsmanship with a contemporary aesthetic, making it a lovely addition to your personal collection or a thoughtful gift for someone special.\nKey Points:\n- Set of 12 premium glass bangles\n- Elegant olive green color with gold bead embellishments\n- Subtle shimmer for a refined, festive look\n- Lightweight and comfortable for extended wear\n- Ideal for weddings, festivals, and special occasions\n- Pairs beautifully with sarees, lehengas, and ethnic outfits\n- Great gifting option for celebrations and festivities",
+    "referenceTitle": "Set of 12 Olive Green Glass Bangles with Gold Bead Detailing",
+    "originalId": "781",
+    "originalSku": "MJ-532",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-532-set-of-12-olive-green-glass-bangles-with-gold-bead-detailing-781",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

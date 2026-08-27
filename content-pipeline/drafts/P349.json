@@ -1,0 +1,114 @@
+{
+  "productId": "P349",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "hot pink",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "hot pink glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold bead embellishments",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold bead embellishments"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed to be lightweight and comfortable, these bangles are ideal for all-day wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P349.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P349/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P349-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P349/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a bold and beautiful statement with this stunning set of 12 hot pink glass bangles. Crafted from high-quality glass, these bangles feature a vibrant pink hue enhanced with delicate gold bead embellishments and a soft shimmer that adds a festive glow. The rich color and fine detailing make this set perfect for celebrations, weddings, and special occasions.\nDesigned to be lightweight and comfortable, these bangles are ideal for all-day wear while still adding a touch of glamour to your outfit. The striking hot pink shade pairs beautifully with traditional attire such as sarees, lehengas, and salwar suits, as well as fusion and festive ensembles. Whether worn on their own or stacked with complementary bangles, this set brings elegance, color, and charm to your jewelry collection.\nA timeless accessory with a modern edge, these bangles also make a wonderful gifting option for festive seasons and joyous celebrations.\nKey Points:\n- Set of 12 premium glass bangles\n- Vibrant hot pink color with gold bead accents\n- Subtle shimmer for a festive and elegant finish\n- Lightweight and comfortable for extended wear\n- Ideal for weddings, festivals, and special occasions\n- Complements ethnic and fusion outfits beautifully\n- Perfect gifting choice for celebrations and festivities",
+    "referenceTitle": "Hot Pink Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "originalId": "783",
+    "originalSku": "MJ-341",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-341-hot-pink-glass-bangles-set-of-12-with-gold-bead-detailing-783",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,83 @@
+{
+  "productId": "P364",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Color/Material",
+      "value": "gold-tone with pink heart charm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Gold with Pink Heart"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight & comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P364.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P364-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P364-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a cute romantic touch with this Pink Heart Bracelet. Its minimal and elegant design makes it perfect for everyday wear and gifting.\n✨ Details:\n• Color: Gold with Pink Heart\n• Lightweight & comfortable\n• Trendy aesthetic design\nPerfect for daily wear and gifting.",
+    "referenceTitle": "Minimal Pink Heart Chain Bracelet for Women & Girls",
+    "originalId": "804",
+    "originalSku": "MJ-414",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-414-minimal-pink-heart-chain-bracelet-for-women-girls-804",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "combo",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Raw content describes a 'Pink Heart Bracelet' throughout, but the raw block's category field is 'necklaces' (Stage 0 export note: multiple mapped source categories, chose 'Anti Tarnish Necklaces'). Category carried through unmodified per pipeline rules since it was non-null; flagging for owner review — 'bracelets' looks like the better fit."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

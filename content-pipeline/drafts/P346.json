@@ -1,0 +1,136 @@
+{
+  "productId": "P346",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set Includes: 12 Glass Bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "lime green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color: Lime Green"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "crystal-dotted embellishments",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Crystal dotted embellishments"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate crystal-style dotted embellishments"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "smooth, glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Finish: Smooth & glossy glass finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Handle gently and store in a soft pouch to avoid breakage",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instructions: Handle gently and store in a soft pouch to avoid breakage"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P346.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P346/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P346-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P346/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten your ethnic look with this charming lime green glass bangles set, featuring 12 beautifully crafted bangles designed to create a vibrant and elegant stacked style. Highlighted with delicate crystal-style dotted embellishments, these bangles add a subtle sparkle that perfectly complements the fresh lime green shade.\nMade from premium-quality glass, the bangles offer a smooth, glossy finish that enhances their shine and ensures comfortable wear throughout the day. The refreshing green tone makes this set an excellent choice for festive occasions, weddings, pooja ceremonies, haldi functions, sangeet, and cultural celebrations.\nWhether paired with sarees, lehengas, or ethnic suits, these lime green bangles bring a joyful pop of color while maintaining a traditional aesthetic. Ideal for women who love bright yet elegant accessories, this set also makes a beautiful gift for festivals, weddings, and special occasions.\nProduct Highlights:\n- Set Includes: 12 Glass Bangles\n- Material: High-quality glass\n- Color: Lime Green\n- Design: Crystal dotted embellishments\n- Finish: Smooth & glossy glass finish\n- Style: Traditional / Ethnic / Festive\n- Occasions: Wedding, Festive wear, Haldi, Party, Pooja, Sangeet\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle gently and store in a soft pouch to avoid breakage",
+    "referenceTitle": "Lime Green Glass Bangles Set of 12 with Crystal Dotted Work",
+    "originalId": "780",
+    "originalSku": "MJ-398",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-398-lime-green-glass-bangles-set-of-12-with-crystal-dotted-work-780",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

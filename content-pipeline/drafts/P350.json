@@ -1,0 +1,114 @@
+{
+  "productId": "P350",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Set Quantity",
+      "value": "12 glass bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Color",
+      "value": "ivory white",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "ivory white glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "gold bead detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate gold bead detailing"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight, smooth, and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these bangles are lightweight, smooth, and comfortable for extended wear"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P350.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P350/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P350-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P350/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add timeless elegance to your jewelry collection with this exquisite set of 12 ivory white glass bangles. Featuring a soft, classic white tone beautifully accented with delicate gold bead detailing, this bangle set exudes grace and sophistication. The subtle shimmer and refined finish make these bangles a perfect choice for weddings, festive occasions, and traditional ceremonies.\nCrafted from high-quality glass, these bangles are lightweight, smooth, and comfortable for extended wear. The neutral ivory shade pairs effortlessly with a wide range of outfits, from richly embellished bridal wear to simple ethnic ensembles. Whether worn alone for a minimalist look or stacked with other bangles for added impact, this set offers versatility and timeless appeal.\nIdeal for special occasions or as a thoughtful gift, these bangles are a must-have accessory for those who appreciate classic beauty with a touch of tradition.\nKey Points:\n- Set of 12 premium glass bangles\n- Elegant ivory white color with gold bead accents\n- Subtle shimmer for a graceful, festive finish\n- Lightweight and comfortable for all-day wear\n- Perfect for weddings, festivals, and traditional ceremonies\n- Complements bridal, ethnic, and festive outfits\n- A beautiful gifting option for special occasions",
+    "referenceTitle": "Ivory White Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "originalId": "784",
+    "originalSku": "MJ-354",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-354-ivory-white-glass-bangles-set-of-12-with-gold-bead-detailing-784",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,86 @@
+{
+  "productId": "P357",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring tiny crystal stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Metal/Finish",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this lightweight gold-finish ring pairs beautifully with all outfits"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable Fit"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P357.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P357/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Enhance your everyday look with this elegant thin band ring featuring tiny crystal stones. Designed for minimal lovers, this lightweight gold-finish ring pairs beautifully with all outfits.\n✨ Slim & Stylish Design\n✨ Sparkling Stones\n✨ Adjustable Fit\n✨ Comfortable for Daily Use",
+    "referenceTitle": "Minimal Thin Band Gold Ring for Girls",
+    "originalId": "793",
+    "originalSku": "MJ-417",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-417-minimal-thin-band-gold-ring-for-girls-793",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
