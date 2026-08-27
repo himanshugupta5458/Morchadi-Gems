@@ -5156,5 +5156,1042 @@
         "Kahmiri Watch"
       ]
     }
+  },
+  {
+    "id": "P426",
+    "name": "Gold-Toned Bow Pendant Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P426.webp"
+      ]
+    },
+    "specs": {
+      "material finish": "Gold-toned",
+      "care instructions": "Keep tucked away in a dry place and avoid direct contact with perfumes and moisture"
+    },
+    "description": "A bow shape catches a small swing when you turn or reach for something, in a way a flat charm never quite manages. This one sits in gold-toned metal, a simple ribbon knot with no stones and nothing else asking for attention, which suits a piece meant to sit under a collar or over a plain neckline without a second thought.\n\nGold-toned is the honest description here, not solid gold, and that is exactly what lets a piece like this sell for ₹89 rather than festival prices. The bow itself is the whole design, so it reads as neat rather than busy, at home on an ordinary weekday as much as under a cotton saree blouse for something a little dressier.\n\nTreat it the way most plated pieces ask to be treated. Keep it away from perfume sprays and out of water, and tuck it into a pouch when it's off rather than leaving it loose in a drawer with heavier jewellery.\n\nThere's nothing elaborate being promised, and a small gold bow doesn't need to be. It does one job well. It sits neatly at the base of the throat and looks considered rather than accidental, for less than the cost of a lunch out.",
+    "seo": {
+      "primaryKeyword": "gold bow necklace",
+      "secondaryKeywords": [
+        "gold-toned pendant necklace",
+        "bow necklace for women",
+        "affordable gold necklace"
+      ],
+      "metaTitle": "Gold-Toned Bow Pendant Necklace, Plain Ribbon Knot",
+      "metaDescription": "A simple gold-toned bow pendant, a plain ribbon knot with no stones, made for everyday wear. Neat rather than busy, from just ₹89 at Morchadi Gems.",
+      "imageAlt": "Gold-toned bow pendant necklace with a plain ribbon knot and no stones",
+      "ogTitle": "A Small Gold Bow for an Ordinary Tuesday, ₹89",
+      "ogDescription": "A plain gold-toned bow pendant, no stones, just a neat ribbon knot on a chain. Sits well under a collar or over a saree blouse, from ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P426.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "879",
+      "originalSku": "MJ-267",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-267-gold-bow-necklace-879",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P427",
+    "name": "Gold-Toned Snake Chain Bow Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P427.webp"
+      ]
+    },
+    "specs": {
+      "chain type": "Snake chain",
+      "material finish": "Gold-toned",
+      "care instructions": "Keep dry and away from perfumes; store in original packaging after use"
+    },
+    "description": "A snake chain moves like liquid metal, no visible links, just one continuous ripple that catches light along its length before you reach the pendant. This one carries a small gold-toned bow at the end of it, a plain ribbon shape that stays quiet next to all that shine rather than competing with it.\n\nThe finish is gold-toned rather than solid gold, and that honest distinction is what keeps a piece built this way at ₹89 instead of several times that. The snake chain does more of the visual work here than the bow, which makes this the necklace to reach for when you want the metal itself to read as the main event and the pendant as a small finishing note rather than the headline.\n\nKeep it dry and away from perfumes, and store it in its original packaging when it isn't on. That does more for a plated chain's lifespan than people usually expect from something this size.\n\nIt sits close to the collarbone and layers easily under a kurta collar or against a plain top, one clean line of gold that doesn't need anything else around the neck to make its point.",
+    "seo": {
+      "primaryKeyword": "gold snake chain bow necklace",
+      "secondaryKeywords": [
+        "gold-toned snake chain necklace",
+        "bow pendant necklace",
+        "layering necklace for women"
+      ],
+      "metaTitle": "Gold-Toned Snake Chain Necklace with Bow Pendant, ₹89",
+      "metaDescription": "A sleek gold-toned snake chain with a small bow pendant at the end, plated finish, ₹89. Dispatch in 2 days, easy to layer under a kurta collar.",
+      "imageAlt": "Sleek gold-toned snake chain necklace with a small ribbon bow pendant",
+      "ogTitle": "One Continuous Ripple of Gold, Bow at the End",
+      "ogDescription": "A gold-toned snake chain that moves like liquid metal, finished with a small bow pendant. Plated, not solid gold, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P427.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "880",
+      "originalSku": "MJ-228",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-228-elegant-gold-snake-chain-bow-necklace-880",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P428",
+    "name": "Gold-Toned Beaded Chain Bow Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P428.webp"
+      ]
+    },
+    "specs": {
+      "design": "Gold-toned beaded chain with sculpted ribbon (bow) pendant",
+      "colour": "Gold-toned",
+      "care": "Avoid perfumes and moisture; store in a dry place after use"
+    },
+    "description": "Beads and a smooth ribbon don't usually share a chain, which is what makes this one worth a second look. A row of small gold-toned beads leads into a sculpted bow pendant, so the texture changes right where the eye lands, catching light two different ways instead of one flat shine down the whole length.\n\nThe colour is gold-toned rather than solid gold, honestly plated rather than precious, and that is the whole reason a detailed two-texture piece like this can sell for ₹89. The bow itself is shaped rather than flat-stamped, so it holds a bit of dimension even at a small size.\n\nAvoid perfumes and moisture where you can, and store it in a dry place after wear. Beaded chains tend to hold residue in the gaps between beads if they're left out, so a quick wipe after a long day helps more than it seems like it should.\n\nIt's an everyday piece first. Wear it with a plain top on a normal day, or let the beading do a bit more work under an evening kurta when you want texture without reaching for a second necklace.",
+    "seo": {
+      "primaryKeyword": "gold beaded chain bow necklace",
+      "secondaryKeywords": [
+        "gold-toned beaded necklace",
+        "bow pendant necklace for women",
+        "textured chain necklace"
+      ],
+      "metaTitle": "Gold-Toned Beaded Chain Necklace with Bow Pendant, ₹89",
+      "metaDescription": "A gold-toned beaded chain leads into a sculpted bow pendant, two textures on one necklace instead of a flat shine. Plated finish, ₹89, dispatch in 2 days.",
+      "imageAlt": "Gold-toned beaded chain necklace with a sculpted ribbon bow pendant",
+      "ogTitle": "Beads Meet a Sculpted Bow on One Gold Chain",
+      "ogDescription": "A row of gold-toned beads runs into a shaped ribbon bow pendant, two textures instead of one flat shine. Plated, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P428.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "881",
+      "originalSku": "MJ-265",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-265-gold-beaded-chain-bow-necklace-881",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P429",
+    "name": "Textured Gold Bow Pendant Necklace",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P429.webp"
+      ]
+    },
+    "specs": {
+      "design": "Detailed ribbon (bow) pendant on a twisted chain",
+      "care": "Avoid moisture; store in a dry, safe place after wear"
+    },
+    "description": "Look closely at the ribbon loops on this pendant and there's a fine texture running across the metal, tiny lines catching light unevenly rather than one smooth gold surface. It's the kind of detail that reads better in person than in a small product photo, sitting at the end of a twisted chain that adds its own bit of shape before you even reach the bow.\n\nThe whole piece is gold-toned plating rather than solid gold, which is what makes a detailed pendant like this available at ₹89 instead of at prices that detail would usually carry. The twisted chain and the textured bow share a slightly vintage-inspired feel without either one trying too hard about it.\n\nKeep it away from moisture, and store it somewhere dry and safe when you take it off. Textured surfaces show wear a little faster than a plain flat pendant if they're left tangled with other jewellery, so a separate spot in your box is worth the two extra seconds.\n\nIt works as a small daily habit piece, one you put on without thinking much. It holds its own under a plain kurta collar or a simple round-neck top, no other jewellery required to finish the look.",
+    "seo": {
+      "primaryKeyword": "textured gold bow pendant necklace",
+      "secondaryKeywords": [
+        "gold bow pendant on twisted chain",
+        "gold-toned pendant necklace",
+        "everyday pendant necklace"
+      ],
+      "metaTitle": "Textured Gold Bow Pendant Necklace on a Twisted Chain, ₹89",
+      "metaDescription": "From ₹89, a gold-toned bow pendant with a fine textured surface on a twisted chain. Plated finish, an easy everyday pendant with a bit of detail.",
+      "imageAlt": "Textured gold-toned bow pendant on a twisted chain necklace",
+      "ogTitle": "A Textured Bow Pendant on a Twisted Chain, ₹89",
+      "ogDescription": "Fine texture across a gold-toned bow pendant, hung on a twisted chain with its own bit of shape. Plated finish, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P429.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "882",
+      "originalSku": "MJ-590",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-590-textured-gold-bow-pendant-necklace-882",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P431",
+    "name": "Gold-Toned Heart Lariat Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P431.webp"
+      ]
+    },
+    "specs": {
+      "design": "Open-heart centerpiece with solid-heart drop; Y-style",
+      "care": "Avoid water and perfumes; store in a dry, soft pouch"
+    },
+    "description": "A Y-style necklace pulls the eye down and along instead of straight across, and that's the whole trick of a lariat: the chain does the elongating, and the pendant just marks where it stops. Here it stops at an open-heart outline with a small solid heart drop hanging just inside it, two heart shapes reading as one motif rather than a cluttered pair.\n\nIt's gold-toned plating, not solid gold, which is the honest reason a two-part heart pendant like this can sit at ₹89. The open-heart frame keeps the design from feeling heavy despite having two elements, since most of what you see is negative space rather than metal.\n\nAvoid water and perfumes, and store it in a dry, soft pouch rather than tossed loose with other pieces. The open-heart shape can catch on other chains if it isn't kept separate.\n\nWear it with a V-neck or a plain top where the length actually gets to do something. This is a necklace that earns a lower neckline rather than fighting a high collar for space.",
+    "seo": {
+      "primaryKeyword": "gold heart lariat necklace",
+      "secondaryKeywords": [
+        "gold-toned y-style necklace",
+        "open heart pendant necklace",
+        "layering lariat necklace"
+      ],
+      "metaTitle": "Gold-Toned Heart Lariat Necklace, Open-Heart Y-Style",
+      "metaDescription": "A Y-style lariat in gold-toned plating, an open-heart frame with a small solid heart drop hanging inside it. Elongating fit, ₹89 at Morchadi Gems.",
+      "imageAlt": "Gold-toned Y-style lariat necklace with an open-heart frame and heart drop",
+      "ogTitle": "A Lariat That Lets a Heart Motif Do the Talking",
+      "ogDescription": "An open-heart outline with a small solid heart drop, hung on a Y-style gold-toned chain. Made to elongate a plain neckline, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P431.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "884",
+      "originalSku": "MJ-336",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-336-heart-lariat-necklace-884",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P435",
+    "name": "Gold-Toned Elongated Heart Pendant Necklace",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P435.webp"
+      ]
+    },
+    "specs": {
+      "chain type": "Beaded snake chain",
+      "material finish": "Gold-toned",
+      "care instructions": "Keep tucked away in a dry place; avoid direct contact with water, perfumes and sprays"
+    },
+    "description": "Most heart pendants are drawn round and even. This one is stretched a little longer than that, an elongated heart that reads more like a modern silhouette than a valentine card. It hangs from a beaded snake chain, which mixes two textures most necklaces keep separate: the smooth ripple of a snake chain and small beads worked into it along the way.\n\nThe gold tone here is plating rather than solid gold, and that's the honest reason a chain doing this much textural work still comes in at ₹89. The elongated shape also means the pendant sits a little lower than a round heart would, closer to where a lariat would fall.\n\nKeep it dry, and away from water, perfumes and sprays especially, since a beaded chain has more surface for anything sprayed nearby to land on. A quick wipe after wear keeps the beads from dulling first.\n\nIt reads as evening-ready without trying to be a statement piece, at home with a plain black top or worn under an open collar where the elongated line has room to actually show.",
+    "seo": {
+      "primaryKeyword": "gold elongated heart pendant necklace",
+      "secondaryKeywords": [
+        "gold-toned beaded snake chain necklace",
+        "heart pendant necklace for women",
+        "evening pendant necklace"
+      ],
+      "metaTitle": "Elongated Heart Pendant Necklace, Beaded Chain, ₹89",
+      "metaDescription": "From ₹89, a gold-toned elongated heart pendant on a beaded snake chain, two textures on one necklace. Plated finish, ready for evening wear.",
+      "imageAlt": "Gold-toned elongated heart pendant on a beaded snake chain necklace",
+      "ogTitle": "A Heart Stretched Long on a Beaded Snake Chain",
+      "ogDescription": "An elongated gold-toned heart pendant on a beaded snake chain, more modern silhouette than valentine card. Plated, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P435.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "888",
+      "originalSku": "MJ-243",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-243-elongated-heart-pendant-necklace-888",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P436",
+    "name": "Gold-Toned Filigree Heart Pendant on Rope Chain",
+    "category": "pendants",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P436.webp"
+      ]
+    },
+    "specs": {
+      "chain type": "Rope chain",
+      "material finish": "Gold-toned",
+      "care instructions": "Keep away from moisture; store in a dry, airtight place"
+    },
+    "description": "Filigree is an old technique, fine wirework twisted into lace-like patterns, and even a plated version of it carries some of that history in the shape. Here it's worked into a heart outline, hung from a rope chain thick enough to hold its own weight of attention rather than disappearing under the pendant.\n\nThe gold tone is plating, not solid gold, and filigree work translates into plated metal well since the pattern is about shape more than material purity. At ₹89, this is one of the more detailed pendants in this price range, mostly because a rope chain and a worked pendant are usually sold as two separate decisions rather than one.\n\nKeep it away from moisture and store it somewhere dry and airtight. The open filigree pattern has more surface for discolouration to start in the gaps than a solid heart shape would.\n\nIt's built for a heavier, more finished look than a thin chain gives you, at home over a solid-colour kurta or a plain sweater where the chain itself gets to read as jewellery rather than just a delivery system for the pendant.",
+    "seo": {
+      "primaryKeyword": "gold filigree heart pendant necklace",
+      "secondaryKeywords": [
+        "gold-toned rope chain necklace",
+        "vintage-style heart pendant",
+        "chunky chain necklace for women"
+      ],
+      "metaTitle": "Gold-Toned Filigree Heart Pendant, Chunky Rope Chain",
+      "metaDescription": "A filigree heart pendant in gold-toned plating, hung from a chunky rope chain with real presence. Vintage-style detail, ₹89 at Morchadi Gems.",
+      "imageAlt": "Gold-toned filigree heart pendant on a chunky rope chain necklace",
+      "ogTitle": "Old-Style Filigree Worked into a Heart Pendant",
+      "ogDescription": "Fine wirework shaped into a heart pendant, hung from a chunky gold-toned rope chain. Vintage-style detail at ₹89, plated finish, from Morchadi Gems.",
+      "ogImage": "/products/P436.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "889",
+      "originalSku": "MJ-617",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-617-vintage-style-filigree-heart-pendant-on-chunky-rope-chain-889",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P473",
+    "name": "Gold-Toned Snake and Figaro Chain Bracelet Set",
+    "category": "bracelets",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 19
+    },
+    "media": {
+      "images": [
+        "/products/P473.webp"
+      ]
+    },
+    "specs": {
+      "plating finish": "Gold-toned",
+      "design set contents": "Two-piece bracelet combo set: flat snake chain and Figaro-link chain",
+      "care instructions": "Keep dry; store safely in a dry place after every wear"
+    },
+    "description": "Two bracelets sold as one pair solve a layering decision most people make by accident anyway: a flat snake chain worn next to a Figaro link, so the smooth ripple of one sits against the alternating long-and-round links of the other. Worn together they read as a considered stack rather than two separate purchases that happened to end up on the same wrist.\n\nBoth pieces share the same gold-toned plating rather than solid gold, which keeps a two-piece set at ₹89 for the pair rather than the price of two bracelets bought apart. Wearing them together also means any small difference in shade between the two chains reads as intentional contrast instead of a mismatch.\n\nKeep both pieces dry and store them safely after every wear, ideally together so you're not hunting for the second bracelet on a day you only find one.\n\nWear the pair stacked for a fuller wrist, or split them up: the snake chain for a quieter day, the Figaro link when you want something with more visible structure. Either way, the set gives you two decisions for close to the price most places charge for one.",
+    "seo": {
+      "primaryKeyword": "gold snake and figaro bracelet set",
+      "secondaryKeywords": [
+        "gold-toned bracelet combo set",
+        "layering bracelet set for women",
+        "two piece chain bracelet set"
+      ],
+      "metaTitle": "Gold-Toned Snake and Figaro Bracelet Set, ₹89 Pair",
+      "metaDescription": "A two-piece bracelet set in gold-toned plating: a flat snake chain and a Figaro link, made to stack or wear apart. Just ₹89 for the whole pair.",
+      "imageAlt": "Gold-toned snake chain bracelet and Figaro link bracelet, two-piece set",
+      "ogTitle": "Two Gold-Toned Chain Bracelets, Made to Stack",
+      "ogDescription": "A flat snake chain and a Figaro link bracelet in gold-toned plating, sold as one pair. Stack them or wear them apart, ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P473.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "929",
+      "originalSku": "MJ-270",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-270-gold-chain-bracelet-combo-set-sleek-snake-chain-classic-figaro-link-929",
+      "originalCategories": [
+        "Bracelet under ₹99"
+      ]
+    }
+  },
+  {
+    "id": "P494",
+    "name": "Anti-Tarnish Ribbed Hoop Earrings",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 28
+    },
+    "media": {
+      "images": [
+        "/products/P494.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "design": "Ribbed texture design",
+      "care instructions": "Avoid water and perfumes; store in a dry, airtight container after use"
+    },
+    "description": "Run a finger along these hoops and you can feel the ribs before you can properly see them in a photograph, a row of fine parallel grooves circling the whole hoop rather than sitting flat. That texture is what catches light in short repeated flashes as you move, instead of one long gleam down a smooth surface.\n\nThe base is stainless steel with a gold-toned finish, and that combination is doing real work here. Ordinary gold-tone plating on brass tends to dull within a few wears; here, the shine doesn't fade after a few wears the way it would elsewhere, which is most of what anti-tarnish is actually promising.\n\nAvoid water and perfumes where you can, and store them in a dry, airtight container after use even though the base metal is doing most of the durability work for you.\n\nRibbed hoops like these sit close enough to the ear to wear all day at a desk, but the texture reads clearly enough to still register from across a room. That makes them one of those rare pairs that works for both an ordinary Tuesday and a night you didn't plan to dress up for.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish ribbed hoop earrings",
+      "secondaryKeywords": [
+        "stainless steel hoop earrings",
+        "gold-toned textured hoops",
+        "everyday hoop earrings for women"
+      ],
+      "metaTitle": "Anti-Tarnish Ribbed Hoop Earrings, Stainless Steel",
+      "metaDescription": "Gold-toned stainless steel hoops with a fine ribbed texture that catches light as you move around. Anti-tarnish base, dispatch in 2 days, ₹99.",
+      "imageAlt": "Gold-toned stainless steel hoop earrings with a ribbed texture",
+      "ogTitle": "Ribbed Gold-Toned Hoops That Hold Their Shine",
+      "ogDescription": "Fine ribbed texture on gold-toned stainless steel hoops, catching light in short flashes as you move. Anti-tarnish base, ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P494.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "950",
+      "originalSku": "MJ-583",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-583-stainless-steel-textured-hoop-earrings-950",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P495",
+    "name": "Anti-Tarnish Engraved Hoop Earrings",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 28
+    },
+    "media": {
+      "images": [
+        "/products/P495.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "design": "Engraved pattern",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry place after use"
+    },
+    "description": "An engraved pattern asks for a closer look than a plain hoop does, since the design only shows once light catches the cut lines at the right angle. These hoops carry that kind of pattern worked directly into gold-toned stainless steel, so the detail is part of the metal rather than a surface print sitting on top of it.\n\nStainless steel underneath a gold-tone finish is what lets a detailed pair like this be called anti-tarnish honestly. The gold tone doesn't dull sitting in a jewellery box between wears the way plated brass often does, so the pattern stays legible instead of blurring into a general shine after a season of use.\n\nKeep them away from moisture and perfumes, and store them in a dry place after use, more out of habit than necessity given the base metal.\n\nThey read as more finished than a plain hoop without asking for a stone or a stack of charms to do it, which makes them an easy pick for an office day that could plausibly run into dinner afterward with no costume change.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish engraved hoop earrings",
+      "secondaryKeywords": [
+        "gold-toned engraved hoops",
+        "stainless steel earrings for women",
+        "office to evening hoop earrings"
+      ],
+      "metaTitle": "Anti-Tarnish Engraved Hoop Earrings, Steel Base, ₹99",
+      "metaDescription": "A cut engraved pattern worked into gold-toned stainless steel hoops, detail that stays legible wear after wear. Anti-tarnish base, from ₹99.",
+      "imageAlt": "Engraved gold-toned stainless steel hoop earrings",
+      "ogTitle": "An Engraved Pattern Cut Into a Gold-Toned Hoop",
+      "ogDescription": "A fine engraved pattern worked into gold-toned stainless steel hoops, detail rather than a surface print. Anti-tarnish base, ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P495.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "951",
+      "originalSku": "MJ-581",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-581-stainless-steel-engraved-hoop-earrings-951",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P496",
+    "name": "Anti-Tarnish Swirl Texture Hoop Earrings",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 28
+    },
+    "media": {
+      "images": [
+        "/products/P496.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "design": "Swirl texture design",
+      "care instructions": "Keep away from moisture and perfumes; store safely in a dry place after use"
+    },
+    "description": "A swirl pattern moves the eye in a circle before it settles, a different effect from a straight ribbed line or a fixed engraved motif: the design itself echoes the round shape of the hoop instead of just sitting on it. These hoops carry that swirling texture worked into gold-toned stainless steel all the way around.\n\nAt ₹99, the price mostly reflects that this is stainless steel wearing a gold-tone finish rather than gold-plated brass, and the difference shows up in how the colour behaves over time. It holds through daily wear rather than rubbing thin at the edges, the way a softer base metal tends to under a swirl pattern's raised high points.\n\nAvoid moisture and perfumes, and store them safely in a dry place after use, which matters more for keeping them scratch-free than for the colour itself.\n\nA swirl motif reads as more playful than a straight line without tipping into anything too bold, which makes these an easy pair to wear from a morning meeting through to whatever the evening turns into.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish swirl hoop earrings",
+      "secondaryKeywords": [
+        "gold-toned swirl hoops",
+        "stainless steel hoop earrings",
+        "textured hoop earrings under 200"
+      ],
+      "metaTitle": "Anti-Tarnish Swirl Hoop Earrings, ₹99, Stainless Steel",
+      "metaDescription": "From ₹99, gold-toned stainless steel hoops with a swirling texture that echoes the hoop's own round shape. Anti-tarnish base, colour holds daily.",
+      "imageAlt": "Gold-toned stainless steel hoop earrings with a swirl texture pattern",
+      "ogTitle": "A Swirl Pattern That Echoes the Hoop's Own Shape",
+      "ogDescription": "Gold-toned stainless steel hoops with an eye-catching swirl texture, from ₹99. Anti-tarnish base that holds its colour through daily wear.",
+      "ogImage": "/products/P496.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "952",
+      "originalSku": "MJ-582",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-582-stainless-steel-swirl-texture-hoop-earrings-952",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P497",
+    "name": "Anti-Tarnish Bamboo-Style Hoop Earrings",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 28
+    },
+    "media": {
+      "images": [
+        "/products/P497.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "design": "Bamboo-inspired textured design",
+      "care instructions": "Keep away from moisture and perfumes; store safely in a dry place after use"
+    },
+    "description": "Bamboo shows up in jewellery design because the plant's own segmented shape translates naturally into a hoop: a ring broken into small raised sections rather than one continuous curve. These earrings borrow that shape, a bamboo-inspired texture running the full circle in gold-toned stainless steel.\n\nThe steel base is what makes the anti-tarnish claim honest rather than marketing. These resist the flaking a lot of cheap gold-plated jewellery shows within a few weeks, since there's no thin brass surface underneath waiting to show through once the plating wears at the high points of a textured design like this one.\n\nKeep them dry, away from perfumes, and store them safely in a dry place after use, mostly to protect the finish from scratching against harder jewellery rather than from tarnish itself.\n\nThe segmented shape gives them more visual weight than a plain hoop of the same size, which makes them a good pick when you want one earring to be the whole outfit decision rather than one piece among several.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish bamboo hoop earrings",
+      "secondaryKeywords": [
+        "gold-toned bamboo style hoops",
+        "stainless steel textured hoops",
+        "statement hoop earrings for women"
+      ],
+      "metaTitle": "Anti-Tarnish Bamboo-Style Hoop Earrings, Steel, ₹99",
+      "metaDescription": "Gold-toned stainless steel hoops with a segmented, bamboo-inspired texture around the full circle. Anti-tarnish base that resists flaking, ₹99.",
+      "imageAlt": "Gold-toned stainless steel hoop earrings with a bamboo-inspired segmented texture",
+      "ogTitle": "A Bamboo-Inspired Texture Around a Steel Hoop",
+      "ogDescription": "Segmented, bamboo-style texture worked into gold-toned stainless steel hoops. Anti-tarnish base, resists the flaking cheap plating shows, ₹99.",
+      "ogImage": "/products/P497.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "953",
+      "originalSku": "MJ-578",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-578-stainless-steel-bamboo-style-hoop-earrings-953",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P498",
+    "name": "Anti-Tarnish Embossed Hoop Earrings",
+    "category": "earrings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 28
+    },
+    "media": {
+      "images": [
+        "/products/P498.webp"
+      ]
+    },
+    "specs": {
+      "material": "Stainless steel",
+      "design": "Embossed pattern",
+      "care instructions": "Keep dry; avoid contact with perfumes; store in a dry place after use"
+    },
+    "description": "An embossed pattern sits slightly raised off the surface rather than cut into it, which changes how a hoop catches light: less like a groove and more like a series of small ridges you can feel with a fingertip in the dark before you've put in the second earring. This pair carries that raised pattern in gold-toned stainless steel, worked all the way around each hoop.\n\nThe steel base means the finish stays even rather than turning patchy after repeated wear, the practical difference between this and a plated pair built on brass. An embossed surface has more raised area exposed to daily contact than a flat hoop, so the base metal choice matters more here than it would on something plainer.\n\nKeep them dry, avoid contact with perfumes, and store them in a dry place after use, a small habit rather than a real risk given the steel underneath.\n\nThey read as detailed without being loud, an easy earring to put in without checking the mirror twice, and one that still looks considered once you do.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish embossed hoop earrings",
+      "secondaryKeywords": [
+        "gold-toned embossed hoops",
+        "stainless steel earrings for women",
+        "detailed hoop earrings under 200"
+      ],
+      "metaTitle": "Anti-Tarnish Embossed Hoop Earrings, Steel Base, ₹99",
+      "metaDescription": "Gold-toned stainless steel hoops with a raised embossed pattern worked around each hoop. Anti-tarnish base, the finish stays even wear after wear.",
+      "imageAlt": "Gold-toned stainless steel hoop earrings with an embossed raised pattern",
+      "ogTitle": "A Raised Embossed Pattern on a Steel Gold Hoop",
+      "ogDescription": "Small raised ridges worked into gold-toned stainless steel hoops, detailed without being loud. Anti-tarnish base, ₹99 at Morchadi Gems.",
+      "ogImage": "/products/P498.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "954",
+      "originalSku": "MJ-580",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-580-stainless-steel-embossed-hoop-earrings-954",
+      "originalCategories": [
+        "Anti tarnish Earrings"
+      ]
+    }
+  },
+  {
+    "id": "P499",
+    "name": "Pink Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P499.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 pink glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely after use to preserve golden luster of charms"
+    },
+    "description": "Sixteen bangles on one wrist make a sound before they make a visual impression, especially with four bell charms mixed into the pink glass stack. That soft ghungroo chime is most of what a large bangle set is actually for: a way to announce a movement, a hand gesture, a dance step, in a way a single bracelet never will.\n\nThe set pairs twelve pink glass bangles with four gold-toned ghungroo charm bangles, glass for the colour and metal for the sound. It's built for festive stacking rather than everyday minimalism, at ₹299 for the full set of sixteen rather than piece by piece.\n\nKeep the whole set away from moisture, and store the pieces safely between wears to preserve the golden shine on the charm bangles specifically, since the glass bangles themselves hold their colour without much fuss.\n\nThis is the kind of set you save for a day that calls for sound as much as sparkle. Teej, a sangeet, any occasion where a stack this full is doing exactly what stacking sixteen bangles is meant to do.",
+    "seo": {
+      "primaryKeyword": "pink glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "pink bangles for festive wear",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Pink Glass Bangle Set, 16 Pieces with Ghungroo Charms",
+      "metaDescription": "Twelve pink glass bangles and four gold-toned ghungroo charm bangles, sixteen pieces for ₹299. Built for festive stacking, a soft chime as you move.",
+      "imageAlt": "Pink glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "Sixteen Pink and Gold Bangles, Built to Chime",
+      "ogDescription": "Twelve pink glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces in one festive set. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P499.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "955",
+      "originalSku": "MJ-613",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-613-vibrant-pink-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-955",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P500",
+    "name": "Lavender Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P500.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 glass bangles (lavender-toned) + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely after use to preserve golden luster of charms"
+    },
+    "description": "Lavender sits at the paler, quieter end of the purple family, which is exactly what keeps a stack this large from reading as loud. Twelve lavender glass bangles carry the colour, four gold-toned ghungroo charm bangles carry a small chime, and together the sixteen pieces balance a soft shade against a bit of sound.\n\nThe set is sold as one sixteen-piece stack rather than assembled bangle by bangle, which is what makes ₹299 cover the whole wrist instead of one piece at a time. Lavender glass photographs a little differently depending on the light it catches, cooler indoors and warmer outdoors.\n\nKeep the set away from moisture and store it safely between wears, mainly to protect the golden shine on the four charm bangles rather than the glass, which holds its own colour well on its own.\n\nWear the full stack for a festive day, or split the glass and charm bangles across two smaller stacks worn on different days if sixteen at once feels like more than the occasion calls for.",
+    "seo": {
+      "primaryKeyword": "lavender glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "lavender bangles for festive wear",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Lavender Glass Bangle Set, 16 Pieces, Ghungroo Charms",
+      "metaDescription": "From ₹299, twelve lavender glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces sold together as one festive stack.",
+      "imageAlt": "Lavender glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "A Soft Lavender Stack with a Small Gold Chime",
+      "ogDescription": "Twelve lavender glass bangles and four gold-toned ghungroo charm bangles, sixteen pieces in one set. From ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P500.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "956",
+      "originalSku": "MJ-233",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-233-elegant-lavender-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-956",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P501",
+    "name": "Sage Green Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P501.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 glass bangles (sage green) + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely after use to preserve golden luster of charms"
+    },
+    "description": "Sage green reads as more everyday than a jewel-bright shade, which makes this stack a slightly unusual choice for a set built around festive ghungroo charms. Twelve sage green glass bangles hold the colour, four gold-toned charm bangles bring the chime, and the combination works for a smaller family function as easily as a bigger one.\n\nSixteen pieces come as one set at ₹299, glass for most of the stack and gold-toned metal on the four bell charms doing the sound work. Sage sits close enough to neutral that it pairs with more blouse colours than a stronger shade would, worth knowing before committing to a full stack of one colour.\n\nKeep the set away from moisture and store it safely after wear, to protect the shine on the charm bangles rather than the glass itself.\n\nWear all sixteen together for a fuller look, or wear the sage glass on its own on a quieter day and save the ghungroo bangles for when the occasion actually wants the sound.",
+    "seo": {
+      "primaryKeyword": "sage green glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "sage green bangles for women",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Sage Green Glass Bangle Set, 16 Pieces with Ghungroo",
+      "metaDescription": "Twelve sage green glass bangles and four gold-toned ghungroo charm bangles, sixteen pieces for ₹299. A quieter shade that pairs with more outfits.",
+      "imageAlt": "Sage green glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "A Quieter Sage Green Stack with a Gold Chime",
+      "ogDescription": "Twelve sage green glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces in one set. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P501.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "957",
+      "originalSku": "MJ-496",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-496-refreshing-sage-green-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-957",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P502",
+    "name": "Deep Purple Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P502.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 deep purple glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely after use to preserve golden luster of charms"
+    },
+    "description": "Glass bangles and gold-toned metal bangles age differently, which matters more on a large set like this than it does on a single piece. The twelve deep purple glass bangles here hold their colour with almost no care at all, while the four gold-toned ghungroo charm bangles are the part of the set that actually benefits from being kept dry and stored properly.\n\nAt ₹299 for all sixteen pieces, deep purple sits at the richer, more saturated end of this set's colour range, closer to a jewel tone than a pastel, worth knowing if you're building a stack for festive rather than everyday colours.\n\nStore the whole set safely between wears and keep it away from moisture, mostly for the sake of the charm bangles' golden shine rather than the glass.\n\nDeep purple stacks well against gold borders and darker fabric, which makes it one of the easier bold colours in this range to actually match to an existing wardrobe rather than build a new outfit around.",
+    "seo": {
+      "primaryKeyword": "purple glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "deep purple bangles for women",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Deep Purple Glass Bangle Set, 16 Pieces with Ghungroo",
+      "metaDescription": "From ₹299, twelve deep purple glass bangles with four gold-toned ghungroo charm bangles, sixteen pieces in a richer, jewel-toned festive stack.",
+      "imageAlt": "Deep purple glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "A Rich Purple Bangle Stack with a Gold Chime",
+      "ogDescription": "Twelve deep purple glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces in one set. From ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P502.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "958",
+      "originalSku": "MJ-208",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-208-deep-purple-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-958",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P503",
+    "name": "Maroon Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P503.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 maroon glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely to preserve golden luster of charms"
+    },
+    "description": "Maroon carries a particular weight in festive and bridal colour palettes that lighter shades don't try to compete with, which makes it one of the more traditional choices in this bangle set's colour range. Twelve maroon glass bangles anchor the stack, and four gold-toned ghungroo charm bangles add both a lighter metallic note and a small chime against all that depth of colour.\n\nThe full sixteen-piece set comes to ₹299, glass doing the colour work and gold-toned metal doing the sound. Maroon tends to photograph a shade darker indoors than it looks in daylight, worth knowing if you're matching it to a specific outfit rather than buying it on its own.\n\nKeep the set away from moisture and store it safely between wears, which protects the golden shine on the charm bangles more than it does the glass.\n\nThis is a stack built for a day with some weight to it. A wedding function, a festival, anywhere maroon's usual associations are exactly the point rather than incidental.",
+    "seo": {
+      "primaryKeyword": "maroon glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "maroon bangles for weddings",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Maroon Glass Bangle Set, 16 Pieces with Ghungroo, ₹299",
+      "metaDescription": "Twelve maroon glass bangles and four gold-toned ghungroo charm bangles, sixteen pieces for ₹299. A traditional colour built for weddings and festivals.",
+      "imageAlt": "Maroon glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "A Maroon Bangle Stack for Weddings and Festivals",
+      "ogDescription": "Twelve maroon glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces in one set. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P503.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "959",
+      "originalSku": "MJ-518",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-518-royal-maroon-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-959",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P504",
+    "name": "Grey Glass Bangle Set with Gold-Toned Ghungroo Charms",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 165
+    },
+    "media": {
+      "images": [
+        "/products/P504.webp"
+      ]
+    },
+    "specs": {
+      "material composition": "16-piece set: 12 grey glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "care instructions": "Keep away from moisture and store safely in a dry place to preserve golden luster of charms"
+    },
+    "description": "Grey is the one colour in this bangle set's range that doesn't ask to be matched to anything in particular, which makes it the stack to reach for when you're not entirely sure what you're wearing yet. Twelve grey glass bangles make up most of the set, with four gold-toned ghungroo charm bangles mixed in for a small chime and a warmer metallic note against all that neutral colour.\n\nSixteen pieces come as one set at ₹299, priced as a whole stack rather than bangle by bangle. Grey glass sits closer to a smoky, translucent tone than a flat opaque one, so it reads a little differently depending on the light behind it.\n\nKeep the set away from moisture and store it safely between wears, mostly to protect the shine on the four charm bangles rather than the glass itself.\n\nIt works with more blouse and kurta colours than any of the brighter shades in this set, which makes it a reasonable first stack to buy if you're building a bangle collection rather than dressing for one specific event.",
+    "seo": {
+      "primaryKeyword": "grey glass ghungroo bangle set",
+      "secondaryKeywords": [
+        "16 piece glass bangle set",
+        "grey bangles for women",
+        "gold ghungroo charm bangles"
+      ],
+      "metaTitle": "Grey Glass Bangle Set, 16 Pieces with Ghungroo, ₹299",
+      "metaDescription": "From ₹299, twelve grey glass bangles with four gold-toned ghungroo charm bangles, a neutral sixteen-piece stack that pairs with more outfits.",
+      "imageAlt": "Grey glass bangle set with gold-toned ghungroo bell charm bangles",
+      "ogTitle": "A Neutral Grey Bangle Stack with a Gold Chime",
+      "ogDescription": "Twelve smoky grey glass bangles paired with four gold-toned ghungroo charm bangles, sixteen pieces in one set. From ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P504.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "960",
+      "originalSku": "MJ-140",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-140-classic-grey-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-960",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P549",
+    "name": "Anti-Tarnish Gold Wheat Chain Bracelet",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 97
+    },
+    "media": {
+      "images": [
+        "/products/P549.webp"
+      ]
+    },
+    "specs": {
+      "chain style": "Wheat chain",
+      "chain pattern": "Braided herringbone pattern",
+      "clasp type": "Adjustable lobster clasp",
+      "material": "Anti-tarnish finish"
+    },
+    "description": "A wheat chain is built from tightly twisted links that lie close together, and this one carries a braided herringbone pattern across that structure, so the bracelet reads as woven rather than linked when it catches light along the wrist. An adjustable lobster clasp closes it, so fit isn't a guessing game before you order.\n\nThe finish is anti-tarnish, which on a chain this dense actually matters. Wheat and herringbone patterns have a lot of small surface area pressed close together, and a lesser finish would show the first signs of wear right in those tight gaps. This one holds its shine through the sweat and static of daily wear rather than greying at the links the way an untreated plated chain tends to.\n\nAt ₹249, it sits above the plainer chain bracelets in this range, which the density of the weave and the adjustable clasp both help justify. Keep it dry and store it separately from bracelets with rougher textures that could catch on the herringbone links.\n\nIt reads as substantial on the wrist without being wide, which makes it work equally well stacked with a thinner chain or worn on its own as the only bracelet for the day.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish wheat chain bracelet",
+      "secondaryKeywords": [
+        "gold-toned herringbone bracelet",
+        "adjustable chain bracelet for women",
+        "anti-tarnish gold bracelet"
+      ],
+      "metaTitle": "Anti-Tarnish Gold Wheat Chain Bracelet, Herringbone",
+      "metaDescription": "A braided herringbone wheat chain bracelet in anti-tarnish gold-toned finish, adjustable lobster clasp. Holds its shine through daily wear, ₹249.",
+      "imageAlt": "Gold-toned wheat chain bracelet with a braided herringbone pattern and lobster clasp",
+      "ogTitle": "A Woven Wheat Chain Bracelet That Resists Tarnish",
+      "ogDescription": "A dense, braided herringbone wheat chain in anti-tarnish gold-toned finish, adjustable lobster clasp. Holds its shine daily, ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P549.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1015",
+      "originalSku": "MJ-038",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-038-anti-tarnish-gold-wheat-chain-bracelet-1015",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish bracelet"
+      ]
+    }
   }
 ]
