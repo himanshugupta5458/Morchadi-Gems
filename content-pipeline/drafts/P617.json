@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant white dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial shape",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Unique leaf-shaped oval dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",

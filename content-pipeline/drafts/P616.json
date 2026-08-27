@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Anti-tarnish silver-tone finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial colour",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant aqua blue dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Bracelet material",

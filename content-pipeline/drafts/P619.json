@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant numeral hour markers"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial shape",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "compact rectangular-oval dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement",

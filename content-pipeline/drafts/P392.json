@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "striking dark green meenakari square panels"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "flanking a classic gold-tone quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Triple gold chains lined with ghungroo bells on both ends"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

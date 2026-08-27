@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Anti-tarnish gold-tone finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial",
@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a beautiful emerald green dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial shape",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "unique leaf-shaped dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",

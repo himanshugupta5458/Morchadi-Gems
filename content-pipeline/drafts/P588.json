@@ -56,7 +56,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Gentle on hair, reduces frizz, breakage & tangles"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dual use",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Doubles as a wrist accessory when not tying hair"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

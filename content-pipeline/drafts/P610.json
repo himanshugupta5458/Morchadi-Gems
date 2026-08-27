@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "warm gold-tone finish paired with the deep red dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Treatment",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a rich red dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial shape",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Its unique oval-shaped dial and textured bracelet give it a distinctive vintage charm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",

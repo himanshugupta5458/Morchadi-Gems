@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant gold-tone finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial colour",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "The structured square dial gives the watch a chic retro-inspired appearance"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Bracelet material",

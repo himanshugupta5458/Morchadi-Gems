@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "bold red meenakari tulip motifs"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stonework",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "classic white quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Triple gold chains adorned with cascading ghungroo bells on both ends"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

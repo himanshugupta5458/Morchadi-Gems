@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "flanking a pearl-bordered white quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "with cascading ghungroo chains"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
