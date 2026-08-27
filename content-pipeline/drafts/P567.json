@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "💛 Gold-plated with anti-tarnish coating"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant/Design Shape",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "🔗 Delicate gold chain with secure clasp"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

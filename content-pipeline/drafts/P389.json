@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "a clean white quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Pendant",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "cascading double gold chains and ghungroo bells"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

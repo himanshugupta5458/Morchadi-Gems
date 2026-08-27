@@ -10,7 +10,10 @@
       "value": "gold finish/plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality gold finish" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold finish"
+      },
       "confirmed": false
     },
     {
@@ -18,15 +21,21 @@
       "value": "anti-tarnish, water-resistant",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish and water-resistant properties"
+      },
+      "confirmed": true
     },
     {
       "label": "Design",
       "value": "dual-toned red and white enamel sections",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "striking red and white enamel sections" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "striking red and white enamel sections"
+      },
       "confirmed": false
     }
   ],
@@ -60,14 +69,18 @@
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "Make a bold impression with this premium modernist enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This vibrant, dual-toned statement piece features striking red and white enamel sections that offer a luxurious, contemporary aesthetic, maintaining its stunning luster through everyday wear.",
     "referenceTitle": "Anti-Tarnish Red & White Modernist Enamel Kada",
     "originalId": "660",
     "originalSku": "MJ-094",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-094-anti-tarnish-red-white-modernist-enamel-kada-660",
-    "originalCategories": ["Anti Tarnish bracelet"]
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
   },
   "flaggedContent": [],
   "notes": [],

@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish/Plating",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design Detail",
@@ -80,7 +80,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

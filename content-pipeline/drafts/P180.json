@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating: Premium Rose Gold"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Keep away from water and perfumes for long-lasting shine. Store in a dry place when not in use"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

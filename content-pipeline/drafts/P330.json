@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium silver-finish with classic detailing"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Minimal yet bold design for effortless styling"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Lightweight & comfortable for daily wear"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

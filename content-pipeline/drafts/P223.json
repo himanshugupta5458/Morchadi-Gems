@@ -23,7 +23,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Colour- Gold"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight",
@@ -45,7 +45,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Height - 1.8 cm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Plating",

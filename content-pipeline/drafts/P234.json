@@ -78,7 +78,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Height: 1.8 cm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size to Diameter Mapping",
@@ -89,7 +89,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Packaging",

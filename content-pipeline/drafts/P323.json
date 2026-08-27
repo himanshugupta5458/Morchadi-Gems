@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "these stunning gold-plated pink crystal flower stud earrings"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Lightweight and comfortable, these floral studs pair beautifully"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

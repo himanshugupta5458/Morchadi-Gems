@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Anti-tarnish gold-tone finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial colour",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

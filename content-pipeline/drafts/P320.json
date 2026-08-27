@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "this stunning gold-plated multicolor drop necklace"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Lightweight and comfortable for all-day wear"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

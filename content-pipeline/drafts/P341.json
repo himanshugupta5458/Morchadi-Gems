@@ -56,7 +56,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Design: Golden dotted detailing"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Finish: Smooth & glossy glass finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",

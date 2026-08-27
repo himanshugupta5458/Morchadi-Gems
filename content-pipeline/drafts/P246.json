@@ -22,7 +22,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Material: High-quality anti-tarnish metal"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Clasp",
@@ -33,7 +33,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Design: Openable clasp for ease of wear"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -44,7 +44,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Finish: Long-lasting shine & rust-resistant"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Occasion",
@@ -55,7 +55,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Ideal For: Casual, festive, and party wear"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care",
@@ -66,7 +66,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Care Tip: Wipe with a soft cloth after use and store in a dry place"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

@@ -80,7 +80,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Net Quantity: 1"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care Instructions",

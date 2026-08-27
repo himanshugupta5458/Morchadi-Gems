@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "framing a clean gold-tone quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Embellishment",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Ghungroo bells add a playful jingle to every move."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

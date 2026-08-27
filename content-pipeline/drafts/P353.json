@@ -45,7 +45,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "the Anti-Tarnish Elara Ring"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -67,7 +67,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Colour- Gold"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size",

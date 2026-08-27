@@ -10,7 +10,10 @@
       "value": "gold finish/plating",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality gold finish" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold finish"
+      },
       "confirmed": false
     },
     {
@@ -18,15 +21,21 @@
       "value": "anti-tarnish, water-resistant",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
-      "confirmed": false
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish and water-resistant properties"
+      },
+      "confirmed": true
     },
     {
       "label": "Design",
       "value": "black enamel with Greek key motif",
       "displayTerm": null,
       "stoneSource": null,
-      "source": { "origin": "migrated-text", "quotedPhrase": "premium black enamel kada featuring a classic Greek key motif" },
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium black enamel kada featuring a classic Greek key motif"
+      },
       "confirmed": false
     }
   ],
@@ -54,14 +63,18 @@
     "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
   },
   "personalized": false,
-  "suggestedCollections": ["anti-tarnish"],
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
   "sourceNotes": {
     "rawContent": "Define sophistication with this premium black enamel kada featuring a classic Greek key motif. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic geometric statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
     "referenceTitle": "Anti-Tarnish Black Greek Key Kada",
     "originalId": "662",
     "originalSku": "MJ-059",
     "originalUrl": "https://www.morchadijewels.com/shop/mj-059-anti-tarnish-black-greek-key-kada-662",
-    "originalCategories": ["Anti Tarnish bracelet"]
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
   },
   "flaggedContent": [],
   "notes": [],
