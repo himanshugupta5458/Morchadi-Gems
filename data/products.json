@@ -21246,5 +21246,540 @@
         "Glass bangles"
       ]
     }
+  },
+  {
+    "id": "P350",
+    "name": "Ivory White Glass Bangles, Set of 12 with Gold Bead Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P350.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Ivory white",
+      "design": "Gold bead detailing",
+      "weight": "Lightweight, smooth, and comfortable"
+    },
+    "description": "White is the colourway this shop's bangle range keeps coming back to for weddings and ceremonies, worn precisely because it doesn't compete with a heavily coloured outfit the way a brighter shade might. This set gives that white a small gold bead trim along the rim of each bangle, twelve pieces to a set.\n\nTwelve is a full-wrist number, meant to be worn together rather than picked at one or two at a time, and there's a real difference between how a single bangle sits and how twelve move together through a day of wear. Check the size options against your own wrist before ordering; a stack this size is not something to guess at.\n\nBetween wears, treat it as glass rather than metal: gentle handling, kept apart from harder pieces in storage, and no assumption that a knock will bounce off the way it would off a steel bangle. That small bit of care is the trade-off for the clarity glass gives you over a plastic or resin bangle at the same price.\n\nAt ₹149, suggested as a gift, the ivory base with gold trim reads as considered rather than plain, the kind of set that finishes a wedding-season outfit instead of just filling space on the wrist.",
+    "seo": {
+      "primaryKeyword": "ivory white glass bangles gold bead set twelve",
+      "secondaryKeywords": [
+        "white glass bangle set wedding",
+        "gold bead bangles gifting",
+        "twelve piece bangle set india"
+      ],
+      "metaTitle": "Ivory White Glass Bangles, Set of 12, Gold Bead Trim",
+      "metaDescription": "A set of twelve ivory white glass bangles trimmed with small gold beads, sized to fit and suggested for gifting. Priced at ₹149, 7-day returns.",
+      "imageAlt": "Set of twelve ivory white glass bangles with gold bead trim detailing",
+      "ogTitle": "Ivory White Glass Bangle Set, Gold Bead Trim, ₹149",
+      "ogDescription": "A set of twelve ivory white glass bangles with gold bead detailing, lightweight and sized to fit. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P350.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "784",
+      "originalSku": "MJ-354",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-354-ivory-white-glass-bangles-set-of-12-with-gold-bead-detailing-784",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P351",
+    "name": "Royal Purple Glass Bangles, Set of 12 with Gold Bead Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P351.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Royal purple",
+      "design": "Gold bead detailing",
+      "weight": "Lightweight, smooth, and comfortable"
+    },
+    "description": "A deep royal purple carries this set of twelve glass bangles, each edged in small gold beads that catch light against the darker base colour more visibly than the same trim would on a paler shade. Purple sits toward the richer end of what this shop stocks, closer to a festive or evening colour than an everyday neutral.\n\nTwelve pieces makes this a full stack rather than an accent bangle or two, built to be worn together on one wrist. The set stays genuinely lightweight, smooth against the skin, and comfortable across a long day, which is worth knowing before committing to wearing all twelve at once.\n\nSizing is offered across a few options, so check your wrist measurement before ordering. As with any glass bangle set, handle each piece gently and keep it clear of harder jewellery in storage, since glass chips more easily under a knock than metal does.\n\nAt ₹189, suggested for gifting, the gold bead trim reads clearly against the deep purple, giving the set a bit more definition than a plain-edged bangle in the same colour would have.",
+    "seo": {
+      "primaryKeyword": "royal purple glass bangles gold bead set",
+      "secondaryKeywords": [
+        "purple glass bangle set festive",
+        "gold bead trim bangles gift",
+        "twelve bangle set women india"
+      ],
+      "metaTitle": "Royal Purple Glass Bangles, Set of 12, Gold Bead Trim",
+      "metaDescription": "A set of twelve royal purple glass bangles edged with small gold beads, sized to fit and suggested for gifting. Priced at ₹189, 7-day returns.",
+      "imageAlt": "Set of twelve royal purple glass bangles with gold bead edge detailing",
+      "ogTitle": "Royal Purple Glass Bangle Set, Gold Bead Trim, ₹189",
+      "ogDescription": "A set of twelve royal purple glass bangles with gold bead trim, lightweight and sized to fit. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P351.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "785",
+      "originalSku": "MJ-520",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-520-royal-purple-glass-bangles-set-of-12-with-gold-bead-detailing-785",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P352",
+    "name": "Mustard Yellow Glass Bangles, Set of 12 with Gold Bead Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P352.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "net quantity": "Set of 12 bangles",
+      "colour": "Mustard yellow with gold bead embellishments",
+      "plating coating": "Subtle shimmer, textured finish",
+      "weight": "Lightweight",
+      "occasion": "Weddings, haldi, festivals, celebrations"
+    },
+    "description": "This set leans on occasion as much as colour: mustard yellow glass bangles with gold bead embellishments, suited by the shop's own notes to weddings, haldi ceremonies, festivals and other celebrations rather than sitting only as an everyday piece. Twelve bangles come in the set, finished with a subtle shimmer and a textured surface rather than a flat, smooth glass finish.\n\nThe texture is a real, confirmed detail here, not just a colour choice: the surface itself has a bit of grain to it under the shimmer, which catches light differently to the plain glossy bangles this shop also stocks. Mustard sits between yellow and gold, warm rather than bright, and it pairs naturally with the gold bead trim rather than fighting it.\n\nThe set stays lightweight throughout, which matters when twelve pieces are worn together on one wrist for a full day of festivities. It's available across a choice of sizes, so measure first. Handle each bangle carefully and keep the set away from harder jewellery in storage, since glass takes damage more easily than metal.\n\nAt ₹149, suggested for gifting, this is a set built specifically with festive occasions in mind rather than dressed up after the fact for one.",
+    "seo": {
+      "primaryKeyword": "mustard yellow glass bangles textured gold bead",
+      "secondaryKeywords": [
+        "haldi bangles set yellow",
+        "festive glass bangle set india",
+        "textured glass bangles gifting"
+      ],
+      "metaTitle": "Mustard Yellow Glass Bangles, Textured, Gold Bead Set",
+      "metaDescription": "A set of twelve mustard yellow glass bangles with a textured shimmer finish and gold bead trim, made for haldi and festivals. Only ₹149 today.",
+      "imageAlt": "Set of twelve mustard yellow textured glass bangles with gold bead trim",
+      "ogTitle": "Mustard Yellow Bangle Set, Textured, Gold Bead, ₹149",
+      "ogDescription": "A set of twelve mustard yellow glass bangles with a textured shimmer finish and gold bead trim, for haldi and festivals. ₹149.",
+      "ogImage": "/products/P352.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "786",
+      "originalSku": "MJ-441",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-441-mustard-yellow-glass-bangles-set-of-12-with-gold-bead-detailing-786",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P364",
+    "name": "Gold-Tone Anti-Tarnish Necklace with Pink Heart Charm",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish",
+      "gifting"
+    ],
+    "pricing": {
+      "price": 210,
+      "mrp": 210,
+      "cost": 84
+    },
+    "media": {
+      "images": [
+        "/products/P364.webp"
+      ]
+    },
+    "specs": {
+      "color material": "Gold-tone with pink heart charm",
+      "weight": "Lightweight & comfortable"
+    },
+    "description": "A single pink heart charm sits on this gold-tone necklace, a small, direct piece rather than one built around a busier motif or several charms competing for attention. The gold-tone finish is confirmed as anti-tarnish, which means it's built to resist the dulling that untreated plating shows after regular wear rather than promising to look brand new indefinitely.\n\nLightweight is the other confirmed fact here, and it shows in how the piece sits: comfortable enough for daily wear rather than something that announces its own weight against the collarbone. A single small charm like this one doesn't ask to be the centrepiece of an outfit; it works quietly with whatever else you're wearing, which is part of why a piece this simple earns a place in regular rotation rather than special occasions only.\n\nAnti-tarnish gold-tone pieces like this one are worth a wipe with a soft cloth after wear and are best kept away from perfume and water, the same care any plated jewellery benefits from, even with the more resistant anti-tarnish base underneath.\n\nAt ₹210, suggested for gifting, a single heart charm is a direct, uncomplicated way to give something small that still says something specific.",
+    "seo": {
+      "primaryKeyword": "gold-tone anti-tarnish necklace pink heart charm",
+      "secondaryKeywords": [
+        "heart charm necklace gifting",
+        "anti tarnish necklace daily wear",
+        "minimal heart necklace india"
+      ],
+      "metaTitle": "Gold-Tone Anti-Tarnish Necklace, Pink Heart Charm, ₹210",
+      "metaDescription": "A gold-tone anti-tarnish necklace with a single pink heart charm, lightweight and built for daily wear, priced at ₹210, a simple gifting pick.",
+      "imageAlt": "Gold-tone anti-tarnish necklace with a single pink heart charm pendant",
+      "ogTitle": "Pink Heart Charm Necklace, Gold-Tone Anti-Tarnish, ₹210",
+      "ogDescription": "A gold-tone anti-tarnish necklace with a single pink heart charm, lightweight enough for daily wear. ₹210 at Morchadi Gems.",
+      "ogImage": "/products/P364.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "804",
+      "originalSku": "MJ-414",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-414-minimal-pink-heart-chain-bracelet-for-women-girls-804",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "combo",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P365",
+    "name": "Anti-Tarnish Necklace, Bracelet and Ring Gift Set",
+    "category": "necklaces",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish",
+      "gifting"
+    ],
+    "pricing": {
+      "price": 250,
+      "mrp": 250,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P365.webp"
+      ]
+    },
+    "specs": {
+      "set contents": "Necklace, Bracelet, and Ring (3-piece set)"
+    },
+    "description": "Three pieces come together in this one purchase: a necklace, a bracelet and a ring, sold as a matched set rather than three separate items you'd otherwise have to buy and coordinate yourself. All three are confirmed as anti-tarnish, which means the set is built to resist the dulling an untreated plating shows with regular wear, across all three pieces rather than just one.\n\nBuying a coordinated set solves a specific problem: matching pieces bought individually don't always sit right together, in finish or in tone, in a way that three pieces made and sold as one set generally do. It also simplifies gifting, since a single box covers three distinct items rather than requiring a choice between them.\n\nAs with any anti-tarnish plated jewellery, a wipe with a soft cloth after wear and keeping the set away from water and perfume will help it hold its finish for longer, on top of what the anti-tarnish base already does on its own.\n\nAt ₹250 for all three pieces, suggested for gifting, this set is built around the convenience of one coordinated purchase rather than three separate decisions.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish necklace bracelet ring gift set",
+      "secondaryKeywords": [
+        "three piece jewellery set gifting",
+        "matching jewellery set anti tarnish",
+        "coordinated jewelry set india"
+      ],
+      "metaTitle": "Anti-Tarnish Necklace, Bracelet and Ring Gift Set, ₹250",
+      "metaDescription": "A matched three-piece set: an anti-tarnish necklace, bracelet and ring sold together in one box, suggested for gifting at ₹250 for all three.",
+      "imageAlt": "Anti-tarnish three-piece jewellery set with a necklace, bracelet and ring",
+      "ogTitle": "Three-Piece Anti-Tarnish Jewellery Set, ₹250",
+      "ogDescription": "A coordinated three-piece set: an anti-tarnish necklace, bracelet and ring sold together, suggested for gifting. ₹250 at Morchadi Gems.",
+      "ogImage": "/products/P365.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "805",
+      "originalSku": "MJ-347",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-347-infinity-necklace-bracelet-ring-set-805",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces",
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P367",
+    "name": "Gold-Plated Stackable Ring Set of 3",
+    "category": "gift-hampers",
+    "subcategory": "combo-set",
+    "status": "draft",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P367.webp"
+      ]
+    },
+    "specs": {
+      "metal plating": "Gold-plated",
+      "set contents": "3 stackable finger rings"
+    },
+    "description": "Three gold-plated rings come together in this set, sold as a stackable group rather than as single pieces bought and paired by guesswork. Buying them together means the set is built with stacking in mind from the start, rather than assembling three separate rings and hoping the widths and finishes sit well against each other.\n\nA small stackable set like this one gives you more to work with than a single ring does: wear all three together for a fuller look on one finger, split them across two or three fingers, or wear just one on a plainer day and save the rest for later. That flexibility is the real value in a set over a single piece, especially at this price.\n\nGold plating benefits from the same basic care as any plated jewellery: keep it away from water and perfume where you can, and a soft cloth after wear helps the finish hold longer than it would with no care at all.\n\nAt ₹150 for three rings, this is a straightforward way to build a small stacking habit without buying three separate rings one at a time.",
+    "seo": {
+      "primaryKeyword": "gold-plated stackable ring set of three",
+      "secondaryKeywords": [
+        "stacking ring set gold",
+        "three ring set gift hamper",
+        "affordable stacking rings india"
+      ],
+      "metaTitle": "Gold-Plated Stackable Ring Set of Three, ₹150 Total",
+      "metaDescription": "A set of three gold-plated stackable rings, sold together and built to be worn stacked together or split across several fingers, priced at ₹150.",
+      "imageAlt": "Set of three gold-plated stackable finger rings shown together",
+      "ogTitle": "Stackable Ring Set, Three Gold-Plated Rings, ₹150",
+      "ogDescription": "Three gold-plated rings sold as one stackable set, worn together or split across fingers. ₹150 for the set at Morchadi Gems.",
+      "ogImage": "/products/P367.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "808",
+      "originalSku": "MJ-599",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-599-trending-gold-plated-set-of-3-stackable-finger-rings-808",
+      "originalCategories": [
+        "Best selling",
+        "combo"
+      ]
+    }
+  },
+  {
+    "id": "P368",
+    "name": "Gold-Plated Contemporary Stackable Ring Set of 11",
+    "category": "gift-hampers",
+    "subcategory": "combo-set",
+    "status": "draft",
+    "pricing": {
+      "price": 180,
+      "mrp": 180,
+      "cost": 72
+    },
+    "media": {
+      "images": [
+        "/products/P368.webp"
+      ]
+    },
+    "specs": {
+      "metal plating": "Gold-plated",
+      "set contents": "11 stackable rings (contemporary design)"
+    },
+    "description": "Eleven gold-plated rings make up this set, a contemporary design built specifically for stacking rather than a single piece meant to stand alone. Eleven is a genuinely large count for a stacking set, enough to cover several fingers at once or to build a fuller look on just one or two if that's the style you're after.\n\nA set this size gives real range: wear a handful together for a considered, layered look, spread them thinner across both hands for something more understated, or rotate through them so no single combination gets worn every day. That kind of flexibility is hard to get from buying rings individually, since matching eleven separate purchases by eye rarely lines up as cleanly as a set made to sit together from the start.\n\nGold plating across eleven pieces still asks for the same basic care as a single ring would: keep the set away from water and perfume where possible, and a soft cloth after wear helps the finish hold up for longer.\n\nAt ₹180 for eleven rings, the per-ring cost of building a proper stacking collection here is considerably lower than buying that many rings one at a time.",
+    "seo": {
+      "primaryKeyword": "gold-plated contemporary stackable ring set eleven",
+      "secondaryKeywords": [
+        "eleven ring stacking set",
+        "large stackable ring set gift",
+        "contemporary ring set india"
+      ],
+      "metaTitle": "Gold-Plated Stackable Ring Set of 11, Contemporary",
+      "metaDescription": "A set of eleven gold-plated stackable rings in a contemporary design, built for layering across several fingers at once, priced at ₹180 for the set.",
+      "imageAlt": "Set of eleven gold-plated contemporary stackable rings shown together",
+      "ogTitle": "Eleven-Ring Stacking Set, Gold-Plated, ₹180",
+      "ogDescription": "Eleven gold-plated rings sold as one contemporary stacking set, built for layering. ₹180 for the full set at Morchadi Gems.",
+      "ogImage": "/products/P368.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "809",
+      "originalSku": "MJ-295",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-295-gold-plated-contemporary-stackable-rings-set-of-11-809",
+      "originalCategories": [
+        "Best selling",
+        "combo"
+      ]
+    }
+  },
+  {
+    "id": "P383",
+    "name": "Gold-Toned Pendant Necklace with Pearl-Look Accent",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P383.webp"
+      ]
+    },
+    "specs": {
+      "chain finish": "Gold-toned",
+      "material": "Alloy",
+      "stone": "Pearl (natural or imitation, unclear from text)",
+      "size": "45 cm + 5 cm",
+      "pendant dimensions": "2 cm x 2 cm (Length x Width)",
+      "care instructions": "Wipe with a soft cloth after every use; store in a flat box to avoid scratches; keep sprays and perfumes away; do not soak in water; clean only with a soft brush dipped in jewellery cleaning solution."
+    },
+    "description": "A small pendant hangs from this gold-toned chain, set with a pearl-look accent rather than a claimed genuine pearl, since the exact stone type is described only as a likely guess rather than a settled fact. The pendant itself measures a compact two centimetres square, small enough to sit close to the collarbone rather than as a large statement drop.\n\nThe chain runs 45 centimetres with a 5 centimetre extension, which gives a bit of adjustability at the clasp without a full sliding mechanism. Alloy is the base material throughout, finished in a gold tone rather than a claim of solid gold, which is honest about what this piece is: an accessible everyday necklace rather than fine jewellery.\n\nCare here is specific rather than generic: wipe with a soft cloth after every wear, store flat to avoid scratches, keep sprays and perfumes away, never soak it in water, and clean only with a soft brush dipped in a proper jewellery cleaning solution rather than anything harsher.\n\nAt ₹189, this is a small, considered pendant built for regular wear rather than a single occasion, with anti-tarnish backing behind the gold tone.",
+    "seo": {
+      "primaryKeyword": "gold-toned pendant necklace pearl-look accent",
+      "secondaryKeywords": [
+        "pearl look pendant necklace",
+        "anti tarnish pendant chain",
+        "small pendant necklace india"
+      ],
+      "metaTitle": "Gold-Toned Pendant Necklace, Pearl-Look Accent, ₹189",
+      "metaDescription": "A gold-toned alloy pendant necklace with a pearl-look accent stone, on a 45cm chain with a 5cm extension, anti-tarnish, priced at just ₹189.",
+      "imageAlt": "Gold-toned pendant necklace with a small pearl-look accent stone",
+      "ogTitle": "Pendant Necklace, Gold-Toned, Pearl-Look, Anti-Tarnish",
+      "ogDescription": "A gold-toned alloy pendant necklace with a pearl-look accent, anti-tarnish finish, on a 45cm chain. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P383.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "831",
+      "originalSku": "MJ-340",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-340-hollow-out-heart-pendant-necklace-831",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P384",
+    "name": "Gold-Plated Bracelet with Infinity Charm",
+    "category": "bracelets",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 99,
+      "mrp": 99,
+      "cost": 40
+    },
+    "media": {
+      "images": [
+        "/products/P384.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-plated",
+      "color design": "Gold with infinity charm"
+    },
+    "description": "An infinity charm sits at the centre of this gold-plated bracelet, a single continuous loop shape rather than a cluster of smaller charms competing for attention. The symbol reads as a small, quiet gesture, more restrained than an overtly decorative motif, which suits it to being worn on its own without needing anything else on the wrist to complete the look.\n\nGold plating gives the piece its finish, and like any plated jewellery it benefits from the usual care: keep it away from water and perfume where you can, and a soft wipe after wearing helps the colour hold for longer than it would with no attention at all.\n\nAn infinity shape carries an obvious meaning without needing to spell it out, which makes this a straightforward pick as a gift for someone specific rather than a generic choice picked at random. It sits light enough on the wrist for daily wear, not reserved for one particular event.\n\nAt ₹99, this is an accessible way to give or wear a piece with a clear, legible symbol rather than an abstract or purely decorative charm.",
+    "seo": {
+      "primaryKeyword": "gold-plated bracelet infinity charm",
+      "secondaryKeywords": [
+        "infinity charm bracelet gift",
+        "minimal gold bracelet women",
+        "affordable charm bracelet india"
+      ],
+      "metaTitle": "Gold-Plated Bracelet with a Single Infinity Charm, ₹99",
+      "metaDescription": "A gold-plated bracelet with a single infinity charm, lightweight enough for comfortable daily wear and priced at ₹99, suggested for gifting.",
+      "imageAlt": "Gold-plated bracelet with a single infinity charm pendant",
+      "ogTitle": "Infinity Charm Bracelet, Gold-Plated, ₹99",
+      "ogDescription": "A gold-plated bracelet with a single infinity charm, light enough for everyday wear. ₹99 at Morchadi Gems, a quiet gift.",
+      "ogImage": "/products/P384.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "832",
+      "originalSku": "MJ-345",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-345-infinity-gold-plated-bracelet-832",
+      "originalCategories": [
+        "Best selling",
+        "Bracelet under ₹99"
+      ]
+    }
   }
 ]
