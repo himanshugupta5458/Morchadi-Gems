@@ -9495,5 +9495,475 @@
         "Kahmiri Watch"
       ]
     }
+  },
+  {
+    "id": "P417",
+    "name": "Blush Pink Glass Jelly Bangles, Set of Eight",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P417.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass"
+    },
+    "description": "Jelly bangles get their name from the finish, not the material, a glossy, faintly translucent glass that catches light the way a hard resin never quite does. This set of eight comes in a soft blush pink, stacked close enough that they move as one block on the wrist rather than eight separate rings knocking against each other.\n\nGlass bangles are a genuinely different wearing experience to metal ones. They're cooler against the skin in warm weather, and the sound they make sliding together is softer and higher-pitched than a metal stack, closer to what you'd hear at a wedding function where a whole row of women are wearing exactly this kind of set. Available in sizes 2.4, 2.6 and 2.8, so measure an existing bangle before ordering rather than guessing; glass doesn't stretch the way an adjustable metal band would.\n\nBeing glass, it's the one honest trade-off worth saying plainly: these are more fragile than an alloy bangle stack, so slide them on gently over the knuckle rather than forcing a tight fit, and expect to treat them the way you'd treat any glass bangle set passed down at a wedding, worn and put away carefully rather than knocked around daily. At ₹220 for eight, that's still a full stack of colour for less than a single metal cuff costs, which is really the appeal of jelly bangles as a category.",
+    "seo": {
+      "primaryKeyword": "blush pink glass jelly bangles",
+      "secondaryKeywords": [
+        "glass bangle set of eight",
+        "translucent jelly bangles",
+        "wedding bangle set",
+        "pink bangles for women"
+      ],
+      "metaTitle": "Blush Pink Glass Jelly Bangles, Set of Eight | Morchadi Gems",
+      "metaDescription": "A set of eight glossy blush-pink glass jelly bangles, sizes 2.4 to 2.8. Cooler to wear than metal, with the soft sound only a glass stack makes. ₹220.",
+      "imageAlt": "Stack of eight translucent blush pink glass bangles worn on a wrist",
+      "ogTitle": "Blush Pink Glass Jelly Bangles | Morchadi Gems",
+      "ogDescription": "Eight glossy, translucent glass bangles in blush pink, the kind worn stacked for a wedding function. Sizes 2.4 to 2.8, ₹220 for the set.",
+      "ogImage": "/products/P417.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "870",
+      "originalSku": "MJ-534",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-534-set-of-8-viral-jelly-bangle-blush-pink-870",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P418",
+    "name": "Rose Pink Glass Jelly Bangles, Set of Eight",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P418.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass"
+    },
+    "description": "This set sits one shade deeper than a blush pink, a proper rose that leans slightly magenta under direct light, in the same glossy, translucent jelly-glass finish across all eight bangles. Stacked together they read as a single band of colour rather than eight distinct pieces, which is really the whole point of buying a full set instead of one or two.\n\nRose is an easier colour to match against Indian wear than it looks in the photo; it sits comfortably next to gold jewellery, deep maroon, and most festive prints without competing for attention, which is why a set like this tends to get reached for more often than a louder colour would. Sized at 2.4, 2.6 or 2.8, and worth measuring an existing bangle against before ordering, since glass has no give the way an adjustable metal piece does.\n\nGlass bangles are, honestly, more delicate than a metal stack, so they go on gently over the knuckle and come off the same way, rather than forced through a tight wrist. That's the trade for the finish: a jelly-glass shine no alloy quite matches, at a fragility metal doesn't have to think about. Treat the set the way you would any glass bangles kept for festive wear, worn and stored carefully rather than left loose in a bag. Eight bangles in this finish for ₹220 is a full stack for not much money.",
+    "seo": {
+      "primaryKeyword": "rose pink glass jelly bangles",
+      "secondaryKeywords": [
+        "magenta glass bangle set",
+        "translucent jelly bangles",
+        "glass bangle set of eight",
+        "festive bangle set"
+      ],
+      "metaTitle": "Rose Pink Glass Jelly Bangles, Set of Eight | Morchadi Gems",
+      "metaDescription": "Eight glossy rose-pink glass jelly bangles with a hint of magenta, sizes 2.4 to 2.8. Pairs easily with gold jewellery and festive prints. ₹220.",
+      "imageAlt": "Stack of eight translucent rose pink glass bangles worn on a wrist",
+      "ogTitle": "Rose Pink Glass Jelly Bangles | Morchadi Gems",
+      "ogDescription": "A deeper rose-pink take on the jelly bangle set, glossy translucent glass across all eight. Sizes 2.4 to 2.8, ₹220 for the full stack.",
+      "ogImage": "/products/P418.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "871",
+      "originalSku": "MJ-545",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-545-set-of-8-viral-jelly-bangle-rose-pink-871",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P419",
+    "name": "Peach Glass Jelly Bangles, Set of Eight",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P419.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass"
+    },
+    "description": "Peach sits between the pinks and the ambers in this jelly-glass bangle range, warmer than blush but nowhere near as deep as caramel, and it's arguably the easiest of the set to wear against skin tone rather than fighting it. All eight bangles share the same glossy, faintly see-through glass finish, stacked to move as one block on the wrist.\n\nIt's a colour that works equally well against gold and silver-toned jewellery, which isn't true of every shade in this kind of set, so it's a reasonable pick if you're only buying one jelly bangle set rather than several colours. Wear it with a cotton kurta on an ordinary day or stack it under a heavier gold cuff for something more festive; peach reads as neutral enough to do both. Sizes run 2.4, 2.6 and 2.8, and since glass doesn't stretch, measure against a bangle you already own before choosing.\n\nThe honest note on any glass bangle set: it's more fragile than an alloy stack, so ease it on over the knuckle rather than forcing it, and treat it the way you'd treat glass bangles bought for a specific occasion, worn carefully, stored flat rather than tossed in with heavier jewellery. For ₹220, eight bangles in a shade that goes with nearly everything is a fair trade for that bit of extra care.",
+    "seo": {
+      "primaryKeyword": "peach glass jelly bangles",
+      "secondaryKeywords": [
+        "glass bangle set of eight",
+        "translucent jelly bangles",
+        "peach bangles for women",
+        "everyday glass bangle set"
+      ],
+      "metaTitle": "Peach Glass Jelly Bangles, Set of Eight | Morchadi Gems",
+      "metaDescription": "Eight glossy peach glass jelly bangles, warm enough to sit against gold or silver jewellery equally well. Sizes 2.4 to 2.8, ₹220 for the set.",
+      "imageAlt": "Stack of eight translucent peach glass bangles worn on a wrist",
+      "ogTitle": "Peach Glass Jelly Bangles | Morchadi Gems",
+      "ogDescription": "A warm peach jelly-glass bangle set, glossy and translucent, that pairs with gold or silver jewellery alike. Sizes 2.4 to 2.8, ₹220 for eight.",
+      "ogImage": "/products/P419.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "872",
+      "originalSku": "MJ-543",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-543-set-of-8-viral-jelly-bangle-peach-872",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P420",
+    "name": "Pistachio Green Glass Jelly Bangles, Set of Eight",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P420.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass"
+    },
+    "description": "Green is the least common colour in a typical jelly bangle drawer, which is exactly the case for having one set in it, and this pistachio shade is soft rather than acidic, closer to the colour of the fruit than a bright emerald. All eight bangles share the same glossy, translucent glass finish, close enough in tone that they read as a single stacked band rather than eight separate pieces.\n\nIt's a genuinely useful colour to have on hand for outfits that don't call for pink or gold: a mint or sage kurta, a printed cotton saree, anything where a warmer bangle colour would clash rather than complement. Because it's a softer green, it also sits reasonably well next to gold jewellery without the two fighting each other, which brighter greens can struggle with. Sizes run 2.4, 2.6 and 2.8; measure against a bangle already in your collection before ordering, since glass has no stretch to correct a guess.\n\nLike every set in this jelly-glass style, it's more delicate than a metal or alloy bangle stack, so it goes on and off gently over the knuckle, and it's worth storing flat rather than loose with heavier jewellery so nothing chips the glass. ₹220 for eight bangles in a colour this specific is a small price for filling a genuine gap in a bangle collection.",
+    "seo": {
+      "primaryKeyword": "pistachio green glass jelly bangles",
+      "secondaryKeywords": [
+        "green glass bangle set",
+        "translucent jelly bangles",
+        "glass bangle set of eight",
+        "mint bangles for women"
+      ],
+      "metaTitle": "Pistachio Green Glass Bangles, Set of 8 | Morchadi Gems",
+      "metaDescription": "Eight glossy pistachio-green glass jelly bangles, a soft shade that pairs with mint, sage and gold alike. Sizes 2.4 to 2.8, ₹220 for the set.",
+      "imageAlt": "Stack of eight translucent pistachio green glass bangles worn on a wrist",
+      "ogTitle": "Pistachio Green Glass Jelly Bangles | Morchadi Gems",
+      "ogDescription": "A soft pistachio-green jelly bangle set, glossy and translucent glass across all eight. Sizes 2.4 to 2.8, ₹220 for a genuinely useful colour.",
+      "ogImage": "/products/P420.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "873",
+      "originalSku": "MJ-544",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-544-set-of-8-viral-jelly-bangle-pistachio-tint-873",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P421",
+    "name": "Caramel Glass Jelly Bangles, Set of Eight",
+    "category": "bangles",
+    "status": "draft",
+    "pricing": {
+      "price": 220,
+      "mrp": 220,
+      "cost": 88
+    },
+    "media": {
+      "images": [
+        "/products/P421.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "pills",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass"
+    },
+    "description": "Caramel is the deepest, warmest colour in this jelly bangle range, an amber that turns almost honey-coloured where the light catches it directly. The same glossy, translucent glass finish runs across all eight bangles, stacked tight enough that the set moves as one block rather than eight loose pieces.\n\nIt's the shade that reads most naturally with gold jewellery of any kind, and it carries festive prints, rust, mustard, deep orange, better than the cooler pinks in this range do. A set like this suits an autumn wedding season outfit or a Diwali evening where warmer tones are already doing most of the work, and it doesn't need much else on the wrist to look finished. Sizes run 2.4, 2.6 and 2.8; since glass bangles don't stretch to fit, check against one you already own rather than guessing a size.\n\nThe trade-off is the same one every glass bangle set makes: more fragile than metal, so it eases on and off over the knuckle rather than being forced, and it's worth keeping stored flat, away from heavier pieces that could knock against it. Treat it the way festive glass bangles are usually treated, worn on purpose rather than daily, and it'll hold up across more than one season. Eight bangles in this deep a colour for ₹220 is a fair stack for the price.",
+    "seo": {
+      "primaryKeyword": "caramel glass jelly bangles",
+      "secondaryKeywords": [
+        "amber glass bangle set",
+        "translucent jelly bangles",
+        "glass bangle set of eight",
+        "festive bangles for women"
+      ],
+      "metaTitle": "Caramel Glass Jelly Bangles, Set of Eight | Morchadi Gems",
+      "metaDescription": "Eight glossy caramel-amber glass jelly bangles, warm enough to carry rust and mustard festive tones well. Sizes 2.4 to 2.8, ₹220 for the set.",
+      "imageAlt": "Stack of eight translucent caramel amber glass bangles worn on a wrist",
+      "ogTitle": "Caramel Glass Jelly Bangles | Morchadi Gems",
+      "ogDescription": "A deep caramel-amber jelly bangle set, glossy translucent glass across all eight, made for festive autumn tones. Sizes 2.4 to 2.8, ₹220.",
+      "ogImage": "/products/P421.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "874",
+      "originalSku": "MJ-535",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-535-set-of-8-viral-jelly-bangle-caramel-tint-874",
+      "originalCategories": [
+        "jelly bangles"
+      ]
+    }
+  },
+  {
+    "id": "P430",
+    "name": "Gold-Toned Pearl Station Necklace",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P430.webp"
+      ]
+    },
+    "specs": {
+      "design": "Pearl station design — faux pearls spaced along a gold-toned chain",
+      "stone": "Imitation pearl",
+      "colour": "Gold-toned",
+      "care": "Avoid water, perfumes and lotions; store in a dry place after use"
+    },
+    "description": "A station necklace spaces its beads out along the chain rather than clustering them, and this one does it with faux pearls set at even intervals along a gold-toned chain, enough gap between each pearl that the chain itself stays visible instead of disappearing under the beads. It's a quieter design than a full pearl strand, closer to a fine chain that happens to carry a few pearls than a pearl necklace with a chain as an afterthought.\n\nThat restraint is what makes it wearable daily rather than just for occasions. It sits close to the neck, layers easily under a collar or alongside a second thinner chain, and doesn't compete with an outfit the way a heavier, more deliberate necklace would. Office wear, a plain saree blouse, or a kurta with a simple neckline all suit it, since the pearls are doing quiet, spaced-out work rather than demanding the whole look revolve around them.\n\nThe pearls are faux, not the sea-grown kind, which is honest for a ₹89 piece and exactly what a station necklace like this is meant to be: an easy, affordable everyday layer rather than a fine jewellery investment. Keep it away from water, perfume and lotion, and store it flat in a dry place after wear so the gold tone on the chain doesn't dull faster than it should. At this price, it's an easy add-on to a small everyday jewellery rotation rather than a single big purchase.",
+    "seo": {
+      "primaryKeyword": "gold-toned pearl station necklace",
+      "secondaryKeywords": [
+        "faux pearl necklace",
+        "layering necklace for women",
+        "everyday gold necklace",
+        "affordable pearl-look necklace"
+      ],
+      "metaTitle": "Gold-Toned Faux Pearl Station Necklace | Morchadi Gems",
+      "metaDescription": "Faux pearls spaced evenly along a fine gold-toned chain, quiet enough to wear daily or layer with a second necklace. ₹89, an easy everyday add-on.",
+      "imageAlt": "Gold-toned chain necklace with faux pearls spaced evenly along its length",
+      "ogTitle": "Gold-Toned Pearl Station Necklace | Morchadi Gems",
+      "ogDescription": "Faux pearls set at even intervals along a fine gold-toned chain, made for daily wear or layering. ₹89 at Morchadi Gems.",
+      "ogImage": "/products/P430.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "883",
+      "originalSku": "MJ-454",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-454-pearl-station-necklace-in-gold-883",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P434",
+    "name": "Gold-Toned Heart Pendant Necklace, Pearl-Look Centre",
+    "category": "necklaces",
+    "status": "draft",
+    "pricing": {
+      "price": 89,
+      "mrp": 89,
+      "cost": 20
+    },
+    "media": {
+      "images": [
+        "/products/P434.webp"
+      ]
+    },
+    "specs": {
+      "stone centerpiece": "Resin or glass imitation pearl, unclear from text",
+      "material finish": "Gold-toned",
+      "chain type": "Link chain",
+      "care instructions": "Keep away from water, perfumes and lotions; store in a dry, safe place"
+    },
+    "description": "The heart shape does the obvious work here, but the detail worth noticing is the centre: a pearl-look stone rather than the flat enamel or plain metal that a lot of heart pendants use, giving it a soft shimmer that catches light differently depending on the angle. It hangs on a polished gold-toned link chain, simple enough not to distract from the pendant itself.\n\nIt reads as an easy gift more than a piece you'd necessarily buy for yourself, the kind of thing that suits a birthday or a small occasion without needing much explanation when you hand it over, though there's nothing stopping you wearing it daily either. The link chain sits comfortably under most necklines, office wear included, and the heart is small enough to read as jewellery rather than a statement.\n\nThe centre is a resin or glass pearl-look material rather than a genuine or cultured pearl, which is worth saying plainly since \"mother of pearl\" gets used loosely in a lot of jewellery listings, and this one is honestly closer to pearl-look than the real material. The chain is gold-toned rather than solid gold. At ₹89, that's a fair trade for the shimmer and shape on offer. Keep it away from water, perfume and lotion, and store it somewhere dry so the link chain keeps its shine.",
+    "seo": {
+      "primaryKeyword": "gold-toned heart pendant necklace",
+      "secondaryKeywords": [
+        "pearl-look pendant necklace",
+        "gifting necklace for her",
+        "heart necklace gold-toned",
+        "affordable pendant necklace"
+      ],
+      "metaTitle": "Heart Pendant Necklace, Pearl-Look Centre | Morchadi Gems",
+      "metaDescription": "A heart pendant with a soft pearl-look centre on a polished gold-toned link chain. An easy gift or everyday piece, honestly priced at just ₹89.",
+      "imageAlt": "Gold-toned link chain necklace with a heart-shaped pendant and pearl-look centre",
+      "ogTitle": "Gold-Toned Heart Pendant Necklace | Morchadi Gems",
+      "ogDescription": "A heart-shaped pendant with a soft pearl-look centre, on a polished gold-toned link chain. An easy gift at ₹89, Morchadi Gems.",
+      "ogImage": "/products/P434.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "887",
+      "originalSku": "MJ-436",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-436-mother-of-pearl-heart-necklace-in-gold-887",
+      "originalCategories": [
+        "Necklace / Fashion Necklaces"
+      ]
+    }
+  },
+  {
+    "id": "P437",
+    "name": "Fan-Shaped Crystal Pendant Necklace, Gold-Toned",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 110,
+      "mrp": 110,
+      "cost": 44
+    },
+    "media": {
+      "images": [
+        "/products/P437.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "material finish": "Gold-toned",
+      "care instructions": "Keep away from moisture and perfumes; store in a dry, safe place"
+    },
+    "description": "A fan shape gives a pendant more edges to catch light than a round or teardrop cut would, and this one uses that: a geometric fan-shaped drop set with small clear stones, hung on a gold-toned chain that keeps the rest of the design plain so the pendant does all the work. It's a bigger, more noticeable shape than a simple solitaire, without tipping into full statement-piece territory.\n\nThat middle ground makes it useful for more than one kind of outfit. It has enough presence for a going-out top or a festive kurta, but it's not so large that it looks out of place with an office collar on a day you want a bit more sparkle than usual. The chain sits at a length that lets the pendant fall just below the collarbone, where a geometric shape like this actually reads clearly instead of getting lost against the skin.\n\nThe stones are glass or cubic zirconia rather than genuine crystal or diamond, honestly labelled for what they are on a ₹110 pendant, and the chain is gold-toned rather than solid gold. Keep it away from moisture and perfume, and store it somewhere dry so the plating holds its finish. For the price, it's a reasonable way to add one geometric, slightly-more-dressed-up piece to a jewellery rotation that's mostly simpler daily pieces.",
+    "seo": {
+      "primaryKeyword": "fan-shaped crystal pendant necklace",
+      "secondaryKeywords": [
+        "gold-toned pendant necklace",
+        "geometric pendant necklace",
+        "cubic zirconia pendant",
+        "statement pendant for going out"
+      ],
+      "metaTitle": "Fan-Shaped Crystal Pendant Necklace | Morchadi Gems",
+      "metaDescription": "A geometric fan-shaped pendant set with small clear stones on a gold-toned chain, dressed-up enough for evenings, plain enough for the office. ₹110.",
+      "imageAlt": "Gold-toned necklace with a fan-shaped pendant set with small clear stones",
+      "ogTitle": "Fan-Shaped Crystal Pendant, ₹110 | Morchadi Gems",
+      "ogDescription": "A geometric fan-shaped drop set with small clear stones, on a plain gold-toned chain. ₹110 at Morchadi Gems.",
+      "ogImage": "/products/P437.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "891",
+      "originalSku": "MJ-250",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-250-fan-shaped-crystal-pendant-necklace-891",
+      "originalCategories": [
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
   }
 ]
