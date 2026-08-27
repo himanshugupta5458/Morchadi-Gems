@@ -17874,5 +17874,303 @@
         "Anti Tarnish ring"
       ]
     }
+  },
+  {
+    "id": "P230",
+    "name": "Gold-Plated Anti-Tarnish Solitaire Ring with Side Stones",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P230.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for rings",
+        "type": "dropdown",
+        "values": [
+          "6",
+          "7",
+          "8"
+        ],
+        "default": "6"
+      }
+    ],
+    "specs": {
+      "material": "Stainless steel",
+      "plating coating": "Gold plating",
+      "stone": "Cubic zirconia (solitaire center with side accents)",
+      "design": "Classic solitaire band with side-studded stones",
+      "size to diameter mapping": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
+      "packaging": "Premium black velvet box"
+    },
+    "description": "Anti-tarnish stainless steel carries the weight on this one, gold-plated and set with a round cubic zirconia centre stone flanked by smaller cubic zirconia accents along the band. It's a classic solitaire shape rather than a shaped motif, the kind of ring that reads as put-together without asking for a second look to explain itself.\n\nUnlike the adjustable pieces in this shop's lower-priced range, this ring comes in fixed sizes 6, 7 and 8, each mapped to a specific diameter (1.6cm, 1.7cm and 1.8cm respectively), so it's worth checking a size before ordering rather than assuming a stretch fit. That precision is part of what a solid stainless steel base buys you over a soft, bendable band.\n\nStainless steel resists tarnish considerably better than the plated alloy used in this shop's cheaper rings, and the gold plating sits on top of that sturdier base rather than directly on something that corrodes. It arrives in a black velvet box, which makes it a straightforward gift on its own without extra wrapping.\n\nWipe it with a soft cloth after wearing and keep it away from harsh chemicals to help the plating hold its colour. At ₹249, the anti-tarnish base and the sized fit put this a step up from the shop's ₹59 adjustable rings, in build rather than just in price.",
+    "seo": {
+      "primaryKeyword": "gold-plated anti-tarnish solitaire ring cubic zirconia",
+      "secondaryKeywords": [
+        "stainless steel solitaire ring",
+        "sized cz ring india",
+        "anti tarnish ring gift box"
+      ],
+      "metaTitle": "Gold-Plated Anti-Tarnish Solitaire Ring, Sized Fit",
+      "metaDescription": "An anti-tarnish stainless steel ring with a cubic zirconia solitaire and side stones, sized 6 to 8 with a diameter guide included, priced at ₹249, gift-boxed.",
+      "imageAlt": "Gold-plated anti-tarnish ring with a cubic zirconia solitaire and side accent stones",
+      "ogTitle": "Anti-Tarnish Solitaire Ring, Gold-Plated Steel, ₹249",
+      "ogDescription": "A gold-plated anti-tarnish stainless steel ring with a cubic zirconia solitaire and side stones, sized 6 to 8. ₹249, gift-boxed.",
+      "ogImage": "/products/P230.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "531",
+      "originalSku": "MJ-054",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-054-anti-tarnish-solitaire-spark-ring-531",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
+  },
+  {
+    "id": "P242",
+    "name": "Anti-Tarnish Openable Kada Bracelet",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P242.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish metal",
+      "closure": "Openable clasp",
+      "plating coating": "Long-lasting shine, rust-resistant",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "This kada opens on a clasp rather than sliding over the hand closed, which makes it easier to put on and take off than a solid rigid bangle, without giving up the kada's characteristic sturdy shape. It's built in anti-tarnish metal, finished for long-lasting shine and resistance to rust.\n\nThe openable clasp is the detail worth noticing here: many kada-style bracelets are sold as a fixed loop that has to be worked over the knuckle, and this one skips that entirely. That makes it a more comfortable daily piece and an easier one to layer with a watch or another bracelet on the same wrist without a tight squeeze getting either one on.\n\nIt's suited to casual days as much as festive ones and party wear, according to the confirmed occasion notes, which gives it more range than a piece built for one specific event. Care is simple: wipe it with a soft cloth after wearing and store it somewhere dry between uses.\n\nAt ₹320, the openable clasp and the rust-resistant finish are the two functional details that separate this from a plainer bangle at a similar price.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish openable kada bracelet",
+      "secondaryKeywords": [
+        "rust resistant kada bracelet",
+        "easy clasp bracelet women",
+        "festive kada bracelet india"
+      ],
+      "metaTitle": "Anti-Tarnish Openable Kada Bracelet, Easy Clasp Fit",
+      "metaDescription": "An anti-tarnish kada bracelet with an openable clasp, rust-resistant finish, suited to both casual wear and festive occasions, priced at ₹320.",
+      "imageAlt": "Anti-tarnish kada bracelet with an openable clasp for easy wear",
+      "ogTitle": "Openable Kada Bracelet, Anti-Tarnish Finish, ₹320",
+      "ogDescription": "An anti-tarnish kada bracelet with an easy openable clasp and a rust-resistant finish. Casual to festive wear, ₹320.",
+      "ogImage": "/products/P242.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "627",
+      "originalSku": "MJ-041",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-041-anti-tarnish-kada-bracelet-black-white-627",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P243",
+    "name": "Anti-Tarnish Openable Kada Bracelet, Easy-Clasp Edition",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P243.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish metal",
+      "closure": "Openable clasp",
+      "plating coating": "Long-lasting shine, rust-resistant",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "Like its sibling pieces in this shop's kada line, this bracelet opens on a clasp instead of forcing a closed loop over the hand, in anti-tarnish metal built to resist rust and hold its shine over time. No specific colourway is confirmed for this piece, so this description sticks to the openable-clasp mechanism and the finish rather than naming a colour.\n\nAn openable kada solves a specific everyday problem: getting a sturdy-feeling bracelet on and off without wrestling it past the knuckle. That makes it easier to wear alongside a watch or a second bracelet, and easier to take off at the end of a long day than a rigid closed bangle would be.\n\nThe confirmed occasion range covers casual, festive and party wear, so it isn't built for a single event; it can move from an ordinary day into something more dressed-up without needing to be swapped out. Wipe it with a soft cloth after use and keep it somewhere dry when it's off your wrist.\n\nAt ₹320, the rust-resistant finish is the detail that justifies wearing it daily rather than saving it.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish kada bracelet easy clasp",
+      "secondaryKeywords": [
+        "openable bracelet rust resistant",
+        "kada bracelet daily wear",
+        "party wear kada bracelet india"
+      ],
+      "metaTitle": "Anti-Tarnish Kada Bracelet with Easy Openable Clasp",
+      "metaDescription": "An anti-tarnish kada bracelet with an openable clasp and rust-resistant finish, suited to both daily wear and festive occasions, priced at ₹320.",
+      "imageAlt": "Anti-tarnish kada bracelet shown open on its clasp mechanism",
+      "ogTitle": "Kada Bracelet, Anti-Tarnish, Openable Clasp, ₹320",
+      "ogDescription": "An anti-tarnish kada bracelet that opens on a clasp instead of a closed loop, rust-resistant. ₹320 at Morchadi Gems.",
+      "ogImage": "/products/P243.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "628",
+      "originalSku": "MJ-042",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-042-anti-tarnish-kada-bracelet-blue-green-628",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P244",
+    "name": "Anti-Tarnish Openable Kada Bracelet, Everyday Wear",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P244.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish metal",
+      "closure": "Openable clasp",
+      "plating coating": "Long-lasting shine, rust-resistant",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "The clasp on this kada opens rather than requiring the bracelet to be worked over the hand closed, the same practical mechanism as the rest of this shop's kada line, in anti-tarnish metal finished to resist rust over time. No specific colour is confirmed for this piece, so the description here focuses on what's certain: the clasp, the finish, and how it wears.\n\nAn openable design changes the daily experience of a kada more than it might sound like on paper. A closed loop has to be pushed past the widest part of the hand every single time; an openable one just clicks shut, which matters if you're putting it on and taking it off more than once a day.\n\nIt suits casual wear as its everyday role, and stretches to festive occasions and party wear when the day calls for something a bit more, according to the confirmed occasion range. Care is a wipe with a soft cloth after wearing, stored dry when not on the wrist.\n\nAt ₹320, the rust-resistant finish means this is built to be worn often rather than kept for special occasions only.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish kada bracelet everyday wear",
+      "secondaryKeywords": [
+        "openable clasp bracelet rust proof",
+        "daily wear kada bracelet",
+        "anti tarnish bracelet party wear"
+      ],
+      "metaTitle": "Anti-Tarnish Kada Bracelet for Everyday Wear, ₹320",
+      "metaDescription": "An anti-tarnish kada bracelet with an easy openable clasp, built for frequent wear, with a rust-resistant finish, priced simply at ₹320 flat.",
+      "imageAlt": "Anti-tarnish kada bracelet with an openable clasp, worn on the wrist",
+      "ogTitle": "Everyday Kada Bracelet, Anti-Tarnish Clasp, ₹320",
+      "ogDescription": "An anti-tarnish kada bracelet with an openable clasp, rust-resistant and built for frequent wear. ₹320 at Morchadi Gems.",
+      "ogImage": "/products/P244.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "629",
+      "originalSku": "MJ-043",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-043-anti-tarnish-kada-bracelet-red-amber-orange-629",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P245",
+    "name": "Anti-Tarnish Openable Kada Bracelet, Festive Edition",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 320,
+      "mrp": 320,
+      "cost": 128
+    },
+    "media": {
+      "images": [
+        "/products/P245.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish metal",
+      "closure": "Openable clasp",
+      "plating coating": "Long-lasting shine, rust-resistant",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "This kada shares its shop's usual openable-clasp mechanism, built in anti-tarnish metal with a finish meant to resist rust and hold its shine. No specific colour or texture is confirmed among the attributes, so this stays with what's certain: the clasp, the finish and how it wears.\n\nThe clasp is the same practical solution across this whole kada family: it opens rather than demanding the bracelet be forced over the hand, which makes daily removal simpler and layering with a watch or a second bracelet easier on the wrist.\n\nIts confirmed occasion range spans casual, festive and party wear, so it isn't tied to one specific event and can move between an ordinary day and a dressier one without a change of jewellery. Care stays simple throughout: a wipe with a soft cloth after wearing, and storage somewhere dry.\n\nAt ₹320, the rust-resistant anti-tarnish finish is what makes daily wear realistic rather than something to worry about after a few weeks, right through to the festive occasions it's also built to cover.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish kada bracelet festive occasion",
+      "secondaryKeywords": [
+        "openable kada bracelet rust resistant",
+        "festive kada bracelet women",
+        "anti tarnish bracelet casual festive"
+      ],
+      "metaTitle": "Anti-Tarnish Kada Bracelet, Festive-Ready, Openable",
+      "metaDescription": "An anti-tarnish kada bracelet with an openable clasp and rust-resistant finish, suited to casual wear and festive occasions alike, priced at ₹320.",
+      "imageAlt": "Anti-tarnish kada bracelet with an openable clasp, shown against a plain background",
+      "ogTitle": "Festive Kada Bracelet, Anti-Tarnish, Openable, ₹320",
+      "ogDescription": "An anti-tarnish kada bracelet built for festive occasions as much as daily wear, with an openable clasp. ₹320 at Morchadi Gems.",
+      "ogImage": "/products/P245.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "630",
+      "originalSku": "MJ-619",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-619-white-turquoise-raised-bracelet-630",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
   }
 ]
