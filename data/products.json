@@ -8926,5 +8926,574 @@
         "Anti Tarnish ring"
       ]
     }
+  },
+  {
+    "id": "P357",
+    "name": "Adjustable Thin Ring with Clear Stones, Gold Finish",
+    "category": "rings",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P357.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for rings",
+        "type": "pills",
+        "values": [
+          "6",
+          "7",
+          "8"
+        ],
+        "default": "6"
+      }
+    ],
+    "specs": {
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "metal finish": "Gold finish",
+      "fit": "Adjustable"
+    },
+    "description": "A ring this thin only earns its place if it sits flush and doesn't catch on things, and this one does: a slim gold-finish band no wider than a matchstick, with tiny clear stones set along the front so they catch light without adding any real weight. You feel almost nothing wearing it, which is the point of a ring like this. It comes in sizes 6 to 8, with a little give built into the band so a size that's slightly off still settles rather than pinching.\n\nThis isn't the ring you build an outfit around. It's the one you forget you're wearing until it catches under office lighting or a phone torch, which is exactly why it works stacked with two or three others on the same hand, or worn alone on a day when you want something small and finished rather than a whole look. A cotton kurta, a plain saree, a Tuesday at your desk: it holds up to all of them without asking for attention.\n\nThe stones are clear glass and crystal rather than genuine diamond, set into a gold-finish base rather than solid gold, and at ₹150 that's the honest trade on offer: real sparkle, none of the weight of the real thing on either your finger or your wallet. Keep it away from perfume and hand sanitiser and it holds its look. Small rings like this rarely become the centrepiece of a jewellery box, but they're the ones that end up worn the most.",
+    "seo": {
+      "primaryKeyword": "adjustable thin gold ring",
+      "secondaryKeywords": [
+        "thin ring for women",
+        "gold-finish ring with stones",
+        "everyday stacking ring",
+        "clear stone ring"
+      ],
+      "metaTitle": "Adjustable Thin Gold Ring with Clear Stones | Morchadi Gems",
+      "metaDescription": "A slim gold-finish ring with tiny clear stones along the band, sizes 6 to 8 with a little give for comfort. Light enough for daily stacking, ₹150.",
+      "imageAlt": "Slim gold-finish ring with a row of tiny clear stones along a thin band",
+      "ogTitle": "Thin Gold Ring with Clear Stones, ₹150 | Morchadi Gems",
+      "ogDescription": "A slim gold-finish band set with tiny clear stones, made for daily stacking. Sizes 6 to 8 with a little give in the fit, ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P357.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "793",
+      "originalSku": "MJ-417",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-417-minimal-thin-band-gold-ring-for-girls-793",
+      "originalCategories": [
+        "Anti Tarnish ring"
+      ]
+    }
+  },
+  {
+    "id": "P358",
+    "name": "Gold Solitaire Pendant Necklace, Skin-Friendly Chain",
+    "category": "pendants",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 199,
+      "mrp": 199,
+      "cost": 70
+    },
+    "media": {
+      "images": [
+        "/products/P358.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-tone chain (plating/base metal unclear from text)",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "weight": "Lightweight",
+      "material property": "Skin-friendly"
+    },
+    "description": "There's not much to a solitaire pendant beyond getting the proportions right, and this one does: a single clear stone hangs low on a fine gold-tone chain, small enough to sit at the collarbone rather than compete with a neckline. The chain itself is finished to be skin-friendly, which matters more on a piece meant for daily wear than it does on something you'll only put on twice a year.\n\nIt's genuinely light. You'd wear it under a work shirt collar and forget it's there until you catch it in a mirror, and that's really the whole appeal of a solitaire, it does one thing and does it quietly. Pair it with an office kurta or a plain saree blouse where the neckline is doing most of the talking already; this just adds one clean point of light rather than a second design competing for attention.\n\nThe stone reads as glass or cubic zirconia rather than a genuine diamond, and the chain is gold-toned rather than solid gold, which is exactly how a ₹199 pendant should be honest about itself. What you're paying for is the shape and the finish, not the material underneath it, and both are done cleanly here. Keep it away from water and perfume, and store it flat rather than tangled with heavier pieces so the chain doesn't kink. It's a small, easy gift too, the kind of thing that doesn't need explaining when you hand it over.",
+    "seo": {
+      "primaryKeyword": "gold solitaire pendant necklace",
+      "secondaryKeywords": [
+        "skin-friendly necklace",
+        "everyday pendant necklace",
+        "cubic zirconia pendant",
+        "gifting necklace"
+      ],
+      "metaTitle": "Gold Solitaire Pendant Necklace, Skin-Friendly Chain",
+      "metaDescription": "A single clear-stone solitaire on a fine, skin-friendly gold-tone chain, light enough for daily wear under a collar. ₹199, an easy gift too.",
+      "imageAlt": "Gold-tone chain necklace with a single clear-stone solitaire pendant",
+      "ogTitle": "Gold Solitaire Pendant Necklace | Morchadi Gems",
+      "ogDescription": "A single clear stone on a fine, skin-friendly gold-tone chain, small enough to sit quietly at the collarbone. ₹199, and an easy gift to hand over.",
+      "ogImage": "/products/P358.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "794",
+      "originalSku": "MJ-416",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-416-minimal-solitaire-pendant-necklace-for-women-794",
+      "originalCategories": [
+        "Best selling",
+        "Anti Tarnish Necklaces",
+        "Necklace"
+      ]
+    }
+  },
+  {
+    "id": "P386",
+    "name": "Green Meenakari Floral Kundan Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 350,
+      "mrp": 350,
+      "cost": 140
+    },
+    "media": {
+      "images": [
+        "/products/P386.webp"
+      ]
+    },
+    "specs": {
+      "enamel technique": "Meenakari (green)",
+      "motif decoration": "Hand-painted pink floral motifs",
+      "stonework": "Kundan",
+      "dial finish": "Gold-tone",
+      "movement": "Quartz",
+      "embellishment": "Ghungroo bells"
+    },
+    "description": "Meenakari enamelling is old Kashmiri work, the kind where colour gets fired into metal rather than painted over it, and this bracelet watch wears it plainly: diamond-shaped green panels, hand-painted with small pink floral motifs, frame a clean gold-tone quartz dial on either side. Kundan-style stonework picks out the centre of each panel, and tiny ghungroo bells hang along the chain so the piece makes a small, deliberate sound with every movement of the wrist.\n\nIt reads as jewellery first and a watch second, which is the right order for something this detailed. The dial is legible enough to actually check the time, but you're buying this for the panels and the bells, not the quartz movement doing quiet work underneath. It sits well with festive colours, a saree for a wedding function or a bright kurta for a smaller family occasion, somewhere the little jingle of the bells can actually be heard over the noise of a normal day.\n\nBecause the enamel and kundan work is applied rather than solid, treat it a little more carefully than an everyday alloy piece: no water, no perfume directly on the panels, and store it flat rather than folded into a pile of other jewellery so nothing catches on the chains. At ₹350, you're paying for a genuinely detailed piece of traditional craft rather than a plain gold-tone watch with a strap, and the difference shows the moment it catches the light.",
+    "seo": {
+      "primaryKeyword": "green meenakari floral bracelet watch",
+      "secondaryKeywords": [
+        "kundan bracelet watch",
+        "kashmiri bracelet watch",
+        "ghungroo bell watch",
+        "gold-tone quartz watch for women"
+      ],
+      "metaTitle": "Green Meenakari Floral Bracelet Watch | Morchadi Gems",
+      "metaDescription": "A Kashmiri-style bracelet watch in hand-painted green meenakari with pink floral motifs, kundan-style stonework and ghungroo bells. ₹350, gifting-ready.",
+      "imageAlt": "Gold-tone bracelet watch with green meenakari floral panels and small gold ghungroo bells",
+      "ogTitle": "Green Meenakari Kundan Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Hand-painted green meenakari panels with pink floral motifs, kundan-style stonework and jingling ghungroo bells, framing a gold-tone quartz dial. ₹350.",
+      "ogImage": "/products/P386.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "835",
+      "originalSku": "MJ-356",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-356-kashmiri-green-meenakari-floral-kundan-bracelet-watch-835",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P387",
+    "name": "Green Enamel Kundan Square Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P387.webp"
+      ]
+    },
+    "specs": {
+      "stonework": "Kundan",
+      "enamel technique": "Enamel (green)",
+      "stone": "Cubic zirconia",
+      "chain": "Triple gold chains",
+      "embellishment": "Ghungroo bells (both ends)",
+      "dial finish": "Pearlescent white",
+      "movement": "Quartz"
+    },
+    "description": "Two square kundan frames, one above the dial and one below, edged in green enamel and set with cubic zirconia stones at the centre: that's the whole design, repeated top and bottom so the watch reads as symmetrical from either angle. Triple gold chains carry the weight instead of a single strap, and small ghungroo bells sit at the very ends of each chain, close to the wrist rather than dangling loose.\n\nThe dial itself is a soft pearlescent white, plain enough not to compete with the framing around it, and still perfectly readable day to day. This is a piece that photographs better than a plain watch ever will, which matters for the kind of festive event where people are actually taking pictures. A saree with gold jewellery already in the mix carries it easily, and it holds its own without needing anything else on that wrist.\n\nThe CZ stones are cubic zirconia rather than diamond, and the frames are enamel and kundan-style work over a gold-tone base rather than solid gold, honest terms for a ₹299 piece built around craft rather than raw material cost. The triple-chain construction means it needs a little more care when you put it on and take it off, so the chains don't tangle. Store it flat, away from perfume, and it keeps its shine through the season it was bought for and the next one too.",
+    "seo": {
+      "primaryKeyword": "green enamel kundan bracelet watch",
+      "secondaryKeywords": [
+        "square kundan watch",
+        "cubic zirconia bracelet watch",
+        "triple chain watch",
+        "kashmiri bracelet watch"
+      ],
+      "metaTitle": "Green Enamel Kundan Square Bracelet Watch, CZ Stones",
+      "metaDescription": "Two square kundan-and-enamel frames set with cubic zirconia, joined by triple gold chains and ghungroo bells around a pearlescent white dial. ₹299.",
+      "imageAlt": "Gold-tone bracelet watch with square green enamel kundan frames and triple chain strap",
+      "ogTitle": "Green Kundan Square Bracelet Watch, ₹299 | Morchadi Gems",
+      "ogDescription": "Square kundan-and-enamel frames with cubic zirconia stones, triple gold chains and ghungroo bells around a pearlescent white dial. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P387.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "836",
+      "originalSku": "MJ-358",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-358-kashmiri-kundan-square-bracelet-watch-836",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P388",
+    "name": "Red Meenakari Tulip Kundan Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 369,
+      "mrp": 369,
+      "cost": 148
+    },
+    "media": {
+      "images": [
+        "/products/P388.webp"
+      ]
+    },
+    "specs": {
+      "enamel technique": "Meenakari (red)",
+      "stonework": "Kundan",
+      "dial finish": "White",
+      "movement": "Quartz",
+      "chain": "Triple gold chains",
+      "embellishment": "Cascading ghungroo bells (both ends)"
+    },
+    "description": "Red is a harder colour to do well in enamel work than green or blue, it can tip into looking flat instead of rich, and this one avoids that: bold red meenakari tulip motifs, teardrop kundan-style stones at their centres, framing a plain white quartz dial that stays out of the way. Triple gold chains hold it together, with cascading ghungroo bells at both ends rather than just one.\n\nThe tulip shape is doing real work here. It's a softer, more floral motif than the square or diamond-panel designs elsewhere in this kind of watch, and it reads warmer on the wrist because of it, less geometric, more like something painted by hand, which is closer to what it actually is. Wear it with festive red or gold, where the tulips pick up the same family of colour rather than fighting it, at a wedding or a Diwali evening where a plain watch would look underdressed.\n\nThe kundan is kundan-style stonework rather than the traditional uncut-diamond technique, set in enamel over a gold-tone chain rather than solid gold, and that honesty is what keeps a ₹369 price believable for this much detail. The chains cascade rather than sit flat, so give them a moment to settle when you put it on, and keep the panels away from water and perfume so the enamel colour holds. It's built for the handful of occasions a year that actually call for this much jewellery on one wrist.",
+    "seo": {
+      "primaryKeyword": "red meenakari tulip bracelet watch",
+      "secondaryKeywords": [
+        "kundan bracelet watch for wedding",
+        "kashmiri bracelet watch",
+        "cascading ghungroo watch",
+        "festive bracelet watch"
+      ],
+      "metaTitle": "Red Meenakari Tulip Kundan Bracelet Watch, Gold-Tone",
+      "metaDescription": "Bold red meenakari tulip motifs with teardrop kundan-style centres, framing a white quartz dial on triple gold chains with cascading ghungroo bells. ₹369.",
+      "imageAlt": "Gold-tone bracelet watch with red meenakari tulip motifs and cascading ghungroo bell chains",
+      "ogTitle": "Red Meenakari Tulip Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Hand-painted red tulip meenakari with teardrop kundan-style centres, triple gold chains and cascading ghungroo bells around a white dial. ₹369.",
+      "ogImage": "/products/P388.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "837",
+      "originalSku": "MJ-367",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-367-kashmiri-red-meenakari-tulip-kundan-bracelet-watch-837",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P389",
+    "name": "Red Kundan Charm Bracelet Watch, Floral Pendant",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P389.webp"
+      ]
+    },
+    "specs": {
+      "charm motif": "Red tulip kundan charms",
+      "dial finish": "White",
+      "movement": "Quartz",
+      "pendant": "Grey floral kundan pendant",
+      "chain": "Double gold chains",
+      "embellishment": "Ghungroo bells"
+    },
+    "description": "Not every piece here uses a painted panel to frame the dial; this one uses charms instead, small red tulip kundan-style shapes sitting just above and below a plain white quartz face, with a separate grey floral kundan pendant hanging lower on a double gold chain. It's a busier silhouette than a single-panel watch, more like a charm bracelet that happens to tell the time.\n\nThat looseness is the appeal. The pendant swings slightly rather than sitting fixed in place, and the double chain (thinner than the triple-chain designs) keeps the whole thing lighter on the wrist despite having more individual pieces attached to it. Ghungroo bells finish it off, giving a soft sound with movement rather than a loud jingle. It suits an outfit that already has some red or gold running through it, a festive kurta set or wedding-season saree, where the charm and pendant read as one coordinated idea rather than two.\n\nThe kundan on both the charms and the pendant is kundan-style stonework over a gold-tone base, and the grey in the pendant is enamel colour rather than a separate metal, honest terms for a ₹399 piece built on detail rather than raw materials. Because there's more moving hardware here than a single-panel watch, check the charms sit straight after putting it on, and keep it away from water and perfume so the enamel keeps its colour through the season.",
+    "seo": {
+      "primaryKeyword": "red kundan charm bracelet watch",
+      "secondaryKeywords": [
+        "kundan pendant bracelet watch",
+        "kashmiri charm watch",
+        "double chain bracelet watch",
+        "gifting bracelet watch"
+      ],
+      "metaTitle": "Red Kundan Charm Bracelet Watch with Floral Pendant",
+      "metaDescription": "Red tulip kundan-style charms flank a white quartz dial, with a grey floral kundan pendant swinging below on a double gold chain. Just ₹399.",
+      "imageAlt": "Gold-tone bracelet watch with red kundan charms and a grey floral kundan pendant",
+      "ogTitle": "Red Kundan Charm Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Small red tulip kundan-style charms and a swinging grey floral pendant, on a double gold chain with soft ghungroo bells. ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P389.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "839",
+      "originalSku": "MJ-368",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-368-kashmiri-red-tulip-kundan-bracelet-watch-for-women-839",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P390",
+    "name": "Yellow Lotus Meenakari Bracelet Watch, Elephant Pendant",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P390.webp"
+      ]
+    },
+    "specs": {
+      "charm motif": "Yellow lotus flower charms with green leaf accents",
+      "dial finish": "Pearl-bordered, white",
+      "movement": "Quartz",
+      "pendant": "Meenakari elephant pendant (green)",
+      "embellishment": "Cascading ghungroo chains"
+    },
+    "description": "The lotus and the elephant are both Indian folk-art staples, and this bracelet watch pairs them rather than choosing one: bright yellow lotus flower charms with green leaf accents sit either side of a pearl-bordered white quartz dial, and a small green meenakari elephant pendant hangs below on cascading ghungroo chains. It's the most colourful piece in this range, and the only one built around an animal motif rather than a purely floral or geometric one.\n\nYellow reads differently to red or blue meenakari; it photographs brighter and suits a daytime festival look better than an evening one. Wear it to a Diwali morning gathering or a mehendi function where the outfit already leans towards yellow, orange or green, and let the elephant do the work of a conversation starter, it's a small enough charm to notice up close rather than shout from across a room. The pearl border around the dial is a nice detail that a lot of these watches skip.\n\nThe green in both the leaf accents and the elephant is meenakari enamel colour rather than a separate stone, and the whole piece sits on a gold-tone base rather than solid gold, honest terms for a ₹399 piece that's really about the folk-art detailing. Keep the enamel away from water and perfume, and give the cascading chains a second to settle when you first put it on so nothing tangles.",
+    "seo": {
+      "primaryKeyword": "yellow lotus meenakari bracelet watch",
+      "secondaryKeywords": [
+        "elephant pendant bracelet watch",
+        "kashmiri folk art watch",
+        "cascading ghungroo watch",
+        "festive yellow bracelet watch"
+      ],
+      "metaTitle": "Yellow Lotus Meenakari Bracelet Watch, Elephant Charm",
+      "metaDescription": "Bright yellow lotus charms with green leaf accents, a meenakari elephant pendant and a pearl-bordered dial on cascading ghungroo chains. ₹399.",
+      "imageAlt": "Gold-tone bracelet watch with yellow lotus charms and a green meenakari elephant pendant",
+      "ogTitle": "Yellow Lotus Elephant Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Bright yellow lotus flower charms, a green meenakari elephant pendant and a pearl-bordered dial, on cascading ghungroo chains. ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P390.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "840",
+      "originalSku": "MJ-370",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-370-kashmiri-yellow-lotus-elephant-meenakari-bracelet-watch-840",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P391",
+    "name": "Blue Meenakari Polki Kundan Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P391.webp"
+      ]
+    },
+    "specs": {
+      "enamel technique": "Meenakari (royal blue)",
+      "stonework": "Polki kundan",
+      "stone": "Cubic zirconia",
+      "embellishment": "Kundan medallion beads",
+      "chain": "Cascading ghungroo bell chains"
+    },
+    "description": "Royal blue is the boldest colour choice in this range, and this bracelet watch leans into it rather than softening it: deep blue meenakari floral charms sit on either side of a dial that's edged in cubic zirconia stones set close enough together to look heavily encrusted rather than lightly accented. Polki kundan centres and separate kundan-style medallion beads add two more layers of stonework, and cascading chains end in ghungroo bells.\n\nOf everything in this range, this is the one built to be seen from across a room rather than admired up close, the stone-set dial edge alone catches more light than a plain frame does. It wants an equally bold outfit, blue or gold festive wear rather than anything muted, and it suits an evening function more than a daytime one simply because that's when the sparkle actually reads. If you're only buying one statement bracelet watch this wedding season, the density of detail here makes the case for this one.\n\nPolki kundan is a style term for this look rather than a claim about the stones themselves, and the CZ stones are cubic zirconia, not diamond, set over a gold-tone chain base. At ₹399, the honest sell is craft density rather than material value, and there's genuinely a lot packed onto one wrist. With this much stonework, keep it away from water, perfume, and rough handling, and store it separately so the medallion beads don't catch on other jewellery.",
+    "seo": {
+      "primaryKeyword": "blue meenakari kundan bracelet watch",
+      "secondaryKeywords": [
+        "polki kundan bracelet watch",
+        "cubic zirconia dial watch",
+        "statement bracelet watch",
+        "kashmiri bracelet watch"
+      ],
+      "metaTitle": "Blue Meenakari Polki Kundan Bracelet Watch, CZ Dial",
+      "metaDescription": "Deep royal blue meenakari charms flank a CZ-edged dial, with polki kundan centres and kundan medallion beads on cascading ghungroo chains. ₹399.",
+      "imageAlt": "Gold-tone bracelet watch with royal blue meenakari charms and a cubic zirconia edged dial",
+      "ogTitle": "Blue Meenakari Kundan Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Royal blue meenakari charms, a CZ stone-edged dial, polki kundan centres and cascading ghungroo bells. A bold wrist for ₹399 at Morchadi Gems.",
+      "ogImage": "/products/P391.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "841",
+      "originalSku": "MJ-355",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-355-kashmiri-blue-meenakari-kundan-bracelet-watch-841",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P392",
+    "name": "Dark Green Meenakari CZ Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 350,
+      "mrp": 350,
+      "cost": 140
+    },
+    "media": {
+      "images": [
+        "/products/P392.webp"
+      ]
+    },
+    "specs": {
+      "enamel technique": "Meenakari (dark green)",
+      "stone": "Cubic zirconia",
+      "dial finish": "Gold-tone",
+      "movement": "Quartz",
+      "chain": "Triple gold chains",
+      "embellishment": "Ghungroo bells (both ends)"
+    },
+    "description": "Where the lighter greens in this range lean floral, this one goes darker and more geometric: square dark green meenakari panels sit either side of a gold-tone quartz dial, each set with a cubic zirconia stone at the centre rather than a painted motif. Triple gold chains carry the panels, with ghungroo bells at both ends of the chain rather than just one, and the overall effect is more structured than the floral pieces nearby.\n\nThe dark green reads closer to bottle or forest green than the brighter meenakari greens, which makes it sit more easily with everyday festive colours, maroon, gold, deep blue, rather than needing an outfit built specifically around it. It works for a smaller family function as easily as a full wedding event, somewhere between the quieter pieces in this range and the more elaborate stone-encrusted ones. The gold-tone dial keeps it from reading as too dark or heavy despite the depth of the green.\n\nThe CZ stones are cubic zirconia rather than diamond, set into enamel-and-metal panels over a gold-tone chain base, and that's the honest trade at ₹350: real craft in the enamelling, not a claim about the metal or stones underneath. The triple-chain construction needs a light hand when putting it on so the strands don't twist. Keep the panels dry and away from perfume, since enamel work needs a bit more looking-after than a plain metal watch does.",
+    "seo": {
+      "primaryKeyword": "dark green meenakari bracelet watch",
+      "secondaryKeywords": [
+        "square meenakari watch",
+        "cubic zirconia bracelet watch",
+        "triple chain kashmiri watch",
+        "gold-tone quartz watch"
+      ],
+      "metaTitle": "Dark Green Meenakari CZ Bracelet Watch, Gold-Tone Dial",
+      "metaDescription": "Square dark green meenakari panels set with cubic zirconia, on triple gold chains with ghungroo bells around a gold-tone quartz dial. Just ₹350.",
+      "imageAlt": "Gold-tone bracelet watch with dark green meenakari square panels and cubic zirconia stones",
+      "ogTitle": "Dark Green Meenakari Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Square dark green meenakari panels with cubic zirconia centres, triple gold chains and ghungroo bells on both ends. ₹350 at Morchadi Gems.",
+      "ogImage": "/products/P392.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "842",
+      "originalSku": "MJ-372",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-372-kashmiri-dark-green-meenakari-cz-square-bracelet-watch-for-women-842",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P393",
+    "name": "Pink Meenakari Kundan Bracelet Watch, Chand Pendant",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P393.webp"
+      ]
+    },
+    "specs": {
+      "enamel technique": "Meenakari (soft pink)",
+      "border trim": "Pearl borders",
+      "stonework": "Kundan (ruby red)",
+      "stone": "Cubic zirconia",
+      "pendant": "Multicolour kundan chand (moon-shaped) pendant",
+      "embellishment": "Cascading triple ghungroo chains"
+    },
+    "description": "This is the most layered piece in the range, and it earns that: soft pink meenakari square panels edged in pearl borders sit either side of a dial ringed in cubic zirconia, ruby-red kundan-style stones mark the centre of each panel, and a multicolour kundan-style chand, a moon shape, hangs below on cascading triple ghungroo chains. Four different techniques on one wrist, and none of them fighting for space.\n\nSoft pink is a gentler choice than the bolder reds and blues elsewhere in this range, closer to a bridal palette than a festival one, and the chand pendant is what tips it there properly, it's the kind of motif that suits a wedding outfit specifically rather than general festive wear. Pair it with a pastel or ivory lehenga where the pink panels pick up the same undertone, or let it be the one bold piece against a plainer bridal outfit.\n\nThe kundan throughout is kundan-style stonework rather than the traditional uncut-diamond technique, the CZ is cubic zirconia, and the pearl borders sit over enamel and a gold-tone base, honest terms for what ₹399 buys: real detail across four techniques rather than raw material value. With this much attached hardware, the chand pendant especially, let the chains settle before wearing and store it flat and separate from other jewellery so nothing snags on the way out of a box.",
+    "seo": {
+      "primaryKeyword": "pink meenakari kundan bracelet watch",
+      "secondaryKeywords": [
+        "chand pendant bracelet watch",
+        "bridal kundan watch",
+        "cubic zirconia dial watch",
+        "kashmiri bracelet watch for wedding"
+      ],
+      "metaTitle": "Pink Meenakari Kundan Bracelet Watch, Chand Pendant",
+      "metaDescription": "Soft pink meenakari panels with pearl borders and ruby-red kundan, a CZ-ringed dial and a chand pendant on cascading ghungroo chains. Just ₹399.",
+      "imageAlt": "Gold-tone bracelet watch with soft pink meenakari panels and a moon-shaped kundan pendant",
+      "ogTitle": "Pink Meenakari Kundan Bracelet Watch | Morchadi Gems",
+      "ogDescription": "Soft pink meenakari panels, pearl borders, ruby-red kundan and a chand pendant on cascading ghungroo chains. Bridal-ready at ₹399, Morchadi Gems.",
+      "ogImage": "/products/P393.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "844",
+      "originalSku": "MJ-365",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-365-kashmiri-pink-meenakari-square-kundan-cz-bracelet-watch-844",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
   }
 ]
