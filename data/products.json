@@ -13931,5 +13931,510 @@
         "Hampers"
       ]
     }
+  },
+  {
+    "id": "P600",
+    "name": "Raksha Bandhan Gift Hamper with Initial Ring",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 1749,
+      "mrp": 1749,
+      "cost": 700
+    },
+    "media": {
+      "images": [
+        "/products/P600.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "3 traditional rakhis, initial letter ring, pearl bracelet, face mask, perfume, chocolates and more",
+      "packaging": "Pink luxury gift box",
+      "personalization": "Engravable initial letter ring"
+    },
+    "description": "Three traditional rakhis lead this hamper, meant for the actual Raksha Bandhan tying rather than as an afterthought, alongside a ring with space for an engraved initial and a pearl-look bracelet. A face mask, a perfume and a small selection of chocolates round out the box for the gifting side of the day rather than only the ritual.\n\nThe initial ring is the one piece here built around personalisation, though the listing doesn't currently offer a way to choose or confirm the initial at checkout, so treat that detail as something to ask about before ordering if it matters to you. The rakhis themselves are the traditional kind, meant to be tied and kept rather than treated as costume pieces.\n\nPacked in a pink luxury gift box, this is built for the one occasion in the calendar where jewellery, a small treat and a ritual object all belong in the same box together, rather than a general-purpose gift hamper repurposed for the day.\n\nAt ₹1749, it's among the higher-priced hampers in this range, for the combination of the rakhis, the personalised ring and the self-care pieces alongside it.",
+    "seo": {
+      "primaryKeyword": "raksha bandhan gift hamper",
+      "secondaryKeywords": [
+        "rakhi gift hamper with ring",
+        "initial ring rakhi gift",
+        "pearl bracelet rakhi hamper",
+        "raksha bandhan gift for sister"
+      ],
+      "metaTitle": "Raksha Bandhan Gift Hamper with Initial Ring, Rakhis",
+      "metaDescription": "Three rakhis, an engravable initial ring, a pearl-look bracelet, a face mask, perfume and chocolates, in a pink luxury box. ₹1749, 7-day returns.",
+      "imageAlt": "Pink luxury gift box with rakhis, an initial ring and a pearl-look bracelet",
+      "ogTitle": "Rakhi Hamper with Initial Ring and Pearl Bracelet, ₹1749",
+      "ogDescription": "Three rakhis, an engravable initial ring, a pearl-look bracelet, a face mask, perfume and chocolates in one Raksha Bandhan box. ₹1749.",
+      "ogImage": "/products/P600.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1070",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/luxury-raksha-bandhan-gift-hamper-1070",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P601",
+    "name": "Rajasthani Pearl Bead Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 249,
+      "mrp": 249,
+      "cost": 100
+    },
+    "media": {
+      "images": [
+        "/products/P601.webp"
+      ]
+    },
+    "specs": {
+      "material": "Pearl beads (natural or imitation unclear from text)",
+      "design": "Meenakari-inspired charms",
+      "closure": "Adjustable chain closure",
+      "package contents": "1 Bracelet Watch"
+    },
+    "description": "Rajasthani jewellery design is the reference point for this one, strung with pearl-look beads around an adjustable chain closure and finished with a scatter of meenakari-inspired enamel charms in pink and green rather than a single centrepiece. The watch face sits small against the beading, sized to read as jewellery first and a timepiece second.\n\nMeenakari enamelwork is traditionally a technique for solid gold and silver pieces, so it's worth being clear here that this is an enamel finish over a base metal rather than the real craft, done in the same pink-and-green palette that technique is known for. The adjustable chain closure means one size fits a genuine range of wrist sizes without needing a separate clasp adjustment.\n\nIt suits festive wear more than an office desk, the kind of piece that reads well against a saree or lehenga for Teej, Karwa Chauth or a wedding function, where a plain watch would look out of place next to the rest of an outfit. Keep it away from perfume and water and the pearl-look beads and enamel finish should hold up through a full festive season.\n\nAt ₹249, it's priced as an occasion piece rather than an everyday watch, closer to costume jewellery that happens to tell the time.",
+    "seo": {
+      "primaryKeyword": "rajasthani pearl bead bracelet watch",
+      "secondaryKeywords": [
+        "meenakari charm bracelet watch",
+        "pearl bead watch for festive wear",
+        "adjustable bracelet watch",
+        "ethnic bracelet watch for women"
+      ],
+      "metaTitle": "Rajasthani Pearl Bead Bracelet Watch, Meenakari Charms",
+      "metaDescription": "A pearl-look bead bracelet watch with meenakari-inspired enamel charms in pink and green, adjustable closure. Festive wear, ₹249, 7-day returns.",
+      "imageAlt": "Pearl bead bracelet watch with meenakari-style enamel charms in pink and green",
+      "ogTitle": "Pearl Bead Bracelet Watch with Enamel Charms, ₹249",
+      "ogDescription": "A Rajasthani-style pearl bead bracelet watch with meenakari-inspired pink and green enamel charms, adjustable to fit. ₹249 at Morchadi Gems.",
+      "ogImage": "/products/P601.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1071",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/traditional-rajasthani-pearl-beaded-bracelet-watch-for-women-1071",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P609",
+    "name": "Silver-Tone Anti-Tarnish Watch, Deep Blue Dial",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P609.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish silver-tone finish",
+      "dial": "Deep blue round dial",
+      "movement type": "Quartz",
+      "strap type": "Chain-link bracelet strap",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish"
+    },
+    "description": "A deep blue round dial sits at the centre of this one, small enough to read as jewellery rather than a functional watch first, on a silver-tone chain-link strap where every link is set with a scatter of small clear stones rather than left plain. Quartz movement keeps time underneath all that detail, so it isn't purely decorative.\n\nAnti-tarnish plating is what makes a silver-tone piece like this workable for daily wear in the first place; without it, a chain this detailed would dull unevenly across all those small links within a few months. Keep it away from perfume, water and heavy sweat and the finish should hold its colour well beyond what an untreated silver-tone piece manages.\n\nThe scale is deliberately delicate, better suited to a slim wrist or a layered stack of bracelets than worn alone as the only piece. It reads well against both ethnic and western wear, which isn't true of every bracelet watch in this style.\n\nAt ₹599, it's priced in line with the other anti-tarnish bracelet watches in this range, distinguished mainly by the blue dial and the stone-set chain rather than anything in the mechanism.",
+    "seo": {
+      "primaryKeyword": "silver-tone anti-tarnish watch deep blue dial",
+      "secondaryKeywords": [
+        "stone-set chain bracelet watch",
+        "anti-tarnish silver bracelet watch",
+        "small dial watch for women",
+        "quartz bracelet watch"
+      ],
+      "metaTitle": "Silver-Tone Anti-Tarnish Watch, Deep Blue Round Dial",
+      "metaDescription": "A deep blue round dial on a silver-tone, anti-tarnish chain-link strap where every link is set with small clear stones. Quartz movement, ₹599, 7-day returns.",
+      "imageAlt": "Silver-tone chain-link bracelet watch with a deep blue round dial and stone-set links",
+      "ogTitle": "Deep Blue Dial Bracelet Watch, Silver-Tone, ₹599",
+      "ogDescription": "A small deep blue dial on a silver-tone anti-tarnish chain, every link set with small clear stones. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P609.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1081",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-bracelet-watch-1081",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P610",
+    "name": "Gold-Tone Anti-Tarnish Watch, Red Oval Dial",
+    "category": "watches",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P610.webp"
+      ]
+    },
+    "specs": {
+      "material": "Gold-tone finish",
+      "treatment": "Anti-tarnish",
+      "dial": "Rich red dial",
+      "dial shape": "Unique oval-shaped dial",
+      "design": "Classic Roman numeral detailing",
+      "strap type": "Textured link bracelet strap",
+      "movement type": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish"
+    },
+    "description": "A rich red oval dial with roman numerals gives this one a more formal look than a round face usually manages, set into a thick, textured gold-tone bracelet built from close, layered links rather than a simple chain. It reads closer to a cuff with a dial than a delicate bracelet watch, more substantial on the wrist than the size of the face alone suggests.\n\nThe anti-tarnish treatment on the gold-tone plating is what lets a bracelet this dense hold its colour with regular wear; an untreated finish across this many links would show uneven dulling within a season. Quartz movement runs underneath, and the usual care applies: away from perfume, water and sweat, stored dry when it's off the wrist.\n\nThe oval face and roman numerals lean traditional rather than modern, which suits festive and ethnic wear better than a plain office look, at home with a saree for a wedding or a big family occasion. It's a heavier piece than the round-dial versions in this range, worth knowing if a lighter watch is the goal.\n\nAt ₹599, it's priced the same as the other anti-tarnish bracelet watches here, the red dial and the denser bracelet build being what sets it apart.",
+    "seo": {
+      "primaryKeyword": "gold-tone anti-tarnish watch red oval dial",
+      "secondaryKeywords": [
+        "roman numeral bracelet watch",
+        "textured gold bracelet watch",
+        "anti-tarnish gold watch for women",
+        "festive bracelet watch"
+      ],
+      "metaTitle": "Gold-Tone Anti-Tarnish Bracelet Watch, Red Oval Dial",
+      "metaDescription": "A red oval dial with roman numerals on a thick, textured gold-tone anti-tarnish bracelet built from close, layered links. Quartz movement, ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone textured bracelet watch with a red oval dial and roman numerals",
+      "ogTitle": "Red Oval Dial Bracelet Watch, Gold-Tone, ₹599",
+      "ogDescription": "A rich red oval dial with roman numerals, set into a dense, textured gold-tone anti-tarnish bracelet. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P610.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1082",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1082",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P603",
+    "name": "Antique Gold Kundan-Style Bracelet Watch",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P603.webp"
+      ]
+    },
+    "specs": {
+      "stone": "Glass or synthetic stone set in traditional Kundan style, exact material unclear from text",
+      "stone colour accents": "Red & green stone embellishments",
+      "material": "Antique gold-tone finish",
+      "design": "Elegant dangling bead detailing",
+      "closure": "Adjustable chain closure",
+      "package contents": "1 Traditional Bracelet Watch"
+    },
+    "description": "An antique gold-tone finish sets this one apart from the brighter, more polished bracelet watches elsewhere in this range, paired with kundan-style stone work in red and green and a row of small beads that hang and move against the wrist rather than sitting fixed. The dangling detail is the piece's main distinguishing feature, giving it more movement than a flat bracelet-style band.\n\nThe stones here are glass or a synthetic material set in the kundan style rather than real kundan work, which traditionally uses uncut, polished gemstones set in gold. The antique finish and the styling borrow the look honestly without claiming the technique itself. An adjustable chain closure means it isn't sized to one wrist measurement.\n\nRed and green together read as festive rather than everyday, at home with a saree or a lehenga for a wedding function or a Navratri evening more than a work day. The antique gold tone is meant to look slightly aged from the start rather than bright and new, so it won't visibly change much with wear the way a shinier plating might.\n\nAt ₹299, it sits in the everyday-festive-watch bracket here, priced for the detailing rather than any claim to real kundan work.",
+    "seo": {
+      "primaryKeyword": "antique gold kundan style bracelet watch",
+      "secondaryKeywords": [
+        "red and green stone bracelet watch",
+        "dangling bead bracelet watch",
+        "festive bracelet watch for women",
+        "adjustable kundan watch"
+      ],
+      "metaTitle": "Antique Gold Kundan-Style Bracelet Watch, Red-Green",
+      "metaDescription": "An antique gold-tone bracelet watch with kundan-style red and green stones and a row of small dangling beads. Festive wear, ₹299, 7-day returns.",
+      "imageAlt": "Antique gold-tone bracelet watch with kundan-style red and green stones and hanging beads",
+      "ogTitle": "Antique Gold Kundan-Style Watch with Dangling Beads, ₹299",
+      "ogDescription": "A kundan-style bracelet watch in antique gold-tone, with red and green stones and a row of hanging beads. Adjustable fit, ₹299.",
+      "ogImage": "/products/P603.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1073",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/traditional-kundan-bracelet-watch-for-women-1073",
+      "originalCategories": [
+        "Kahmiri Watch"
+      ]
+    }
+  },
+  {
+    "id": "P612",
+    "name": "Gold-Tone Bracelet Watch, Green Round Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P612.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Green",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "bracelet style": "Interlocking chain-link design",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "This is one of several green-dialled bracelet watches in this gold-tone family, and the way to tell them apart is the dial shape and the bracelet construction rather than the colour. This one keeps the dial round rather than oval or rectangular, with plain hour markers instead of roman numerals, on an interlocking chain-link strap where the links themselves are set with small clear stones.\n\nCubic zirconia or a similar cut glass stone lines the bracelet rather than the dial, catching light along the whole length of the wrist instead of concentrating it at the face. Keep the gold-tone plating dry and away from perfume the way any plated piece needs, wiped down after wear.\n\nQuartz movement keeps time reliably underneath the detailing, and the round dial with plain markers gives this one a slightly cleaner, less ornate look than the roman-numeral versions nearby in this range, worth choosing if a busier dial isn't the goal.\n\nAt ₹599, it matches the rest of this watch family on price, distinguished by the round dial, the plain markers and the stone-set chain.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch green round dial",
+      "secondaryKeywords": [
+        "cubic zirconia bracelet watch",
+        "interlocking chain bracelet watch",
+        "gold-tone watch green dial",
+        "quartz bracelet watch for women"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Green Round Dial with CZ",
+      "metaDescription": "A green round dial with plain hour markers on a gold-tone interlocking chain set with cubic zirconia stones. Quartz movement, ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone interlocking chain bracelet watch with a green round dial and stone-set links",
+      "ogTitle": "Green Round Dial Bracelet Watch, Gold-Tone, ₹599",
+      "ogDescription": "A green round dial with plain markers on an interlocking gold-tone chain set with cubic zirconia. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P612.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1084",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-chain-bracelet-watch-for-women-1084",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P613",
+    "name": "Gold-Tone Bracelet Watch, Green Oval Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P613.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Green",
+      "dial markers": "Roman numeral",
+      "bracelet style": "Rectangular-link bracelet",
+      "movement": "Quartz",
+      "dial shape": "Oval",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "Keep it dry and away from perfume, and a gold-tone plating like this should hold its colour reasonably well through ordinary daily wear. The green oval dial here carries roman numerals rather than the plain markers on some of the round-dial versions in this range, giving it a slightly more traditional read.\n\nThe bracelet itself uses a brick-pattern of small rectangular links rather than the interlocking chain style elsewhere in this watch family, flatter against the wrist and less prone to catching on fabric than an open-link chain can be. Quartz movement runs the mechanism underneath the styling.\n\nAn oval face with roman numerals suits festive or ethnic wear more naturally than a plain office look, pairing well with a saree or a kurta for a family occasion rather than daily desk wear. Among the green-dialled watches in this range, the oval shape and the flatter brick-link bracelet are what set this one apart.\n\nAt ₹599, it's priced with the rest of this family, the oval dial and the flat-link bracelet the two things to look for if this is the one being ordered.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch green oval dial",
+      "secondaryKeywords": [
+        "roman numeral oval bracelet watch",
+        "brick link bracelet watch",
+        "gold-tone watch green oval dial",
+        "festive bracelet watch for women"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Green Oval Dial, Roman Numerals",
+      "metaDescription": "A green oval dial with roman numerals on a flat, brick-link gold-tone bracelet that sits close to the wrist. Quartz movement, ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone brick-link bracelet watch with a green oval dial and roman numerals",
+      "ogTitle": "Green Oval Dial Bracelet Watch, Gold-Tone, ₹599",
+      "ogDescription": "A green oval dial with roman numerals on a flat brick-link gold-tone bracelet. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P613.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1085",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-bracelet-watch-for-women-1085",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P614",
+    "name": "Gold-Tone Bracelet Watch, Green Rectangular Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P614.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "Green",
+      "dial markers": "Roman numeral",
+      "bracelet style": "Multi-link bracelet",
+      "dial shape": "Rectangular",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "A rectangular dial is the detail that sets this one apart from the round and oval green-dialled watches nearby in this range, roman numerals running around a deep green face inside a gold-tone case. The bracelet underneath is a multi-row woven mesh rather than a single chain or a brick pattern, dense enough to sit close and flat against the wrist.\n\nQuartz movement keeps time underneath the detailing. Keep the gold-tone plating dry and away from perfume the way any plated piece needs, especially given how many small woven links make up this particular strap.\n\nThe rectangular face reads slightly more structured than the round or oval versions, at home with a saree, a kurta or a lehenga for a festive occasion where a more angular accessory suits the rest of the look.\n\nAt ₹599, it's priced with the rest of the family here, the rectangular dial and the dense woven bracelet the two features that tell it apart from its siblings.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch green rectangular dial",
+      "secondaryKeywords": [
+        "woven mesh bracelet watch",
+        "rectangular dial bracelet watch",
+        "roman numeral watch green dial",
+        "gold-tone watch for women"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, Green Rectangular Dial, Roman",
+      "metaDescription": "A green rectangular dial with roman numerals on a dense, multi-row woven gold-tone bracelet. Quartz movement, ₹599, 7-day returns on all orders.",
+      "imageAlt": "Gold-tone woven mesh bracelet watch with a green rectangular dial and roman numerals",
+      "ogTitle": "Green Rectangular Dial Bracelet Watch, ₹599",
+      "ogDescription": "A rectangular green dial with roman numerals on a dense, woven gold-tone bracelet. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P614.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1086",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-bracelet-watch-for-women-1086",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
+  },
+  {
+    "id": "P615",
+    "name": "Gold-Tone Bracelet Watch, White Oval Dial",
+    "category": "watches",
+    "status": "draft",
+    "pricing": {
+      "price": 599,
+      "mrp": 599,
+      "cost": 240
+    },
+    "media": {
+      "images": [
+        "/products/P615.webp"
+      ]
+    },
+    "specs": {
+      "material": "Anti-tarnish gold-tone",
+      "dial colour": "White",
+      "dial markers": "Roman numeral",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "dial shape": "Oval",
+      "bracelet style": "Decorative link bracelet",
+      "movement": "Quartz",
+      "care instructions": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+    },
+    "description": "White is the one dial colour that stands apart from the rest of this bracelet watch family, most of which run in shades of green, red or blue; this one keeps things paler, a soft white oval face with roman numerals inside a gold-tone case. It reads lighter on the wrist than the deeper-coloured dials nearby, easier to pair with pale or neutral outfits where a bold dial colour would compete rather than complement.\n\nThe bracelet is a decorative circular-link chain set with small clear stones rather than the brick or woven styles used elsewhere in this range, closer in look to jewellery than to a plain metal strap. Quartz movement runs underneath, and the gold-tone plating needs the usual care: dry storage, no perfume or heavy sweat against the finish.\n\nBecause the dial reads lighter, this one suits daytime festive wear, a lunch, a smaller family function, better than the deeper-coloured versions built more for evening occasions. Cubic zirconia or a similar cut stone along the bracelet catches light without needing a bold dial to match it.\n\nAt ₹599, it's priced with the rest of the family, the white dial and the stone-set circular links the two things that set it apart from its siblings.",
+    "seo": {
+      "primaryKeyword": "gold-tone bracelet watch white oval dial",
+      "secondaryKeywords": [
+        "white dial bracelet watch",
+        "circular link bracelet watch",
+        "cubic zirconia bracelet watch gold",
+        "daytime festive watch"
+      ],
+      "metaTitle": "Gold-Tone Bracelet Watch, White Oval Dial with CZ Stones",
+      "metaDescription": "A soft white oval dial with roman numerals on a gold-tone, decorative circular-link bracelet set with small clear stones. ₹599, 7-day returns.",
+      "imageAlt": "Gold-tone circular-link bracelet watch with a white oval dial and roman numerals",
+      "ogTitle": "White Oval Dial Bracelet Watch, Gold-Tone, ₹599",
+      "ogDescription": "A pale white oval dial with roman numerals on a gold-tone bracelet set with small clear stones. Quartz movement. ₹599 at Morchadi Gems.",
+      "ogImage": "/products/P615.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1087",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-crystal-bracelet-watch-for-women-1087",
+      "originalCategories": [
+        "Vintage watch"
+      ]
+    }
   }
 ]
