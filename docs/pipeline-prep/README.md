@@ -44,6 +44,7 @@ states the rule it used, so the owner can overrule it rather than guess at it.
 | [`similarity-calibration-report.md`](similarity-calibration-report.md) | Phase-three calibration measurements over the 49 live products. **Measurements only — no threshold is set by it**, and ADR-051's "not calibrated" state is unchanged |
 | [`similarity-scores-all-pairs.json`](similarity-scores-all-pairs.json) | The raw pairwise scores behind that report. Nothing reads it |
 | [`drafts-in-progress.md`](drafts-in-progress.md) | Manual register of Draft A objects currently in `content-pipeline/drafts/`, with the six-stage vocabulary — `queued` through `awaiting-publish`, per [ADR-054](../decisions/ADR-054-stage-0-migration-batch-preparation.md) — and the retired-id list |
+| [`batch-01-confirmation-groups.md`](batch-01-confirmation-groups.md) | Every `attributes` candidate across all `extracted`-stage Draft A objects from batch `2026-08-23-batch-01`, grouped by exact `(label, value)` equality per skill rule 17, so the owner can batch-confirm identical candidates instead of reviewing each product from scratch |
 | [`known-issues-post-publish.md`](known-issues-post-publish.md) | The durable record of issues the owner has **explicitly accepted publishing with**, each with evidence, the acceptance decision and an open/resolved status. The post-publish review pass works through this file |
 | [`products-completed.md`](products-completed.md) | Manual register of drafts whose product has been published into `data/products.json` |
 
