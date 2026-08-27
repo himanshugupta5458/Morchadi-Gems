@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Sleek flexible mesh bracelet strap"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Bezel design",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "polished golden cross-bezel finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement",
