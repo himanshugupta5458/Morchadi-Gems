@@ -13339,5 +13339,597 @@
         "Hair Accessories"
       ]
     }
+  },
+  {
+    "id": "P591",
+    "name": "Tulip Bud Organza Bow Hair Clip, Four Colourways",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 79,
+      "mrp": 79,
+      "cost": 32
+    },
+    "media": {
+      "images": [
+        "/products/P591.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Color",
+        "type": "swatch",
+        "values": [
+          "Combo",
+          "Coral Pink (top-left)",
+          "Ivory Cream (top-right)",
+          "Lilac Purple (bottom-left)",
+          "Beige (bottom-right)"
+        ],
+        "default": "Combo"
+      }
+    ],
+    "specs": {
+      "material": "Organza and satin",
+      "design": "Tulip bud bow, Korean-style",
+      "clip type": "Alligator clip",
+      "colour availability": "Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige"
+    },
+    "description": "Korean hair-accessory trends are where this organza bow style comes from, built around a soft rounded knot rather than the pointed satin bows more common here, with one or two satin tulip buds hanging from a pair of green ribbon stems below the knot. Organza holds its loops through the day in a way plain satin doesn't, so the bow keeps its shape rather than flattening into a droop by afternoon.\n\nIt comes in four colourways, coral pink, ivory cream, lilac purple and a soft champagne beige, sold as a set so there's a match for more than one outfit rather than committing to just one. The alligator clip underneath grips securely without a metal snap that catches on strands, suited to fine or thin hair as much as thick.\n\nWorn off to one side and tucked slightly into the hair rather than pinned dead-centre, it reads more as a finished hair accessory than an add-on, at home with a plain kurta as much as it would be at a small day function. At ₹79 for the set of colourways, it's an easy way to try a trend that usually comes at a higher price for the organza construction alone.",
+    "seo": {
+      "primaryKeyword": "organza tulip bud hair clip",
+      "secondaryKeywords": [
+        "korean style hair bow",
+        "alligator hair clip for fine hair",
+        "tulip charm hair accessory",
+        "hair bow set of four colours"
+      ],
+      "metaTitle": "Organza Tulip Bud Bow Hair Clip in Four Colourways",
+      "metaDescription": "A Korean-style organza bow with a satin tulip bud charm, in four colourways from coral to champagne. Holds its shape all day. ₹79, 7-day returns.",
+      "imageAlt": "Organza bow hair clip with a hanging satin tulip bud, shown in coral pink, ivory, lilac and champagne",
+      "ogTitle": "Tulip Bud Organza Bow Clip in Four Colours, ₹79",
+      "ogDescription": "A Korean-style organza hair bow with a satin tulip bud charm on a green ribbon stem, in four colourways. Holds its shape better than plain satin. ₹79.",
+      "ogImage": "/products/P591.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1061",
+      "originalSku": "MJ-605",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-605-tulip-bow-hair-clip-1061",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P592",
+    "name": "Scrunchie and Chocolate Gift Hamper",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 949,
+      "mrp": 949,
+      "cost": 380
+    },
+    "media": {
+      "images": [
+        "/products/P592.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Satin Rose Hair Ties (Set of 2); Satin Bow Hair Clip – Ivory; Satin Scrunchies (Set of 4 – Assorted Colours); Sunfeast Dark Fantasy Choco Fills; Hershey's Kisses – Hazelnut 'n' Cookies; Naliao Natural Collection Pomegranate Sheet Face Mask",
+      "packaging": "Kraft gift box with dried flower fillers"
+    },
+    "description": "This hamper leans toward hair accessories rather than jewellery, which sets it apart from most of the gifting range here: a pair of satin rose hair ties, an ivory satin bow clip, and a full set of four assorted scrunchies make up the bulk of it, alongside a face mask and two kinds of chocolate to round out the treat side.\n\nEverything sits inside a kraft gift box finished with dried flower fillers rather than shredded paper, which reads as more considered without tipping into fussy. The hair pieces are all satin, chosen for the same reason across the range, gentler on strands than the rougher elastic and ribbon many everyday accessories use, so they're genuinely wearable rather than gift-box filler.\n\nA Naliao pomegranate sheet face mask adds a few minutes of actual downtime to the box, alongside Sunfeast Dark Fantasy choco-filled biscuits and Hershey's Kisses for the sweeter half. Between the accessories and the treats, this reads as a lighter, more playful hamper than the jewellery-forward boxes elsewhere in this range, suited to a friend who lives in scrunchies more than earrings.\n\nAt ₹949, it's priced for the number of hair pieces included rather than any one standout item, a hamper built around small daily-use things instead of a single centrepiece.",
+    "seo": {
+      "primaryKeyword": "scrunchie and chocolate gift hamper",
+      "secondaryKeywords": [
+        "hair accessory gift hamper",
+        "satin hair tie gift set",
+        "gifting hamper with face mask",
+        "everyday gift hamper for her"
+      ],
+      "metaTitle": "Scrunchie and Chocolate Gift Hamper, Kraft Gift Box",
+      "metaDescription": "A hamper of satin hair ties, a bow clip, a scrunchie set, a face mask and chocolates in a kraft gift box with dried flowers. ₹949, ships across India.",
+      "imageAlt": "Kraft gift box hamper with satin hair ties, a scrunchie set, a face mask and chocolates",
+      "ogTitle": "Hair Accessory and Chocolate Gift Hamper, ₹949",
+      "ogDescription": "Satin hair ties, a bow clip, a scrunchie set, a face mask and chocolates in a kraft box with dried flower styling. A lighter, playful hamper. ₹949.",
+      "ogImage": "/products/P592.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1062",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/satin-scrunchie-chocolate-hamper-for-her-1062",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P593",
+    "name": "Complete Jewellery and Accessories Gift Hamper",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting",
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 1799,
+      "mrp": 1799,
+      "cost": 720
+    },
+    "media": {
+      "images": [
+        "/products/P593.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design); D'Pary Kundan Drop Earrings – Pink Stone; Kashmiri Watch Jewellery Set – Traditional Gold-Tone; Satin Fabric Rose Hair Clip – Ivory; Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber & Peach); Satin Fabric Flower Hair Clip – Yellow; Nail Polish Remover; Paper Soap Sheets; Black Velvet Box with 12 Pairs of Earrings",
+      "packaging": "Signature pink gift box with satin ribbon closure",
+      "material": "Anti-tarnish gold-tone finish (bracelets)"
+    },
+    "description": "Count the pieces in this one and you get nine separate items, easily the fullest hamper in this range: a pair of anti-tarnish gold-tone charm bracelets in a floral design, kundan-style drop earrings with a pink stone, a full Kashmiri-style watch and jewellery set in traditional gold tone, three hair clips in ivory, amber-and-peach and yellow, a velvet box holding twelve pairs of earrings on its own, plus nail polish remover and paper soap sheets for the practical side of things.\n\nThe gold-tone charm bracelets are the one piece in the box confirmed anti-tarnish, so they're the pair worth reaching for on repeat without worrying about the finish dulling with regular wear. Everything else is plated in the same warm gold tone, giving the box a coordinated look rather than a grab-bag of unrelated pieces, even with this many items inside.\n\nIt's packed in a signature pink gift box finished with a satin ribbon, built for the kind of gifting occasion, a wedding, a big birthday, a festival, where one gift needs to cover a lot of ground rather than a single small token. Twelve pairs of earrings alone would normally be its own gift.\n\nAt ₹1799, this sits at the top of the hamper range here by both price and item count, priced for what's genuinely a full jewellery collection rather than a themed few-piece box.",
+    "seo": {
+      "primaryKeyword": "complete jewellery and accessories gift hamper",
+      "secondaryKeywords": [
+        "anti-tarnish bracelet gift hamper",
+        "kundan style earrings hamper",
+        "big gift hamper for her",
+        "nine piece jewellery hamper"
+      ],
+      "metaTitle": "Complete Jewellery and Accessories Gift Hamper, 9 Pieces",
+      "metaDescription": "A nine-piece hamper: anti-tarnish bracelets, kundan-style earrings, a full watch set, hair clips and more, in a pink satin-ribbon box. ₹1799, 7-day returns.",
+      "imageAlt": "Pink gift box hamper with anti-tarnish bracelets, kundan-style earrings, a watch set and hair clips",
+      "ogTitle": "Nine-Piece Jewellery and Accessories Hamper, ₹1799",
+      "ogDescription": "Anti-tarnish charm bracelets, kundan-style drop earrings, a full watch set, hair clips and a box of twelve earring pairs. ₹1799 at Morchadi Gems.",
+      "ogImage": "/products/P593.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1063",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/luxury-jewellery-gift-hamper-for-her-1063",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P588",
+    "name": "Blush and Black Satin Scrunchie Set, Pack of Four",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P588.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "size",
+        "type": "dropdown",
+        "values": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "default": "Small"
+      }
+    ],
+    "specs": {
+      "material": "Satin",
+      "set contents": "Set of 4",
+      "colours": "Blush Pink, Lilac Shimmer, Classic Black, Ivory White (set of 4)",
+      "hair care benefit": "Reduces frizz, breakage & tangles",
+      "dual use": "Doubles as a wrist accessory when not tying hair"
+    },
+    "description": "A scrunchie should be the thing you reach for without thinking twice about which one is left, and a set of four solves that math for a while: blush pink, a soft lilac shimmer, a plain black one for days that need it, and an ivory white that goes with almost everything else in the wardrobe. All four come in the same satin, chosen over cotton or velvet because it doesn't grip the hair the way rougher fabric does, so the strands slide free when you take it out instead of snapping at the crease.\n\nThat gentler hold matters more on longer or thicker hair, where breakage from a tight elastic tends to show up first, and satin is the deliberate answer to it here. Sized small, medium or large depending on how much hair you're tying back, the four can rotate through a week without a single repeat, and the ivory white one, worn loose on the wrist between uses, holds its own as a plain accessory rather than looking like leftover hair kit.\n\nWipe clean if needed and let them air dry, keeping them away from anything that could snag the fabric. At ₹149 for four, in three sizes, this is less a single purchase than a small rotation, built to hold up to daily use rather than one outfit.",
+    "seo": {
+      "primaryKeyword": "satin scrunchie set in blush and black",
+      "secondaryKeywords": [
+        "scrunchie set of four",
+        "no-crease hair tie set",
+        "frizz-free hair tie",
+        "wrist scrunchie accessory"
+      ],
+      "metaTitle": "Blush and Black Satin Scrunchie Set, Four Sizes S-L",
+      "metaDescription": "A set of four satin scrunchies in blush, lilac shimmer, black and ivory, sized small to large. Gentle on hair, reduces breakage. ₹149, ships across India.",
+      "imageAlt": "Four satin scrunchies in blush pink, lilac shimmer, black and ivory white tied together",
+      "ogTitle": "Four Satin Scrunchies in Blush, Lilac, Black and Ivory, ₹149",
+      "ogDescription": "Satin scrunchies in blush pink, lilac shimmer, classic black and ivory white, sized small to large. Doubles as a wrist accessory. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P588.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1058",
+      "originalSku": "MJ-527",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-527-satin-scrunchies-set-of-4-1058",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P589",
+    "name": "Ivory and Champagne Satin Scrunchie Set, Pack of Four",
+    "category": "hair-accessories",
+    "status": "draft",
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P589.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "size",
+        "type": "dropdown",
+        "values": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "default": "Small"
+      }
+    ],
+    "specs": {
+      "material": "Satin",
+      "set contents": "Set of 4",
+      "colours": "Ivory Cream, Lilac Shimmer, Blush Rose, Champagne Beige (set of 4)",
+      "hair care benefit": "Reduces frizz, breakage & tangles",
+      "dual use": "Doubles as a wrist accessory when not tying hair"
+    },
+    "description": "Four soft, muted colours make up this scrunchie set: ivory cream, a pale lilac shimmer, blush rose and a warm champagne beige, none of them loud enough to fight with an outfit. All four are the same weight of satin, chosen because it lets hair slide free at the end of the day instead of catching at the elastic the way a rougher tie does.\n\nThe hair-care case for satin over cotton is a small one but a real one: less friction against the strand means less breakage and fewer flyaways by evening, especially on hair that's already long, thick or prone to tangling. Available in small, medium or large depending on how much hair needs holding, the four rotate easily through a week of styling without repeating a colour twice.\n\nOff the hair, any one of the four sits comfortably on the wrist, which is a small bit of use these sets tend to earn once the initial styling purpose is done for the day. Keep them away from anything abrasive and they hold their shape through repeat wear. Four ties, three sizes to choose from, ₹149 total.",
+    "seo": {
+      "primaryKeyword": "satin scrunchie set in ivory and champagne",
+      "secondaryKeywords": [
+        "pastel satin scrunchie set",
+        "frizz-free hair tie set",
+        "scrunchie wrist accessory",
+        "no-crease hair tie"
+      ],
+      "metaTitle": "Ivory and Champagne Satin Scrunchie Set, Pack of Four",
+      "metaDescription": "Four pastel satin scrunchies in ivory, lilac, blush rose and champagne, sized small to large and gentle on hair to cut breakage. ₹149, dispatch in 2 days.",
+      "imageAlt": "Four satin scrunchies in ivory cream, lilac shimmer, blush rose and champagne beige",
+      "ogTitle": "Ivory, Lilac, Rose and Champagne Satin Scrunchies, ₹149",
+      "ogDescription": "A pastel set of four satin scrunchies in ivory, lilac, blush rose and champagne, sized small to large. Gentle on hair, doubles as a wrist tie. ₹149.",
+      "ogImage": "/products/P589.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1059",
+      "originalSku": "MJ-526",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-526-satin-scrunchies-set-of-4-1059",
+      "originalCategories": [
+        "Hair Accessories"
+      ]
+    }
+  },
+  {
+    "id": "P594",
+    "name": "Pearl Necklace Friendship Day Hamper",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 379,
+      "mrp": 379,
+      "cost": 152
+    },
+    "media": {
+      "images": [
+        "/products/P594.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Pearl beaded chain necklace; stud earrings set (6 pairs, gold & silver tone); peach & pearl beaded flower charm bracelet; gold-tone twisted ring; satin scrunchie (peach); orange acrylic flower hair claw clip",
+      "package contents": "Friendship-themed quote cards included, ready to gift",
+      "occasion": "Gifting (Friendship Day, birthdays)"
+    },
+    "description": "Six items go into this one, built around a Forever Friends theme rather than a birthday or festival: a pearl-look beaded chain necklace, a set of six pairs of stud earrings in gold and silver tone, a peach and pearl-look beaded flower charm bracelet, a gold-tone twisted ring, a peach satin scrunchie and an orange flower claw clip, plus friendship-themed quote cards tucked in for the reveal.\n\nSix pairs of studs in one box means a genuine rotation rather than one pair worn on repeat, small enough to go with anything from a college day to an evening out, and mixing gold and silver tone so they pair with whatever else someone's already wearing that day. The necklace and bracelet share the same pearl-look beading, which ties the box together as a set rather than reading as loose extras.\n\nThis is built for Friendship Day or a birthday between close friends rather than a big-occasion gift, the quote cards doing the sentimental work the jewellery doesn't need to. Everything plated or beaded should stay away from perfume and water the way any fashion piece does, wiped down after wear to keep the finish looking new.\n\nAt ₹379, six wearable pieces plus the cards puts this toward the lower end of the hamper range here, priced for a smaller, more personal gift rather than a milestone occasion.",
+    "seo": {
+      "primaryKeyword": "pearl necklace friendship day hamper",
+      "secondaryKeywords": [
+        "six pair stud earrings hamper",
+        "friendship day gift for her",
+        "pearl bead jewellery hamper",
+        "gifting hamper under 500"
+      ],
+      "metaTitle": "Pearl Necklace Friendship Day Hamper, Six Pieces Inside",
+      "metaDescription": "A friendship hamper with a pearl-look necklace, six pairs of studs, a beaded bracelet, a ring and quote cards. ₹379, 7-day returns, ships across India.",
+      "imageAlt": "Friendship day hamper with a pearl-look necklace, stud earring cards and a beaded bracelet",
+      "ogTitle": "Friendship Day Hamper with Pearl Necklace, ₹379",
+      "ogDescription": "Six pieces for Friendship Day: a pearl-look necklace, six pairs of studs, a beaded bracelet, a ring, a scrunchie and quote cards. ₹379.",
+      "ogImage": "/products/P594.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1064",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/forever-friends-hamper-1064",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P595",
+    "name": "Gold-Tone Hoop Earrings Friendship Hamper",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 399,
+      "mrp": 399,
+      "cost": 160
+    },
+    "media": {
+      "images": [
+        "/products/P595.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Gold-tone stud & hoop earrings set (6 pairs); gold-tone textured hoop earrings; peach & pearl beaded flower charm bracelet; gold-tone twisted ring; satin fabric rose hair tie (ivory); acrylic flower hair claw clip (yellow)",
+      "package contents": "White gift box with \"Best Friends Forever\" ribbon and \"Happy Friendship Day\" card",
+      "material": "Gold-tone",
+      "occasion": "Gifting (Friendship Day, birthdays, thank-you)"
+    },
+    "description": "No necklace in this one, unlike some of the other Friendship Day boxes here; instead the earrings do the heavy lifting, six pairs of gold-tone studs and hoops plus a separate pair of textured gold-tone hoops on their own card, seven pairs in total across the box. A peach and pearl-look beaded flower charm bracelet, a gold-tone twisted ring, an ivory satin rose hair tie and a yellow acrylic flower claw clip round out the rest.\n\nThe whole box leans gold-tone rather than mixing metals, which gives it a more finished look laid out together than a box of unrelated pieces would. It's packed in a white gift box with a Best Friends Forever ribbon and a Happy Friendship Day card, so the occasion is spelled out rather than left to the jewellery to imply.\n\nSeven pairs of earrings is enough to genuinely rotate through without repeating for weeks, useful for someone who changes earrings daily rather than sticking to one favourite pair. Keep the gold-tone pieces away from perfume and damp conditions the way any plated piece needs, and they'll hold their finish through regular wear.\n\nAt ₹399, this sits just above the pearl-necklace hamper in this same theme, priced for the extra pair of standalone hoops it includes.",
+    "seo": {
+      "primaryKeyword": "gold-tone hoop earrings friendship hamper",
+      "secondaryKeywords": [
+        "seven pair earrings gift hamper",
+        "best friends forever gift box",
+        "gold tone jewellery hamper",
+        "friendship day earrings hamper"
+      ],
+      "metaTitle": "Gold-Tone Hoop Earrings Friendship Hamper, 7 Pairs",
+      "metaDescription": "A Friendship Day hamper with seven pairs of gold-tone earrings, a beaded bracelet, a ring and a satin hair tie, in a ribboned box. ₹399, 7-day returns.",
+      "imageAlt": "Friendship day gift box with gold-tone earring cards, a beaded bracelet and a hair tie",
+      "ogTitle": "Friendship Hamper with Seven Pairs of Earrings, ₹399",
+      "ogDescription": "Seven pairs of gold-tone earrings, a beaded bracelet, a twisted ring and a satin hair tie in a Best Friends Forever gift box. ₹399.",
+      "ogImage": "/products/P595.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1065",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/happy-friendship-day-hamper-1065",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P596",
+    "name": "Budget Friendship Day Hamper with Pearl Necklace",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P596.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Pearl beaded chain necklace; stud & hoop earrings set (6 pairs, gold tone); peach & pearl beaded flower charm bracelet; gold-tone twisted ring; satin scrunchie (ivory rose)",
+      "package contents": "Cute quote cards included",
+      "occasion": "Gifting (Friendship Day, birthdays)"
+    },
+    "description": "This is the most affordable of the Friendship Day boxes in this range, and it still runs to five pieces: a pearl-look beaded chain necklace, a set of six pairs of stud and hoop earrings in gold tone, a peach and pearl-look beaded flower charm bracelet, a gold-tone twisted ring and an ivory rose satin scrunchie, with quote cards tucked in for the reveal.\n\nSix pairs of earrings covers a full week without repeating, and pairing studs with hoops in the same set means more variety than a box of six identical pairs would give. The necklace and bracelet share the pearl-look beading that shows up elsewhere in this Friendship Day range, which keeps the box feeling coordinated even at this price.\n\nThere's no ribbon or printed card box here the way the pricier versions in this theme have, just the quote cards doing that job on their own, which is part of how the price stays down. The pieces themselves need the same basic care as any plated or beaded fashion jewellery: away from perfume and water, wiped down after wear.\n\nAt ₹299, this is the hamper to reach for when the gesture matters more than the packaging, five wearable pieces for a Friendship Day gift that doesn't need to be the biggest one given.",
+    "seo": {
+      "primaryKeyword": "budget friendship day hamper",
+      "secondaryKeywords": [
+        "affordable friendship gift hamper",
+        "pearl necklace and earrings hamper",
+        "six pair earring gift set",
+        "friendship day gift under 300"
+      ],
+      "metaTitle": "Budget Friendship Day Hamper with Pearl-Look Necklace",
+      "metaDescription": "Five pieces for Friendship Day: a pearl-look necklace, six pairs of earrings, a beaded bracelet, a ring and a scrunchie. ₹299, dispatch in 2 days.",
+      "imageAlt": "Friendship day gift set with a pearl-look necklace, earring cards and a beaded bracelet",
+      "ogTitle": "Affordable Friendship Day Hamper, Five Pieces, ₹299",
+      "ogDescription": "A pearl-look necklace, six pairs of earrings, a beaded bracelet, a ring and a scrunchie, the most affordable Friendship Day hamper here. ₹299.",
+      "ogImage": "/products/P596.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1066",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/best-friends-forever-hamper-1066",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P597",
+    "name": "Self Care Gift Hamper with Crystal Jewellery Set",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 819,
+      "mrp": 819,
+      "cost": 328
+    },
+    "media": {
+      "images": [
+        "/products/P597.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Crystal drop necklace & earring set (gift box included); satin rose hair ties (set of 2, pink & ivory); Sunfeast Dark Fantasy Choco Fills; Hershey's Kisses Hazelnut 'n' Cookies; Naliao rose oil face mask",
+      "package contents": "Kraft gift box with dried flower styling",
+      "occasion": "Gifting (birthdays, anniversaries)"
+    },
+    "description": "A crystal drop necklace and earring set anchors this one, sold together in their own small gift box inside the larger hamper, paired with a set of two satin rose hair ties in pink and ivory. The rest of the box turns toward actual self care rather than more jewellery: a Naliao rose oil face mask, Sunfeast Dark Fantasy choco-filled biscuits and Hershey's Kisses hazelnut-and-cookie chocolates.\n\nThe crystal set is the one dressier piece in the box, suited to an evening out or a small celebration rather than daily wear, while the hair ties are the everyday half, soft enough not to catch or pull at strands the way a plain elastic band does. Packed in a kraft gift box with dried flower styling, the presentation leans understated rather than glossy.\n\nThis is less a jewellery-forward hamper than several others in this range and more a genuine mix of dressing up and winding down, which suits a birthday or anniversary gift for someone who'd actually use a face mask over another accessory. Store the crystal pieces away from perfume and moisture the way any plated set needs.\n\nAt ₹819, it sits in the middle of the hamper range here, priced for the crystal set as the main piece with everything else as a genuine addition rather than filler.",
+    "seo": {
+      "primaryKeyword": "self care gift hamper with jewellery",
+      "secondaryKeywords": [
+        "crystal necklace and earring gift set",
+        "face mask gift hamper",
+        "satin hair tie gift set",
+        "birthday hamper with skincare"
+      ],
+      "metaTitle": "Self Care Gift Hamper with Crystal Necklace and Earrings",
+      "metaDescription": "A crystal necklace and earring set, two satin hair ties, a rose oil face mask and chocolates, all in one kraft gift box. ₹819, 7-day returns.",
+      "imageAlt": "Kraft gift box hamper with a crystal necklace and earring set, hair ties and a face mask",
+      "ogTitle": "Self Care Hamper with Crystal Necklace Set, ₹819",
+      "ogDescription": "A crystal necklace and earring set, satin hair ties, a rose oil face mask and chocolates in one kraft-box hamper. ₹819 at Morchadi Gems.",
+      "ogImage": "/products/P597.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1067",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/self-care-gift-hamper-for-her-1067",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
+  },
+  {
+    "id": "P598",
+    "name": "Birthday Jewellery Hamper with Chocolates",
+    "category": "gift-hampers",
+    "subcategory": "hamper",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 1399,
+      "mrp": 1399,
+      "cost": 560
+    },
+    "media": {
+      "images": [
+        "/products/P598.webp"
+      ]
+    },
+    "specs": {
+      "hamper contents": "Gold-Tone Rope Chain Bracelet; Ruby & Emerald Stone Necklace; Gold-Tone Twisted Hoop Earrings; Satin Scrunchie – Rose Gold; Gold-Tone Acrylic Bangle/Cuff; Hershey's Kisses – Milk Chocolate; Sunfeast Dark Fantasy Coffee Fills; Decorative Pink Flower Accent",
+      "stone": "Coloured glass or synthetic stone, exact material unclear from text",
+      "packaging": "Signature pink gift box with satin and dried flower styling"
+    },
+    "description": "A gold-tone rope chain bracelet opens this one, paired with a necklace set with ruby-red and emerald-green stones along its length rather than a single centre stone, and a pair of gold-tone twisted hoop earrings. A rose-gold satin scrunchie and a gold-tone acrylic cuff round out the accessories side, alongside a decorative pink flower accent tucked into the box for presentation.\n\nThe stones on the necklace are coloured glass or a synthetic setting rather than the gems their colours suggest, worth knowing since the box doesn't spell it out on its own. The rest of the jewellery is plain gold-tone with no stones to second-guess. Hershey's Kisses in milk chocolate and Sunfeast Dark Fantasy coffee-filled biscuits handle the treat side of the box.\n\nPacked in a signature pink gift box with satin and dried flower styling, this reads as a fuller birthday box than the single-piece jewellery gifts elsewhere in this range: five accessories plus two kinds of chocolate rather than one item made to look bigger than it is.\n\nAt ₹1399, it's priced toward the upper half of the birthday hampers here, for the number of pieces included rather than any single standout.",
+    "seo": {
+      "primaryKeyword": "birthday jewellery hamper with chocolates",
+      "secondaryKeywords": [
+        "gold-tone rope bracelet gift set",
+        "coloured stone necklace hamper",
+        "birthday gift hamper five pieces",
+        "gold-tone hoop earring hamper"
+      ],
+      "metaTitle": "Birthday Jewellery Hamper with Chocolates, 5 Pieces",
+      "metaDescription": "A gold-tone bracelet, a coloured-stone necklace, hoop earrings, a scrunchie and a cuff, plus chocolates, in a pink gift box. ₹1399, 7-day returns.",
+      "imageAlt": "Pink gift box hamper with a gold-tone bracelet, a coloured-stone necklace and chocolates",
+      "ogTitle": "Birthday Hamper with Five Jewellery Pieces, ₹1399",
+      "ogDescription": "A rope bracelet, a coloured-stone necklace, hoop earrings, a scrunchie, a cuff and chocolates in one birthday box. ₹1399 at Morchadi Gems.",
+      "ogImage": "/products/P598.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "1068",
+      "originalSku": null,
+      "originalUrl": "https://www.morchadijewels.com/shop/birthday-decorated-jewelry-hamper-for-her-1068",
+      "originalCategories": [
+        "Hampers"
+      ]
+    }
   }
 ]
