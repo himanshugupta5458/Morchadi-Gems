@@ -1,0 +1,76 @@
+{
+  "productId": "P277",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "gold-plated" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "sleek, overlapping loop design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "sleek, overlapping loop design" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P277.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P277/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P277-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P277/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P277-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P277/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "Elevate your accessory collection with this premium minimalist gold-plated kada. Featuring a sleek, overlapping loop design, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This versatile, polished statement piece offers a luxurious aesthetic that maintains its stunning, high-shine luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Minimalist Gold Loop Kada",
+    "originalId": "663",
+    "originalSku": "MJ-077",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-077-anti-tarnish-minimalist-gold-loop-kada-663",
+    "originalCategories": ["Anti Tarnish bracelet"]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

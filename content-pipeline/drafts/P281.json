@@ -1,0 +1,115 @@
+{
+  "productId": "P281",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
+    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Material: Glass" },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "2 bangles (1 pair)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Quantity: 2 bangles (1 pair)" },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "unspecified stones - material unclear from text",
+      "displayTerm": "stones",
+      "stoneSource": "unverified-guess",
+      "source": { "origin": "migrated-text", "quotedPhrase": "traditional design with embedded stones" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "stylish, traditional festive design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Stylish design suitable for festive and daily wear" },
+      "confirmed": false
+    },
+    {
+      "label": "Colour Options",
+      "value": "available in multiple colors",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Available in multiple colors to match your outfits" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P281.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P281-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P281-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P281-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P281-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P281-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P281/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of elegance to your ethnic look with these beautiful glass kadas. Each pack includes 2 kadas, perfect for pairing with sarees, suits, or lehengas. The kada features a traditional design with embedded stones, giving it a festive and classy vibe.\n✨ Material: Glass\n💫 Quantity: 2 bangles (1 pair)\n-\nMade of high-quality glass – delicate yet elegant\n-\nComes in a pair (2 kadas)\n-\nStylish design suitable for festive and daily wear\n-\nAvailable in multiple colors to match your outfits\n-\nPerfect for gifting or self-use",
+    "referenceTitle": "Elegant Crystal Kangan (2 piece)",
+    "originalId": "669",
+    "originalSku": "MJ-227",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-227-elegant-crystal-kangan-2-piece-669",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bangles' from source text (glass 'kada'/bangle terminology) and the variant optionName 'Size for bangles'; raw block did not supply one."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,114 @@
+{
+  "productId": "P283",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
+    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality glass" },
+      "confirmed": false
+    },
+    {
+      "label": "Colour Options",
+      "value": "yellow, green, pink, black, maroon, mint green (six hues)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "smooth, plain finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "offering a smooth finish and a classic look" },
+      "confirmed": false
+    },
+    {
+      "label": "Net Quantity",
+      "value": "set of two bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P283.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P283-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P283-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P283-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P283-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P283-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P283-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-6.webp",
+        "role": "extra-6"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nRefresh your ethnic collection with this elegant multicolor plain glass bangle set, featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green. Each bangle is handcrafted from high-quality glass, offering a smooth finish and a classic look that perfectly complements sarees, lehengas, salwar suits, and indo-western outfits.\nThese bangles are lightweight and durable, ensuring comfort for all-day wear whether it's a festive celebration, party, wedding, or daily use. The versatile multicolor palette allows you to mix and match for unique styling, making this set ideal for bridal jewelry, festive accessories, or thoughtful gifting.\nKey Features:\n- Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)\n- Handcrafted for a flawless, elegant finish\n- Lightweight and sturdy for everyday and festive occasions\n- Complements traditional and modern ethnic attire\n- Perfect for weddings, festivals, parties, and gifting",
+    "referenceTitle": "Plain Crystal Kangan (2 piece)",
+    "originalId": "671",
+    "originalSku": "MJ-472",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-472-plain-crystal-kangan-2-piece-671",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bangles' from source text (glass 'kangan'/bangle terminology) and the variant optionName 'Size for bangles'; raw block did not supply one.",
+    "referenceTitle/SKU call this a 'Crystal Kangan', but rawContent explicitly describes it as 'plain' glass bangles with no stone/crystal mentioned — no stone candidate was proposed since none is backed by a text quote."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

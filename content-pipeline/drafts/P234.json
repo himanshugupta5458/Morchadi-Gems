@@ -1,0 +1,114 @@
+{
+  "productId": "P234",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    { "optionName": "Size for rings", "values": ["6", "7", "8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless Steel (Anti-Tarnish)" },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K rose gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "18k Rose Gold Tone Plated" },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia or glass, unclear from text",
+      "displayTerm": "zircon",
+      "stoneSource": "unverified-guess",
+      "source": { "origin": "migrated-text", "quotedPhrase": "Premium Zircon Stones" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "V-shape chevron band, fully studded",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "V-shape chevron band (fully studded)" },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "1.4 gm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Weight: 1.4 gm" },
+      "confirmed": false
+    },
+    {
+      "label": "Height",
+      "value": "1.8 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Height: 1.8 cm" },
+      "confirmed": false
+    },
+    {
+      "label": "Size to Diameter Mapping",
+      "value": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Size 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm" },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "premium box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Comes in a premium box" },
+      "confirmed": false
+    },
+    {
+      "label": "Production Note",
+      "value": "handmade — piece-to-piece variation is normal",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "As this is a handmade product, it is very rare to create identical items" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P234.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P234/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "Add a modern twist to your jewelry collection with the Anti-Tarnish V-Shape Chevron Ring. Crafted in 18k rose gold tone plating, this sleek V-band sparkles with premium zircon stones, making it a versatile piece for stacking or wearing solo. Handmade with stainless steel, it's lightweight, durable, and perfect for daily wear, parties, or gifting.\n-\n-\nMaterial: Stainless Steel (Anti-Tarnish)\n-\nPlating: 18k Rose Gold Tone Plated\n-\nStone Type: Premium Zircon Stones\n-\nDesign: V-shape chevron band (fully studded)\n-\nColour: Rose Gold\n-\nSize Options: 6, 7, 8\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm\n-\nWeight: 1.4 gm\n-\nHeight: 1.8 cm\n-\nPackaging: Comes in a premium box\n-\nNote: As this is a handmade product, it is very rare to create identical items",
+    "referenceTitle": "Anti-Tarnish V-Shape Chevron Ring",
+    "originalId": "535",
+    "originalSku": "MJ-100",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-100-anti-tarnish-v-shape-chevron-ring-535",
+    "originalCategories": ["Anti Tarnish ring"]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

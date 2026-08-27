@@ -1,0 +1,76 @@
+{
+  "productId": "P274",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold finish/plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality gold finish" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "dual-toned red and white enamel sections",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "striking red and white enamel sections" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P274.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P274/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P274-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P274/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P274-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P274/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "Make a bold impression with this premium modernist enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This vibrant, dual-toned statement piece features striking red and white enamel sections that offer a luxurious, contemporary aesthetic, maintaining its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Red & White Modernist Enamel Kada",
+    "originalId": "660",
+    "originalSku": "MJ-094",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-094-anti-tarnish-red-white-modernist-enamel-kada-660",
+    "originalCategories": ["Anti Tarnish bracelet"]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

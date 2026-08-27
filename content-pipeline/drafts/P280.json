@@ -1,0 +1,108 @@
+{
+  "productId": "P280",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    { "optionName": "Design Number", "values": ["1", "2", "3", "4", "5", "6"] },
+    { "optionName": "Size for bangles", "values": ["2.6", "2.8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality glass" },
+      "confirmed": false
+    },
+    {
+      "label": "Colour Options",
+      "value": "green, pink, yellow, blue, orange, peach (six hues)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "green, pink, yellow, blue, orange, and peach" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "spiral design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "each bangle showcases a unique spiral design for a modern, stylish look" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "glossy finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "The glossy finish and vivid colors" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P280.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P280-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P280-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P280-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P280-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P280-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Description:\nAdd a vibrant twist to your jewelry collection with this eye-catching set of multicolor spiral glass bangles! available in six bold and playful hues—green, pink, yellow, blue, orange, and peach—each bangle showcases a unique spiral design for a modern, stylish look. The glossy finish and vivid colors make these bangles the perfect accessory for weddings, parties, festivals, and everyday ethnic wear.\nExpertly handcrafted from high-quality glass, these bangles are lightweight, durable, and comfortable for all-day wear. Their striking spiral design adds extra flair to traditional outfits like sarees, lehengas, salwar suits, as well as fusion ensembles. Whether shopping for festive jewelry, bridal accessories, or a special gift, this multicolor spiral set brings energy and charm to any occasion.\nKey Features:\n- Multicolor spiral glass bangles available in six stylish shades\n- Contemporary spiral design with glossy finish\n- Handcrafted for outstanding durability and comfort\n- Lightweight for daily wear and festive occasions\n- Perfect for weddings, parties, festivals, and gifting\n- Complements traditional and modern ethnic attire",
+    "referenceTitle": "Spiral Crystal Kangan (2 piece)",
+    "originalId": "668",
+    "originalSku": "MJ-577",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-577-spiral-crystal-kangan-2-piece-668",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'bangles' from source text (glass 'kangan'/bangle terminology) and the variant optionName 'Size for bangles'; raw block did not supply one.",
+    "referenceTitle/SKU call this a 'Crystal Kangan', but rawContent only describes glass bangles with no stone/crystal mentioned — no stone candidate was proposed since none is backed by a text quote."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

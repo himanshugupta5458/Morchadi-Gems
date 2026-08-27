@@ -1,0 +1,70 @@
+{
+  "productId": "P275",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "gold finish/plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "high-quality gold finish" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish and water-resistant properties" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "monochrome block enamel design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "premium monochrome block enamel kada" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P275.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P275/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P275-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P275/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "Achieve effortless elegance with this premium monochrome block enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This sleek, dual-toned statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Monochrome Block Enamel Kada",
+    "originalId": "661",
+    "originalSku": "MJ-079",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-079-anti-tarnish-monochrome-block-enamel-kada-661",
+    "originalCategories": ["Anti Tarnish bracelet"]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

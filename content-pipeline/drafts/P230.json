@@ -1,0 +1,104 @@
+{
+  "productId": "P230",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    { "optionName": "Size for rings", "values": ["6", "7", "8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless Steel (Anti-Tarnish)" },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Gold Tone Plated" },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (solitaire center with side accents)",
+      "displayTerm": "cubic zirconia",
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Premium Cubic Zirconia (Solitaire center + side accents)" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "classic solitaire band with side-studded stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Classic solitaire band with side-studded stones" },
+      "confirmed": false
+    },
+    {
+      "label": "Size to Diameter Mapping",
+      "value": "Size 6 = 1.6cm diameter; Size 7 = 1.7cm diameter; Size 8 = 1.8cm diameter",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm" },
+      "confirmed": false
+    },
+    {
+      "label": "Packaging",
+      "value": "premium black velvet box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Premium black velvet box" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P230.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P230-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P230-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "- Elevate your jewelry collection with the \"Solitaire Spark\" Ring, where timeless design meets modern elegance. Crafted from anti-tarnish stainless steel and finished in luxurious gold plating, this ring features a brilliant round centerpiece stone flanked by dazzling cubic zirconia accents on the band. Its sturdy, non-adjustable fit and sophisticated look make it perfect for daily wear, parties, or gifting someone special.\n-\n- Material: Stainless Steel (Anti-Tarnish)\n- Plating: Gold Tone Plated\n- Stone Type: Premium Cubic Zirconia (Solitaire center + side accents)\n- Design: Classic solitaire band with side-studded stones\n- Color: Gold\n- Sizes Available:\n- Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm\n- Best Use: Ideal for daily wear, party wear, engagement look, or gifting\n- Packaging: Premium black velvet box\n- Note: Hand-finished for a unique and special touch",
+    "referenceTitle": "Anti Tarnish Solitaire Spark Ring",
+    "originalId": "531",
+    "originalSku": "MJ-054",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-054-anti-tarnish-solitaire-spark-ring-531",
+    "originalCategories": ["Anti Tarnish ring"]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "variants (Size for rings: 6, 7, 8) derived from rawContent — raw block's variants array was empty but the text explicitly lists three ring sizes with diameters."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

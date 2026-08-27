@@ -1,0 +1,90 @@
+{
+  "productId": "P233",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    { "optionName": "Size for rings", "values": ["6", "7", "8"] }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Stainless steel" },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "18K gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "18K gold tone plating" },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "unspecified stones - material unclear from text",
+      "displayTerm": "stones",
+      "stoneSource": "unverified-guess",
+      "source": { "origin": "migrated-text", "quotedPhrase": "finely set stones" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish coating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "anti-tarnish coating" },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "half stone-studded curve, half plain polished end",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Half stone-studded curve + half plain polished end" },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable, fits all finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Adjustable – fits all finger sizes" },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P233.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P233/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": ["anti-tarnish"],
+  "sourceNotes": {
+    "rawContent": "- A bold yet elegant statement piece – this open ring features a sleek curve design where one end sparkles with finely set stones while the other side shines with a smooth golden finish. Crafted in durable stainless steel with premium gold plating, this ring is built to last with an anti-tarnish coating and an adjustable fit for all-day comfort.\n-\n- Product: Anti-Tarnish Open Adjustable Ring\n- Material: Stainless steel\n- Plating: 18K gold tone plating\n- Finish: Anti-tarnish (resists dullness & fading)\n- Design: Half stone-studded curve + half plain polished end\n- Fit: Adjustable – fits all finger sizes\n- Style: Modern, chic & statement-worthy\n- Comfort: Smooth, lightweight & skin-friendly\n- Occasions: Perfect for parties, weddings, gifting & daily glam",
+    "referenceTitle": "Anti-Tarnish Stone-Studded Adjustable Ring",
+    "originalId": "534",
+    "originalSku": "MJ-097",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-097-anti-tarnish-stone-studded-adjustable-ring-534",
+    "originalCategories": ["Anti Tarnish ring"]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
