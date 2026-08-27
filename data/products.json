@@ -18172,5 +18172,561 @@
         "Anti Tarnish bracelet"
       ]
     }
+  },
+  {
+    "id": "P246",
+    "name": "Anti-Tarnish Openable Kada Bracelet",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P246.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Design Number",
+        "type": "dropdown",
+        "values": [
+          "1",
+          "4"
+        ],
+        "default": "1"
+      }
+    ],
+    "specs": {
+      "material": "Anti-tarnish metal",
+      "closure": "Openable clasp",
+      "plating coating": "Long-lasting shine, rust-resistant",
+      "occasion": "Casual, festive, party wear",
+      "care": "Wipe with a soft cloth after use; store in a dry place"
+    },
+    "description": "An openable clasp is the detail that sets this kada apart from a bangle you have to slide over the hand: the band parts at one point, so putting it on or taking it off doesn't mean working it past the widest part of your hand. It's built from anti-tarnish metal with a rust-resistant, long-lasting-shine finish, and it comes in two design numbers to choose between rather than one fixed pattern.\n\nA kada carries its own visual weight, a wide, structured band rather than a slim chain-link bracelet, and this one is built to hold up to that structure through daily contact. The anti-tarnish base means the shine at unboxing is closer to the shine after a few months than a plain plated piece usually manages, since the metal itself resists the dulling rather than relying only on a coating.\n\nIt suits casual days, festive occasions and party wear about equally, which is part of why an openable kada earns a place in a small jewellery rotation: it doesn't ask to be reserved for one specific kind of outfit. Wipe it with a soft cloth after wear and store it somewhere dry, and that's the whole care routine.\n\nAt ₹299, the openable clasp is genuinely useful rather than decorative, solving the real annoyance of forcing a rigid bangle over the knuckles.",
+    "seo": {
+      "primaryKeyword": "anti-tarnish openable kada bracelet two designs",
+      "secondaryKeywords": [
+        "openable clasp kada",
+        "rust-resistant kada bracelet",
+        "gold kada for daily wear"
+      ],
+      "metaTitle": "Anti-Tarnish Openable Kada Bracelet, Two Designs, ₹299",
+      "metaDescription": "An anti-tarnish kada with an openable clasp for easy wear, in a rust-resistant, long-lasting finish, with two designs to choose from. Just ₹299.",
+      "imageAlt": "Anti-tarnish kada bracelet with an openable clasp and a long-lasting shine finish",
+      "ogTitle": "Openable Kada Bracelet, Anti-Tarnish Finish, ₹299",
+      "ogDescription": "An anti-tarnish kada with an openable clasp, so it goes on and off without forcing over the hand. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P246.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "631",
+      "originalSku": "MJ-040",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-040-anti-tarnish-kada-bracelet-631",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P251",
+    "name": "Gold-Finish Kada with Blue Ombre Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P251.webp"
+      ]
+    },
+    "specs": {
+      "design": "Blue ombre textured enamel",
+      "material": "Gold finish, anti-tarnish, water-resistant"
+    },
+    "description": "Blue enamel shifts from a deeper shade to a lighter one across the width of this kada, an ombre gradient rather than a single flat colour. The gold-finish base carries the enamel, and the whole piece is built anti-tarnish and water-resistant, so the colour and the shine are meant to survive more than the occasional careful wear a delicate piece would need.\n\nOmbre enamel work is one of the more visually interesting things a kada can do at this price, since it turns a plain band into something with real gradient movement rather than a single block of colour. Blue in particular reads as cool against warm gold, a contrast that holds attention without needing an additional motif or stone to do the work.\n\nWater-resistance matters more on a kada than on most jewellery, since a wide band like this sits against the wrist through hand-washing, tea spills and the general contact daily life brings. It won't survive being deliberately soaked, but ordinary contact with water isn't something you need to plan around.\n\nAt ₹299, this is a considered colour piece rather than a plain metal band, worth choosing specifically for the blue rather than picking it as a default.",
+    "seo": {
+      "primaryKeyword": "gold-finish kada blue ombre enamel",
+      "secondaryKeywords": [
+        "anti-tarnish enamel kada",
+        "blue kada bracelet gold",
+        "water-resistant kada india"
+      ],
+      "metaTitle": "Gold-Finish Kada with Blue Ombre Enamel Detail, ₹299",
+      "metaDescription": "A gold-finish kada with a blue ombre enamel gradient, built anti-tarnish and water-resistant for daily wear. Priced simply and honestly at ₹299.",
+      "imageAlt": "Gold-finish kada bracelet with a blue ombre enamel gradient across the band",
+      "ogTitle": "Blue Ombre Enamel Kada, Gold-Finish, ₹299",
+      "ogDescription": "A gold-finish kada with a blue-to-light ombre enamel gradient, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P251.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "637",
+      "originalSku": "MJ-063",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-063-anti-tarnish-blue-ombre-textured-enamel-kada-637",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P253",
+    "name": "Gold-Finish Kada with Orange Floral Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P253.webp"
+      ]
+    },
+    "specs": {
+      "design": "Orange floral enamel",
+      "material": "Gold finish, anti-tarnish, water-resistant"
+    },
+    "description": "An orange floral pattern runs across this kada's enamel work, a warmer, more detailed choice than a plain colour block. The gold finish sits underneath, and the piece is built anti-tarnish and water-resistant, the same durability standard the shop applies across its enamel kada line.\n\nFloral enamel takes more work to get right than a flat colour or a gradient, since the pattern has to read clearly at kada scale without turning muddy. Orange in particular pairs well against gold rather than fighting it, closer in temperature than a cooler blue or green would sit.\n\nWipe it with a soft cloth after wear and keep it away from prolonged soaking, and the colour is built to hold rather than fade with ordinary contact. That's the whole routine, nothing more elaborate is asked of it.\n\nAt ₹299, a floral pattern this detailed is a specific design choice worth picking out deliberately from the plainer options in the same kada line, rather than settling for whichever colour happened to be in stock.",
+    "seo": {
+      "primaryKeyword": "gold-finish kada orange floral enamel",
+      "secondaryKeywords": [
+        "anti-tarnish floral kada",
+        "orange enamel bracelet gold",
+        "detailed kada design india"
+      ],
+      "metaTitle": "Gold-Finish Kada with Orange Floral Enamel Work, ₹299",
+      "metaDescription": "A gold-finish kada with an orange floral enamel pattern, built anti-tarnish and water-resistant, made for regular everyday wear. Priced at ₹299.",
+      "imageAlt": "Gold-finish kada bracelet with an orange floral enamel pattern across the band",
+      "ogTitle": "Orange Floral Enamel Kada, Gold-Finish, ₹299",
+      "ogDescription": "A gold-finish kada carrying a detailed orange floral enamel pattern, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P253.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "639",
+      "originalSku": "MJ-084",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-084-anti-tarnish-orange-floral-enamel-kada-639",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P254",
+    "name": "Gold-Plated Kada with Yellow Bamboo-Style Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P254.webp"
+      ]
+    },
+    "specs": {
+      "design": "Yellow bamboo-style",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "Bamboo-style ridges run across this kada in yellow enamel, a textured pattern rather than a smooth surface, over a gold-plated anti-tarnish base. The bamboo motif is a recognisable enough shape in jewellery generally that it reads clearly even at a glance, the segmented ridges doing the visual work rather than a stone or a separate charm.\n\nYellow is a brighter, more attention-holding choice than the shop's blue or green enamel options, closer to the colour of the bamboo it's styled after than a purely decorative shade would be. Paired with gold plating, it sits warm rather than cool, a piece that suits daytime wear as readily as an evening look.\n\nThe finish is water-resistant as well as anti-tarnish, which matters on a wide band like this that sits against the wrist through ordinary daily contact: handwashing, weather, the general business of a day. It isn't built for deliberate soaking, but it doesn't need to be handled as fragile either.\n\nAt ₹299, the bamboo-style texture is a specific detail that separates this from a plain enamel band, worth choosing for the pattern rather than the colour alone.",
+    "seo": {
+      "primaryKeyword": "gold-plated kada yellow bamboo enamel",
+      "secondaryKeywords": [
+        "bamboo style kada bracelet",
+        "anti-tarnish yellow kada",
+        "textured enamel kada india"
+      ],
+      "metaTitle": "Gold-Plated Kada, Yellow Bamboo-Style Enamel, ₹299",
+      "metaDescription": "A gold-plated kada with bamboo-style ridges in yellow enamel, anti-tarnish and water-resistant, textured rather than a flat colour block. Priced at ₹299.",
+      "imageAlt": "Gold-plated kada bracelet with bamboo-style ridges in yellow enamel",
+      "ogTitle": "Bamboo-Style Enamel Kada, Yellow, Gold-Plated, ₹299",
+      "ogDescription": "A gold-plated kada with bamboo-style ridges in yellow enamel, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P254.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "640",
+      "originalSku": "MJ-101",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-101-anti-tarnish-yellow-bamboo-style-kada-640",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P255",
+    "name": "Gold-Plated Kada with Pink Bamboo-Style Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P255.webp"
+      ]
+    },
+    "specs": {
+      "design": "Pink bamboo-style",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "The same bamboo-style ridge pattern that runs across this shop's yellow kada appears here in pink enamel instead, over a gold-plated, anti-tarnish and water-resistant base. Two colourways of one design rather than two separate shapes, so the choice between them comes down to which colour suits your wardrobe rather than which pattern you prefer.\n\nPink sits softer than the yellow version, less attention-grabbing at a glance but still clearly textured rather than a flat colour block, thanks to the segmented bamboo ridges running the width of the band. It pairs comfortably with pastel or neutral outfits without needing to be the loudest thing in the look.\n\nWater-resistance is worth noting specifically on a piece this wide, since a kada sits against the wrist through more daily contact than a slim chain bracelet would, and enamel that couldn't take the occasional splash would chip or dull faster than the metal underneath. A soft cloth after wear is the extent of what it actually asks of you.\n\nAt ₹299, picking pink over yellow is purely a colour decision, since the bamboo texture, the finish and the build are identical between the two.",
+    "seo": {
+      "primaryKeyword": "gold-plated kada pink bamboo enamel",
+      "secondaryKeywords": [
+        "pink enamel kada bracelet",
+        "anti-tarnish bamboo kada",
+        "textured kada for women"
+      ],
+      "metaTitle": "Gold-Plated Kada, Pink Bamboo-Style Enamel Ridges Design",
+      "metaDescription": "A gold-plated kada with bamboo-style ridges in pink enamel, anti-tarnish and water-resistant, a softer colourway of the yellow version, priced at ₹299.",
+      "imageAlt": "Gold-plated kada bracelet with bamboo-style ridges in pink enamel",
+      "ogTitle": "Bamboo-Style Enamel Kada, Pink, Gold-Plated, ₹299",
+      "ogDescription": "A gold-plated kada with bamboo-style ridges in pink enamel, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P255.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "641",
+      "originalSku": "MJ-088",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-088-anti-tarnish-pink-bamboo-style-kada-641",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P256",
+    "name": "Gold-Plated Kada with Green Ombre Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P256.webp"
+      ]
+    },
+    "specs": {
+      "design": "Green ombre enamel",
+      "material": "Gold-plated, anti-tarnish, water-resistant"
+    },
+    "description": "Green enamel fades from a deeper tone into a lighter one across this kada's band, the same ombre technique the shop uses on its blue version, over a gold-plated, anti-tarnish and water-resistant base. A gradient reads as more considered than a flat colour, since the shift across the band gives the eye somewhere to travel rather than settling on one shade immediately.\n\nGreen against gold sits in a slightly less common territory than blue or pink usually do in kada work, closer to an earthy, botanical read than to a purely decorative colour. It suits an outfit built around neutrals or other greens without clashing, and it holds its own against a plainer, warmer palette too.\n\nBecause the enamel sits over an anti-tarnish base, the colour is built to resist the fading and greying that a cheaper finish would show after a season of regular wear, and the water-resistance means ordinary daily contact, rather than deliberate soaking, isn't something to plan around.\n\nAt ₹299, a two-tone gradient like this is more visual complexity than a single flat enamel colour gives you at the same price point.",
+    "seo": {
+      "primaryKeyword": "gold-plated kada green ombre enamel",
+      "secondaryKeywords": [
+        "green enamel kada bracelet",
+        "anti-tarnish ombre kada",
+        "botanical colour kada india"
+      ],
+      "metaTitle": "Gold-Plated Kada with Green Ombre Enamel Fade, ₹299",
+      "metaDescription": "A gold-plated kada with a green ombre enamel gradient, anti-tarnish and water-resistant, an earthy colour choice for daily wear, priced at ₹299.",
+      "imageAlt": "Gold-plated kada bracelet with a green ombre enamel gradient across the band",
+      "ogTitle": "Green Ombre Enamel Kada, Gold-Plated, ₹299",
+      "ogDescription": "A gold-plated kada with a green-to-light ombre enamel gradient, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P256.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "642",
+      "originalSku": "MJ-072",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-072-anti-tarnish-green-ombre-enamel-kada-642",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P257",
+    "name": "Gold-Plated Minimalist Kada, Sleek Finish",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P257.webp"
+      ]
+    },
+    "specs": {
+      "design": "Minimalist",
+      "material": "Gold-plated, sleek finish, anti-tarnish, water-resistant"
+    },
+    "description": "No enamel pattern sits on this kada; it's the plainest piece in the shop's kada line, a sleek, gold-plated band without a colour or motif competing for attention. The finish itself is the point here, smooth and consistent across the width, built anti-tarnish and water-resistant like the rest of the range.\n\nMinimalist pieces like this earn their place precisely because they don't demand a specific outfit or occasion to make sense; a plain gold kada works under a formal shirt as easily as it does with a saree, since there's no enamel colour to clash with anything. It's also the piece to reach for when you want the width and structure of a kada without adding another pattern to a look that already has one elsewhere.\n\nBecause there's no enamel layer to protect, the sleek finish is arguably the most straightforward of the range to keep looking good: a wipe with a soft cloth after wear, kept dry when not in use, and that's genuinely the whole routine.\n\nAt ₹299, this is the kada to choose when you want the shape and the shine without deciding on a colour first.",
+    "seo": {
+      "primaryKeyword": "gold-plated minimalist kada sleek finish",
+      "secondaryKeywords": [
+        "plain gold kada bracelet",
+        "anti-tarnish minimalist kada",
+        "sleek kada for daily wear"
+      ],
+      "metaTitle": "Gold-Plated Minimalist Kada, Sleek Plain Finish, ₹299",
+      "metaDescription": "A plain gold-plated kada with a sleek, anti-tarnish, water-resistant finish and no enamel pattern at all, letting the finish speak for itself. Priced at ₹299.",
+      "imageAlt": "Gold-plated minimalist kada bracelet with a smooth sleek finish",
+      "ogTitle": "Minimalist Kada, Sleek Gold-Plated Finish, ₹299",
+      "ogDescription": "A plain gold-plated kada with a sleek finish, no enamel pattern, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P257.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "643",
+      "originalSku": "MJ-078",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-078-anti-tarnish-minimalist-gold-plated-kada-643",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P258",
+    "name": "Gold-Finish Kada with Blue Wave Enamel",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P258.webp"
+      ]
+    },
+    "specs": {
+      "design": "Blue wave enamel",
+      "material": "Gold finish, anti-tarnish, water-resistant"
+    },
+    "description": "A wave pattern runs across this kada's enamel in blue, a moving, curved line rather than the smoother gradient the shop's ombre pieces use. The gold finish sits beneath, and it carries the same anti-tarnish, water-resistant build as the rest of the enamel kada line.\n\nWhere an ombre kada shifts colour smoothly and a floral one clusters into a repeating motif, a wave pattern reads as a single continuous line moving across the band, which gives this piece a bit more visual motion than a flat colour block or an evenly repeated print. Blue suits the wave motif in particular, since the association between the colour and the shape is an easy, obvious one without needing to be spelled out.\n\nIt suits the same range of occasions the rest of this kada line does: casual days, festive wear, and parties, without needing to be swapped out between them. Wipe it with a soft cloth after wearing and avoid prolonged soaking, and the enamel is built to hold its pattern rather than dull with ordinary contact.\n\nAt ₹299, the wave detailing is a specific graphic choice, worth picking for shoppers who want movement in the design rather than a flat block of colour.",
+    "seo": {
+      "primaryKeyword": "gold-finish kada blue wave enamel",
+      "secondaryKeywords": [
+        "wave pattern kada bracelet",
+        "anti-tarnish blue kada",
+        "graphic enamel kada india"
+      ],
+      "metaTitle": "Gold-Finish Kada with Blue Wave Enamel Pattern, ₹299",
+      "metaDescription": "A gold-finish kada with a blue wave pattern in enamel, built anti-tarnish and water-resistant for everyday daily wear across most outfits. Priced at just ₹299.",
+      "imageAlt": "Gold-finish kada bracelet with a blue wave pattern in enamel across the band",
+      "ogTitle": "Blue Wave Enamel Kada, Gold-Finish, ₹299",
+      "ogDescription": "A gold-finish kada carrying a blue wave pattern in enamel, anti-tarnish and water-resistant. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P258.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "644",
+      "originalSku": "MJ-065",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-065-anti-tarnish-blue-wave-enamel-kada-644",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P259",
+    "name": "Gold-Finish Kada with Blue Striped Enamel and Pearl-Look Accent",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P259.webp"
+      ]
+    },
+    "specs": {
+      "design": "Blue striped enamel",
+      "stone": "Pearl (real or imitation unclear from text)",
+      "material": "Gold finish, anti-tarnish, water-resistant"
+    },
+    "description": "Blue stripes run across the enamel on this kada, and a single pearl-look accent sits at its centre rather than a stone or a cluster of smaller details. The gold finish carries both, and the piece is built anti-tarnish and water-resistant in line with the rest of the enamel kada range.\n\nStripes are a more graphic, structured pattern than the wave or ombre versions in this line, reading as a deliberate repeated motif rather than a single flowing line. The centre accent is described as pearl in the sourcing notes without full certainty about whether it's a genuine pearl or an imitation one, so it's fairest to describe it here as pearl-look rather than claim more certainty than is actually there.\n\nBetween the stripe pattern and the centre accent, this is one of the more detailed pieces in the kada line, closer to a considered design than a plain colour choice. It suits the same casual-to-festive range the rest of the line covers.\n\nWipe it with a soft cloth after wear, keep it away from prolonged soaking, and store it dry. At ₹299, the combination of stripe and accent gives it more to look at than a single-colour kada offers at the same price.",
+    "seo": {
+      "primaryKeyword": "gold-finish kada blue striped enamel pearl-look",
+      "secondaryKeywords": [
+        "striped enamel kada bracelet",
+        "anti-tarnish kada with accent",
+        "pearl-look kada india"
+      ],
+      "metaTitle": "Gold-Finish Kada, Blue Striped Enamel, Pearl-Look Accent",
+      "metaDescription": "A gold-finish kada with blue striped enamel and a pearl-look centre accent, anti-tarnish and water-resistant, priced honestly at just ₹299, nothing hidden.",
+      "imageAlt": "Gold-finish kada bracelet with blue striped enamel and a pearl-look centre accent",
+      "ogTitle": "Striped Enamel Kada with Pearl-Look Accent, ₹299",
+      "ogDescription": "A gold-finish kada with blue striped enamel and a single pearl-look accent at its centre. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P259.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "645",
+      "originalSku": "MJ-064",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-064-anti-tarnish-blue-striped-pearl-kada-645",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
+  },
+  {
+    "id": "P260",
+    "name": "Gold-Finish Kada with Yellow Enamel and Pearl-Look Accent",
+    "category": "bracelets",
+    "subcategory": "anti-tarnish",
+    "status": "draft",
+    "collections": [
+      "anti-tarnish"
+    ],
+    "pricing": {
+      "price": 299,
+      "mrp": 299,
+      "cost": 120
+    },
+    "media": {
+      "images": [
+        "/products/P260.webp"
+      ]
+    },
+    "specs": {
+      "design": "Yellow enamel",
+      "stone": "Pearl (real or imitation unclear from text)",
+      "material": "Gold finish, anti-tarnish, water-resistant"
+    },
+    "description": "Yellow enamel covers the band on this kada, with a single pearl-look accent set at its centre rather than a repeating pattern or a stripe. The gold finish sits underneath, anti-tarnish and water-resistant, matching the durability build of the rest of the shop's enamel kada line.\n\nUnlike the striped or floral versions elsewhere in the range, this one keeps the enamel itself simple, a flat colour rather than a pattern, and lets the centre accent do the more detailed visual work. The sourcing notes for that accent don't confirm with certainty whether it's a genuine pearl or an imitation one, so pearl-look is the honest way to describe it rather than claiming more than is actually known.\n\nYellow is a brighter choice than most of the shop's enamel colours, closer to the bamboo-style pieces in tone though flat rather than textured here. It works well against neutral or denim-heavy outfits, where a brighter accent colour has room to stand out rather than compete.\n\nAt ₹299, the simplicity of the flat yellow enamel paired with one clear focal accent makes this a more restrained pick than the shop's patterned kada options.",
+    "seo": {
+      "primaryKeyword": "gold-finish kada yellow enamel pearl-look",
+      "secondaryKeywords": [
+        "yellow enamel kada bracelet",
+        "anti-tarnish kada with accent",
+        "simple accent kada india"
+      ],
+      "metaTitle": "Gold-Finish Kada, Yellow Enamel, Pearl-Look Accent",
+      "metaDescription": "A gold-finish kada in flat yellow enamel with a pearl-look centre accent, anti-tarnish and water-resistant, priced honestly at only ₹299, nothing hidden.",
+      "imageAlt": "Gold-finish kada bracelet in yellow enamel with a pearl-look centre accent",
+      "ogTitle": "Yellow Enamel Kada with Pearl-Look Accent, ₹299",
+      "ogDescription": "A gold-finish kada in flat yellow enamel with a single pearl-look accent at its centre. ₹299 at Morchadi Gems.",
+      "ogImage": "/products/P260.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "646",
+      "originalSku": "MJ-102",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-102-anti-tarnish-yellow-enamel-pearl-kada-646",
+      "originalCategories": [
+        "Anti Tarnish bracelet"
+      ]
+    }
   }
 ]
