@@ -1,0 +1,110 @@
+{
+  "productId": "P196",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium, sturdy alloy for lasting durability"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich gold plating for a luxurious finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brilliant cubic zirconia accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Modern open teardrop with elegant geometric details",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Modern open teardrop with elegant geometric details"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes easily"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P196.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P196/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nMake every gesture graceful with the Teardrop CZ Gold-Plated Designer Ring for Women. This beautiful ring features an intricate open teardrop shape embellished with sparkling CZ stones, artfully joined with sleek golden elements for a modern yet classic look. The Teardrop CZ Gold-Plated Designer Ring for Women effortlessly enhances your style, whether for everyday wear, festive occasions, or thoughtful gifting.\nWhy You Will Love It:\n✨ Stunning teardrop silhouette with unique openwork design\n✨ Dazzling CZ stones add radiant brilliance\n✨ Adjustable fit for maximum comfort and versatility\n✨ Perfect for daily elegance, party glamour, or gifting someone special\nHighlights / Specifications:\n🔹 Material: Premium, sturdy alloy for lasting durability\n🔹 Plating: Rich gold plating for a luxurious finish\n🔹 Stone Type: Brilliant cubic zirconia accents\n🔹 Design: Modern open teardrop with elegant geometric details\n🔹 Size/Fit: Adjustable to fit most finger sizes easily\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Teardrop CZ Gold-Plated Designer Ring",
+    "originalId": "494",
+    "originalSku": "MJ-589",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-589-teardrop-cz-gold-plated-designer-ring-494",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

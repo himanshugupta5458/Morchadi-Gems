@@ -1,0 +1,110 @@
+{
+  "productId": "P192",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality, durable alloy for lasting wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium gold plating for a luxurious finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Dazzling cubic zirconia stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Modern interlocked circle knot with pavé accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Modern interlocked circle knot with pavé accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable design to suit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P192.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P192/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nMake a bold style statement with the Interlocked Circle Knot Ring for Women. Featuring intertwined circles encrusted with sparkling stones, this ring beautifully symbolizes unity and sophistication. The elegant design adds a touch of modern glamour to any outfit. With the Interlocked Circle Knot Ring for Women, celebrate meaningful moments and timeless style every day.\nWhy You Will Love It:\n✨ Symbolic interlocked design for added significance\n✨ Shimmering pavé stones create eye-catching sparkle\n✨ Comfortable and adjustable fit for everyday wear\n✨ A perfect gift for birthdays, anniversaries, or special occasions\nHighlights / Specifications:\n🔹 Material: High-quality, durable alloy for lasting wear\n🔹 Plating: Premium gold plating for a luxurious finish\n🔹 Stone Type: Dazzling cubic zirconia stones\n🔹 Design: Modern interlocked circle knot with pavé accents\n🔹 Size/Fit: Adjustable design to suit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Interlocked Circle Knot Ring",
+    "originalId": "490",
+    "originalSku": "MJ-351",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-351-interlocked-circle-knot-ring-490",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

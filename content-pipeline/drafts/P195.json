@@ -1,0 +1,110 @@
+{
+  "productId": "P195",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium alloy for durability and daily comfort"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brilliant gold plating for lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality princess-cut cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Elegant solitaire style with a refined finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant solitaire style with a refined finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable fit, designed to suit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P195.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P195/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nIndulge in timeless beauty with the Elegant Princess Cut Solitaire Ring for Women. Crafted for the modern woman, this ring boasts a dazzling princess-cut stone set on a shimmering gold-plated band. Designed to catch the light and hearts alike, it's the perfect signature piece for every occasion. Whether for daily wear or a celebration, the Elegant Princess Cut Solitaire Ring for Women turns every moment into a stylish statement.\nWhy You Will Love It:\n✨ Contemporary princess-cut design for a chic look\n✨ Versatile piece, perfect for everyday elegance or special events\n✨ Comfortable fit with carefully crafted band\n✨ Ideal gift for birthdays, anniversaries, or just to treat yourself\nHighlights / Specifications:\n🔹 Material: Premium alloy for durability and daily comfort\n🔹 Plating: Brilliant gold plating for lasting shine\n🔹 Stone Type: High-quality princess-cut cubic zirconia\n🔹 Design: Elegant solitaire style with a refined finish\n🔹 Size/Fit: Adjustable fit, designed to suit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Elegant Princess Cut Solitaire Ring",
+    "originalId": "493",
+    "originalSku": "MJ-234",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-234-elegant-princess-cut-solitaire-ring-493",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

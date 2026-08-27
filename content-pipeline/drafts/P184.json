@@ -1,0 +1,110 @@
+{
+  "productId": "P184",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality, sturdy alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich gold plating for lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brilliant pavé-set cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Classic full-band pavé style",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Classic full-band pavé style"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P184.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P184/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nShine with understated luxury wearing the Pavé CZ Gold-Plated Band Ring for Women. This classic ring features a full band encrusted with sparkling cubic zirconia, set in a warm gold-plated frame for a look that radiates elegance and charm. Whether you wear it solo or stack it, the Pavé CZ Gold-Plated Band Ring for Women is your go-to piece for effortless glamour, perfect for every occasion.\nWhy You Will Love It:\n✨ Timeless pavé CZ band for continuous sparkle\n✨ Elegant gold-plated finish adds a touch of luxury\n✨ Adjustable fit for comfortable, secure wear\n✨ Perfect for everyday style, special events, or gifting\nHighlights / Specifications:\n🔹 Material: High-quality, sturdy alloy\n🔹 Plating: Rich gold plating for lasting shine\n🔹 Stone Type: Brilliant pavé-set cubic zirconia\n🔹 Design: Classic full-band pavé style\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Pavé CZ Gold-Plated Band Ring",
+    "originalId": "482",
+    "originalSku": "MJ-451",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-451-pave-cz-gold-plated-band-ring-482",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P197",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium, durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich gold plating for lasting brilliance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality pavé set cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Cute bow-knot motif with sparkling accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Cute bow-knot motif with sparkling accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P197.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P197/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nShow off playful elegance with the Cute Bow Knot CZ Gold-Plated Ring for Women. Featuring a charming bow-knot motif adorned with glittering CZ stones on a sleek gold-plated band, this ring is pure delight. The adorable yet stylish design of the Cute Bow Knot CZ Gold-Plated Ring for Women makes it perfect for adding sparkle to any outfit or gifting a special someone.\nWhy You Will Love It:\n✨ Sweet bow knot design for a touch of whimsy\n✨ Pavé CZ stones create glamorous, eye-catching sparkle\n✨ Adjustable fit ensures maximum comfort\n✨ Ideal for parties, daily wear, or gifting loved ones\nHighlights / Specifications:\n🔹 Material: Premium, durable alloy\n🔹 Plating: Rich gold plating for lasting brilliance\n🔹 Stone Type: High-quality pavé set cubic zirconia\n🔹 Design: Cute bow-knot motif with sparkling accents\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, and heartfelt gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Cute Bow Knot CZ Gold-Plated Ring",
+    "originalId": "495",
+    "originalSku": "MJ-156",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-156-cute-bow-knot-cz-gold-plated-ring-495",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

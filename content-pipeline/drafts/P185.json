@@ -1,0 +1,110 @@
+{
+  "productId": "P185",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium-quality, durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lustrous gold plating for lasting radiance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Princess-cut cubic zirconia stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Modern rectangular bar with five sparkling stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Modern rectangular bar with five sparkling stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes comfortably"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P185.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P185/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nMake a dazzling impression with the Princess Bar CZ Gold-Plated Ring for Women. This contemporary ring features a sleek rectangular bar adorned with five sparkling princess-cut CZ stones, set in a rich gold-plated frame. Perfect for adding chic sophistication to any look, the Princess Bar CZ Gold-Plated Ring for Women is designed for fashion-forward women who love timeless elegance and modern style.\nWhy You Will Love It:\n✨ Striking rectangular bar design with princess-cut stones\n✨ Elegant gold-plated shine for luxe appeal\n✨ Sleek and adjustable for versatile wear\n✨ Perfect for daily style upgrades or special occasions\nHighlights / Specifications:\n🔹 Material: Premium-quality, durable alloy\n🔹 Plating: Lustrous gold plating for lasting radiance\n🔹 Stone Type: Princess-cut cubic zirconia stones\n🔹 Design: Modern rectangular bar with five sparkling stones\n🔹 Size/Fit: Adjustable to fit most finger sizes comfortably\n🔹 Best Use: Great for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Princess Bar CZ Gold-Plated Ring",
+    "originalId": "483",
+    "originalSku": "MJ-475",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-475-princess-bar-cz-gold-plated-ring-483",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

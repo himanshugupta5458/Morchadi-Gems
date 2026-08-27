@@ -1,0 +1,122 @@
+{
+  "productId": "P198",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium-quality, sturdy alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "silver plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-grade silver plating for brilliant shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Round-cut cubic zirconia in solitaire & halo setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Floral cluster motif with shimmering centerpiece",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Floral cluster motif with shimmering centerpiece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P198.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P198/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P198-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P198/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P198-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P198/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nElevate your elegance with the timeless Floral Halo Solitaire CZ Silver-Plated Ring for Women. This dazzling ring features a brilliant round CZ stone embraced by a delicate floral halo, all set on a shimmering silver-plated band for a truly luxurious look. The classic floral motif of the Floral Halo Solitaire CZ Silver-Plated Ring for Women ensures you stand out for daily wear, parties, or as a cherished gift for someone special.\nWhy You Will Love It:\n✨ Romantic floral halo design for feminine charm\n✨ Sparkling solitaire and halo for a show-stopping finish\n✨ Adjustable fit for comfort and versatility\n✨ Ideal accessory for everyday glamour, special occasions, or gifting\nHighlights / Specifications:\n🔹 Material: Premium-quality, sturdy alloy\n🔹 Plating: High-grade silver plating for brilliant shine\n🔹 Stone Type: Round-cut cubic zirconia in solitaire & halo setting\n🔹 Design: Floral cluster motif with shimmering centerpiece\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, and meaningful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Floral Halo Solitaire CZ Silver-Plated Ring",
+    "originalId": "496",
+    "originalSku": "MJ-255",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-255-floral-halo-solitaire-cz-silver-plated-ring-496",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

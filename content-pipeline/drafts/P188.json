@@ -1,0 +1,110 @@
+{
+  "productId": "P188",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Strong, durable premium alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Timeless gold plating for lasting brilliance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Clear, high-quality cubic zirconia stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Rectangle multi-row band with pavé setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rectangle multi-row band with pavé setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to suit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P188.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P188/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nStep up your shine with the luxurious Rectangle CZ Stone Gold-Plated Statement Ring for Women. This bold ring features a multi-row rectangular design encrusted with sparkling stones, giving you instant glamour and sophistication. Perfect for parties or elevating your daily style, the Rectangle CZ Stone Gold-Plated Statement Ring for Women is a head-turning piece that effortlessly matches your confidence.\nWhy You Will Love It:\n✨ Eye-catching rectangle design for modern impact\n✨ Rows of CZ stones ensure maximum sparkle\n✨ Comfortable, adjustable fit for all-day wear\n✨ Ideal for making a stylish statement or gifting loved ones\nHighlights / Specifications:\n🔹 Material: Strong, durable premium alloy\n🔹 Plating: Timeless gold plating for lasting brilliance\n🔹 Stone Type: Clear, high-quality cubic zirconia stones\n🔹 Design: Rectangle multi-row band with pavé setting\n🔹 Size/Fit: Adjustable to suit most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Rectangle CZ Stone Gold-Plated Statement Ring",
+    "originalId": "486",
+    "originalSku": "MJ-486",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-486-rectangle-cz-stone-gold-plated-statement-ring-486",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P201",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality, sturdy alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lush gold plating for lasting radiance"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brilliant pavé-set cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Nature-inspired circle ring with leaf accent",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Nature-inspired circle ring with leaf accent"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable for most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P201.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P201/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nShowcase whimsical elegance with the Butterfly Circle CZ Gold-Plated Adjustable Ring for Women. This enchanting ring features a sparkling CZ-studded circle adorned with a delicate Butterfly accent, set on a radiant gold-plated band. Perfect for nature lovers and style seekers, the Butterfly Circle CZ Gold-Plated Adjustable Ring for Women adds a magical yet sophisticated touch to every look, whether for daily flair or special gifting.\nWhy You Will Love It:\n✨ Unique Butterfly and circle design brings fresh, modern style\n✨ Sparkling CZ stones add luxury and shimmer\n✨ Adjustable fit for all-day comfort and versatility\n✨ Perfect for everyday elegance, parties, or gifting\nHighlights / Specifications:\n🔹 Material: High-quality, sturdy alloy\n🔹 Plating: Lush gold plating for lasting radiance\n🔹 Stone Type: Brilliant pavé-set cubic zirconia\n🔹 Design: Nature-inspired circle ring with leaf accent\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Butterfly Circle CZ Gold-Plated Adjustable Ring",
+    "originalId": "499",
+    "originalSku": "MJ-134",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-134-butterfly-circle-cz-gold-plated-adjustable-ring-499",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

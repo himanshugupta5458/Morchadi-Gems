@@ -1,0 +1,110 @@
+{
+  "productId": "P199",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Durable premium-quality alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Luxurious gold plating for rich shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Heart-shaped and round pavé cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Elegant crossover band with heart solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant crossover band with heart solitaire"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to suit most finger sizes comfortably"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P199.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P199/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nFall in love with the Heart Solitaire CZ Gold-Plated Ring for Women. This stunning ring features a sparkling heart-shaped CZ stone set atop an elegant crossover gold-plated band, accentuated with pavé CZ for extra brilliance. Delightfully romantic, the Heart Solitaire CZ Gold-Plated Ring for Women is the perfect expression of affection for daily wear, special occasions, or as a thoughtful gift.\nWhy You Will Love It:\n✨ Timeless heart-shaped solitaire for love and elegance\n✨ Crossover band with added pavé sparkle\n✨ Adjustable fit for everyday comfort\n✨ Ideal for daily wear, date nights, or gifting someone special\nHighlights / Specifications:\n🔹 Material: Durable premium-quality alloy\n🔹 Plating: Luxurious gold plating for rich shine\n🔹 Stone Type: Heart-shaped and round pavé cubic zirconia\n🔹 Design: Elegant crossover band with heart solitaire\n🔹 Size/Fit: Adjustable to suit most finger sizes comfortably\n🔹 Best Use: Perfect for daily wear, party wear, romantic gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Heart Solitaire CZ Gold-Plated Ring",
+    "originalId": "497",
+    "originalSku": "MJ-337",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-337-heart-solitaire-cz-gold-plated-ring-497",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P191",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality, durable alloy for lasting beauty"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium gold plating for a rich, glossy finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brilliant cubic zirconia stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Elegant vine and leaf motif with sparkling accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant vine and leaf motif with sparkling accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes comfortably"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P191.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P191/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nShowcase nature-inspired beauty with the Leaf Vine Design Gold-Plated Ring for Women. This elegant ring features intricate leaf motifs wrapped around a shimmering CZ stone band, creating a look that's both sophisticated and captivating. The delicate design adds a touch of freshness to any ensemble. Make every day feel special with the Leaf Vine Design Gold-Plated Ring for Women, a true symbol of grace and style.\nWhy You Will Love It:\n✨ Unique leafy vine design for a chic, natural vibe\n✨ Sparkling CZ stones for eye-catching brilliance\n✨ Lightweight and comfortable, perfect for all-day wear\n✨ Versatile piece, ideal for both daily use and special events\nHighlights / Specifications:\n🔹 Material: High-quality, durable alloy for lasting beauty\n🔹 Plating: Premium gold plating for a rich, glossy finish\n🔹 Stone Type: Brilliant cubic zirconia stones\n🔹 Design: Elegant vine and leaf motif with sparkling accents\n🔹 Size/Fit: Adjustable to fit most finger sizes comfortably\n🔹 Best Use: Perfect for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Leaf Vine Design Gold-Plated Ring",
+    "originalId": "489",
+    "originalSku": "MJ-394",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-394-leaf-vine-design-gold-plated-ring-489",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

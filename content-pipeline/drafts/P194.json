@@ -1,0 +1,99 @@
+{
+  "productId": "P194",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Alloy metal"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pave-set cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Rope-style band with crystal bar",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rope-style band with crystal bar"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P194.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P194/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "A classy gold-toned ring with a braided rope-style band and a crystal-studded rectangular bar. The sleek and elegant design makes it an ideal piece for stacking or wearing as a statement ring and complements both ethnic and western outfits.\n- Material: Alloy metal\n- Plating: Gold finish\n- Stone Type: Pave-set cubic zirconia\n- Design: Rope-style band with crystal bar\n- Size / Fit: Adjustable\n- Best Suitable For: Daily wear, office wear, casual styling",
+    "referenceTitle": "Rose Gold Crystal Rope Bar Ring",
+    "originalId": "492",
+    "originalSku": "MJ-497",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-497-rose-gold-crystal-rope-bar-ring-492",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "referenceTitle calls this a 'Rose Gold' ring, but rawContent's Material/Plating specs only say 'Alloy metal' / 'Gold finish' — no 'rose' qualifier appears anywhere in rawContent, so plain gold plating was proposed instead; flag for review against the original listing title."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

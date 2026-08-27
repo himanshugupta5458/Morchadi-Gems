@@ -1,0 +1,99 @@
+{
+  "productId": "P200",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass base"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "rose gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rose gold-plated adjustable solitaire ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Oval American Diamond (AD) with side stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Solitaire-inspired with slim studded band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Solitaire-inspired with slim studded band"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable – fits comfortably on most finger sizes"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P200.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P200/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Keep it elegant and timeless with this Rose gold-plated adjustable solitaire ring, featuring a radiant oval American Diamond stone complemented by a delicate studded band. Perfect for daily wear, office looks, or gifting, this ring adds effortless charm to any outfit.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: Oval American Diamond (AD) with side stones\n- Design: Solitaire-inspired with slim studded band\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Best for daily wear, office wear, and gifting",
+    "referenceTitle": "Rose Gold-Plated Oval AD Solitaire Ring",
+    "originalId": "498",
+    "originalSku": "MJ-514",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-514-rose-gold-plated-oval-ad-solitaire-ring-498",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

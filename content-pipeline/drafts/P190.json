@@ -1,0 +1,110 @@
+{
+  "productId": "P190",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium alloy ensures lasting shine and durability"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Luxurious gold plating for a rich finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Princess-cut and round cubic zirconia stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Elegant dual design featuring floral and classic solitaire styles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant dual design featuring floral and classic solitaire styles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P190.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P190/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nAdd a touch of sparkle and elegance with the Dual Design Gold-Plated Adjustable Ring for Women. This gorgeous ring features two dazzling designs—one with a radiant princess-cut stone, and the other with a charming floral motif surrounded by shimmering CZ accents. The beautiful blend of statement and femininity makes the Dual Design Gold-Plated Adjustable Ring for Women a must-have piece for every jewelry lover.\nWhy You Will Love It:\n✨ Unique double-design—princess-cut & floral—on a single ring\n✨ Gorgeous sparkle with high-quality CZ stones\n✨ Easy-to-adjust for comfortable, secure fit\n✨ Perfect for daily glam or special occasions\nHighlights / Specifications:\n🔹 Material: Premium alloy ensures lasting shine and durability\n🔹 Plating: Luxurious gold plating for a rich finish\n🔹 Stone Type: Princess-cut and round cubic zirconia stones\n🔹 Design: Elegant dual design featuring floral and classic solitaire styles\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Dual Design Gold-Plated Adjustable Ring",
+    "originalId": "488",
+    "originalSku": "MJ-221",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-221-dual-design-gold-plated-adjustable-ring-488",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,110 @@
+{
+  "productId": "P186",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Durable, premium-quality alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Glossy gold plating for a luxurious touch"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sparkling baguette-cut cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Modern rectangular bar with linear stone setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Modern rectangular bar with linear stone setting"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to suit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P186.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P186/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nStep out in style with the captivating Rectangular Baguette CZ Gold-Plated Ring for Women. This unique bar ring boasts a sleek gold-plated frame set with shimmering baguette-cut CZ stones for a contemporary yet timeless feel. Designed to redefine elegance, the Rectangular Baguette CZ Gold-Plated Ring for Women adds a statement finish to every outfit, making it the perfect accessory for the trendsetting woman.\nWhy You Will Love It:\n✨ Chic rectangular bar design for a fashion-forward look\n✨ Stunning baguette CZ stones for brilliant shine\n✨ Adjustable fit ensures lasting comfort\n✨ Perfect for casual sophistication or party glam\nHighlights / Specifications:\n🔹 Material: Durable, premium-quality alloy\n🔹 Plating: Glossy gold plating for a luxurious touch\n🔹 Stone Type: Sparkling baguette-cut cubic zirconia\n🔹 Design: Modern rectangular bar with linear stone setting\n🔹 Size/Fit: Adjustable to suit most finger sizes\n🔹 Best Use: Great for daily wear, party wear, or thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Rectangular Baguette CZ Gold-Plated Ring",
+    "originalId": "484",
+    "originalSku": "MJ-487",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-487-rectangular-baguette-cz-gold-plated-ring-484",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

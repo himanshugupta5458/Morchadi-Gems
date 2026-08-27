@@ -1,0 +1,122 @@
+{
+  "productId": "P189",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "High-quality, durable alloy"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Plating",
+      "value": "gold plating",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lustrous gold plating for long-lasting shine"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sparkling marquise-cut cubic zirconia"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "Leaf-inspired band with centerpiece stone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Leaf-inspired band with centerpiece stone"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Fit",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable to fit most finger sizes"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care Instructions",
+      "value": "💎 Clean gently with a microfiber or polishing cloth; 🚫 Avoid chemicals, water, and ultrasonic cleaners; 🛑 Remove while swimming, showering, or gardening; 🌡️ Store in a cool, dry place away from extreme temperatures",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P189.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P189-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P189-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Product Description:\nEmbrace natural elegance with the stunning Leaf Marquise CZ Stone Gold-Plated Ring for Women. Featuring a captivating marquise-shaped stone nestled in a sparkling leaf-inspired band, this ring adds a touch of luxury to every look. The graceful design ensures you stand out, whether dressing up or accessorizing your daily style. The Leaf Marquise CZ Stone Gold-Plated Ring for Women is the ideal blend of sophistication and charm.\nWhy You Will Love It:\n✨ Elegant marquise leaf design for a unique, nature-inspired style\n✨ Dazzling CZ stones for a brilliant finish\n✨ Lightweight and adjustable for everyday comfort\n✨ Perfect for both casual and festive occasions\nHighlights / Specifications:\n🔹 Material: High-quality, durable alloy\n🔹 Plating: Lustrous gold plating for long-lasting shine\n🔹 Stone Type: Sparkling marquise-cut cubic zirconia\n🔹 Design: Leaf-inspired band with centerpiece stone\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "Leaf Marquise CZ Stone Gold-Plated Ring",
+    "originalId": "487",
+    "originalSku": "MJ-393",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-393-leaf-marquise-cz-stone-gold-plated-ring-487",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}
