@@ -87,7 +87,7 @@
     "general": [
       {
         "path": "/products/P302.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P302/raw/main.webp",
         "role": "main"
       },

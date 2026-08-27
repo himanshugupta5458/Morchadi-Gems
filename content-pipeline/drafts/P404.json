@@ -21,7 +21,7 @@
     "general": [
       {
         "path": "/products/P404.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P404/raw/main.webp",
         "role": "main"
       },

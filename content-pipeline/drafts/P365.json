@@ -21,7 +21,7 @@
     "general": [
       {
         "path": "/products/P365.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P365/raw/main.webp",
         "role": "main"
       },

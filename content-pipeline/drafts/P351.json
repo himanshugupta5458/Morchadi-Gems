@@ -74,7 +74,7 @@
     "general": [
       {
         "path": "/products/P351.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P351/raw/main.webp",
         "role": "main"
       },
