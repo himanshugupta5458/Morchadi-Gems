@@ -66,7 +66,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Weight: 1.4 gm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Height",
@@ -99,7 +99,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Comes in a Premium Box"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Production Note",
@@ -110,7 +110,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Each piece is handmade, making every ring unique and special."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

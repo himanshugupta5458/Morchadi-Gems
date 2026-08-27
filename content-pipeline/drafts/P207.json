@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable to fit most finger sizes comfortably"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care instructions",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Clean gently with a microfiber or polishing cloth"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

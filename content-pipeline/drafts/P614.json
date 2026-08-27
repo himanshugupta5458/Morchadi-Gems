@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Elegant green dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial markers",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Classic Roman numeral hour markers"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Bracelet style",

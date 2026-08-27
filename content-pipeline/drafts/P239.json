@@ -77,7 +77,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Weight: 1.4 gm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Height",
@@ -110,7 +110,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Comes in a premium box"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Production Note",
@@ -121,7 +121,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "As this is a handmade product, it is very rare to create identical items"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

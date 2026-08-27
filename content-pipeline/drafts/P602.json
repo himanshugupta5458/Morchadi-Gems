@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium antique gold finish"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Closure",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Adjustable chain closure"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Package contents",

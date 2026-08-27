@@ -34,7 +34,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Weight - 1.4gm"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Height",
@@ -56,7 +56,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "18k gold tone plated"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Material",
@@ -78,7 +78,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "You will receive the ring in a box."
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
