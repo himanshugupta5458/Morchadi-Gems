@@ -20557,5 +20557,694 @@
         "Glass bangles"
       ]
     }
+  },
+  {
+    "id": "P340",
+    "name": "Multicolour Glass Bangle Set with Golden Dotted Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P340.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "material": "Glass",
+      "colour": "Multicolor (blue, pink, green, gold tones)",
+      "design": "Golden dotted detailing",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle with care, store in a soft pouch to avoid breakage"
+    },
+    "description": "Blue, pink, green and gold tones run through this set rather than sticking to one colour, twelve glass bangles finished with a smooth, glossy surface and small golden dots tracing each band. The mix means the set reads as a full stack on its own, without needing to be paired with anything else in the same colour family.\n\nGlass carries its own kind of shine, brighter and glassier than a metal bangle, and the golden dotted detailing on each piece gives the eye something to catch beyond the colour block itself. Worn together, the twelve bangles move and click against each other in the way a proper stack is meant to, which is part of the point of buying a full set rather than a single piece.\n\nIt comes in a choice of size, so check your wrist before ordering rather than assuming a single size fits everyone. Glass asks for a bit of care: handle it gently and store the set in a soft pouch when it's not on your wrist, since a hard knock can chip or crack a bangle in a way metal wouldn't.\n\nSuggested here for gifting, a full multicolour set like this suits festive dressing and everyday ethnic wear about equally. At ₹149 for twelve bangles, it's a straightforward way to fill out a wrist without buying pieces one at a time.",
+    "seo": {
+      "primaryKeyword": "multicolour glass bangle set golden dotted",
+      "secondaryKeywords": [
+        "set of 12 glass bangles",
+        "ethnic bangle set gifting",
+        "stacked glass bangles india"
+      ],
+      "metaTitle": "Multicolour Glass Bangle Set, Golden Dotted Detail",
+      "metaDescription": "A set of 12 glass bangles in blue, pink, green and gold tones, each with golden dotted detailing and a glossy finish. ₹149, sized to fit well.",
+      "imageAlt": "Set of multicolour glass bangles with golden dotted detailing, glossy finish",
+      "ogTitle": "Multicolour Glass Bangle Set of 12, Golden Detail, ₹149",
+      "ogDescription": "A set of 12 glass bangles in blue, pink, green and gold tones, finished with golden dotted detailing. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P340.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "774",
+      "originalSku": "MJ-530",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-530-set-of-12-multicolor-glass-bangles-774",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P341",
+    "name": "Royal Blue Glass Bangle Set with Golden Dotted Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 149,
+      "mrp": 149,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P341.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Royal blue",
+      "design": "Golden dotted detailing",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle gently and store in a soft pouch to prevent breakage"
+    },
+    "description": "Twelve glass bangles in a deep royal blue make up this set, each one finished with small golden dots and a smooth, glossy surface. Unlike the shop's multicolour mixes, every bangle here holds the same blue, so the set reads as one solid colour block on the wrist rather than a blend of tones.\n\nRoyal blue is a strong, saturated shade, deeper than a sky or powder blue, and the small golden dotted detailing sits against it without softening the colour underneath. A full dozen bangles worn together gives a real stacked look, the kind that fills the wrist rather than sitting as a single accent piece.\n\nSizing runs across a choice of options, so it's worth checking your wrist measurement before ordering. Glass is more fragile than metal, so handle the set gently and keep it in a soft pouch between wears rather than loose in a drawer where it can knock against harder jewellery.\n\nPriced for gifting at ₹149, a full royal blue set like this pairs naturally with festive dressing and holds up just as well as an everyday addition to an ethnic outfit.",
+    "seo": {
+      "primaryKeyword": "royal blue glass bangle set golden dotted",
+      "secondaryKeywords": [
+        "blue bangle set of 12",
+        "ethnic glass bangles gifting",
+        "stacked bangle set india"
+      ],
+      "metaTitle": "Royal Blue Glass Bangle Set, Golden Dotted Detailing",
+      "metaDescription": "A set of 12 royal blue glass bangles with small golden dotted detailing and a glossy finish, sized to fit. Priced for gifting at ₹149 total.",
+      "imageAlt": "Set of royal blue glass bangles with golden dotted detailing and glossy finish",
+      "ogTitle": "Royal Blue Glass Bangle Set of 12, Golden Dots, ₹149",
+      "ogDescription": "A set of 12 royal blue glass bangles, each finished with small golden dotted detailing. ₹149 at Morchadi Gems.",
+      "ogImage": "/products/P341.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "775",
+      "originalSku": "MJ-517",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-517-royal-blue-glass-bangles-set-of-12-with-golden-dotted-work-775",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P342",
+    "name": "Gold-Tone Glass Bangle Set with Crystal-Dotted Embellishments",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P342.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Gold-tone",
+      "design": "Crystal-dotted embellishments",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle with care and store in a soft pouch to avoid breakage"
+    },
+    "description": "A gold-tone base carries this set of twelve glass bangles, each one dotted with small crystal-style embellishments rather than the plain golden dots seen elsewhere in this shop's bangle range. The stone material behind the sparkle isn't pinned down as either glass or cubic zirconia in the confirmed details, so take the shimmer as decorative rather than as a specific gem claim either way.\n\nThe gold tone itself sits warm rather than cool, and against it the small dotted stones catch light in a way a flat gold surface alone wouldn't. Worn as a full dozen, the set has real presence on the wrist without needing anything else layered alongside it.\n\nIt comes in a choice of sizes, worth checking against your own wrist before ordering. As with any glass bangle, handle this set with care and keep it in a soft pouch rather than loose, since glass chips more easily than a metal band would under the same knock.\n\nAt ₹189, suggested here for gifting, a gold-tone set with this much detail work suits festive dressing especially well, though it holds its own for a dressier everyday look too.",
+    "seo": {
+      "primaryKeyword": "gold-tone glass bangle set crystal-dotted",
+      "secondaryKeywords": [
+        "crystal dotted bangle set",
+        "gold bangle set of 12",
+        "festive glass bangles india"
+      ],
+      "metaTitle": "Gold-Tone Glass Bangle Set, Crystal-Dotted Details",
+      "metaDescription": "A set of 12 gold-tone glass bangles with small crystal-style dotted embellishments and a glossy finish, sized to fit. ₹189, gift-ready today.",
+      "imageAlt": "Set of gold-tone glass bangles with crystal-dotted embellishments, glossy finish",
+      "ogTitle": "Gold-Tone Glass Bangle Set of 12, Crystal Dots, ₹189",
+      "ogDescription": "A set of 12 gold-tone glass bangles dotted with small crystal-style embellishments. ₹189 at Morchadi Gems, sized to fit.",
+      "ogImage": "/products/P342.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "776",
+      "originalSku": "MJ-328",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-328-gold-tone-glass-bangles-set-of-12-with-crystal-dotted-work-776",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P343",
+    "name": "Emerald Green Glass Bangle Set with Golden Dotted Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P343.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Emerald green",
+      "design": "Golden dotted detailing",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle gently and store in a soft pouch to prevent breakage"
+    },
+    "description": "This set of twelve glass bangles holds a single emerald green across every piece, each one finished with golden dots and the same smooth, glossy surface used across this shop's dotted bangle line. Emerald sits deeper and cooler than a lime or olive green, closer to a jewel tone than an earthy one.\n\nSet against that green, the golden detailing reads as a clean contrast rather than blending into the base colour, which is part of why this combination shows up so often in traditional glass bangle work. A full dozen worn together gives a proper stacked look rather than a single accent piece doing all the work alone.\n\nSizing is offered as a choice, so check your wrist measurement before ordering rather than guessing. Glass needs a gentler hand than metal: keep the set in its soft pouch when it's off your wrist, and handle each bangle carefully to avoid a chip from a hard knock.\n\nSuggested for gifting at ₹150, an emerald green set like this suits festive occasions naturally, and holds up equally well as a considered addition to an everyday ethnic outfit.",
+    "seo": {
+      "primaryKeyword": "emerald green glass bangle set golden dotted",
+      "secondaryKeywords": [
+        "green bangle set of 12",
+        "ethnic glass bangles gifting",
+        "jewel tone bangle set india"
+      ],
+      "metaTitle": "Emerald Green Glass Bangle Set, Golden Dotted Work",
+      "metaDescription": "A set of 12 emerald green glass bangles with golden dotted detailing and a glossy finish, sized well to fit. Priced for gifting at ₹150 flat.",
+      "imageAlt": "Set of emerald green glass bangles with golden dotted detailing, glossy finish",
+      "ogTitle": "Emerald Green Glass Bangle Set of 12, Gold Dots, ₹150",
+      "ogDescription": "A set of 12 emerald green glass bangles, each finished with small golden dotted detailing. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P343.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "777",
+      "originalSku": "MJ-246",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-246-emerald-green-glass-bangles-set-of-12-with-golden-dotted-work-777",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P344",
+    "name": "Navy Blue Glass Bangle Set with Golden Dotted Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P344.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Navy blue",
+      "design": "Golden dotted detailing",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle gently and store in a soft pouch to avoid breakage"
+    },
+    "description": "Navy sits deeper and less saturated than the royal blue in this shop's other bangle set, closer to ink than to a bright primary blue, and it carries the same golden dotted detailing across all twelve pieces in this set. The smooth, glossy glass finish is shared across the whole dotted-bangle line, so the shine here matches its siblings even where the colour doesn't.\n\nA navy base tends to read a shade quieter than a brighter blue would, which makes it an easier match against a wider range of outfit colours without competing for attention. Worn as a full dozen, the set still gives the stacked, layered look that's the whole point of buying bangles in a set rather than one at a time.\n\nIt's offered across a choice of sizes, so measure your wrist before ordering. As with every glass piece in this range, handle it gently and keep it stored in its soft pouch, since a knock against something hard can chip the glass in a way it wouldn't a metal bangle.\n\nAt ₹189, suggested for gifting, this set works for festive dressing and for a dressier everyday look that leans quieter than a brighter colourway would.",
+    "seo": {
+      "primaryKeyword": "navy blue glass bangle set golden dotted",
+      "secondaryKeywords": [
+        "navy bangle set of 12",
+        "dark blue ethnic bangles",
+        "gifting bangle set india"
+      ],
+      "metaTitle": "Navy Blue Glass Bangle Set, Golden Dotted Detailing",
+      "metaDescription": "A set of 12 navy blue glass bangles with golden dotted detailing and a glossy finish, sized to fit well. Priced simply for gifting at ₹189 flat.",
+      "imageAlt": "Set of navy blue glass bangles with golden dotted detailing, glossy finish",
+      "ogTitle": "Navy Blue Glass Bangle Set of 12, Gold Dots, ₹189",
+      "ogDescription": "A set of 12 navy blue glass bangles, a quieter tone than royal blue, with golden dotted detailing. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P344.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "778",
+      "originalSku": "MJ-443",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-443-navy-blue-glass-bangles-set-of-12-with-golden-dotted-work-778",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P345",
+    "name": "Transparent Glass Bangle Set with Golden Dotted Embellishments",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P345.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Transparent / clear",
+      "design": "Golden dotted embellishments",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle gently and store in a soft pouch to avoid breakage"
+    },
+    "description": "Clear glass is the base for this set rather than a solid colour, and the twelve bangles here lean on the golden dotted embellishments to carry the detail rather than a background hue. Because the glass is transparent, the gold dots read as suspended in the band itself, visible from more angles than a dot painted over an opaque colour would be.\n\nA clear set like this is the most neutral option in this shop's dotted bangle line, which means it pairs with a wider range of outfit colours than a fixed shade would, without ever clashing against something bolder worn alongside it. It still delivers the full stacked look of a dozen bangles worn together.\n\nSizes are offered as a choice, so check your wrist before ordering. Glass bangles need gentler handling than metal ones: store this set in its soft pouch between wears, and avoid knocking it against harder pieces, since a chip is more likely on clear glass than it is on most metals.\n\nAt ₹189, suggested for gifting, a transparent set like this suits festive wear and works just as easily as an everyday addition to an ethnic wardrobe that wants a neutral base.",
+    "seo": {
+      "primaryKeyword": "transparent glass bangle set golden dotted",
+      "secondaryKeywords": [
+        "clear glass bangle set of 12",
+        "neutral ethnic bangle set",
+        "gifting bangle set clear"
+      ],
+      "metaTitle": "Transparent Glass Bangle Set, Golden Dotted Detail",
+      "metaDescription": "A set of 12 transparent glass bangles with golden dotted embellishments, a neutral pick that pairs with most outfits. ₹189, gift-ready today.",
+      "imageAlt": "Set of transparent glass bangles with golden dotted embellishments, glossy finish",
+      "ogTitle": "Transparent Glass Bangle Set of 12, Gold Dots, ₹189",
+      "ogDescription": "A set of 12 transparent glass bangles with golden dotted embellishments, a neutral wardrobe pick. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P345.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "779",
+      "originalSku": "MJ-596",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-596-transparent-glass-bangles-set-of-12-with-golden-dotted-work-779",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P346",
+    "name": "Lime Green Glass Bangle Set with Crystal-Dotted Embellishments",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P346.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Lime green",
+      "design": "Crystal-dotted embellishments",
+      "stone": "Glass or cubic zirconia, unclear from text",
+      "plating coating": "Smooth, glossy finish",
+      "care instructions": "Handle gently and store in a soft pouch to avoid breakage"
+    },
+    "description": "Lime green sits brighter and more citrus-toned than the emerald in this shop's other green bangle set, and this dozen-piece set pairs it with small crystal-style dotted embellishments rather than plain golden dots. As with the gold-tone version of this same detailing, the stone material behind the sparkle isn't confirmed as glass or cubic zirconia specifically, so it's described here as decorative rather than as a firm material claim.\n\nThe brightness of lime green makes this one of the more attention-grabbing colourways in this shop's bangle range, well suited to someone who wants a set that stands out rather than blends quietly with an outfit. Worn as a full dozen, it gives the same stacked, layered look every set in this line is built around.\n\nSizing runs across a choice of options, worth checking against your wrist before ordering. Handle the glass gently and store the set in its soft pouch, since a hard knock can chip the glass in a way it wouldn't a sturdier metal piece.\n\nSuggested for gifting at ₹189, a lime green set like this brings genuine brightness to festive dressing and to an everyday look that wants a bit more colour.",
+    "seo": {
+      "primaryKeyword": "lime green glass bangle set crystal-dotted",
+      "secondaryKeywords": [
+        "bright green bangle set",
+        "crystal dotted glass bangles",
+        "gifting bangle set of 12"
+      ],
+      "metaTitle": "Lime Green Glass Bangle Set, Crystal-Dotted Details",
+      "metaDescription": "A set of 12 lime green glass bangles with small crystal-style dotted embellishments and a glossy finish. ₹189, sized to fit, gift-ready now.",
+      "imageAlt": "Set of lime green glass bangles with crystal-dotted embellishments, glossy finish",
+      "ogTitle": "Lime Green Glass Bangle Set of 12, Crystal Dots, ₹189",
+      "ogDescription": "A set of 12 bright lime green glass bangles, dotted with small crystal-style embellishments. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P346.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "780",
+      "originalSku": "MJ-398",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-398-lime-green-glass-bangles-set-of-12-with-crystal-dotted-work-780",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P347",
+    "name": "Olive Green Glass Bangle Set with Gold Bead Detailing",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 189,
+      "mrp": 189,
+      "cost": 76
+    },
+    "media": {
+      "images": [
+        "/products/P347.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Olive green",
+      "design": "Gold bead detailing",
+      "plating coating": "Soft shimmer finish",
+      "weight": "Lightweight"
+    },
+    "description": "Olive green runs through this set of twelve glass bangles, each one finished with small gold beads rather than the flat dots seen on this shop's other green colourway, and a softer shimmer coat instead of the plain glossy surface used elsewhere in the range. The beaded detail sits slightly raised against the band, giving it a bit more texture to the touch than a printed dot would have.\n\nThe set stays genuinely light on the wrist, which matters when you're wearing all twelve pieces together rather than a single bangle; nothing here weighs the arm down the way a heavier metal stack can. Olive itself reads as more muted than the brighter greens in this shop's range, an earthier tone that sits well against gold detailing without competing with it.\n\nIt's offered in a choice of sizes, so measure your wrist first. Glass still asks for care regardless of finish: handle each bangle gently and avoid knocking the set against harder jewellery when it's not being worn.\n\nAt ₹189, suggested for gifting, the gold bead detailing and the soft shimmer finish give this set a slightly different texture from the plain-dotted pieces in the same collection.",
+    "seo": {
+      "primaryKeyword": "olive green glass bangle set gold bead",
+      "secondaryKeywords": [
+        "gold bead bangle set of 12",
+        "earthy green ethnic bangles",
+        "lightweight bangle set india"
+      ],
+      "metaTitle": "Olive Green Glass Bangle Set, Gold Bead Detailing Work",
+      "metaDescription": "A set of 12 olive green glass bangles with gold bead detailing and a soft shimmer finish, lightweight and sized to fit. ₹189, gift-ready today.",
+      "imageAlt": "Set of olive green glass bangles with gold bead detailing, soft shimmer finish",
+      "ogTitle": "Olive Green Glass Bangle Set of 12, Gold Beads, ₹189",
+      "ogDescription": "A set of 12 olive green glass bangles finished with gold bead detailing and a soft shimmer. ₹189 at Morchadi Gems.",
+      "ogImage": "/products/P347.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "781",
+      "originalSku": "MJ-532",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-532-set-of-12-olive-green-glass-bangles-with-gold-bead-detailing-781",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P348",
+    "name": "Rust Orange Glass Bangle Set with Gold Bead Embellishments",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P348.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Rust orange",
+      "design": "Gold bead embellishments",
+      "weight": "Lightweight, smooth, and comfortable"
+    },
+    "description": "A warm rust orange carries this set of twelve glass bangles, each one finished with small gold bead embellishments rather than the flat dotted detailing used on the shop's other colourways. Rust is a deeper, earthier orange than a bright citrus tone, closer to terracotta, and the gold beads sit against it with a bit of texture rather than a flat printed dot.\n\nThe bangles are confirmed as lightweight, smooth and comfortable to wear, which matters across a full stack of twelve worn together on one wrist through a long day. Rust orange as a colour tends to pair naturally with autumnal or festive-season outfits, though nothing about it limits it to only that use.\n\nSizing is offered across a choice of options, so check your wrist before ordering rather than guessing at a fit. As with every piece in this glass bangle range, handle it gently and store it in its soft pouch when it isn't being worn, since glass chips more easily than metal under a hard knock.\n\nSuggested for gifting at ₹150, this rust orange set brings genuine warmth to festive dressing and to an everyday ethnic look that wants a change from cooler tones.",
+    "seo": {
+      "primaryKeyword": "rust orange glass bangle set gold bead",
+      "secondaryKeywords": [
+        "orange bangle set of 12",
+        "gold bead ethnic bangles",
+        "lightweight glass bangles india"
+      ],
+      "metaTitle": "Rust Orange Glass Bangle Set, Gold Bead Detailing Work",
+      "metaDescription": "A set of 12 rust orange glass bangles with gold bead embellishments, lightweight and comfortable, sized to fit. Priced at ₹150 for gifting today.",
+      "imageAlt": "Set of rust orange glass bangles with gold bead embellishments, glossy finish",
+      "ogTitle": "Rust Orange Glass Bangle Set of 12, Gold Beads, ₹150",
+      "ogDescription": "A set of 12 rust orange glass bangles finished with gold bead embellishments, lightweight. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P348.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "782",
+      "originalSku": "MJ-521",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-521-rust-orange-glass-bangles-set-of-12-with-gold-bead-accents-782",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
+  },
+  {
+    "id": "P349",
+    "name": "Hot Pink Glass Bangle Set with Gold Bead Embellishments",
+    "category": "bangles",
+    "status": "draft",
+    "collections": [
+      "gifting"
+    ],
+    "pricing": {
+      "price": 150,
+      "mrp": 150,
+      "cost": 60
+    },
+    "media": {
+      "images": [
+        "/products/P349.webp"
+      ]
+    },
+    "options": [
+      {
+        "name": "Size for bangles",
+        "type": "dropdown",
+        "values": [
+          "2.4",
+          "2.6",
+          "2.8"
+        ],
+        "default": "2.4"
+      }
+    ],
+    "specs": {
+      "set quantity": "12 glass bangles",
+      "material": "Glass",
+      "colour": "Hot pink",
+      "design": "Gold bead embellishments",
+      "weight": "Lightweight"
+    },
+    "description": "Hot pink is the boldest colourway in this shop's gold-bead bangle line, a full dozen glass bangles in a saturated pink finished with small gold bead detailing rather than a flat printed dot. The colour itself is built to be noticed, closer to a fuchsia than a soft blush, and the gold beads add texture against it rather than competing for attention.\n\nConfirmed as lightweight, the set stays comfortable across a full stack of twelve worn together, without the arm-weight a heavier metal bangle set can bring. A bright colour like this works especially well as a single strong note against a plainer outfit, letting the bangles do the visual work rather than needing extra styling around them.\n\nIt's offered in a choice of sizes, worth checking against your own wrist measurement before ordering. Glass needs gentler handling than metal: keep the set in its soft pouch between wears, and avoid letting it knock against harder jewellery, which is how a chip usually happens.\n\nAt ₹150, suggested for gifting, a hot pink set like this suits festive celebrations and any everyday outfit that could use one confident note of colour.",
+    "seo": {
+      "primaryKeyword": "hot pink glass bangle set gold bead",
+      "secondaryKeywords": [
+        "pink bangle set of 12",
+        "bold glass bangles gifting",
+        "lightweight bangle set india"
+      ],
+      "metaTitle": "Hot Pink Glass Bangle Set, Gold Bead Detailing Work",
+      "metaDescription": "A set of 12 hot pink glass bangles with gold bead embellishments, lightweight, sized to fit. A bold colourway, priced at ₹150 for gifting today.",
+      "imageAlt": "Set of hot pink glass bangles with gold bead embellishments, glossy finish",
+      "ogTitle": "Hot Pink Glass Bangle Set of 12, Gold Beads, ₹150",
+      "ogDescription": "A set of 12 hot pink glass bangles finished with gold bead embellishments, lightweight and bold. ₹150 at Morchadi Gems.",
+      "ogImage": "/products/P349.webp"
+    },
+    "stock": {
+      "inStock": true
+    },
+    "flags": {
+      "featured": false,
+      "isNew": true
+    },
+    "migrationProvenance": {
+      "originalId": "783",
+      "originalSku": "MJ-341",
+      "originalUrl": "https://www.morchadijewels.com/shop/mj-341-hot-pink-glass-bangles-set-of-12-with-gold-bead-detailing-783",
+      "originalCategories": [
+        "Glass bangles"
+      ]
+    }
   }
 ]
