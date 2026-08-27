@@ -1,0 +1,83 @@
+{
+  "productId": "P432",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Package contents",
+      "value": "necklace, drop earrings, tennis bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a matching necklace and drop earrings paired with a dazzling stone-studded tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "unspecified stones — likely glass crystal or cubic zirconia, unclear from text",
+      "displayTerm": "stone-studded",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stone-studded tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep dry; store in a cool, moisture-free place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "we recommend keeping them dry and storing them in a cool, moisture-free space after use"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P432.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P432/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P432-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P432/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Complete your look with our ultra-feminine Bow Jewelry Set. Featuring a matching necklace and drop earrings paired with a dazzling stone-studded tennis bracelet, this curated collection is the ultimate statement for the modern romantic. These fashion-forward pieces are designed for high-impact styling; to keep their golden brilliance and sparkle lasting through every event, we recommend keeping them dry and storing them in a cool, moisture-free space after use.",
+    "referenceTitle": "Gold Bow Jewelry Set",
+    "originalId": "885",
+    "originalSku": "MJ-266",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-266-gold-bow-jewelry-set-885",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "This is a three-piece jewelry set (necklace, drop earrings, tennis bracelet) carried under category \"necklaces\" as Stage 0 transcribed it; owner may prefer a different categorisation at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

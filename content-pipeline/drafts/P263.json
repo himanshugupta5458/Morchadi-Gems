@@ -1,0 +1,78 @@
+{
+  "productId": "P263",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "pastel chevron enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pastel chevron enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P263.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P263/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P263-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P263/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P263-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P263/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten your jewelry collection with this premium pastel chevron enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic geometric statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Pastel Chevron Enamel Kada",
+    "originalId": "649",
+    "originalSku": "MJ-085",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-085-anti-tarnish-pastel-chevron-enamel-kada-649",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

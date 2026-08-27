@@ -1,0 +1,179 @@
+{
+  "productId": "P353",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-tone-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating- 18k gold tone plated\n- Material- Stainless Steel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "likely cubic zirconia, unclear from text",
+      "displayTerm": "zircon",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "One side sparkles with premium zircon stones"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "the Anti-Tarnish Elara Ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "open-band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a stunning open-band design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "gold",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Colour- Gold"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "size 6: 1.6 cm diameter; size 7: 1.7 cm; size 8: 1.8 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sizes Available:\n-\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "1.4 g",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight - 1.4gm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Dimensions",
+      "value": "height 1.8 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Height - 1.8 cm"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Package contents",
+      "value": "1 ring in a box",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "You will receive the ring in a box."
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Craftsmanship",
+      "value": "handmade; identical pieces are rare",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "As this is a handmade product it is very rare to create identical items"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P353.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P353/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P353-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P353/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P353-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P353/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish",
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with the Anti-Tarnish Elara Ring, a stunning open-band design that blends elegance with modern charm. One side sparkles with premium zircon stones, while the other shines with a sleek gold-plated finish—perfect for women who love a classy yet contemporary touch. Adjustable and durable, this ring is ideal for daily wear, parties, or gifting someone special\n- Colour- Gold\n- Sizes Available:\n-\n-\nSize 6 → Diameter: 1.6 cm\n-\nSize 7 → Diameter: 1.7 cm\n-\nSize 8 → Diameter: 1.8 cm\n- Weight - 1.4gm\n- Height - 1.8 cm\n- Plating- 18k gold tone plated\n- Material- Stainless Steel\n- You will receive the ring in a box.\n- As this is a handmade product it is very rare to create identical items",
+    "referenceTitle": "Anti Tarnish Elara Ring",
+    "originalId": "788",
+    "originalSku": "MJ-031",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-031-anti-tarnish-elara-ring-788",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Contradiction for owner review: the description calls the ring \"Adjustable and durable\" while the export offers three fixed size options (6, 7, 8) with a diameter mapping. Both are carried (Size attribute + variants); the owner must decide which fit claim is true before publish.",
+    "The karat claim (\"18k\") is dropped from the Material candidate value — karat-on-plated is not a claim this catalogue makes (ADR-018/ADR-035, P297 precedent). The quote preserves the source's exact wording."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

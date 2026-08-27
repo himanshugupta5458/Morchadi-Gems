@@ -1,0 +1,99 @@
+{
+  "productId": "P355",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating",
+      "value": "silver",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "✨ Premium Silver Plating"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "two rectangular stones, type unclear from text",
+      "displayTerm": "double-rectangle stone",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this modern double-rectangle stone ring"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "open adjustable design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "✨ Open Adjustable Design"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this adjustable ring offers a classy and minimalist look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "✨ Lightweight & Comfortable"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P355.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P355/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Upgrade your fashion game with this modern double-rectangle stone ring. Designed with a sleek open style and premium silver finish, this adjustable ring offers a classy and minimalist look for everyday and party wear.\n✨ Open Adjustable Design\n✨ Premium Silver Plating\n✨ Lightweight & Comfortable\n✨ Stylish & Modern Look",
+    "referenceTitle": "Double Stone Adjustable Ring for Girls",
+    "originalId": "790",
+    "originalSku": "MJ-220",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-220-double-stone-adjustable-ring-for-girls-790",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

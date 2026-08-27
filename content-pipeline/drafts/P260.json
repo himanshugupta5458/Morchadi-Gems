@@ -1,0 +1,83 @@
+{
+  "productId": "P260",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "yellow enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "yellow enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "pearl (real or imitation unclear from text)",
+      "displayTerm": "pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a central pearl accent"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P260.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P260/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P260-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P260/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten your ensemble with this premium yellow enamel kada featuring a central pearl accent. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic, modern statement piece offers a luxurious aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Yellow Enamel Pearl Kada",
+    "originalId": "646",
+    "originalSku": "MJ-102",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-102-anti-tarnish-yellow-enamel-pearl-kada-646",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

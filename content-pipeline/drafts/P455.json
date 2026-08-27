@@ -1,0 +1,100 @@
+{
+  "productId": "P455",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "heart motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "A charming heart-shaped bracelet with fine crystal accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass crystal or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "fine crystal accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and stylish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Occasion",
+      "value": "everyday wear and special occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "perfect for everyday elegance and special occasions alike"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep dry and away from perfumes; store safely after each wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P455.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P455/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "A charming heart-shaped bracelet with fine crystal accents, designed to add a soft, romantic glow to your look. Lightweight and stylish, it's perfect for everyday elegance and special occasions alike. To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear.",
+    "referenceTitle": "Elegant Heart Charm Gold Bracelet",
+    "originalId": "911",
+    "originalSku": "MJ-232",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-232-elegant-heart-charm-gold-bracelet-911",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under ₹99\". Requires explicit owner confirmation at review.",
+    "Title-only fact: the title calls this a gold bracelet, but rawContent states no colour or plating, so no Colour candidate is proposed (the title is not quotable as a source)."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

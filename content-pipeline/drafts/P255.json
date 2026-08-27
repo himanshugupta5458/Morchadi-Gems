@@ -1,0 +1,98 @@
+{
+  "productId": "P255",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "pink bamboo-style",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pink bamboo-style kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold-plated, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold plating, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P255.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P255-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P255-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P255-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P255-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P255-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P255/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Elevate your accessory collection with this premium pink bamboo-style kada. Crafted with high-quality gold plating, its anti-tarnish and water-resistant properties ensure a lasting, vibrant shine. This chic, nature-inspired statement piece offers a luxurious modern look that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Pink Bamboo Style Kada",
+    "originalId": "641",
+    "originalSku": "MJ-088",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-088-anti-tarnish-pink-bamboo-style-kada-641",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Anti-Tarnish Pink Bamboo Style Kada\" — P255 (Odoo 641) and P270 (Odoo 656), per exportNotes. P270 is outside this extraction assignment; its source description may differ. Owner must differentiate the two pieces from their photographs at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

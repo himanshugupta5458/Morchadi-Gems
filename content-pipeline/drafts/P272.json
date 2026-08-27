@@ -1,0 +1,94 @@
+{
+  "productId": "P272",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted with a premium anti-tarnish gold finish"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stunning green enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "enamel kada",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stunning green enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear or special occasions",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for daily wear or special occasions"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P272.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P272/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P272-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P272/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a pop of color to your wrist with this stunning green enamel kada. Crafted with a premium anti-tarnish gold finish, it offers long-lasting shine and durability. Perfect for daily wear or special occasions, this versatile bangle seamlessly blends traditional charm with contemporary style.",
+    "referenceTitle": "Elegant Green Enamel Anti-Tarnish Kada",
+    "originalId": "658",
+    "originalSku": "MJ-231",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-231-elegant-green-enamel-anti-tarnish-kada-658",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

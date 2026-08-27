@@ -1,0 +1,133 @@
+{
+  "productId": "P301",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: Stainless Steel\n- Plating: Gold-Plated"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "chain bracelet with fruit charms (bananas, pineapple, watermelon slice)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a delightful assortment of fruit charms, including bananas, a pineapple, a watermelon slice"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone type: Enamel"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp",
+      "value": "lobster closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Closure: Lobster closure"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Warranty",
+      "value": "1 month (brand owner/manufacturer)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Warranty: 1 month, provided by brand owner/manufacturer"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Size",
+      "value": "bracelet length 17 cm, adjustable chain 5 cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The Length Of Bracelet Is 17Cm. The Length Of The Adjustable Chain Is 5Cm."
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "4 g",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Weight Is 4G."
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "wipe after use; store flat; keep sprays and perfumes away; do not soak in water; clean with a soft brush and jewelry cleaning solution",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe your jewelry with a soft cloth after every use.\n- Always store your jewelry in a flat box to avoid accidental scratches.\n- Keep sprays and perfumes away from your jewelry.\n- Do not soak your jewelry in water.\n- Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P301.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P301/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- This playful gold-toned chain bracelet features a delightful assortment of fruit charms, including bananas, a pineapple, a watermelon slice, and possibly others (it's a bit unclear from the bottom charm). It's a fun and unique accessory to add a touch of whimsy to your look.\n-\n- Material: Stainless Steel\n- Plating: Gold-Plated\n- Stone type: Enamel\n- Closure: Lobster closure\n- Warranty: 1 month, provided by brand owner/manufacturer\n- Size & Fit: The Length Of Bracelet Is 17Cm. The Length Of The Adjustable Chain Is 5Cm. Weight Is 4G.\n- Care Instructions:\n- Wipe your jewelry with a soft cloth after every use.\n- Always store your jewelry in a flat box to avoid accidental scratches.\n- Keep sprays and perfumes away from your jewelry.\n- Do not soak your jewelry in water.\n- Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only.\n- Keywords: fruit bracelet, charm bracelet, gold bracelet, anti-tarnish jewelry, stainless steel, banana charm, pineapple charm, watermelon charm, playful jewelry, unique bracelet, gift for her",
+    "referenceTitle": "Gold-Plated Stainless Steel Fruit Charm Bracelet",
+    "originalId": "709",
+    "originalSku": "MJ-319",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-319-gold-plated-stainless-steel-fruit-charm-bracelet-709",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: title \"Gold-Plated Stainless Steel Fruit Charm Bracelet\", the description of a chain bracelet, and the original shop category \"Bracelet under ₹99\". Requires explicit owner confirmation at review.",
+    "The source's spec line \"Stone type: Enamel\" is filed as a Finish candidate, not a Stone candidate — enamel is a decorative coating, not a gemstone."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

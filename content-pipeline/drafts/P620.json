@@ -1,0 +1,93 @@
+{
+  "productId": "P620",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "vintage-inspired bracelet watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "✨ Vintage-inspired bracelet watch" },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "💛 Anti-tarnish gold-tone finish" },
+      "confirmed": false
+    },
+    {
+      "label": "Dial",
+      "value": "deep red with Roman numeral detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "❤️ Elegant deep red dial\n- 🕰️ Classic Roman numeral detailing" },
+      "confirmed": false
+    },
+    {
+      "label": "Strap",
+      "value": "flexible ribbed bracelet strap",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "🔗 Sleek flexible ribbed bracelet strap" },
+      "confirmed": false
+    },
+    {
+      "label": "Movement",
+      "value": "quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "⌚ Quartz movement" },
+      "confirmed": false
+    },
+    {
+      "label": "Occasion",
+      "value": "office wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Perfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting." },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": { "origin": "migrated-text", "quotedPhrase": "Care Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish." },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P620.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P620/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": { "price": null, "mrp": null, "cost": null, "referencePrice": "₹599 sale price (morchadijewels.com, reference only)" },
+  "personalized": false,
+  "suggestedCollections": ["gifting"],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich red dial, classic Roman numeral detailing and a sleek flexible gold-tone bracelet strap. The deep red dial beautifully contrasts with the polished golden finish, creating a sophisticated vintage-inspired look.\nIts slim oval dial and elegant ribbed bracelet give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 💛 Anti-tarnish gold-tone finish\n- ❤️ Elegant deep red dial\n- 🕰️ Classic Roman numeral detailing\n- 🔗 Sleek flexible ribbed bracelet strap\n- ⌚ Quartz movement\n- 💎 Jewellery-inspired elegant design\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Ideal gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Red Dial Bracelet Watch for Women",
+    "originalId": "1092",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-red-dial-bracelet-watch-for-women-1092",
+    "originalCategories": ["Vintage watch"]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Export notes record a duplicate title shared with sibling Odoo template 1082; identical candidate sets across those drafts are expected and correct."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

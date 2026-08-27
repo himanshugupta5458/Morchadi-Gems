@@ -1,0 +1,108 @@
+{
+  "productId": "P253",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "orange floral enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "orange floral enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P253.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P253-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P253-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P253-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P253-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P253-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P253-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P253-8.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P253/raw/extra-7.webp",
+        "role": "extra-7"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a vibrant touch to your style with this premium orange floral enamel kada. Featuring a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This intricate statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Orange Floral Enamel Kada",
+    "originalId": "639",
+    "originalSku": "MJ-084",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-084-anti-tarnish-orange-floral-enamel-kada-639",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

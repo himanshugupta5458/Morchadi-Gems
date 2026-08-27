@@ -1,0 +1,83 @@
+{
+  "productId": "P531",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "Initial Letter Ring; Crochet Organiser; Hair Bow; Claw Clips ×2; Scrunchie; Dairy Milk chocolate; KitKat; Birthday Bunting + Fairy Lights",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Initial Letter Ring | 🧶 Crochet Organiser | 🎀 Hair Bow | 🌸 Claw Clips x2 | 🤍 Scrunchie | 🍫 Dairy Milk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Theme",
+      "value": "aesthetic birthday hamper for her",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The most aesthetic birthday hamper for her"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P531.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P531/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 420,
+    "mrp": null,
+    "cost": 252,
+    "referencePrice": "₹420 sale price (morchadijewels.com, reference only); source copy also says \"Starting ₹370\""
+  },
+  "personalized": null,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "The most aesthetic birthday hamper for her ✨\n💍 Initial Letter Ring | 🧶 Crochet Organiser | 🎀 Hair Bow | 🌸 Claw Clips x2 | 🤍 Scrunchie | 🍫 Dairy Milk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights\nStarting ₹370 | Ships pan-India 🚚\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "The Cutest Pinterest-y Birthday Hamper 🎀",
+    "originalId": "994",
+    "originalSku": "MJ-593",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-593-the-cutest-pinterest-y-birthday-hamper-994",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed the shipping line; its price figure (\"Starting ₹370\") was collapsed into pricing.referencePrice per the no-real-prices rule.",
+      "sourceContext": "Starting ₹370 | Ships pan-India 🚚"
+    },
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [
+    "personalized is left null deliberately: the hamper contains an \"Initial Letter Ring\", which implies the buyer chooses a letter, but the export carries no letter-selection option. Owner must resolve the mechanism at review.",
+    "Contents name third-party FMCG brands (Dairy Milk, KitKat) — real contents facts, kept as candidates; stock/substitution wording is an owner call for Phase 2.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹420, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹252 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

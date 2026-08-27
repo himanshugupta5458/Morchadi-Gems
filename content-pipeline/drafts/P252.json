@@ -1,0 +1,95 @@
+{
+  "productId": "P252",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "multi-color textured enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "multi-color textured enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "blocked pattern",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "blocked-pattern statement piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold-plated, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold plating, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P252.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P252/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P252-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P252/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P252-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P252/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P252-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P252/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Enhance your collection with this premium multi-color textured enamel kada. Crafted with high-quality gold plating, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This unique, blocked-pattern statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Multi-Color Textured Enamel Kada",
+    "originalId": "638",
+    "originalSku": "MJ-082",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-082-anti-tarnish-multi-color-textured-enamel-kada-638",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

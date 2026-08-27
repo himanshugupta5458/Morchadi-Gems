@@ -1,0 +1,88 @@
+{
+  "productId": "P456",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "tennis bracelet with solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "rose gold-toned tennis bracelet, featuring a brilliant solitaire crystal"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "rose gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stunning rose gold-toned tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass crystal or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a brilliant solitaire crystal"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep away from moisture and perfumes; store in a dry place after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its radiant finish and sparkle, we recommend keeping it away from moisture and perfumes, and storing it in a dry place after every wear."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P456.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P456/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with this stunning rose gold-toned tennis bracelet, featuring a brilliant solitaire crystal. Perfect for adding high-fashion glamour to any outfit. To preserve its radiant finish and sparkle, we recommend keeping it away from moisture and perfumes, and storing it in a dry place after every wear.",
+    "referenceTitle": "Elegant Rose Gold Tennis Bracelet",
+    "originalId": "912",
+    "originalSku": "MJ-236",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-236-elegant-rose-gold-tennis-bracelet-912",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under ₹99\". Requires explicit owner confirmation at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

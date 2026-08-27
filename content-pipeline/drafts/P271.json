@@ -1,0 +1,94 @@
+{
+  "productId": "P271",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a durable anti-tarnish gold finish and elegant textured accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "multi-color",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "vibrant multi-color enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "enamel kada, textured accents",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a durable anti-tarnish gold finish and elegant textured accents"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "It's lightweight, stylish, and built to maintain its brilliant shine"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P271.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P271/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P271-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P271/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a statement with this vibrant multi-color enamel kada. Featuring a durable anti-tarnish gold finish and elegant textured accents, this designer bangle is perfect for adding a sophisticated touch to any outfit. It's lightweight, stylish, and built to maintain its brilliant shine for every occasion.",
+    "referenceTitle": "Multi-Color Enamel Anti-Tarnish Designer Kada",
+    "originalId": "657",
+    "originalSku": "MJ-438",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-438-multi-color-enamel-anti-tarnish-designer-kada-657",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,95 @@
+{
+  "productId": "P269",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish and water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a high-quality gold finish, this anti-tarnish and water-resistant piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "pink and white",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium pink and white floral enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "floral enamel, intricate detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Its intricate floral detailing and modern silhouette"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P269.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P269-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P269-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P269-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Enhance your elegance with this premium pink and white floral enamel kada. Featuring a high-quality gold finish, this anti-tarnish and water-resistant piece is built for long-lasting brilliance. Its intricate floral detailing and modern silhouette make it an essential statement piece for any fashion-forward collection.",
+    "referenceTitle": "Anti-Tarnish Pink Floral Enamel Kada",
+    "originalId": "655",
+    "originalSku": "MJ-092",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-092-anti-tarnish-pink-floral-enamel-kada-655",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

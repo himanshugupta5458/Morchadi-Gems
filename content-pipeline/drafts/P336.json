@@ -1,0 +1,106 @@
+{
+  "productId": "P336",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-tone-plated alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality alloy\n-\nPlating: Durable gold-tone plating"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "rectangular green crystal — likely cubic zirconia, unclear from text",
+      "displayTerm": "green crystal zircon",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone Type: Rectangular green crystal zircon"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "sleek bezel-set solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Sleek bezel-set solitaire design"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size & Fit: Adjustable, fits most finger sizes comfortably"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "daily wear, office wear, parties, gifting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Best For: Daily wear, office wear, parties & gifting occasions"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P336.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P336/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 10,
+    "mrp": null,
+    "cost": 6,
+    "referencePrice": "₹10 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Bring a fresh pop of color to your look with this adjustable gold-plated ring, adorned with a radiant green rectangular crystal. Its minimalist solitaire design makes it perfect for everyday wear, parties, and as a thoughtful gift for loved ones.\n-\nMaterial: High-quality alloy\n-\nPlating: Durable gold-tone plating\n-\nStone Type: Rectangular green crystal zircon\n-\nDesign: Sleek bezel-set solitaire design\n-\nSize & Fit: Adjustable, fits most finger sizes comfortably\n-\nBest For: Daily wear, office wear, parties & gifting occasions",
+    "referenceTitle": "Trendy Fashion Rings for Women",
+    "originalId": "766",
+    "originalSku": "MJ-600",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-600-trendy-fashion-rings-for-women-766",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"rings\" is a PROPOSAL, not source data — the source had no category. Basis: the title says \"Rings\" and the description describes a single adjustable ring. Requires explicit owner confirmation at review.",
+    "Duplicate-title group \"Trendy Fashion Rings for Women\" — P335 (Odoo 765), P336 (Odoo 766), P337 (Odoo 767). The source descriptions are byte-identical across the group, so identical candidate sets across these drafts are expected and correct (pilot precedent, skill rule 17): the only per-product differentiator in the source is the photograph(s).",
+    "The plural, generic title covers what are likely three different physical designs sharing template copy — the shared description names one specific green-crystal ring, so at most one of the three can match it. Owner must differentiate the three from their photographs at review.",
+    "referencePrice ₹10 is carried verbatim from the export but is implausibly low for this copy — the owner should verify the source price was not a placeholder before any real pricing decision.",
+    "2026-08-25: Material and Plating candidates merged into one maximal-phrase Material attribute (contiguous source bullets quoted together) for the Phase 2 spec mapping.",
+    "2026-08-25: owner-instructed batch confirmation (explicit publish-now decision) — every candidate attribute, the category (extraction PROPOSALS included) and personalized confirmed exactly as extracted, without per-product review. Contradictions flagged in earlier notes remain open items the owner will resolve post-publish, by their stated preference.",
+    "2026-08-25: pricing.price set to ₹10, matching the reference price per the pilot's reference-price-becomes-real-price rule; pricing.cost ₹6 is the ADR-040 placeholder convention (60% of price) pending real owner cost figures; pricing.mrp stays null by design, so the mapped record shows no discount.",
+    "2026-08-25: image suggestions auto-confirmed under the owner's migrated-path (Path A) decision established for the pilot and applied pipeline-wide: image linkage was mapped by the owner directly from the original live website and is independently verified, so per-product manual image review is waived for migrated batches."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

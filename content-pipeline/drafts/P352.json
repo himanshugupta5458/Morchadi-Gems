@@ -1,0 +1,125 @@
+{
+  "productId": "P352",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted from high-quality glass"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Net quantity",
+      "value": "set of 12 bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Set of 12 premium glass bangles"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "mustard yellow with gold bead embellishments",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich mustard yellow color with gold bead embellishments"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "subtle shimmer, textured finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Subtle shimmer and textured finish for a festive look"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight and comfortable for extended wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Occasion",
+      "value": "weddings, haldi, festivals, celebrations",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for weddings, haldi, festivals, and celebrations"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P352.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P352/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P352-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P352/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten your jewelry collection with this elegant set of 12 mustard yellow glass bangles. Featuring a rich golden-yellow tone enhanced with delicate gold bead detailing and a soft shimmer, these bangles bring warmth, vibrance, and traditional charm to any outfit. The textured glass finish adds depth and sparkle, making this set perfect for festive and celebratory occasions.\nCrafted from high-quality glass, these bangles are lightweight, smooth, and comfortable for all-day wear. The mustard yellow shade pairs beautifully with sarees, lehengas, and ethnic outfits in cream, green, red, and gold tones. Whether worn alone for a refined look or stacked with complementary bangles, this set adds a graceful finishing touch to your ensemble.\nIdeal for weddings, festivals, haldi ceremonies, and special celebrations, these bangles also make a thoughtful and stylish gifting option.\nKey Points:\n- Set of 12 premium glass bangles\n- Rich mustard yellow color with gold bead embellishments\n- Subtle shimmer and textured finish for a festive look\n- Lightweight and comfortable for extended wear\n- Perfect for weddings, haldi, festivals, and celebrations\n- Complements traditional and festive outfits beautifully\n- A lovely gifting choice for special occasions",
+    "referenceTitle": "Mustard Yellow Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "originalId": "786",
+    "originalSku": "MJ-441",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-441-mustard-yellow-glass-bangles-set-of-12-with-gold-bead-detailing-786",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

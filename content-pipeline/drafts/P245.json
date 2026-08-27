@@ -1,0 +1,135 @@
+{
+  "productId": "P245",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "anti-tarnish metal",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: High-quality anti-tarnish metal"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Clasp",
+      "value": "openable clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Openable clasp for ease of wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "long-lasting shine, rust-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Finish: Long-lasting shine & rust-resistant"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Occasion",
+      "value": "casual, festive, party wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ideal For: Casual, festive, and party wear"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "wipe with a soft cloth after use; store in a dry place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Tip: Wipe with a soft cloth after use and store in a dry place"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P245.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P245-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P245-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P245-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P245-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P245-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P245-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-6.webp",
+        "role": "extra-6"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Elevate your style with our Premium Anti-Tarnish Openable Kada – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.\n- Features:\n- Material: High-quality anti-tarnish metal\n- Design: Openable clasp for ease of wear\n- Finish: Long-lasting shine & rust-resistant\n- Ideal For: Casual, festive, and party wear\n- Care Tip: Wipe with a soft cloth after use and store in a dry place",
+    "referenceTitle": "White & Turquoise Raised Bracelet",
+    "originalId": "630",
+    "originalSku": "MJ-619",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-619-white-turquoise-raised-bracelet-630",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,88 @@
+{
+  "productId": "P454",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "interlocking double heart motif",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Interlocking Double Heart Bracelet. Featuring a shimmering crystal-studded heart joined with a polished gold-toned heart"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "glass crystal or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a shimmering crystal-studded heart"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a polished gold-toned heart"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep dry and away from perfumes; store safely after each wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P454.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P454/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Celebrate an unbreakable bond with this stunning Interlocking Double Heart Bracelet. Featuring a shimmering crystal-studded heart joined with a polished gold-toned heart, this high-fashion piece adds instant romance to any look. To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear.",
+    "referenceTitle": "Gold Interlocking Double Heart Bracelet",
+    "originalId": "910",
+    "originalSku": "MJ-288",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-288-gold-interlocking-double-heart-bracelet-910",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under ₹99\". Requires explicit owner confirmation at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

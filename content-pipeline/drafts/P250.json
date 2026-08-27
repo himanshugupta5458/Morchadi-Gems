@@ -1,0 +1,97 @@
+{
+  "productId": "P250",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "multi-color bamboo-style",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "unique multi-color bamboo-style kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "gold-plated, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold plating, this anti-tarnish and water-resistant piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Finish",
+      "value": "vibrant enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Its vibrant enamel finish"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P250.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P250/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P250-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P250/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P250-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P250/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P250-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P250/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Make a chic statement with this unique multi-color bamboo-style kada, Crafted with high-quality gold plating, this anti-tarnish and water-resistant piece is designed for everyday luxury. Its vibrant enamel finish and modern silhouette ensure your style remains bold and brilliant through every wear",
+    "referenceTitle": "Anti-Tarnish Multi-Color Bamboo Style Kada",
+    "originalId": "636",
+    "originalSku": "MJ-080",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-080-anti-tarnish-multi-color-bamboo-style-kada-636",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Anti-Tarnish Multi-Color Bamboo Style Kada\" — P250 (Odoo 636) and P262 (Odoo 648), per exportNotes. Unlike the byte-identical pilot groups, the two source descriptions differ in wording, so the candidate sets differ slightly and that is expected. Owner must differentiate the two pieces from their photographs at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

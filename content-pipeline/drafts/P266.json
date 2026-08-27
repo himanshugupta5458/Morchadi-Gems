@@ -1,0 +1,107 @@
+{
+  "productId": "P266",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish and water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "peach",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium peach bamboo-style kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "bamboo-style kada",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium peach bamboo-style kada"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P266.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P266-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P266-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P266-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P266-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P266-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P266/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Infuse your look with earthy elegance using this premium peach bamboo-style kada. Crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure your jewelry stays radiant. This unique textured statement piece offers a luxurious, modern aesthetic that maintains its beautiful luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Peach Bamboo Style Kada",
+    "originalId": "652",
+    "originalSku": "MJ-086",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-086-anti-tarnish-peach-bamboo-style-kada-652",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

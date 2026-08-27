@@ -1,0 +1,85 @@
+{
+  "productId": "P270",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish and water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Expertly crafted with a high-quality gold finish, this anti-tarnish and water-resistant piece"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "pink and white",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium pink and white bamboo-style kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "bamboo-style kada, enamel detailing, textured",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Its vibrant enamel detailing and unique textured design"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P270.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P270/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P270-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P270/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a pop of color to your collection with this premium pink and white bamboo-style kada. Expertly crafted with a high-quality gold finish, this anti-tarnish and water-resistant piece is designed for lasting elegance. Its vibrant enamel detailing and unique textured design make it a perfect modern statement for any occasion.",
+    "referenceTitle": "Anti-Tarnish Pink Bamboo Style Kada",
+    "originalId": "656",
+    "originalSku": "MJ-087",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-087-anti-tarnish-pink-bamboo-style-kada-656",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Export notes record a duplicate title shared with Odoo template 641 — an identical or near-identical candidate set on the sibling draft carrying that template is expected and correct (skill rule 17)."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

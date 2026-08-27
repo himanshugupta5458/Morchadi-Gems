@@ -1,0 +1,83 @@
+{
+  "productId": "P273",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "gold finish, anti-tarnish and water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "maroon",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium maroon chevron enamel kada"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Design",
+      "value": "chevron enamel kada",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium maroon chevron enamel kada"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P273.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P273/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P273-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P273/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Exude classic charm with this premium maroon chevron enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure your jewelry retains its rich color and shine. This elegant, patterned statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "referenceTitle": "Anti-Tarnish Maroon Chevron Enamel Kada",
+    "originalId": "659",
+    "originalSku": "MJ-076",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-076-anti-tarnish-maroon-chevron-enamel-kada-659",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

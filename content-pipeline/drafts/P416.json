@@ -1,0 +1,53 @@
+{
+  "productId": "P416",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": ["2.4", "2.6", "2.8"]
+    }
+  ],
+  "attributes": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P416.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P416/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Dark Multi)",
+    "originalId": "869",
+    "originalSku": "MJ-537",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-537-set-of-8-viral-jelly-bangle-dark-multi-869",
+    "originalCategories": ["jelly bangles"]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed the COD-availability notice per the boilerplate rule — BUT it reads as a real product-specific payment restriction (prepaid only), not generic site copy; owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only"
+    }
+  ],
+  "notes": [
+    "Source contained only boilerplate — likely not a product; confirm before assigning an ID.",
+    "No attributes extracted: rawContent holds only the discarded COD notice. The title-only facts (set of 8 jelly bangles, colour \"Dark Multi\") and the glass construction named inside the discarded COD line are not carried as attributes — a quote from the title would fail provenance; owner must add these as confirmed facts at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

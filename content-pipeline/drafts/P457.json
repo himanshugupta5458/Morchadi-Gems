@@ -1,0 +1,89 @@
+{
+  "productId": "P457",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "tennis bracelet with marquise solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "rose gold-toned tennis bracelet featuring a brilliant marquise solitaire"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Colour",
+      "value": "rose gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "stunning rose gold-toned tennis bracelet"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Stone",
+      "value": "marquise-cut solitaire stone, material unclear from text",
+      "displayTerm": "marquise solitaire",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a brilliant marquise solitaire"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Care",
+      "value": "keep away from moisture and perfumes; store safely in a dry place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its radiant luster and shimmer, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place."
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P457.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P457/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your look with this stunning rose gold-toned tennis bracelet featuring a brilliant marquise solitaire. This high-fashion statement piece is perfect for effortless glamour. To preserve its radiant luster and shimmer, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place.",
+    "referenceTitle": "Elegant Rose Gold Tennis Bracelet Sparkling Marquise Crystal",
+    "originalId": "913",
+    "originalSku": "MJ-237",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-237-elegant-rose-gold-tennis-bracelet-sparkling-marquise-crystal-913",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category: \"bracelets\" is a PROPOSAL, not source data — the source had no category. Basis: the title and description both describe the piece as a bracelet, and the original category label was \"Bracelet under ₹99\". Requires explicit owner confirmation at review.",
+    "Title-only fact: the title names the stone a \"Marquise Crystal\"; rawContent says only \"marquise solitaire\", so the Stone candidate's material is proposed as unclear (the title is not quotable as a source)."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

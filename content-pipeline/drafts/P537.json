@@ -1,0 +1,76 @@
+{
+  "productId": "P537",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Theme",
+      "value": "premium birthday jewellery hamper",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium birthday jewellery hamper"
+      },
+      "confirmed": false
+    },
+    {
+      "label": "Hamper contents",
+      "value": "pink stone bracelet; heart necklace; bamboo hoop earrings; pearl bracelet with tulip charm; scrunchie; baby breath flowers; Dairy Milk Silk; Ferrero Rocher",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pink stone bracelet, heart necklace, bamboo hoop earrings, pearl bracelet with tulip charm, scrunchie, baby breath flowers, Dairy Milk Silk and Ferrero Rocher"
+      },
+      "confirmed": false
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P537.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P537/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": null,
+    "mrp": null,
+    "cost": null,
+    "referencePrice": "₹849 sale price (morchadijewels.com, reference only); source copy also says \"Only ₹799\""
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Premium birthday jewellery hamper with pink stone bracelet, heart necklace, bamboo hoop earrings, pearl bracelet with tulip charm, scrunchie, baby breath flowers, Dairy Milk Silk and Ferrero Rocher . Only ₹799. ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Luxury Birthday Jewellery Hamper",
+    "originalId": "1001",
+    "originalSku": "MJ-407",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-407-luxury-birthday-jewellery-hamper-1001",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [
+    "Price discrepancy: the export's reference price is ₹849 but the source copy says \"Only ₹799\" — both are reference only; the real price is a separate owner decision at review.",
+    "Contents name third-party FMCG brands (Dairy Milk Silk, Ferrero Rocher) — real contents facts, kept as candidates; stock/substitution wording is an owner call for Phase 2.",
+    "Contents mention a \"pink stone bracelet\" and a \"pearl bracelet\" — stone identity of hamper items is not proposed as Stone candidates (P531 precedent keeps hamper items inside Hamper contents); owner may split them out at review if these items get their own claims."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
