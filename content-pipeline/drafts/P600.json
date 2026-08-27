@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "all in a pink luxury gift box"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Personalization",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "initial letter ring"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Beautifully packed in a kraft gift box with dried flower styling for a premium unboxing experience"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Occasion",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Ideal for birthdays, anniversaries, or a \"just because\" surprise"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

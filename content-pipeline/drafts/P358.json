@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "delicate gold chain and sparkling stone"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Skin-Friendly Material"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

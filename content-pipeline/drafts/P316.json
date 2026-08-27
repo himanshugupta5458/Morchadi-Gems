@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "lustrous pearl drops"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Design",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Crafted with high-quality materials and gold-tone detailing"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Set includes",

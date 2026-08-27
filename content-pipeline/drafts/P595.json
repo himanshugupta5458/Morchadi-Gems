@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Packed in a white gift box with a \"Best Friends Forever\" ribbon and a heartfelt \"Happy Friendship Day\" card"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Perfect for Friendship Day, birthdays, or a heartfelt thank-you gift"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

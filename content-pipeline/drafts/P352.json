@@ -34,7 +34,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Set of 12 premium glass bangles"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Colour",
@@ -78,7 +78,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Perfect for weddings, haldi, festivals, and celebrations"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

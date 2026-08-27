@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Personalized Initial Ring (Silver Tone, Gift Box Included)"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Packaging",
@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "packed in a pink gift box with fairy lights and a printed satin bow"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

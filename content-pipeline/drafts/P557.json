@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "clean white quartz dial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone/Setting",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "all strung together on a gold chain"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Embellishment",

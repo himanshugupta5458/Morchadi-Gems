@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "paired with cute quote cards"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Occasion",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

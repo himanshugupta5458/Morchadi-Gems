@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Material: Rose gold-plated stainless steel, tarnish and water resistant"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Pendant size: Approx. 1cm heart"
       },
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {
