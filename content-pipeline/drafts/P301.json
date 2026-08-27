@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Warranty: 1 month, provided by brand owner/manufacturer"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "The Length Of Bracelet Is 17Cm. The Length Of The Adjustable Chain Is 5Cm."
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Weight",
@@ -80,7 +80,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Weight Is 4G."
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Care",

@@ -14,7 +14,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Plating: Premium Rose Gold"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Stone",
@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Style: Minimal yet glamorous"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Occasion",

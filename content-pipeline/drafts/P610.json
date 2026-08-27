@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Designed with an anti-tarnish finish, this watch is perfect for women"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Dial",
@@ -69,7 +69,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Stylish textured link bracelet strap"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Movement type",

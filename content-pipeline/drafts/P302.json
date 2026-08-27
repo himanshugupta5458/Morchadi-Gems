@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Shape: Rectangle with North Star"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size",

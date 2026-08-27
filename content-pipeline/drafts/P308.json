@@ -47,7 +47,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Shape: Coin and Initial"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size",

@@ -25,7 +25,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "📿 1 × Gold-plated vine leaf necklace"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Set Contents — Earrings",
@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "👂 1 × Pair of matching drop stud earrings"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Finish/Plating",

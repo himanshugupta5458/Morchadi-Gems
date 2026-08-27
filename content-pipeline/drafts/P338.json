@@ -36,7 +36,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Premium quality & lightweight"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Set Quantity",
@@ -44,7 +44,7 @@
       "displayTerm": null,
       "stoneSource": null,
       "source": null,
-      "confirmed": false
+      "confirmed": true
     }
   ],
   "images": {

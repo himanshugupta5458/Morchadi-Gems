@@ -58,7 +58,7 @@
         "origin": "migrated-text",
         "quotedPhrase": "Shape: Key"
       },
-      "confirmed": false
+      "confirmed": true
     },
     {
       "label": "Size",
