@@ -6,6 +6,8 @@ import {
   buildKeywordMap,
   serialiseKeywordMap,
 } from "./backfill-keyword-map.mjs";
+import { looselyNormaliseKeyword } from "./keyword-normalisation.mjs";
+import { findBannedMetaAdjectives } from "./banned-meta-adjectives.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
@@ -72,6 +74,30 @@ const REVIEW_METADATA = /\[Merchandiser note:|^\*Hook:|^### P\d{3}/m;
  */
 const PRECIOUS_METAL_CLAIM =
   /\b(?:9|10|14|18|22|24)\s?[Kk]\b|\b916\b|hallmark|sterling silver/i;
+
+/**
+ * A spec key that answers "what is this made of" — `material` itself, plus every compound label
+ * the migration produced that names a plating, a finish, a coating or a metal. Deliberately not
+ * every key: `design`, `chain` and `dial` legitimately carry decorative descriptions like
+ * "gold bead detailing", where the metal word is about the look of a component and not a claim
+ * about what the piece is.
+ */
+const MATERIAL_FAMILY_SPEC_KEY = /plating|finish|coating|metal/i;
+
+/**
+ * A precious metal named on its own is a claim this catalogue cannot support — every piece is
+ * plated, toned or an alloy (ADR-018, ADR-035). Bare here means the value names one of these
+ * and nothing in the same value says how the metal is present.
+ */
+const PRECIOUS_METAL_WORD = /\b(?:gold|silver|platinum)\b/i;
+
+/**
+ * The words that turn a metal name into an honest one. `german silver` is on the list because
+ * the trade term is itself the qualifier: it names a copper-nickel alloy containing no silver,
+ * and the description skill requires the copy to say so.
+ */
+const METAL_QUALIFIER =
+  /plat(?:ed|ing)|tone[ds]?|finish|coating|look|colou?rs?\b|anti-tarnish|german silver/i;
 
 /**
  * Every product in the catalogue is one the owner actually stocks, and its id is the P-code
@@ -203,30 +229,6 @@ const OG_TITLE_MIN = 40;
 const OG_TITLE_MAX = 70;
 const OG_DESCRIPTION_MAX = 200;
 const IMAGE_ALT_MAX = 125;
-
-/**
- * A meta field is written for a person to read in a search result, which rules out the
- * promotional vocabulary the copy skills already bar from the description. Listed here rather
- * than only in the skill so a hand-edit to products.json fails the gate.
- */
-const BANNED_META_ADJECTIVES = [
-  "stunning",
-  "exquisite",
-  "gorgeous",
-  "breathtaking",
-  "must-have",
-  "elevate",
-  "effortless",
-  "timeless",
-  "versatile",
-  "statement",
-  "luxurious",
-  "radiant",
-  "captivating",
-  "dainty",
-  "charming",
-  "graceful",
-];
 
 const failures = [];
 const advisories = [];
@@ -548,6 +550,34 @@ function validateNoPreciousMetalClaim(product, label) {
   }
 }
 
+/**
+ * The bare-metal rule, over material-family spec keys only. `validateNoPreciousMetalClaim`
+ * above catches the karat and hallmark vocabulary; this catches the quieter version, a
+ * `material` that reads simply "Rose gold" or "Silver" because a compound label was flattened
+ * and the qualifier that made it honest was the half that got dropped. Five records were in
+ * that state when this check was written.
+ *
+ * Hard rather than advisory, for the same reason the karat rule is hard: the record says the
+ * piece is made of a precious metal and it is not, which is a false claim to a shopper rather
+ * than a style note. The catalogue is at zero violations, so the gate can hold the line from
+ * here rather than accumulating a backlog nobody reads.
+ */
+function validateNoBarePreciousMetalSpec(product, label) {
+  const specs = product?.specs;
+  if (!isPlainObject(specs)) return;
+
+  for (const [key, value] of Object.entries(specs)) {
+    if (!isNonEmptyString(value)) continue;
+    if (key !== "material" && !MATERIAL_FAMILY_SPEC_KEY.test(key)) continue;
+    if (!PRECIOUS_METAL_WORD.test(value)) continue;
+
+    check(
+      METAL_QUALIFIER.test(value),
+      `${label}: specs.${key} is "${value}" — a precious metal named with no plating, tone, finish or coating qualifier. Nothing in this catalogue is solid gold or silver; use the phrase the confirmed draft attribute carried`,
+    );
+  }
+}
+
 function validateSpecs(product, label) {
   const specs = product?.specs;
   check(isPlainObject(specs), `${label}: specs must be an object`);
@@ -667,11 +697,8 @@ function validateSeo(product, label) {
     .filter(isNonEmptyString);
 
   for (const text of metaFields) {
-    for (const adjective of BANNED_META_ADJECTIVES) {
-      check(
-        !text.toLowerCase().includes(adjective),
-        `${label}: seo copy uses the barred adjective "${adjective}"`,
-      );
+    for (const adjective of findBannedMetaAdjectives(text)) {
+      check(false, `${label}: seo copy uses the barred adjective "${adjective}"`);
     }
   }
 
@@ -858,6 +885,7 @@ for (const product of catalogue) {
   );
   validateDescription(product, label);
   validateNoPreciousMetalClaim(product, label);
+  validateNoBarePreciousMetalSpec(product, label);
   check(
     CATEGORY_SLUGS.includes(product?.category),
     `${label}: category "${product?.category}" is not a known slug`,
@@ -931,21 +959,6 @@ for (const product of catalogue) {
  * records themselves rather than against the map. This section adds only what a site-wide view
  * can see: the map's freshness, and the overlaps that are advisory by design.
  */
-function normaliseKeywordLoosely(keyword) {
-  return keyword
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .split(" ")
-    .filter((word) => word.length > 0)
-    .map((word) =>
-      word.length >= 4 && word.endsWith("s") && !word.endsWith("ss")
-        ? word.slice(0, -1)
-        : word,
-    )
-    .sort()
-    .join(" ");
-}
-
 const expectedKeywordMap = buildKeywordMap(catalogue);
 
 if (!existsSync(KEYWORD_MAP_PATH)) {
@@ -967,6 +980,13 @@ for (const [keyword, ids] of Object.entries(expectedKeywordMap.secondary)) {
   }
 }
 
+/**
+ * `loose` is computed once per entry, here, rather than inside the comparison below. The
+ * comparison is every entry against every other — around 1.6 million pairs at the catalogue's
+ * current 1,796 keyword entries — and normalising inside it meant 3.2 million normalisations of
+ * the same 1,796 strings, which was most of this script's total runtime. The loop itself stays
+ * as it is: it reports pairs in entry order, and the advisory list reads in that order.
+ */
 const everyKeywordEntry = [
   ...Object.entries(expectedKeywordMap.primary).map(([keyword, ids]) => ({
     keyword,
@@ -978,18 +998,14 @@ const everyKeywordEntry = [
     ids,
     field: "secondaryKeywords",
   })),
-];
+].map((entry) => ({ ...entry, loose: looselyNormaliseKeyword(entry.keyword) }));
 
 for (let left = 0; left < everyKeywordEntry.length; left += 1) {
   for (let right = left + 1; right < everyKeywordEntry.length; right += 1) {
     const first = everyKeywordEntry[left];
     const second = everyKeywordEntry[right];
     if (first.keyword === second.keyword) continue;
-    if (
-      normaliseKeywordLoosely(first.keyword) !== normaliseKeywordLoosely(second.keyword)
-    ) {
-      continue;
-    }
+    if (first.loose !== second.loose) continue;
     const sharesEveryProduct =
       first.ids.length === second.ids.length &&
       first.ids.every((id) => second.ids.includes(id));

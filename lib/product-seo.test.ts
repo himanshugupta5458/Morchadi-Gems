@@ -3,6 +3,10 @@ import { describe, expect, it } from "vitest";
 import { generateMetadata } from "@/app/(storefront)/product/[id]/page";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { getAllProducts, getImageAlts } from "@/lib/products";
+import {
+  BANNED_META_ADJECTIVES,
+  findBannedMetaAdjectives,
+} from "@/scripts/banned-meta-adjectives.mjs";
 
 const catalogue = getAllProducts();
 
@@ -132,14 +136,26 @@ describe("the honesty rules, applied to the metadata", () => {
     }
   });
 
+  /**
+   * The list and the matcher both come from `scripts/banned-meta-adjectives.mjs`, which is also
+   * what `scripts/validate-products.mjs` enforces. They were two copies until this test and the
+   * validator were found to disagree: the validator held sixteen words and this file held a
+   * fifteen-word regex with "statement" missing, so a metaTitle could carry the word, pass here,
+   * and fail the gate.
+   */
   it("uses no promotional adjective the copy rules bar", () => {
-    const banned =
-      /\b(?:stunning|exquisite|gorgeous|breathtaking|must-have|elevate\w*|effortless\w*|timeless|versatile|luxurious|radiant|captivating|dainty|charming|graceful)\b/i;
     for (const product of catalogue) {
       for (const field of metaFields(product)) {
-        expect(field, `${product.id}: ${field}`).not.toMatch(banned);
+        expect(findBannedMetaAdjectives(field), `${product.id}: ${field}`).toEqual([]);
       }
     }
+  });
+
+  it("bars the same words the product gate bars, statement included", () => {
+    expect(BANNED_META_ADJECTIVES).toContain("statement");
+    expect(findBannedMetaAdjectives("A statement hoop")).toEqual(["statement"]);
+    expect(findBannedMetaAdjectives("elevates the everyday")).toEqual(["elevate"]);
+    expect(findBannedMetaAdjectives("a plain gold-tone hoop")).toEqual([]);
   });
 
   it("quotes only the product's own price or the free-shipping threshold", () => {

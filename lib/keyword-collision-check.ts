@@ -1,4 +1,8 @@
 import keywordMapData from "@/data/keyword-map.json";
+import {
+  canonicaliseKeyword as canonicaliseKeywordShared,
+  looselyNormaliseKeyword as looselyNormaliseKeywordShared,
+} from "@/scripts/keyword-normalisation.mjs";
 
 /** One keyword to the products claiming it, exactly the `{ keyword: [productId] }` shape. */
 export type KeywordIndex = Record<string, string[]>;
@@ -59,41 +63,30 @@ export interface KeywordCollisionOptions {
   ignoreProductId?: string;
 }
 
-const MINIMUM_LENGTH_TO_DEPLURALISE = 4;
+/**
+ * The typed face of the shared normalisers in `scripts/keyword-normalisation.mjs`. The
+ * implementation is plain ESM so that `scripts/validate-products.mjs` can run it with no
+ * TypeScript loader; these wrappers exist so that every caller on this side of the boundary
+ * still gets `string -> string` rather than the inferred `any` an untyped import would hand
+ * them. There is one implementation, and it is not this file's.
+ */
 
 /**
  * Lower-cased, whitespace-collapsed. This is what "the same keyword" means for a hard
  * collision — a search engine does not distinguish the case of a query, so neither does this.
  */
 export function canonicaliseKeyword(keyword: string): string {
-  return keyword.trim().replace(/\s+/g, " ").toLowerCase();
+  return canonicaliseKeywordShared(keyword);
 }
 
 /**
  * Punctuation dropped, word order discarded, a trailing plural `s` removed from words long
  * enough for that to be safe (`bangles` → `bangle`, but `glass` is left alone). Two keywords
- * with the same loose form are the same *idea* spelled differently.
- *
- * This is deliberately a stated rule rather than a similarity score. ADR-051 already made this
- * call for the material allow-lists — a fuzzy match is an answer nobody gave — and the same
- * reasoning holds here, which is why a loose match is only ever an advisory. It tells a writer
- * where to look; it never decides anything.
+ * with the same loose form are the same *idea* spelled differently. Only ever advisory: it
+ * tells a writer where to look, it never decides anything.
  */
 export function looselyNormaliseKeyword(keyword: string): string {
-  return canonicaliseKeyword(keyword)
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .split(" ")
-    .filter((word) => word.length > 0)
-    .map((word) =>
-      word.length >= MINIMUM_LENGTH_TO_DEPLURALISE &&
-      word.endsWith("s") &&
-      !word.endsWith("ss")
-        ? word.slice(0, -1)
-        : word,
-    )
-    .sort()
-    .join(" ");
+  return looselyNormaliseKeywordShared(keyword);
 }
 
 function claimantsOf(
