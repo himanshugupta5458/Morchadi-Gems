@@ -15,8 +15,19 @@ type ChangeFrequency = NonNullable<SitemapEntry["changeFrequency"]>;
  * see ADR-008), so this is written down and bumped when the catalogue or the page set moves.
  * A value derived from the build clock would tell a crawler every page changed on every
  * deploy, which is a worse lie than a slightly stale date.
+ *
+ * **It is still hand-maintained, and that is a finding rather than a preference.** The one
+ * place in the repository that records when a product went live is the `Published Date` column
+ * of `docs/pipeline-prep/products-completed.md`, and this module cannot read it: `docs/` is
+ * excluded from the Docker build context (`.dockerignore`), so the file is absent in the
+ * builder stage where `/sitemap.xml` is prerendered, and that register's own header says
+ * nothing generates or reads it. Deriving this properly means giving the catalogue a machine-
+ * readable publish date — a schema decision ADR-008 deliberately declined — or adding a
+ * committed derived artefact on the `data/keyword-map.json` pattern. Either is an ADR, not an
+ * edit. Until then the value is the register's latest `Published Date`, and bumping it is part
+ * of publishing.
  */
-export const CONTENT_LAST_MODIFIED_ISO = "2026-08-18";
+export const CONTENT_LAST_MODIFIED_ISO = "2026-08-28";
 
 /**
  * The routes that exist to move an order along rather than to be found. They are `noindex`
