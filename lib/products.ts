@@ -2,6 +2,7 @@ import catalogue from "@/data/products.json";
 import type { CatalogueEntry, Category, Product } from "@/types/product";
 import { hasProductOptions } from "@/lib/options";
 import type { OrderPricingEntry } from "@/lib/order";
+import type { CodEligibilityEntry } from "@/lib/cod";
 import type { OrderCaptureEntry } from "@/lib/order-capture";
 import type { OrderOptionEntry } from "@/lib/order-options";
 
@@ -173,6 +174,24 @@ export function getOrderCaptureCatalogue(): OrderCaptureEntry[] {
     name: product.name,
     image: getPrimaryImage(product) ?? "",
     cost: product.pricing.cost,
+  }));
+}
+
+/**
+ * The catalogue as a *cash-on-delivery* decision is allowed to see it: an id and the amount
+ * per unit that must be paid online. A fourth accessor rather than a field added to
+ * `getOrderPricingCatalogue`, for the same reason `pricing.cost` got its own: the pricing
+ * core decides what a cart is worth, and whether COD is offered is a different question
+ * asked of the same catalogue.
+ *
+ * Keeping them apart means `buildOrderFromCart` cannot begin to read `minPrepaidAmount` into
+ * a total, and `isCartCodEligible` cannot begin to read `price` into an eligibility rule —
+ * neither field is in the other's object to reach for. See ADR-011 and ADR-058.
+ */
+export function getCodEligibilityCatalogue(): CodEligibilityEntry[] {
+  return activeProducts.map((product) => ({
+    id: product.id,
+    minPrepaidAmount: product.pricing.minPrepaidAmount,
   }));
 }
 

@@ -60,7 +60,7 @@ function productFixture(overrides: Partial<Product> = {}): Product {
     name: "Fixture Piece",
     category: "rings",
     status: "active",
-    pricing: { price: 1499, mrp: 1999, cost: 899 },
+    pricing: { price: 1499, mrp: 1999, cost: 899, minPrepaidAmount: 0 },
     media: { images: [] },
     specs: { material: "Brass" },
     description: "A fixture.",
@@ -465,7 +465,7 @@ describe("collections", () => {
     expect(
       matchesShopQuery(
         productFixture({
-          pricing: { price: 499, mrp: 799, cost: 299 },
+          pricing: { price: 499, mrp: 799, cost: 299, minPrepaidAmount: 0 },
           collections: ["gifting"],
         }),
         query,
@@ -474,7 +474,7 @@ describe("collections", () => {
     expect(
       matchesShopQuery(
         productFixture({
-          pricing: { price: 4999, mrp: 5999, cost: 2999 },
+          pricing: { price: 4999, mrp: 5999, cost: 2999, minPrepaidAmount: 0 },
           collections: ["gifting"],
         }),
         query,

@@ -603,11 +603,21 @@ function isPositiveInteger(value: unknown): value is number {
   return typeof value === "number" && Number.isInteger(value) && value > 0;
 }
 
+/** The `pricing.minPrepaidAmount` of a piece that may be sold cash on delivery. */
+const COD_ELIGIBLE = 0;
+
 /**
  * `mrp` falls back to `price` when the draft leaves it unset, which is the honest reading of
  * "no compare-at price was decided" — an mrp equal to the price shows no discount at all. `cost`
  * has no such fallback: `validate-products.mjs` requires a positive whole number and there is no
  * defensible value to invent for what a piece cost the shop.
+ *
+ * `minPrepaidAmount` is not read from the draft at all. Whether a piece is too costly to risk
+ * on an uncollected delivery is a decision about the shop's exposure rather than a fact about
+ * the product, so it is not something a content draft is in a position to assert. Every
+ * migrated record arrives cash-on-delivery eligible and the owner raises individual ones
+ * afterwards, which is exactly what the backfill did to the catalogue that predates the
+ * field. See ADR-058.
  */
 export function mapPricing(pricing: DraftPricing): PricingMappingResult {
   const issues: MappingIssue[] = [];
@@ -653,7 +663,15 @@ export function mapPricing(pricing: DraftPricing): PricingMappingResult {
     );
   }
 
-  return { pricing: { price: pricing.price, mrp, cost: pricing.cost }, issues };
+  return {
+    pricing: {
+      price: pricing.price,
+      mrp,
+      cost: pricing.cost,
+      minPrepaidAmount: COD_ELIGIBLE,
+    },
+    issues,
+  };
 }
 
 export interface CollectionMappingResult {

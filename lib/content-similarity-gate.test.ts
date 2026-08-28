@@ -249,7 +249,7 @@ describe("draft-to-draft comparison", () => {
       name: id,
       category: "rings",
       status,
-      pricing: { price: 210, mrp: 299, cost: 126 },
+      pricing: { price: 210, mrp: 299, cost: 126, minPrepaidAmount: 0 },
       media: { images: [`/products/${id}.webp`] },
       specs: { material: "Gold plated brass" },
       description,

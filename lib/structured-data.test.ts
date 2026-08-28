@@ -401,6 +401,7 @@ describe("the shipping details in the offer", () => {
         price: FREE_SHIPPING_THRESHOLD,
         mrp: FREE_SHIPPING_THRESHOLD,
         cost: Math.round(FREE_SHIPPING_THRESHOLD * 0.6),
+        minPrepaidAmount: 0,
       },
     };
 

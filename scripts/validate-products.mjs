@@ -8,6 +8,7 @@ import {
 } from "./backfill-keyword-map.mjs";
 import { looselyNormaliseKeyword } from "./keyword-normalisation.mjs";
 import { findBannedMetaAdjectives } from "./banned-meta-adjectives.mjs";
+import { isValidMinPrepaidAmount, minPrepaidExceedsPrice } from "./min-prepaid-rule.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
@@ -242,6 +243,15 @@ const descriptionAdvisories = [];
  * cost-against-price is an advisory. See ADR-040.
  */
 const marginAdvisories = [];
+
+/**
+ * A `pricing.minPrepaidAmount` above the piece's own `pricing.price` is a data error — it
+ * asks a shopper to prepay more than the item costs — but it is the owner's figure to
+ * correct, and the field is inert until a checkout reads it. So the presence and the shape
+ * of the field are hard checks and the amount-against-price comparison is an advisory, on
+ * the same reasoning that makes cost-against-price one. See ADR-058.
+ */
+const minPrepaidAdvisories = [];
 const secondaryKeywordAdvisories = [];
 const nearMatchKeywordAdvisories = [];
 
@@ -260,6 +270,7 @@ function isPlainObject(value) {
 function isPositiveInteger(value) {
   return typeof value === "number" && Number.isInteger(value) && value > 0;
 }
+
 
 function existsUnderPublic(publicPath) {
   return existsSync(join(PUBLIC_DIR, publicPath.replace(/^\//, "")));
@@ -292,6 +303,7 @@ const impliedDiscounts = [];
 const grossMargins = [];
 let costedCount = 0;
 let discountedCount = 0;
+let codIneligibleCount = 0;
 let featuredCount = 0;
 let newCount = 0;
 let outOfStockCount = 0;
@@ -329,6 +341,20 @@ function validatePricing(product, label) {
     isPositiveInteger(pricing.cost),
     `${label}: pricing.cost must be a positive whole number of rupees`,
   );
+
+  check(
+    isValidMinPrepaidAmount(pricing.minPrepaidAmount),
+    `${label}: pricing.minPrepaidAmount must be a whole number of rupees, zero or more (0 means the piece may be sold cash on delivery)`,
+  );
+
+  if (isValidMinPrepaidAmount(pricing.minPrepaidAmount) && pricing.minPrepaidAmount > 0) {
+    codIneligibleCount += 1;
+  }
+  if (minPrepaidExceedsPrice(pricing.minPrepaidAmount, pricing.price)) {
+    minPrepaidAdvisories.push(
+      `${label}: pricing.minPrepaidAmount ${pricing.minPrepaidAmount} exceeds pricing.price ${pricing.price} — the shopper would prepay more than the item costs`,
+    );
+  }
 
   if (isPositiveInteger(pricing.cost) && isPositiveInteger(pricing.price)) {
     costedCount += 1;
@@ -1088,6 +1114,9 @@ console.log("\nPrice bands");
 console.log(`  budget  ${MIN_PRICE}-999     ${priceBands.budget}`);
 console.log(`  mid     1000-4999  ${priceBands.mid}`);
 console.log(`  premium 5000-25000 ${priceBands.premium}`);
+console.log("\nCash on delivery (ADR-058)");
+console.log(`  COD-eligible       ${catalogue.length - codIneligibleCount}/${catalogue.length}`);
+console.log(`  prepay required    ${codIneligibleCount}`);
 console.log("\nImages (id-keyed, local under /public)");
 console.log(`  primary files      ${primaryImagesOnDisk}/${catalogue.length}`);
 console.log(`  additional views   ${additionalImageCount}`);
@@ -1130,6 +1159,13 @@ if (marginAdvisories.length > 0) {
     `\nADVISORY — ${marginAdvisories.length} product(s) priced at or below cost. Margin is the owner's call, not a code fix:`,
   );
   for (const advisory of marginAdvisories) console.warn(`  - ${advisory}`);
+}
+
+if (minPrepaidAdvisories.length > 0) {
+  console.warn(
+    `\nADVISORY — ${minPrepaidAdvisories.length} product(s) whose minimum prepaid amount exceeds their own price. The figure is the owner's to correct:`,
+  );
+  for (const advisory of minPrepaidAdvisories) console.warn(`  - ${advisory}`);
 }
 
 if (descriptionAdvisories.length > 0) {

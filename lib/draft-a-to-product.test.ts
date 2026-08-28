@@ -389,13 +389,13 @@ describe("mapImagesToMedia", () => {
 describe("mapPricing", () => {
   it("carries a fully decided price through", () => {
     const { pricing, issues } = mapPricing({ price: 210, mrp: 299, cost: 126, referencePrice: null });
-    expect(pricing).toEqual({ price: 210, mrp: 299, cost: 126 });
+    expect(pricing).toEqual({ price: 210, mrp: 299, cost: 126, minPrepaidAmount: 0 });
     expect(issues).toEqual([]);
   });
 
   it("falls back to price when mrp is unset, and says the page will show no discount", () => {
     const { pricing, issues } = mapPricing({ price: 210, mrp: null, cost: 126, referencePrice: null });
-    expect(pricing).toEqual({ price: 210, mrp: 210, cost: 126 });
+    expect(pricing).toEqual({ price: 210, mrp: 210, cost: 126, minPrepaidAmount: 0 });
     expect(issues.some((issue) => issue.severity === "advisory" && issue.field === "pricing.mrp")).toBe(
       true,
     );
@@ -435,7 +435,7 @@ describe("buildProductFromDraft", () => {
       name: "Cubic Zirconia Bow Ring",
       category: "rings",
       status: "draft",
-      pricing: { price: 210, mrp: 299, cost: 126 },
+      pricing: { price: 210, mrp: 299, cost: 126, minPrepaidAmount: 0 },
       media: { images: ["/products/P900.webp"] },
       specs: {
         material: "Gold-plated brass",
@@ -606,7 +606,7 @@ describe("checkCandidatePrimaryKeyword", () => {
       name: id,
       category: "rings",
       status,
-      pricing: { price: 210, mrp: 299, cost: 126 },
+      pricing: { price: 210, mrp: 299, cost: 126, minPrepaidAmount: 0 },
       media: { images: [`/products/${id}.webp`] },
       specs: { material: "Gold plated brass" },
       description: "A ring.",

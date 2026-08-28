@@ -46,7 +46,7 @@ function migratedProduct(): Product {
     category: "rings",
     subcategory: "solitaire stackers",
     status: "active",
-    pricing: { price: 210, mrp: 299, cost: 126 },
+    pricing: { price: 210, mrp: 299, cost: 126, minPrepaidAmount: 0 },
     media: { images: ["/products/P901.webp"] },
     specs: { material: "Gold-plated brass", type: "Adjustable open band" },
     description: "A gold-tone band carrying a small cubic zirconia bow, open at the back.",

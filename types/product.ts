@@ -235,6 +235,24 @@ export interface ProductPricing {
    * and [ADR-040](/docs/decisions/ADR-040-postgres-for-orders.md).
    */
   cost: number;
+  /**
+   * The amount per unit that must be paid online, in whole rupees. `0` — which is every
+   * product in the catalogue today — means the piece may be sold cash on delivery.
+   *
+   * Any value above `0` disables COD for the *whole order*, not merely for its own line: a
+   * cart is offered COD only when every line reads `0`. The rule is deliberately strict
+   * because the alternative is splitting one delivery into a prepaid part and a collected
+   * part, which is a reconciliation problem rather than a checkout feature.
+   *
+   * It exists because Cashfree denied COD at the account level (ticket 8266236), leaving no
+   * gateway-side pincode, RTO or order-value screening to lean on. This field is the shop's
+   * own substitute: the owner marks the pieces whose value or fragility makes an
+   * uncollected delivery too expensive to absorb, and accepts the risk on the rest. See
+   * [ADR-058](/docs/decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md).
+   *
+   * `isCartCodEligible` in `lib/cod.ts` is the only place the cart-level rule is decided.
+   */
+  minPrepaidAmount: number;
 }
 
 /**
