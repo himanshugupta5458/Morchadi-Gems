@@ -1,0 +1,88 @@
+{
+  "productId": "P594",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "pearl beaded chain necklace; stud earrings set (6 pairs, gold & silver tone); peach & pearl beaded flower charm bracelet; gold-tone twisted ring; satin scrunchie (peach); orange acrylic flower hair claw clip",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "- Morchadi Jewels Pearl Beaded Chain Necklace\n- Morchadi Jewels Stud Earrings Set (6 Pairs – Gold & Silver Tone)\n- Peach & Pearl Beaded Flower Charm Bracelet\n- Gold-Tone Twisted Ring\n- Satin Scrunchie – Peach\n- Orange Acrylic Flower Hair Claw Clip"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "friendship-themed quote cards included, ready to gift",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Comes with cute friendship-themed quote cards, ready to gift"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "gifting (Friendship Day, birthdays)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P594.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P594/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 379,
+    "mrp": 379,
+    "cost": 152,
+    "referencePrice": "₹379 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "A dreamy pastel-toned hamper made for your favourite person — perfect for Friendship Day, birthdays, or just to say \"you are my best friend.\" Comes with cute quote cards and a mix of everyday jewellery pieces she can actually wear on repeat.\nWhat's Inside:\n- Morchadi Jewels Pearl Beaded Chain Necklace\n- Morchadi Jewels Stud Earrings Set (6 Pairs – Gold & Silver Tone)\n- Peach & Pearl Beaded Flower Charm Bracelet\n- Gold-Tone Twisted Ring\n- Satin Scrunchie – Peach\n- Orange Acrylic Flower Hair Claw Clip\n-\nWhy She'll Love It:\n- A complete jewellery set — necklace, 6 earring pairs, bracelet & ring in one box\n- Soft, wearable everyday pieces in a cohesive pastel palette\n- Comes with cute friendship-themed quote cards, ready to gift\n- Perfect for Friendship Day, birthdays, or a \"thinking of you\" surprise\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Forever Friends Hamper",
+    "originalId": "1064",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/forever-friends-hamper-1064",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "brand-mismatch",
+      "detail": "Source names \"Morchadi Jewels\" as the maker of two hamper contents items (expected legacy mismatch); the catalogue's brand is Morchadi Gems. Kept verbatim in the Hamper contents quote — never silently corrected, never silently kept.",
+      "sourceContext": "- Morchadi Jewels Pearl Beaded Chain Necklace\n- Morchadi Jewels Stud Earrings Set (6 Pairs – Gold & Silver Tone)"
+    },
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

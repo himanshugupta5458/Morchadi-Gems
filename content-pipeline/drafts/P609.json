@@ -1,0 +1,99 @@
+{
+  "productId": "P609",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "Anti-tarnish silver-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "anti-tarnish finish helps maintain its elegant silver-tone appearance"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial",
+      "value": "Deep blue round dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a stunning deep blue round dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement type",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Strap type",
+      "value": "Chain-link bracelet strap",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Detailed chain-link bracelet strap"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals; store in a dry place when not in use to help maintain the finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P609.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P609/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 599,
+    "mrp": 599,
+    "cost": 240,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add timeless elegance to your everyday style with this Vintage Anti-Tarnish Silver Bracelet Watch, featuring a stunning deep blue round dial and an intricate chain-link bracelet design. With its jewellery-inspired vintage aesthetic, this watch effortlessly combines the charm of a classic timepiece with the beauty of a statement accessory.\nThe anti-tarnish finish helps maintain its elegant silver-tone appearance with proper care, while the rich blue dial adds a sophisticated touch to your look. Perfect for women who love unique, vintage-inspired accessories that stand out without being over the top.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch design\n- 💎 Anti-tarnish silver-tone finish\n- 💙 Elegant deep blue round dial\n- ⌚ Quartz movement\n- 🔗 Detailed chain-link bracelet strap\n- 🌸 Stylish combination of watch and jewellery\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Great gifting option for girls and women\n- ✨ Ideal for everyday wear, parties, outings & special occasions\nPerfect For\nCollege, office, casual outings, festive occasions, parties, date nights and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Silver Blue Dial Bracelet Watch",
+    "originalId": "1081",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-bracelet-watch-1081",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

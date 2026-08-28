@@ -1,0 +1,78 @@
+{
+  "productId": "P530",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish/Coating",
+      "value": "red enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "striking red enamel tulip necklace"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chain material",
+      "value": "gold-toned chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "premium gold-toned chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "This durable, anti-tarnish piece"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P530.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P530/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 210,
+    "mrp": 210,
+    "cost": 84,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a romantic statement with this striking red enamel tulip necklace. The vibrant crimson bud and lustrous green leaves are set against a premium gold-toned chain, offering a bold yet classic floral aesthetic. This durable, anti-tarnish piece is an ideal gift for special occasions or everyday elegance.",
+    "referenceTitle": "Red Enamel Tulip Gold Pendant Necklace",
+    "originalId": "992",
+    "originalSku": "MJ-488",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-488-red-enamel-tulip-gold-pendant-necklace-992",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

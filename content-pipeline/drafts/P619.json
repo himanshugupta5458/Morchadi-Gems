@@ -1,0 +1,119 @@
+{
+  "productId": "P619",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial colour",
+      "value": "Emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Rich emerald green dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Polished bead bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stylish polished bead bracelet design"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial markers",
+      "value": "Numeral hour markers",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant numeral hour markers"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial shape",
+      "value": "Rectangular-oval",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "compact rectangular-oval dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P619.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P619/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 499,
+    "mrp": 499,
+    "cost": 200,
+    "referencePrice": "₹499 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Make a statement with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich emerald green dial and a bold polished bead bracelet. The deep green dial beautifully contrasts with the luxurious gold-tone finish, creating an elegant vintage-inspired look.\nThe oversized round bead bracelet gives this watch a unique jewellery-like appearance, while the compact rectangular-oval dial adds a sophisticated touch. Perfect for women who love distinctive accessories that combine the elegance of a watch with the charm of a statement bracelet.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Rich emerald green dial\n- 🟡 Stylish polished bead bracelet design\n- 🕰️ Elegant numeral hour markers\n- ⌚ Quartz movement\n- 💎 Unique watch + statement jewellery design\n- 👗 Easy to pair with ethnic and western outfits\n- 🎁 Beautiful gifting option for women\n- ✨ Perfect for parties, outings and special occasions\nPerfect For\nFestive occasions, weddings, parties, date nights, casual outings, office looks and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Beaded Bracelet Watch for Women",
+    "originalId": "1091",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-beaded-bracelet-watch-for-women-1091",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

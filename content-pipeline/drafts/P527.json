@@ -1,0 +1,67 @@
+{
+  "productId": "P527",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish/Coating",
+      "value": "pink enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "vibrant pink enamel tulip bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chain material",
+      "value": "gold-toned chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this elegant gold-toned chain"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P527.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P527/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": 199,
+    "cost": 80,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Brighten her day with this vibrant pink enamel tulip bracelet. Featuring a high-shine \"dripping oil\" finish and lush green leaves, this elegant gold-toned chain is a meaningful gift for Mom. Durable and versatile, it's a perfect floral accessory for Mother's Day or daily wear",
+    "referenceTitle": "Vibrant Pink Enamel Tulip Gold Bracelet",
+    "originalId": "989",
+    "originalSku": "MJ-612",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-612-vibrant-pink-enamel-tulip-gold-bracelet-989",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

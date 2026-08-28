@@ -1,0 +1,86 @@
+{
+  "productId": "P483",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this gold-toned nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "glass or synthetic ruby-colored stone, unclear from text",
+      "displayTerm": "ruby-colored stones",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring vibrant ruby-colored stones and a delicate pearl drop"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material",
+      "value": "pearl, type unspecified from text",
+      "displayTerm": "pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a delicate pearl drop"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store safely after every wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P483.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P483/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 109,
+    "mrp": 109,
+    "cost": 40,
+    "referencePrice": "₹109 sale price, ₹40 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Embrace traditional elegance with this gold-toned nath, featuring vibrant ruby-colored stones and a delicate pearl drop. This high-fashion piece is a stunning addition to any ethnic attire. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely after every wear.",
+    "referenceTitle": "Gold-Plated Traditional Nath – Ruby Red & White Stone Studded",
+    "originalId": "939",
+    "originalSku": "MJ-324",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-324-gold-plated-traditional-nath-ruby-red-white-stone-studded-939",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

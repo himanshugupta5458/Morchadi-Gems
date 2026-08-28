@@ -1,0 +1,99 @@
+{
+  "productId": "P319",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "pink zircon-type stone, exact composition unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "crafted with sparkling pink zircon stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material",
+      "value": "silver-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "set in a sleek silver-plated finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "refined row of uniformly cut stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The necklace features a refined row of uniformly cut stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Set includes",
+      "value": "matching earrings with the same pink stones",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The matching earrings complement the necklace with the same vibrant pink stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and comfortable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight, comfortable, and versatile"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P319.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P319/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": 199,
+    "cost": 80,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Add a pop of color to your style with this beautiful pink CZ tennis necklace set, crafted with sparkling pink zircon stones set in a sleek silver-plated finish. The necklace features a refined row of uniformly cut stones, creating a timeless and elegant silhouette perfect for both daily wear and special occasions.\n- The matching earrings complement the necklace with the same vibrant pink stones, offering a coordinated and classy look. Lightweight, comfortable, and versatile, this set pairs effortlessly with Western, Indo-Western, and festive outfits.\n- Whether you're dressing up for celebrations, gifting someone special, or elevating your everyday look, this pink tennis necklace set brings just the right amount of shine and sophistication.\n- pink tennis necklace, CZ jewelry set, silver-plated necklace, pink stone necklace, party wear jewelry, elegant women's jewelry, zircon necklace set.",
+    "referenceTitle": "Pink CZ Tennis Necklace Set",
+    "originalId": "741",
+    "originalSku": "MJ-459",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-459-pink-cz-tennis-necklace-set-741",
+    "originalCategories": [
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

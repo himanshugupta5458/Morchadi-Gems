@@ -1,0 +1,111 @@
+{
+  "productId": "P299",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated anti-tarnish stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "pearl (real or imitation unclear from text)",
+      "displayTerm": "pearl",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "features a lustrous pearl at its center, surrounded by beautifully detailed petals"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "daisy flower pendant with pearl center",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this daisy flower pendant necklace features a lustrous pearl at its center"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "one-size, adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Size: One-size & Adjustable"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Net quantity",
+      "value": "1",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Net Quantity: 1"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "wipe after use; avoid chemicals, sprays and perfume; store flat; do not soak in water",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P299.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P299/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 219,
+    "mrp": 219,
+    "cost": 88,
+    "referencePrice": "₹219 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- A perfect blend of nature and elegance, this daisy flower pendant necklace features a lustrous pearl at its center, surrounded by beautifully detailed petals. Crafted from durable anti-tarnish stainless steel and plated in 18K gold, it's a versatile piece that adds a fresh, feminine touch to any outfit.\n-\n- Premium Quality | Anti-Tarnish\n- Base Material: Stainless Steel\n- Plating: 18K Gold-Plated\n- Shape: Daisy Flower with Pearl\n- Size: One-size & Adjustable\n- Net Quantity: 1\n- Designed to complement both casual and formal outfits effortlessly\n- Care Tips:\n-\n- Wipe with a soft cloth after every use\n- Avoid contact with harsh chemicals, sprays, and perfumes\n- Store in a flat box to prevent scratches\n- Do not soak in water\n- Keywords: gold necklace, daisy necklace, flower pendant, pearl necklace, anti-tarnish jewelry, stainless steel, elegant necklace, feminine jewelry, gift for her, 18k gold plated, floral jewelry",
+    "referenceTitle": "Daisy Flower Pearl Pendant Necklace - Anti-Tarnish Gold Jewelry",
+    "originalId": "703",
+    "originalSku": "MJ-206",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-206-daisy-flower-pearl-pendant-necklace-anti-tarnish-gold-jewelry-703",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

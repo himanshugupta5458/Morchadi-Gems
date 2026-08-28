@@ -79,31 +79,31 @@
       },
       {
         "path": "/products/P280-2.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P280/raw/extra-1.webp",
         "role": "extra-1"
       },
       {
         "path": "/products/P280-3.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P280/raw/extra-2.webp",
         "role": "extra-2"
       },
       {
         "path": "/products/P280-4.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P280/raw/extra-3.webp",
         "role": "extra-3"
       },
       {
         "path": "/products/P280-5.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P280/raw/extra-4.webp",
         "role": "extra-4"
       },
       {
         "path": "/products/P280-6.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P280/raw/extra-5.webp",
         "role": "extra-5"
       }

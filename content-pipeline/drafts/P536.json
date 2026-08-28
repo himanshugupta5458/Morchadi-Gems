@@ -1,0 +1,65 @@
+{
+  "productId": "P536",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "His & Her Gold Initial Rings in red velvet box; Dairy Milk Silk; Ferrero Rocher ×3; Birthday bunting; fairy lights",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "His & Her Gold Initial Rings in red velvet box + Dairy Milk Silk + Ferrero Rocher x3 + Birthday bunting + fairy lights"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P536.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P536/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 777,
+    "mrp": 777,
+    "cost": 311,
+    "referencePrice": "₹480 sale price (morchadijewels.com, reference only); source copy also says \"Only ₹499\""
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "His & Her Gold Initial Rings in red velvet box + Dairy Milk Silk + Ferrero Rocher x3 + Birthday bunting + fairy lights. Only ₹499. Choose your initials! ⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Couple Birthday Hamper - Gold Edition",
+    "originalId": "1000",
+    "originalSku": "MJ-147",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-147-couple-birthday-hamper-gold-edition-1000",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "⚠️ Prepaid only\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [
+    "personalized is left null deliberately: the copy says \"Choose your initials!\" for the His & Her initial rings, which is explicit personalisation language — but the export carries NO letter-selection option or variant. Owner must resolve at review: if buyers pick initials, this needs an option/variant design before publish (personalized: true); if the rings ship with fixed letters, personalized: false and the copy overpromises.",
+    "Price discrepancy: the export's reference price is ₹480 but the source copy says \"Only ₹499\" — both are reference only; the real price is a separate owner decision at review.",
+    "Contents name third-party FMCG brands (Dairy Milk Silk, Ferrero Rocher) — real contents facts, kept as candidates; stock/substitution wording is an owner call for Phase 2."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

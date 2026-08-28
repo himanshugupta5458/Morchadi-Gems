@@ -1,0 +1,67 @@
+{
+  "productId": "P516",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material/finish",
+      "value": "gold-toned metal stem, anti-tarnish finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a minimalist gold-toned stem, this anti-tarnish piece offers a sophisticated, feminine aesthetic"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "Rose flower pendant with crimson-colored bud",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this dainty red rose necklace. Featuring a vibrant crimson bud"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P516.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P516/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 210,
+    "mrp": 210,
+    "cost": 84,
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a touch of timeless romance to your look with this dainty red rose necklace. Featuring a vibrant crimson bud on a minimalist gold-toned stem, this anti-tarnish piece offers a sophisticated, feminine aesthetic. It's the perfect lightweight accessory for everyday elegance or a meaningful gift for someone special",
+    "referenceTitle": "Elegant Red Rose Gold Stem Necklace",
+    "originalId": "978",
+    "originalSku": "MJ-235",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-235-elegant-red-rose-gold-stem-necklace-978",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

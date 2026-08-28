@@ -123,13 +123,13 @@
       },
       {
         "path": "/products/P232-2.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P232/raw/extra-1.webp",
         "role": "extra-1"
       },
       {
         "path": "/products/P232-3.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P232/raw/extra-2.webp",
         "role": "extra-2"
       }

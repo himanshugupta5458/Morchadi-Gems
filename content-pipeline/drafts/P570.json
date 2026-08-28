@@ -1,0 +1,99 @@
+{
+  "productId": "P570",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design Detail",
+      "value": "diamond-shaped centrepiece with layered petal detail",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Diamond shape centrepiece + layered petal detail"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P570.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P570/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 99,
+    "mrp": 99,
+    "cost": 40,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Bold, structured, and strikingly unique — our Diamond Petal Fringe Hoop Earrings feature a cascading row of raised oval petals along the hoop with a standout diamond-shaped centrepiece at the base. A modern architectural design that brings serious style to any outfit.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Diamond shape centrepiece + layered petal detail\n- Statement hoop — lightweight despite bold appearance\nPairs with: Solid colour ethnic wear, blazers, off-shoulder tops, and sarees.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Diamond Petal Fringe Gold Stainless Steel Hoop Earrings",
+    "originalId": "1040",
+    "originalSku": "MJ-213",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-213-diamond-petal-fringe-gold-stainless-steel-hoop-earrings-1040",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

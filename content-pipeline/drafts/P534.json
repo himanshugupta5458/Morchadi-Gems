@@ -1,0 +1,64 @@
+{
+  "productId": "P534",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "bracelet, jhumka earrings, scrunchie, rose oil face mask, wet wipes, Dairy Milk Silk and Ferrero Rocher",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Includes bracelet, jhumka earrings, scrunchie, rose oil face mask, wet wipes, Dairy Milk Silk and Ferrero Rocher."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P534.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P534/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 799,
+    "mrp": 799,
+    "cost": 320,
+    "referencePrice": "₹799 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Shop Eid Mubarak Gift Hamper at ₹799. Includes bracelet, jhumka earrings, scrunchie, rose oil face mask, wet wipes, Dairy Milk Silk and Ferrero Rocher. Prepaid only.\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Eid Mubarak Gift Hamper",
+    "originalId": "998",
+    "originalSku": "MJ-223",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-223-eid-mubarak-gift-hamper-998",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed prepaid-only payment restriction note",
+      "sourceContext": "Prepaid only."
+    },
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -104,7 +104,7 @@
       },
       {
         "path": "/products/P306-2.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P306/raw/extra-1.webp",
         "role": "extra-1"
       }

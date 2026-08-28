@@ -1,0 +1,99 @@
+{
+  "productId": "P571",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design Detail",
+      "value": "concentric spiral/swirl texture on a crescent-shaped hoop",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "an intricate concentric circle pattern etched across a bold crescent-shaped gold hoop"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Clasp Type",
+      "value": "secure latch-back clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure latch-back clasp — lightweight & comfortable all-day"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P571.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P571/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 99,
+    "mrp": 99,
+    "cost": 40,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Make a subtle statement with our Spiral Texture Chunky Hoop Earrings — featuring an intricate concentric circle pattern etched across a bold crescent-shaped gold hoop. The detailed swirl texture catches light beautifully, giving a rich, handcrafted look at an accessible price.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Concentric spiral texture — artisan-inspired design\n- Secure latch-back clasp — lightweight & comfortable all-day\nPairs with: Kurtis, jeans, dresses, indo-western outfits.",
+    "referenceTitle": "Spiral Textured Chunky Gold-Plated Anti-Tarnish Hoop Earrings",
+    "originalId": "1041",
+    "originalSku": "MJ-576",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-576-spiral-textured-chunky-gold-plated-anti-tarnish-hoop-earrings-1041",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

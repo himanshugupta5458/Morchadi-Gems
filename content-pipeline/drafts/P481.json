@@ -1,0 +1,75 @@
+{
+  "productId": "P481",
+  "sourceType": "migrated",
+  "category": "nose-pins",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Plating/Finish",
+      "value": "silver-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this stunning silver-toned nath"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "white stones (baguette and round cut)",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring a unique arrangement of baguette and round white stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry; store safely away from perfumes and moisture after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve its brilliant shine and delicate finish, ensure it stays dry and is stored safely away from perfumes and moisture after use."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P481.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P481/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 129,
+    "mrp": 129,
+    "cost": 60,
+    "referencePrice": "₹129 sale price, ₹60 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Dazzle in this stunning silver-toned nath, featuring a unique arrangement of baguette and round white stones. This high-fashion statement piece is perfect for celebrations. To preserve its brilliant shine and delicate finish, ensure it stays dry and is stored safely away from perfumes and moisture after use.",
+    "referenceTitle": "Silver-Plated Baguette Stone Nath – Sparkling White Zirconia",
+    "originalId": "937",
+    "originalSku": "MJ-561",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-561-silver-plated-baguette-stone-nath-sparkling-white-zirconia-937",
+    "originalCategories": [
+      "Nath"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

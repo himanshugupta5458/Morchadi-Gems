@@ -1,0 +1,111 @@
+{
+  "productId": "P356",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "variants": [
+    {
+      "optionName": "Size for rings",
+      "values": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass crystal or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "featuring tiny crystal stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "gold finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this lightweight gold-finish ring"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "thin band",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this elegant thin band ring"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "adjustable",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "✨ Adjustable Fit"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this lightweight gold-finish ring"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P356.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P356/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 160,
+    "mrp": 160,
+    "cost": 64,
+    "referencePrice": "₹160 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Enhance your everyday look with this elegant thin band ring featuring tiny crystal stones. Designed for minimal lovers, this lightweight gold-finish ring pairs beautifully with all outfits.\n✨ Slim & Stylish Design\n✨ Sparkling Stones\n✨ Adjustable Fit\n✨ Comfortable for Daily Use",
+    "referenceTitle": "Minimal Thin Band Gold Ring for Girls",
+    "originalId": "792",
+    "originalSku": "MJ-418",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-418-minimal-thin-band-gold-ring-for-girls-792",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "Duplicate-title group \"Minimal Thin Band Gold Ring for Girls\" — P356 (Odoo 792), P357 (Odoo 793). The source descriptions are byte-identical across the group, so identical candidate sets across these drafts are expected and correct (pilot precedent, skill rule 17): the only per-product differentiator in the source is the photograph(s).",
+    "Contradiction for owner review: the description promises an \"Adjustable Fit\" while the export offers three fixed size options (6, 7, 8). Both are carried (Size attribute + variants); the owner must decide which fit claim is true before publish."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

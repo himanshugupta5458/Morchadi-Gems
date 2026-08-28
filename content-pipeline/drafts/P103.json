@@ -1,0 +1,105 @@
+{
+  "productId": "P103",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Care",
+      "value": "avoid contact with water and perfume",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Avoid contact with water & perfume"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Clasp",
+      "value": "toggle clasp",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Toggle Clasp"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material",
+      "value": "brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Brass"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Net quantity",
+      "value": "1 bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package contains: 1 bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colour",
+      "value": "golden",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Color Golden"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P103.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P103/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 199,
+    "mrp": 199,
+    "cost": 80,
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "- Avoid contact with water & perfume\n- Images may appear brighter than the actual product due to photographic effect.\n- Toggle Clasp\n- Brass\n- Package contains: 1 bracelet\n- Color Golden",
+    "referenceTitle": "Anti Tarnish Love Bracelet",
+    "originalId": "62",
+    "originalSku": "MJ-044",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-044-anti-tarnish-love-bracelet-62",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed the photographic disclaimer — generic site copy, not a product fact; stripped and flagged so nothing is silently dropped.",
+      "sourceContext": "Images may appear brighter than the actual product due to photographic effect."
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

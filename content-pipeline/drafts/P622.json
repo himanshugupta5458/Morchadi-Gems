@@ -1,0 +1,119 @@
+{
+  "productId": "P622",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial colour",
+      "value": "Emerald green",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant deep emerald green dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial markers",
+      "value": "Minimalist gold hour markers and hands",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Minimalist gold hour markers & hands"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Flexible mesh bracelet strap",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Sleek flexible mesh bracelet strap"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bezel design",
+      "value": "Cross-bezel design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "polished golden cross-bezel finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P622.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P622/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 599,
+    "mrp": 599,
+    "cost": 240,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a rich emerald green dial, classic minimal detailing, and a sleek flexible gold-tone mesh bracelet strap. The deep green dial beautifully contrasts with the polished golden cross-bezel finish, creating a sophisticated vintage-inspired look.\nIts slim round dial and elegant textured mesh bracelet give it a refined, jewellery-like appearance, making it perfect for women who prefer a classic yet stylish timepiece. Easy to pair with both ethnic and western outfits, this watch adds a graceful touch to any look.\nProduct Highlights\n✨ Vintage-inspired bracelet watch\n💛 Anti-tarnish gold-tone finish\n💚 Elegant deep emerald green dial\n🕰️ Minimalist gold hour markers & hands\n🔗 Sleek flexible mesh bracelet strap\n⌚ Quartz movement\n💎 Jewellery-inspired elegant cross-bezel design\n👗 Perfect for ethnic and western outfits\n🎁 Ideal gifting option for women\n✨ Suitable for everyday wear and special occasions\nPerfect For\nOffice wear, college, casual outings, festive occasions, parties, date nights, weddings, and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat, and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Emerald Green Dial Bracelet Watch",
+    "originalId": "1094",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-emerald-green-dial-bracelet-watch-1094",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

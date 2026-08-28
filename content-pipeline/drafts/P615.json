@@ -1,0 +1,130 @@
+{
+  "productId": "P615",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial colour",
+      "value": "White",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant white dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial markers",
+      "value": "Roman numeral",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Classic Roman numeral hour markers"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Translucent crystal-style bracelet detailing"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial shape",
+      "value": "Oval",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "The unique oval-shaped dial and decorative bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Decorative link bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Unique decorative link bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P615.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P615/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 599,
+    "mrp": 599,
+    "cost": 240,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of timeless elegance to your look with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a classic white dial with Roman numeral detailing and a beautiful crystal-inspired bracelet design. The combination of the elegant gold-tone finish, soft white dial and translucent crystal accents creates a sophisticated jewellery-inspired look.\nThe unique oval-shaped dial and decorative bracelet make this watch a stylish statement accessory, perfect for women who love vintage-inspired pieces with a luxurious finish. It effortlessly complements both traditional and western outfits.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 🤍 Elegant white dial\n- 🕰️ Classic Roman numeral hour markers\n- 💎 Translucent crystal-style bracelet detailing\n- 🔗 Unique decorative link bracelet\n- ⌚ Quartz movement\n- 🌸 Jewellery-inspired statement design\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Perfect gifting option for women\nPerfect For\nFestive occasions, weddings, parties, office wear, date nights, casual outings and everyday styling.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold White Dial Crystal Bracelet Watch for Women",
+    "originalId": "1087",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-crystal-bracelet-watch-for-women-1087",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,80 @@
+{
+  "productId": "P525",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone - bud",
+      "value": "cubic zirconia (synthetic, ruby-colored)",
+      "displayTerm": "zirconia",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a deep ruby-colored synthetic zirconia bud"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone - leaves",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling crystal leaves"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material/finish - chain",
+      "value": "gold-finished metal chain (base material unspecified)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "on a gold-finished chain"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P525.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P525/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 259,
+    "mrp": 259,
+    "cost": 104,
+    "referencePrice": "₹259 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Add a romantic touch to your jewelry collection with this elegant red tulip pendant necklace. Featuring a deep ruby-colored synthetic zirconia bud and sparkling crystal leaves on a gold-finished chain, this niche design offers a sophisticated, versatile look. Perfect for daily wear, this dainty clavicle chain adds a bold, feminine accent to any outfit",
+    "referenceTitle": "Red Zirconia Tulip Gold Clavicle Chain",
+    "originalId": "987",
+    "originalSku": "MJ-495",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-495-red-zirconia-tulip-gold-clavicle-chain-987",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "'ruby-colored' describes the zirconia bud's colour, not a claim of genuine ruby; kept within the zirconia stone attribute rather than as a separate ruby claim."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

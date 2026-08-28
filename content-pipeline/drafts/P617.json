@@ -1,0 +1,119 @@
+{
+  "productId": "P617",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish gold-tone finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial colour",
+      "value": "White",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant white dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial shape",
+      "value": "Leaf-shaped oval",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Unique leaf-shaped oval dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "imitation pearl or glass beads, unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pearl-style detailing on the bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bracelet style",
+      "value": "Statement chain bracelet",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stylish statement chain bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P617.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P617/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 599,
+    "mrp": 599,
+    "cost": 240,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of timeless elegance to your everyday style with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a classic white dial, elegant gold-tone detailing and a beautiful pearl-accented bracelet.\nThe unique leaf-shaped oval dial gives the watch a distinctive vintage charm, while the delicate pearl-style detailing throughout the bracelet creates a sophisticated jewellery-inspired look. Perfect for women who love graceful accessories that make a subtle yet elegant statement.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 🤍 Elegant white dial\n- 🌿 Unique leaf-shaped oval dial\n- 🤍 Pearl-style detailing on the bracelet\n- 🔗 Stylish statement chain bracelet\n- ⌚ Quartz movement\n- 💎 Combines the elegance of jewellery with a classic watch\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Beautiful gifting option for women\nPerfect For\nEveryday wear, office looks, college, festive occasions, parties, date nights, weddings and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Gold White Dial Pearl Bracelet Watch for Women",
+    "originalId": "1089",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-white-dial-pearl-bracelet-watch-for-women-1089",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,70 @@
+{
+  "productId": "P499",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material composition",
+      "value": "16-piece set: 12 pink glass bangles + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elevate your ethnic grace with this stunning set of 12 pink glass bangles paired with 4 golden ghoonghroo bangles."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from moisture and store safely after use to preserve golden luster of charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P499.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P499/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 165,
+    "referencePrice": "₹299 sale price, ₹165 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Elevate your ethnic grace with this stunning set of 12 pink glass bangles paired with 4 golden ghoonghroo bangles. This fashionable ensemble adds a melodic charm to your movement. To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use.\nTo ensure safe delivery, prepaid payment is mandatory as this is a fragile item",
+    "referenceTitle": "Vibrant Pink Glass Bangle Set with Golden Ghoonghroo Accents – 16-Piece",
+    "originalId": "955",
+    "originalSku": "MJ-613",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-613-vibrant-pink-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-955",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed prepaid-payment/fragile-item delivery notice",
+      "sourceContext": "To ensure safe delivery, prepaid payment is mandatory as this is a fragile item"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

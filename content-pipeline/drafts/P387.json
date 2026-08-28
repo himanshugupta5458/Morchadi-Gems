@@ -1,0 +1,119 @@
+{
+  "productId": "P387",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stonework",
+      "value": "kundan",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "elaborate square kundan frames"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Enamel technique",
+      "value": "enamel (green)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "green enamel accents"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "CZ",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling CZ stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chain",
+      "value": "triple gold chains",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "triple gold chains"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Embellishment",
+      "value": "ghungroo bells (both ends)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "jingling ghungroo bells on both ends"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial finish",
+      "value": "pearlescent white",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pearlescent white quartz dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "pearlescent white quartz dial"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P387.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P387/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 120,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Royally stunning and utterly unique — this Kashmiri bracelet watch features elaborate square kundan frames with green enamel accents and sparkling CZ stones, connected by triple gold chains with jingling ghungroo bells on both ends. The pearlescent white quartz dial adds a regal finishing touch. A true showstopper for brides, bridesmaids, and every woman who loves wearing heritage with pride.",
+    "referenceTitle": "Kashmiri Kundan Square Bracelet Watch",
+    "originalId": "836",
+    "originalSku": "MJ-358",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-358-kashmiri-kundan-square-bracelet-watch-836",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

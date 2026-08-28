@@ -1,0 +1,67 @@
+{
+  "productId": "P547",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystal",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "crystal leaf accents"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "flower charms with bow centerpiece",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling flower charms, crystal leaf accents, and a delicate bow centerpiece"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P547.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P547/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 120,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "💜 Elegant purple floral bracelet featuring sparkling flower charms, crystal leaf accents, and a delicate bow centerpiece. Perfect for gifting, everyday wear, and Pinterest-inspired styling.",
+    "referenceTitle": "Purple Blossom Bow Bracelet for Women",
+    "originalId": "1013",
+    "originalSku": "MJ-478",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-478-purple-blossom-bow-bracelet-for-women-1013",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,70 @@
+{
+  "productId": "P417",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "glass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Due to the fragile nature of glass bangles"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P417.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P417/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 220,
+    "mrp": 220,
+    "cost": 88,
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only",
+    "referenceTitle": "Set of 8 Viral Jelly Bangle (Blush Pink)",
+    "originalId": "870",
+    "originalSku": "MJ-534",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-534-set-of-8-viral-jelly-bangle-blush-pink-870",
+    "originalCategories": [
+      "jelly bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Due to the fragile nature of glass bangles, Cash on Delivery (COD) is not available for this product. Kindly place prepaid orders only"
+    }
+  ],
+  "notes": [
+    "Source contained only boilerplate — likely not a product; confirm before assigning an ID."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

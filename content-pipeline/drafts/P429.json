@@ -1,0 +1,64 @@
+{
+  "productId": "P429",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "detailed ribbon (bow) pendant on a twisted chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a beautifully detailed ribbon pendant and a shimmering twisted chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "avoid moisture; store in a dry, safe place after wear",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keep it away from moisture and store it in a dry, safe place after each wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P429.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P429/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of vintage-inspired charm to your daily look with our Textured Bow Necklace. Featuring a beautifully detailed ribbon pendant and a shimmering twisted chain, this piece is the ultimate high-fashion accessory for those who love romantic, trendy styling. To keep its golden glow radiant for as long as possible, we recommend treating this delicate piece with love: keep it away from moisture and store it in a dry, safe place after each wear.",
+    "referenceTitle": "Textured Gold Bow Pendant Necklace",
+    "originalId": "882",
+    "originalSku": "MJ-590",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-590-textured-gold-bow-pendant-necklace-882",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

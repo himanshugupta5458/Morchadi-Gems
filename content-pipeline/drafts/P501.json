@@ -1,0 +1,72 @@
+{
+  "productId": "P501",
+  "sourceType": "migrated",
+  "category": "bangles",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material composition",
+      "value": "16-piece set: 12 glass bangles (sage green) + 4 gold-toned ghoonghroo (bell) charm bangles",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Add a touch of sage green elegance with this set of 12 glass bangles and 4 golden ghoonghroo bangles."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from moisture and store safely after use to preserve golden luster of charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P501.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P501/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 165,
+    "referencePrice": "₹299 sale price, ₹165 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of sage green elegance with this set of 12 glass bangles and 4 golden ghoonghroo bangles. This fashionable ensemble adds a melodic charm to your ethnic look. To preserve the brilliant golden luster of the charms, keep them away from moisture and store safely after use.\nTo ensure safe delivery, prepaid payment is mandatory as this is a fragile item",
+    "referenceTitle": "Refreshing Sage Green Glass Bangle Set with Golden Ghoonghroo Accents – 16-Piece",
+    "originalId": "957",
+    "originalSku": "MJ-496",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-496-refreshing-sage-green-glass-bangle-set-with-golden-ghoonghroo-accents-16-piece-957",
+    "originalCategories": [
+      "Glass bangles"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed prepaid-payment/fragile-item delivery notice",
+      "sourceContext": "To ensure safe delivery, prepaid payment is mandatory as this is a fragile item"
+    }
+  ],
+  "notes": [
+    "Colour 'sage green' appears describing the overall look ('sage green elegance'), not directly attached to 'glass bangles'; carried into the material attribute value on that basis."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

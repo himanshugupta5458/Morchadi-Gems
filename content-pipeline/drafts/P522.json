@@ -1,0 +1,80 @@
+{
+  "productId": "P522",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "cubic zirconia (multi-colored, synthetic)",
+      "displayTerm": "zirconia",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this high-end colorful zirconia necklace and earring set. Featuring a delicate copper leaf design and shimmering multi-colored synthetic stones"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material",
+      "value": "copper (leaf-shaped design elements)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "a delicate copper leaf design"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Set contents",
+      "value": "Necklace and earring set",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "this high-end colorful zirconia necklace and earring set"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P522.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P522/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 399,
+    "mrp": 399,
+    "cost": 160,
+    "referencePrice": "₹399 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Elevate your accessory game with this high-end colorful zirconia necklace and earring set. Featuring a delicate copper leaf design and shimmering multi-colored synthetic stones, this European fashion-inspired set adds a vibrant, sophisticated touch to any outfit. Perfect for daily elegance or as a stylish gift",
+    "referenceTitle": "Colorful Zirconia Leaf Jewelry Set",
+    "originalId": "984",
+    "originalSku": "MJ-146",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-146-colorful-zirconia-leaf-jewelry-set-984",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "combo"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "raw block also carried an 'combo' original category (Stage 0 exportNotes mapped it toward gift-hampers), but rawContent does not itself call for a gift-hampers collection tag, so suggestedCollections was left as carried through from the raw block."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

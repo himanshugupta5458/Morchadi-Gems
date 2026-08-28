@@ -1,0 +1,88 @@
+{
+  "productId": "P434",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone/Centerpiece",
+      "value": "resin or glass imitation pearl, unclear from text",
+      "displayTerm": "pearl-like",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shimmering, pearl-like heart centerpiece"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "polished gold-toned link chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chain Type",
+      "value": "link chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "polished gold-toned link chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from water, perfumes and lotions; store in a dry, safe place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it away from water, perfumes, and lotions, and storing it in a dry, safe place"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P434.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P434/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Celebrate timeless romance with our exquisite Heart Pendant Necklace. Featuring a shimmering, pearl-like heart centerpiece on a polished gold-toned link chain, this piece is the ultimate accessory for effortless, trend-forward styling. Designed to capture the light and elevate any ensemble, it is a perfect high-fashion choice for those who love to refresh their look with the latest styles. To preserve its radiant golden luster and delicate finish for all your special moments, we recommend keeping it away from water, perfumes, and lotions, and storing it in a dry, safe place.",
+    "referenceTitle": "Mother of Pearl Heart Necklace in Gold",
+    "originalId": "887",
+    "originalSku": "MJ-436",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-436-mother-of-pearl-heart-necklace-in-gold-887",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "referenceTitle claims 'Mother of Pearl' but rawContent only says 'pearl-like' (imitation) — stone value left as unverified-guess rather than claiming genuine mother-of-pearl."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

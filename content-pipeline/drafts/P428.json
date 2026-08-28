@@ -1,0 +1,75 @@
+{
+  "productId": "P428",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "gold-toned beaded chain with sculpted ribbon (bow) pendant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "This piece features a unique gold-toned beaded chain paired with a beautifully sculpted ribbon pendant"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colour",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "gold-toned beaded chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "avoid perfumes and moisture; store in a dry place after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "we recommend keeping it tucked away in a dry place after use and avoiding contact with perfumes and moisture"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P428.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P428/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of playful elegance to your jewelry rotation with our Beaded Bow Necklace. This piece features a unique gold-toned beaded chain paired with a beautifully sculpted ribbon pendant, making it the perfect fashion-forward accessory for everyday charm. To ensure this delicate piece keeps its radiant glow for all your special moments, we recommend keeping it tucked away in a dry place after use and avoiding contact with perfumes and moisture.",
+    "referenceTitle": "Gold Beaded Chain Bow Necklace",
+    "originalId": "881",
+    "originalSku": "MJ-265",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-265-gold-beaded-chain-bow-necklace-881",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

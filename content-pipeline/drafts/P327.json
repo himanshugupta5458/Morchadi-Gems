@@ -1,0 +1,86 @@
+{
+  "productId": "P327",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "crafted with a luxurious gold-plated finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "multicolor marquise and princess-cut crystal cluster (pink, mint green, amber, lavender) with clear cubic zirconia, exact stone types unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a vibrant mix of marquise and princess-cut stones in pink, mint green, amber, lavender, and clear CZ"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "dazzling floral burst design",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "these earrings create a dazzling floral burst design that instantly catches the eye"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight yet glamorous"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P327.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P327/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 150,
+    "mrp": 150,
+    "cost": 60,
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "- Brighten up your look with these stunning multicolor crystal cluster stud earrings, crafted with a luxurious gold-plated finish. Featuring a vibrant mix of marquise and princess-cut stones in pink, mint green, amber, lavender, and clear CZ, these earrings create a dazzling floral burst design that instantly catches the eye.\n- Lightweight yet glamorous, these studs are perfect for festive celebrations, parties, weddings, and special occasions. Their colorful and versatile style pairs beautifully with ethnic, Indo-western, and modern outfits, adding a bold and fashionable pop of color.\n- Keywords included: multicolor earrings, crystal cluster studs, gold-plated jewelry, festive earrings for women, colorful stone earrings, party wear studs, statement earrings",
+    "referenceTitle": "Multicolor Crystal Cluster Stud Earrings",
+    "originalId": "753",
+    "originalSku": "MJ-439",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-439-multicolor-crystal-cluster-stud-earrings-753",
+    "originalCategories": [
+      "Traditional Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

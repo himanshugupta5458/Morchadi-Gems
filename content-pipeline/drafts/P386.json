@@ -1,0 +1,112 @@
+{
+  "productId": "P386",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Enamel technique",
+      "value": "meenakari (green)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "diamond-shaped green meenakari panels"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Motif/decoration",
+      "value": "hand-painted pink floral motifs",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "hand-painted pink floral motifs"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stonework",
+      "value": "kundan",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling kundan accents"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial finish",
+      "value": "gold-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "framing a clean gold-tone quartz dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "framing a clean gold-tone quartz dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Embellishment",
+      "value": "ghungroo bells",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ghungroo bells add a playful jingle to every move."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P386.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P386/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 350,
+    "mrp": 350,
+    "cost": 140,
+    "referencePrice": "₹350 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Delicate yet deeply traditional — this charming Kashmiri bracelet watch features diamond-shaped green meenakari panels with hand-painted pink floral motifs and sparkling kundan accents, framing a clean gold-tone quartz dial. Ghungroo bells add a playful jingle to every move. Lightweight, beautifully crafted, and perfect for ethnic fusion looks, festive gatherings, and gifting to someone special.",
+    "referenceTitle": "Kashmiri Green Meenakari Floral Kundan Bracelet Watch",
+    "originalId": "835",
+    "originalSku": "MJ-356",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-356-kashmiri-green-meenakari-floral-kundan-bracelet-watch-835",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [
+    "added 'gifting' to suggestedCollections based on explicit text ('gifting to someone special'); raw block had none."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

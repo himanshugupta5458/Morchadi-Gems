@@ -35,61 +35,61 @@
       },
       {
         "path": "/products/P398-2.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-1.webp",
         "role": "extra-1"
       },
       {
         "path": "/products/P398-3.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-2.webp",
         "role": "extra-2"
       },
       {
         "path": "/products/P398-4.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-3.webp",
         "role": "extra-3"
       },
       {
         "path": "/products/P398-5.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-4.webp",
         "role": "extra-4"
       },
       {
         "path": "/products/P398-6.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-5.webp",
         "role": "extra-5"
       },
       {
         "path": "/products/P398-7.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-6.webp",
         "role": "extra-6"
       },
       {
         "path": "/products/P398-8.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-7.webp",
         "role": "extra-7"
       },
       {
         "path": "/products/P398-9.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-8.webp",
         "role": "extra-8"
       },
       {
         "path": "/products/P398-10.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-9.webp",
         "role": "extra-9"
       },
       {
         "path": "/products/P398-11.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P398/raw/extra-10.webp",
         "role": "extra-10"
       }

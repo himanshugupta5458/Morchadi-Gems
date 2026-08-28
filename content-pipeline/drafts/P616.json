@@ -1,0 +1,108 @@
+{
+  "productId": "P616",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Finish",
+      "value": "anti-tarnish silver-tone",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish silver-tone finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Dial colour",
+      "value": "Aqua blue",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant aqua blue dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Bracelet material",
+      "value": "stainless-steel-style mesh (material not confirmed)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Fine stainless-steel-style mesh bracelet"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design detail",
+      "value": "Bow-inspired detailing around the dial",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Unique bow-inspired detailing around the dial"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Movement",
+      "value": "Quartz",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Quartz movement"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care instructions",
+      "value": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P616.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P616/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 599,
+    "mrp": 599,
+    "cost": 240,
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a chic vintage touch to your everyday look with this Vintage Anti-Tarnish Silver Bracelet Watch, featuring a beautiful aqua blue dial and a sleek silver mesh bracelet. The delicate round dial, elegant metallic finish and unique bow-inspired detailing around the dial give this watch a refined and feminine appearance.\nThe fine mesh strap creates a lightweight, comfortable look while the soft blue dial adds a subtle pop of colour. Perfect for women who love minimal yet distinctive vintage-inspired accessories that can be styled effortlessly with both western and ethnic outfits.\nProduct Highlights\n- ✨ Vintage-inspired bracelet watch\n- 🤍 Anti-tarnish silver-tone finish\n- 💙 Elegant aqua blue dial\n- 🔗 Fine stainless-steel-style mesh bracelet\n- 🎀 Unique bow-inspired detailing around the dial\n- ⌚ Quartz movement\n- 💎 Elegant jewellery-inspired design\n- 👗 Easy to style with ethnic and western outfits\n- 🎁 Perfect gifting option for women\n- ✨ Suitable for everyday wear and special occasions\nPerfect For\nCollege, office, casual outings, date nights, parties, festive occasions and gifting.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "referenceTitle": "Vintage Anti-Tarnish Silver Blue Dial Mesh Bracelet Watch for Women",
+    "originalId": "1088",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-silver-blue-dial-mesh-bracelet-watch-for-women-1088",
+    "originalCategories": [
+      "Vintage watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

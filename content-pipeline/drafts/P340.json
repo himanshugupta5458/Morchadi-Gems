@@ -80,7 +80,7 @@
       },
       {
         "path": "/products/P340-2.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P340/raw/extra-1.webp",
         "role": "extra-1"
       }

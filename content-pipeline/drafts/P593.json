@@ -1,0 +1,89 @@
+{
+  "productId": "P593",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design); D'Pary Kundan Drop Earrings – Pink Stone; Kashmiri Watch Jewellery Set – Traditional Gold-Tone; Satin Fabric Rose Hair Clip – Ivory; Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber & Peach); Satin Fabric Flower Hair Clip – Yellow; Nail Polish Remover; Paper Soap Sheets; Black Velvet Box with 12 Pairs of Earrings",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "What's Inside:\n- Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design)\n- D'Pary Kundan Drop Earrings – Pink Stone\n- Kashmiri Watch Jewellery Set – Traditional Gold-Tone\n- Satin Fabric Rose Hair Clip – Ivory\n- Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber & Peach)\n- Satin Fabric Flower Hair Clip – Yellow\n- Nail Polish Remover\n- Paper Soap Sheets\n- Black Velvet Box with 12 Pairs of Earrings"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Packaging",
+      "value": "Signature pink gift box with satin ribbon closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Packed in a signature pink gift box with a satin ribbon closure"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "Anti-tarnish gold-tone finish (bracelets)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Anti-tarnish bracelets that stay shiny longer – no fading, no colour loss"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P593.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P593/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 1799,
+    "mrp": 1799,
+    "cost": 720,
+    "referencePrice": "₹1799 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting",
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "An elegant, fully-loaded gift hamper designed for someone truly special. Packed in a signature pink gift box with a satin ribbon closure — this hamper is a complete jewellery and accessories collection, perfect for birthdays, anniversaries, weddings, or festive gifting.\nWhat's Inside:\n- Anti-Tarnish Gold-Tone Charm Bracelets (Set of 2 – Floral Design)\n- D'Pary Kundan Drop Earrings – Pink Stone\n- Kashmiri Watch Jewellery Set – Traditional Gold-Tone\n- Satin Fabric Rose Hair Clip – Ivory\n- Marble-Effect Flower Hair Claw Clips (Set of 2 – Amber & Peach)\n- Satin Fabric Flower Hair Clip – Yellow\n- Nail Polish Remover\n- Paper Soap Sheets\n- Black Velvet Box with 12 Pairs of Earrings\nWhy She'll Love It:\n- A complete jewellery wardrobe in one box – ethnic, western & everyday pieces\n- Anti-tarnish bracelets that stay shiny longer – no fading, no colour loss\n- 12 pairs of earrings included in a velvet storage box – ready to mix & match\n- Travel-friendly essentials like paper soap & nail polish remover included\n- Perfect for weddings, Karwa Chauth, birthdays, Rakhi, or bridal shower gifting\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Luxury Jewellery Gift Hamper for Her",
+    "originalId": "1063",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/luxury-jewellery-gift-hamper-for-her-1063",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed COD-availability notice",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    },
+    {
+      "type": "brand-mismatch",
+      "detail": "Third-party jewelry brand named as a hamper content item, not a Morchadi Gems product",
+      "sourceContext": "D'Pary Kundan Drop Earrings – Pink Stone"
+    }
+  ],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

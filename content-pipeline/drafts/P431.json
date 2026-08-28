@@ -1,0 +1,64 @@
+{
+  "productId": "P431",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "open-heart centerpiece with solid-heart drop; Y-style",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a delicate open-heart centerpiece and a graceful solid-heart drop, this Y-style necklace"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "avoid water and perfumes; store in a dry, soft pouch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "kept away from water and perfumes. We recommend storing it in a dry, soft pouch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P431.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P431/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Celebrate love and modern style with our exquisite Heart Lariat Necklace. Featuring a delicate open-heart centerpiece and a graceful solid-heart drop, this Y-style necklace is designed to elongate your neckline with effortless elegance. A perfect fashion statement for date nights and special occasions, this piece maintains its golden radiance best when kept away from water and perfumes. We recommend storing it in a dry, soft pouch after your day of shine to keep it looking beautiful.",
+    "referenceTitle": "Heart Lariat Necklace",
+    "originalId": "884",
+    "originalSku": "MJ-336",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-336-heart-lariat-necklace-884",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,99 @@
+{
+  "productId": "P328",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "gold-plated alloy",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Made from premium-quality alloy and finished with durable gold plating"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "square-cut pink crystal, exact type unclear from text",
+      "displayTerm": null,
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Featuring a radiant square-cut pink crystal set on a sleek gold-plated band"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "minimalist Korean-style square-cut solitaire",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Trendy Korean Design – Minimalist square-cut solitaire with a sparkling pink crystal."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Size",
+      "value": "adjustable, fits most finger sizes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable Fit – Flexible band fits comfortably on most finger sizes."
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight and skin-friendly",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "the ring is lightweight, skin-friendly, and comfortable to wear all day"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P328.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P328/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 49,
+    "mrp": 49,
+    "cost": 20,
+    "referencePrice": "₹49 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Embrace soft elegance with this Korean Pink Square Adjustable Ring, a perfect blend of minimalist Korean design and timeless fashion. Featuring a radiant square-cut pink crystal set on a sleek gold-plated band, this ring adds a graceful charm to any look.\nMade from premium-quality alloy and finished with durable gold plating, the ring is lightweight, skin-friendly, and comfortable to wear all day. The adjustable band ensures a snug fit for most finger sizes, making it practical and stylish at the same time.\nThe delicate pink crystal symbolizes love, beauty, and elegance, making this ring suitable for both everyday wear and special occasions. Whether you pair it with western outfits or traditional attire, it enhances your style effortlessly.\nA versatile accessory and a wonderful gift option, this Korean-style pink crystal ring is perfect for birthdays, anniversaries, Valentine's Day, or festive occasions — a jewelry piece every woman would love to own.\n-\nTrendy Korean Design – Minimalist square-cut solitaire with a sparkling pink crystal.\n-\nPremium Gold Plating – Crafted from high-quality alloy with polished gold finish for lasting shine.\n-\nAdjustable Fit – Flexible band fits comfortably on most finger sizes.\n-\nPerfect for Any Occasion – Great for daily wear, parties, weddings, office wear & festive celebrations.\n-\nIdeal Gift for Women & Girls – A thoughtful choice for birthdays, anniversaries, Valentine's Day, or as a surprise gift.",
+    "referenceTitle": "Korean Pink Square Adjustable Ring",
+    "originalId": "754",
+    "originalSku": "MJ-379",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-379-korean-pink-square-adjustable-ring-754",
+    "originalCategories": []
+  },
+  "flaggedContent": [],
+  "notes": [
+    "category guessed as 'rings' from source title ('Korean Pink Square Adjustable Ring') and product description (ring, band, finger sizes); raw block did not supply one"
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

@@ -1,0 +1,66 @@
+{
+  "productId": "P247",
+  "sourceType": "migrated",
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Design",
+      "value": "blue ombre enamel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "blue ombre enamel kada"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "gold-plated, anti-tarnish, water-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-quality gold-plated finish, its anti-tarnish and water-resistant properties"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P247.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P247/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 120,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Dive into elegance with this premium blue ombre enamel kada. Crafted with a high-quality gold-plated finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This chic, modern statement piece seamlessly transitions from daily wear to special occasions while maintaining its stunning luster.",
+    "referenceTitle": "Anti-Tarnish Blue Ombre Enamel Kada",
+    "originalId": "632",
+    "originalSku": "MJ-062",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-062-anti-tarnish-blue-ombre-enamel-kada-632",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

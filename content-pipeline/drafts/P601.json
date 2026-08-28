@@ -1,0 +1,86 @@
+{
+  "productId": "P601",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "Pearl beads (natural or imitation unclear from text)",
+      "displayTerm": "pearl beads",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Designed with premium white pearl beads, vibrant pink & green accents, and intricate meenakari-inspired charms"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "Meenakari-inspired charms",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "intricate meenakari-inspired charms"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable chain closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain closure"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Bracelet Watch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P601.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P601/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 249,
+    "mrp": 249,
+    "cost": 100,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Add a touch of timeless elegance to your look with this beautiful Traditional Rajasthani Pearl Beaded Bracelet Watch. Designed with premium white pearl beads, vibrant pink & green accents, and intricate meenakari-inspired charms, this watch perfectly blends tradition with modern style.\nPerfect for festive occasions, Raksha Bandhan, weddings, Navratri, Teej, Karwa Chauth, and everyday ethnic wear. The adjustable chain ensures a comfortable fit for all wrist sizes.\nFeatures\n-\nTraditional Rajasthani-inspired design\n-\nElegant pearl bead bracelet\n-\nBeautiful meenakari-style charms\n-\nLightweight & comfortable\n-\nAdjustable chain closure\n-\nSuitable for festive & daily wear\n-\nIdeal gift for women & girls\nPackage Includes: 1 Bracelet Watch",
+    "referenceTitle": "Traditional Rajasthani Pearl Beaded Bracelet Watch for Women",
+    "originalId": "1071",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-rajasthani-pearl-beaded-bracelet-watch-for-women-1071",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

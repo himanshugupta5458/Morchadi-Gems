@@ -1,0 +1,108 @@
+{
+  "productId": "P603",
+  "sourceType": "migrated",
+  "category": "watches",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "Glass or synthetic stone set in traditional Kundan style, exact material unclear from text",
+      "displayTerm": "Kundan",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "sparkling Kundan stones, vibrant red & green accents"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone colour accents",
+      "value": "Red & green stone embellishments",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Red & green stone embellishments"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish",
+      "value": "Antique gold-tone finish",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Premium antique gold finish"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "Elegant dangling bead detailing",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Elegant dangling bead detailing"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Closure",
+      "value": "Adjustable chain closure",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Adjustable chain for a comfortable fit"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "1 Traditional Bracelet Watch",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Package Includes: 1 Traditional Bracelet Watch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P603.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P603/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 299,
+    "mrp": 299,
+    "cost": 120,
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Make every festive look unforgettable with this Traditional Kundan Bracelet Watch, featuring an elegant antique gold finish, sparkling Kundan stones, vibrant red & green accents, and delicate hanging bead details. Designed to resemble a statement bracelet, this watch beautifully combines traditional Indian craftsmanship with everyday functionality.\nWhether paired with a saree, lehenga, salwar suit, or Indo-western outfit, this designer watch adds a regal charm to every occasion.\nFeatures\n-\nPremium antique gold finish\n-\nTraditional Kundan stone craftsmanship\n-\nRed & green stone embellishments\n-\nElegant dangling bead detailing\n-\nAdjustable chain for a comfortable fit\n-\nLightweight & skin-friendly\n-\nPerfect for weddings, festivals, parties & gifting\nPackage Includes: 1 Traditional Bracelet Watch",
+    "referenceTitle": "Traditional Kundan Bracelet Watch for Women",
+    "originalId": "1073",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/traditional-kundan-bracelet-watch-for-women-1073",
+    "originalCategories": [
+      "Kahmiri Watch"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

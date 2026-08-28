@@ -1,0 +1,75 @@
+{
+  "productId": "P427",
+  "sourceType": "migrated",
+  "category": "necklaces",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Chain Type",
+      "value": "snake chain",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "high-shine snake chain"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "golden luster"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep dry and away from perfumes; store in original packaging after use",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "shines brightest when kept dry and away from perfumes. Simply store it in its original packaging after use"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P427.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P427/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 89,
+    "mrp": 89,
+    "cost": 20,
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Capture the essence of modern romance with our Fluid Ribbon Bow Necklace. Featuring a sleek, high-shine snake chain and a beautifully draped bow pendant, this piece is the ultimate accessory for the fashion-forward minimalist. Designed to be a seasonal statement, this jewelry shines brightest when kept dry and away from perfumes. Simply store it in its original packaging after use to maintain its golden luster for all your special occasions.",
+    "referenceTitle": "Elegant Gold Snake Chain Bow Necklace",
+    "originalId": "880",
+    "originalSku": "MJ-228",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-228-elegant-gold-snake-chain-bow-necklace-880",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

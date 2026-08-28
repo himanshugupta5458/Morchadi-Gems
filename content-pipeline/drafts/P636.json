@@ -1,0 +1,89 @@
+{
+  "productId": "P636",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "18K gold-plated stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Material: 18K gold-plated stainless steel, tarnish and water resistant"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "amethyst-purple cubic zirconia, bar bezel setting",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stone: Amethyst-purple cubic zirconia, bar bezel setting"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Chain",
+      "value": "Fine link chain, adjustable length",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Chain: Fine link chain, adjustable length"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Pendant size",
+      "value": "Approx. 1.2cm x 0.6cm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Pendant size: Approx. 1.2cm x 0.6cm"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P636.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P636/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 249,
+    "mrp": 249,
+    "cost": 100,
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "A minimalist rectangular bar pendant set with a rich amethyst-purple stone, finished with a smooth gold bezel. The horizontal bar design sits centered on a fine gold chain, adding a modern, understated pop of color to any look. Crafted in 18K gold-plated stainless steel, it's tarnish and water resistant, so it holds its shine through everyday wear.\nSimple, elegant, and versatile, this necklace works beautifully as a birthstone piece for February or as an everyday accent for anyone drawn to purple hues.\nDetails:\n- Material: 18K gold-plated stainless steel, tarnish and water resistant\n- Stone: Amethyst-purple cubic zirconia, bar bezel setting\n- Chain: Fine link chain, adjustable length\n- Pendant size: Approx. 1.2cm x 0.6cm",
+    "referenceTitle": "Birthstone Purple Bar Pendant Necklace",
+    "originalId": "1108",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/birthstone-purple-bar-pendant-necklace-1108",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

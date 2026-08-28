@@ -1,0 +1,97 @@
+{
+  "productId": "P591",
+  "sourceType": "migrated",
+  "category": "hair-accessories",
+  "subcategory": null,
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "Coral Pink (top-left)",
+        "Ivory Cream (top-right)",
+        "Lilac Purple (bottom-left)",
+        "Beige (bottom-right)"
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "Organza and satin",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Soft organza bow with hanging satin tulip bud(s)"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "Tulip bud bow, Korean-style",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Aesthetic, trending Korean-style hair accessory"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Clip type",
+      "value": "Alligator clip",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Secure alligator clip, holds all hair types"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Colour availability",
+      "value": "Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Available in Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P591.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P591/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 79,
+    "mrp": 79,
+    "cost": 32,
+    "referencePrice": "₹79 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [],
+  "sourceNotes": {
+    "rawContent": "Soft organza bow with hanging satin tulip bud(s)\nSecure alligator clip, holds all hair types\nAesthetic, trending Korean-style hair accessory\nAvailable in Coral Pink, Ivory Cream, Lilac Purple & Champagne Beige\nPerfect for daily wear, college, parties & festivals\nGreat gift for girls & women who love cute accessories",
+    "referenceTitle": "Tulip Bow Hair Clip",
+    "originalId": "1061",
+    "originalSku": "MJ-605",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-605-tulip-bow-hair-clip-1061",
+    "originalCategories": [
+      "Hair Accessories"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

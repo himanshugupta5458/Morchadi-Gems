@@ -1,0 +1,110 @@
+{
+  "productId": "P574",
+  "sourceType": "migrated",
+  "category": "earrings",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "316L stainless steel",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "316L Stainless Steel — rust-proof, tarnish-proof & skin-safe"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Finish/Plating",
+      "value": "gold-plated",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Gold-plated finish — rich, long-lasting shine"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Water Resistance",
+      "value": "waterproof & sweat-resistant",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Waterproof & sweat-resistant — built for everyday wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design Detail",
+      "value": "twisted rope texture with raised heart charm",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Twisted rope texture + raised heart charm at base"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Hoop Shape",
+      "value": "oval hoop silhouette",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Oval hoop silhouette — modern and flattering"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Avoid prolonged exposure to harsh chemicals and perfumes",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes."
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P574.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P574/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 99,
+    "mrp": 99,
+    "cost": 40,
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Romantic and bold — our Twisted Rope Heart Hoop Earrings feature a thick twisted rope-style gold hoop with a raised heart charm at the bottom centre. The combination of texture and sentiment makes this a standout piece that is both trendy and meaningful.\n- 316L Stainless Steel — rust-proof, tarnish-proof & skin-safe\n- Gold-plated finish — rich, long-lasting shine\n- Waterproof & sweat-resistant — built for everyday wear\n- Twisted rope texture + raised heart charm at base\n- Oval hoop silhouette — modern and flattering\nPairs with: Casual western, indo-western, date night outfits.\nStainless steel is highly durable and water-resistant. Avoid prolonged exposure to harsh chemicals and perfumes.",
+    "referenceTitle": "Twisted Rope Heart Gold Stainless Steel Hoop Earrings",
+    "originalId": "1044",
+    "originalSku": "MJ-610",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-610-twisted-rope-heart-gold-stainless-steel-hoop-earrings-1044",
+    "originalCategories": [
+      "Anti tarnish Earrings"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

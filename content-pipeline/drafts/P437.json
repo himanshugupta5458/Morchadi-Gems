@@ -1,0 +1,78 @@
+{
+  "productId": "P437",
+  "sourceType": "migrated",
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Stone",
+      "value": "glass or cubic zirconia, unclear from text",
+      "displayTerm": "crystals",
+      "stoneSource": "unverified-guess",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "delicate crystals"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Material/Finish",
+      "value": "gold-toned",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "golden luster"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care Instructions",
+      "value": "Keep away from moisture and perfumes; store in a dry, safe place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "keeping it away from moisture and perfumes, and storing it in a dry, safe place after each wear"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P437.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P437/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 110,
+    "mrp": 110,
+    "cost": 44,
+    "referencePrice": "₹110 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "sourceNotes": {
+    "rawContent": "Bring a touch of classic sophistication to your jewelry collection with our Exquisite Fan Pendant Necklace. This high-fashion statement piece features a shimmering geometric drop adorned with delicate crystals, perfect for adding instant glamour to any outfit. Designed for trend-focused styling, this necklace is crafted to be a standout accessory in your rotation. To maintain its brilliant golden luster and protect its intricate finish, we recommend keeping it away from moisture and perfumes, and storing it in a dry, safe place after each wear",
+    "referenceTitle": "Fan-Shaped Crystal Pendant Necklace",
+    "originalId": "891",
+    "originalSku": "MJ-250",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-250-fan-shaped-crystal-pendant-necklace-891",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ]
+  },
+  "flaggedContent": [],
+  "notes": [],
+  "status": "draft",
+  "generatedBy": null
+}

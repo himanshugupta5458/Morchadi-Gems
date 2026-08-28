@@ -1,0 +1,85 @@
+{
+  "productId": "P597",
+  "sourceType": "migrated",
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Hamper contents",
+      "value": "crystal drop necklace & earring set (gift box included); satin rose hair ties (set of 2, pink & ivory); Sunfeast Dark Fantasy Choco Fills; Hershey's Kisses Hazelnut 'n' Cookies; Naliao rose oil face mask",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "- Crystal Drop Necklace & Earring Set (Gift Box Included)\n- Satin Rose Hair Ties (Set of 2 – Pink & Ivory)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Rose Oil Face Mask (Hydrating & Revitalizing)"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Package contents",
+      "value": "kraft gift box with dried flower styling",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Beautifully packed in a kraft gift box with dried flower styling for a premium unboxing experience"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "gifting (birthdays, anniversaries)",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Ideal for birthdays, anniversaries, or a \"just because\" surprise"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P597.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P597/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 819,
+    "mrp": 819,
+    "cost": 328,
+    "referencePrice": "₹819 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "A pretty, thoughtfully packed gift hamper combining jewellery, indulgent treats, and a relaxing skincare treat. Beautifully packed in a kraft gift box with dried flower styling for a premium unboxing experience — perfect for birthdays, anniversaries, or a sweet surprise.\nWhat's Inside:\n- Crystal Drop Necklace & Earring Set (Gift Box Included)\n- Satin Rose Hair Ties (Set of 2 – Pink & Ivory)\n- Sunfeast Dark Fantasy Choco Fills\n- Hershey's Kisses – Hazelnut 'n' Cookies\n- Naliao Rose Oil Face Mask (Hydrating & Revitalizing)\nWhy She'll Love It:\n- A complete gifting mix — jewellery, sweet treats & self-care\n- Necklace & earring set comes in its own gift box, ready to wear or re-gift\n- Ready-to-gift packaging, no extra wrapping needed\n- Ideal for birthdays, anniversaries, or a \"just because\" surprise\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "referenceTitle": "Self Care Gift Hamper for Her",
+    "originalId": "1067",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/self-care-gift-hamper-for-her-1067",
+    "originalCategories": [
+      "Hampers"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "boilerplate-discarded",
+      "detail": "Removed a COD-availability notice per the boilerplate rule — BUT it reads as a real hamper-specific payment restriction (prepaid only), not generic site copy. Owner should decide at review whether this constraint must be preserved somewhere real (checkout/product copy), because this draft does not carry it as a fact.",
+      "sourceContext": "Note: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only."
+    }
+  ],
+  "notes": [
+    "Contents name third-party product brands (Sunfeast, Hershey's, Naliao) — real contents facts, kept as candidates per the P531 precedent; stock/substitution wording is an owner call for Phase 2."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}

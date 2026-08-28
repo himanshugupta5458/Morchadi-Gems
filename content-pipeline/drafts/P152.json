@@ -1,0 +1,118 @@
+{
+  "productId": "P152",
+  "sourceType": "migrated",
+  "category": "rings",
+  "subcategory": null,
+  "variants": [],
+  "attributes": [
+    {
+      "label": "Material",
+      "value": "rosegold-plated brass",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Plating: Rosegold Polished\n🔹 Material: Brass"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Stone",
+      "value": "cubic zirconia",
+      "displayTerm": "American Diamond",
+      "stoneSource": "known-trade-term",
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Stones: Premium American Diamonds"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Design",
+      "value": "star-shaped",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Design: Star-shaped – a minimalist and chic addition to your collection"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Weight",
+      "value": "lightweight",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Lightweight & comfortable for daily wear"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Care",
+      "value": "clean gently with microfiber or polishing cloth; avoid chemicals, water and ultrasonic cleaners; remove while swimming, showering or gardening; store in a cool, dry place",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Care Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures"
+      },
+      "confirmed": true
+    },
+    {
+      "label": "Occasion",
+      "value": "gifting (weddings, birthdays, Valentine's Day, festivals); teen girls and women; western and ethnic outfits",
+      "displayTerm": null,
+      "stoneSource": null,
+      "source": {
+        "origin": "migrated-text",
+        "quotedPhrase": "Perfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch"
+      },
+      "confirmed": true
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P152.webp",
+        "confirmed": true,
+        "sourceFile": "2026-08-23-batch-01/P152/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "price": 59,
+    "mrp": 59,
+    "cost": 24,
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  },
+  "personalized": false,
+  "suggestedCollections": [
+    "gifting"
+  ],
+  "sourceNotes": {
+    "rawContent": "Shine bright with our DC Jewelry Modern Bar Stone Ring — a charming symbol of elegance and grace. Whether it's a special celebration or everyday style, this ring brings a subtle sparkle to your look. It's an ideal gift for your loved ones on birthdays, weddings, anniversaries, Valentine's Day, or any festive occasion.\nWhy You'll Love It:\n✨ Lightweight & comfortable for daily wear\n✨ Trendy design for girls, teens, and women of all ages\n✨ A thoughtful gift that makes moments memorable\nProduct Details:\n🔹 Brand: DC Jewelry\n🔹 Collection: All Occasions\n🔹 Type: Finger Ring\n🔹 Plating: Rosegold Polished\n🔹 Material: Brass\n🔹 Stones: Premium American Diamonds\n🔹 Design: Star-shaped – a minimalist and chic addition to your collection\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "referenceTitle": "DC Jewelry Modern Bar Stone Ring",
+    "originalId": "184",
+    "originalSku": "MJ-177",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-177-dc-jewelry-modern-bar-stone-ring-184",
+    "originalCategories": [
+      "DC Ring"
+    ]
+  },
+  "flaggedContent": [
+    {
+      "type": "brand-mismatch",
+      "detail": "Source names \"DC Jewelry\" as the product's brand; the catalogue's brand is Morchadi Gems. Recorded rather than silently corrected or silently kept; no Brand attribute is created.",
+      "sourceContext": "Brand: DC Jewelry"
+    }
+  ],
+  "notes": [
+    "The Details block's \"Design: Star-shaped\" is quoted verbatim from source, but the reference title (\"DC Jewelry Modern Bar Stone Ring\") names a different design — the Details/Care/Perfect For block reads as shared DC Jewelry template copy repeated across this batch. Owner must verify the actual design of this piece at review."
+  ],
+  "status": "draft",
+  "generatedBy": null
+}
