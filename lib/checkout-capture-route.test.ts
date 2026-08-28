@@ -308,6 +308,7 @@ describe("GET /api/verify-order, once there is an order to update", () => {
       status: "PAID",
       amount: 259,
       trackingId: afterVerification.id,
+      amountDue: 0,
     });
 
     expect(afterVerification.cashfreePaymentStatus).toBe("PAID");
@@ -329,6 +330,7 @@ describe("GET /api/verify-order, once there is an order to update", () => {
       status: "PAID",
       amount: 999,
       trackingId: null,
+      amountDue: null,
     });
   });
 });

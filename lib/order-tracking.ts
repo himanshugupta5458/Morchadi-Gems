@@ -117,7 +117,7 @@ async function findTrackedOrderRow(client: PublicOrderTrackingClient, orderId: s
  * ([`ORDER_NOT_FOUND_MESSAGE`](./order-tracking-copy.ts)).
  *
  * That last case is why this **never throws**, the same discipline and for the same reason as
- * [`findTrackingIdForCashfreeOrder`](./order-capture.ts): `/track` is a public page, the person
+ * [`findCapturedOrderForPaymentReference`](./order-capture.ts): `/track` is a public page, the person
  * on it is a customer holding a parcel number, and an outage in a database they have never
  * heard of is not their problem to read a stack trace about. They are told the lookup did not
  * work in the words the page already uses for a number that names nothing — which is all they

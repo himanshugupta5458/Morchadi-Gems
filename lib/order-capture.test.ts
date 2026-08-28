@@ -69,6 +69,11 @@ function captureInputFor(items: readonly CreateOrderItem[], cashfreeOrderId: str
       shippingFee: order.shipping,
       total: order.total,
     },
+    payment: {
+      paymentType: "prepaid" as const,
+      amountPrepaid: order.total,
+      amountDue: 0,
+    },
     lines: buildOrderCaptureLines(items, order.lineItems, getOrderCaptureCatalogue()),
   };
 }

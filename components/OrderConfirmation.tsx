@@ -1,18 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import type { CheckoutData } from "@/types/cart";
 import type { VerifyOrderResult } from "@/types/order";
 import { useCart } from "@/lib/cart-context";
 import { clearCheckoutData, readCheckoutData } from "@/lib/checkout";
-import { CONTACT_CONFIG, DELIVERY_ESTIMATE_LINE } from "@/lib/config";
+import { DELIVERY_ESTIMATE_LINE } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import {
   CART_PATH,
   CHECKOUT_PAYMENT_PATH,
-  buildTrackOrderHref,
   buildVerifyOrderPath,
 } from "@/lib/navigation";
 import { notifyAdminOfPaidOrder } from "@/lib/notify-client";
@@ -24,6 +22,7 @@ import {
   UNREACHABLE_VERIFICATION,
   canDisplayBundleForOrder,
   describeVerificationFailure,
+  isCodOrderReference,
   isMorchadiOrderId,
   parseVerifyOrderResult,
   readBundleTrackingId,
@@ -31,9 +30,12 @@ import {
   type VerificationFailure,
 } from "@/lib/verify";
 import { AddressRecap } from "@/components/AddressRecap";
+import { AmountDueNotice } from "@/components/AmountDueNotice";
 import { Button } from "@/components/Button";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CenteredNotice } from "@/components/CenteredNotice";
+import { CodOrderConfirmation } from "@/components/CodOrderConfirmation";
+import { OrderNumberCallout, SupportLine } from "@/components/OrderNumberCallout";
 import { OrderReceipt } from "@/components/OrderReceipt";
 import { CheckIcon, GemOutlineIcon } from "@/components/icons";
 
@@ -91,59 +93,12 @@ function describeOrderReference(reference: OrderReference): string {
     : `Order number ${reference.trackingId}`;
 }
 
-/**
- * The order number, given the weight it is worth. It is the one thing on a confirmation
- * screen a shopper may need to copy down, and it is set at heading size and spaced so the
- * unambiguous alphabet `lib/order-id.ts` chose survives being read off a phone screen.
- *
- * The tracking link carries the number with it, so the shopper who follows it now sees their
- * order immediately, and the one who bookmarks it has the number in the URL rather than only
- * on this screen.
- */
-function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.Element {
-  return (
-    <div className="flex w-full max-w-sm flex-col items-center gap-2 border border-gold/40 bg-gold/5 px-6 py-6">
-      <span className="text-eyebrow uppercase tracking-caps-wide text-muted">
-        Your order number
-      </span>
-      <strong className="font-display text-heading tracking-caps text-ink">
-        {trackingId}
-      </strong>
-      <span className="text-body-sm text-muted">
-        Keep this. It is what we will ask for if you message us about this order, and what you
-        type in to{" "}
-        <Link
-          href={buildTrackOrderHref(trackingId)}
-          className="text-ink underline decoration-gold underline-offset-4 transition-colors duration-250 hover:text-gold-deep"
-        >
-          check where it has got to
-        </Link>
-        .
-      </span>
-    </div>
-  );
-}
-
 function OrderFact({ label, value }: { label: string; value: string }): JSX.Element {
   return (
     <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
       <dt className="text-label uppercase tracking-caps text-muted">{label}</dt>
       <dd className="font-sans text-body text-ink">{value}</dd>
     </div>
-  );
-}
-
-function SupportLine({ children }: { children: string }): JSX.Element {
-  return (
-    <>
-      {children}{" "}
-      <a
-        href={`mailto:${CONTACT_CONFIG.supportEmail}`}
-        className="text-ink underline underline-offset-4 transition-colors duration-250 hover:text-gold"
-      >
-        {CONTACT_CONFIG.supportEmail}
-      </a>
-    </>
   );
 }
 
@@ -166,6 +121,7 @@ export function OrderConfirmation(): JSX.Element {
   const searchParams = useSearchParams();
   const requestedOrderId = searchParams.get("order_id")?.trim() ?? "";
   const orderId = isMorchadiOrderId(requestedOrderId) ? requestedOrderId : null;
+  const codOrderReference = isCodOrderReference(requestedOrderId) ? requestedOrderId : null;
 
   const { clearCart } = useCart();
 
@@ -275,6 +231,19 @@ export function OrderConfirmation(): JSX.Element {
     clearCheckoutData();
   }, [paidResult, clearCart]);
 
+  /**
+   * A cash-on-delivery reference is handed over whole rather than branched on further down.
+   *
+   * The two screens share a URL because Cashfree builds that URL for the paths it handles and
+   * this page has to answer both, but they share almost nothing else: one asks a payment
+   * gateway whether money moved and polls while it settles, and the other asks our own database
+   * what an order says and is finished in one request. Splitting here keeps the verification
+   * machinery below untouched by a path that has no payment to verify.
+   */
+  if (codOrderReference !== null) {
+    return <CodOrderConfirmation codOrderReference={codOrderReference} />;
+  }
+
   if (orderId === null) {
     return (
       <CenteredNotice
@@ -338,7 +307,11 @@ export function OrderConfirmation(): JSX.Element {
             </span>
           }
           title="Your order is confirmed"
-          message="Your payment went through and your order is with us. Nothing more is needed from you."
+          message={
+            result.amountDue !== null && result.amountDue > 0
+              ? "Your payment went through and your order is with us. The balance below is due when it is delivered."
+              : "Your payment went through and your order is with us. Nothing more is needed from you."
+          }
           actions={<ButtonLink href={SHOP_PATH}>Continue shopping</ButtonLink>}
           footnote={
             <SupportLine>Keep your order number. Questions about this order go to</SupportLine>
@@ -348,12 +321,26 @@ export function OrderConfirmation(): JSX.Element {
             <OrderNumberCallout trackingId={orderReference.trackingId} />
           )}
 
+          {result.amountDue !== null && result.amountDue > 0 ? (
+            <AmountDueNotice
+              amountDue={result.amountDue}
+              amountPrepaid={result.amount ?? 0}
+            />
+          ) : null}
+
           <dl className="flex w-full max-w-sm flex-col gap-3 border-y border-line py-6">
             {orderReference.trackingId === null ? (
               <OrderFact label="Payment reference" value={result.orderId} />
             ) : null}
             {result.amount === null ? null : (
-              <OrderFact label="Amount paid" value={formatRupees(result.amount)} />
+              <OrderFact
+                label={
+                  result.amountDue !== null && result.amountDue > 0
+                    ? "Paid online"
+                    : "Amount paid"
+                }
+                value={formatRupees(result.amount)}
+              />
             )}
           </dl>
 

@@ -24,13 +24,18 @@ const CELL_CLASSES = "px-4 py-4 align-middle text-body-sm text-ink";
  * carrying both would invite the wrong one to be quoted.
  *
  * The table scrolls inside its own container on a narrow screen rather than reflowing into
- * cards. Seven columns of an operational list are read *across* — a row is one order and the
+ * cards. Eight columns of an operational list are read *across* — a row is one order and the
  * comparison being made is between rows — and stacking them destroys that.
+ *
+ * `Due` sits beside `Total` because the two are read together or not at all, and it is blank
+ * rather than `₹0` on a prepaid order: a column of zeroes is a column an operator learns to
+ * skip, and the whole reason this one exists is that the few rows with a figure in it have
+ * money outstanding that nothing in this panel will collect for them.
  */
 export function AdminOrderTable({ rows, buildOrderHref }: AdminOrderTableProps): JSX.Element {
   return (
     <div className="overflow-x-auto border border-line">
-      <table className="w-full min-w-[56rem] border-collapse">
+      <table className="w-full min-w-[62rem] border-collapse">
         <thead className="border-b border-line bg-ivory">
           <tr>
             <th scope="col" className={HEADER_CELL_CLASSES}>
@@ -47,6 +52,9 @@ export function AdminOrderTable({ rows, buildOrderHref }: AdminOrderTableProps):
             </th>
             <th scope="col" className={`${HEADER_CELL_CLASSES} text-right`}>
               Total
+            </th>
+            <th scope="col" className={`${HEADER_CELL_CLASSES} text-right`}>
+              Due
             </th>
             <th scope="col" className={HEADER_CELL_CLASSES}>
               Payment
@@ -79,6 +87,15 @@ export function AdminOrderTable({ rows, buildOrderHref }: AdminOrderTableProps):
               </td>
               <td className={`${CELL_CLASSES} whitespace-nowrap text-right`}>
                 {formatRupees(row.total)}
+              </td>
+              <td className={`${CELL_CLASSES} whitespace-nowrap text-right`}>
+                {row.amountDue > 0 ? (
+                  <span className="font-medium text-gold-deep">
+                    {formatRupees(row.amountDue)}
+                  </span>
+                ) : (
+                  <span className="text-muted">—</span>
+                )}
               </td>
               <td className={`${CELL_CLASSES} whitespace-nowrap text-muted`}>
                 {getPaymentTypeLabel(row.paymentType)}

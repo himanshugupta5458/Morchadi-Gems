@@ -35,6 +35,32 @@ export const CHECKOUT_PAYMENT_PATH = "/payment";
 export const CHECKOUT_CONFIRMATION_PATH = "/order-confirmation";
 
 /**
+ * `/order-confirmation` for one order, named by its **payment reference** — Cashfree's `MG_…`
+ * id on an order that went to the gateway, and the `COD_…` reference this shop minted on one
+ * that did not.
+ *
+ * Cashfree builds the same URL itself for the paths it handles (`buildReturnUrl` in
+ * `lib/cashfree-config.ts` produces exactly this), so the two arrivals are indistinguishable to
+ * the page and it classifies the reference rather than the route it came from. That is why the
+ * cash-on-delivery path pushes here instead of getting a page of its own: one confirmation
+ * screen, one query parameter, and one place that decides which reference means what.
+ */
+export function buildOrderConfirmationHref(paymentReference: string): string {
+  return `${CHECKOUT_CONFIRMATION_PATH}?order_id=${encodeURIComponent(paymentReference)}`;
+}
+
+/**
+ * The only endpoint the confirmation page talks to about a cash-on-delivery order. Its sibling
+ * `/api/verify-order` asks Cashfree; this one only ever reads our own database, because there
+ * is no payment to ask anybody about.
+ */
+export const COD_ORDER_API_PATH = "/api/cod-order";
+
+export function buildCodOrderPath(codOrderReference: string): string {
+  return `${COD_ORDER_API_PATH}?order_id=${encodeURIComponent(codOrderReference)}`;
+}
+
+/**
  * The public order tracking page. Not a checkout step — it is where a customer comes back to
  * days later with the ten-character order number in hand, which is why it is reachable without
  * a cart, an address or a session. Kept out of the index all the same

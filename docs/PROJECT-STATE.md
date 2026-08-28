@@ -70,7 +70,7 @@ may pin higher patches).
 | Database | **Postgres, for orders / CRM / admins only** ([ADR-040](decisions/ADR-040-postgres-for-orders.md)). Prisma **6.19.2**, five models, three committed migrations. Checkout writes to it and the admin panel reads and writes it. The catalogue is still `data/products.json`, shipped inside the image, and is the sole authority on price |
 | Admin panel | **A working order-management panel**, not a foundation — see §5. Login, sessions, an order list with tabs/filters/search/pagination, and a per-order detail screen with status transitions, refunds, address correction and COD/RTO receipt tracking ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md), [ADR-044](decisions/ADR-044-admin-order-detail-and-layout-split.md)). **Not a catalogue admin** — catalogue changes still ship as code |
 | Accounts | **none for shoppers.** Guest checkout only, no login; each order mints a throwaway `guest_*` id for Cashfree. A `customers` row keyed on phone is a CRM record, not a credential ([ADR-042](decisions/ADR-042-order-capture-in-postgres.md)). One operator account exists, created by `npm run seed:admin` |
-| Payment types | **prepaid only, from the storefront.** The `payment_type` enum carries `prepaid`, `cod` and `partial_cod`, and the admin panel's refund logic already branches on all three — but no checkout offers a choice and `captureOrder` writes `prepaid` unconditionally |
+| Payment types | **all three, from the storefront.** `/payment` offers cash on delivery or full payment on a cart whose every line reads `minPrepaidAmount: 0`, and a minimum-or-full choice on one that does not. The client sends a *word*; `resolvePaymentPlan` prices it server-side and refuses a path the cart does not permit. COD skips Cashfree entirely and carries a locally minted `COD_…` reference; its capture failing is the one case that fails a checkout, since an unwritten COD order exists in no system at all ([ADR-059](decisions/ADR-059-checkout-payment-paths.md)) |
 | Analytics | **GA4, installed** ([ADR-039](decisions/ADR-039-analytics-and-utm-attribution.md)) — `NEXT_PUBLIC_GA_MEASUREMENT_ID`, rendered by `components/GoogleAnalytics.tsx`, with `googletagmanager.com` allowed in the CSP. Unset renders no tag at all. First-touch UTM capture rides alongside it |
 | Output | `output: "standalone"`, `poweredByHeader: false` (`next.config.mjs`) |
 | Deploy | Coolify on a Hostinger VPS, single image from the root `Dockerfile` ([ADR-032](decisions/ADR-032-coolify-docker-deploy.md), [ADR-047](decisions/ADR-047-prisma-generate-in-docker-build.md), `DEPLOY.md`) |
@@ -127,9 +127,12 @@ Only `NEXT_PUBLIC_*` may appear client-side. `lib/notify-boundary.test.ts` asser
 property for the CallMeBot pair: no client module reaches them at any import depth.
 
 **The database is off the critical path of a payment.** `captureOrder`,
-`recordVerifiedPaymentStatus` and `findTrackingIdForCashfreeOrder` never throw — a dead Postgres
+`recordVerifiedPaymentStatus` and `findCapturedOrderForPaymentReference` never throw — a dead Postgres
 logs and returns a degraded value, and the checkout is byte-identical. ADR-042;
-`lib/checkout-database-failure.test.ts`.
+`lib/checkout-database-failure.test.ts`. **The one exception is a cash-on-delivery order**, whose
+capture failing answers `503 ORDER_NOT_RECORDED` and places nothing: ADR-042's tolerance rests on
+the order being recoverable from the Cashfree dashboard, and a COD order is recoverable from
+nowhere (ADR-059).
 
 **Admin writes are validated on the server, not only in the form.** The lifecycle table, the
 address-editable window, the refund ceiling and the receipt-toggle preconditions are all
@@ -605,6 +608,21 @@ picture is untouched.
    major version.
 8. **There is still no backup policy for the orders table.** ADR-048 makes an outage visible; it
    does not make the data recoverable. See item 4 of the list below.
+9. **The owner is not notified of a cash-on-delivery order.** `/api/notify-admin` establishes
+   that a WhatsApp is warranted by asking Cashfree whether the order was paid — that check is
+   the only thing stopping it being an open endpoint for messaging the owner — and a COD order
+   has no such question to ask, so nothing is sent. The order appears in the admin panel and
+   nowhere else, which for a shop that runs on WhatsApp means a COD order can sit unnoticed.
+   Closing it means giving that route a second warrant: a Postgres read by the `COD_…`
+   reference, which is exactly as strong as the gateway lookup. Left deliberately outside
+   prompt 100 and recorded in [ADR-059](decisions/ADR-059-checkout-payment-paths.md).
+10. **No product has `minPrepaidAmount > 0`**, so the part-payment path, though fully built and
+    tested, has never run against real catalogue data. The first product given a real floor
+    should be walked through TC-27 of
+    [`PLAN-checkout-payment-paths.md`](testing/PLAN-checkout-payment-paths.md) by hand.
+11. **There is still no way to collect an outstanding balance.** `amount_due` is now written and
+    visible on the admin list and detail, and chasing it is a phone call; the
+    `codAmountCollected` toggle records the outcome. A collection flow is deferred by decision.
 
 ---
 

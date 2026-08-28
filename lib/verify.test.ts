@@ -235,6 +235,7 @@ describe("parseVerifyOrderResult", () => {
         status,
         amount: 2099,
         trackingId: ORDER_NUMBER,
+        amountDue: null,
       });
     }
   });
@@ -252,6 +253,7 @@ describe("parseVerifyOrderResult", () => {
       status: "NOT_FOUND",
       amount: null,
       trackingId: null,
+      amountDue: null,
     });
   });
 
@@ -273,6 +275,7 @@ describe("parseVerifyOrderResult", () => {
         status: "PAID",
         amount: 2099,
         trackingId: null,
+        amountDue: null,
       });
     }
   });

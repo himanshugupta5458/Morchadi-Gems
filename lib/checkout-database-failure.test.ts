@@ -97,9 +97,12 @@ describe("POST /api/create-order with Postgres unreachable", () => {
     expect(body.cashfreeOrderId).toMatch(/^MG_\d{13}_[0-9a-z]{8}$/);
     expect(body.mode).toBe("sandbox");
     expect(Object.keys(body).sort()).toEqual([
+      "amountDue",
+      "amountPrepaid",
       "cashfreeOrderId",
       "mode",
       "paymentSessionId",
+      "paymentType",
       "trackingId",
     ]);
 
@@ -227,9 +230,82 @@ describe("GET /api/verify-order with Postgres unreachable", () => {
 
     expect(response.status).toBe(200);
     expect(response.headers.get("Cache-Control")).toBe("no-store");
-    expect(body).toEqual({ orderId, status: "PAID", amount: 419, trackingId: null });
+    expect(body).toEqual({
+      orderId,
+      status: "PAID",
+      amount: 419,
+      trackingId: null,
+      amountDue: null,
+    });
 
     const loggedText = silencedErrors.mock.calls.flat().map(String).join(" ");
     expect(loggedText).toContain("the Postgres update failed");
+  });
+});
+
+/**
+ * The one place a failed capture is fatal, and the asymmetry it makes with the tests above.
+ *
+ * ADR-042's rule — a capture may fail without failing the checkout — rests entirely on the
+ * money being at Cashfree and the order being recoverable from their dashboard. A
+ * cash-on-delivery order has no such second copy. If its row is not written it exists nowhere,
+ * so a confirmation screen over it would be a promise nothing in this shop could keep, and the
+ * honest answer is that the order was not placed.
+ */
+describe("POST /api/create-order for cash on delivery with Postgres unreachable", () => {
+  it("fails the checkout rather than confirming an order that exists nowhere", async () => {
+    const outboundFetch = vi.fn();
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const response = await postCreateOrder({
+      items: [{ productId: "P001", qty: 1 }],
+      address: FAILURE_TEST_ADDRESS,
+      paymentPath: "cod",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(503);
+    expect(body.error).toBe("ORDER_NOT_RECORDED");
+    expect(body.retryable).toBe(true);
+    expect(body.message).not.toContain("Postgres");
+    expect(body.message).not.toContain("database");
+
+    expect(body.trackingId).toBeUndefined();
+    expect(body.codOrderReference).toBeUndefined();
+    expect(outboundFetch).not.toHaveBeenCalled();
+  });
+
+  /**
+   * The contrast, asserted in the same file so the two rules are read together rather than
+   * inferred from each other's absence.
+   */
+  it("still lets a prepaid checkout through, because that order is at Cashfree", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) => {
+        const sent = JSON.parse(String(init.body)) as Record<string, unknown>;
+        return new Response(
+          JSON.stringify({
+            order_id: sent.order_id,
+            order_status: "ACTIVE",
+            order_amount: sent.order_amount,
+            payment_session_id: "session_database_down_test",
+          }),
+          { status: 200, headers: { "Content-Type": "application/json" } },
+        );
+      }),
+    );
+
+    const response = await postCreateOrder({
+      items: [{ productId: "P001", qty: 1 }],
+      address: FAILURE_TEST_ADDRESS,
+      paymentPath: "full",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body.paymentType).toBe("prepaid");
+    expect(body.trackingId).toBeNull();
+    expect(body.paymentSessionId).toBe("session_database_down_test");
   });
 });

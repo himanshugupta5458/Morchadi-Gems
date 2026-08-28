@@ -67,6 +67,7 @@ interface CashfreePaymentSummary {
 
 interface VerifyOrderResult extends CashfreePaymentSummary {
   trackingId: string | null;
+  amountDue: number | null;
 }
 ```
 
@@ -75,7 +76,8 @@ interface VerifyOrderResult extends CashfreePaymentSummary {
   "orderId": "MG_1755400000000_a1b2c3d4",
   "status": "PAID",
   "amount": 2099,
-  "trackingId": "W2ACEHACUU"
+  "trackingId": "W2ACEHACUU",
+  "amountDue": 0
 }
 ```
 
@@ -97,6 +99,19 @@ leaves a paid order with no order number, and this says so rather than inventing
 that omits the key entirely is read as null by `parseVerifyOrderResult`; a value that is neither
 a string nor null is a body that function does not recognise, and it refuses the whole response.
 
+`amountDue` is `orders.amount_due`, read from the same row and in the same query as
+`trackingId`. It is `0` on a prepaid order — which is every order this shop took before checkout
+offered a choice — and positive on a `partial_cod` one, where `amount` above is the prepayment
+floor rather than what the cart was worth. The confirmation page renders it wherever it is
+greater than zero, in the same treatment a cash-on-delivery order's balance gets
+([ADR-059](../decisions/ADR-059-checkout-payment-paths.md)).
+
+It is **null**, not zero, when the row could not be read, for the same three reasons
+`trackingId` is null. "Nothing is owed" and "we could not find out" are different sentences to
+put in front of somebody who may be about to hand cash to a courier, and defaulting to zero
+would print the first when only the second is true. Like `trackingId`, a body omitting the key
+reads as null and a value that is neither a number nor null is refused outright.
+
 A `200` is returned for all four statuses: the route succeeded in *asking*. That is a
 different thing from the payment having succeeded.
 
@@ -104,7 +119,11 @@ different thing from the payment having succeeded.
 
 ```ts
 interface VerifyOrderErrorBody {
-  error: "ORDER_ID_MALFORMED" | "PAYMENT_NOT_CONFIGURED" | "VERIFICATION_UNAVAILABLE";
+  error:
+    | "ORDER_ID_MALFORMED"
+    | "COD_ORDER_NOT_VERIFIABLE"
+    | "PAYMENT_NOT_CONFIGURED"
+    | "VERIFICATION_UNAVAILABLE";
   message: string;
   retryable: boolean;
 }
@@ -113,9 +132,18 @@ interface VerifyOrderErrorBody {
 Every non-200 describes a failure to *ask* about the payment. The confirmation page renders
 them as "we could not confirm this yet", never as "your payment failed".
 
+`COD_ORDER_NOT_VERIFIABLE` is the exception that proves the rule, and it exists to say something
+true. A cash-on-delivery order has no payment to verify: it was never sent to Cashfree, and
+[`/api/cod-order`](cod-order.md) is the route that answers about it. The `COD_…` shape is
+disjoint from the `MG_…` one, so `isMorchadiOrderId` would already have refused it as
+`ORDER_ID_MALFORMED` before any Cashfree call — but "that order reference is not one of ours" is
+a lie to tell somebody holding a real order number, so the case is named. Nothing this project
+ships sends one here; the confirmation page classifies the prefix and calls the other route.
+
 | Status | `error` | When it fires | `retryable` |
 | --- | --- | --- | --- |
 | 400 | `ORDER_ID_MALFORMED` | `order_id` is missing, or does not match the minted shape | `false` |
+| 400 | `COD_ORDER_NOT_VERIFIABLE` | `order_id` is a `COD_…` reference. Checked **first**, before the shape guard and before any outbound request | `false` |
 | 503 | `PAYMENT_NOT_CONFIGURED` | `CASHFREE_APP_ID` or `CASHFREE_SECRET_KEY` is unset | `false` |
 | 502 | `VERIFICATION_UNAVAILABLE` | Cashfree was unreachable, timed out at 15 s, answered with a non-404 error status, or returned an unparseable body | `true` |
 
@@ -150,14 +178,17 @@ After Cashfree answers — and only when it answers cleanly — the order's
 
 ### The Postgres read
 
-`findTrackingIdForCashfreeOrder` (`lib/order-capture.ts`) then reads `orders.id` by the same
-`orders.cashfree_order_id`, for the one fact Cashfree cannot supply. It is a separate query
+`findCapturedOrderForPaymentReference` (`lib/order-capture.ts`) then reads `orders.id` and
+`orders.amount_due` by the same `orders.cashfree_order_id`, for the two facts Cashfree cannot
+supply. Both come from one query rather than two: they are wanted by the same caller in the same
+breath, and two round trips for one row would be two chances for the second to fail after the
+first succeeded. It is a separate query
 rather than a value returned by the write above, because the two answer different questions and
 only one of them writes — an order whose stored status already matches performs no update at
 all, and it still has an order number.
 
 Like the write, **it never throws**: a database that is down, slow or refusing produces a log
-line and `trackingId: null`, and the rest of the body is identical. Null therefore covers three
+line, `trackingId: null` and `amountDue: null`, and the rest of the body is identical. Null therefore covers three
 cases the caller does not need to tell apart — no such order, a capture that failed, and an
 unreachable database — because the confirmation page renders all three the same way, by falling
 back to the payment reference.

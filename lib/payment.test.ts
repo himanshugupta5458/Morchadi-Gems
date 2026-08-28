@@ -2,9 +2,12 @@ import { describe, expect, it } from "vitest";
 import { isCreateOrderSuccess } from "@/lib/payment";
 
 const VALID = {
+  paymentType: "prepaid",
   cashfreeOrderId: "MG_1786968394909_v8j3wggq",
   trackingId: "W2ACEHACUU",
   paymentSessionId: "session_xxxxxxxxxxxxxxxxxxxxx",
+  amountPrepaid: 2099,
+  amountDue: 0,
   mode: "sandbox",
 };
 

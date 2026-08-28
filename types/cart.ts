@@ -109,4 +109,17 @@ export interface CheckoutData {
    * order actually being confirmed, so a leftover bundle cannot label somebody else's payment.
    */
   trackingId?: string;
+  /**
+   * What the payment gateway was actually asked for on this checkout, and what is still owed at
+   * the door. Stamped alongside the two identifiers, absent on a bundle that has not reached
+   * payment and on one written before checkout offered a choice.
+   *
+   * Display-only, like the amounts above, and load-bearing for exactly one decision:
+   * `canDisplayBundleForOrder` reconciles the bundle against what Cashfree says was charged, and
+   * on a part-paid order that figure is `amountPrepaid` rather than `total`. Comparing the
+   * cart's worth to it would refuse to show a receipt for an order that reconciles perfectly.
+   * See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+   */
+  amountPrepaid?: number;
+  amountDue?: number;
 }

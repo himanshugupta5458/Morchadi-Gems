@@ -6,11 +6,18 @@ import { getAllProducts } from "@/lib/products";
 const EM_DASH = "—";
 
 /**
- * `OrderTotals` renders a lone em dash where a total has no value yet. That is a typographic
- * placeholder standing in for a number, not prose, so it is the one place the character is
- * allowed to survive. Everything else is copy a shopper reads as a sentence.
+ * Two files render a lone em dash where a number has no value: `OrderTotals` for a total that
+ * is not yet known, and `AdminOrderTable` for an order with nothing owing on it. In both it is
+ * a typographic placeholder standing in for a figure rather than prose, which is the only use
+ * of the character this project allows. Everything else is copy somebody reads as a sentence.
+ *
+ * The admin column is deliberately blank rather than `₹0`: a column of zeroes is one an
+ * operator learns to skip, and the few rows carrying a figure are the whole reason it exists.
  */
-const PLACEHOLDER_FILES = new Set(["components/OrderTotals.tsx"]);
+const PLACEHOLDER_FILES = new Set([
+  "components/OrderTotals.tsx",
+  "components/AdminOrderTable.tsx",
+]);
 
 const SCANNED_ROOTS = ["app", "components", "lib", "config", "types"];
 const SCANNED_EXTENSIONS = [".ts", ".tsx"];

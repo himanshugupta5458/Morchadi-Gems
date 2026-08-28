@@ -6,10 +6,10 @@ import type {
 } from "@/types/order";
 import { lookupCashfreeOrder } from "@/lib/cashfree-order";
 import {
-  findTrackingIdForCashfreeOrder,
+  findCapturedOrderForPaymentReference,
   recordVerifiedPaymentStatus,
 } from "@/lib/order-capture";
-import { isMorchadiOrderId } from "@/lib/verify";
+import { isCodOrderReference, isMorchadiOrderId } from "@/lib/verify";
 
 /**
  * Node, not Edge: this handler holds the Cashfree secret in memory. It is also the only place
@@ -43,6 +43,24 @@ function verificationUnavailable(): NextResponse<VerifyOrderErrorBody> {
     message:
       "We could not reach the payment gateway to confirm this order. Your payment is unaffected, so please try again in a moment.",
     retryable: true,
+  });
+}
+
+/**
+ * A `COD_…` reference asked about at the route that asks Cashfree about a payment.
+ *
+ * Nothing this project ships sends one here — the confirmation page classifies the reference
+ * and calls `/api/cod-order` instead — and the shape guard below would already have refused it
+ * before any request reached Cashfree. This exists so that the refusal says something true: a
+ * cash-on-delivery order has no payment to verify, which is a different sentence from "that
+ * reference is not one of ours", and the shopper reading it is holding a real order number.
+ */
+function codOrderNotVerifiable(): NextResponse<VerifyOrderErrorBody> {
+  return errorResponse(400, {
+    error: "COD_ORDER_NOT_VERIFIABLE",
+    message:
+      "That is a cash-on-delivery order, so there is no online payment to confirm. Your order is placed and you pay the courier on delivery.",
+    retryable: false,
   });
 }
 
@@ -82,7 +100,12 @@ function verifiedResponse(
  * `/api/create-order` is — `recordVerifiedPaymentStatus` never throws, and the response above is
  * identical whether Postgres answered, failed, or has no row for this order at all.
  *
- * The same row is also *read*, for the one fact Cashfree cannot supply: `trackingId`, the
+ * The same row is also *read*, for the two facts Cashfree cannot supply. `amountDue` is the
+ * first: on a `partial_cod` order the `amount` above is the prepayment floor rather than what
+ * the cart was worth, and the confirmation page has to be able to say what is still owed at the
+ * door. It is null, not zero, when the row could not be read — "nothing is owed" and "we could
+ * not find out" are different sentences to put in front of somebody who may be about to hand
+ * cash to a courier. The second is `trackingId`, the
  * ten-character order number this shop knows the order by. It travels in the response so the
  * confirmation page can name the order from the `order_id` in its own URL rather than from a
  * `sessionStorage` bundle that a confirmed payment has already cleared — which is what made
@@ -102,6 +125,7 @@ export async function GET(request: Request): Promise<NextResponse> {
   const requestedOrderId =
     new URL(request.url).searchParams.get("order_id")?.trim() ?? "";
 
+  if (isCodOrderReference(requestedOrderId)) return codOrderNotVerifiable();
   if (!isMorchadiOrderId(requestedOrderId)) return malformedOrderId();
 
   const lookup = await lookupCashfreeOrder(requestedOrderId, LOG_PREFIX);
@@ -118,7 +142,11 @@ export async function GET(request: Request): Promise<NextResponse> {
   if (lookup.kind === "unreachable") return verificationUnavailable();
 
   await recordVerifiedPaymentStatus(requestedOrderId, lookup.result.status);
-  const trackingId = await findTrackingIdForCashfreeOrder(requestedOrderId);
+  const captured = await findCapturedOrderForPaymentReference(requestedOrderId);
 
-  return verifiedResponse({ ...lookup.result, trackingId });
+  return verifiedResponse({
+    ...lookup.result,
+    trackingId: captured?.trackingId ?? null,
+    amountDue: captured?.amountDue ?? null,
+  });
 }

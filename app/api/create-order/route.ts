@@ -1,9 +1,10 @@
 import { randomBytes } from "node:crypto";
 import { NextResponse } from "next/server";
 import type {
+  CreateOrderCodSuccess,
   CreateOrderErrorBody,
   CreateOrderErrorCode,
-  CreateOrderSuccess,
+  CreateOrderOnlineSuccess,
 } from "@/types/order";
 import type { UtmParams } from "@/types/utm";
 import {
@@ -20,13 +21,24 @@ import {
   resolveCashfreeMode,
 } from "@/lib/cashfree-config";
 import {
+  parsePaymentPath,
+  resolvePaymentPlan,
+  summariseCartPrepayment,
+} from "@/lib/cod";
+import {
   buildOrderFromCart,
   mergeOrderItemsByProduct,
   parseOrderItems,
 } from "@/lib/order";
-import { buildOrderCaptureLines, captureOrder } from "@/lib/order-capture";
+import {
+  NON_GATEWAY_PAYMENT_STATUS,
+  buildOrderCaptureLines,
+  captureOrder,
+  type CaptureOrderInput,
+} from "@/lib/order-capture";
 import { toOrderOptionTags, validateOrderLineOptions } from "@/lib/order-options";
 import {
+  getCodEligibilityCatalogue,
   getOrderCaptureCatalogue,
   getOrderOptionCatalogue,
   getOrderPricingCatalogue,
@@ -61,6 +73,23 @@ function randomBase36(length: number): string {
  */
 function generateOrderId(): string {
   return `MG_${Date.now()}_${randomBase36(8)}`;
+}
+
+/**
+ * `COD_{epoch ms}_{8 random base36}` — the same construction as the Cashfree order id above and
+ * deliberately **not** the same prefix.
+ *
+ * `orders.cashfree_order_id` is unique and non-null, and a cash-on-delivery order still needs a
+ * payment reference to occupy it. Minting one in Cashfree's own `MG_` shape was the obvious
+ * move and is the wrong one: `isMorchadiOrderId` would accept it, `/api/verify-order` would ask
+ * Cashfree about a payment that never existed, Cashfree would answer 404, and the confirmation
+ * page would tell a shopper "nothing has been charged" about an order that is perfectly real.
+ * The distinct prefix makes that guard reject the reference before any request is made, so the
+ * safety comes from a check that already existed rather than from a new one to remember.
+ * See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+ */
+function generateCodOrderReference(): string {
+  return `COD_${Date.now()}_${randomBase36(8)}`;
 }
 
 /**
@@ -102,6 +131,24 @@ function malformed(
   message: string,
 ): NextResponse<CreateOrderErrorBody> {
   return errorResponse(400, { error, message, retryable: false });
+}
+
+function pathUnavailable(): NextResponse<CreateOrderErrorBody> {
+  return errorResponse(400, {
+    error: "PAYMENT_PATH_UNAVAILABLE",
+    message:
+      "That payment option is not available for what is in your cart. Go back a step and choose another one.",
+    retryable: false,
+  });
+}
+
+function orderNotRecorded(): NextResponse<CreateOrderErrorBody> {
+  return errorResponse(503, {
+    error: "ORDER_NOT_RECORDED",
+    message:
+      "We could not record your order just now, so nothing has been placed and nothing is owed. Your cart and details are safe, so please try again in a moment.",
+    retryable: true,
+  });
 }
 
 function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
@@ -153,7 +200,28 @@ function readPaymentSessionId(payload: unknown): string | null {
 }
 
 /**
- * Creates a Cashfree payment session for a cart.
+ * Places one order, by one of three paths, and creates a Cashfree payment session for the two
+ * that need one.
+ *
+ * The path is a **word** the client sends — `"cod"`, `"partial"` or `"full"`, absent meaning
+ * `"full"` — and never an amount and never a claim about eligibility. What each word costs is
+ * decided here by `resolvePaymentPlan` from a total this route computed itself and a
+ * prepayment floor it summed from its own read of `data/products.json`, and a path the cart
+ * does not permit is refused with `PAYMENT_PATH_UNAVAILABLE` rather than quietly downgraded.
+ * The three shapes are:
+ *
+ * | Path | Sent to Cashfree | `payment_type` | `amount_prepaid` | `amount_due` |
+ * | --- | --- | --- | --- | --- |
+ * | `full` | `total` | `prepaid` | `total` | `0` |
+ * | `partial` | Σ `minPrepaidAmount × qty` | `partial_cod` | that floor | `total −` floor |
+ * | `cod` | **nothing at all** | `cod` | `0` | `total` |
+ *
+ * The cash-on-delivery path never touches Cashfree: no `fetch`, no `payment_session_id`, no
+ * credentials read, and a `COD_…` payment reference minted here rather than by a gateway. It is
+ * also the one path where a failed Postgres write fails the checkout, because an unwritten COD
+ * order exists in no system at all while an unwritten prepaid one is still recoverable from the
+ * Cashfree dashboard ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md),
+ * [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md)).
  *
  * The client sends product ids, quantities, any recorded option choices, a delivery address,
  * and optionally the campaign it first arrived on. It does not send — and could not usefully
@@ -188,6 +256,7 @@ export async function POST(request: Request): Promise<NextResponse> {
   const {
     items: rawItems,
     address: rawAddress,
+    paymentPath: rawPaymentPath,
     utm: rawUtm,
   } = body as Record<string, unknown>;
 
@@ -239,6 +308,66 @@ export async function POST(request: Request): Promise<NextResponse> {
     });
   }
 
+  const plan = resolvePaymentPlan(parsePaymentPath(rawPaymentPath), {
+    total: order.total,
+    summary: summariseCartPrepayment(order.lineItems, getCodEligibilityCatalogue()),
+  });
+  if (plan === null) return pathUnavailable();
+
+  const utm = parseUtmParams(rawUtm);
+
+  /**
+   * Everything the order write needs except which payment reference it is filed under, built
+   * once so the three paths cannot come to disagree about what was bought or what it cost. The
+   * amounts here are `plan`'s, and `captureOrder` refuses the write if they do not add up to
+   * `pricing.total`.
+   */
+  const captureBase: Omit<CaptureOrderInput, "cashfreeOrderId" | "cashfreePaymentStatus"> = {
+    address,
+    utm,
+    pricing: {
+      subtotal: order.subtotal,
+      shippingFee: order.shipping,
+      total: order.total,
+    },
+    payment: {
+      paymentType: plan.paymentType,
+      amountPrepaid: plan.amountPrepaid,
+      amountDue: plan.amountDue,
+    },
+    lines: buildOrderCaptureLines(items, order.lineItems, getOrderCaptureCatalogue()),
+  };
+
+  if (plan.path === "cod") {
+    const codOrderReference = generateCodOrderReference();
+    const codCapture = await captureOrder({
+      ...captureBase,
+      cashfreeOrderId: codOrderReference,
+      cashfreePaymentStatus: NON_GATEWAY_PAYMENT_STATUS,
+    });
+
+    if (codCapture.kind === "FAILED") return orderNotRecorded();
+
+    console.log(
+      `[create-order] ${codOrderReference} captured as cash-on-delivery order ${codCapture.orderId} for ${
+        codCapture.customerCreated ? "a new" : "a returning"
+      } customer`,
+    );
+
+    const codSuccess: CreateOrderCodSuccess = {
+      paymentType: "cod",
+      codOrderReference,
+      trackingId: codCapture.orderId,
+      amountPrepaid: plan.amountPrepaid,
+      amountDue: plan.amountDue,
+    };
+
+    return NextResponse.json(codSuccess, {
+      status: 200,
+      headers: { "Cache-Control": "no-store" },
+    });
+  }
+
   const credentials = readCashfreeCredentials();
   if (credentials === null) {
     console.error("[create-order] CASHFREE_APP_ID or CASHFREE_SECRET_KEY is not set");
@@ -252,7 +381,6 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const orderId = generateOrderId();
   const mode = resolveCashfreeMode();
-  const utm = parseUtmParams(rawUtm);
   const orderTags = buildOrderTags(lineOptions.summary, utm);
 
   let cashfreeResponse: Response;
@@ -268,7 +396,7 @@ export async function POST(request: Request): Promise<NextResponse> {
       },
       body: JSON.stringify({
         order_id: orderId,
-        order_amount: order.total,
+        order_amount: plan.amountPrepaid,
         order_currency: "INR",
         customer_details: {
           customer_id: generateGuestCustomerId(),
@@ -317,16 +445,9 @@ export async function POST(request: Request): Promise<NextResponse> {
   const cashfreeOrder = normaliseCashfreeOrder(cashfreePayload, orderId);
 
   const capture = await captureOrder({
+    ...captureBase,
     cashfreeOrderId: cashfreeOrder.orderId,
     cashfreePaymentStatus: cashfreeOrder.status,
-    address,
-    utm,
-    pricing: {
-      subtotal: order.subtotal,
-      shippingFee: order.shipping,
-      total: order.total,
-    },
-    lines: buildOrderCaptureLines(items, order.lineItems, getOrderCaptureCatalogue()),
   });
 
   if (capture.kind === "CAPTURED") {
@@ -337,10 +458,13 @@ export async function POST(request: Request): Promise<NextResponse> {
     );
   }
 
-  const success: CreateOrderSuccess = {
+  const success: CreateOrderOnlineSuccess = {
+    paymentType: plan.paymentType === "partial_cod" ? "partial_cod" : "prepaid",
     cashfreeOrderId: orderId,
     trackingId: capture.kind === "CAPTURED" ? capture.orderId : null,
     paymentSessionId,
+    amountPrepaid: plan.amountPrepaid,
+    amountDue: plan.amountDue,
     mode,
   };
 

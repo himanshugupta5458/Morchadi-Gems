@@ -79,6 +79,14 @@ export interface AdminOrderRow {
   status: OrderStatus;
   paymentType: PaymentType;
   total: number;
+  /**
+   * What is still owed on this order. Zero on every prepaid one, which is most of them, and the
+   * whole point of carrying it in the *list*: an operator packing today's orders needs to know
+   * which ones have money to collect before they open any of them, and a payment-type label
+   * alone does not say how much. There is no collection flow behind it yet — the balance is
+   * chased by hand — which is precisely why it has to be visible.
+   */
+  amountDue: number;
   customerName: string;
   customerPhone: string;
 }
@@ -299,6 +307,7 @@ export async function findAdminOrderPage(
       status: true,
       paymentType: true,
       total: true,
+      amountDue: true,
       customer: { select: { name: true, phone: true } },
     },
   });
@@ -310,6 +319,7 @@ export async function findAdminOrderPage(
       status: order.status,
       paymentType: order.paymentType,
       total: order.total.toNumber(),
+      amountDue: order.amountDue.toNumber(),
       customerName: order.customer.name,
       customerPhone: order.customer.phone,
     })),

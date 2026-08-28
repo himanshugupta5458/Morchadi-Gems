@@ -1,4 +1,9 @@
-import type { CreateOrderErrorBody, CreateOrderSuccess } from "@/types/order";
+import type {
+  CreateOrderCodSuccess,
+  CreateOrderErrorBody,
+  CreateOrderOnlineSuccess,
+  CreateOrderSuccess,
+} from "@/types/order";
 import { ADDRESS_FIELDS } from "@/lib/address";
 import { CART_PATH, CHECKOUT_ADDRESS_PATH } from "@/lib/navigation";
 
@@ -45,15 +50,53 @@ function isCreateOrderErrorBody(payload: unknown): payload is CreateOrderErrorBo
   return typeof candidate.error === "string" && typeof candidate.message === "string";
 }
 
+function isNonNegativeAmount(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0;
+}
+
 /**
- * Validates the create-order 200 body before the browser acts on it.
+ * Validates a cash-on-delivery create-order 200 body before the browser acts on it.
+ *
+ * `trackingId` is required and must be a real string, where the online body below allows null.
+ * That is not an oversight in either direction: a prepaid order can reach a confirmed payment
+ * with no order number because its capture is allowed to fail (ADR-042), and a COD order cannot,
+ * because a failed capture fails the whole checkout and this body is never produced without a
+ * row behind it. A COD body arriving with a null order number is therefore a body this page does
+ * not recognise, and refusing it is how the browser holds the server to that contract.
+ */
+export function isCreateOrderCodSuccess(
+  payload: unknown,
+): payload is CreateOrderCodSuccess {
+  if (typeof payload !== "object" || payload === null) return false;
+  const candidate = payload as Record<string, unknown>;
+
+  return (
+    candidate.paymentType === "cod" &&
+    typeof candidate.codOrderReference === "string" &&
+    candidate.codOrderReference.length > 0 &&
+    typeof candidate.trackingId === "string" &&
+    candidate.trackingId.length > 0 &&
+    isNonNegativeAmount(candidate.amountPrepaid) &&
+    isNonNegativeAmount(candidate.amountDue)
+  );
+}
+
+/**
+ * Validates a create-order 200 body for an order that goes to the payment gateway.
  *
  * `trackingId` is checked as strictly as the rest and is allowed to be `null`, because the
  * capture that produces it may fail without failing the checkout (ADR-042). A missing key,
  * or one carrying an empty string, is a body this page does not recognise — the alternative
  * is stamping the checkout bundle with an order number that is not one.
+ *
+ * `paymentType` must be present and must be one of the two gateway values. It is the
+ * discriminator that tells this body from the cash-on-delivery one, and requiring it rather
+ * than inferring "online" from the presence of a `paymentSessionId` is what makes the two
+ * shapes genuinely distinct rather than one shape with fields left out.
  */
-export function isCreateOrderSuccess(payload: unknown): payload is CreateOrderSuccess {
+export function isCreateOrderOnlineSuccess(
+  payload: unknown,
+): payload is CreateOrderOnlineSuccess {
   if (typeof payload !== "object" || payload === null) return false;
   const candidate = payload as Record<string, unknown>;
   const hasTrackingId =
@@ -61,13 +104,28 @@ export function isCreateOrderSuccess(payload: unknown): payload is CreateOrderSu
     (typeof candidate.trackingId === "string" && candidate.trackingId.length > 0);
 
   return (
+    (candidate.paymentType === "prepaid" || candidate.paymentType === "partial_cod") &&
     typeof candidate.cashfreeOrderId === "string" &&
     candidate.cashfreeOrderId.length > 0 &&
     hasTrackingId &&
     typeof candidate.paymentSessionId === "string" &&
     candidate.paymentSessionId.length > 0 &&
+    isNonNegativeAmount(candidate.amountPrepaid) &&
+    isNonNegativeAmount(candidate.amountDue) &&
     (candidate.mode === "sandbox" || candidate.mode === "production")
   );
+}
+
+/**
+ * The two 200 bodies of `/api/create-order`, either of which the payment page can act on.
+ *
+ * The page acts on this by leaving — for Cashfree on one branch and for the confirmation page
+ * on the other — so a body it half-recognises is worse than one it rejects. Anything matching
+ * neither shape becomes the retryable failure, which leaves the shopper's cart and address
+ * exactly where they were.
+ */
+export function isCreateOrderSuccess(payload: unknown): payload is CreateOrderSuccess {
+  return isCreateOrderCodSuccess(payload) || isCreateOrderOnlineSuccess(payload);
 }
 
 /**
@@ -101,6 +159,23 @@ export function describePaymentFailure(payload: unknown): PaymentFailure {
         ),
         action: EDIT_ADDRESS,
         canRetry: false,
+      };
+
+    case "PAYMENT_PATH_UNAVAILABLE":
+      return {
+        title: "That payment option is not available",
+        message: payload.message,
+        details: [],
+        action: BACK_TO_CART,
+        canRetry: false,
+      };
+
+    case "ORDER_NOT_RECORDED":
+      return {
+        title: "We could not place that order",
+        message: payload.message,
+        details: [],
+        canRetry: true,
       };
 
     case "PAYMENT_NOT_CONFIGURED":

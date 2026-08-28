@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
+import { getCodEligibilityCatalogue } from "@/lib/products";
 import { PaymentCheckout } from "@/components/PaymentCheckout";
 
 /**
@@ -35,7 +36,7 @@ export default function PaymentPage(): JSX.Element {
       </div>
 
       <div className="mt-6 sm:mt-10 lg:mt-12">
-        <PaymentCheckout />
+        <PaymentCheckout codCatalogue={getCodEligibilityCatalogue()} />
       </div>
     </div>
   );

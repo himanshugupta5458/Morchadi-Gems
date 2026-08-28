@@ -631,6 +631,7 @@ describe("the list against the real database", () => {
     const { rows } = await findAdminOrderPage(query({ search: "ZZTFIND23A" }));
 
     expect(Object.keys(rows[0] ?? {}).sort()).toEqual([
+      "amountDue",
       "createdAt",
       "customerName",
       "customerPhone",

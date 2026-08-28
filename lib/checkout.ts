@@ -70,6 +70,13 @@ function readStampedString(value: unknown): string | undefined {
   return typeof value === "string" && value.length > 0 ? value : undefined;
 }
 
+/** A stamped amount survives only as a real number. A negative one is not an amount. */
+function readStampedAmount(value: unknown): number | undefined {
+  return typeof value === "number" && Number.isFinite(value) && value >= 0
+    ? value
+    : undefined;
+}
+
 function isAddress(value: unknown): value is Address {
   if (typeof value !== "object" || value === null) return false;
   const candidate = value as Record<string, unknown>;
@@ -109,6 +116,8 @@ export function parseCheckoutValue(parsedValue: unknown): CheckoutData | null {
 
   const stampedOrderId = readStampedString(candidate.orderId);
   const stampedTrackingId = readStampedString(candidate.trackingId);
+  const stampedAmountPrepaid = readStampedAmount(candidate.amountPrepaid);
+  const stampedAmountDue = readStampedAmount(candidate.amountDue);
 
   return {
     cart: candidate.cart.map(withParsedSelection),
@@ -118,6 +127,8 @@ export function parseCheckoutValue(parsedValue: unknown): CheckoutData | null {
     total: candidate.total,
     ...(stampedOrderId === undefined ? {} : { orderId: stampedOrderId }),
     ...(stampedTrackingId === undefined ? {} : { trackingId: stampedTrackingId }),
+    ...(stampedAmountPrepaid === undefined ? {} : { amountPrepaid: stampedAmountPrepaid }),
+    ...(stampedAmountDue === undefined ? {} : { amountDue: stampedAmountDue }),
   };
 }
 
@@ -160,30 +171,40 @@ export function readCheckoutData(): CheckoutData | null {
  * Records which order the stored bundle was paid against, called on `/payment` once the server
  * has answered and immediately before the browser leaves for Cashfree.
  *
- * Both of the order's identifiers are stamped: the Cashfree one, which the confirmation page
- * matches the bundle against, and the ten-character order number, which is the only thing the
- * bundle exists to *carry* rather than to be checked by. Cashfree returns the browser with its
- * own id in the URL and knows nothing about ours, so without this stamp the confirmation page
- * would have no way to name the order the way the shopper will
+ * Both of the order's identifiers are stamped: the payment reference, which the confirmation
+ * page matches the bundle against, and the ten-character order number, which is the only thing
+ * the bundle exists to *carry* rather than to be checked by. Cashfree returns the browser with
+ * its own id in the URL and knows nothing about ours, so without this stamp the confirmation
+ * page would have no way to name the order the way the shopper will
  * ([ADR-043](/docs/decisions/ADR-043-order-id-as-primary-identifier.md)).
  *
- * It writes no amount, no item and no address, so it cannot make the bundle any more trusted
- * than it already was — and the order number it stores is shown only after the Cashfree id
- * beside it has been matched against the order being confirmed. A failed write is not an error
- * worth reporting: the guard on the other side falls back to matching the amount, and the
- * confirmation page falls back to the Cashfree reference.
+ * The two amounts are stamped with them, and stamping them changes nothing about how much the
+ * bundle is trusted: they are the *server's* answer, copied back from the create-order response
+ * rather than computed here, and the only thing that reads them is the reconciliation that
+ * decides whether to show a receipt at all. It still writes no item, no address and no price,
+ * so nothing the shopper is charged can be traced to this function. A failed write is not an
+ * error worth reporting: the guard on the other side falls back to matching the total, and the
+ * confirmation page falls back to the payment reference.
  */
-export function stampCheckoutDataOrder(
-  cashfreeOrderId: string,
-  trackingId: string | null,
-): void {
+export interface StampedOrderReference {
+  /** The Cashfree `MG_…` id, or the `COD_…` reference for an order the gateway never saw. */
+  paymentReference: string;
+  trackingId: string | null;
+  /** What the gateway was asked for, and what is left owing. Both from the server's response. */
+  amountPrepaid: number;
+  amountDue: number;
+}
+
+export function stampCheckoutDataOrder(reference: StampedOrderReference): void {
   const storedData = readCheckoutData();
   if (storedData === null) return;
 
   writeCheckoutData({
     ...storedData,
-    orderId: cashfreeOrderId,
-    ...(trackingId === null ? {} : { trackingId }),
+    orderId: reference.paymentReference,
+    ...(reference.trackingId === null ? {} : { trackingId: reference.trackingId }),
+    amountPrepaid: reference.amountPrepaid,
+    amountDue: reference.amountDue,
   });
 }
 

@@ -1,17 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import type { CheckoutData } from "@/types/cart";
-import type { CreateOrderItem } from "@/types/order";
+import type { CreateOrderItem, PaymentPath } from "@/types/order";
 import { selectPayableLines } from "@/lib/cart";
 import { useCart } from "@/lib/cart-context";
+import {
+  summariseCartPrepayment,
+  type CartPrepaymentSummary,
+  type CodEligibilityEntry,
+} from "@/lib/cod";
 import { readCheckoutData, stampCheckoutDataOrder } from "@/lib/checkout";
 import { formatRupees } from "@/lib/format";
 import {
   CART_PATH,
   CHECKOUT_ADDRESS_PATH,
   CREATE_ORDER_API_PATH,
+  buildOrderConfirmationHref,
 } from "@/lib/navigation";
 import {
   UNREACHABLE_FAILURE,
@@ -25,9 +32,25 @@ import { Button } from "@/components/Button";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSummary } from "@/components/CheckoutSummary";
 import { PanelNotice } from "@/components/PanelNotice";
+import { PaymentChoice, type PaymentChoiceOption } from "@/components/PaymentChoice";
 import { PaymentErrorNotice } from "@/components/PaymentErrorNotice";
 
 type PaymentStatus = "idle" | "creating" | "redirecting";
+
+export interface PaymentCheckoutProps {
+  /**
+   * The cash-on-delivery catalogue, handed down by the Server Component that renders this.
+   *
+   * It arrives as a prop rather than being read off the cart's own catalogue entries, and the
+   * reason is [ADR-058](/docs/decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md):
+   * `minPrepaidAmount` lives in an accessor of its own so that no object carrying a price
+   * carries it too. Adding it to `CatalogueEntry` would have put it in the same object as
+   * `price` in every cart line in the browser, which is exactly the seal that ADR argued for.
+   * What the shopper sees is decided from this; what they are charged is decided again on the
+   * server from the same accessor, and only the second decision is binding.
+   */
+  codCatalogue: readonly CodEligibilityEntry[];
+}
 
 async function readResponseBody(response: Response): Promise<unknown> {
   try {
@@ -35,6 +58,60 @@ async function readResponseBody(response: Response): Promise<unknown> {
   } catch {
     return null;
   }
+}
+
+/**
+ * The two options this cart may be paid by, always exactly two and always with full prepayment
+ * among them.
+ *
+ * The cart's own pieces decide which pair it gets, never its value: a cart whose every line is
+ * COD-eligible is offered cash on delivery, and one holding a piece with a prepayment floor is
+ * offered that floor instead ([ADR-058](/docs/decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md)).
+ * A floor that has grown to meet or exceed the total collapses the pair back to paying in full,
+ * because "pay the minimum" and "pay in full" would otherwise be two buttons charging the same
+ * amount and only one of them would leave a balance owing.
+ *
+ * Every figure here is rendered, not decided. `/api/create-order` recomputes both from its own
+ * catalogue read and refuses a path this cart does not permit, so a stale or tampered set of
+ * options costs the shopper a refusal rather than costing the shop an order.
+ */
+function buildPaymentChoiceOptions(
+  prepayment: CartPrepaymentSummary | null,
+  total: number,
+): PaymentChoiceOption[] {
+  const payInFull: PaymentChoiceOption = {
+    path: "full",
+    label: "Pay in full",
+    amountNow: total,
+    description: "Pay the whole amount now by UPI, card, net banking or a wallet.",
+  };
+
+  if (prepayment === null) return [payInFull];
+
+  if (prepayment.isCodEligible) {
+    return [
+      {
+        path: "cod",
+        label: "Cash on delivery",
+        amountNow: 0,
+        description: `Pay nothing now. Have ${formatRupees(total)} ready in cash when your order arrives.`,
+      },
+      payInFull,
+    ];
+  }
+
+  const floor = prepayment.minimumPrepayment;
+  if (floor <= 0 || floor >= total) return [payInFull];
+
+  return [
+    {
+      path: "partial",
+      label: "Pay minimum now",
+      amountNow: floor,
+      description: `One piece in this order needs part payment up front. The remaining ${formatRupees(total - floor)} is due before delivery and is collected separately.`,
+    },
+    payInFull,
+  ];
 }
 
 /**
@@ -48,14 +125,16 @@ async function readResponseBody(response: Response): Promise<unknown> {
  * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md) and
  * [ADR-019](/docs/decisions/ADR-019-product-options.md).
  */
-export function PaymentCheckout(): JSX.Element {
+export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Element {
   const { lines, subtotal, shipping, total, hasUnavailableItems, isHydrated } =
     useCart();
+  const router = useRouter();
 
   const [checkoutData, setCheckoutData] = useState<CheckoutData | null>(null);
   const [isRestoreAttempted, setIsRestoreAttempted] = useState(false);
   const [status, setStatus] = useState<PaymentStatus>("idle");
   const [failure, setFailure] = useState<PaymentFailure | null>(null);
+  const [selectedPath, setSelectedPath] = useState<PaymentPath>("full");
 
   /**
    * The state update that disables the button does not land until React re-renders, so a
@@ -99,6 +178,7 @@ export function PaymentCheckout(): JSX.Element {
         body: JSON.stringify({
           items,
           address: checkoutData.address,
+          paymentPath: selectedPath,
           ...(utm === null ? {} : { utm }),
         }),
       });
@@ -120,7 +200,25 @@ export function PaymentCheckout(): JSX.Element {
     }
 
     setStatus("redirecting");
-    stampCheckoutDataOrder(body.cashfreeOrderId, body.trackingId);
+
+    if (body.paymentType === "cod") {
+      stampCheckoutDataOrder({
+        paymentReference: body.codOrderReference,
+        trackingId: body.trackingId,
+        amountPrepaid: body.amountPrepaid,
+        amountDue: body.amountDue,
+      });
+
+      router.push(buildOrderConfirmationHref(body.codOrderReference));
+      return;
+    }
+
+    stampCheckoutDataOrder({
+      paymentReference: body.cashfreeOrderId,
+      trackingId: body.trackingId,
+      amountPrepaid: body.amountPrepaid,
+      amountDue: body.amountDue,
+    });
 
     try {
       const { load } = await import("@cashfreepayments/cashfree-js");
@@ -176,15 +274,30 @@ export function PaymentCheckout(): JSX.Element {
   const isBusy = status !== "idle";
   const isPayDisabled = isBusy || (failure !== null && !failure.canRetry);
 
+  const prepayment = summariseCartPrepayment(
+    selectPayableLines(lines).map((line) => ({
+      productId: line.entry.id,
+      qty: line.quantity,
+    })),
+    codCatalogue,
+  );
+
+  const paymentOptions = buildPaymentChoiceOptions(prepayment, total);
+  const chosenPath = paymentOptions.some((option) => option.path === selectedPath)
+    ? selectedPath
+    : "full";
+  const amountNow =
+    paymentOptions.find((option) => option.path === chosenPath)?.amountNow ?? total;
+
   return (
     <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_22rem] lg:gap-16">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-display text-heading-sm text-ink">Review and pay</h2>
           <p className="max-w-prose text-body-sm text-muted">
-            Payment is handled by Cashfree on their secure page. We never see your card or
-            UPI details, and the amount is confirmed by our server before you are sent
-            there.
+            Online payment is handled by Cashfree on their secure page. We never see your
+            card or UPI details, and every amount below is confirmed by our server before
+            anything is charged.
           </p>
         </div>
 
@@ -199,6 +312,15 @@ export function PaymentCheckout(): JSX.Element {
           />
         )}
 
+        {paymentOptions.length < 2 ? null : (
+          <PaymentChoice
+            options={paymentOptions}
+            value={chosenPath}
+            disabled={isBusy}
+            onChange={setSelectedPath}
+          />
+        )}
+
         <div className="flex flex-col gap-3">
           <Button
             fullWidth
@@ -206,14 +328,19 @@ export function PaymentCheckout(): JSX.Element {
             disabled={isPayDisabled}
             aria-busy={isBusy}
           >
-            {status === "idle"
-              ? `Pay ${formatRupees(total)} with Cashfree`
-              : "Taking you to Cashfree…"}
+            {status !== "idle"
+              ? chosenPath === "cod"
+                ? "Placing your order…"
+                : "Taking you to Cashfree…"
+              : chosenPath === "cod"
+                ? `Place order and pay ${formatRupees(total)} on delivery`
+                : `Pay ${formatRupees(amountNow)} with Cashfree`}
           </Button>
 
           <p className="text-body-sm text-muted">
-            You will be redirected to Cashfree to complete the payment, then brought back
-            here.{" "}
+            {chosenPath === "cod"
+              ? "Nothing is charged now. We will confirm your order on the next screen."
+              : "You will be redirected to Cashfree to complete the payment, then brought back here."}{" "}
             <Link
               href={CART_PATH}
               className="underline underline-offset-4 transition-colors duration-250 hover:text-ink"

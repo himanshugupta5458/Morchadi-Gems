@@ -1,7 +1,8 @@
 # POST /api/create-order
 
-Prices a cart server-side and creates a Cashfree payment session for it. Returns the
-`payment_session_id` the browser SDK needs to redirect to hosted checkout.
+Prices a cart server-side and places one order by one of three payment paths. Two of them
+create a Cashfree payment session and return the `payment_session_id` the browser SDK needs to
+redirect to hosted checkout; the third — cash on delivery — never contacts Cashfree at all.
 
 Handler: `app/api/create-order/route.ts`. Runtime: **Node** (`export const runtime = "nodejs"`).
 Rationale and trade-offs: [ADR-013](../decisions/ADR-013-order-creation-and-payment.md), for
@@ -14,8 +15,14 @@ since.** The body this route accepts, every validation below and the amount sent
 are exactly what they were.
 
 **The 200 response shape changed in prompt 49**
-([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)) and is the only breaking
-change this contract has taken. See [200 OK](#200-ok). The five error shapes are untouched.
+([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)) and again in prompt 100
+([ADR-059](../decisions/ADR-059-checkout-payment-paths.md)), which made it a union of two
+shapes and added `paymentType`, `amountPrepaid` and `amountDue`. See [200 OK](#200-ok).
+
+**Prompt 100 also added the one new request field this contract has ever taken**,
+`paymentPath`, and two error codes. **A body that omits `paymentPath` behaves exactly as it
+always has** — same validation, same amount to Cashfree, same `prepaid` row — which is what
+every browser deployed before that prompt sends.
 
 ## Request
 
@@ -31,6 +38,7 @@ interface CreateOrderRequest {
     qty: number;
     selectedOptions?: Record<string, string>;   // { "Letter": "A" } — recorded, never priced
   }[];
+  paymentPath?: "cod" | "partial" | "full";   // absent means "full" — see below
   address: {
     name: string;
     phone: string;      // 10 digits, no country code — the server prefixes +91
@@ -55,6 +63,26 @@ One entry per **cart line**, not per product: a product with options can appear 
 once with different `selectedOptions`, and both entries are recorded. They are summed into a
 single priced item before pricing, so the per-product quantity cap applies to the total across
 a product's lines.
+
+### `paymentPath` — a word, never an amount
+
+Which of the three paths the shopper chose. It is the **whole** of what a client may say about
+how an order is paid for: it names no figure and asserts no eligibility, and the server decides
+what each word costs from its own read of `data/products.json`.
+
+| Value | Meaning |
+| --- | --- |
+| `"full"` | Charge the whole order total now. The only behaviour this route had before prompt 100 |
+| `"cod"` | Take nothing now; the whole total is due at the door |
+| `"partial"` | Charge Σ `minPrepaidAmount × qty`; the remainder is due at the door |
+
+**Absent, or any unrecognised value, reads as `"full"`.** `parsePaymentPath` falls that way
+deliberately: the safe reading of a path this server does not know is the one that collects all
+of the money up front, and it is what every pre-existing client body means.
+
+A path the cart does not permit is **refused** with `400 PAYMENT_PATH_UNAVAILABLE`, never
+downgraded — see check 11 below. Eligibility is a property of which pieces are in the basket and
+never of what it is worth ([ADR-058](../decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md)).
 
 ### `utm` — optional, and never a pricing input
 
@@ -96,8 +124,26 @@ In order. The first failing group returns; nothing further runs.
 | 8 | Every `selectedOptions` names a group and value the catalogue still offers | `400 ITEMS_INVALID` (`INVALID_OPTION`) |
 | 9 | The address passes `validateAddressForm` — the same validator `/address` uses | `400 ADDRESS_INVALID` |
 | 10 | The computed `total` is greater than zero | `400 ORDER_TOTAL_INVALID` |
-| 11 | `CASHFREE_APP_ID` and `CASHFREE_SECRET_KEY` are set | `503 PAYMENT_NOT_CONFIGURED` |
-| 12 | Cashfree returns 2xx with a `payment_session_id` | `502 PAYMENT_GATEWAY_UNAVAILABLE` |
+| 11 | The cart permits the requested `paymentPath` | `400 PAYMENT_PATH_UNAVAILABLE` |
+| 12 | **cash on delivery only** — the order was written to Postgres | `503 ORDER_NOT_RECORDED` |
+| 13 | **the two online paths only** — `CASHFREE_APP_ID` and `CASHFREE_SECRET_KEY` are set | `503 PAYMENT_NOT_CONFIGURED` |
+| 14 | **the two online paths only** — Cashfree returns 2xx with a `payment_session_id` | `502 PAYMENT_GATEWAY_UNAVAILABLE` |
+
+Check 11 runs `summariseCartPrepayment` over the priced lines against
+`getCodEligibilityCatalogue()` and hands the result to `resolvePaymentPlan`. It refuses:
+
+- `"cod"` when any line reads `minPrepaidAmount > 0` — ADR-058's unanimity rule;
+- `"partial"` when the floor is zero (nothing to part-pay) or has reached the total (the two
+  options would charge the same amount and neither would leave a balance);
+- either, on a cart naming a product the eligibility catalogue does not hold — impossible past
+  check 4, and it fails towards collecting the money rather than towards sending goods out on a
+  rule that could not be evaluated.
+
+**Check 11 runs before the credentials check**, so a cash-on-delivery order succeeds on a
+deployment with no Cashfree credentials configured at all. That is not a loophole — it is the
+point: the path reads no credential and makes no request.
+
+Checks 13 and 14 do not exist on the cash-on-delivery path. It never reaches them.
 
 Checks 3–7 are collected, not short-circuited: one response reports every bad line. Check 8 is
 collected the same way, but it runs as its own pass after pricing, so an order with both a
@@ -127,13 +173,18 @@ was valid" is not a fact the server has.
 | Subtotal | Sum of the computed line totals |
 | Shipping | `calculateShipping(subtotal)` from `lib/config.ts` — once per order, never per line. Zero at or above `FREE_SHIPPING_THRESHOLD` (₹799, inclusive) and on an empty order, `FLAT_SHIPPING_RATE` (₹99) otherwise. Derived from the catalogue-priced subtotal, so a client cannot claim to have qualified |
 | Total | `subtotal + shipping` |
-| `order_amount` sent to Cashfree | That computed total, and only that |
+| Prepayment floor | Σ `minPrepaidAmount × qty` over the priced lines, from `getCodEligibilityCatalogue()` — a fourth accessor that carries no price, so this figure cannot come to depend on what the cart is worth |
+| `amountPrepaid` / `amountDue` | `resolvePaymentPlan`, from the computed total and that floor. `amountPrepaid + amountDue = total` holds on all three paths by construction and is re-checked by `captureOrder` before the insert |
+| `order_amount` sent to Cashfree | The computed `amountPrepaid` — the total on `full`, the floor on `partial`, and nothing at all on `cod` because no request is made |
 
 | Client-supplied value | Treatment |
 | --- | --- |
 | Any `price`, `mrp`, `lineTotal`, `subtotal`, `shipping`, `total` | Discarded before validation; unreachable from the pricing core |
 | `name`, `image` on an item | Discarded; line item names come from the catalogue |
 | `productId`, `qty` | The only pricing inputs, and both are validated above |
+| `paymentPath` | A word only. It selects among three server-computed splits and can name no figure; a path the cart does not permit is refused rather than honoured |
+| Any `amountPrepaid`, `amountDue`, `minPrepaidAmount` in the body | Discarded; no field of the body is read as one, and the plan is built from the server's own figures |
+| Any claim that the cart is COD-eligible | Never read. Eligibility is recomputed here from the catalogue on every call |
 | `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
 | `utm` | Validated for shape, bounded, and written to `order_tags` alongside the options. Not an input to any amount; `buildOrderTags` has no access to one |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
@@ -149,23 +200,80 @@ Every response, success or failure, is sent with `Cache-Control: no-store`.
 
 ### 200 OK
 
+Two shapes, discriminated on `paymentType`. They are genuinely different bodies rather than one
+body with fields nulled out: a cash-on-delivery order has no payment session and no environment
+to initialise an SDK against, so it carries neither key.
+
 ```ts
-interface CreateOrderSuccess {
+type CreateOrderSuccess = CreateOrderOnlineSuccess | CreateOrderCodSuccess;
+
+interface CreateOrderOnlineSuccess {
+  paymentType: "prepaid" | "partial_cod";
   cashfreeOrderId: string;      // MG_{epoch ms}_{8 base36} — the payment's reference
   trackingId: string | null;    // orders.id, the 10-char customer-facing order number
   paymentSessionId: string;
+  amountPrepaid: number;        // what Cashfree is being asked for
+  amountDue: number;            // what is left owing; 0 on a prepaid order
   mode: "sandbox" | "production";
+}
+
+interface CreateOrderCodSuccess {
+  paymentType: "cod";
+  codOrderReference: string;    // COD_{epoch ms}_{8 base36} — ours, not a gateway's
+  trackingId: string;           // never null on this path; see below
+  amountPrepaid: number;        // always 0
+  amountDue: number;            // the whole order total
 }
 ```
 
+A full prepayment, which is what a body naming no `paymentPath` produces:
+
 ```json
 {
+  "paymentType": "prepaid",
   "cashfreeOrderId": "MG_1786968394909_v8j3wggq",
   "trackingId": "W2ACEHACUU",
   "paymentSessionId": "session_xxxxxxxxxxxxxxxxxxxxx",
+  "amountPrepaid": 309,
+  "amountDue": 0,
   "mode": "sandbox"
 }
 ```
+
+A cash-on-delivery order:
+
+```json
+{
+  "paymentType": "cod",
+  "codOrderReference": "COD_1787933768463_huepbvf6",
+  "trackingId": "NEW9QRV2QJ",
+  "amountPrepaid": 0,
+  "amountDue": 309
+}
+```
+
+#### `trackingId` is nullable on one shape and not the other
+
+On the online paths it may be null: the Postgres capture is allowed to fail without failing the
+checkout, because the money is at Cashfree and the order is recoverable from their dashboard
+([ADR-042](../decisions/ADR-042-order-capture-in-postgres.md)).
+
+On the cash-on-delivery path it may not. There is no second copy of a COD order, so a failed
+write means it exists in no system at all — the route answers `503 ORDER_NOT_RECORDED` and
+places nothing, and this body is never produced without a row behind it.
+`isCreateOrderCodSuccess` in `lib/payment.ts` rejects a null order number, holding the server to
+that. See [ADR-059](../decisions/ADR-059-checkout-payment-paths.md) §5.
+
+#### `codOrderReference` is deliberately not in Cashfree's shape
+
+`orders.cashfree_order_id` is unique and non-null, and a COD order still needs a payment
+reference to occupy it, so this route mints one. The `COD_` prefix rather than `MG_` is
+load-bearing: `isMorchadiOrderId` rejects it, so `/api/verify-order` cannot be led into asking
+Cashfree about a payment that never existed and rendering the inevitable 404 as *"nothing has
+been charged"* over a real order. The row's `cashfree_payment_status` reads `NOT_APPLICABLE`, a
+value `normaliseCashfreeOrderStatus` cannot produce.
+
+The confirmation page reads it back through [`/api/cod-order`](cod-order.md).
 
 #### Two ids, and neither is called `orderId`
 
@@ -186,6 +294,10 @@ preferred to adding a second key next to `orderId`.
 | — | `trackingId` |
 | `paymentSessionId` | unchanged |
 | `mode` | unchanged |
+
+**Additive change, prompt 100.** The online body gained `paymentType`, `amountPrepaid` and
+`amountDue`, and the cash-on-delivery body is new. Nothing was removed or renamed, and a client
+reading only the four prompt-49 keys off an online response still works.
 
 **`trackingId` is null when the Postgres capture failed.** That write is deliberately allowed
 to fail without failing the checkout ([ADR-042](../decisions/ADR-042-order-capture-in-postgres.md)),
@@ -268,6 +380,41 @@ because it is the same validator. `retryable: false` — the fix is on `/address
 The order validated but priced at zero or less. Unreachable with the current catalogue; it is
 a backstop so a zero-amount order can never be sent to Cashfree. `retryable: false`.
 
+### 400 PAYMENT_PATH_UNAVAILABLE
+
+The cart does not permit the `paymentPath` the request named — cash on delivery on a cart holding
+a piece that requires prepayment, or a part payment on a cart with no floor to part-pay or whose
+floor has reached the total.
+
+Not retryable: pressing the same button again asks for the same refused thing, and the way
+forward is another path or a different cart. No Cashfree request is made and nothing is written.
+
+```json
+{
+  "error": "PAYMENT_PATH_UNAVAILABLE",
+  "message": "That payment option is not available for what is in your cart. Go back a step and choose another one.",
+  "retryable": false
+}
+```
+
+### 503 ORDER_NOT_RECORDED
+
+**Cash on delivery only.** The order could not be written to Postgres, so it was not placed.
+
+This is the one place a capture failure is fatal, and the asymmetry with the online paths is
+deliberate: those are recoverable from the Cashfree dashboard and this is not. **Retryable** —
+the database being back is all this needs — and the message says plainly that nothing was placed
+and nothing is owed. It names no database and no exception
+([ADR-048](../decisions/ADR-048-database-health-and-failure-surfaces.md)).
+
+```json
+{
+  "error": "ORDER_NOT_RECORDED",
+  "message": "We could not record your order just now, so nothing has been placed and nothing is owed. Your cart and details are safe, so please try again in a moment.",
+  "retryable": true
+}
+```
+
 ### 503 PAYMENT_NOT_CONFIGURED
 
 `CASHFREE_APP_ID` or `CASHFREE_SECRET_KEY` is missing. Distinct from 502 because retrying
@@ -293,7 +440,17 @@ are never returned.
 
 ## Side effects
 
-One outbound call, made only after every check above has passed:
+### Nothing outbound on the cash-on-delivery path
+
+This bears stating as a side effect precisely because it is an *absence*. On `paymentPath: "cod"`
+this route makes **no HTTP request whatsoever**: no `fetch` to Cashfree's orders endpoint, no
+`payment_session_id`, and no read of `CASHFREE_APP_ID` or `CASHFREE_SECRET_KEY`. It mints a
+`COD_…` reference locally, writes the order, and answers. Everything below applies to `"full"`
+and `"partial"` only.
+
+### One outbound call on the two online paths
+
+Made only after every check above has passed:
 
 ```
 POST {base}/pg/orders
@@ -336,27 +493,30 @@ reads what to engrave. Values are capped at 255 characters, so a long summary is
 `options`, `options_2` and `options_3` rather than truncated, and if even three values are not
 enough the last one ends `; +N more`. No amount is ever written to it.
 
-`order_amount` is the server's computed total. `customer_id` is generated fresh per order and
-links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,
+`order_amount` is the server's computed `amountPrepaid` — the whole total on `"full"`, and the
+prepayment floor on `"partial"`, which is the one case where the amount the shopper is charged is
+deliberately not what their cart is worth. It is never a figure from the request.
+`customer_id` is generated fresh per order and links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,
 then `NEXT_PUBLIC_BASE_URL`, then the request's own origin.
 
 ### The Postgres write
 
-Once Cashfree has returned a `payment_session_id`, and only then, the order is captured in
-Postgres by `captureOrder` in `lib/order-capture.ts`. One `Customer` (found or created by
-phone), one `Order`, one `OrderLineItem` per distinct product-and-choice, and the first
-`OrderStatusHistory` row.
+On the two online paths, once Cashfree has returned a `payment_session_id` and only then, the
+order is captured in Postgres by `captureOrder` in `lib/order-capture.ts`. On the
+cash-on-delivery path the same function runs with no gateway call before it. One `Customer`
+(found or created by phone), one `Order`, one `OrderLineItem` per distinct product-and-choice,
+and the first `OrderStatusHistory` row.
 
 | Column | Value |
 | --- | --- |
 | `orders.id` | A fresh 10-character code from `lib/order-id.ts` — **not** the `MG_` id in the response |
 | `orders.status` | `placed` |
-| `orders.payment_type` | `prepaid`, always. This checkout offers no other choice |
-| `orders.amount_prepaid` / `amount_due` | The computed total / `0` |
+| `orders.payment_type` | `prepaid`, `partial_cod` or `cod`, from `resolvePaymentPlan` — never from the request |
+| `orders.amount_prepaid` / `amount_due` | The plan's two figures. `amount_prepaid + amount_due = total` holds on all three paths and is re-checked by `isBalancedOrderPayment` immediately before the insert; a row that failed it is not written |
 | `orders.subtotal`, `shipping_fee`, `total` | The server's own computed amounts, never the client's |
 | `orders.total_cost` | Σ `pricing.cost × quantity`, from `getOrderCaptureCatalogue()`. Margin data; never in any response |
-| `orders.cashfree_order_id` | The `order_id` Cashfree returned, falling back to the one that was sent. **Unique** |
-| `orders.cashfree_payment_status` | Cashfree's `order_status` through `normaliseCashfreeOrderStatus` — `PENDING` for a newly-minted session |
+| `orders.cashfree_order_id` | The `order_id` Cashfree returned, falling back to the one that was sent — or, on `cod`, the locally minted `COD_…` reference. **Unique**, and non-null on every path |
+| `orders.cashfree_payment_status` | Cashfree's `order_status` through `normaliseCashfreeOrderStatus` — `PENDING` for a newly-minted session — or `NOT_APPLICABLE` on `cod`, a value that normalisation cannot produce |
 | `orders.utm_*` | The same validated `utm` written to `order_tags` |
 | `orders.shipping_address` | The validated address, as JSON |
 | `order_line_items.product_name` / `product_image` | **Snapshotted from the catalogue at this moment**, not referenced |
@@ -366,15 +526,23 @@ phone), one `Order`, one `OrderLineItem` per distinct product-and-choice, and th
 `first_utm_source`/`_medium`/`_campaign` are written **only when the row is created** — a later
 order records its own campaign on the order and never rewrites the customer's first touch.
 
-**This write can fail without the shopper noticing, by design.** `captureOrder` never throws.
-A database that is down, slow, or refusing a constraint produces a server-side log line prefixed
-`[order-capture]` and nothing else: the 200 above is returned unchanged, the Cashfree session is
-unaffected, and no error body ever mentions the database. This mirrors `/api/notify-admin`, and
-the trade-off — a paid order with no row, recoverable only from the Cashfree dashboard — is
-argued in [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
+**On the two online paths this write can fail without the shopper noticing, by design.**
+`captureOrder` never throws. A database that is down, slow, or refusing a constraint produces a
+server-side log line prefixed `[order-capture]` and nothing else: the 200 above is returned
+unchanged with `trackingId: null`, the Cashfree session is unaffected, and no error body ever
+mentions the database. This mirrors `/api/notify-admin`, and the trade-off — a paid order with no
+row, recoverable only from the Cashfree dashboard — is argued in
+[ADR-042](../decisions/ADR-042-order-capture-in-postgres.md).
 
-> **Two ids per order.** `cashfreeOrderId` is what the return URL and `/api/verify-order` are
-> keyed on. `orders.id` is returned as `trackingId` and is the order's public name — shown on
+**On the cash-on-delivery path the same failure is fatal**, and answers `503 ORDER_NOT_RECORDED`
+above. ADR-042's rule rests on the order being recoverable from Cashfree, and a COD order is not
+recoverable from anywhere: an unwritten one exists in no system at all. See
+[ADR-059](../decisions/ADR-059-checkout-payment-paths.md) §5.
+
+> **Two ids per order.** The payment reference — `cashfreeOrderId` on an online order and
+> `codOrderReference` on a cash-on-delivery one — is what the confirmation URL carries and what
+> `/api/verify-order` or [`/api/cod-order`](cod-order.md) is keyed on. `orders.id` is returned as
+> `trackingId` and is the order's public name — shown on
 > the confirmation page and used as the primary identifier throughout the admin panel
 > ([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)).
 

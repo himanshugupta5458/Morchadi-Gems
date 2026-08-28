@@ -26,9 +26,25 @@ export interface CreateOrderItem {
   selectedOptions?: SelectedOptions;
 }
 
+/**
+ * Which of the three checkout paths a shopper picked, and the **whole** of what the client is
+ * allowed to say about how an order is paid for.
+ *
+ * It is a word, not an amount and not a claim about eligibility. `/api/create-order` decides
+ * what each word costs from its own catalogue read and refuses one the cart does not permit,
+ * so a hand-written request naming `"cod"` on a barred cart is rejected rather than honoured.
+ * See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+ */
+export type PaymentPath = "cod" | "partial" | "full";
+
 export interface CreateOrderRequest {
   items: CreateOrderItem[];
   address: Address;
+  /**
+   * Absent on a body written before this field existed, and read as `"full"` — which is what
+   * every such body has always meant.
+   */
+  paymentPath?: PaymentPath;
   /**
    * The campaign this visitor first arrived on, when the browser has one stored. Marketing
    * metadata: it is written onto the Cashfree order as tags and never read by any amount.
@@ -38,8 +54,9 @@ export interface CreateOrderRequest {
 }
 
 /**
- * The 200 body of `/api/create-order`, carrying **two** order identifiers that are not
- * interchangeable, which is why neither is called `orderId`.
+ * The 200 body of `/api/create-order` for an order that goes to the payment gateway, carrying
+ * **two** order identifiers that are not interchangeable, which is why neither is called
+ * `orderId`.
  *
  * `cashfreeOrderId` is the payment gateway's `MG_…` reference. It is what the return URL
  * carries, what `/api/verify-order` looks a payment up by, and what a refund is issued
@@ -50,13 +67,48 @@ export interface CreateOrderRequest {
  * and typed into the tracking box. It is `null` when the Postgres capture failed — that write
  * is deliberately allowed to fail without failing checkout (ADR-042), so a shopper can reach
  * a confirmed payment with no order number, and every consumer here must handle it.
+ *
+ * `amountPrepaid` is what the gateway is being asked for and equals the order total on a
+ * `prepaid` order. On a `partial_cod` order it is the prepayment floor and `amountDue` is the
+ * rest, which is the one case where the amount the shopper is about to be charged is *not* the
+ * amount their cart is worth.
  */
-export interface CreateOrderSuccess {
+export interface CreateOrderOnlineSuccess {
+  paymentType: "prepaid" | "partial_cod";
   cashfreeOrderId: string;
   trackingId: string | null;
   paymentSessionId: string;
+  amountPrepaid: number;
+  amountDue: number;
   mode: CashfreeMode;
 }
+
+/**
+ * The 200 body for a cash-on-delivery order, which is a **genuinely different shape** rather
+ * than the one above with its gateway fields nulled out.
+ *
+ * There is no `paymentSessionId` and no `mode`, because no payment session was minted and no
+ * SDK will be loaded: the browser goes straight to the confirmation page. There is no
+ * `cashfreeOrderId` either — `codOrderReference` is the `COD_…` reference this shop mints for
+ * an order the gateway never saw, and it is deliberately not in Cashfree's shape so that
+ * `isMorchadiOrderId` rejects it and no code path can be tricked into asking Cashfree about a
+ * payment that never existed.
+ *
+ * `trackingId` is **not** nullable here, and that is the asymmetry worth noticing. A prepaid
+ * capture may fail without failing checkout because the money is at Cashfree and the order is
+ * recoverable from their dashboard; a COD capture that failed leaves the order in no system at
+ * all, so it fails the checkout instead and this body is never produced without a row behind
+ * it. See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+ */
+export interface CreateOrderCodSuccess {
+  paymentType: "cod";
+  codOrderReference: string;
+  trackingId: string;
+  amountPrepaid: number;
+  amountDue: number;
+}
+
+export type CreateOrderSuccess = CreateOrderOnlineSuccess | CreateOrderCodSuccess;
 
 export type OrderItemErrorCode =
   | "UNKNOWN_PRODUCT"
@@ -125,10 +177,58 @@ export interface CashfreePaymentSummary {
  */
 export interface VerifyOrderResult extends CashfreePaymentSummary {
   trackingId: string | null;
+  /**
+   * What is still owed on this order at the door, read from `orders.amount_due` on the same row
+   * `trackingId` comes from. Zero on the prepaid order, which is every order this shop took
+   * before checkout offered a choice; positive on a `partial_cod` order, where Cashfree's
+   * `amount` above is the prepayment floor rather than what the cart was worth.
+   *
+   * Null for the same reasons `trackingId` is null and only those: no such row, or a database
+   * that did not answer. It is deliberately not defaulted to zero, because "nothing is owed"
+   * and "we could not find out" are different sentences to put in front of somebody who may be
+   * about to hand cash to a courier.
+   */
+  amountDue: number | null;
+}
+
+/**
+ * The whole 200 body of `GET /api/cod-order`: what this shop knows about an order the payment
+ * gateway never saw.
+ *
+ * There is no payment status here and no `amount`, because there was no payment — a COD order
+ * is *placed*, and that is the whole of what the confirmation page is entitled to celebrate.
+ * `amountDue` is the full order total and `total` is beside it so the page can say the same
+ * number twice without the browser doing arithmetic on money.
+ */
+export interface CodOrderResult {
+  codOrderReference: string;
+  trackingId: string;
+  total: number;
+  amountDue: number;
+}
+
+export type CodOrderErrorCode =
+  | "COD_REFERENCE_MALFORMED"
+  | "COD_ORDER_NOT_FOUND"
+  | "COD_LOOKUP_UNAVAILABLE";
+
+export interface CodOrderErrorBody {
+  error: CodOrderErrorCode;
+  message: string;
+  retryable: boolean;
 }
 
 export type VerifyOrderErrorCode =
   | "ORDER_ID_MALFORMED"
+  /**
+   * A `COD_…` reference reached the route that asks Cashfree about a payment. Distinct from
+   * `ORDER_ID_MALFORMED` because the reference is perfectly well formed and names a real order:
+   * what it names is an order with no payment to verify, and telling a shopper "that reference
+   * is not one of ours" about their own order number would be a lie the shape check happens to
+   * produce. Nothing this project ships sends one here; the code exists so that if something
+   * ever does, the answer is the true one and no request reaches Cashfree.
+   */
+  | "COD_ORDER_NOT_VERIFIABLE"
   | "PAYMENT_NOT_CONFIGURED"
   | "VERIFICATION_UNAVAILABLE";
 
@@ -148,6 +248,24 @@ export type CreateOrderErrorCode =
   | "ITEMS_INVALID"
   | "ADDRESS_INVALID"
   | "ORDER_TOTAL_INVALID"
+  /**
+   * The cart does not permit the path the request named — cash on delivery on a cart holding a
+   * piece that requires prepayment, or a part-payment on a cart that has no floor to part-pay.
+   * Not retryable: pressing the same button again asks for the same refused thing, and the way
+   * forward is to pick another path or change the cart.
+   */
+  | "PAYMENT_PATH_UNAVAILABLE"
+  /**
+   * A cash-on-delivery order could not be written to Postgres, so it was not placed.
+   *
+   * This is the one place a capture failure is fatal, and the asymmetry is the point. A prepaid
+   * capture may fail without failing checkout because the money is already at Cashfree and the
+   * order is recoverable from their dashboard (ADR-042). A COD order has no such second copy:
+   * a failed write leaves it in no system at all, and a confirmation screen over that would be
+   * a promise nothing in this shop could keep. Retryable — the database being back is all this
+   * needs. See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+   */
+  | "ORDER_NOT_RECORDED"
   | "PAYMENT_NOT_CONFIGURED"
   | "PAYMENT_GATEWAY_UNAVAILABLE";
 

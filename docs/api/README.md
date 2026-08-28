@@ -72,6 +72,7 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | --- | --- |
 | `POST /api/create-order` | [create-order.md](create-order.md) |
 | `GET /api/verify-order` | [verify-order.md](verify-order.md) |
+| `GET /api/cod-order` | [cod-order.md](cod-order.md) |
 | `GET /api/health` | [health.md](health.md) |
 | `POST /api/notify-admin` | [notify-admin.md](notify-admin.md) |
 | `POST /admin/api/login` | [admin-login.md](admin-login.md) |
@@ -80,10 +81,17 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `POST /admin/api/orders/{id}/address` | [admin-orders-id-address.md](admin-orders-id-address.md) |
 | `POST /admin/api/orders/{id}/receipt` | [admin-orders-id-receipt.md](admin-orders-id-receipt.md) |
 
-Every route handler in the repository is documented — the four under `app/api/` and the five
+Every route handler in the repository is documented — the five under `app/api/` and the five
 under `app/admin/api/`. `verify-order` is the only one without a backing ADR — payment
 verification shipped in prompt 13, which produced no decision record — so its contract file
 carries the reasoning that would otherwise live in an ADR.
+
+**`verify-order` and `cod-order` are siblings, told apart by a prefix.** Both answer about one
+order named by its payment reference in `?order_id=`; the first asks Cashfree because there was
+a payment, the second reads Postgres because there was not. `MG_…` belongs to the first and
+`COD_…` to the second, the two patterns are disjoint, and each route refuses the other's
+references without making any outbound call
+([ADR-059](../decisions/ADR-059-checkout-payment-paths.md)).
 
 **Every admin route has a second public URL.** They are served on the admin subdomain with the
 `/admin` prefix removed by a middleware rewrite, so `POST /admin/api/login` is

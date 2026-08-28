@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { OrderStatus } from "@prisma/client";
+import type { OrderStatus, PaymentType } from "@prisma/client";
 import Link from "next/link";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
@@ -57,6 +57,18 @@ function addressLockedNote(status: OrderStatus): string {
   }
 
   return "This order has finished, so its address is the record of where it was sent rather than a field.";
+}
+
+/**
+ * Whether a payment gateway was involved at all.
+ *
+ * A `cod` order carries a `COD_…` reference this shop minted and a payment status of
+ * `NOT_APPLICABLE`, and labelling either of those "Cashfree" would tell an operator to go
+ * looking in a dashboard that has never heard of this order. A `partial_cod` order *did* go to
+ * Cashfree for its prepayment, so it keeps both labels.
+ */
+function isGatewayOrder(paymentType: PaymentType): boolean {
+  return paymentType !== "cod";
 }
 
 function refundSummary(
@@ -249,17 +261,23 @@ export default async function AdminOrderDetailPage({
 
             <dl className="mt-5 flex flex-col gap-2 border-t border-line pt-4 text-eyebrow uppercase tracking-caps-wide text-muted">
               <div className="flex flex-col gap-1">
-                <dt>Cashfree order</dt>
+                <dt>{isGatewayOrder(order.paymentType) ? "Cashfree order" : "Payment reference"}</dt>
                 <dd className="break-all normal-case tracking-normal text-muted">
                   {order.cashfreeOrderId}
                 </dd>
               </div>
-              <div className="flex flex-col gap-1">
-                <dt>Cashfree payment status</dt>
-                <dd className="normal-case tracking-normal text-muted">
-                  {order.cashfreePaymentStatus}
-                </dd>
-              </div>
+              {isGatewayOrder(order.paymentType) ? (
+                <div className="flex flex-col gap-1">
+                  <dt>Cashfree payment status</dt>
+                  <dd className="normal-case tracking-normal text-muted">
+                    {order.cashfreePaymentStatus}
+                  </dd>
+                </div>
+              ) : (
+                <p className="normal-case tracking-normal text-muted">
+                  This order never went to the payment gateway. The reference above is ours.
+                </p>
+              )}
             </dl>
           </AdminPanelSection>
         </div>

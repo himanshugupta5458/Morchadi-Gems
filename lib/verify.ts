@@ -2,6 +2,7 @@ import type { CheckoutData } from "@/types/cart";
 import type {
   CashfreeOrderState,
   CashfreePaymentSummary,
+  CodOrderResult,
   VerifiedOrderState,
   VerifyOrderErrorBody,
   VerifyOrderResult,
@@ -20,6 +21,23 @@ const ORDER_ID_PATTERN = /^MG_\d{13}_[0-9a-z]{8}$/;
 
 export function isMorchadiOrderId(value: string): boolean {
   return ORDER_ID_PATTERN.test(value);
+}
+
+/**
+ * The shape `/api/create-order` mints for an order the payment gateway never saw:
+ * `COD_{13-digit epoch ms}_{8 lowercase base36}`.
+ *
+ * Identical in construction to `ORDER_ID_PATTERN` and deliberately different in its prefix, so
+ * that the two are mutually exclusive and `isMorchadiOrderId` rejects every one of these. That
+ * exclusivity is load-bearing rather than tidy: it is what stops `/api/verify-order` asking
+ * Cashfree about a payment that never existed and rendering its inevitable 404 as "nothing has
+ * been charged" over a real order. See
+ * [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md).
+ */
+const COD_ORDER_REFERENCE_PATTERN = /^COD_\d{13}_[0-9a-z]{8}$/;
+
+export function isCodOrderReference(value: string): boolean {
+  return COD_ORDER_REFERENCE_PATTERN.test(value);
 }
 
 /**
@@ -146,11 +164,43 @@ export function parseVerifyOrderResult(payload: unknown): VerifyOrderResult | nu
     return null;
   }
 
+  const amountDue = candidate.amountDue;
+  if (amountDue !== undefined && amountDue !== null && typeof amountDue !== "number") {
+    return null;
+  }
+
   return {
     orderId: candidate.orderId,
     status: candidate.status,
     amount: candidate.amount,
     trackingId: typeof trackingId === "string" && trackingId.length > 0 ? trackingId : null,
+    amountDue: typeof amountDue === "number" ? amountDue : null,
+  };
+}
+
+/**
+ * Validates a `/api/cod-order` 200 body on the browser side, to the same standard as the one
+ * above and for the same reason: the confirmation page is about to tell somebody their order is
+ * placed and how much cash to have ready at the door, and a body it can only half-read is worse
+ * than one it refuses. Every field is required here — unlike a verified payment, a cash-on-
+ * delivery order that could be found at all has all four of these or is not an order.
+ */
+export function parseCodOrderResult(payload: unknown): CodOrderResult | null {
+  if (typeof payload !== "object" || payload === null) return null;
+
+  const candidate = payload as Record<string, unknown>;
+  if (typeof candidate.codOrderReference !== "string") return null;
+  if (typeof candidate.trackingId !== "string" || candidate.trackingId.length === 0) {
+    return null;
+  }
+  if (typeof candidate.total !== "number") return null;
+  if (typeof candidate.amountDue !== "number") return null;
+
+  return {
+    codOrderReference: candidate.codOrderReference,
+    trackingId: candidate.trackingId,
+    total: candidate.total,
+    amountDue: candidate.amountDue,
   };
 }
 
@@ -264,6 +314,20 @@ export function describeVerificationFailure(payload: unknown): VerificationFailu
  * order. An unstamped bundle can only be a pre-stamp write, so it falls back to the amount
  * check alone.
  */
+/**
+ * What the gateway was actually asked for on the checkout this bundle records.
+ *
+ * The bundle's `total` is what the cart was worth, and on every prepaid order those are the
+ * same number — which is why this reconciliation was written as `bundle.total` before checkout
+ * offered a choice. On a part-paid order they are not: Cashfree was sent the prepayment floor,
+ * so comparing the cart's worth to it would refuse to show a receipt for an order that is
+ * perfectly reconciled. A bundle stamped before this field existed falls back to the total,
+ * which is the right answer for the only kind of order that can have produced one.
+ */
+function amountChargedOnlineFor(bundle: CheckoutData): number {
+  return bundle.amountPrepaid ?? bundle.total;
+}
+
 export function canDisplayBundleForOrder(
   bundle: CheckoutData | null,
   verified: CashfreePaymentSummary,
@@ -271,7 +335,7 @@ export function canDisplayBundleForOrder(
   if (bundle === null) return false;
   if (verified.status !== "PAID") return false;
   if (verified.amount === null) return false;
-  if (bundle.total !== verified.amount) return false;
+  if (amountChargedOnlineFor(bundle) !== verified.amount) return false;
   if (bundle.orderId !== undefined) return bundle.orderId === verified.orderId;
 
   return true;

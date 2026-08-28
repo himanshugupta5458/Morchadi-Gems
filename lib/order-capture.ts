@@ -1,5 +1,5 @@
 import "server-only";
-import { Prisma, type PrismaClient } from "@prisma/client";
+import { Prisma, type PaymentType, type PrismaClient } from "@prisma/client";
 import type { Address } from "@/types/cart";
 import type { CreateOrderItem } from "@/types/order";
 import type { SelectedOptions } from "@/types/product";
@@ -38,16 +38,71 @@ export interface OrderCapturePricing {
   total: number;
 }
 
+/**
+ * How the money for this order arrives, decided by `resolvePaymentPlan` in
+ * [`lib/cod.ts`](./cod.ts) from the server's own figures and never from the request.
+ *
+ * The two amounts are carried rather than derived here on purpose: `captureOrder` is the last
+ * place they can be checked against the total before they become a row, and checking a value
+ * it computed itself would prove nothing.
+ */
+export interface OrderCapturePayment {
+  paymentType: PaymentType;
+  amountPrepaid: number;
+  amountDue: number;
+}
+
 export interface CaptureOrderInput {
-  /** Cashfree's own order id, the join between their payment record and ours. */
+  /**
+   * The order's payment reference and the join between the payment record and ours. Cashfree's
+   * own `MG_…` order id for an order that went to the gateway, and the `COD_…` reference this
+   * shop minted for one that did not — the column is unique and non-null either way, and the
+   * distinct prefix is what stops a cash-on-delivery order ever being looked up at Cashfree.
+   */
   cashfreeOrderId: string;
-  /** Cashfree's status for that order, through this project's one normalisation. */
+  /**
+   * Cashfree's status for that order through this project's one normalisation, or
+   * `NOT_APPLICABLE` for an order the gateway never saw. That value is not one
+   * `normaliseCashfreeOrderStatus` can produce, so it cannot be mistaken for a gateway answer.
+   */
   cashfreePaymentStatus: string;
   address: Address;
   utm: UtmParams | null;
   /** The server's computed amounts. Never anything the client sent. */
   pricing: OrderCapturePricing;
+  payment: OrderCapturePayment;
   lines: OrderCaptureLine[];
+}
+
+/** What `cashfree_payment_status` reads on an order that was never sent to a payment gateway. */
+export const NON_GATEWAY_PAYMENT_STATUS = "NOT_APPLICABLE";
+
+/**
+ * Rupee amounts are whole numbers all the way from `data/products.json` to here, so this
+ * tolerance exists only to keep a floating-point sum of them from failing on its last bit. It
+ * is far below the smallest amount anyone can be charged.
+ */
+const AMOUNT_INVARIANT_TOLERANCE = 0.005;
+
+/**
+ * Whether what will be collected and what will be owed add up to what the order is worth.
+ *
+ * `amountPrepaid + amountDue = total` is the invariant the whole payment-type scheme rests on —
+ * it is what makes "money outstanding" one query rather than three cases (see the note on those
+ * columns in `prisma/schema.prisma`) — and this is the one place every path passes through, so
+ * it is the one place worth checking it. A row that failed this would be a quiet, permanent
+ * lie about money in a table nothing else audits.
+ */
+export function isBalancedOrderPayment(
+  pricing: OrderCapturePricing,
+  payment: OrderCapturePayment,
+): boolean {
+  if (payment.amountPrepaid < 0 || payment.amountDue < 0) return false;
+
+  return (
+    Math.abs(payment.amountPrepaid + payment.amountDue - pricing.total) <=
+    AMOUNT_INVARIANT_TOLERANCE
+  );
 }
 
 /**
@@ -284,14 +339,24 @@ async function refreshCustomerContactDetails(
  * submitted and each order keeps its own. Only the `customers` row, which has no history and is
  * meant to say who this phone belongs to now, is brought up to date.
  *
- * `paymentType` is `prepaid` and `amountDue` is zero, unconditionally. This route is the only
- * thing that creates orders, and the storefront it serves collects the full amount up front.
+ * **`paymentType` and the two amounts come from the caller**, which is the one thing about this
+ * function that changed when checkout grew a choice. They are still not from the request: the
+ * route derives them with `resolvePaymentPlan` from a total it computed itself, and the guard
+ * below refuses to write a row whose amounts do not add up to that total. A capture that fails
+ * that guard is `FAILED` like any other, which for a cash-on-delivery order fails the checkout
+ * ([ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md)).
  */
 export async function captureOrder(
   input: CaptureOrderInput,
   client: OrderCaptureClient = prisma,
 ): Promise<OrderCaptureOutcome> {
   try {
+    if (!isBalancedOrderPayment(input.pricing, input.payment)) {
+      throw new Error(
+        `${input.payment.amountPrepaid} prepaid and ${input.payment.amountDue} due do not add up to a total of ${input.pricing.total}`,
+      );
+    }
+
     const existingCustomer = await client.customer.findUnique({
       where: { phone: input.address.phone },
       select: { id: true, name: true, email: true },
@@ -324,13 +389,13 @@ export async function captureOrder(
         id: orderId,
         customerId,
         status: "placed",
-        paymentType: "prepaid",
+        paymentType: input.payment.paymentType,
         subtotal: new Prisma.Decimal(input.pricing.subtotal),
         shippingFee: new Prisma.Decimal(input.pricing.shippingFee),
         total: new Prisma.Decimal(input.pricing.total),
         totalCost: new Prisma.Decimal(sumOrderCost(input.lines)),
-        amountPrepaid: new Prisma.Decimal(input.pricing.total),
-        amountDue: new Prisma.Decimal(0),
+        amountPrepaid: new Prisma.Decimal(input.payment.amountPrepaid),
+        amountDue: new Prisma.Decimal(input.payment.amountDue),
         cashfreeOrderId: input.cashfreeOrderId,
         cashfreePaymentStatus: input.cashfreePaymentStatus,
         utmSource: input.utm?.source ?? null,
@@ -366,7 +431,7 @@ export async function captureOrder(
     };
   } catch (captureError) {
     console.error(
-      `${LOG_PREFIX} ${input.cashfreeOrderId} was created with Cashfree but could not be written to Postgres`,
+      `${LOG_PREFIX} ${input.cashfreeOrderId} could not be written to Postgres`,
       captureError,
     );
     return { kind: "FAILED" };
@@ -374,38 +439,84 @@ export async function captureOrder(
 }
 
 /**
- * The ten-character order number for one Cashfree payment, or null — and **never throws**, for
- * the same reason nothing else on this path does.
+ * What this shop knows about the order behind one payment reference, or null — and **never
+ * throws**, for the same reason nothing else on this path does.
  *
- * Keyed on `orders.cashfree_order_id`, the unique column ADR-042 made the join between
- * Cashfree's record and ours, and the same column `recordVerifiedPaymentStatus` below writes
+ * Keyed on `orders.cashfree_order_id`, the unique column ADR-042 made the join between the
+ * payment record and ours, and the same column `recordVerifiedPaymentStatus` below writes
  * through. It is a separate read rather than a value returned by that update because the two
  * answer different questions and only one of them writes: an order whose stored status already
  * matches performs no update at all, and it still has an order number.
+ *
+ * It reads `amount_due` beside the order number because both are facts only this database
+ * holds and both are wanted by the same caller in the same breath — `/api/verify-order` names
+ * the order and says what is still owed on it, and two round trips to fetch one row would be
+ * two chances for the second to fail after the first succeeded.
  *
  * Null covers a payment this shop never captured — one whose write failed (ADR-042), one placed
  * before capture existed — and a database that is unreachable. `/api/verify-order` renders all
  * three the same way, by falling back to the payment reference, so distinguishing them here
  * would buy the caller nothing.
  */
-export async function findTrackingIdForCashfreeOrder(
+export interface CapturedOrderSummary {
+  trackingId: string;
+  total: number;
+  amountDue: number;
+}
+
+/**
+ * The same lookup with its two failures kept apart: an order this shop has no row for, and a
+ * database that did not answer.
+ *
+ * `/api/verify-order` does not need the distinction and takes the collapsed form below — a
+ * shopper whose payment Cashfree has confirmed is shown the same screen either way, and the
+ * fallback to the payment reference is identical. `/api/cod-order` does need it, because a
+ * cash-on-delivery order has no gateway to fall back on: "we have no record of that" is a 404
+ * to contact us about, and "we could not reach the database" is a 502 worth asking again about
+ * in a moment, and answering the second with the first would tell somebody their order does not
+ * exist because Postgres was restarting
+ * ([ADR-048](/docs/decisions/ADR-048-database-health-and-failure-surfaces.md)).
+ */
+export type CapturedOrderLookup =
+  | { kind: "FOUND"; order: CapturedOrderSummary }
+  | { kind: "NOT_FOUND" }
+  | { kind: "UNAVAILABLE" };
+
+export async function lookupCapturedOrderForPaymentReference(
   cashfreeOrderId: string,
   client: Pick<PrismaClient, "order"> = prisma,
-): Promise<string | null> {
+): Promise<CapturedOrderLookup> {
   try {
     const order = await client.order.findUnique({
       where: { cashfreeOrderId },
-      select: { id: true },
+      select: { id: true, total: true, amountDue: true },
     });
 
-    return order?.id ?? null;
+    if (order === null) return { kind: "NOT_FOUND" };
+
+    return {
+      kind: "FOUND",
+      order: {
+        trackingId: order.id,
+        total: order.total.toNumber(),
+        amountDue: order.amountDue.toNumber(),
+      },
+    };
   } catch (lookupError) {
     console.error(
       `${LOG_PREFIX} ${cashfreeOrderId} could not be looked up for its order number`,
       lookupError,
     );
-    return null;
+    return { kind: "UNAVAILABLE" };
   }
+}
+
+export async function findCapturedOrderForPaymentReference(
+  cashfreeOrderId: string,
+  client: Pick<PrismaClient, "order"> = prisma,
+): Promise<CapturedOrderSummary | null> {
+  const lookup = await lookupCapturedOrderForPaymentReference(cashfreeOrderId, client);
+  return lookup.kind === "FOUND" ? lookup.order : null;
 }
 
 /**
