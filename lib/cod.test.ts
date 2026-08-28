@@ -74,8 +74,13 @@ describe("getCodEligibilityCatalogue", () => {
     expect(Object.keys(entry).sort()).toEqual(["id", "minPrepaidAmount"]);
   });
 
-  it("reports the whole catalogue as cash-on-delivery eligible today", () => {
-    expect(isCartCodEligible(getCodEligibilityCatalogue())).toBe(true);
+  it("withdraws cash on delivery from the whole catalogue, one piece having a floor today", () => {
+    const catalogue = getCodEligibilityCatalogue();
+
+    expect(isCartCodEligible(catalogue)).toBe(false);
+    expect(
+      isCartCodEligible(catalogue.filter((entry) => entry.minPrepaidAmount === 0)),
+    ).toBe(true);
   });
 });
 
@@ -132,11 +137,11 @@ describe("the catalogue on disk", () => {
     expect(invalid.map((product) => product.id)).toEqual([]);
   });
 
-  it("designates no product as requiring prepayment yet", () => {
+  it("designates exactly the products flagged for prepayment", () => {
     const requiringPrepayment = getAllProducts().filter(
       (product) => product.pricing.minPrepaidAmount > 0,
     );
 
-    expect(requiringPrepayment.map((product) => product.id)).toEqual([]);
+    expect(requiringPrepayment.map((product) => product.id)).toEqual(["P001"]);
   });
 });

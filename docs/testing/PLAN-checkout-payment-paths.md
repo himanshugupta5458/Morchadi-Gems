@@ -13,10 +13,16 @@
   a COD order (a known open gap — see [ADR-059](../decisions/ADR-059-checkout-payment-paths.md)).
 
 - **Prerequisites:** local Postgres from `docker-compose.yml` with migrations applied; the
-  Cashfree sandbox credentials in `.env.local` for the end-to-end cases. No product in
-  `data/products.json` has `minPrepaidAmount > 0`, so **the part-payment path is unreachable
-  from the real catalogue** — cases that need it override `getCodEligibilityCatalogue`, the one
-  accessor the route consults, rather than editing the catalogue.
+  Cashfree sandbox credentials in `.env.local` for the end-to-end cases. Cases that need a
+  prepayment floor override `getCodEligibilityCatalogue`, the one accessor the route consults,
+  rather than editing the catalogue — the override is what makes the case independent of which
+  pieces carry a floor on any given day.
+
+  **No case names the piece it buys.** `data/products.json` is data, and a floor may appear on
+  any product in any commit — P001 acquired one on 2026-08-28. A cash-on-delivery case that
+  named a product would silently become a test of the eligibility refusal the day that product
+  was barred, so the automated cases find the first entry reading `minPrepaidAmount: 0` and buy
+  that. See [`../logs/2026-08-28-eight-tests-fail-after-one-catalogue-price-edit.md`](../logs/2026-08-28-eight-tests-fail-after-one-catalogue-price-edit.md).
 
 ## Cases
 

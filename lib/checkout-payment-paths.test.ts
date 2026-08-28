@@ -1,14 +1,15 @@
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import type { CodEligibilityEntry } from "@/lib/cod";
 import { prisma } from "@/lib/prisma";
+import { getCodEligibilityCatalogue } from "@/lib/products";
 
 /**
- * Every product in `data/products.json` reads `minPrepaidAmount: 0` today, so the part-payment
- * path has no cart in the real catalogue that can reach it. This override is how these tests
- * bar a piece without editing the catalogue: `getCodEligibilityCatalogue` is the one accessor
- * the route consults for eligibility (ADR-058), so replacing what it returns is the whole of
- * what "this shop stopped selling P001 on delivery" means to the code under test. Everything
- * else — pricing, capture, the Cashfree request — runs against the real module.
+ * A prepayment floor is a per-product fact the catalogue may set on any piece at any time, so
+ * these tests never name the piece they buy. This override is how they bar one without editing
+ * the catalogue: `getCodEligibilityCatalogue` is the one accessor the route consults for
+ * eligibility (ADR-058), so replacing what it returns is the whole of what "this shop stopped
+ * selling that piece on delivery" means to the code under test. Everything else — pricing,
+ * capture, the Cashfree request — runs against the real module.
  */
 let codCatalogueOverride: CodEligibilityEntry[] | null = null;
 
@@ -35,7 +36,28 @@ async function barProduct(productId: string, minPrepaidAmount: number): Promise<
 const START_POSTGRES_HINT = "start it with `docker compose up -d` — see docs/DEV-DATABASE.md";
 
 const PATH_TEST_PHONE = "9876500022";
-const INITIAL_RING_ID = "P001";
+
+/**
+ * A piece the catalogue on disk still takes on delivery, found rather than named. Naming one
+ * couples every cash-on-delivery assertion below to that product keeping
+ * `minPrepaidAmount: 0` forever, and the day it acquires a floor these tests stop testing the
+ * cash-on-delivery path and start testing the refusal.
+ */
+function firstPieceTakenOnDelivery(): string {
+  const eligible = getCodEligibilityCatalogue().find(
+    (entry) => entry.minPrepaidAmount === 0,
+  );
+
+  if (eligible === undefined) {
+    throw new Error(
+      "no product in data/products.json reads minPrepaidAmount: 0, so no cart can reach the cash-on-delivery path",
+    );
+  }
+
+  return eligible.id;
+}
+
+const COD_ELIGIBLE_ID = firstPieceTakenOnDelivery();
 
 let unavailableReason: string | null = null;
 
@@ -143,7 +165,7 @@ describe("a checkout that names no payment path at all", () => {
     );
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 2 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 2 }],
       address: PATH_TEST_ADDRESS,
     });
     const body = await response.json();
@@ -180,7 +202,7 @@ describe("a checkout that names no payment path at all", () => {
 
     const body = await (
       await postCreateOrder({
-        items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
         address: PATH_TEST_ADDRESS,
       })
     ).json();
@@ -209,7 +231,7 @@ describe("a cash-on-delivery checkout", () => {
     vi.stubGlobal("fetch", outboundFetch);
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 2 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 2 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "cod",
     });
@@ -249,7 +271,7 @@ describe("a cash-on-delivery checkout", () => {
 
     const { codOrderReference } = await (
       await postCreateOrder({
-        items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
         address: PATH_TEST_ADDRESS,
         paymentPath: "cod",
       })
@@ -277,7 +299,7 @@ describe("a cash-on-delivery checkout", () => {
 
     const placed = await (
       await postCreateOrder({
-        items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
         address: PATH_TEST_ADDRESS,
         paymentPath: "cod",
       })
@@ -320,13 +342,13 @@ describe("a cash-on-delivery checkout", () => {
   it("is refused outright when the cart holds a piece that requires prepayment", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
-    await barProduct(INITIAL_RING_ID, 500);
+    await barProduct(COD_ELIGIBLE_ID, 500);
 
     const outboundFetch = vi.fn(async () => cashfreeCreated("never"));
     vi.stubGlobal("fetch", outboundFetch);
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "cod",
     });
@@ -342,7 +364,7 @@ describe("a part-payment checkout", () => {
   it("sends Cashfree the floor rather than the total, and books the rest as owing", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
-    await barProduct(INITIAL_RING_ID, 50);
+    await barProduct(COD_ELIGIBLE_ID, 50);
 
     const sentToCashfree: Array<Record<string, unknown>> = [];
     vi.stubGlobal(
@@ -355,7 +377,7 @@ describe("a part-payment checkout", () => {
     );
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 3 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 3 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "partial",
     });
@@ -389,7 +411,7 @@ describe("a part-payment checkout", () => {
     vi.stubGlobal("fetch", outboundFetch);
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "partial",
     });
@@ -406,11 +428,11 @@ describe("a part-payment checkout", () => {
   it("is refused when the floor has grown to meet the order total", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
-    await barProduct(INITIAL_RING_ID, 100_000);
+    await barProduct(COD_ELIGIBLE_ID, 100_000);
     vi.stubGlobal("fetch", vi.fn(async () => cashfreeCreated("never")));
 
     const response = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "partial",
     });
@@ -428,7 +450,7 @@ describe("a request that lies about which path it may take", () => {
   it("cannot take a barred cart on delivery by asking for it, nor by inventing a word", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
-    await barProduct(INITIAL_RING_ID, 500);
+    await barProduct(COD_ELIGIBLE_ID, 500);
 
     const sentToCashfree: Array<Record<string, unknown>> = [];
     vi.stubGlobal(
@@ -443,7 +465,7 @@ describe("a request that lies about which path it may take", () => {
     expect(
       (
         await postCreateOrder({
-          items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+          items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
           address: PATH_TEST_ADDRESS,
           paymentPath: "cod",
         })
@@ -451,7 +473,7 @@ describe("a request that lies about which path it may take", () => {
     ).toBe(400);
 
     const invented = await postCreateOrder({
-      items: [{ productId: INITIAL_RING_ID, qty: 1 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
       address: PATH_TEST_ADDRESS,
       paymentPath: "free",
     });
@@ -482,7 +504,7 @@ describe("a request that lies about which path it may take", () => {
 
     const body = await (
       await postCreateOrder({
-        items: [{ productId: INITIAL_RING_ID, qty: 1, price: 1 }],
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 1, price: 1 }],
         address: PATH_TEST_ADDRESS,
         paymentPath: "full",
         amountPrepaid: 1,

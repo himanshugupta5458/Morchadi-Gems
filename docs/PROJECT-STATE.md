@@ -616,10 +616,13 @@ picture is untouched.
    Closing it means giving that route a second warrant: a Postgres read by the `COD_…`
    reference, which is exactly as strong as the gateway lookup. Left deliberately outside
    prompt 100 and recorded in [ADR-059](decisions/ADR-059-checkout-payment-paths.md).
-10. **No product has `minPrepaidAmount > 0`**, so the part-payment path, though fully built and
-    tested, has never run against real catalogue data. The first product given a real floor
-    should be walked through TC-27 of
-    [`PLAN-checkout-payment-paths.md`](testing/PLAN-checkout-payment-paths.md) by hand.
+10. **Exactly one product has `minPrepaidAmount > 0`** — P001, at ₹49 since 2026-08-28. The
+    part-payment path is therefore reachable from the real catalogue for the first time, but it
+    has still only been exercised automatically: TC-27 of
+    [`PLAN-checkout-payment-paths.md`](testing/PLAN-checkout-payment-paths.md) should be walked
+    through by hand against P001 before a shopper meets it. Note that P001 is now refused cash
+    on delivery, and any cart containing it is too — that is ADR-058's unanimity rule working,
+    not a fault.
 11. **There is still no way to collect an outstanding balance.** `amount_due` is now written and
     visible on the admin list and detail, and chasing it is a phone call; the
     `codAmountCollected` toggle records the outcome. A collection flow is deferred by decision.

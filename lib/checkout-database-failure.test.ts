@@ -1,4 +1,5 @@
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { getCodEligibilityCatalogue } from "@/lib/products";
 
 /**
  * Every checkout database write, refused.
@@ -24,6 +25,28 @@ vi.mock("@/lib/prisma", () => ({
     },
   },
 }));
+
+/**
+ * A piece the catalogue on disk still takes on delivery, found rather than named, so that a
+ * prepayment floor appearing on any one product cannot turn the cash-on-delivery test below
+ * into a test of the eligibility refusal. The prepaid tests stay on `P001` deliberately: they
+ * assert against its own options and pricing, and no floor changes what a prepaid checkout does.
+ */
+function firstPieceTakenOnDelivery(): string {
+  const eligible = getCodEligibilityCatalogue().find(
+    (entry) => entry.minPrepaidAmount === 0,
+  );
+
+  if (eligible === undefined) {
+    throw new Error(
+      "no product in data/products.json reads minPrepaidAmount: 0, so no cart can reach the cash-on-delivery path",
+    );
+  }
+
+  return eligible.id;
+}
+
+const COD_ELIGIBLE_ID = firstPieceTakenOnDelivery();
 
 const FAILURE_TEST_ADDRESS = {
   name: "Database Down Test",
@@ -258,7 +281,7 @@ describe("POST /api/create-order for cash on delivery with Postgres unreachable"
     vi.stubGlobal("fetch", outboundFetch);
 
     const response = await postCreateOrder({
-      items: [{ productId: "P001", qty: 1 }],
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
       address: FAILURE_TEST_ADDRESS,
       paymentPath: "cod",
     });

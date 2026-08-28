@@ -14,7 +14,7 @@ const FREE_ID = "P001";
 const ALSO_FREE_ID = "P002";
 const BARRED_ID = "P010";
 
-/** A catalogue with one piece that requires prepayment, which the real one has none of yet. */
+/** A catalogue with one piece that requires prepayment, held apart from the real one. */
 const MIXED_CATALOGUE: CodEligibilityEntry[] = [
   { id: FREE_ID, minPrepaidAmount: 0 },
   { id: ALSO_FREE_ID, minPrepaidAmount: 0 },
@@ -87,10 +87,15 @@ describe("summariseCartPrepayment", () => {
       productId: entry.id,
       qty: 1,
     }));
+    const everyFloorOnce = catalogue.reduce(
+      (running, entry) => running + entry.minPrepaidAmount,
+      0,
+    );
 
+    expect(everyFloorOnce).toBeGreaterThan(0);
     expect(summariseCartPrepayment(wholeCatalogueAsACart, catalogue)).toEqual({
       isCodEligible: isCartCodEligible(catalogue),
-      minimumPrepayment: 0,
+      minimumPrepayment: everyFloorOnce,
     });
   });
 });
