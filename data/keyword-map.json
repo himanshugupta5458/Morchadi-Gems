@@ -102,9 +102,6 @@
     "cherry charm": [
       "P375"
     ],
-    "clear crystal vine collar necklace": [
-      "P519"
-    ],
     "clear cz vine necklace": [
       "P566"
     ],
@@ -113,6 +110,9 @@
     ],
     "clear stone thread ring": [
       "P017"
+    ],
+    "clear-stone vine collar necklace": [
+      "P519"
     ],
     "clover charm": [
       "P381"
@@ -183,7 +183,7 @@
     "evil eye heart bracelet": [
       "P447"
     ],
-    "fan-shaped crystal pendant necklace": [
+    "fan-shaped clear-stone pendant necklace": [
       "P437"
     ],
     "floating locket pendant": [
@@ -423,7 +423,7 @@
     "mint green stud earrings": [
       "P027"
     ],
-    "multicolor crystal cluster earrings": [
+    "multicolor cubic zirconia cluster earrings": [
       "P327"
     ],
     "multicolor drop necklace": [
@@ -717,9 +717,6 @@
     "self care gift hamper with jewellery": [
       "P597"
     ],
-    "silver initial ring birthday hamper": [
-      "P535"
-    ],
     "silver-plated blue stud earrings": [
       "P026"
     ],
@@ -738,8 +735,23 @@
     "silver-tone anti-tarnish watch deep blue dial": [
       "P609"
     ],
+    "silver-tone baguette nath": [
+      "P481"
+    ],
+    "silver-tone double-row nath": [
+      "P488"
+    ],
+    "silver-tone floral nath": [
+      "P478"
+    ],
+    "silver-tone halo nath": [
+      "P479"
+    ],
     "silver-tone infinity ring": [
       "P240"
+    ],
+    "silver-tone initial ring birthday hamper": [
+      "P535"
     ],
     "silver-tone mesh bracelet watch aqua blue dial": [
       "P616"
@@ -749,18 +761,6 @@
     ],
     "silver-tone twisted bow ring": [
       "P008"
-    ],
-    "silver-toned baguette nath": [
-      "P481"
-    ],
-    "silver-toned double-row nath": [
-      "P488"
-    ],
-    "silver-toned floral nath": [
-      "P478"
-    ],
-    "silver-toned halo nath": [
-      "P479"
     ],
     "spiral texture crescent hoop earrings": [
       "P571"
@@ -1385,9 +1385,6 @@
     "crystal necklace and earring gift set": [
       "P597"
     ],
-    "crystal tennis bracelet": [
-      "P472"
-    ],
     "cubic zirconia band ring": [
       "P178"
     ],
@@ -1468,6 +1465,9 @@
     ],
     "cubic zirconia studs": [
       "P024"
+    ],
+    "cubic zirconia tennis bracelet": [
+      "P472"
     ],
     "cubic zirconia tulip necklace": [
       "P524"
@@ -2525,7 +2525,7 @@
     "maroon stone ring for women": [
       "P330"
     ],
-    "marquise crystal earrings": [
+    "marquise cubic zirconia earrings": [
       "P327"
     ],
     "marquise signet ring": [
@@ -3086,9 +3086,6 @@
     "shimmer bow clip": [
       "P048"
     ],
-    "silver initial ring set": [
-      "P535"
-    ],
     "silver nath for wedding": [
       "P481"
     ],
@@ -3126,6 +3123,9 @@
     ],
     "silver-tone chain bracelet": [
       "P447"
+    ],
+    "silver-tone initial ring set": [
+      "P535"
     ],
     "silver-tone quartz watch": [
       "P616"

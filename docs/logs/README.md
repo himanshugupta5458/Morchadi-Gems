@@ -62,3 +62,5 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 | [2026-08-20](2026-08-20-password-prompt-never-appears.md) | `npm run seed:admin` looks stuck after the username — the password prompt never appears | Major | Resolved |
 | [2026-08-20](2026-08-20-admin-shows-the-wrong-customer-name.md) | The admin panel shows a different customer name from the shipping address on the same order | Major | Resolved |
 | [2026-08-24](2026-08-24-register-append-refused-seven-cell-rows.md) | Stage 0's first real write run refused at the register append — 16 rows would have 7 cells against a 6-cell header | Blocker | Resolved |
+| [2026-08-26](2026-08-26-batch-2-gate-red-despite-green-claim.md) | Batch 2 shipped with a red gate behind a green claim, and extraction annotations reached shopper copy | Major | Resolved |
+| [2026-08-27](2026-08-27-phase-2-eight-failures-not-pre-existing.md) | A prior run's "8 pre-existing, unrelated" test-failure claim was false | Major | Resolved |

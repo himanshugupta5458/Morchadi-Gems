@@ -368,12 +368,29 @@ describe("the shipping details in the offer", () => {
     expect(shippingRate.currency).toBe("INR");
   });
 
-  it("charges the flat rate on every product, because none reaches the threshold alone", () => {
+  it("charges the flat rate on every non-hamper product, because none reaches the threshold alone", () => {
     for (const product of getAllProducts()) {
+      if (product.category === "gift-hampers") continue;
       expect(product.pricing.price).toBeLessThan(FREE_SHIPPING_THRESHOLD);
       expect(buildShippingDetailsSchema(product).shippingRate.value).toBe(
         FLAT_SHIPPING_RATE,
       );
+    }
+  });
+
+  it("a gift hamper's shipping rate follows its own bundled price against the same threshold", () => {
+    const hampers = getAllProducts().filter(
+      (product) => product.category === "gift-hampers",
+    );
+    expect(hampers.length).toBeGreaterThan(0);
+    expect(
+      hampers.some((product) => product.pricing.price >= FREE_SHIPPING_THRESHOLD),
+    ).toBe(true);
+
+    for (const product of hampers) {
+      const expectedRate =
+        product.pricing.price >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING_RATE;
+      expect(buildShippingDetailsSchema(product).shippingRate.value).toBe(expectedRate);
     }
   });
 

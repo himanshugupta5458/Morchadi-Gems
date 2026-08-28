@@ -305,7 +305,28 @@ describe("surfacing — gift-hampers reached shoppers with its first published p
       .map((product) => product.id)
       .sort();
 
-    expect(published).toEqual(["P363", "P533"]);
+    expect(published).toEqual([
+      "P363",
+      "P533",
+      "P534",
+      "P535",
+      "P536",
+      "P537",
+      "P538",
+      "P545",
+      "P592",
+      "P593",
+      "P594",
+      "P595",
+      "P596",
+      "P597",
+      "P598",
+      "P600",
+      "P624",
+      "P625",
+      "P626",
+      "P627",
+    ]);
   });
 
   it("every surfaced category does have published products", () => {
