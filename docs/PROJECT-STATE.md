@@ -184,7 +184,7 @@ npm run validate:products && npm run build`, plus a `/docs` update and a `BUILD_
 2026-08-28, directly from the file. The previous edition of this section described the
 49-product catalogue and had been stale since the migration batches landed.
 
-- **449 products**, ids `P001`–`P639`, **not contiguous** — 59 gaps, because a P-code is
+- **449 products**, ids `P001`–`P639`, **not contiguous** — 190 unused numbers, because a P-code is
   reserved at Draft A creation and a draft that never publishes leaves its number unused
   (Draft A rule 14).
 - **All 449 are `status: "active"`; there are no drafts in the file.**
