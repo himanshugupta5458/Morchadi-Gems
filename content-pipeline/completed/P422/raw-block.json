@@ -1,0 +1,52 @@
+{
+  "productId": "P422",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "875",
+    "workingId": "odoo-875",
+    "originalSku": "MJ-204",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-204-dainty-sparkling-butterfly-pendant-necklace-875",
+    "referenceTitle": "Dainty Sparkling Butterfly Pendant Necklace",
+    "rawContent": "Embrace effortless elegance with our Sparkling Butterfly Necklace. Designed as a high-fashion statement piece, this delicate gold-toned necklace adds a touch of whimsical charm to any outfit. Perfect for occasion-based styling and trend-forward looks, this piece is crafted for those who love to refresh their jewelry collection with the latest seasonal styles. To maintain its brilliant golden glow, we recommend keeping it away from water and perfumes",
+    "rawHtml": "<div data-oe-version=\"2.0\">Embrace effortless elegance with our Sparkling Butterfly Necklace. Designed as a high-fashion statement piece, this delicate gold-toned necklace adds a touch of whimsical charm to any outfit. Perfect for occasion-based styling and trend-forward looks, this piece is crafted for those who love to refresh their jewelry collection with the latest seasonal styles. To maintain its brilliant golden glow, we recommend keeping it away from water and perfumes</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P422.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P422/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P422-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P422/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price (morchadijewels.com, reference only)"
+  }
+}

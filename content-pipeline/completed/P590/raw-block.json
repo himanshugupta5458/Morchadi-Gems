@@ -1,0 +1,91 @@
+{
+  "productId": "P590",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1060",
+    "workingId": "odoo-1060",
+    "originalSku": "MJ-392",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-392-layered-satin-bow-hair-clip-1060",
+    "referenceTitle": "Layered Satin Bow Hair Clip",
+    "rawContent": "Structured layered satin bow, French-style design\nSecure alligator clip, holds all hair types\nAvailable in Magenta Pink, Ivory White & Classic Black\nPerfect for daily wear, office, parties & festive styling\nElegant statement piece, great for gifting\nLightweight, comfortable all-day wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">Structured layered satin bow, French-style design</div><div>Secure alligator clip, holds all hair types</div><div>Available in Magenta Pink, Ivory White &amp; Classic Black</div><div>Perfect for daily wear, office, parties &amp; festive styling</div><div>Elegant statement piece, great for gifting</div><div>Lightweight, comfortable all-day wear</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Combo",
+        "pink",
+        "black",
+        "white"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P590.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P590-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P590-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P590-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {
+      "Color:pink": {
+        "path": "/products/P590-pink.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-pink.webp",
+        "verifiedDistinct": true
+      },
+      "Color:black": {
+        "path": "/products/P590-black.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-black.webp",
+        "verifiedDistinct": true
+      },
+      "Color:white": {
+        "path": "/products/P590-white.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P590/raw/variant-white.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "referencePrice": "₹79 sale price (morchadijewels.com, reference only)"
+  }
+}

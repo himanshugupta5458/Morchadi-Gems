@@ -1,0 +1,59 @@
+{
+  "productId": "P349",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "783",
+    "workingId": "odoo-783",
+    "originalSku": "MJ-341",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-341-hot-pink-glass-bangles-set-of-12-with-gold-bead-detailing-783",
+    "referenceTitle": "Hot Pink Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "rawContent": "Make a bold and beautiful statement with this stunning set of 12 hot pink glass bangles. Crafted from high-quality glass, these bangles feature a vibrant pink hue enhanced with delicate gold bead embellishments and a soft shimmer that adds a festive glow. The rich color and fine detailing make this set perfect for celebrations, weddings, and special occasions.\nDesigned to be lightweight and comfortable, these bangles are ideal for all-day wear while still adding a touch of glamour to your outfit. The striking hot pink shade pairs beautifully with traditional attire such as sarees, lehengas, and salwar suits, as well as fusion and festive ensembles. Whether worn on their own or stacked with complementary bangles, this set brings elegance, color, and charm to your jewelry collection.\nA timeless accessory with a modern edge, these bangles also make a wonderful gifting option for festive seasons and joyous celebrations.\nKey Points:\n- Set of 12 premium glass bangles\n- Vibrant hot pink color with gold bead accents\n- Subtle shimmer for a festive and elegant finish\n- Lightweight and comfortable for extended wear\n- Ideal for weddings, festivals, and special occasions\n- Complements ethnic and fusion outfits beautifully\n- Perfect gifting choice for celebrations and festivities",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a bold and beautiful statement with this stunning set of 12 hot pink glass bangles. Crafted from high-quality glass, these bangles feature a vibrant pink hue enhanced with delicate gold bead embellishments and a soft shimmer that adds a festive glow. The rich color and fine detailing make this set perfect for celebrations, weddings, and special occasions.</p><p>Designed to be lightweight and comfortable, these bangles are ideal for all-day wear while still adding a touch of glamour to your outfit. The striking hot pink shade pairs beautifully with traditional attire such as sarees, lehengas, and salwar suits, as well as fusion and festive ensembles. Whether worn on their own or stacked with complementary bangles, this set brings elegance, color, and charm to your jewelry collection.</p><p>A timeless accessory with a modern edge, these bangles also make a wonderful gifting option for festive seasons and joyous celebrations.</p><p><strong>Key Points:</strong></p><ul>\n<li><p>Set of 12 premium glass bangles</p></li>\n<li><p>Vibrant hot pink color with gold bead accents</p></li>\n<li><p>Subtle shimmer for a festive and elegant finish</p></li>\n<li><p>Lightweight and comfortable for extended wear</p></li>\n<li><p>Ideal for weddings, festivals, and special occasions</p></li>\n<li><p>Complements ethnic and fusion outfits beautifully</p></li>\n<li><p>Perfect gifting choice for celebrations and festivities</p></li></ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P349.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P349/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P349-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P349/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

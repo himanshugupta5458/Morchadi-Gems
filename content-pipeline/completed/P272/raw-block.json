@@ -1,0 +1,52 @@
+{
+  "productId": "P272",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "658",
+    "workingId": "odoo-658",
+    "originalSku": "MJ-231",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-231-elegant-green-enamel-anti-tarnish-kada-658",
+    "referenceTitle": "Elegant Green Enamel Anti-Tarnish Kada",
+    "rawContent": "Add a pop of color to your wrist with this stunning green enamel kada. Crafted with a premium anti-tarnish gold finish, it offers long-lasting shine and durability. Perfect for daily wear or special occasions, this versatile bangle seamlessly blends traditional charm with contemporary style.",
+    "rawHtml": "<p>Add a pop of color to your wrist with this stunning green enamel kada. Crafted with a premium anti-tarnish gold finish, it offers long-lasting shine and durability. Perfect for daily wear or special occasions, this versatile bangle seamlessly blends traditional charm with contemporary style.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P272.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P272/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P272-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P272/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

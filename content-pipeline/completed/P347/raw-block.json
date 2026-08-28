@@ -1,0 +1,59 @@
+{
+  "productId": "P347",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "781",
+    "workingId": "odoo-781",
+    "originalSku": "MJ-532",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-532-set-of-12-olive-green-glass-bangles-with-gold-bead-detailing-781",
+    "referenceTitle": "Set of 12 Olive Green Glass Bangles with Gold Bead Detailing",
+    "rawContent": "Enhance your jewelry collection with this elegant set of 12 olive green glass bangles, designed to bring timeless beauty and sophistication to your traditional and fusion outfits. Crafted from high-quality glass, these bangles feature a rich olive green base highlighted with fine gold bead detailing and a soft shimmer that catches the light beautifully.\nThe harmonious blend of earthy green tones and gold accents makes this bangle set a versatile choice for festive celebrations, weddings, cultural events, and special occasions. Whether paired with a classic saree, a graceful lehenga, or a stylish salwar suit, these bangles add a refined finishing touch to your look. Lightweight and comfortable to wear, they are ideal for long hours while still making a statement.\nThis set is perfect for those who appreciate traditional craftsmanship with a contemporary aesthetic, making it a lovely addition to your personal collection or a thoughtful gift for someone special.\nKey Points:\n- Set of 12 premium glass bangles\n- Elegant olive green color with gold bead embellishments\n- Subtle shimmer for a refined, festive look\n- Lightweight and comfortable for extended wear\n- Ideal for weddings, festivals, and special occasions\n- Pairs beautifully with sarees, lehengas, and ethnic outfits\n- Great gifting option for celebrations and festivities",
+    "rawHtml": "<p data-oe-version=\"2.0\">Enhance your jewelry collection with this elegant set of 12 olive green glass bangles, designed to bring timeless beauty and sophistication to your traditional and fusion outfits. Crafted from high-quality glass, these bangles feature a rich olive green base highlighted with fine gold bead detailing and a soft shimmer that catches the light beautifully.</p><p>The harmonious blend of earthy green tones and gold accents makes this bangle set a versatile choice for festive celebrations, weddings, cultural events, and special occasions. Whether paired with a classic saree, a graceful lehenga, or a stylish salwar suit, these bangles add a refined finishing touch to your look. Lightweight and comfortable to wear, they are ideal for long hours while still making a statement.</p><p>This set is perfect for those who appreciate traditional craftsmanship with a contemporary aesthetic, making it a lovely addition to your personal collection or a thoughtful gift for someone special.</p><p><strong>Key Points:</strong></p><ul>\n<li><p>Set of 12 premium glass bangles</p></li>\n<li><p>Elegant olive green color with gold bead embellishments</p></li>\n<li><p>Subtle shimmer for a refined, festive look</p></li>\n<li><p>Lightweight and comfortable for extended wear</p></li>\n<li><p>Ideal for weddings, festivals, and special occasions</p></li>\n<li><p>Pairs beautifully with sarees, lehengas, and ethnic outfits</p></li>\n<li><p>Great gifting option for celebrations and festivities</p></li></ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P347.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P347/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P347-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P347/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

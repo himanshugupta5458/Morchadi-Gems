@@ -1,0 +1,53 @@
+{
+  "productId": "P550",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1016",
+    "workingId": "odoo-1016",
+    "originalSku": "MJ-033",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-033-anti-tarnish-gold-ball-charm-bracelet-for-women-1016",
+    "referenceTitle": "Anti Tarnish Gold Ball Charm Bracelet for Women",
+    "rawContent": "Meet your new everyday favourite — a delicate gold chain bracelet adorned with dangling ball charms that catch the light beautifully. Adjustable lobster clasp ensures a perfect fit for all wrist sizes. Anti-tarnish finish keeps it looking brand new, from casual brunches to festive occasions.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Meet your new everyday favourite — a delicate gold chain bracelet adorned with dangling ball charms that catch the light beautifully. Adjustable lobster clasp ensures a perfect fit for all wrist sizes. Anti-tarnish finish keeps it looking brand new, from casual brunches to festive occasions.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P550.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P550/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P550-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P550/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price, ₹86 cost (morchadijewels.com, reference only)"
+  }
+}

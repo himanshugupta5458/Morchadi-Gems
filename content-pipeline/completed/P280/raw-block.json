@@ -1,0 +1,93 @@
+{
+  "productId": "P280",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "668",
+    "workingId": "odoo-668",
+    "originalSku": "MJ-577",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-577-spiral-crystal-kangan-2-piece-668",
+    "referenceTitle": "Spiral Crystal Kangan (2 piece)",
+    "rawContent": "Description:\nAdd a vibrant twist to your jewelry collection with this eye-catching set of multicolor spiral glass bangles! available in six bold and playful hues—green, pink, yellow, blue, orange, and peach—each bangle showcases a unique spiral design for a modern, stylish look. The glossy finish and vivid colors make these bangles the perfect accessory for weddings, parties, festivals, and everyday ethnic wear.\nExpertly handcrafted from high-quality glass, these bangles are lightweight, durable, and comfortable for all-day wear. Their striking spiral design adds extra flair to traditional outfits like sarees, lehengas, salwar suits, as well as fusion ensembles. Whether shopping for festive jewelry, bridal accessories, or a special gift, this multicolor spiral set brings energy and charm to any occasion.\nKey Features:\n- Multicolor spiral glass bangles available in six stylish shades\n- Contemporary spiral design with glossy finish\n- Handcrafted for outstanding durability and comfort\n- Lightweight for daily wear and festive occasions\n- Perfect for weddings, parties, festivals, and gifting\n- Complements traditional and modern ethnic attire",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Add a vibrant twist to your jewelry collection with this eye-catching set of <strong>multicolor spiral glass bangles</strong>! available in six bold and playful hues—green, pink, yellow, blue, orange, and peach—each bangle showcases a unique spiral design for a modern, stylish look. The glossy finish and vivid colors make these bangles the perfect accessory for weddings, parties, festivals, and everyday ethnic wear.</p><p>Expertly handcrafted from high-quality glass, these bangles are lightweight, durable, and comfortable for all-day wear. Their striking spiral design adds extra flair to traditional outfits like sarees, lehengas, salwar suits, as well as fusion ensembles. Whether shopping for festive jewelry, bridal accessories, or a special gift, this multicolor spiral set brings energy and charm to any occasion.</p><p><strong>Key Features:</strong></p><ul><li>Multicolor spiral glass bangles available in six stylish shades</li><li>Contemporary spiral design with glossy finish</li><li>Handcrafted for outstanding durability and comfort</li><li>Lightweight for daily wear and festive occasions</li><li>Perfect for weddings, parties, festivals, and gifting</li><li>Complements traditional and modern ethnic attire</li></ul></div>",
+    "originalCategories": [],
+    "originalMetaDescription": "Vibrant spiral glass kada bangles in 6 bold hues. Handcrafted, durable & stylish accessory for weddings, parties & festive wear.",
+    "exportNotes": [
+      "product had no source category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P280.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P280-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P280-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P280-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P280-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P280-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P280/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

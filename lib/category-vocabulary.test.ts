@@ -307,6 +307,9 @@ describe("surfacing — gift-hampers reached shoppers with its first published p
 
     expect(published).toEqual([
       "P363",
+      "P367",
+      "P368",
+      "P532",
       "P533",
       "P534",
       "P535",

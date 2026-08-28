@@ -1,0 +1,59 @@
+{
+  "productId": "P555",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1021",
+    "workingId": "odoo-1021",
+    "originalSku": "MJ-049",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-049-anti-tarnish-pink-tulip-leaf-cz-bracelet-1021",
+    "referenceTitle": "Anti Tarnish Pink tulip Leaf CZ Bracelet",
+    "rawContent": "Wear a little garden on your wrist — this charming bracelet features delicate pink tulip charms with sparkling green CZ leaves set on a dainty gold chain with gold bead accents. Feminine, fresh, and forever in style. Anti-tarnish finish with adjustable fit",
+    "rawHtml": "<p data-oe-version=\"2.0\">Wear a little garden on your wrist — this charming bracelet features delicate pink tulip charms with sparkling green CZ leaves set on a dainty gold chain with gold bead accents. Feminine, fresh, and forever in style. Anti-tarnish finish with adjustable fit</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P555.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P555-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P555-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P555/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹289 sale price, ₹114 cost (morchadijewels.com, reference only)"
+  }
+}

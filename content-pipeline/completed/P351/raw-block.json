@@ -1,0 +1,59 @@
+{
+  "productId": "P351",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "785",
+    "workingId": "odoo-785",
+    "originalSku": "MJ-520",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-520-royal-purple-glass-bangles-set-of-12-with-gold-bead-detailing-785",
+    "referenceTitle": "Royal Purple Glass Bangles – Set of 12 with Gold Bead Detailing",
+    "rawContent": "Add a touch of regal elegance to your jewelry collection with this stunning set of 12 royal purple glass bangles. Designed in a rich, deep purple hue and embellished with delicate gold bead detailing, these bangles offer a luxurious look with a subtle festive shimmer. The intricate finish and vibrant color make them a perfect choice for weddings, festivals, and special celebrations.\nCrafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for extended wear. The royal purple shade pairs beautifully with gold, cream, pink, and contrasting ethnic outfits, making this set a versatile addition to your accessory collection. Whether styled on their own or layered with complementary bangles, they bring sophistication and charm to any ensemble.\nIdeal for festive styling or gifting, these bangles reflect timeless tradition blended with modern elegance.\nKey Points:\n- Set of 12 premium glass bangles\n- Rich royal purple color with gold bead accents\n- Subtle shimmer for an elegant, festive look\n- Lightweight and comfortable for all-day wear\n- Perfect for weddings, festivals, and special occasions\n- Complements ethnic and festive outfits beautifully\n- A thoughtful gifting option for celebrations",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of regal elegance to your jewelry collection with this stunning set of 12 royal purple glass bangles. Designed in a rich, deep purple hue and embellished with delicate gold bead detailing, these bangles offer a luxurious look with a subtle festive shimmer. The intricate finish and vibrant color make them a perfect choice for weddings, festivals, and special celebrations.</p><p>Crafted from premium-quality glass, these bangles are lightweight, smooth, and comfortable for extended wear. The royal purple shade pairs beautifully with gold, cream, pink, and contrasting ethnic outfits, making this set a versatile addition to your accessory collection. Whether styled on their own or layered with complementary bangles, they bring sophistication and charm to any ensemble.</p><p>Ideal for festive styling or gifting, these bangles reflect timeless tradition blended with modern elegance.</p><p><strong>Key Points:</strong></p><ul>\n<li><p>Set of 12 premium glass bangles</p></li>\n<li><p>Rich royal purple color with gold bead accents</p></li>\n<li><p>Subtle shimmer for an elegant, festive look</p></li>\n<li><p>Lightweight and comfortable for all-day wear</p></li>\n<li><p>Perfect for weddings, festivals, and special occasions</p></li>\n<li><p>Complements ethnic and festive outfits beautifully</p></li>\n<li><p>A thoughtful gifting option for celebrations</p></li></ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P351.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P351/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P351-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P351/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

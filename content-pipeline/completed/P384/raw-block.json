@@ -1,0 +1,65 @@
+{
+  "productId": "P384",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "832",
+    "workingId": "odoo-832",
+    "originalSku": "MJ-345",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-345-infinity-gold-plated-bracelet-832",
+    "referenceTitle": "Infinity Gold-Plated Bracelet",
+    "rawContent": "Add a cute romantic touch with this Infinity Gold-Plated Bracelet. Its minimal and elegant design makes it perfect for gifting.\n✨ Details:\n• Color: Gold with Infinity charm\n• Lightweight & comfortable\n• Trendy aesthetic design\nPerfect for daily wear and gifting.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a cute romantic touch with this <strong>Infinity Gold-Plated Bracelet</strong>. Its minimal and elegant design makes it perfect for gifting.</p><p>✨ <strong>Details:</strong></p><p>\n• Color: Gold with Infinity charm</p><p>\n• Lightweight &amp; comfortable</p><p>\n• Trendy aesthetic design</p><p>Perfect for daily wear and gifting.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "no source category mapped to a target category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P384.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P384-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P384-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P384-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P384/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹99 sale price (morchadijewels.com, reference only)"
+  }
+}

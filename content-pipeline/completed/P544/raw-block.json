@@ -1,0 +1,53 @@
+{
+  "productId": "P544",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1010",
+    "workingId": "odoo-1010",
+    "originalSku": "MJ-126",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-126-blush-crystal-vine-bracelet-1010",
+    "referenceTitle": "Blush Crystal Vine Bracelet",
+    "rawContent": "Elegant anti tarnish bracelet with blush pink crystal stones and a delicate gold vine design. Lightweight, stylish, and perfect for daily wear or gifting.\nNote: Product comes without box.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elegant anti tarnish bracelet with blush pink crystal stones and a delicate gold vine design. Lightweight, stylish, and perfect for daily wear or gifting.</p><p><em>Note: Product comes without box.</em></p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P544.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P544/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P544-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P544/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

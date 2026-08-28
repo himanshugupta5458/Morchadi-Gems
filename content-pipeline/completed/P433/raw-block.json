@@ -1,0 +1,50 @@
+{
+  "productId": "P433",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "886",
+    "workingId": "odoo-886",
+    "originalSku": "MJ-476",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-476-puffed-heart-necklace-on-sleek-snake-chain-886",
+    "referenceTitle": "Puffed Heart Necklace on Sleek Snake Chain",
+    "rawContent": "Add a touch of modern romance to your everyday look with our Puffed Heart Necklace. Featuring a high-shine 3D heart pendant suspended on a premium, silky snake chain, this piece is the ultimate fashion-forward accessory. Designed to be the crowning touch of your ensemble, this trendy piece stays brilliant when kept dry. We recommend applying perfumes and lotions before putting on your necklace and storing it in a dry place to preserve its radiant golden glow.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of modern romance to your everyday look with our Puffed Heart Necklace. Featuring a high-shine 3D heart pendant suspended on a premium, silky snake chain, this piece is the ultimate fashion-forward accessory. Designed to be the crowning touch of your ensemble, this trendy piece stays brilliant when kept dry. We recommend applying perfumes and lotions before putting on your necklace and storing it in a dry place to preserve its radiant golden glow.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P433.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P433/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P433-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P433/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

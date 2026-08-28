@@ -1,0 +1,59 @@
+{
+  "productId": "P286",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "678",
+    "workingId": "odoo-678",
+    "originalSku": "MJ-598",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-598-transparent-golden-glass-stone-bangles-678",
+    "referenceTitle": "Transparent Golden Glass Stone Bangles",
+    "rawContent": "Description:\nAdd timeless elegance to your jewellery collection with this transparent glass bangles highlighted with golden stone work. Lightweight, elegant, and versatile—perfect for weddings, festivals, parties, or everyday ethnic wear.\n-\nMaterial: High-quality Glass\n-\nWork: Golden stone-studded floral design\n-\nColor: Transparent with golden detailing\n-\nDesign: Stylish ethnic bangles with glossy finish\n-\nSize/ Fit: Available in 2.4, 2.6, 2.8 (custom sizes on request)\n-\nOccasion: Ideal for weddings, festive celebrations, parties & daily wear\n-\nCare Instruction: Handle with care as these are delicate glass bangles",
+    "rawHtml": "<p><strong>Description:</strong></p>\n\n<p>Add timeless elegance to your jewellery collection with this transparent glass bangles highlighted with golden stone work. Lightweight, elegant, and versatile—perfect for weddings, festivals, parties, or everyday ethnic wear.</p>\n<ul>\n<li>\n<strong>Material:</strong> High-quality Glass\n</li>\n<li>\n<strong>Work:</strong> Golden stone-studded floral design\n</li>\n<li>\n<strong>Color:</strong> Transparent with golden detailing\n</li>\n<li>\n<strong>Design:</strong> Stylish ethnic bangles with glossy finish\n</li>\n<li>\n<strong>Size/ Fit:</strong> Available in 2.4, 2.6, 2.8 (custom sizes on request)\n</li>\n<li>\n<strong>Occasion:</strong> Ideal for weddings, festive celebrations, parties &amp; daily wear\n</li>\n<li>\n<strong>Care Instruction:</strong> Handle with care as these are delicate glass bangles</li></ul>\n<p>\n\n</p>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P286.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P286/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P286-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P286/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

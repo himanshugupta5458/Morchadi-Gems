@@ -1,0 +1,65 @@
+{
+  "productId": "P313",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "731",
+    "workingId": "odoo-731",
+    "originalSku": "MJ-531",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-531-set-of-12-multicolor-raindrop-glass-bangles-731",
+    "referenceTitle": "Set of 12 Multicolor RainDrop Glass Bangles",
+    "rawContent": "Description:\nMake a bold statement with this radiant set of Multicolor RainDrop Glass Bangles , beautifully adorned with shimmering golden bead accents. Crafted from premium glass, each bangle showcases a vibrant red hue, symbolizing joy and tradition—perfect for weddings, festivals, parties, and everyday ethnic wear.\nHandcrafted for durability and lightweight comfort, these bangles add a dazzling touch to sarees, lehengas, salwar suits, and indo-western outfits. The golden bead detailing brings subtle sparkle, making this set a stunning accessory for bridal jewelry, festive looks, or thoughtful gifting.\nKey Features:\n- Premium red glass bangles with intricate golden bead embellishments\n- Handcrafted for a flawless, elegant look\n- Lightweight and comfortable for extended daily or festive wear\n- Ideal for weddings, festivals, parties, and gifting\n- Complements both traditional and modern Indian attire",
+    "rawHtml": "<div data-oe-version=\"2.0\"><p><strong>Description:</strong></p><p>Make a bold statement with this radiant set of <strong>Multicolor RainDrop Glass Bangles&nbsp;</strong>, beautifully adorned with shimmering golden bead accents. Crafted from premium glass, each bangle showcases a vibrant red hue, symbolizing joy and tradition—perfect for weddings, festivals, parties, and everyday ethnic wear.</p><p>Handcrafted for durability and lightweight comfort, these bangles add a dazzling touch to sarees, lehengas, salwar suits, and indo-western outfits. The golden bead detailing brings subtle sparkle, making this set a stunning accessory for bridal jewelry, festive looks, or thoughtful gifting.</p><p><strong>Key Features:</strong></p><ul><li>Premium red glass bangles with intricate golden bead embellishments</li><li>Handcrafted for a flawless, elegant look</li><li>Lightweight and comfortable for extended daily or festive wear</li><li>Ideal for weddings, festivals, parties, and gifting</li><li>Complements both traditional and modern Indian attire</li></ul></div>",
+    "originalCategories": [],
+    "originalMetaDescription": "Vibrant multicolor RainDrop bangles with golden accents. Handcrafted, lightweight festive jewelry perfect for bridal wear.",
+    "exportNotes": [
+      "product had no source category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P313.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P313/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P313-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P313/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P313-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P313/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

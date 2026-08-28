@@ -1,0 +1,97 @@
+{
+  "productId": "P587",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1057",
+    "workingId": "odoo-1057",
+    "originalSku": "MJ-522",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-522-satin-long-tail-bow-hair-clip-1057",
+    "referenceTitle": "Satin Long Tail Bow Hair Clip",
+    "rawContent": "Glossy satin bow with long flowing tail, elegant drape\nSecure alligator clip, holds all hair types\nPerfect for weddings, parties, festive wear & daily styling\nAdds a soft, bridal-chic touch to any hairstyle\nGreat gift for bridesmaids, friends & family\nLightweight, comfortable for all-day wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">Glossy satin bow with long flowing tail, elegant drape</div><div>Secure alligator clip, holds all hair types</div><div>Perfect for weddings, parties, festive wear &amp; daily styling</div><div>Adds a soft, bridal-chic touch to any hairstyle</div><div>Great gift for bridesmaids, friends &amp; family</div><div>Lightweight, comfortable for all-day wear</div>",
+    "originalCategories": [
+      "Hair Accessories"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "hair-accessories",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Color",
+      "values": [
+        "Ivory White",
+        "Antique Gold",
+        "Lilac Shimmer",
+        "Cream shimmer"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P587.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P587-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P587-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P587-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P587-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {
+      "Color:Antique Gold": {
+        "path": "/products/P587-antique-gold.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/variant-antique-gold.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Lilac Shimmer": {
+        "path": "/products/P587-lilac-shimmer.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/variant-lilac-shimmer.webp",
+        "verifiedDistinct": true
+      },
+      "Color:Cream shimmer": {
+        "path": "/products/P587-cream-shimmer.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P587/raw/variant-cream-shimmer.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "referencePrice": "₹129 sale price (morchadijewels.com, reference only)"
+  }
+}

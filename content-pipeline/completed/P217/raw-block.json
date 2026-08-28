@@ -1,0 +1,65 @@
+{
+  "productId": "P217",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "516",
+    "workingId": "odoo-516",
+    "originalSku": "MJ-332",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-332-green-rain-drop-glass-bangles-12-piece-516",
+    "referenceTitle": "Green Rain Drop Glass Bangles (12 Piece)",
+    "rawContent": "Description:\nAdd a touch of timeless elegance to your ethnic wear with this stunning set of emerald green glass bangles, beautifully embellished with delicate golden bead accents. Crafted from high-quality glass, each bangle radiates a rich green hue, making it the perfect accessory for sarees, lehengas, salwar suits, and festive indo-western outfits.\nDesigned for comfort and durability, these bangles are lightweight and suitable for daily wear, festivals, weddings, and parties. The intricate golden bead work enhances the vibrant color, creating a sparkling effect that elevates your look. Ideal for pairing with bridal jewelry sets or gifting on special occasions, this bangle set is a must-have for every jewelry lover.\nKey Features:\n- Premium emerald green glass bangles with golden bead detailing\n- Traditional handcrafted finish for a classic ethnic look\n- Lightweight, comfortable, and durable for everyday and festive occasions\n- Enhances wedding, festive, and party outfits\n- Thoughtful gift for birthdays, weddings, festivals, and celebrations\n- Complements all types of Indian and fusion attire",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Add a touch of timeless elegance to your ethnic wear with this stunning set of <strong>emerald green glass bangles</strong>, beautifully embellished with delicate golden bead accents. Crafted from high-quality glass, each bangle radiates a rich green hue, making it the perfect accessory for sarees, lehengas, salwar suits, and festive indo-western outfits.</p><p>Designed for comfort and durability, these bangles are lightweight and suitable for daily wear, festivals, weddings, and parties. The intricate golden bead work enhances the vibrant color, creating a sparkling effect that elevates your look. Ideal for pairing with bridal jewelry sets or gifting on special occasions, this bangle set is a must-have for every jewelry lover.</p><p><strong>Key Features:</strong></p><ul><li>Premium emerald green glass bangles with golden bead detailing</li><li>Traditional handcrafted finish for a classic ethnic look</li><li>Lightweight, comfortable, and durable for everyday and festive occasions</li><li>Enhances wedding, festive, and party outfits</li><li>Thoughtful gift for birthdays, weddings, festivals, and celebrations</li><li>Complements all types of Indian and fusion attire</li></ul></div>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stunning 12-piece green glass bangles with golden accents. Lightweight, festive accessory for weddings, poojas & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P217.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P217-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P217-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P217/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

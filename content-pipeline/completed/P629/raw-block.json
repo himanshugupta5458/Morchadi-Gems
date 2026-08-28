@@ -1,0 +1,61 @@
+{
+  "productId": "P629",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1101",
+    "workingId": "odoo-1101",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/aqua-blue-heart-necklace-1101",
+    "referenceTitle": "Aqua Blue Heart Necklace",
+    "rawContent": "Add a touch of color and romance to your jewellery collection with our Aqua Blue Heart Necklace. Featuring a beautiful heart-shaped aqua blue pendant framed in gold, paired with a delicate beaded chain, this piece is effortlessly elegant and eye-catching.\nThe soft blue heart adds a dreamy pop of color, making it perfect for everyday styling, date nights, or gifting someone special.\n- Heart-shaped aqua blue pendant\n- Elegant gold-tone finish\n- Delicate beaded chain\n- Romantic and feminine design\n- Perfect for everyday wear and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of color and romance to your jewellery collection with our <strong>Aqua Blue Heart Necklace</strong>. Featuring a beautiful heart-shaped aqua blue pendant framed in gold, paired with a delicate beaded chain, this piece is effortlessly elegant and eye-catching.</p><p>The soft blue heart adds a dreamy pop of color, making it perfect for everyday styling, date nights, or gifting someone special.</p><ul><li><p>Heart-shaped aqua blue pendant</p></li><li><p>Elegant gold-tone finish</p></li><li><p>Delicate beaded chain</p></li><li><p>Romantic and feminine design</p></li><li><p>Perfect for everyday wear and gifting</p></li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P629.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P629-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P629-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P629/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

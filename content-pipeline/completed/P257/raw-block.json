@@ -1,0 +1,58 @@
+{
+  "productId": "P257",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "643",
+    "workingId": "odoo-643",
+    "originalSku": "MJ-078",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-078-anti-tarnish-minimalist-gold-plated-kada-643",
+    "referenceTitle": "Anti-Tarnish Minimalist Gold Plated Kada",
+    "rawContent": "Embrace timeless elegance with this premium minimalist gold-plated kada. Expertly crafted for a sleek finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This versatile, polished statement piece offers a luxurious aesthetic that maintains its stunning, high-shine luster through everyday wear.",
+    "rawHtml": "<p>Embrace timeless elegance with this premium minimalist gold-plated kada. Expertly crafted for a sleek finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This versatile, polished statement piece offers a luxurious aesthetic that maintains its stunning, high-shine luster through everyday wear.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P257.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P257/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P257-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P257/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P257-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P257/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

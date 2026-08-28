@@ -1,0 +1,68 @@
+{
+  "productId": "P317",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "739",
+    "workingId": "odoo-739",
+    "originalSku": "MJ-413",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-413-minimal-heart-necklace-bracelet-set-739",
+    "referenceTitle": "Minimal Heart Necklace & Bracelet Set",
+    "rawContent": "Add a touch of love and elegance to your everyday look with this Minimal Heart Necklace & Bracelet Set. Designed with a delicate heart charm and a fine chain, this set offers a classy and minimal style that never goes out of trend.\nLightweight and comfortable to wear, it's perfect for daily use as well as special occasions. Whether you're gifting it to someone special or styling it for yourself, this heart set adds a subtle charm to any outfit.\n✨ Minimal & elegant design\n✨ Lightweight and comfortable\n✨ Perfect for daily wear and gifting\nProduct Details:\n- Color: Golden\n- Necklace: 1 Piece\n- Bracelet: 1 Piece",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of love and elegance to your everyday look with this Minimal Heart Necklace &amp; Bracelet Set. Designed with a delicate heart charm and a fine chain, this set offers a classy and minimal style that never goes out of trend.</p><p>Lightweight and comfortable to wear, it's perfect for daily use as well as special occasions. Whether you're gifting it to someone special or styling it for yourself, this heart set adds a subtle charm to any outfit.</p><p>✨ Minimal &amp; elegant design</p><p>\n✨ Lightweight and comfortable</p><p>\n✨ Perfect for daily wear and gifting</p><p><strong>Product Details:</strong></p><ul>\n<li><p><strong>Color:</strong> Golden</p></li>\n<li><p><strong>Necklace:</strong> 1 Piece</p></li>\n<li><p><strong>Bracelet:</strong> 1 Piece</p></li></ul>",
+    "originalCategories": [
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P317.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P317-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P317-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P317-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P317-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P317/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹220 sale price (morchadijewels.com, reference only)"
+  }
+}

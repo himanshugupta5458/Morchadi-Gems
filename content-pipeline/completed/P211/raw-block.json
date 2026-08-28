@@ -1,0 +1,54 @@
+{
+  "productId": "P211",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "510",
+    "workingId": "odoo-510",
+    "originalSku": "MJ-053",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-053-anti-tarnish-rose-gold-plated-bracelet-510",
+    "referenceTitle": "Anti Tarnish Rose Gold-Plated Bracelet",
+    "rawContent": "-\n- Avoid contact with water & perfume\n- Images may appear brighter than the actual product due to photographic effect.\n- Toggle Clasp\n- Brass\n- Package contains: 1 bracelet\n- Rose Gold color",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li class=\"oe-nested\"><br></li><li>Avoid contact with water &amp; perfume</li><li>Images may appear brighter than the actual product due to photographic effect.&nbsp;</li><li>Toggle Clasp</li><li>Brass</li><li>Package contains: 1 bracelet</li><li>Rose Gold color</li></ul></div>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Classy anti-tarnish rose gold-plated bracelet with toggle clasp. Durable, elegant & perfect for parties, workwear & gifting.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 509 - descriptions byte-identical"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P211.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P211/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P211-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P211/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

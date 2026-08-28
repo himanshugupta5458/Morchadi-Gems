@@ -1,0 +1,64 @@
+{
+  "productId": "P269",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "655",
+    "workingId": "odoo-655",
+    "originalSku": "MJ-092",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-092-anti-tarnish-pink-floral-enamel-kada-655",
+    "referenceTitle": "Anti-Tarnish Pink Floral Enamel Kada",
+    "rawContent": "Enhance your elegance with this premium pink and white floral enamel kada. Featuring a high-quality gold finish, this anti-tarnish and water-resistant piece is built for long-lasting brilliance. Its intricate floral detailing and modern silhouette make it an essential statement piece for any fashion-forward collection.",
+    "rawHtml": "<p>Enhance your elegance with this premium pink and white floral enamel kada. Featuring a high-quality gold finish, this anti-tarnish and water-resistant piece is built for long-lasting brilliance. Its intricate floral detailing and modern silhouette make it an essential statement piece for any fashion-forward collection.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P269.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P269-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P269-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P269-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P269/raw/extra-3.webp",
+        "role": "extra-3"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

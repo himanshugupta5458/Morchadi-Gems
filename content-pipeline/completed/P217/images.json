@@ -1,0 +1,29 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 66418,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/516/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 41528,
+      "converted": false,
+      "odooMediaId": 606,
+      "odooName": "2d8408cd-5a04-49a3-aa7d-c2a1d261a4e01736312253878Bangle1.webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/606/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 24390,
+      "converted": false,
+      "odooMediaId": 607,
+      "odooName": "d82b8139-5c63-4e52-907a-83fc47094e741736312253851Bangle2.webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/607/image_1920"
+    }
+  ],
+  "variants": []
+}

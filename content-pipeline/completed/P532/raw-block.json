@@ -1,0 +1,56 @@
+{
+  "productId": "P532",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "995",
+    "workingId": "odoo-995",
+    "originalSku": "MJ-471",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-471-pinteresty-birthday-hamper-995",
+    "referenceTitle": "Pinteresty Birthday Hamper 🎀",
+    "rawContent": "The most aesthetic Pinterest-y birthday hamper for her ✨\n👗 Halter Top | 💎 Anti-Tarnish Pearl Bracelet | 🌸 Claw Clips x2 | 🎀 Scrunchies | 📝 Sticky Notes | 🍫 Dairy Milk Silk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights\nNote: Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.",
+    "rawHtml": "<div data-oe-version=\"2.0\">The most aesthetic Pinterest-y birthday hamper for her ✨</div><div><br></div><div>👗 Halter Top | 💎 Anti-Tarnish Pearl Bracelet | 🌸 Claw Clips x2 | 🎀 Scrunchies | 📝 Sticky Notes | 🍫 Dairy Milk Silk | 🍬 KitKat | 🎂 Birthday Bunting + Fairy Lights</div><div><br></div><p><strong>Note:</strong> Cash on Delivery (COD) is not available for this hamper. Prepaid orders only.</p>",
+    "originalCategories": [
+      "Hampers"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "hamper",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P532.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P532-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P532-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P532/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

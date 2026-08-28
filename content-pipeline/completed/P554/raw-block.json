@@ -1,0 +1,53 @@
+{
+  "productId": "P554",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1020",
+    "workingId": "odoo-1020",
+    "originalSku": "MJ-037",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-037-anti-tarnish-gold-double-layer-snake-chain-bracelet-1020",
+    "referenceTitle": "Anti Tarnish Gold Double Layer Snake Chain Bracelet",
+    "rawContent": "Make a bold yet elegant statement with this double-layer twisted snake chain bracelet in a rich gold finish. Two intertwined flat snake chains flow beautifully together, secured with a lobster clasp and a signature Morchadi \"M\" coin tag. Anti-tarnish & versatile enough to wear solo or stacked.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Make a bold yet elegant statement with this double-layer twisted snake chain bracelet in a rich gold finish. Two intertwined flat snake chains flow beautifully together, secured with a lobster clasp and a signature Morchadi \"M\" coin tag. Anti-tarnish &amp; versatile enough to wear solo or stacked.</p>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P554.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P554/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P554-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P554/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

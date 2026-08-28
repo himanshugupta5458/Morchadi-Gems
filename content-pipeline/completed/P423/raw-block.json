@@ -1,0 +1,50 @@
+{
+  "productId": "P423",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "876",
+    "workingId": "odoo-876",
+    "originalSku": "MJ-391",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-391-layered-geometric-necklace-gold-876",
+    "referenceTitle": "Layered Geometric Necklace – Gold",
+    "rawContent": "Elevate your everyday style with this chic, double-layered geometric necklace. Featuring a minimalist interlinked circle design and a sleek polished bar drop, this piece is the ultimate fashion-forward accessory for versatile styling. To keep its golden luster bright for all your special moments, we recommend storing it in a dry place and avoiding contact with moisture and perfumes.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elevate your everyday style with this chic, double-layered geometric necklace. Featuring a minimalist interlinked circle design and a sleek polished bar drop, this piece is the ultimate fashion-forward accessory for versatile styling. To keep its golden luster bright for all your special moments, we recommend storing it in a dry place and avoiding contact with moisture and perfumes.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P423.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P423/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P423-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P423/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

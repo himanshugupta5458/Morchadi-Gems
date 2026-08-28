@@ -1,0 +1,59 @@
+{
+  "productId": "P289",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "681",
+    "workingId": "odoo-681",
+    "originalSku": "MJ-450",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-450-pastel-green-antique-glass-bangle-set-681",
+    "referenceTitle": "Pastel Green Antique Glass Bangle Set",
+    "rawContent": "Description:\nAdd a touch of elegance to your ethnic look with this pastel green glass bangle set delicately embellished with sparkling stones. Designed for weddings, festive celebrations, and traditional occasions, these bangles beautifully combine soft color tones with shimmering accents for a timeless charm.\nCrafted from premium-quality glass, each bangle reflects traditional artistry while ensuring a comfortable fit for all-day wear. The pastel green hue pairs perfectly with sarees, lehengas, salwar suits, and Indo-western outfits, making it a versatile accessory for your jewellery collection.\nIdeal for bridal trousseaus, festival gifting, or adding a graceful touch to everyday ethnic wear, this bangle set is a must-have for lovers of authentic Indian craftsmanship.\nKey Features:\n-\nPremium glass bangles with durable finish\n-\nPastel green color with hand-embellished stone detailing\n-\nLightweight and comfortable for extended wear\n-\nPerfect for weddings, festive occasions, and special events\n-\nAvailable in multiple sizes for the perfect fit",
+    "rawHtml": "<p><strong>Description:</strong></p>\n<p>Add a touch of elegance to your ethnic look with this <strong>pastel green glass bangle set</strong> delicately embellished with sparkling stones. Designed for <strong>weddings, festive celebrations, and traditional occasions</strong>, these bangles beautifully combine soft color tones with shimmering accents for a timeless charm.</p>\n\n<p>Crafted from <strong>premium-quality glass</strong>, each bangle reflects traditional artistry while ensuring a comfortable fit for all-day wear. The pastel green hue pairs perfectly with <strong>sarees, lehengas, salwar suits, and Indo-western outfits</strong>, making it a versatile accessory for your jewellery collection.</p>\n\n<p>Ideal for <strong>bridal trousseaus, festival gifting, or adding a graceful touch to everyday ethnic wear</strong>, this bangle set is a must-have for lovers of authentic Indian craftsmanship.</p>\n\n<p><strong>Key Features:</strong></p>\n\n<ul>\n<li>\nPremium glass bangles with durable finish\n</li>\n<li>\nPastel green color with hand-embellished stone detailing\n</li>\n<li>\nLightweight and comfortable for extended wear\n</li>\n<li>\nPerfect for weddings, festive occasions, and special events\n</li>\n<li>\nAvailable in multiple sizes for the perfect fit</li></ul>\n\n<p>\n\n</p>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Elegant pastel green antique glass bangles with stones. Authentic handcrafted accessory for weddings, festivals & bridal gifts.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P289.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P289/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P289-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P289/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

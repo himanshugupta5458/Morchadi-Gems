@@ -1,0 +1,59 @@
+{
+  "productId": "P345",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "779",
+    "workingId": "odoo-779",
+    "originalSku": "MJ-596",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-596-transparent-glass-bangles-set-of-12-with-golden-dotted-work-779",
+    "referenceTitle": "Transparent Glass Bangles Set of 12 with Golden Dotted Work",
+    "rawContent": "Add subtle elegance and timeless charm to your ethnic look with this beautifully designed transparent glass bangles set, featuring 12 finely crafted bangles. Accented with delicate golden dotted embellishments, these bangles offer a graceful balance of simplicity and luxury. The clear glass base enhances the golden detailing, making the design versatile and easy to pair with any outfit.\nCrafted from premium-quality glass, these bangles have a smooth, glossy finish that gives a refined shine and ensures comfortable wear throughout the day. Ideal for weddings, festive occasions, pooja ceremonies, parties, and traditional celebrations, this bangle set complements both heavy bridal outfits and minimal ethnic looks.\nWhether styled with sarees, lehengas, or ethnic suits, these transparent bangles add a sophisticated and elegant touch without overpowering your outfit. A perfect choice for women who love minimal yet traditional jewelry, and a beautiful gift option for weddings, festivals, and special occasions.\nProduct Highlights:\n- Set Includes: 12 Glass Bangles\n- Material: High-quality glass\n- Color: Transparent / Clear\n- Design: Golden dotted embellishments\n- Finish: Smooth & glossy glass finish\n- Style: Traditional / Minimal / Festive\n- Occasions: Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle gently and store in a soft pouch to avoid breakage",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add subtle elegance and timeless charm to your ethnic look with this beautifully designed <strong>transparent glass bangles set</strong>, featuring <strong>12 finely crafted bangles</strong>. Accented with delicate <strong>golden dotted embellishments</strong>, these bangles offer a graceful balance of simplicity and luxury. The clear glass base enhances the golden detailing, making the design versatile and easy to pair with any outfit.</p><p>Crafted from premium-quality glass, these bangles have a <strong>smooth, glossy finish</strong> that gives a refined shine and ensures comfortable wear throughout the day. Ideal for <strong>weddings, festive occasions, pooja ceremonies, parties, and traditional celebrations</strong>, this bangle set complements both heavy bridal outfits and minimal ethnic looks.</p><p>Whether styled with sarees, lehengas, or ethnic suits, these transparent bangles add a sophisticated and elegant touch without overpowering your outfit. A perfect choice for women who love <strong>minimal yet traditional jewelry</strong>, and a beautiful <strong>gift option for weddings, festivals, and special occasions</strong>.</p><h3><strong>Product Highlights:</strong></h3><ul>\n<li><p><strong>Set Includes:</strong> 12 Glass Bangles</p></li>\n<li><p><strong>Material:</strong> High-quality glass</p></li>\n<li><p><strong>Color:</strong> Transparent / Clear</p></li>\n<li><p><strong>Design:</strong> Golden dotted embellishments</p></li>\n<li><p><strong>Finish:</strong> Smooth &amp; glossy glass finish</p></li>\n<li><p><strong>Style:</strong> Traditional / Minimal / Festive</p></li>\n<li><p><strong>Occasions:</strong> Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi</p></li>\n<li><p><strong>Pair With:</strong> Sarees, Lehengas, Anarkalis, Ethnic suits</p></li>\n<li><p><strong>Ideal For:</strong> Women &amp; girls</p></li>\n<li><p><strong>Care Instructions:</strong> Handle gently and store in a soft pouch to avoid breakage</p></li>\n</ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P345.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P345/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P345-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P345/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

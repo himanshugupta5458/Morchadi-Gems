@@ -1,0 +1,56 @@
+{
+  "productId": "P189",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "487",
+    "workingId": "odoo-487",
+    "originalSku": "MJ-393",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-393-leaf-marquise-cz-stone-gold-plated-ring-487",
+    "referenceTitle": "Leaf Marquise CZ Stone Gold-Plated Ring",
+    "rawContent": "Product Description:\nEmbrace natural elegance with the stunning Leaf Marquise CZ Stone Gold-Plated Ring for Women. Featuring a captivating marquise-shaped stone nestled in a sparkling leaf-inspired band, this ring adds a touch of luxury to every look. The graceful design ensures you stand out, whether dressing up or accessorizing your daily style. The Leaf Marquise CZ Stone Gold-Plated Ring for Women is the ideal blend of sophistication and charm.\nWhy You Will Love It:\n✨ Elegant marquise leaf design for a unique, nature-inspired style\n✨ Dazzling CZ stones for a brilliant finish\n✨ Lightweight and adjustable for everyday comfort\n✨ Perfect for both casual and festive occasions\nHighlights / Specifications:\n🔹 Material: High-quality, durable alloy\n🔹 Plating: Lustrous gold plating for long-lasting shine\n🔹 Stone Type: Sparkling marquise-cut cubic zirconia\n🔹 Design: Leaf-inspired band with centerpiece stone\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Embrace natural elegance with the stunning <strong>Leaf Marquise CZ Stone Gold-Plated Ring for Women</strong>. Featuring a captivating marquise-shaped stone nestled in a sparkling leaf-inspired band, this ring adds a touch of luxury to every look. The graceful design ensures you stand out, whether dressing up or accessorizing your daily style. The <strong>Leaf Marquise CZ Stone Gold-Plated Ring for Women</strong> is the ideal blend of sophistication and charm.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Elegant marquise leaf design for a unique, nature-inspired style</p>\n<p>✨ Dazzling CZ stones for a brilliant finish</p>\n<p>✨ Lightweight and adjustable for everyday comfort</p>\n<p>✨ Perfect for both casual and festive occasions</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> High-quality, durable alloy</p>\n<p>🔹 <strong>Plating:</strong> Lustrous gold plating for long-lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> Sparkling marquise-cut cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Leaf-inspired band with centerpiece stone</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Suitable for daily wear, party wear, and gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Nature-inspired marquise leaf ring with CZ sparkle & gold plating. Adjustable fit, elegant jewelry for daily wear or gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P189.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P189-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P189-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P189/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

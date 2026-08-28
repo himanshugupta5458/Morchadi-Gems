@@ -1,0 +1,56 @@
+{
+  "productId": "P634",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1106",
+    "workingId": "odoo-1106",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/white-crystal-heart-pendant-necklace-1106",
+    "referenceTitle": "White Crystal Heart Pendant Necklace",
+    "rawContent": "A dainty heart pendant set with a sparkling clear crystal, edged in a delicate halo of pavé detailing. Suspended from a satellite-style rose gold chain with small beaded accents, this necklace has a soft, romantic feel that layers beautifully or shines on its own. Crafted in rose gold-plated stainless steel, it's tarnish and water resistant, so it stays beautiful with everyday wear.\nEffortlessly feminine and timeless, this necklace makes a lovely everyday piece or a heartfelt gift.\nDetails:\n- Material: Rose gold-plated stainless steel, tarnish and water resistant\n- Stone: Clear cubic zirconia heart, pavé halo setting\n- Chain: Satellite bead chain, adjustable length\n- Pendant size: Approx. 1cm heart",
+    "rawHtml": "<p data-oe-version=\"2.0\">A dainty heart pendant set with a sparkling clear crystal, edged in a delicate halo of pavé detailing. Suspended from a satellite-style rose gold chain with small beaded accents, this necklace has a soft, romantic feel that layers beautifully or shines on its own. Crafted in rose gold-plated stainless steel, it's tarnish and water resistant, so it stays beautiful with everyday wear.</p><p>Effortlessly feminine and timeless, this necklace makes a lovely everyday piece or a heartfelt gift.</p><p><strong>Details:</strong></p><ul>\n<li>Material: Rose gold-plated stainless steel, tarnish and water resistant</li>\n<li>Stone: Clear cubic zirconia heart, pavé halo setting</li>\n<li>Chain: Satellite bead chain, adjustable length</li>\n<li>Pendant size: Approx. 1cm heart</li></ul>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold heart pendant necklace with rose motif. Anti-tarnish, chic Pinterest-inspired piece perfect for daily glam & gifts.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: Necklace->necklaces)",
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P634.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P634/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P634-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P634/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

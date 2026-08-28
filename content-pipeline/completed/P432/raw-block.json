@@ -1,0 +1,50 @@
+{
+  "productId": "P432",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "885",
+    "workingId": "odoo-885",
+    "originalSku": "MJ-266",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-266-gold-bow-jewelry-set-885",
+    "referenceTitle": "Gold Bow Jewelry Set",
+    "rawContent": "Complete your look with our ultra-feminine Bow Jewelry Set. Featuring a matching necklace and drop earrings paired with a dazzling stone-studded tennis bracelet, this curated collection is the ultimate statement for the modern romantic. These fashion-forward pieces are designed for high-impact styling; to keep their golden brilliance and sparkle lasting through every event, we recommend keeping them dry and storing them in a cool, moisture-free space after use.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Complete your look with our ultra-feminine Bow Jewelry Set. Featuring a matching necklace and drop earrings paired with a dazzling stone-studded tennis bracelet, this curated collection is the ultimate statement for the modern romantic. These fashion-forward pieces are designed for high-impact styling; to keep their golden brilliance and sparkle lasting through every event, we recommend keeping them dry and storing them in a cool, moisture-free space after use.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P432.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P432/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P432-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P432/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

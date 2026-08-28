@@ -1,0 +1,81 @@
+{
+  "productId": "P368",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "809",
+    "workingId": "odoo-809",
+    "originalSku": "MJ-295",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-295-gold-plated-contemporary-stackable-rings-set-of-11-809",
+    "referenceTitle": "Gold Plated Contemporary Stackable Rings Set of 11",
+    "rawContent": "This Gold Plated Contemporary Stackable Rings Set of 11 balances design, versatility, and craftsmanship, making it an ideal addition to any collection",
+    "rawHtml": "<div data-oe-version=\"2.0\">This Gold Plated Contemporary Stackable Rings Set of 11 balances design, versatility, and craftsmanship, making it an ideal addition to any collection</div>",
+    "originalCategories": [
+      "Best selling",
+      "combo"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "gift-hampers",
+  "subcategory": "combo-set",
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P368.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P368-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P368-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P368-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P368-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P368-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P368-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P368/raw/extra-6.webp",
+        "role": "extra-6"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹180 sale price (morchadijewels.com, reference only)"
+  }
+}

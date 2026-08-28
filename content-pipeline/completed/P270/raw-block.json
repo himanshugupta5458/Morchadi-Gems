@@ -1,0 +1,54 @@
+{
+  "productId": "P270",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "656",
+    "workingId": "odoo-656",
+    "originalSku": "MJ-087",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-087-anti-tarnish-pink-bamboo-style-kada-656",
+    "referenceTitle": "Anti-Tarnish Pink Bamboo Style Kada",
+    "rawContent": "Add a pop of color to your collection with this premium pink and white bamboo-style kada. Expertly crafted with a high-quality gold finish, this anti-tarnish and water-resistant piece is designed for lasting elegance. Its vibrant enamel detailing and unique textured design make it a perfect modern statement for any occasion.",
+    "rawHtml": "<p>Add a pop of color to your collection with this premium pink and white bamboo-style kada. Expertly crafted with a high-quality gold finish, this anti-tarnish and water-resistant piece is designed for lasting elegance. Its vibrant enamel detailing and unique textured design make it a perfect modern statement for any occasion.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [
+      "duplicate title shared with template(s) 641"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P270.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P270/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P270-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P270/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

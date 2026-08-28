@@ -1,0 +1,335 @@
+{
+  "productId": "P408",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "861",
+    "workingId": "odoo-861",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/brass-initial-letter-adjustable-ring-silver-861",
+    "referenceTitle": "Brass Initial Letter adjustable ring (Silver)",
+    "rawContent": "Add a personal touch to your style with this Initial Letter Ring! Crafted on premium brass metal with fine gold plating, it delivers the shine and elegance of real gold jewellery.\nFeatures:\n- Long-Lasting Shine: The sturdy brass base keeps the ring looking bright and new for a long time with proper care.\n- Adjustable/Comfort Fit: Designed for everyday wear — lightweight and comfortable on the finger.\n- Perfect Gift: A thoughtful, personalized gift option featuring your own or a loved one's initial.\nCare Tips:\n- Remove the ring before bathing, swimming, washing hands with soap, or heavy sweating to help the plating last longer.\n- Wipe gently with a clean, dry cloth after use.\n- Avoid direct contact with perfume, lotion, or hand sanitizer.\n- Store in a dry place, away from moisture, when not wearing it.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a personal touch to your style with this Initial Letter Ring! Crafted on premium brass metal with fine gold plating, it delivers the shine and elegance of real gold jewellery.</p><p><strong>Features:</strong></p><ul>\n<li><strong>Long-Lasting Shine:</strong> The sturdy brass base keeps the ring looking bright and new for a long time with proper care.</li>\n<li><strong>Adjustable/Comfort Fit:</strong> Designed for everyday wear — lightweight and comfortable on the finger.</li>\n<li><strong>Perfect Gift:</strong> A thoughtful, personalized gift option featuring your own or a loved one's initial.</li>\n</ul><p><strong>Care Tips:</strong></p><ul>\n<li>Remove the ring before bathing, swimming, washing hands with soap, or heavy sweating to help the plating last longer.</li>\n<li>Wipe gently with a clean, dry cloth after use.</li>\n<li>Avoid direct contact with perfume, lotion, or hand sanitizer.</li>\n<li>Store in a dry place, away from moisture, when not wearing it.</li></ul>",
+    "originalCategories": [
+      "Best selling",
+      "Personalised Item"
+    ],
+    "originalMetaDescription": "Personalised silver initial letter ring with anti-tarnish finish. Adjustable, handcrafted in Jaipur. A thoughtful gift under ₹500. Shop Morchadi Jewels.",
+    "exportNotes": [
+      "no source category mapped to a target category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Letter",
+      "values": [
+        "B",
+        "C",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "T",
+        "U",
+        "V",
+        "W",
+        "Z",
+        "D",
+        "A",
+        "Y"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P408.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P408-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P408-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P408-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P408-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P408-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P408-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P408-8.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-7.webp",
+        "role": "extra-7"
+      },
+      {
+        "path": "/products/P408-9.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-8.webp",
+        "role": "extra-8"
+      },
+      {
+        "path": "/products/P408-10.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-9.webp",
+        "role": "extra-9"
+      },
+      {
+        "path": "/products/P408-11.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-10.webp",
+        "role": "extra-10"
+      },
+      {
+        "path": "/products/P408-12.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-11.webp",
+        "role": "extra-11"
+      },
+      {
+        "path": "/products/P408-13.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-12.webp",
+        "role": "extra-12"
+      },
+      {
+        "path": "/products/P408-14.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-13.webp",
+        "role": "extra-13"
+      },
+      {
+        "path": "/products/P408-15.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-14.webp",
+        "role": "extra-14"
+      },
+      {
+        "path": "/products/P408-16.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-15.webp",
+        "role": "extra-15"
+      },
+      {
+        "path": "/products/P408-17.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-16.webp",
+        "role": "extra-16"
+      },
+      {
+        "path": "/products/P408-18.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-17.webp",
+        "role": "extra-17"
+      },
+      {
+        "path": "/products/P408-19.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-18.webp",
+        "role": "extra-18"
+      },
+      {
+        "path": "/products/P408-20.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-19.webp",
+        "role": "extra-19"
+      },
+      {
+        "path": "/products/P408-21.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-20.webp",
+        "role": "extra-20"
+      },
+      {
+        "path": "/products/P408-22.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-21.webp",
+        "role": "extra-21"
+      },
+      {
+        "path": "/products/P408-23.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-22.webp",
+        "role": "extra-22"
+      },
+      {
+        "path": "/products/P408-24.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-23.webp",
+        "role": "extra-23"
+      },
+      {
+        "path": "/products/P408-25.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-24.webp",
+        "role": "extra-24"
+      },
+      {
+        "path": "/products/P408-26.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-25.webp",
+        "role": "extra-25"
+      },
+      {
+        "path": "/products/P408-27.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/extra-26.webp",
+        "role": "extra-26"
+      }
+    ],
+    "variantImages": {
+      "Letter:B": {
+        "path": "/products/P408-b.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-b.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:C": {
+        "path": "/products/P408-c.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-c.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:E": {
+        "path": "/products/P408-e.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-e.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:F": {
+        "path": "/products/P408-f.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-f.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:G": {
+        "path": "/products/P408-g.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-g.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:H": {
+        "path": "/products/P408-h.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-h.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:I": {
+        "path": "/products/P408-i.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-i.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:J": {
+        "path": "/products/P408-j.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-j.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:K": {
+        "path": "/products/P408-k.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-k.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:L": {
+        "path": "/products/P408-l.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-l.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:M": {
+        "path": "/products/P408-m.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-m.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:N": {
+        "path": "/products/P408-n.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-n.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:O": {
+        "path": "/products/P408-o.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-o.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:P": {
+        "path": "/products/P408-p.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-p.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:Q": {
+        "path": "/products/P408-q.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-q.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:T": {
+        "path": "/products/P408-t.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-t.webp",
+        "verifiedDistinct": true
+      },
+      "Letter:D": {
+        "path": "/products/P408-d.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P408/raw/variant-d.webp",
+        "verifiedDistinct": true
+      }
+    }
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

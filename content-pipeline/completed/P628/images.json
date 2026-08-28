@@ -1,0 +1,29 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 128504,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/1100/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 67336,
+      "converted": false,
+      "odooMediaId": 1348,
+      "odooName": "A letter (1).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1348/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 26862,
+      "converted": false,
+      "odooMediaId": 1349,
+      "odooName": "A letter (3).webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1349/image_1920"
+    }
+  ],
+  "variants": []
+}

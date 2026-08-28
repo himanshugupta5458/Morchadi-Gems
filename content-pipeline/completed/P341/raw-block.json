@@ -1,0 +1,59 @@
+{
+  "productId": "P341",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "775",
+    "workingId": "odoo-775",
+    "originalSku": "MJ-517",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-517-royal-blue-glass-bangles-set-of-12-with-golden-dotted-work-775",
+    "referenceTitle": "Royal Blue Glass Bangles Set of 12 with Golden Dotted Work",
+    "rawContent": "Add a touch of royal elegance to your ethnic collection with this stunning royal blue glass bangles set, featuring a total of 12 beautifully crafted bangles. Designed with intricate golden dotted embellishments, each bangle reflects fine craftsmanship and traditional Indian artistry. The deep blue color paired with golden accents creates a rich and graceful look that complements both festive and bridal outfits.\nCrafted from premium-quality glass, these bangles have a smooth, glossy finish that enhances their shine and durability. When worn together, the set of 12 bangles creates a bold yet elegant stack, making it perfect for weddings, festivals, pooja ceremonies, sangeet, mehndi, and traditional celebrations. Whether styled with sarees, lehengas, or ethnic suits, these bangles instantly elevate your look with timeless charm.\nA versatile and elegant accessory, this royal blue bangle set is ideal for women who love classic colors with traditional detailing. It also makes a thoughtful gift choice for weddings, festivals, and special occasions.\nProduct Highlights:\n- Set Includes: 12 Glass Bangles\n- Material: High-quality glass\n- Color: Royal Blue\n- Design: Golden dotted detailing\n- Finish: Smooth & glossy glass finish\n- Style: Traditional / Ethnic / Festive\n- Occasions: Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle gently and store in a soft pouch to prevent breakage",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of royal elegance to your ethnic collection with this stunning <strong>royal blue glass bangles set</strong>, featuring a total of <strong>12 beautifully crafted bangles</strong>. Designed with intricate <strong>golden dotted embellishments</strong>, each bangle reflects fine craftsmanship and traditional Indian artistry. The deep blue color paired with golden accents creates a rich and graceful look that complements both festive and bridal outfits.</p><p>Crafted from premium-quality glass, these bangles have a <strong>smooth, glossy finish</strong> that enhances their shine and durability. When worn together, the set of 12 bangles creates a bold yet elegant stack, making it perfect for <strong>weddings, festivals, pooja ceremonies, sangeet, mehndi, and traditional celebrations</strong>. Whether styled with sarees, lehengas, or ethnic suits, these bangles instantly elevate your look with timeless charm.</p><p>A versatile and elegant accessory, this royal blue bangle set is ideal for women who love classic colors with traditional detailing. It also makes a thoughtful <strong>gift choice for weddings, festivals, and special occasions</strong>.</p><h3><strong>Product Highlights:</strong></h3><ul>\n<li><p><strong>Set Includes:</strong> 12 Glass Bangles</p></li>\n<li><p><strong>Material:</strong> High-quality glass</p></li>\n<li><p><strong>Color:</strong> Royal Blue</p></li>\n<li><p><strong>Design:</strong> Golden dotted detailing</p></li>\n<li><p><strong>Finish:</strong> Smooth &amp; glossy glass finish</p></li>\n<li><p><strong>Style:</strong> Traditional / Ethnic / Festive</p></li>\n<li><p><strong>Occasions:</strong> Wedding, Festive wear, Party, Pooja, Sangeet, Mehndi</p></li>\n<li><p><strong>Pair With:</strong> Sarees, Lehengas, Anarkalis, Ethnic suits</p></li>\n<li><p><strong>Ideal For:</strong> Women &amp; girls</p></li>\n<li><p><strong>Care Instructions:</strong> Handle gently and store in a soft pouch to prevent breakage</p></li></ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P341.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P341/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P341-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P341/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

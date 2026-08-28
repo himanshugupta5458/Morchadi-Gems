@@ -1,0 +1,38 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 71242,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/513/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 39626,
+      "converted": false,
+      "odooMediaId": 603,
+      "odooName": "c09521a4-d037-469c-a218-f3d573e72de51736315316496LAVAZZASetOf12RaindropGlassCrystalsZirconDiamondAntiqueBangl3.webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/603/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 36964,
+      "converted": false,
+      "odooMediaId": 604,
+      "odooName": "62d1e851-2999-43b7-a2c2-574bf19651c01736315316516LAVAZZASetOf12RaindropGlassCrystalsZirconDiamondAntiqueBangl4.webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/604/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 24502,
+      "converted": false,
+      "odooMediaId": 605,
+      "odooName": "6dfcd812-e985-4a5d-96bd-8e2bc539dc931736315316456LAVAZZASetOf12RaindropGlassCrystalsZirconDiamondAntiqueBangl2.webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/605/image_1920"
+    }
+  ],
+  "variants": []
+}

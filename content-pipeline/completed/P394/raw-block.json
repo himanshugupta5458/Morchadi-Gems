@@ -1,0 +1,53 @@
+{
+  "productId": "P394",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "846",
+    "workingId": "odoo-846",
+    "originalSku": "MJ-579",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-579-stainless-steel-birthday-synthetic-zirconia-bracelet-846",
+    "referenceTitle": "Stainless Steel Birthday Synthetic Zirconia Bracelet",
+    "rawContent": "Versatile Japanese and Korean Cross-Border Women's Square Bracelet, Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet, Birthday Gift",
+    "rawHtml": "<div data-oe-version=\"2.0\">Versatile Japanese and Korean Cross-Border Women's Square Bracelet, Exquisite Colorful Stainless Steel Fashion Commuter Birthday Synthetic Zirconia Bracelet, Birthday Gift</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P394.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P394/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P394-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P394/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
+  }
+}

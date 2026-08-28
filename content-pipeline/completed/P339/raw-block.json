@@ -1,0 +1,59 @@
+{
+  "productId": "P339",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "773",
+    "workingId": "odoo-773",
+    "originalSku": "MJ-484",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-484-raindrop-green-glass-bangles-773",
+    "referenceTitle": "Raindrop Green Glass Bangles",
+    "rawContent": "Add a touch of timeless elegance to your look with these emerald green glass bangles, beautifully adorned with delicate golden dotted detailing. Crafted with a smooth, glossy glass finish, these bangles reflect light gracefully and enhance their rich green hue. Perfectly stacked for a luxurious appearance, they are ideal for festive occasions, weddings, sangeet, mehndi, or traditional daily wear. Pair them with sarees, lehengas, or ethnic suits to elevate your Indian ethnic style effortlessly. A must-have accessory for women who love classic yet elegant jewelry.",
+    "rawHtml": "<p data-oe-version=\"2.0\"><strong>Add a touch of timeless elegance to your look with these emerald green glass bangles, beautifully adorned with delicate golden dotted detailing. Crafted with a smooth, glossy glass finish, these bangles reflect light gracefully and enhance their rich green hue. Perfectly stacked for a luxurious appearance, they are ideal for festive occasions, weddings, sangeet, mehndi, or traditional daily wear. Pair them with sarees, lehengas, or ethnic suits to elevate your Indian ethnic style effortlessly. A must-have accessory for women who love classic yet elegant jewelry.</strong><br></p>\n<p>\n\n<br></p>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P339.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P339/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P339-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P339/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹149 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "productId": "P424",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "877",
+    "workingId": "odoo-877",
+    "originalSku": "MJ-585",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-585-star-pendant-necklace-in-gold-finish-877",
+    "referenceTitle": "Star Pendant Necklace in Gold Finish",
+    "rawContent": "Add a touch of celestial charm to your look with our Cut-out Star Pendant Necklace. This dainty, gold-toned piece is designed for the modern trendsetter, offering a chic and lightweight aesthetic that's perfect for layering or wearing solo as a fashion statement. To ensure your stars stay shining bright, we recommend keeping this fashionable piece away from moisture and storing it in a dry place after use.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of celestial charm to your look with our Cut-out Star Pendant Necklace. This dainty, gold-toned piece is designed for the modern trendsetter, offering a chic and lightweight aesthetic that's perfect for layering or wearing solo as a fashion statement. To ensure your stars stay shining bright, we recommend keeping this fashionable piece away from moisture and storing it in a dry place after use.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P424.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P424/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P424-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P424/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

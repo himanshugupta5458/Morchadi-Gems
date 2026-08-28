@@ -1,0 +1,62 @@
+{
+  "productId": "P364",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "804",
+    "workingId": "odoo-804",
+    "originalSku": "MJ-414",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-414-minimal-pink-heart-chain-bracelet-for-women-girls-804",
+    "referenceTitle": "Minimal Pink Heart Chain Bracelet for Women & Girls",
+    "rawContent": "Add a cute romantic touch with this Pink Heart Bracelet. Its minimal and elegant design makes it perfect for everyday wear and gifting.\n✨ Details:\n• Color: Gold with Pink Heart\n• Lightweight & comfortable\n• Trendy aesthetic design\nPerfect for daily wear and gifting.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a cute romantic touch with this <strong>Pink Heart Bracelet</strong>. Its minimal and elegant design makes it perfect for everyday wear and gifting.</p><p>✨ <strong>Details:</strong></p><p>\n• Color: Gold with Pink Heart</p><p>\n• Lightweight &amp; comfortable</p><p>\n• Trendy aesthetic design</p><p>Perfect for daily wear and gifting.</p>",
+    "originalCategories": [
+      "Anti Tarnish Necklaces",
+      "combo",
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Handmade personalized initial ring with anti-tarnish finish. Adjustable, unique accessory perfect for daily wear & gifting.",
+    "exportNotes": [
+      "multiple mapped categories, used 'Anti Tarnish Necklaces' (also: combo->gift-hampers, Anti Tarnish bracelet->bracelets)"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P364.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P364-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P364-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P364/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹210 sale price (morchadijewels.com, reference only)"
+  }
+}

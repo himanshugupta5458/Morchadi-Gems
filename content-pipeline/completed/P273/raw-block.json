@@ -1,0 +1,52 @@
+{
+  "productId": "P273",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "659",
+    "workingId": "odoo-659",
+    "originalSku": "MJ-076",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-076-anti-tarnish-maroon-chevron-enamel-kada-659",
+    "referenceTitle": "Anti-Tarnish Maroon Chevron Enamel Kada",
+    "rawContent": "Exude classic charm with this premium maroon chevron enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure your jewelry retains its rich color and shine. This elegant, patterned statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "rawHtml": "<p>Exude classic charm with this premium maroon chevron enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure your jewelry retains its rich color and shine. This elegant, patterned statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P273.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P273/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P273-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P273/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

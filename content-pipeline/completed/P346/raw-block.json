@@ -1,0 +1,59 @@
+{
+  "productId": "P346",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "780",
+    "workingId": "odoo-780",
+    "originalSku": "MJ-398",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-398-lime-green-glass-bangles-set-of-12-with-crystal-dotted-work-780",
+    "referenceTitle": "Lime Green Glass Bangles Set of 12 with Crystal Dotted Work",
+    "rawContent": "Brighten your ethnic look with this charming lime green glass bangles set, featuring 12 beautifully crafted bangles designed to create a vibrant and elegant stacked style. Highlighted with delicate crystal-style dotted embellishments, these bangles add a subtle sparkle that perfectly complements the fresh lime green shade.\nMade from premium-quality glass, the bangles offer a smooth, glossy finish that enhances their shine and ensures comfortable wear throughout the day. The refreshing green tone makes this set an excellent choice for festive occasions, weddings, pooja ceremonies, haldi functions, sangeet, and cultural celebrations.\nWhether paired with sarees, lehengas, or ethnic suits, these lime green bangles bring a joyful pop of color while maintaining a traditional aesthetic. Ideal for women who love bright yet elegant accessories, this set also makes a beautiful gift for festivals, weddings, and special occasions.\nProduct Highlights:\n- Set Includes: 12 Glass Bangles\n- Material: High-quality glass\n- Color: Lime Green\n- Design: Crystal dotted embellishments\n- Finish: Smooth & glossy glass finish\n- Style: Traditional / Ethnic / Festive\n- Occasions: Wedding, Festive wear, Haldi, Party, Pooja, Sangeet\n- Pair With: Sarees, Lehengas, Anarkalis, Ethnic suits\n- Ideal For: Women & girls\n- Care Instructions: Handle gently and store in a soft pouch to avoid breakage",
+    "rawHtml": "<p data-oe-version=\"2.0\">Brighten your ethnic look with this charming <strong>lime green glass bangles set</strong>, featuring <strong>12 beautifully crafted bangles</strong> designed to create a vibrant and elegant stacked style. Highlighted with delicate <strong>crystal-style dotted embellishments</strong>, these bangles add a subtle sparkle that perfectly complements the fresh lime green shade.</p><p>Made from premium-quality glass, the bangles offer a <strong>smooth, glossy finish</strong> that enhances their shine and ensures comfortable wear throughout the day. The refreshing green tone makes this set an excellent choice for <strong>festive occasions, weddings, pooja ceremonies, haldi functions, sangeet, and cultural celebrations</strong>.</p><p>Whether paired with sarees, lehengas, or ethnic suits, these lime green bangles bring a joyful pop of color while maintaining a traditional aesthetic. Ideal for women who love bright yet elegant accessories, this set also makes a beautiful <strong>gift for festivals, weddings, and special occasions</strong>.</p><h3><strong>Product Highlights:</strong></h3><ul>\n<li><p><strong>Set Includes:</strong> 12 Glass Bangles</p></li>\n<li><p><strong>Material:</strong> High-quality glass</p></li>\n<li><p><strong>Color:</strong> Lime Green</p></li>\n<li><p><strong>Design:</strong> Crystal dotted embellishments</p></li>\n<li><p><strong>Finish:</strong> Smooth &amp; glossy glass finish</p></li>\n<li><p><strong>Style:</strong> Traditional / Ethnic / Festive</p></li>\n<li><p><strong>Occasions:</strong> Wedding, Festive wear, Haldi, Party, Pooja, Sangeet</p></li>\n<li><p><strong>Pair With:</strong> Sarees, Lehengas, Anarkalis, Ethnic suits</p></li>\n<li><p><strong>Ideal For:</strong> Women &amp; girls</p></li>\n<li><p><strong>Care Instructions:</strong> Handle gently and store in a soft pouch to avoid breakage</p></li></ul>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Stylish transparent glass bangles with golden stone work. Versatile festive jewelry set perfect for parties, weddings & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P346.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P346/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P346-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P346/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "productId": "P285",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "677",
+    "workingId": "odoo-677",
+    "originalSku": "MJ-395",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-395-light-golden-transparent-glass-bangles-677",
+    "referenceTitle": "Light Golden Transparent Glass Bangles",
+    "rawContent": "Description:\nGrace your ethnic look with these light golden transparent glass bangles, adorned with delicate golden stone work. Elegant, lightweight, and versatile—perfect for weddings, festive occasions, or daily traditional wear.\n-\nMaterial: Premium Glass\n-\nWork: Golden floral stone-studded design\n-\nColor: Light Golden Transparent\n-\nDesign: Glossy traditional bangles with fine stone detailing\n-\nSize/ Fit: Available in 2.4, 2.6, 2.8 (custom sizes on request)\n-\nOccasion: Ideal for weddings, festivals, parties & everyday wear\n-\nCare Instruction: Handle gently as these are glass bangles\nMade from high-quality glass, this bangle set is lightweight yet durable, offering comfort for extended wear. The clear glass with golden accents pairs effortlessly with sarees, lehengas, salwar suits, and fusion outfits, making it a versatile choice for every jewellery lover",
+    "rawHtml": "<p><strong>Description:</strong></p>\n\n<p>Grace your ethnic look with these light golden transparent glass bangles, adorned with delicate golden stone work. Elegant, lightweight, and versatile—perfect for weddings, festive occasions, or daily traditional wear.</p>\n<ul>\n<li>\n<strong>Material:</strong> Premium Glass\n</li>\n<li>\n<strong>Work:</strong> Golden floral stone-studded design\n</li>\n<li>\n<strong>Color:</strong> Light Golden Transparent\n</li>\n<li>\n<strong>Design:</strong> Glossy traditional bangles with fine stone detailing\n</li>\n<li>\n<strong>Size/ Fit:</strong> Available in 2.4, 2.6, 2.8 (custom sizes on request)\n</li>\n<li>\n<strong>Occasion:</strong> Ideal for weddings, festivals, parties &amp; everyday wear\n</li>\n<li>\n<strong>Care Instruction:</strong> Handle gently as these are glass bangles</li></ul>\n\n<p>Made from <strong>high-quality glass</strong>, this bangle set is lightweight yet durable, offering comfort for extended wear. The clear glass with golden accents pairs effortlessly with <strong>sarees, lehengas, salwar suits, and fusion outfits</strong>, making it a versatile choice for every jewellery lover</p>\n<p>\n\n</p>",
+    "originalCategories": [
+      "Glass bangles"
+    ],
+    "originalMetaDescription": "Elegant light golden transparent glass bangles with stone detailing. Lightweight, festive pair for weddings, parties & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bangles",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.4",
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P285.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P285-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P285-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P285-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P285-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P285/raw/extra-4.webp",
+        "role": "extra-4"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹189 sale price (morchadijewels.com, reference only)"
+  }
+}

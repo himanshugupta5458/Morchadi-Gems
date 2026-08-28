@@ -1,0 +1,82 @@
+{
+  "productId": "P245",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "630",
+    "workingId": "odoo-630",
+    "originalSku": "MJ-619",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-619-white-turquoise-raised-bracelet-630",
+    "referenceTitle": "White & Turquoise Raised Bracelet",
+    "rawContent": "- Elevate your style with our Premium Anti-Tarnish Openable Kada – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.\n- Features:\n- Material: High-quality anti-tarnish metal\n- Design: Openable clasp for ease of wear\n- Finish: Long-lasting shine & rust-resistant\n- Ideal For: Casual, festive, and party wear\n- Care Tip: Wipe with a soft cloth after use and store in a dry place",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Elevate your style with our <strong>Premium Anti-Tarnish Openable Kada</strong> – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.</li><li><strong>Features:</strong></li>\n<li><p><strong>Material:</strong> High-quality anti-tarnish metal</p></li>\n<li><p><strong>Design:</strong> Openable clasp for ease of wear</p></li>\n<li><p><strong>Finish:</strong> Long-lasting shine &amp; rust-resistant</p></li>\n<li><p><strong>Ideal For:</strong> Casual, festive, and party wear</p></li>\n<li><p><strong>Care Tip:</strong> Wipe with a soft cloth after use and store in a dry place</p></li></ul></div>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium anti-tarnish openable kada with turquoise design. Durable finish, stylish accessory for casual & festive daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P245.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P245-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P245-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P245-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P245-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P245-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P245-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P245/raw/extra-6.webp",
+        "role": "extra-6"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹320 sale price (morchadijewels.com, reference only)"
+  }
+}

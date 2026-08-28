@@ -1,0 +1,58 @@
+{
+  "productId": "P229",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "530",
+    "workingId": "odoo-530",
+    "originalSku": "MJ-098",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-098-anti-tarnish-triple-band-adjustable-wave-ring-530",
+    "referenceTitle": "Anti-Tarnish Triple Band Adjustable Wave Ring",
+    "rawContent": "- Elevate your style with this chic gold-plated adjustable ring featuring a modern triple band wave design. Crafted for comfort and durability, this elegant piece is perfect for daily wear, parties, and gifting – a must-have in every jewelry collection.\n- Highlights / Specifications:\n- Material: High-quality stainless steel / brass\n- Plating: Premium gold plating for long-lasting shine\n- Stone Type: Plain, no stone – minimalist elegance\n- Design: Triple band wave design for a modern look\n- Size/ Fit: Adjustable – fits most finger sizes comfortably\n- Best For: Daily wear, casual outings, parties & gifting",
+    "rawHtml": "<ul data-oe-version=\"2.0\"><li>Elevate your style with this chic <strong>gold-plated adjustable ring</strong> featuring a modern <strong>triple band wave design</strong>. Crafted for comfort and durability, this elegant piece is perfect for <strong>daily wear, parties, and gifting</strong> – a must-have in every jewelry collection.</li><li><strong>Highlights / Specifications:</strong></li>\n<li><p><strong>Material:</strong> High-quality stainless steel / brass</p></li>\n<li><p><strong>Plating:</strong> Premium gold plating for long-lasting shine</p></li>\n<li><p><strong>Stone Type:</strong> Plain, no stone – minimalist elegance</p></li>\n<li><p><strong>Design:</strong> Triple band wave design for a modern look</p></li>\n<li><p><strong>Size/ Fit:</strong> Adjustable – fits most finger sizes comfortably</p></li>\n<li><p><strong>Best For:</strong> Daily wear, casual outings, parties &amp; gifting</p></li></ul>",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Chic anti-tarnish triple band wave ring with gold plating. Modern adjustable design, perfect for parties, daily wear & gifting.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P229.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P229/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P229-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P229/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P229-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P229/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "productId": "P265",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "651",
+    "workingId": "odoo-651",
+    "originalSku": "MJ-093",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-093-anti-tarnish-pink-leaf-pattern-kada-651",
+    "referenceTitle": "Anti-Tarnish Pink Leaf Pattern Kada",
+    "rawContent": "Make a bold statement with this premium pink leaf-pattern enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This unique nature-inspired piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "rawHtml": "<p>Make a bold statement with this premium pink leaf-pattern enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This unique nature-inspired piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P265.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P265/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P265-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P265/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P265-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P265/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

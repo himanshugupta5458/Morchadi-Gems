@@ -1,0 +1,69 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 144710,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/1060/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 233110,
+      "converted": false,
+      "odooMediaId": 1337,
+      "odooName": "Hair Accessories (1).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1337/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 81812,
+      "converted": false,
+      "odooMediaId": 1338,
+      "odooName": "Hair Accessories (1).webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1338/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 96488,
+      "converted": false,
+      "odooMediaId": 1339,
+      "odooName": "Hair Accessories (2).webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1339/image_1920"
+    }
+  ],
+  "variants": [
+    {
+      "file": "variant-pink.webp",
+      "bytes": 96488,
+      "converted": false,
+      "variantId": 2831,
+      "value": "pink",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2831/image_1920"
+    },
+    {
+      "file": "variant-black.webp",
+      "bytes": 81812,
+      "converted": false,
+      "variantId": 2832,
+      "value": "black",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2832/image_1920"
+    },
+    {
+      "file": "variant-white.webp",
+      "bytes": 233110,
+      "converted": false,
+      "variantId": 2833,
+      "value": "white",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2833/image_1920"
+    }
+  ]
+}

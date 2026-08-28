@@ -1,0 +1,99 @@
+{
+  "productId": "P283",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "671",
+    "workingId": "odoo-671",
+    "originalSku": "MJ-472",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-472-plain-crystal-kangan-2-piece-671",
+    "referenceTitle": "Plain Crystal Kangan (2 piece)",
+    "rawContent": "Description:\nRefresh your ethnic collection with this elegant multicolor plain glass bangle set, featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green. Each bangle is handcrafted from high-quality glass, offering a smooth finish and a classic look that perfectly complements sarees, lehengas, salwar suits, and indo-western outfits.\nThese bangles are lightweight and durable, ensuring comfort for all-day wear whether it's a festive celebration, party, wedding, or daily use. The versatile multicolor palette allows you to mix and match for unique styling, making this set ideal for bridal jewelry, festive accessories, or thoughtful gifting.\nKey Features:\n- Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)\n- Handcrafted for a flawless, elegant finish\n- Lightweight and sturdy for everyday and festive occasions\n- Complements traditional and modern ethnic attire\n- Perfect for weddings, festivals, parties, and gifting",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Refresh your ethnic collection with this elegant <strong>multicolor plain glass bangle set</strong>, featuring six vibrant hues: yellow, green, pink, black, maroon, and mint green. Each bangle is handcrafted from high-quality glass, offering a smooth finish and a classic look that perfectly complements sarees, lehengas, salwar suits, and indo-western outfits.</p><p>These bangles are lightweight and durable, ensuring comfort for all-day wear whether it's a festive celebration, party, wedding, or daily use. The versatile multicolor palette allows you to mix and match for unique styling, making this set ideal for bridal jewelry, festive accessories, or thoughtful gifting.</p><p><strong>Key Features:</strong></p><ul><li>Set of two plain glass bangles in assorted colors (yellow, green, pink, black, maroon, mint green)</li><li>Handcrafted for a flawless, elegant finish</li><li>Lightweight and sturdy for everyday and festive occasions</li><li>Complements traditional and modern ethnic attire</li><li>Perfect for weddings, festivals, parties, and gifting</li></ul></div>",
+    "originalCategories": [],
+    "originalMetaDescription": "Elegant multicolor glass kada bangles with smooth finish. Lightweight & versatile for daily wear, festivals & bridal gifting.",
+    "exportNotes": [
+      "product had no source category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P283.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P283-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P283-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P283-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P283-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P283-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P283-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P283/raw/extra-6.webp",
+        "role": "extra-6"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 105172,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/776/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 181694,
+      "converted": true,
+      "odooMediaId": 701,
+      "odooName": "Glass bangles  (4).png",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/701/image_1920"
+    }
+  ],
+  "variants": []
+}

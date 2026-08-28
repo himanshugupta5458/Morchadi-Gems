@@ -1,0 +1,29 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 112616,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/1101/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 133372,
+      "converted": false,
+      "odooMediaId": 1352,
+      "odooName": "Aqua Blue (1).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1352/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 18728,
+      "converted": false,
+      "odooMediaId": 1353,
+      "odooName": "Aqua Blue (3).webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1353/image_1920"
+    }
+  ],
+  "variants": []
+}

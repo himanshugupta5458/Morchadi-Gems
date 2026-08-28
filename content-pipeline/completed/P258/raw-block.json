@@ -1,0 +1,58 @@
+{
+  "productId": "P258",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "644",
+    "workingId": "odoo-644",
+    "originalSku": "MJ-065",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-065-anti-tarnish-blue-wave-enamel-kada-644",
+    "referenceTitle": "Anti-Tarnish Blue Wave Enamel Kada",
+    "rawContent": "Make a splash with this premium blue wave enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This bold, artistic statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.",
+    "rawHtml": "<p>Make a splash with this premium blue wave enamel kada. Expertly crafted with a high-quality gold finish, its anti-tarnish and water-resistant properties ensure long-lasting brilliance. This bold, artistic statement piece offers a luxurious, modern aesthetic that maintains its stunning luster through everyday wear.</p>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P258.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P258/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P258-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P258/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P258-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P258/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

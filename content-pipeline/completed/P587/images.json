@@ -1,0 +1,78 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 66802,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/1057/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 66802,
+      "converted": false,
+      "odooMediaId": 1329,
+      "odooName": "Gemini_Generated_Image_fznapffznapffzna.webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1329/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 97014,
+      "converted": false,
+      "odooMediaId": 1330,
+      "odooName": "Gemini_Generated_Image_e29towe29towe29t.webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1330/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 104144,
+      "converted": false,
+      "odooMediaId": 1331,
+      "odooName": "Gemini_Generated_Image_5adqdw5adqdw5adq.webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1331/image_1920"
+    },
+    {
+      "file": "extra-4.webp",
+      "bytes": 91898,
+      "converted": false,
+      "odooMediaId": 1332,
+      "odooName": "Gemini_Generated_Image_liq8ealiq8ealiq8.webp",
+      "sequence": "13",
+      "source": "https://www.morchadijewels.com/web/image/product.image/1332/image_1920"
+    }
+  ],
+  "variants": [
+    {
+      "file": "variant-antique-gold.webp",
+      "bytes": 104144,
+      "converted": false,
+      "variantId": 2806,
+      "value": "Antique Gold",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2806/image_1920"
+    },
+    {
+      "file": "variant-lilac-shimmer.webp",
+      "bytes": 97014,
+      "converted": false,
+      "variantId": 2807,
+      "value": "Lilac Shimmer",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2807/image_1920"
+    },
+    {
+      "file": "variant-cream-shimmer.webp",
+      "bytes": 91898,
+      "converted": false,
+      "variantId": 2825,
+      "value": "Cream shimmer",
+      "verifiedDistinct": true,
+      "sharedWithOtherVariant": false,
+      "source": "https://www.morchadijewels.com/web/image/product.product/2825/image_1920"
+    }
+  ]
+}

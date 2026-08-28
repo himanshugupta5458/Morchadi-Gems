@@ -1,0 +1,117 @@
+{
+  "productId": "P398",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "850",
+    "workingId": "odoo-850",
+    "originalSku": "MJ-009",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-009-1pc-women-s-stainless-steel-zirconia-birthstone-pendant-necklace-850",
+    "referenceTitle": "1pc Women'S Stainless Steel Zirconia Birthstone Pendant Necklace",
+    "rawContent": "A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear",
+    "rawHtml": "<div data-oe-version=\"2.0\">A New Stylish And Luxurious Flower Bracelet Adorned with Synthetic Synthetic Synthetic Zircon​​, Perfect for Women'S Everyday Wear</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [
+    {
+      "optionName": "Stone",
+      "values": [
+        "February Purple",
+        "October Pink"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P398.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P398-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P398-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P398-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P398-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P398-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-5.webp",
+        "role": "extra-5"
+      },
+      {
+        "path": "/products/P398-7.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-6.webp",
+        "role": "extra-6"
+      },
+      {
+        "path": "/products/P398-8.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-7.webp",
+        "role": "extra-7"
+      },
+      {
+        "path": "/products/P398-9.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-8.webp",
+        "role": "extra-8"
+      },
+      {
+        "path": "/products/P398-10.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-9.webp",
+        "role": "extra-9"
+      },
+      {
+        "path": "/products/P398-11.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P398/raw/extra-10.webp",
+        "role": "extra-10"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹450 sale price (morchadijewels.com, reference only)"
+  }
+}

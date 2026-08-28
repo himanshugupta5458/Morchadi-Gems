@@ -1,0 +1,52 @@
+{
+  "productId": "P425",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "878",
+    "workingId": "odoo-878",
+    "originalSku": "MJ-203",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-203-dainty-gold-bow-pendant-necklace-878",
+    "referenceTitle": "Dainty Gold Bow Pendant Necklace",
+    "rawContent": "Step into the 'Coquette' trend with our exquisite Gold Bow Pendant Necklace. This ultra-feminine piece features a fluid ribbon design that adds a soft, romantic touch to any ensemble. Crafted as a high-fashion statement, it's the perfect accessory for light-catching everyday wear. To preserve the brilliant golden luster of this delicate piece, we recommend keeping it tucked away in a dry place after your day's adventures and avoiding contact with perfumes or water.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Step into the 'Coquette' trend with our exquisite Gold Bow Pendant Necklace. This ultra-feminine piece features a fluid ribbon design that adds a soft, romantic touch to any ensemble. Crafted as a high-fashion statement, it's the perfect accessory for light-catching everyday wear. To preserve the brilliant golden luster of this delicate piece, we recommend keeping it tucked away in a dry place after your day's adventures and avoiding contact with perfumes or water.</div>",
+    "originalCategories": [
+      "Necklace / Fashion Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P425.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P425/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P425-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P425/raw/extra-1.webp",
+        "role": "extra-1"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹20 cost (morchadijewels.com, reference only)"
+  }
+}

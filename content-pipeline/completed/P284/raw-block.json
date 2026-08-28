@@ -1,0 +1,92 @@
+{
+  "productId": "P284",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "672",
+    "workingId": "odoo-672",
+    "originalSku": "MJ-242",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-242-elephant-crystal-kangan-2-piece-672",
+    "referenceTitle": "Elephant Crystal Kangan (2 piece)",
+    "rawContent": "Description:\nElevate your ethnic look with this striking thick glass kada bangles, featuring a stunning mix of colors and intricate detailing. Each bangle boasts a beautifully rounded, robust design with vibrant shades of green, white, amber, lavender, and black. Accented with artistic multicolor striped ends, these kada-style bangles blend traditional charm with modern sophistication.\nPerfect for parties, festivals, weddings, and everyday wear, these glass kada bangles are handcrafted to offer unmatched durability and shine. Their bold, chunky style makes them an ideal statement accessory for sarees, lehengas, salwar suits, and Indo-western outfits. Whether you're shopping for festive jewelry, bridal accessories, or a thoughtful gift, this unique multicolor kada bangle set is a must-have for every jewelry lover.\nKey Features:\n- Bold thick kada design in premium glass for a standout look\n- Vibrant multicolor set: Green, white, amber, lavender, and black bangles\n- Artistic hand-painted ends with striped detailing for a unique touch\n- Comfortable, sturdy fit suitable for daily and festive wear\n- Versatile accessory: Matches traditional and fusion ensembles\n- Perfect for weddings, cultural events, gifting, and everyday style",
+    "rawHtml": "<div><p><strong>Description:</strong></p><p>Elevate your ethnic look with this striking <strong>thick glass kada bangles</strong>, featuring a stunning mix of colors and intricate detailing. Each bangle boasts a beautifully rounded, robust design with vibrant shades of green, white, amber, lavender, and black. Accented with artistic multicolor striped ends, these kada-style bangles blend traditional charm with modern sophistication.</p><p>Perfect for parties, festivals, weddings, and everyday wear, these glass kada bangles are handcrafted to offer unmatched durability and shine. Their bold, chunky style makes them an ideal statement accessory for sarees, lehengas, salwar suits, and Indo-western outfits. Whether you're shopping for festive jewelry, bridal accessories, or a thoughtful gift, this unique multicolor kada bangle set is a must-have for every jewelry lover.</p><p><strong>Key Features:</strong></p><ul><li><strong>Bold thick kada design in premium glass</strong> for a standout look</li><li><strong>Vibrant multicolor set:</strong> Green, white, amber, lavender, and black bangles</li><li><strong>Artistic hand-painted ends</strong> with striped detailing for a unique touch</li><li><strong>Comfortable, sturdy fit</strong> suitable for daily and festive wear</li><li><strong>Versatile accessory:</strong> Matches traditional and fusion ensembles</li><li><strong>Perfect for weddings, cultural events, gifting, and everyday style</strong></li></ul></div>",
+    "originalCategories": [],
+    "originalMetaDescription": "Striking crystal glass kada bangles with multicolor finish. Durable, bold & perfect for weddings, festivals & ethnic wear.",
+    "exportNotes": [
+      "product had no source category"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "optionName": "Size for bangles",
+      "values": [
+        "2.6",
+        "2.8"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P284.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P284-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P284-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P284-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P284-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P284-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P284/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

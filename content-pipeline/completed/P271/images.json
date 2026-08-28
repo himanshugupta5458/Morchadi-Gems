@@ -1,0 +1,20 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 50926,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/657/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 54500,
+      "converted": false,
+      "odooMediaId": 371,
+      "odooName": "1 (37).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/371/image_1920"
+    }
+  ],
+  "variants": []
+}

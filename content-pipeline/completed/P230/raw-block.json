@@ -1,0 +1,58 @@
+{
+  "productId": "P230",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "531",
+    "workingId": "odoo-531",
+    "originalSku": "MJ-054",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-054-anti-tarnish-solitaire-spark-ring-531",
+    "referenceTitle": "Anti Tarnish Solitaire Spark Ring",
+    "rawContent": "- Elevate your jewelry collection with the \"Solitaire Spark\" Ring, where timeless design meets modern elegance. Crafted from anti-tarnish stainless steel and finished in luxurious gold plating, this ring features a brilliant round centerpiece stone flanked by dazzling cubic zirconia accents on the band. Its sturdy, non-adjustable fit and sophisticated look make it perfect for daily wear, parties, or gifting someone special.\n-\n- Material: Stainless Steel (Anti-Tarnish)\n- Plating: Gold Tone Plated\n- Stone Type: Premium Cubic Zirconia (Solitaire center + side accents)\n- Design: Classic solitaire band with side-studded stones\n- Color: Gold\n- Sizes Available:\n- Size 6 → Diameter: 1.6cm\n- Size 7 → Diameter: 1.7cm\n- Size 8 → Diameter: 1.8cm\n- Best Use: Ideal for daily wear, party wear, engagement look, or gifting\n- Packaging: Premium black velvet box\n- Note: Hand-finished for a unique and special touch",
+    "rawHtml": "<ul><li>Elevate your jewelry collection with the \"Solitaire Spark\" Ring, where timeless design meets modern elegance. Crafted from anti-tarnish stainless steel and finished in luxurious gold plating, this ring features a brilliant round centerpiece stone flanked by dazzling cubic zirconia accents on the band. Its sturdy, non-adjustable fit and sophisticated look make it perfect for daily wear, parties, or gifting someone special.</li><li class=\"oe-nested\"><ul><li><strong>Material:</strong> Stainless Steel (Anti-Tarnish)</li><li><strong>Plating:</strong> Gold Tone Plated</li><li><strong>Stone Type:</strong> Premium Cubic Zirconia (Solitaire center + side accents)</li><li><strong>Design:</strong> Classic solitaire band with side-studded stones</li><li><strong>Color:</strong> Gold</li><li><strong>Sizes Available:</strong><ul><li>Size 6 → Diameter: 1.6cm</li><li>Size 7 → Diameter: 1.7cm</li><li>Size 8 → Diameter: 1.8cm</li></ul></li><li><strong>Best Use:</strong> Ideal for daily wear, party wear, engagement look, or gifting</li><li><strong>Packaging:</strong> Premium black velvet box</li><li><strong>Note:</strong> Hand-finished for a unique and special touch</li></ul></li></ul>",
+    "originalCategories": [
+      "Anti Tarnish ring"
+    ],
+    "originalMetaDescription": "Stunning solitaire spark ring with cubic zirconia side stones. Anti-tarnish gold finish, perfect for parties, gifting & daily wear.",
+    "exportNotes": [],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P230.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P230-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P230-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P230/raw/extra-2.webp",
+        "role": "extra-2"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹249 sale price (morchadijewels.com, reference only)"
+  }
+}

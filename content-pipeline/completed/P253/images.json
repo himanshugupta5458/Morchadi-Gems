@@ -1,0 +1,74 @@
+{
+  "main": {
+    "file": "main.webp",
+    "bytes": 49952,
+    "converted": false,
+    "source": "https://www.morchadijewels.com/web/image/product.template/639/image_1920"
+  },
+  "extras": [
+    {
+      "file": "extra-1.webp",
+      "bytes": 55274,
+      "converted": false,
+      "odooMediaId": 258,
+      "odooName": "1 (91).webp",
+      "sequence": "10",
+      "source": "https://www.morchadijewels.com/web/image/product.image/258/image_1920"
+    },
+    {
+      "file": "extra-2.webp",
+      "bytes": 60052,
+      "converted": false,
+      "odooMediaId": 259,
+      "odooName": "1 (92).webp",
+      "sequence": "11",
+      "source": "https://www.morchadijewels.com/web/image/product.image/259/image_1920"
+    },
+    {
+      "file": "extra-3.webp",
+      "bytes": 49952,
+      "converted": false,
+      "odooMediaId": 260,
+      "odooName": "1 (89).webp",
+      "sequence": "12",
+      "source": "https://www.morchadijewels.com/web/image/product.image/260/image_1920"
+    },
+    {
+      "file": "extra-4.webp",
+      "bytes": 52848,
+      "converted": false,
+      "odooMediaId": 261,
+      "odooName": "1 (93).webp",
+      "sequence": "13",
+      "source": "https://www.morchadijewels.com/web/image/product.image/261/image_1920"
+    },
+    {
+      "file": "extra-5.webp",
+      "bytes": 50288,
+      "converted": false,
+      "odooMediaId": 262,
+      "odooName": "1 (94).webp",
+      "sequence": "14",
+      "source": "https://www.morchadijewels.com/web/image/product.image/262/image_1920"
+    },
+    {
+      "file": "extra-6.webp",
+      "bytes": 40524,
+      "converted": false,
+      "odooMediaId": 263,
+      "odooName": "1 (83).webp",
+      "sequence": "15",
+      "source": "https://www.morchadijewels.com/web/image/product.image/263/image_1920"
+    },
+    {
+      "file": "extra-7.webp",
+      "bytes": 34476,
+      "converted": false,
+      "odooMediaId": 264,
+      "odooName": "1 (104).webp",
+      "sequence": "16",
+      "source": "https://www.morchadijewels.com/web/image/product.image/264/image_1920"
+    }
+  ],
+  "variants": []
+}

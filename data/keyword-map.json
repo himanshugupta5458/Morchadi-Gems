@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/backfill-keyword-map.mjs",
   "source": "data/products.json",
-  "productCount": 358,
+  "productCount": 449,
   "primary": {
     "adjustable crystal heart ring": [
       "P004"
@@ -18,6 +18,9 @@
     "anti-tarnish bamboo hoop earrings": [
       "P497"
     ],
+    "anti-tarnish blue diamond-pattern enamel kada": [
+      "P264"
+    ],
     "anti-tarnish embossed hoop earrings": [
       "P498"
     ],
@@ -27,11 +30,53 @@
     "anti-tarnish gold-tone watch emerald green leaf dial": [
       "P611"
     ],
+    "anti-tarnish green enamel kada": [
+      "P272"
+    ],
+    "anti-tarnish kada bracelet easy clasp": [
+      "P243"
+    ],
+    "anti-tarnish kada bracelet everyday wear": [
+      "P244"
+    ],
+    "anti-tarnish kada bracelet festive occasion": [
+      "P245"
+    ],
+    "anti-tarnish maroon chevron enamel kada": [
+      "P273"
+    ],
+    "anti-tarnish multi-colour enamel kada": [
+      "P271"
+    ],
+    "anti-tarnish necklace bracelet ring gift set": [
+      "P365"
+    ],
+    "anti-tarnish openable kada bracelet": [
+      "P242"
+    ],
     "anti-tarnish openable kada bracelet two designs": [
       "P246"
     ],
+    "anti-tarnish pastel chevron enamel kada": [
+      "P263"
+    ],
+    "anti-tarnish peach bamboo-style kada": [
+      "P266"
+    ],
+    "anti-tarnish pink leaf-pattern enamel kada": [
+      "P265"
+    ],
+    "anti-tarnish pink white bamboo-style kada": [
+      "P270"
+    ],
+    "anti-tarnish pink white floral enamel kada": [
+      "P269"
+    ],
     "anti-tarnish ribbed hoop earrings": [
       "P494"
+    ],
+    "anti-tarnish seafoam bamboo-style kada": [
+      "P261"
     ],
     "anti-tarnish swirl hoop earrings": [
       "P496"
@@ -45,6 +90,9 @@
     "antique meenakari watch": [
       "P608"
     ],
+    "aqua blue heart pendant necklace gold-tone": [
+      "P629"
+    ],
     "aqua floral enamel kada": [
       "P511"
     ],
@@ -53,6 +101,9 @@
     ],
     "birthday hamper for her": [
       "P533"
+    ],
+    "birthday hamper halter top pearl look bracelet": [
+      "P532"
     ],
     "birthday hamper with initial ring": [
       "P545"
@@ -174,8 +225,20 @@
     "double stone open ring": [
       "P355"
     ],
+    "dual-tone multicolour glass bangles": [
+      "P288"
+    ],
     "eid mubarak gift hamper": [
       "P534"
+    ],
+    "emerald green glass bangle set golden dotted": [
+      "P343"
+    ],
+    "emerald green glass bangles golden bead set": [
+      "P217"
+    ],
+    "emerald green glass bangles golden dotted": [
+      "P339"
     ],
     "emerald-green stone vine necklace": [
       "P520"
@@ -201,8 +264,17 @@
     "floral meenakari watch": [
       "P606"
     ],
+    "glass bangles hand-painted striped ends": [
+      "P284"
+    ],
+    "glass bangles traditional festive design pair": [
+      "P281"
+    ],
     "glass locket necklace": [
       "P002"
+    ],
+    "gold anti-tarnish double-layer snake chain bracelet coin tag": [
+      "P554"
     ],
     "gold bead cubic zirconia bracelet": [
       "P553"
@@ -234,8 +306,29 @@
     "gold solitaire pendant necklace": [
       "P358"
     ],
+    "gold-finish kada blue ombre enamel": [
+      "P251"
+    ],
+    "gold-finish kada blue striped enamel pearl-look": [
+      "P259"
+    ],
+    "gold-finish kada blue wave enamel": [
+      "P258"
+    ],
+    "gold-finish kada orange floral enamel": [
+      "P253"
+    ],
+    "gold-finish kada yellow enamel pearl-look": [
+      "P260"
+    ],
     "gold-finish rope band ring cz bar": [
       "P194"
+    ],
+    "gold-plated anti-tarnish coin pendant": [
+      "P298"
+    ],
+    "gold-plated anti-tarnish solitaire ring cubic zirconia": [
+      "P230"
     ],
     "gold-plated bow knot ring cubic zirconia": [
       "P161"
@@ -243,11 +336,17 @@
     "gold-plated bow-knot ring cubic zirconia": [
       "P197"
     ],
+    "gold-plated bracelet infinity charm": [
+      "P384"
+    ],
     "gold-plated circle ring cubic zirconia leaf accent": [
       "P201"
     ],
     "gold-plated clover anklet": [
       "P046"
+    ],
+    "gold-plated contemporary stackable ring set eleven": [
+      "P368"
     ],
     "gold-plated crossover ring heart cubic zirconia": [
       "P199"
@@ -276,6 +375,9 @@
     "gold-plated floral ring cubic zirconia curved band": [
       "P208"
     ],
+    "gold-plated flower stud earrings pastel pink": [
+      "P323"
+    ],
     "gold-plated fruit charm chain bracelet": [
       "P301"
     ],
@@ -300,11 +402,23 @@
     "gold-plated infinity crossover ring pave cubic zirconia": [
       "P182"
     ],
+    "gold-plated initial letter ring personalized": [
+      "P408"
+    ],
     "gold-plated initial ring": [
       "P001"
     ],
     "gold-plated interlocked circle ring pave cubic zirconia": [
       "P192"
+    ],
+    "gold-plated kada green ombre enamel": [
+      "P256"
+    ],
+    "gold-plated kada pink bamboo enamel": [
+      "P255"
+    ],
+    "gold-plated kada yellow bamboo enamel": [
+      "P254"
     ],
     "gold-plated knot-style ring studded cubic zirconia": [
       "P203"
@@ -312,11 +426,17 @@
     "gold-plated layered anklet": [
       "P580"
     ],
+    "gold-plated leaf band ring cubic zirconia": [
+      "P189"
+    ],
     "gold-plated linked heart necklace": [
       "P318"
     ],
     "gold-plated love knot ring": [
       "P011"
+    ],
+    "gold-plated minimalist kada sleek finish": [
+      "P257"
     ],
     "gold-plated open ring faux pearl cubic zirconia star": [
       "P205"
@@ -345,6 +465,15 @@
     "gold-plated round pave ring cubic zirconia": [
       "P187"
     ],
+    "gold-plated stackable ring set of three": [
+      "P367"
+    ],
+    "gold-plated stud earrings soft mint stones": [
+      "P324"
+    ],
+    "gold-plated triple band wave ring no stone": [
+      "P229"
+    ],
     "gold-plated vine leaf necklace earring set anti-tarnish": [
       "P569"
     ],
@@ -353,6 +482,12 @@
     ],
     "gold-plated wavy band ring cubic zirconia": [
       "P158"
+    ],
+    "gold-tone anti-tarnish necklace pink heart charm": [
+      "P364"
+    ],
+    "gold-tone anti-tarnish pink tulip charm bracelet": [
+      "P555"
     ],
     "gold-tone anti-tarnish watch red oval dial": [
       "P610"
@@ -387,6 +522,9 @@
     "gold-tone bracelet watch white oval dial": [
       "P615"
     ],
+    "gold-tone glass bangle set stone-dotted": [
+      "P342"
+    ],
     "gold-tone green stone ring": [
       "P334"
     ],
@@ -398,6 +536,9 @@
     ],
     "gold-tone i love u message ring": [
       "P156"
+    ],
+    "gold-tone initial a necklace anti-tarnish": [
+      "P628"
     ],
     "gold-tone mesh bracelet watch green square dial": [
       "P621"
@@ -414,6 +555,15 @@
     "gold-toned alternating stone nath": [
       "P483"
     ],
+    "gold-toned anti-tarnish ball charm bracelet adjustable": [
+      "P550"
+    ],
+    "gold-toned anti-tarnish vine bracelet clear stones": [
+      "P544"
+    ],
+    "gold-toned anti-tarnish vine bracelet green stones": [
+      "P543"
+    ],
     "gold-toned ball chain beaded strand bracelet set": [
       "P470"
     ],
@@ -422,6 +572,9 @@
     ],
     "gold-toned beaded twisted chain box chain bracelet set": [
       "P469"
+    ],
+    "gold-toned birthstone pendant zirconia": [
+      "P398"
     ],
     "gold-toned bracelet heart motif charm": [
       "P455"
@@ -437,6 +590,9 @@
     ],
     "gold-toned bracelet winged heart lock charm": [
       "P452"
+    ],
+    "gold-toned cherry blossom pendant": [
+      "P404"
     ],
     "gold-toned clear stone nath": [
       "P484"
@@ -468,11 +624,17 @@
     "gold-toned heartbeat lifeline bracelet": [
       "P462"
     ],
+    "gold-toned jewellery set necklace earrings bracelet": [
+      "P432"
+    ],
     "gold-toned link leaf motif bracelet set": [
       "P467"
     ],
     "gold-toned multicolour stone nath": [
       "P487"
+    ],
+    "gold-toned necklace affordable everyday": [
+      "P423"
     ],
     "gold-toned paperclip heart link bracelet set": [
       "P468"
@@ -483,6 +645,18 @@
     "gold-toned pearl station necklace": [
       "P430"
     ],
+    "gold-toned pendant everyday finish": [
+      "P424"
+    ],
+    "gold-toned pendant necklace pearl-look accent": [
+      "P383"
+    ],
+    "gold-toned pendant necklace simple": [
+      "P422"
+    ],
+    "gold-toned pendant understated style": [
+      "P425"
+    ],
     "gold-toned rope chain box link bracelet set": [
       "P471"
     ],
@@ -491,6 +665,9 @@
     ],
     "gold-toned small cluster nath": [
       "P480"
+    ],
+    "gold-toned snake chain necklace": [
+      "P433"
     ],
     "gold-toned tennis bracelet set": [
       "P472"
@@ -522,8 +699,17 @@
     "grey glass ghungroo bangle set": [
       "P504"
     ],
+    "heart charm necklace bracelet set fine chain": [
+      "P317"
+    ],
     "heart locket open ring": [
       "P513"
+    ],
+    "hot pink glass bangle set gold bead": [
+      "P349"
+    ],
+    "ivory white glass bangles gold bead set twelve": [
+      "P350"
     ],
     "kashmiri ghungroo bangles": [
       "P041"
@@ -540,8 +726,17 @@
     "lavender glass ghungroo bangle set": [
       "P500"
     ],
+    "layered satin french bow hair clip": [
+      "P590"
+    ],
+    "light golden transparent glass bangles stone detailing": [
+      "P285"
+    ],
     "lightweight rosegold star ring": [
       "P130"
+    ],
+    "lime green glass bangle set stone-dotted": [
+      "P346"
     ],
     "lotus kundan bracelet watch": [
       "P557"
@@ -594,14 +789,29 @@
     "multicolour flower vine bracelet": [
       "P539"
     ],
+    "multicolour glass bangle set golden dotted": [
+      "P340"
+    ],
+    "multicolour glass bangles five colour options": [
+      "P290"
+    ],
+    "multicolour glass bangles smooth plain finish": [
+      "P283"
+    ],
     "multicolour leaf necklace set": [
       "P522"
+    ],
+    "multicolour spiral glass bangles glossy finish": [
+      "P280"
     ],
     "multicolour tulip bracelet": [
       "P038"
     ],
     "multicolour vine bracelet": [
       "P397"
+    ],
+    "mustard yellow glass bangles textured gold bead": [
+      "P352"
     ],
     "mystery jewellery jar 8 to 9 pieces": [
       "P625"
@@ -612,8 +822,17 @@
     "mystery jewellery jar with guaranteed watch": [
       "P626"
     ],
+    "navy blue glass bangle set golden dotted": [
+      "P344"
+    ],
     "neutral ombre enamel kada": [
       "P249"
+    ],
+    "olive green glass bangle set gold bead": [
+      "P347"
+    ],
+    "olive green glass bangles stone embellishment": [
+      "P287"
     ],
     "olive green thread ring": [
       "P018"
@@ -644,6 +863,9 @@
     ],
     "oversized spiral texture hoop earrings": [
       "P572"
+    ],
+    "pastel green glass bangles": [
+      "P289"
     ],
     "peace dove charm": [
       "P376"
@@ -677,6 +899,9 @@
     ],
     "pink flower stud earrings": [
       "P028"
+    ],
+    "pink glass bangles golden bead accents": [
+      "P312"
     ],
     "pink glass ghungroo bangle set": [
       "P499"
@@ -768,6 +993,15 @@
     "red enamel tulip necklace": [
       "P530"
     ],
+    "red glass bangles golden bead accents handmade": [
+      "P313"
+    ],
+    "red glass bangles golden bead accents set": [
+      "P214"
+    ],
+    "red glass bangles golden bead detailing festive": [
+      "P314"
+    ],
     "red kundan charm bracelet watch": [
       "P389"
     ],
@@ -794,6 +1028,9 @@
     ],
     "rose gold flower ring": [
       "P106"
+    ],
+    "rose gold heart pendant pave halo cubic zirconia": [
+      "P634"
     ],
     "rose gold ring set of twelve": [
       "P338"
@@ -824,6 +1061,12 @@
     ],
     "rose gold-plated stone band ring": [
       "P178"
+    ],
+    "rose gold-tone bracelet anti-tarnish single piece": [
+      "P211"
+    ],
+    "rose gold-tone brass bracelet toggle clasp": [
+      "P210"
     ],
     "rose gold-toned tennis bracelet marquise solitaire": [
       "P457"
@@ -864,17 +1107,35 @@
     "rosegold star ring for teens": [
       "P126"
     ],
+    "rosegold star ring gift for her": [
+      "P129"
+    ],
     "rosegold star ring, budget pick": [
       "P152"
     ],
+    "rosegold-plated star ring cubic zirconia": [
+      "P127"
+    ],
+    "royal blue glass bangle set golden dotted": [
+      "P341"
+    ],
+    "royal purple glass bangles gold bead set": [
+      "P351"
+    ],
     "ruby-red tulip pendant necklace": [
       "P525"
+    ],
+    "rust orange glass bangle set gold bead": [
+      "P348"
     ],
     "sage green glass ghungroo bangle set": [
       "P501"
     ],
     "satin bow hair clip": [
       "P048"
+    ],
+    "satin long-tail bow hair clip": [
+      "P587"
     ],
     "satin rose hair tie": [
       "P586"
@@ -908,6 +1169,9 @@
     ],
     "silver-plated double emerald-cut ring halo": [
       "P170"
+    ],
+    "silver-plated floral halo ring cubic zirconia": [
+      "P198"
     ],
     "silver-plated nath": [
       "P031"
@@ -1002,6 +1266,9 @@
     "stacked coil ring": [
       "P123"
     ],
+    "stainless steel bracelet cubic zirconia anti-tarnish": [
+      "P394"
+    ],
     "stainless steel moebius infinity bracelet": [
       "P399"
     ],
@@ -1034,6 +1301,12 @@
     ],
     "thin gold band ring": [
       "P356"
+    ],
+    "transparent glass bangle set golden dotted": [
+      "P345"
+    ],
+    "transparent glass bangles golden detailing": [
+      "P286"
     ],
     "tree charm": [
       "P372"
@@ -1117,6 +1390,9 @@
     "adjustable chain pendant": [
       "P636"
     ],
+    "adjustable chain pendant india": [
+      "P298"
+    ],
     "adjustable circle ring gift": [
       "P201"
     ],
@@ -1150,11 +1426,17 @@
     "adjustable flower ring women": [
       "P208"
     ],
+    "adjustable gifting ring india": [
+      "P189"
+    ],
     "adjustable gold bead bracelet": [
       "P553"
     ],
     "adjustable gold ring for daily wear": [
       "P334"
+    ],
+    "adjustable halo ring gift": [
+      "P198"
     ],
     "adjustable heart ring": [
       "P118"
@@ -1234,6 +1516,9 @@
     "adjustable woven ring gold": [
       "P206"
     ],
+    "aesthetic birthday gift box india": [
+      "P532"
+    ],
     "affordable bracelet combo india": [
       "P463"
     ],
@@ -1241,6 +1526,7 @@
       "P456"
     ],
     "affordable charm bracelet india": [
+      "P384",
       "P452"
     ],
     "affordable crystal charm bracelet": [
@@ -1252,6 +1538,9 @@
     "affordable cz ring india": [
       "P166"
     ],
+    "affordable everyday pendant india": [
+      "P425"
+    ],
     "affordable evil eye jewellery india": [
       "P438"
     ],
@@ -1260,6 +1549,12 @@
     ],
     "affordable gift bracelet india": [
       "P453"
+    ],
+    "affordable glass bangle single colour": [
+      "P289"
+    ],
+    "affordable glass bangle single colour set": [
+      "P290"
     ],
     "affordable gold necklace": [
       "P426"
@@ -1276,17 +1571,26 @@
     "affordable pendant necklace": [
       "P434"
     ],
+    "affordable pendant under 100": [
+      "P422"
+    ],
     "affordable protective bracelet india": [
       "P446"
     ],
     "affordable relationship gift bracelet": [
       "P454"
     ],
+    "affordable ring under 100": [
+      "P129"
+    ],
     "affordable rose gold ring": [
       "P175"
     ],
     "affordable solitaire look ring": [
       "P154"
+    ],
+    "affordable stacking rings india": [
+      "P367"
     ],
     "affordable star ring": [
       "P132",
@@ -1300,6 +1604,9 @@
     ],
     "affordable tennis bracelet marquise": [
       "P457"
+    ],
+    "affordable three piece set india": [
+      "P432"
     ],
     "all clear nath": [
       "P033"
@@ -1343,6 +1650,9 @@
     "american diamond ring": [
       "P104"
     ],
+    "american diamond ring for women": [
+      "P127"
+    ],
     "american diamond ring rose gold": [
       "P166"
     ],
@@ -1355,15 +1665,75 @@
     "anklet set of two": [
       "P044"
     ],
+    "anti tarnish bracelet adjustable india": [
+      "P555"
+    ],
+    "anti tarnish bracelet blush": [
+      "P544"
+    ],
+    "anti tarnish bracelet casual festive": [
+      "P245"
+    ],
+    "anti tarnish bracelet everyday": [
+      "P211"
+    ],
+    "anti tarnish bracelet everyday india": [
+      "P550"
+    ],
+    "anti tarnish bracelet gifting": [
+      "P543"
+    ],
+    "anti tarnish bracelet party wear": [
+      "P244"
+    ],
+    "anti tarnish bracelet women": [
+      "P210"
+    ],
+    "anti tarnish chain bracelet stacking": [
+      "P554"
+    ],
     "anti tarnish earring necklace combo": [
       "P569"
+    ],
+    "anti tarnish heart necklace india": [
+      "P629"
+    ],
+    "anti tarnish heart pendant rose gold": [
+      "P634"
+    ],
+    "anti tarnish name necklace india": [
+      "P628"
+    ],
+    "anti tarnish necklace daily wear": [
+      "P364"
+    ],
+    "anti tarnish pendant chain": [
+      "P383"
+    ],
+    "anti tarnish pendant everyday": [
+      "P298"
+    ],
+    "anti tarnish ring gift box": [
+      "P230"
+    ],
+    "anti tarnish steel bracelet women": [
+      "P394"
+    ],
+    "anti tarnish wave ring plain": [
+      "P229"
     ],
     "anti-tarnish anklet": [
       "P046",
       "P580"
     ],
+    "anti-tarnish bamboo kada": [
+      "P255"
+    ],
     "anti-tarnish bead bracelet": [
       "P553"
+    ],
+    "anti-tarnish blue kada": [
+      "P258"
     ],
     "anti-tarnish bracelet": [
       "P036"
@@ -1379,6 +1749,12 @@
     ],
     "anti-tarnish chain watch": [
       "P023"
+    ],
+    "anti-tarnish enamel kada": [
+      "P251"
+    ],
+    "anti-tarnish floral kada": [
+      "P253"
     ],
     "anti-tarnish flower bracelet": [
       "P539"
@@ -1411,12 +1787,22 @@
     "anti-tarnish kada for women": [
       "P241"
     ],
+    "anti-tarnish kada with accent": [
+      "P259",
+      "P260"
+    ],
+    "anti-tarnish minimalist kada": [
+      "P257"
+    ],
     "anti-tarnish necklace": [
       "P516",
       "P517",
       "P518",
       "P519",
       "P520"
+    ],
+    "anti-tarnish ombre kada": [
+      "P256"
     ],
     "anti-tarnish pendant necklace": [
       "P292"
@@ -1435,6 +1821,9 @@
     ],
     "anti-tarnish watch for women": [
       "P022"
+    ],
+    "anti-tarnish yellow kada": [
+      "P254"
     ],
     "antique gold bracelet watch": [
       "P608"
@@ -1456,6 +1845,9 @@
     ],
     "ball chain bracelet set gold": [
       "P466"
+    ],
+    "bamboo style kada bracelet": [
+      "P254"
     ],
     "bangle set of four": [
       "P041"
@@ -1529,6 +1921,9 @@
     "birthday gift hamper five pieces": [
       "P598"
     ],
+    "birthday gift hamper for her": [
+      "P532"
+    ],
     "birthday hamper for couples": [
       "P536"
     ],
@@ -1553,17 +1948,32 @@
     "blue and green bracelet": [
       "P040"
     ],
+    "blue bangle set of 12": [
+      "P341"
+    ],
     "blue cubic zirconia studs": [
       "P026"
     ],
     "blue enamel kada": [
       "P511"
     ],
+    "blue gold-finish bangle": [
+      "P264"
+    ],
     "blue gradient bangle": [
       "P247"
     ],
+    "blue heart necklace gifting": [
+      "P629"
+    ],
+    "blue kada bracelet gold": [
+      "P251"
+    ],
     "bold chain watch women": [
       "P617"
+    ],
+    "bold glass bangles gifting": [
+      "P349"
     ],
     "bold statement ring adjustable": [
       "P188"
@@ -1576,6 +1986,18 @@
     ],
     "botanical charm necklace": [
       "P639"
+    ],
+    "botanical colour kada india": [
+      "P256"
+    ],
+    "botanical enamel kada bracelet": [
+      "P265"
+    ],
+    "botanical motif bracelet india": [
+      "P543"
+    ],
+    "botanical motif ring gold": [
+      "P189"
     ],
     "bow detail watch": [
       "P616"
@@ -1615,6 +2037,9 @@
     ],
     "braided ring gold cz": [
       "P194"
+    ],
+    "brass alphabet ring adjustable": [
+      "P408"
     ],
     "brass bracelet for women": [
       "P103"
@@ -1656,11 +2081,17 @@
     "bridal watch for women": [
       "P385"
     ],
+    "bright green bangle set": [
+      "P346"
+    ],
     "bright pink glass bangles": [
       "P216"
     ],
     "budget birthday hamper": [
       "P545"
+    ],
+    "budget pendant india": [
+      "P424"
     ],
     "bulk jewellery surprise gift": [
       "P625"
@@ -1711,11 +2142,20 @@
     "cheap ring under 200": [
       "P020"
     ],
+    "cherry blossom jewellery women": [
+      "P404"
+    ],
     "cherry charm for bracelet": [
       "P375"
     ],
     "chevron band ring": [
       "P204"
+    ],
+    "chevron kada bracelet maroon": [
+      "P273"
+    ],
+    "chevron pattern kada bracelet": [
+      "P263"
     ],
     "chunky c-hoop earrings": [
       "P576"
@@ -1738,13 +2178,25 @@
     "classic evil eye bracelet silver": [
       "P445"
     ],
+    "clear glass bangle set of 12": [
+      "P345"
+    ],
+    "clear glass kangan gold accent": [
+      "P286"
+    ],
     "clear stone bracelet": [
       "P548"
+    ],
+    "clear stone bracelet gifting india": [
+      "P544"
     ],
     "clear stone ring": [
       "P004",
       "P240",
       "P357"
+    ],
+    "clear-stone vine bracelet gold": [
+      "P544"
     ],
     "cluster earrings for festive wear": [
       "P327"
@@ -1757,6 +2209,12 @@
     ],
     "cocktail ring under 100": [
       "P109"
+    ],
+    "coin pendant necklace gold": [
+      "P298"
+    ],
+    "coin tag bracelet women": [
+      "P554"
     ],
     "coloured bead watch for women": [
       "P558"
@@ -1776,8 +2234,17 @@
     "colourful stone nose ring": [
       "P487"
     ],
+    "colourful stud earrings gift": [
+      "P324"
+    ],
     "connection symbol ring gold": [
       "P203"
+    ],
+    "contemporary ring set india": [
+      "P368"
+    ],
+    "coordinated jewelry set india": [
+      "P365"
     ],
     "copper leaf jewellery": [
       "P522"
@@ -1806,6 +2273,9 @@
     "crystal centre evil eye charm": [
       "P445"
     ],
+    "crystal centre stud earrings": [
+      "P324"
+    ],
     "crystal charm bracelet affordable": [
       "P461",
       "P462"
@@ -1815,6 +2285,9 @@
     ],
     "crystal evil eye bracelet women": [
       "P441"
+    ],
+    "crystal initial necklace gifting": [
+      "P628"
     ],
     "crystal look bracelet affordable": [
       "P448"
@@ -1837,6 +2310,9 @@
     "cubic zirconia bracelet": [
       "P037",
       "P040"
+    ],
+    "cubic zirconia bracelet floral": [
+      "P555"
     ],
     "cubic zirconia bracelet watch": [
       "P387",
@@ -1894,6 +2370,9 @@
     "cubic zirconia ring for daily wear": [
       "P175"
     ],
+    "cubic zirconia ring gift box": [
+      "P129"
+    ],
     "cubic zirconia solitaire ring": [
       "P017"
     ],
@@ -1939,6 +2418,9 @@
     "cz bow ring adjustable": [
       "P209"
     ],
+    "cz bracelet daily wear": [
+      "P394"
+    ],
     "cz detailed rosegold ring": [
       "P131"
     ],
@@ -1978,6 +2460,9 @@
     "cz ring playful design": [
       "P161"
     ],
+    "cz ring under 100 rupees": [
+      "P127"
+    ],
     "cz set rosegold ring": [
       "P137"
     ],
@@ -2000,6 +2485,9 @@
     "cz vine leaf necklace": [
       "P569"
     ],
+    "daily wear kada bracelet": [
+      "P244"
+    ],
     "daily wear payal": [
       "P044"
     ],
@@ -2014,6 +2502,12 @@
     ],
     "dangling bead bracelet watch": [
       "P603"
+    ],
+    "dangling charm bracelet gold": [
+      "P550"
+    ],
+    "dark blue ethnic bangles": [
+      "P344"
     ],
     "dark multicolour bangles": [
       "P213"
@@ -2033,8 +2527,14 @@
     "deep purple bangles for women": [
       "P502"
     ],
+    "detailed floral kada india": [
+      "P269"
+    ],
     "detailed hoop earrings under 200": [
       "P498"
+    ],
+    "detailed kada design india": [
+      "P253"
     ],
     "diwali bracelet": [
       "P521"
@@ -2063,8 +2563,14 @@
     "dual motif bracelet women": [
       "P439"
     ],
+    "earthy green ethnic bangles": [
+      "P347"
+    ],
     "earthy tone kada": [
       "P249"
+    ],
+    "easy clasp bracelet women": [
+      "P242"
     ],
     "eid celebration gift box": [
       "P538"
@@ -2083,6 +2589,9 @@
     ],
     "elephant pendant bracelet watch": [
       "P390"
+    ],
+    "eleven ring stacking set": [
+      "P368"
     ],
     "elongated stone bracelet": [
       "P457"
@@ -2124,8 +2633,21 @@
     "eternity style cz ring": [
       "P184"
     ],
+    "ethnic bangle set gifting": [
+      "P340"
+    ],
     "ethnic bracelet watch for women": [
       "P601"
+    ],
+    "ethnic glass bangles gifting": [
+      "P341",
+      "P343"
+    ],
+    "ethnic glass bangles india": [
+      "P280"
+    ],
+    "ethnic glass bangles sized": [
+      "P312"
     ],
     "evening bracelet for women": [
       "P040"
@@ -2162,11 +2684,20 @@
     "everyday bracelet under 50 rupees": [
       "P450"
     ],
+    "everyday chain necklace india": [
+      "P433"
+    ],
     "everyday charm bracelet affordable": [
       "P455"
     ],
     "everyday earrings": [
       "P026"
+    ],
+    "everyday enamel kada india": [
+      "P272"
+    ],
+    "everyday ethnic bangles india": [
+      "P283"
     ],
     "everyday festive nath": [
       "P480"
@@ -2191,6 +2722,9 @@
     ],
     "everyday gold necklace": [
       "P430"
+    ],
+    "everyday gold pendant women": [
+      "P422"
     ],
     "everyday hoop earrings for women": [
       "P494"
@@ -2217,6 +2751,9 @@
     ],
     "everyday ring for women india": [
       "P187"
+    ],
+    "everyday rose gold bracelet": [
+      "P210"
     ],
     "everyday rose gold ring": [
       "P176"
@@ -2289,6 +2826,9 @@
     "faux pearl necklace": [
       "P430"
     ],
+    "february purple birthstone pendant": [
+      "P398"
+    ],
     "festive and everyday kada": [
       "P510"
     ],
@@ -2296,8 +2836,17 @@
       "P042",
       "P418"
     ],
+    "festive bangle set india": [
+      "P214"
+    ],
+    "festive bangle stack red": [
+      "P313"
+    ],
     "festive bangles": [
       "P041"
+    ],
+    "festive bangles emerald green india": [
+      "P339"
     ],
     "festive bangles for women": [
       "P421"
@@ -2319,14 +2868,35 @@
     "festive cz ring adjustable": [
       "P202"
     ],
+    "festive glass bangle set": [
+      "P281"
+    ],
+    "festive glass bangle set india": [
+      "P352"
+    ],
+    "festive glass bangle stack": [
+      "P217"
+    ],
     "festive glass bangles": [
       "P212"
+    ],
+    "festive glass bangles india": [
+      "P342"
+    ],
+    "festive gold-finish bangle": [
+      "P273"
     ],
     "festive jewellery hamper": [
       "P534"
     ],
     "festive kada bracelet": [
       "P509"
+    ],
+    "festive kada bracelet india": [
+      "P242"
+    ],
+    "festive kada bracelet women": [
+      "P245"
     ],
     "festive multicolour nath": [
       "P487"
@@ -2373,11 +2943,20 @@
     "festive yellow bracelet watch": [
       "P390"
     ],
+    "fine chain necklace bracelet duo": [
+      "P317"
+    ],
+    "fine chain necklace layering": [
+      "P433"
+    ],
     "fine gold-plated ring": [
       "P018"
     ],
     "first nath": [
       "P034"
+    ],
+    "five colour bangle set india": [
+      "P284"
     ],
     "five petal flower necklace": [
       "P517"
@@ -2391,6 +2970,9 @@
     "floral cz ring gold": [
       "P190",
       "P208"
+    ],
+    "floral cz ring silver": [
+      "P198"
     ],
     "flower earrings for daily wear": [
       "P322"
@@ -2415,6 +2997,9 @@
       "P004",
       "P011"
     ],
+    "french bow hair accessory": [
+      "P590"
+    ],
     "friendship day earrings hamper": [
       "P595"
     ],
@@ -2438,6 +3023,9 @@
     ],
     "geometric cz ring gold": [
       "P196"
+    ],
+    "geometric enamel kada bracelet": [
+      "P264"
     ],
     "geometric gold necklace": [
       "P295"
@@ -2487,6 +3075,15 @@
     "gift ring for her": [
       "P107"
     ],
+    "gifting bangle set clear": [
+      "P345"
+    ],
+    "gifting bangle set india": [
+      "P344"
+    ],
+    "gifting bangle set of 12": [
+      "P346"
+    ],
     "gifting bracelet watch": [
       "P389"
     ],
@@ -2517,6 +3114,15 @@
     "girl figure charm": [
       "P377"
     ],
+    "glass bangle golden sheen": [
+      "P287"
+    ],
+    "glass bangle set affordable": [
+      "P288"
+    ],
+    "glass bangle set for gifting": [
+      "P312"
+    ],
     "glass bangle set for women": [
       "P215",
       "P216"
@@ -2528,8 +3134,20 @@
       "P420",
       "P421"
     ],
+    "glass bangles festive wear india": [
+      "P286"
+    ],
     "glass bangles for festivals": [
       "P279"
+    ],
+    "glass bangles set of 12": [
+      "P214"
+    ],
+    "glass bangles sized wedding": [
+      "P314"
+    ],
+    "glass bangles three sizes india": [
+      "P285"
     ],
     "glass bead payal": [
       "P045"
@@ -2540,11 +3158,41 @@
     "glass front locket": [
       "P006"
     ],
+    "glass kangan five colours gift": [
+      "P290"
+    ],
+    "glass kangan pair": [
+      "P281"
+    ],
+    "glass kangan six colours": [
+      "P280"
+    ],
+    "glass kangan six colours plain": [
+      "P283"
+    ],
     "glitter glass bangles for women": [
       "P218"
     ],
+    "glossy glass bangles stacking": [
+      "P339"
+    ],
     "glossy steel bracelet fine chain": [
       "P399"
+    ],
+    "gold bangle set of 12": [
+      "P342"
+    ],
+    "gold bead bangle set of 12": [
+      "P347"
+    ],
+    "gold bead bangles gifting": [
+      "P350"
+    ],
+    "gold bead ethnic bangles": [
+      "P348"
+    ],
+    "gold bead trim bangles gift": [
+      "P351"
     ],
     "gold botanical bangle": [
       "P511"
@@ -2557,6 +3205,9 @@
     ],
     "gold earrings for women": [
       "P030"
+    ],
+    "gold edge stud earrings women": [
+      "P323"
     ],
     "gold ghungroo charm bangles": [
       "P499",
@@ -2577,6 +3228,9 @@
     ],
     "gold letter ring gift": [
       "P536"
+    ],
+    "gold necklace under 100 rupees": [
+      "P433"
     ],
     "gold ring with clear stones": [
       "P356"
@@ -2707,6 +3361,9 @@
     "gold-plated vine bracelet": [
       "P526"
     ],
+    "gold-plated water-resistant kada": [
+      "P261"
+    ],
     "gold-plated word charm": [
       "P102"
     ],
@@ -2800,14 +3457,26 @@
     "gold-toned y-style necklace": [
       "P431"
     ],
+    "golden glass kangan": [
+      "P285"
+    ],
     "good luck gift charm": [
       "P381"
     ],
     "gradient enamel pendant": [
       "P517"
     ],
+    "graphic enamel kada india": [
+      "P258"
+    ],
     "greek key bracelet": [
       "P241"
+    ],
+    "green bangle set of 12": [
+      "P343"
+    ],
+    "green bangles for lehenga": [
+      "P217"
     ],
     "green bangles for women": [
       "P043"
@@ -2821,14 +3490,29 @@
     "green dial watch anti tarnish": [
       "P611"
     ],
+    "green enamel kada bracelet": [
+      "P256"
+    ],
     "green glass bangle set": [
       "P420"
+    ],
+    "green glass bangle set sized": [
+      "P339"
+    ],
+    "green glass bangles set of 12": [
+      "P217"
+    ],
+    "green gold-finish bangle": [
+      "P272"
     ],
     "green leaf charm": [
       "P381"
     ],
     "green meenakari kundan watch": [
       "P559"
+    ],
+    "green stone bracelet gold vine": [
+      "P543"
     ],
     "green stone charm": [
       "P372"
@@ -2876,17 +3560,29 @@
       "P584",
       "P585"
     ],
+    "haldi bangles set yellow": [
+      "P352"
+    ],
     "halo earrings for women": [
       "P321"
     ],
     "halo ring for women": [
       "P119"
     ],
+    "hand painted glass kangan": [
+      "P284"
+    ],
+    "handcrafted glass bangles india": [
+      "P313"
+    ],
     "heart charm bracelet affordable": [
       "P450"
     ],
     "heart charm hoop earrings": [
       "P574"
+    ],
+    "heart charm necklace gifting": [
+      "P364"
     ],
     "heart infinity charm bracelet gift": [
       "P459"
@@ -2903,14 +3599,23 @@
     "heart necklace gold-toned": [
       "P434"
     ],
+    "heart pendant beaded chain": [
+      "P629"
+    ],
     "heart pendant birthday gift": [
       "P537"
+    ],
+    "heart pendant gift set": [
+      "P317"
     ],
     "heart pendant necklace for women": [
       "P435"
     ],
     "heart pendant necklace women": [
       "P630"
+    ],
+    "heart pendant satellite chain": [
+      "P634"
     ],
     "heart ring gift": [
       "P118"
@@ -2945,11 +3650,17 @@
     "holiday keepsake charm": [
       "P374"
     ],
+    "infinity charm bracelet gift": [
+      "P384"
+    ],
     "infinity loop bracelet gift": [
       "P399"
     ],
     "infinity ring gift": [
       "P182"
+    ],
+    "initial ring for her": [
+      "P408"
     ],
     "initial ring for women": [
       "P005"
@@ -2966,14 +3677,23 @@
     "interlocking chain bracelet watch": [
       "P612"
     ],
+    "intricate floral kada bracelet": [
+      "P269"
+    ],
     "ivory and gold hair clip": [
       "P048"
     ],
     "jelly glass bangles": [
       "P101"
     ],
+    "jewel tone bangle set india": [
+      "P343"
+    ],
     "jhumka gift set": [
       "P533"
+    ],
+    "kada bracelet daily wear": [
+      "P243"
     ],
     "kashmiri bracelet watch": [
       "P386",
@@ -3039,6 +3759,9 @@
     "large korean jewellery mystery box": [
       "P627"
     ],
+    "large stackable ring set gift": [
+      "P368"
+    ],
     "lavender bangles for festive wear": [
       "P500"
     ],
@@ -3071,14 +3794,26 @@
       "P427",
       "P430"
     ],
+    "layering necklace under 100": [
+      "P423"
+    ],
+    "layering pendant gold tone": [
+      "P422"
+    ],
     "layering ring": [
       "P016"
     ],
     "leaf accent ring gold": [
       "P201"
     ],
+    "leaf design cz ring": [
+      "P189"
+    ],
     "leaf motif bracelet set gold": [
       "P467"
+    ],
+    "leaf print kada india": [
+      "P265"
     ],
     "leaf shaped dial watch": [
       "P617"
@@ -3092,11 +3827,27 @@
     "leaf vine cz ring": [
       "P191"
     ],
+    "letter a pendant necklace": [
+      "P628"
+    ],
     "lifeline charm bracelet meaningful": [
       "P462"
     ],
+    "lightweight anti-tarnish bangle": [
+      "P271"
+    ],
+    "lightweight bangle set india": [
+      "P347",
+      "P349"
+    ],
     "lightweight cz ring": [
       "P152"
+    ],
+    "lightweight flower stud daily wear": [
+      "P323"
+    ],
+    "lightweight glass bangles india": [
+      "P348"
     ],
     "lightweight rosegold ring": [
       "P145"
@@ -3131,6 +3882,9 @@
     "lobster clasp bracelet gold": [
       "P301"
     ],
+    "lobster clasp bracelet women": [
+      "P550"
+    ],
     "locket gift for her": [
       "P002"
     ],
@@ -3139,6 +3893,9 @@
     ],
     "long tail bow clip": [
       "P048"
+    ],
+    "long tail bow clip women": [
+      "P587"
     ],
     "love charm pendant": [
       "P102"
@@ -3167,6 +3924,9 @@
     "maroon bangles for weddings": [
       "P503"
     ],
+    "maroon gold glass bangle": [
+      "P290"
+    ],
     "maroon stone ring for women": [
       "P330"
     ],
@@ -3183,8 +3943,17 @@
       "P035",
       "P485"
     ],
+    "matching jewellery set anti tarnish": [
+      "P365"
+    ],
+    "matching jewellery set for women": [
+      "P432"
+    ],
     "matching jewellery set gifting": [
       "P569"
+    ],
+    "matching jewellery set gold": [
+      "P317"
     ],
     "matching necklace earring set": [
       "P319"
@@ -3222,17 +3991,29 @@
     "mini ring set for kids": [
       "P338"
     ],
+    "minimal gold bracelet women": [
+      "P384"
+    ],
     "minimal gold colour rings": [
       "P363"
     ],
+    "minimal gold ring adjustable": [
+      "P229"
+    ],
     "minimal heart bracelet": [
       "P449"
+    ],
+    "minimal heart necklace india": [
+      "P364"
     ],
     "minimal hoop earrings for women": [
       "P575"
     ],
     "minimal nath with drop": [
       "P482"
+    ],
+    "minimal pendant necklace gold": [
+      "P425"
     ],
     "minimal stacking ring for women": [
       "P356"
@@ -3257,6 +4038,9 @@
     ],
     "mint bangles for women": [
       "P420"
+    ],
+    "mint green stud earrings gold": [
+      "P324"
     ],
     "mixed cut cz ring": [
       "P165"
@@ -3294,8 +4078,14 @@
     "multicolor glass bangle set": [
       "P218"
     ],
+    "multicolour bangles festive india": [
+      "P288"
+    ],
     "multicolour cubic zirconia ring": [
       "P021"
+    ],
+    "multicolour gold kada india": [
+      "P271"
     ],
     "multicolour stone bracelet": [
       "P397"
@@ -3325,6 +4115,9 @@
     "nautical evil eye bracelet": [
       "P439"
     ],
+    "navy bangle set of 12": [
+      "P344"
+    ],
     "navy earrings for women": [
       "P026"
     ],
@@ -3334,6 +4127,9 @@
     "necklace and earring set": [
       "P507",
       "P522"
+    ],
+    "neutral ethnic bangle set": [
+      "P345"
     ],
     "neutral flower necklace": [
       "P518"
@@ -3365,11 +4161,17 @@
     "nose ring with stones": [
       "P032"
     ],
+    "october pink birthstone pendant": [
+      "P398"
+    ],
     "office to evening hoop earrings": [
       "P495"
     ],
     "office wear ring": [
       "P016"
+    ],
+    "olive green kangan gift": [
+      "P287"
     ],
     "one-size stone ring": [
       "P178"
@@ -3395,11 +4197,20 @@
     "open silhouette ring adjustable": [
       "P196"
     ],
+    "openable bracelet rust resistant": [
+      "P243"
+    ],
+    "openable clasp bracelet rust proof": [
+      "P244"
+    ],
     "openable clasp kada": [
       "P246"
     ],
     "openable kada bangle": [
       "P241"
+    ],
+    "openable kada bracelet rust resistant": [
+      "P245"
     ],
     "openable locket pendant": [
       "P002"
@@ -3412,6 +4223,12 @@
     ],
     "openwork earrings": [
       "P025"
+    ],
+    "orange bangle set of 12": [
+      "P348"
+    ],
+    "orange enamel bracelet gold": [
+      "P253"
     ],
     "orange enamel jewellery": [
       "P036"
@@ -3455,8 +4272,17 @@
     "party wear bangles": [
       "P282"
     ],
+    "party wear kada bracelet india": [
+      "P243"
+    ],
     "pastel earrings": [
       "P024"
+    ],
+    "pastel enamel bangle gold": [
+      "P263"
+    ],
+    "pastel glass kangan gift": [
+      "P289"
     ],
     "pastel green earrings": [
       "P027"
@@ -3495,11 +4321,17 @@
     "pave dome ring gold": [
       "P207"
     ],
+    "pave halo pendant necklace": [
+      "P634"
+    ],
     "pave style cz ring": [
       "P172"
     ],
     "peach bangles for women": [
       "P419"
+    ],
+    "peach gold-finish bangle": [
+      "P266"
     ],
     "pear cut cz ring": [
       "P120"
@@ -3516,6 +4348,9 @@
     "pearl bracelet rakhi hamper": [
       "P600"
     ],
+    "pearl look bracelet gift set": [
+      "P532"
+    ],
     "pearl look bracelet set gold": [
       "P465"
     ],
@@ -3524,6 +4359,9 @@
     ],
     "pearl look bracelet watch": [
       "P617"
+    ],
+    "pearl look pendant necklace": [
+      "P383"
     ],
     "pearl look ring gold": [
       "P205"
@@ -3541,6 +4379,9 @@
     "pearl-look flower necklace": [
       "P299"
     ],
+    "pearl-look kada india": [
+      "P259"
+    ],
     "pearl-look pendant necklace": [
       "P434"
     ],
@@ -3556,14 +4397,23 @@
     "personalised ring for women": [
       "P001"
     ],
+    "personalized letter ring gift": [
+      "P408"
+    ],
     "pineapple banana charm bracelet": [
       "P301"
+    ],
+    "pink bangle set of 12": [
+      "P349"
     ],
     "pink bangles for festive wear": [
       "P499"
     ],
     "pink bangles for women": [
       "P417"
+    ],
+    "pink crystal flower earrings": [
+      "P323"
     ],
     "pink cubic zirconia earrings": [
       "P025"
@@ -3574,11 +4424,20 @@
     "pink cubic zirconia ring": [
       "P013"
     ],
+    "pink enamel kada bracelet": [
+      "P255"
+    ],
+    "pink gold-finish bangle": [
+      "P265"
+    ],
     "pink gradient bangle": [
       "P248"
     ],
     "pink green cubic zirconia necklace": [
       "P639"
+    ],
+    "pink petal pendant necklace": [
+      "P404"
     ],
     "pink stone bracelet for women": [
       "P395",
@@ -3587,11 +4446,32 @@
     "pink stone necklace for wedding": [
       "P319"
     ],
+    "pink white gold bangle": [
+      "P270"
+    ],
     "plain band ring": [
       "P011"
     ],
+    "plain bracelet for daily wear": [
+      "P211"
+    ],
+    "plain glass bangle set": [
+      "P283"
+    ],
+    "plain gold kada bracelet": [
+      "P257"
+    ],
+    "plain gold pendant layering": [
+      "P425"
+    ],
+    "plain gold tone necklace women": [
+      "P423"
+    ],
     "plain heart charm bracelet": [
       "P455"
+    ],
+    "plain pendant necklace gold": [
+      "P424"
     ],
     "playful cz ring adjustable": [
       "P197"
@@ -3635,6 +4515,9 @@
     "purple cubic zirconia necklace": [
       "P568"
     ],
+    "purple glass bangle set festive": [
+      "P351"
+    ],
     "purple stone pendant women": [
       "P636"
     ],
@@ -3649,6 +4532,9 @@
     ],
     "quartz watch jewellery": [
       "P022"
+    ],
+    "quiet everyday jewellery piece": [
+      "P424"
     ],
     "rainbow glass bangles": [
       "P218"
@@ -3682,6 +4568,15 @@
     ],
     "red and green stone bracelet watch": [
       "P603"
+    ],
+    "red bangle set festive wear": [
+      "P314"
+    ],
+    "red bangle set sized": [
+      "P313"
+    ],
+    "red bangles for saree": [
+      "P214"
     ],
     "red cabochon ring for evenings": [
       "P331"
@@ -3719,6 +4614,9 @@
     ],
     "ribbed bracelet watch": [
       "P620"
+    ],
+    "rich colour enamel kada india": [
+      "P273"
     ],
     "ring set for women": [
       "P363"
@@ -3801,11 +4699,17 @@
     "round cut cubic zirconia ring": [
       "P155"
     ],
+    "round cut cz ring india": [
+      "P198"
+    ],
     "round evil eye bracelet daily wear": [
       "P446"
     ],
     "round evil eye charm bracelet": [
       "P445"
+    ],
+    "rust resistant kada bracelet": [
+      "P242"
     ],
     "rust-resistant kada bracelet": [
       "P246"
@@ -3818,6 +4722,15 @@
     ],
     "sangeet jewellery watch": [
       "P385"
+    ],
+    "satin bow clip colours": [
+      "P587"
+    ],
+    "satin bow clip magenta black white": [
+      "P590"
+    ],
+    "satin hair bow alligator clip": [
+      "P587"
     ],
     "satin hair tie gift set": [
       "P592",
@@ -3865,6 +4778,12 @@
     ],
     "scrunchies pack of four": [
       "P049"
+    ],
+    "seafoam green kada bracelet": [
+      "P261"
+    ],
+    "set of 12 glass bangles": [
+      "P340"
     ],
     "set of sixteen bangles": [
       "P042",
@@ -3944,6 +4863,12 @@
     "silver-tone ring for gifting": [
       "P151"
     ],
+    "simple accent kada india": [
+      "P260"
+    ],
+    "simple daily necklace gold": [
+      "P423"
+    ],
     "simple evil eye bracelet silver": [
       "P444"
     ],
@@ -3974,11 +4899,17 @@
     "six petal earrings": [
       "P028"
     ],
+    "sized cz ring india": [
+      "P230"
+    ],
     "skin-friendly necklace": [
       "P358"
     ],
     "skincare gift hamper": [
       "P533"
+    ],
+    "sleek kada for daily wear": [
+      "P257"
     ],
     "slider chain bracelet watch": [
       "P559"
@@ -4016,6 +4947,9 @@
     "small pendant necklace gift": [
       "P630"
     ],
+    "small pendant necklace india": [
+      "P383"
+    ],
     "small pink earrings": [
       "P029"
     ],
@@ -4028,6 +4962,12 @@
     "snake chain bracelet": [
       "P472"
     ],
+    "snake chain bracelet gold layered": [
+      "P554"
+    ],
+    "soft green bangle india": [
+      "P289"
+    ],
     "soft pink bracelet": [
       "P396"
     ],
@@ -4036,6 +4976,9 @@
     ],
     "solid bangle bracelet": [
       "P036"
+    ],
+    "solid colour kada bracelet": [
+      "P272"
     ],
     "solitaire crystal bracelet rose gold": [
       "P456"
@@ -4058,8 +5001,14 @@
     "spiral charm anklet": [
       "P045"
     ],
+    "spiral design bangle set": [
+      "P280"
+    ],
     "spiral glass bangles": [
       "P279"
+    ],
+    "spring floral pendant gold": [
+      "P404"
     ],
     "square centre studs": [
       "P026"
@@ -4079,8 +5028,20 @@
     "stackable ring for women": [
       "P013"
     ],
+    "stacked bangle set india": [
+      "P341"
+    ],
+    "stacked glass bangles india": [
+      "P340"
+    ],
     "stacking band for women": [
       "P115"
+    ],
+    "stacking bangle set red gold": [
+      "P314"
+    ],
+    "stacking bangles pink india": [
+      "P312"
     ],
     "stacking ring adjustable gift": [
       "P184"
@@ -4090,6 +5051,9 @@
     ],
     "stacking ring set adjustable": [
       "P163"
+    ],
+    "stacking ring set gold": [
+      "P367"
     ],
     "stacking rings for women": [
       "P338"
@@ -4113,6 +5077,9 @@
     ],
     "stainless steel ring for women": [
       "P009"
+    ],
+    "stainless steel solitaire ring": [
+      "P230"
     ],
     "stainless steel textured hoops": [
       "P497"
@@ -4150,6 +5117,7 @@
       "P126"
     ],
     "star ring gift for her": [
+      "P127",
       "P137"
     ],
     "star setting cz ring": [
@@ -4157,6 +5125,9 @@
     ],
     "star shaped ring for gifting": [
       "P124"
+    ],
+    "star shaped ring rosegold": [
+      "P129"
     ],
     "statement bracelet watch": [
       "P391"
@@ -4171,8 +5142,32 @@
     "stone cluster necklace": [
       "P519"
     ],
+    "stone embellished bangle india": [
+      "P287"
+    ],
+    "stone free ring for stacking": [
+      "P229"
+    ],
+    "stone set bangles india": [
+      "P281"
+    ],
+    "stone-dotted bangle set": [
+      "P342"
+    ],
+    "stone-dotted glass bangles": [
+      "P346"
+    ],
     "stone-set chain bracelet watch": [
       "P609"
+    ],
+    "striped enamel kada bracelet": [
+      "P259"
+    ],
+    "striped glass bangles gift": [
+      "P284"
+    ],
+    "structured satin bow clip": [
+      "P590"
     ],
     "structured watch face": [
       "P621"
@@ -4201,6 +5196,12 @@
     "synthetic zircon bracelet": [
       "P395"
     ],
+    "synthetic zirconia bracelet": [
+      "P394"
+    ],
+    "synthetic zirconia pendant necklace": [
+      "P398"
+    ],
     "teardrop charm nose pin": [
       "P480"
     ],
@@ -4216,11 +5217,23 @@
     "teej bangles": [
       "P043"
     ],
+    "tennis bracelet drop earrings set": [
+      "P432"
+    ],
     "tennis bracelet single stone": [
       "P456"
     ],
     "tennis bracelet under 50 rupees": [
       "P448"
+    ],
+    "textured bamboo bangle": [
+      "P261"
+    ],
+    "textured bamboo enamel kada": [
+      "P270"
+    ],
+    "textured bamboo kada bracelet": [
+      "P266"
     ],
     "textured band ring": [
       "P013"
@@ -4230,6 +5243,15 @@
     ],
     "textured chain necklace": [
       "P428"
+    ],
+    "textured enamel kada bracelet": [
+      "P271"
+    ],
+    "textured enamel kada india": [
+      "P254"
+    ],
+    "textured glass bangles gifting": [
+      "P352"
     ],
     "textured gold bracelet watch": [
       "P610"
@@ -4244,6 +5266,9 @@
     ],
     "textured hoop earrings under 200": [
       "P496"
+    ],
+    "textured kada for women": [
+      "P255"
     ],
     "textured medallion pendant": [
       "P635"
@@ -4263,11 +5288,23 @@
     "three piece jewellery set": [
       "P508"
     ],
+    "three piece jewellery set gifting": [
+      "P365"
+    ],
+    "three ring set gift hamper": [
+      "P367"
+    ],
     "toast charm for bracelet": [
       "P373"
     ],
+    "toggle bracelet brass rose gold": [
+      "P211"
+    ],
     "toggle clasp bracelet": [
       "P523"
+    ],
+    "toggle clasp bracelet plain": [
+      "P210"
     ],
     "traditional glass bangles": [
       "P101"
@@ -4284,6 +5321,12 @@
       "P419",
       "P420",
       "P421"
+    ],
+    "transparent bangle stone detail": [
+      "P286"
+    ],
+    "transparent bangle wedding": [
+      "P285"
     ],
     "treble clef jewellery india": [
       "P461"
@@ -4309,6 +5352,9 @@
     "tulip charm bracelet": [
       "P523"
     ],
+    "tulip charm bracelet gold": [
+      "P555"
+    ],
     "tulip charm hair accessory": [
       "P591"
     ],
@@ -4318,8 +5364,14 @@
     "tulip pendant necklace women": [
       "P639"
     ],
+    "twelve bangle set women india": [
+      "P351"
+    ],
     "twelve charm locket": [
       "P003"
+    ],
+    "twelve piece bangle set india": [
+      "P350"
     ],
     "twin stone cz ring": [
       "P170"
@@ -4358,8 +5410,14 @@
     "two ring set for women": [
       "P163"
     ],
+    "two tone glass kangan": [
+      "P288"
+    ],
     "two vintage watches gift jar": [
       "P627"
+    ],
+    "two-tone enamel bangle gold": [
+      "P269"
     ],
     "two-tone glass kangan": [
       "P282"
@@ -4391,6 +5449,19 @@
     "vintage-style silver ring": [
       "P330"
     ],
+    "water-resistant everyday kada": [
+      "P266"
+    ],
+    "water-resistant kada bracelet india": [
+      "P270"
+    ],
+    "water-resistant kada design": [
+      "P264"
+    ],
+    "water-resistant kada india": [
+      "P251",
+      "P263"
+    ],
     "waterproof hoop earrings": [
       "P570",
       "P571",
@@ -4401,6 +5472,9 @@
     ],
     "wave design glass bangles": [
       "P212"
+    ],
+    "wave pattern kada bracelet": [
+      "P258"
     ],
     "wave ring adjustable": [
       "P158"
@@ -4422,6 +5496,9 @@
     ],
     "white dial bracelet watch": [
       "P615"
+    ],
+    "white glass bangle set wedding": [
+      "P350"
     ],
     "white zirconia nath": [
       "P478"
@@ -4449,6 +5526,9 @@
     ],
     "wrist scrunchie accessory": [
       "P588"
+    ],
+    "yellow enamel kada bracelet": [
+      "P260"
     ],
     "yellow stone necklace": [
       "P524"

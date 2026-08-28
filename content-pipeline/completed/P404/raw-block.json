@@ -1,0 +1,79 @@
+{
+  "productId": "P404",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "856",
+    "workingId": "odoo-856",
+    "originalSku": "MJ-464",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-464-pink-petal-cherry-blossom-spring-pendant-necklace-for-women-856",
+    "referenceTitle": "Pink Petal Cherry Blossom Spring Pendant Necklace for Women",
+    "rawContent": "Fashion Pink Petal Cherry Blossom Spring Pendant Necklace for Women",
+    "rawHtml": "<div data-oe-version=\"2.0\">Fashion Pink Petal Cherry Blossom Spring Pendant Necklace for Women</div>",
+    "originalCategories": [
+      "Best selling",
+      "Anti Tarnish Necklaces"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "title contains 'pendant' -> categorised as pendants"
+    ],
+    "knownStub": false
+  },
+  "category": "pendants",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P404.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/main.webp",
+        "role": "main"
+      },
+      {
+        "path": "/products/P404-2.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/extra-1.webp",
+        "role": "extra-1"
+      },
+      {
+        "path": "/products/P404-3.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/extra-2.webp",
+        "role": "extra-2"
+      },
+      {
+        "path": "/products/P404-4.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/extra-3.webp",
+        "role": "extra-3"
+      },
+      {
+        "path": "/products/P404-5.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/extra-4.webp",
+        "role": "extra-4"
+      },
+      {
+        "path": "/products/P404-6.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P404/raw/extra-5.webp",
+        "role": "extra-5"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}
