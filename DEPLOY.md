@@ -400,11 +400,55 @@ not the admin hostname either, so the rewrite never applies there.
 
 ---
 
-## 6. If the build runs out of memory
+## 6. What the build weighs, and what to do when it runs out of memory
 
-`next build` peaks around **1.5–2 GB** for this app — 70 prerendered pages, 49 products, and
-the image pipeline. On a small VPS the build gets OOM-killed by the kernel, and the symptom is
-unhelpful: the deploy fails with **`exit code 137`** or a bare "killed", not a Next.js error.
+Every number in this section was measured on a clean `rm -rf .next && npm run build` at 449
+products, not estimated. Re-measure rather than interpolate once the catalogue moves far from
+that, and update the table — the previous edition of this section described a 49-product
+catalogue and was wrong by an order of magnitude for years.
+
+### Measured at 449 products, 475 prerendered pages
+
+| What | Size | Ships in the image? |
+| --- | --- | --- |
+| `.next/standalone` | **216 MB** | Yes — this is the runtime |
+| `.next/static` | 1.6 MB | Yes |
+| `public/` | 30 MB (29 MB of it product photography, 501 files) | Yes |
+| `.next/server` | 134 MB | No — `standalone` already carries its own copy |
+| `.next/cache` | 115 MB | No — build cache, never copied |
+| `.next` total excluding cache | 353 MB | — (counts `server` twice) |
+
+Inside `.next/standalone` the 216 MB is 81 MB of traced `node_modules`, 1.4 MB of
+`data/products.json`, about 5 MB of non-product routes, and **121 MB of prerendered product
+pages** — 449 of them, each emitting an `.html`, an `.rsc` and a `.meta`.
+
+### The formula
+
+Product pages dominate everything that scales, and they cost a flat amount each:
+
+```
+runner payload  ≈  90 MB base  +  280 KB per product page
+                   (traced node_modules,   (.html + .rsc + .meta,
+                    non-product routes,     measured at 277 KB
+                    catalogue JSON)         averaged over 449)
+
+public/         ≈  1 MB base    +  60 KB per product photograph
+```
+
+At 449 products that predicts 90 + 123 = **213 MB** against 216 MB measured, so the estimate is
+good to a couple of percent. Doubling the catalogue to 900 products would put the runner payload
+near 340 MB and `public/` near 55 MB; it is the per-product term that moves, and neither the
+base nor the node_modules trace meaningfully does.
+
+### If the build runs out of memory
+
+`next build` peaks at **just under 2 GB resident** across all its Node processes — measured at
+2.0 GB, with the largest single worker at 772 MB — during the static-generation phase, where
+475 pages are rendered. On a small VPS the build gets OOM-killed by the kernel, and the symptom
+is unhelpful: the deploy fails with **`exit code 137`** or a bare "killed", not a Next.js error.
+
+The peak scales with page count, so it is the number that will move first as the catalogue
+grows. Treat 2 GB as a floor to build against, not a ceiling.
 
 Two fixes, host-side. Neither changes application behaviour.
 
@@ -487,6 +531,9 @@ missing for as long as it did.
 The image runs without `DATABASE_URL` — the storefront degrades exactly as section 3 describes
 — but the admin panel will not sign in and no order will be recorded.
 
-Resulting image is roughly 310 MB, plus the Prisma query engine the build trace now carries.
+Resulting image is roughly **250 MB** — the 216 MB standalone bundle, 1.6 MB of
+`.next/static` and 30 MB of `public/`, over a slim Node base — plus the Prisma query engine
+the build trace now carries. Section 6 has the measurement and the per-product formula behind
+that figure; the 310 MB this line used to quote was from the 49-product catalogue.
 Local development is unaffected by any of this: `npm run dev:all` starts the local Postgres,
 applies migrations and runs the dev server in one command.
