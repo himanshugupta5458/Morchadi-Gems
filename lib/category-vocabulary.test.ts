@@ -43,7 +43,7 @@ function sorted(values: readonly string[]): string[] {
 }
 
 /**
- * Reads the category list a plain script hard-codes, so the four enumerations can be compared
+ * Reads the category list a plain script hard-codes, so the five enumerations can be compared
  * without importing a file that runs on import (`validate-products.mjs` validates the catalogue
  * and calls `process.exit` at module scope).
  */
@@ -162,7 +162,7 @@ describe("selectSurfacedCategories, over arbitrary categories", () => {
   });
 });
 
-describe("the four enumerations that must not drift apart", () => {
+describe("the five enumerations that must not drift apart", () => {
   it("types/product.ts and scripts/validate-products.mjs agree", () => {
     expect(
       sorted(
