@@ -29,9 +29,16 @@ build
 .idea
 .claude
 
-# not read by the production build
+# Most of scripts/ is dev-only pipeline and migration tooling, genuinely not read by the
+# production build. keyword-normalisation.mjs is the exception: it is a real runtime import of
+# lib/keyword-collision-check.ts (e493e4c gave the keyword rules one implementation, shared
+# between the .ts module and scripts/validate-products.mjs), so it must reach the build context
+# even though the rest of this directory should not. Without the negation below, `next build`
+# fails type-checking with "Cannot find module '@/scripts/keyword-normalisation.mjs'" inside
+# Docker while passing on a real filesystem, where .dockerignore never applies.
 docs
 scripts
+!scripts/keyword-normalisation.mjs
 
 # the Draft A pipeline: 124 MB of source drafts, staged photographs and completed records.
 # Nothing in app/, lib/, components/ or config/ imports it, and the runner stage copies only

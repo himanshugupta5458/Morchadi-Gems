@@ -64,3 +64,4 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 | [2026-08-24](2026-08-24-register-append-refused-seven-cell-rows.md) | Stage 0's first real write run refused at the register append — 16 rows would have 7 cells against a 6-cell header | Blocker | Resolved |
 | [2026-08-26](2026-08-26-batch-2-gate-red-despite-green-claim.md) | Batch 2 shipped with a red gate behind a green claim, and extraction annotations reached shopper copy | Major | Resolved |
 | [2026-08-27](2026-08-27-phase-2-eight-failures-not-pre-existing.md) | A prior run's "8 pre-existing, unrelated" test-failure claim was false | Major | Resolved |
+| [2026-08-28](2026-08-28-docker-build-cannot-find-module-scripts-keyword-normalisation.md) | Docker build fails type-checking on `Cannot find module '@/scripts/keyword-normalisation.mjs'`, while the same commit builds clean locally | Blocker | Resolved |
