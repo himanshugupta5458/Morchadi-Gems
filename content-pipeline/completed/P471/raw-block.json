@@ -1,0 +1,47 @@
+{
+  "productId": "P471",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "927",
+    "workingId": "odoo-927",
+    "originalSku": "MJ-271",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-271-gold-chain-bracelet-combo-elegant-rope-box-link-set-927",
+    "referenceTitle": "Gold Chain Bracelet Combo – Elegant Rope & Box Link Set",
+    "rawContent": "Upgrade your look with this chic gold-toned bracelet duo. Featuring a timeless rope chain and a modern box link, this high-fashion set is perfect for effortless layering. To maintain its radiant golden luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Upgrade your look with this chic gold-toned bracelet duo. Featuring a timeless rope chain and a modern box link, this high-fashion set is perfect for effortless layering. To maintain its radiant golden luster, keep these pieces dry and store safely in a dry place after every wear.</div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P471.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P471/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  }
+}

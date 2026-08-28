@@ -1,0 +1,46 @@
+{
+  "productId": "P192",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "490",
+    "workingId": "odoo-490",
+    "originalSku": "MJ-351",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-351-interlocked-circle-knot-ring-490",
+    "referenceTitle": "Interlocked Circle Knot Ring",
+    "rawContent": "Product Description:\nMake a bold style statement with the Interlocked Circle Knot Ring for Women. Featuring intertwined circles encrusted with sparkling stones, this ring beautifully symbolizes unity and sophistication. The elegant design adds a touch of modern glamour to any outfit. With the Interlocked Circle Knot Ring for Women, celebrate meaningful moments and timeless style every day.\nWhy You Will Love It:\n✨ Symbolic interlocked design for added significance\n✨ Shimmering pavé stones create eye-catching sparkle\n✨ Comfortable and adjustable fit for everyday wear\n✨ A perfect gift for birthdays, anniversaries, or special occasions\nHighlights / Specifications:\n🔹 Material: High-quality, durable alloy for lasting wear\n🔹 Plating: Premium gold plating for a luxurious finish\n🔹 Stone Type: Dazzling cubic zirconia stones\n🔹 Design: Modern interlocked circle knot with pavé accents\n🔹 Size/Fit: Adjustable design to suit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Make a bold style statement with the <strong>Interlocked Circle Knot Ring for Women</strong>. Featuring intertwined circles encrusted with sparkling stones, this ring beautifully symbolizes unity and sophistication. The elegant design adds a touch of modern glamour to any outfit. With the <strong>Interlocked Circle Knot Ring for Women</strong>, celebrate meaningful moments and timeless style every day.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Symbolic interlocked design for added significance</p>\n<p>✨ Shimmering pavé stones create eye-catching sparkle</p>\n<p>✨ Comfortable and adjustable fit for everyday wear</p>\n<p>✨ A perfect gift for birthdays, anniversaries, or special occasions</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> High-quality, durable alloy for lasting wear</p>\n<p>🔹 <strong>Plating:</strong> Premium gold plating for a luxurious finish</p>\n<p>🔹 <strong>Stone Type:</strong> Dazzling cubic zirconia stones</p>\n<p>🔹 <strong>Design:</strong> Modern interlocked circle knot with pavé accents</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable design to suit most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Suitable for daily wear, party wear, or gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stylish interlocked knot ring with CZ stones on gold. Adjustable, symbolic design perfect for daily glam, parties & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P192.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P192/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

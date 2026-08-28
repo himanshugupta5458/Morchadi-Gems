@@ -1,0 +1,46 @@
+{
+  "productId": "P161",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "200",
+    "workingId": "odoo-200",
+    "originalSku": "MJ-130",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-130-bow-knot-cz-gold-plated-ring-200",
+    "referenceTitle": "Bow Knot CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nAdd sophisticated charm to your look with the Bow Knot CZ Gold-Plated Ring for Women. Featuring a sparkling bow knot design set with brilliant CZ stones on a chic gold-plated band, this ring is an instant style booster. The eye-catching structure makes the Bow Knot CZ Gold-Plated Ring for Women perfect for making a statement, whether you're dressing for a party, casual outing, or gifting someone special.\nWhy You Will Love It:\n✨ Unique bow knot design for a playful yet elegant touch\n✨ Studded with CZ stones for dazzling sparkle\n✨ Adjustable band for superior comfort and fit\n✨ Makes a memorable gift for any occasion\nHighlights / Specifications:\n🔹 Material: Durable, premium-quality alloy\n🔹 Plating: Rich gold plating ensures long-lasting shine\n🔹 Stone Type: High-quality cubic zirconia accents\n🔹 Design: Stylish bow knot with layered band structure\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Add sophisticated charm to your look with the <strong>Bow Knot CZ Gold-Plated Ring for Women</strong>. Featuring a sparkling bow knot design set with brilliant CZ stones on a chic gold-plated band, this ring is an instant style booster. The eye-catching structure makes the <strong>Bow Knot CZ Gold-Plated Ring for Women</strong> perfect for making a statement, whether you're dressing for a party, casual outing, or gifting someone special.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Unique bow knot design for a playful yet elegant touch</p>\n<p>✨ Studded with CZ stones for dazzling sparkle</p>\n<p>✨ Adjustable band for superior comfort and fit</p>\n<p>✨ Makes a memorable gift for any occasion</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Durable, premium-quality alloy</p>\n<p>🔹 <strong>Plating:</strong> Rich gold plating ensures long-lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> High-quality cubic zirconia accents</p>\n<p>🔹 <strong>Design:</strong> Stylish bow knot with layered band structure</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable for most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, and gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Chic bow knot CZ gold-plated ring with layered band. Playful yet elegant sparkle, perfect for gifting & everyday glam.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P161.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P161/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P194",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "492",
+    "workingId": "odoo-492",
+    "originalSku": "MJ-497",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-497-rose-gold-crystal-rope-bar-ring-492",
+    "referenceTitle": "Rose Gold Crystal Rope Bar Ring",
+    "rawContent": "A classy gold-toned ring with a braided rope-style band and a crystal-studded rectangular bar. The sleek and elegant design makes it an ideal piece for stacking or wearing as a statement ring and complements both ethnic and western outfits.\n- Material: Alloy metal\n- Plating: Gold finish\n- Stone Type: Pave-set cubic zirconia\n- Design: Rope-style band with crystal bar\n- Size / Fit: Adjustable\n- Best Suitable For: Daily wear, office wear, casual styling",
+    "rawHtml": "<p data-oe-version=\"2.0\">A classy gold-toned ring with a braided rope-style band and a crystal-studded rectangular bar. The sleek and elegant design makes it an ideal piece for stacking or wearing as a statement ring and complements both ethnic and western outfits.</p><ul>\n<li><p><strong>Material:</strong> Alloy metal</p></li>\n<li><p><strong>Plating:</strong> Gold finish</p></li>\n<li><p><strong>Stone Type:</strong> Pave-set cubic zirconia</p></li>\n<li><p><strong>Design:</strong> Rope-style band with crystal bar</p></li>\n<li><p><strong>Size / Fit:</strong> Adjustable</p></li>\n<li><p><strong>Best Suitable For:</strong> Daily wear, office wear, casual styling</p></li>\n</ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Minimalist rose gold rope-style band with crystal bar. Sleek adjustable design for daily wear, stacking & casual chic.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P194.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P194/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

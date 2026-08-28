@@ -1,0 +1,46 @@
+{
+  "productId": "P187",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "485",
+    "workingId": "odoo-485",
+    "originalSku": "MJ-516",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-516-round-pave-cz-gold-plated-ring-485",
+    "referenceTitle": "Round Pavé CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nShine brighter every day with the Round Pavé CZ Gold-Plated Ring for Women. This stunning ring features a classic round centerpiece encrusted with dazzling CZ stones, perfectly set on a sleek gold-plated band. A blend of timeless elegance and contemporary sparkle, the Round Pavé CZ Gold-Plated Ring for Women makes a chic statement whether you're at work, a party, or gifting someone special.\nWhy You Will Love It:\n✨ Elegant round pavé design for endless shimmer\n✨ Comfortable adjustable fit for everyday ease\n✨ Versatile beauty—matches every outfit and mood\n✨ Makes a wonderful gift for any occasion\nHighlights / Specifications:\n🔹 Material: Sturdy, premium alloy for durability\n🔹 Plating: Radiant gold plating for lasting shine\n🔹 Stone Type: High-quality pavé-set cubic zirconia\n🔹 Design: Classic round centerpiece with sparkling accents\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Shine brighter every day with the <strong>Round Pavé CZ Gold-Plated Ring for Women</strong>. This stunning ring features a classic round centerpiece encrusted with dazzling CZ stones, perfectly set on a sleek gold-plated band. A blend of timeless elegance and contemporary sparkle, the <strong>Round Pavé CZ Gold-Plated Ring for Women</strong> makes a chic statement whether you're at work, a party, or gifting someone special.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Elegant round pavé design for endless shimmer</p>\n<p>✨ Comfortable adjustable fit for everyday ease</p>\n<p>✨ Versatile beauty—matches every outfit and mood</p>\n<p>✨ Makes a wonderful gift for any occasion</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Sturdy, premium alloy for durability</p>\n<p>🔹 <strong>Plating:</strong> Radiant gold plating for lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> High-quality pavé-set cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Classic round centerpiece with sparkling accents</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable for most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Perfect for daily wear, party wear, and gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Timeless gold pavé CZ round ring with endless shimmer. Adjustable design ideal for daily elegance, parties & thoughtful gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P187.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P187/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

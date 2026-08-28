@@ -1,0 +1,47 @@
+{
+  "productId": "P467",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "923",
+    "workingId": "odoo-923",
+    "originalSku": "MJ-276",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-276-gold-dainty-bracelet-combo-set-minimalist-link-chain-elegant-leaf-motif-duo-923",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Link Chain & Elegant Leaf Motif Duo",
+    "rawContent": "Blossom with style in this chic gold-toned bracelet duo. Combining a timeless link chain with a modern leaf-motif strand, this high-fashion set is perfect for effortless layering. To maintain its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Blossom with style in this chic gold-toned bracelet duo. Combining a timeless link chain with a modern leaf-motif strand, this high-fashion set is perfect for effortless layering. To maintain its radiant luster, keep these pieces dry and store safely in a dry place after every wear.<div><div><p><br></p></div></div></div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P467.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P467/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  }
+}

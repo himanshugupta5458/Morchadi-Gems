@@ -1,0 +1,47 @@
+{
+  "productId": "P455",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "911",
+    "workingId": "odoo-911",
+    "originalSku": "MJ-232",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-232-elegant-heart-charm-gold-bracelet-911",
+    "referenceTitle": "Elegant Heart Charm Gold Bracelet",
+    "rawContent": "A charming heart-shaped bracelet with fine crystal accents, designed to add a soft, romantic glow to your look. Lightweight and stylish, it's perfect for everyday elegance and special occasions alike. To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>A charming heart-shaped bracelet with fine crystal accents, designed to add a soft, romantic glow to your look. Lightweight and stylish, it's perfect for everyday elegance and special occasions alike. To maintain its radiant glow, keep it dry and away from perfumes, storing it safely after each wear.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P455.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P455/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

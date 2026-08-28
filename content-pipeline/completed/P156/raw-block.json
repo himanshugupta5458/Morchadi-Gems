@@ -1,0 +1,46 @@
+{
+  "productId": "P156",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "195",
+    "workingId": "odoo-195",
+    "originalSku": "MJ-001",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-001-i-u-message-cz-gold-plated-ring-195",
+    "referenceTitle": "\"I ❤ U\" Message CZ Gold-Plated Ring",
+    "rawContent": "Some gestures say more when they sparkle. This gold-plated CZ ring spells out love with cubic zirconia stones set in a delicate message band, designed for women who wear their heart with quiet confidence.\nCrafted from quality alloy with a gold-plated finish, the band features brilliant CZ stones arranged in the iconic love message. The adjustable open band fits most fingers comfortably and pairs well with casual and festive outfits alike.\nProduct Details\n- Material: Quality alloy\n- Plating: Gold-tone, tarnish-resistant finish\n- Stone: Cubic Zirconia\n- Fit: Adjustable, fits most finger sizes\n- Occasion: Daily wear, anniversaries, Valentine's Day, gifting\n- Shipping: Pan India with secure packaging\nWhy You Will Love It\n- Romantic message band with sparkling CZ stones\n- Adjustable fit for comfortable all-day wear\n- Tarnish-resistant finish for everyday styling\n- A thoughtful gift under ₹200 for anniversaries and celebrations",
+    "rawHtml": "<p>Some gestures say more when they sparkle. This gold-plated CZ ring spells out love with cubic zirconia stones set in a delicate message band, designed for women who wear their heart with quiet confidence.</p>\n\n<p>Crafted from quality alloy with a gold-plated finish, the band features brilliant CZ stones arranged in the iconic love message. The adjustable open band fits most fingers comfortably and pairs well with casual and festive outfits alike.</p>\n\n<p><strong>Product Details</strong></p>\n<ul>\n<li><strong>Material:</strong> Quality alloy</li>\n<li><strong>Plating:</strong> Gold-tone, tarnish-resistant finish</li>\n<li><strong>Stone:</strong> Cubic Zirconia</li>\n<li><strong>Fit:</strong> Adjustable, fits most finger sizes</li>\n<li><strong>Occasion:</strong> Daily wear, anniversaries, Valentine's Day, gifting</li>\n<li><strong>Shipping:</strong> Pan India with secure packaging</li>\n</ul>\n\n<p><strong>Why You Will Love It</strong></p>\n<ul>\n<li>Romantic message band with sparkling CZ stones</li>\n<li>Adjustable fit for comfortable all-day wear</li>\n<li>Tarnish-resistant finish for everyday styling</li>\n<li>A thoughtful gift under ₹200 for anniversaries and celebrations</li>\n</ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Express love with this I ❤ U CZ gold-plated ring. A sparkling romantic jewelry piece, perfect for Valentine's, anniversaries & special moments.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P156.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P156/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

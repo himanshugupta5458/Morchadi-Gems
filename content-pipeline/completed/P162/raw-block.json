@@ -1,0 +1,46 @@
+{
+  "productId": "P162",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "202",
+    "workingId": "odoo-202",
+    "originalSku": "MJ-560",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-560-silver-plated-adjustable-floral-open-ad-ring-202",
+    "referenceTitle": "Silver-Plated Adjustable Floral Open AD Ring",
+    "rawContent": "Add a chic twist to your jewelry collection with this silver-plated adjustable open ring, designed with a delicate floral American Diamond motif and a sparkling solitaire-style stone. A perfect blend of elegance and trendiness, this ring is ideal for daily wear, parties, or gifting.\n- Material: Brass base\n- Plating: Premium Silver-plated finish\n- Stone Type: American Diamond (AD)\n- Design: Open ring with floral & solitaire accents\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Suitable for daily wear, parties, and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a chic twist to your jewelry collection with this <strong>silver-plated adjustable open ring</strong>, designed with a delicate <strong>floral American Diamond motif</strong> and a sparkling <strong>solitaire-style stone</strong>. A perfect blend of <strong>elegance and trendiness</strong>, this ring is ideal for <strong>daily wear, parties, or gifting</strong>.</p><ul>\n<li><p><strong>Material:</strong> Brass base</p></li>\n<li><p><strong>Plating:</strong> Premium Silver-plated finish</p></li>\n<li><p><strong>Stone Type:</strong> American Diamond (AD)</p></li>\n<li><p><strong>Design:</strong> Open ring with floral &amp; solitaire accents</p></li>\n<li><p><strong>Size &amp; Fit:</strong> Adjustable – fits comfortably on most finger sizes</p></li>\n<li><p><strong>Style &amp; Use:</strong> Suitable for daily wear, parties, and gifting</p></li></ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Chic silver-plated floral AD open ring with solitaire accent. Adjustable, elegant piece for daily wear, festive looks & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P162.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P162/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

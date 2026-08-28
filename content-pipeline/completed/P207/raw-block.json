@@ -1,0 +1,45 @@
+{
+  "productId": "P207",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "505",
+    "workingId": "odoo-505",
+    "originalSku": "MJ-215",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-215-dome-pave-cz-gold-plated-ring-505",
+    "referenceTitle": "Dome Pavé CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nMake a bold statement with the Dome Pavé CZ Gold-Plated Ring for Women. This sophisticated ring features a beautifully curved dome design completely encrusted with sparkling cubic zirconia stones, set on a lustrous gold-plated band. The classic yet contemporary style of the Dome Pavé CZ Gold-Plated Ring for Women adds instant glamour to any ensemble, making it perfect for both everyday elegance and special occasions.\nWhy You Will Love It:\n✨ Striking dome design for a bold, contemporary look\n✨ Full pavé setting delivers maximum sparkle and brilliance\n✨ Adjustable fit for comfortable all-day wear\n✨ Versatile piece perfect for any occasion or gifting\nHighlights / Specifications:\n🔹 Material: Premium, durable alloy for lasting quality\n🔹 Plating: Rich gold plating for luxurious shine\n🔹 Stone Type: High-quality pavé-set cubic zirconia\n🔹 Design: Classic dome silhouette with full CZ coverage\n🔹 Size/Fit: Adjustable to fit most finger sizes comfortably\n🔹 Best Use: Perfect for daily wear, party wear, and thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n\n<p>Make a bold statement with the <strong>Dome Pavé CZ Gold-Plated Ring for Women</strong>. This sophisticated ring features a beautifully curved dome design completely encrusted with sparkling cubic zirconia stones, set on a lustrous gold-plated band. The classic yet contemporary style of the <strong>Dome Pavé CZ Gold-Plated Ring for Women</strong> adds instant glamour to any ensemble, making it perfect for both everyday elegance and special occasions.</p>\n\n<p><strong>Why You Will Love It:</strong></p>\n\n<p>✨ Striking dome design for a bold, contemporary look</p>\n\n<p>✨ Full pavé setting delivers maximum sparkle and brilliance</p>\n\n<p>✨ Adjustable fit for comfortable all-day wear</p>\n\n<p>✨ Versatile piece perfect for any occasion or gifting</p>\n\n<p><strong>Highlights / Specifications:</strong></p>\n\n<p>🔹 <strong>Material:</strong> Premium, durable alloy for lasting quality</p>\n\n<p>🔹 <strong>Plating:</strong> Rich gold plating for luxurious shine</p>\n\n<p>🔹 <strong>Stone Type:</strong> High-quality pavé-set cubic zirconia</p>\n\n<p>🔹 <strong>Design:</strong> Classic dome silhouette with full CZ coverage</p>\n\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes comfortably</p>\n\n<p>🔹 <strong>Best Use:</strong> Perfect for daily wear, party wear, and thoughtful gifting</p>\n\n<p>\n\n</p>\n\n<p>\n\n</p>\n\n\n<p><strong>Care Instructions:</strong></p>\n\n\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n\n\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n\n\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n\n\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n\n\n<p><strong>Perfect For:</strong></p>\n\n\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n\n\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n\n\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [],
+    "originalMetaDescription": "Stunning dome pavé gold-plated ring with shimmering CZ stones. Adjustable, bold design perfect for parties & daily glam.",
+    "exportNotes": [
+      "product had no source category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P207.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P207/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹150 sale price (morchadijewels.com, reference only)"
+  }
+}

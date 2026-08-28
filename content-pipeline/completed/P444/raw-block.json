@@ -1,0 +1,47 @@
+{
+  "productId": "P444",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "898",
+    "workingId": "odoo-898",
+    "originalSku": "MJ-557",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-557-silver-teardrop-evil-eye-bracelet-898",
+    "referenceTitle": "Silver Teardrop Evil Eye Bracelet",
+    "rawContent": "Add a touch of elegant protection to your wrist with this sparkling teardrop evil eye bracelet. Designed as a high-fashion statement piece, its brilliant silver-toned luster is best preserved by keeping it dry. To maintain its shine, avoid contact with perfumes and store safely in a dry place.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Add a touch of elegant protection to your wrist with this sparkling teardrop evil eye bracelet. Designed as a high-fashion statement piece, its brilliant silver-toned luster is best preserved by keeping it dry. To maintain its shine, avoid contact with perfumes and store safely in a dry place.</p></blockquote><p><br></p></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P444.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P444/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P470",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "926",
+    "workingId": "odoo-926",
+    "originalSku": "MJ-274",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-274-gold-dainty-bracelet-combo-set-minimalist-ball-chain-beaded-link-duo-926",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Ball Chain & Beaded Link Duo",
+    "rawContent": "Elevate your everyday aesthetic with this chic gold-toned bracelet duo. Combining a timeless ball chain with a modern beaded strand, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elevate your everyday aesthetic with this chic gold-toned bracelet duo. Combining a timeless ball chain with a modern beaded strand, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.</div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P470.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P470/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P183",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "481",
+    "workingId": "odoo-481",
+    "originalSku": "MJ-114",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-114-baguette-solitaire-cz-gold-plated-ring-481",
+    "referenceTitle": "Baguette Solitaire CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nSparkle with sophistication in the Baguette Solitaire CZ Gold-Plated Ring for Women. This stunning ring features a large baguette-cut CZ stone set between two shimmering, CZ-studded bands, creating a look of pure elegance and grace. The stylish double band design adds a modern twist, while the rich gold plating makes the Baguette Solitaire CZ Gold-Plated Ring for Women perfect for every occasion—from daily glamour to festive celebrations.\nWhy You Will Love It:\n✨ Eye-catching baguette solitaire center for show-stopping brilliance\n✨ Trendy double band for added style and support\n✨ Comfortable adjustable fit for all-day wear\n✨ Ideal accessory for parties, daily wear, or gifting loved ones\nHighlights / Specifications:\n🔹 Material: Premium-quality, durable alloy\n🔹 Plating: Handsome gold plating for lasting shine\n🔹 Stone Type: Sparkling baguette-cut and round cubic zirconia\n🔹 Design: Statement double band with solitaire centerpiece\n🔹 Size/Fit: Adjustable to fit most finger sizes with ease\n🔹 Best Use: Perfect for daily wear, party events, and memorable gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Sparkle with sophistication in the <strong>Baguette Solitaire CZ Gold-Plated Ring for Women</strong>. This stunning ring features a large baguette-cut CZ stone set between two shimmering, CZ-studded bands, creating a look of pure elegance and grace. The stylish double band design adds a modern twist, while the rich gold plating makes the <strong>Baguette Solitaire CZ Gold-Plated Ring for Women</strong> perfect for every occasion—from daily glamour to festive celebrations.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Eye-catching baguette solitaire center for show-stopping brilliance</p>\n<p>✨ Trendy double band for added style and support</p>\n<p>✨ Comfortable adjustable fit for all-day wear</p>\n<p>✨ Ideal accessory for parties, daily wear, or gifting loved ones</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Premium-quality, durable alloy</p>\n<p>🔹 <strong>Plating:</strong> Handsome gold plating for lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> Sparkling baguette-cut and round cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Statement double band with solitaire centerpiece</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes with ease</p>\n<p>🔹 <strong>Best Use:</strong> Perfect for daily wear, party events, and memorable gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stunning baguette CZ solitaire ring with double band design. Adjustable gold plating makes it a chic gift or party accessory.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P183.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P183/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P469",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "925",
+    "workingId": "odoo-925",
+    "originalSku": "MJ-275",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-275-gold-dainty-bracelet-combo-set-minimalist-beaded-twisted-chain-sleek-box-chain-925",
+    "referenceTitle": "Gold Dainty Bracelet Combo Set – Minimalist Beaded Twisted Chain & Sleek Box Chain",
+    "rawContent": "Elevate your everyday aesthetic with this chic gold-toned bracelet duo. Combining a shimmering beaded twisted strand with a modern box chain, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Elevate your everyday aesthetic with this chic gold-toned bracelet duo. Combining a shimmering beaded twisted strand with a modern box chain, this high-fashion set is perfect for effortless layering. To preserve its radiant luster, keep these pieces dry and store safely in a dry place after every wear.</div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P469.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P469/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P173",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "218",
+    "workingId": "odoo-218",
+    "originalSku": "MJ-217",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-217-double-disk-cz-gold-plated-ring-218",
+    "referenceTitle": "Double Disk CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nShine with playful elegance wearing the Double Disk CZ Gold-Plated Ring for Women. This standout ring features two dazzling pavé disks beautifully set on a sleek gold-plated band, offering a modern twist on classic glamour. Whether you're dressing up for a party or adding flair to your everyday look, the Double Disk CZ Gold-Plated Ring for Women makes you the center of attention with its radiant sparkle and unique design.\nWhy You Will Love It:\n✨ Contemporary double disk design for trendy appeal\n✨ Sparkling CZ stones for brilliant shine\n✨ Adjustable fit for effortless comfort\n✨ Versatile piece, perfect for gifting or personal style\nHighlights / Specifications:\n🔹 Material: Premium, durable alloy\n🔹 Plating: Lustrous gold plating for a luxurious finish\n🔹 Stone Type: High-grade pavé-set cubic zirconia\n🔹 Design: Fashion-forward double disk motif with pavé accents\n🔹 Size/Fit: Adjustable to accommodate most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Shine with playful elegance wearing the <strong>Double Disk CZ Gold-Plated Ring for Women</strong>. This standout ring features two dazzling pavé disks beautifully set on a sleek gold-plated band, offering a modern twist on classic glamour. Whether you're dressing up for a party or adding flair to your everyday look, the <strong>Double Disk CZ Gold-Plated Ring for Women</strong> makes you the center of attention with its radiant sparkle and unique design.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Contemporary double disk design for trendy appeal</p>\n<p>✨ Sparkling CZ stones for brilliant shine</p>\n<p>✨ Adjustable fit for effortless comfort</p>\n<p>✨ Versatile piece, perfect for gifting or personal style</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Premium, durable alloy</p>\n<p>🔹 <strong>Plating:</strong> Lustrous gold plating for a luxurious finish</p>\n<p>🔹 <strong>Stone Type:</strong> High-grade pavé-set cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Fashion-forward double disk motif with pavé accents</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to accommodate most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, and gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Trendy double disk gold-plated CZ ring with pavé sparkle. Adjustable, versatile design for weddings, parties & daily style.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P173.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P173/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

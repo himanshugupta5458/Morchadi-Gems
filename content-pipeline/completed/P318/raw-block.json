@@ -1,0 +1,46 @@
+{
+  "productId": "P318",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "740",
+    "workingId": "odoo-740",
+    "originalSku": "MJ-310",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-310-gold-plated-heart-necklace-740",
+    "referenceTitle": "Gold-Plated Heart Necklace",
+    "rawContent": "- Enhance your everyday style with this stunning gold-plated heart necklace, designed with a beautiful series of mini heart motifs linked seamlessly for a soft, feminine look. Each heart features a textured, reflective finish that adds a subtle sparkle, making this piece perfect for both casual wear and elegant occasions.\n- Lightweight, durable, and crafted with a premium gold-tone finish, this necklace sits comfortably on the neckline and pairs effortlessly with dresses, tops, and office wear. Whether you're looking for a thoughtful gift or an elegant everyday accessory, this heart link necklace adds charm and sophistication to any outfit.\n- Keywords included: gold heart necklace, everyday wear jewelry, minimalist gold necklace, women's heart chain, trendy gold jewelry, lightweight necklace.",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Enhance your everyday style with this stunning <strong>gold-plated heart necklace</strong>, designed with a beautiful series of mini heart motifs linked seamlessly for a soft, feminine look. Each heart features a textured, reflective finish that adds a subtle sparkle, making this piece perfect for both casual wear and elegant occasions.</li><li>Lightweight, durable, and crafted with a premium gold-tone finish, this necklace sits comfortably on the neckline and pairs effortlessly with dresses, tops, and office wear. Whether you're looking for a thoughtful gift or an elegant everyday accessory, this heart link necklace adds charm and sophistication to any outfit.</li><li><strong>Keywords included:</strong> gold heart necklace, everyday wear jewelry, minimalist gold necklace, women's heart chain, trendy gold jewelry, lightweight necklace.</li></ul></div>",
+    "originalCategories": [
+      "Necklace"
+    ],
+    "originalMetaDescription": "Elegant gold-tone love bracelet with anti-tarnish finish & toggle clasp. Stylish, durable & perfect for daily wear or gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "necklaces",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P318.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P318/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

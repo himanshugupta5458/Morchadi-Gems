@@ -1,0 +1,47 @@
+{
+  "productId": "P445",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "899",
+    "workingId": "odoo-899",
+    "originalSku": "MJ-141",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-141-classic-silver-round-evil-eye-bracelet-899",
+    "referenceTitle": "Classic Silver Round Evil Eye Bracelet",
+    "rawContent": "Shield your energy in style with our signature Round Evil Eye Bracelet. Featuring a vibrant blue center surrounded by a shimmering crystal halo, this fashion-forward piece is perfect for daily layering. To maintain its brilliant silver-toned luster, keep it dry and store safely after every wear.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Shield your energy in style with our signature Round Evil Eye Bracelet. Featuring a vibrant blue center surrounded by a shimmering crystal halo, this fashion-forward piece is perfect for daily layering. To maintain its brilliant silver-toned luster, keep it dry and store safely after every wear.</p></blockquote><p><br></p></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P445.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P445/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P457",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "913",
+    "workingId": "odoo-913",
+    "originalSku": "MJ-237",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-237-elegant-rose-gold-tennis-bracelet-sparkling-marquise-crystal-913",
+    "referenceTitle": "Elegant Rose Gold Tennis Bracelet Sparkling Marquise Crystal",
+    "rawContent": "Elevate your look with this stunning rose gold-toned tennis bracelet featuring a brilliant marquise solitaire. This high-fashion statement piece is perfect for effortless glamour. To preserve its radiant luster and shimmer, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Elevate your look with this stunning rose gold-toned tennis bracelet featuring a brilliant marquise solitaire. This high-fashion statement piece is perfect for effortless glamour. To preserve its radiant luster and shimmer, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P457.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P457/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

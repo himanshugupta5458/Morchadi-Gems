@@ -1,0 +1,46 @@
+{
+  "productId": "P182",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "479",
+    "workingId": "odoo-479",
+    "originalSku": "MJ-344",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-344-infinity-crossover-cz-gold-plated-ring-479",
+    "referenceTitle": "Infinity Crossover CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nAdd a touch of allure with the Infinity Crossover CZ Gold-Plated Ring for Women. Designed with graceful overlapping lines and embellished with sparkling cubic zirconia, this statement piece exudes contemporary elegance. The infinity-inspired silhouette brings a sense of harmony to every look. The Infinity Crossover CZ Gold-Plated Ring for Women is perfect for those who love refined style with a modern twist.\nWhy You Will Love It:\n✨ Infinity crossover design for timeless beauty\n✨ Sparkling CZ stones for high-impact glamour\n✨ Comfortable adjustable fit for effortless wear\n✨ Stylish choice for both special and everyday occasions\nHighlights / Specifications:\n🔹 Material: High-quality durable alloy\n🔹 Plating: Luminous gold plating for long-lasting shine\n🔹 Stone Type: Brilliant round-cut cubic zirconia stones\n🔹 Design: Modern crossover infinity band with pavé accents\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Add a touch of allure with the <strong>Infinity Crossover CZ Gold-Plated Ring for Women</strong>. Designed with graceful overlapping lines and embellished with sparkling cubic zirconia, this statement piece exudes contemporary elegance. The infinity-inspired silhouette brings a sense of harmony to every look. The <strong>Infinity Crossover CZ Gold-Plated Ring for Women</strong> is perfect for those who love refined style with a modern twist.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Infinity crossover design for timeless beauty</p>\n<p>✨ Sparkling CZ stones for high-impact glamour</p>\n<p>✨ Comfortable adjustable fit for effortless wear</p>\n<p>✨ Stylish choice for both special and everyday occasions</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> High-quality durable alloy</p>\n<p>🔹 <strong>Plating:</strong> Luminous gold plating for long-lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> Brilliant round-cut cubic zirconia stones</p>\n<p>🔹 <strong>Design:</strong> Modern crossover infinity band with pavé accents</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, or gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Elegant infinity crossover gold ring with sparkling CZ pavé. Adjustable modern design, perfect for parties, weddings & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P182.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P182/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

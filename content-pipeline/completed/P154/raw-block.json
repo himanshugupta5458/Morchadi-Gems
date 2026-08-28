@@ -1,0 +1,46 @@
+{
+  "productId": "P154",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "192",
+    "workingId": "odoo-192",
+    "originalSku": "MJ-154",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-154-cushion-halo-cz-gold-plated-ring-192",
+    "referenceTitle": "Cushion Halo CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nDazzle with sophistication wearing the Cushion Halo CZ Gold-Plated Ring for Women. This stunning ring showcases a brilliant cushion-cut CZ centerpiece surrounded by a sparkling halo, all elegantly set on a lustrous gold-plated band. The timeless design and exceptional sparkle make the Cushion Halo CZ Gold-Plated Ring for Women perfect for elevating any look, whether for daily elegance, special celebrations, or as a treasured gift.\nWhy You Will Love It:\n✨ Classic cushion halo design for timeless elegance\n✨ Brilliant CZ stones deliver maximum sparkle\n✨ Adjustable fit for comfortable all-day wear\n✨ Perfect for parties, special occasions, or meaningful gifting\nHighlights / Specifications:\n🔹 Material: Premium, durable alloy for lasting quality\n🔹 Plating: Rich gold plating for luxurious shine\n🔹 Stone Type: Cushion-cut and round cubic zirconia\n🔹 Design: Classic halo setting with cushion-cut centerpiece\n🔹 Size/Fit: Adjustable to fit most finger sizes comfortably\n🔹 Best Use: Ideal for daily wear, party wear, and special gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Dazzle with sophistication wearing the <strong>Cushion Halo CZ Gold-Plated Ring for Women</strong>. This stunning ring showcases a brilliant cushion-cut CZ centerpiece surrounded by a sparkling halo, all elegantly set on a lustrous gold-plated band. The timeless design and exceptional sparkle make the <strong>Cushion Halo CZ Gold-Plated Ring for Women</strong> perfect for elevating any look, whether for daily elegance, special celebrations, or as a treasured gift.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Classic cushion halo design for timeless elegance</p>\n<p>✨ Brilliant CZ stones deliver maximum sparkle</p>\n<p>✨ Adjustable fit for comfortable all-day wear</p>\n<p>✨ Perfect for parties, special occasions, or meaningful gifting</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Premium, durable alloy for lasting quality</p>\n<p>🔹 <strong>Plating:</strong> Rich gold plating for luxurious shine</p>\n<p>🔹 <strong>Stone Type:</strong> Cushion-cut and round cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Classic halo setting with cushion-cut centerpiece</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes comfortably</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, and special gifting</p>\n<p>\n\n</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stunning cushion-cut CZ halo ring in gold plating. Adjustable, timeless design perfect for daily wear, parties & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P154.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P154/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

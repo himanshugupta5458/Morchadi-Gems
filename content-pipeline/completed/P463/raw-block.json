@@ -1,0 +1,47 @@
+{
+  "productId": "P463",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "919",
+    "workingId": "odoo-919",
+    "originalSku": "MJ-268",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-268-gold-bracelet-combo-set-delicate-heart-link-chain-minimalist-pearl-bracelet-919",
+    "referenceTitle": "Gold Bracelet Combo Set – Delicate Heart Link Chain & Minimalist Pearl Bracelet",
+    "rawContent": "Double the elegance with this chic gold-toned bracelet set. Featuring a romantic heart-link chain and a delicate pearl strand, this high-fashion combo is perfect for effortless layering. To preserve its radiant golden luster, keep these pieces dry and store them safely away from perfumes and moisture.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Double the elegance with this chic gold-toned bracelet set. Featuring a romantic heart-link chain and a delicate pearl strand, this high-fashion combo is perfect for effortless layering. To preserve its radiant golden luster, keep these pieces dry and store them safely away from perfumes and moisture.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P463.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P463/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹89 sale price, ₹19 cost (morchadijewels.com, reference only)"
+  }
+}

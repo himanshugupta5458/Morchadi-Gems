@@ -1,7 +1,7 @@
 {
   "generatedBy": "scripts/backfill-keyword-map.mjs",
   "source": "data/products.json",
-  "productCount": 281,
+  "productCount": 358,
   "primary": {
     "adjustable crystal heart ring": [
       "P004"
@@ -23,6 +23,12 @@
     ],
     "anti-tarnish engraved hoop earrings": [
       "P495"
+    ],
+    "anti-tarnish gold-tone watch emerald green leaf dial": [
+      "P611"
+    ],
+    "anti-tarnish openable kada bracelet two designs": [
+      "P246"
     ],
     "anti-tarnish ribbed hoop earrings": [
       "P494"
@@ -228,8 +234,59 @@
     "gold solitaire pendant necklace": [
       "P358"
     ],
+    "gold-finish rope band ring cz bar": [
+      "P194"
+    ],
+    "gold-plated bow knot ring cubic zirconia": [
+      "P161"
+    ],
+    "gold-plated bow-knot ring cubic zirconia": [
+      "P197"
+    ],
+    "gold-plated circle ring cubic zirconia leaf accent": [
+      "P201"
+    ],
     "gold-plated clover anklet": [
       "P046"
+    ],
+    "gold-plated crossover ring heart cubic zirconia": [
+      "P199"
+    ],
+    "gold-plated dome ring full cubic zirconia coverage": [
+      "P207"
+    ],
+    "gold-plated double band ring solitaire cubic zirconia": [
+      "P183"
+    ],
+    "gold-plated double disk ring pave cubic zirconia": [
+      "P173"
+    ],
+    "gold-plated double-row ring cubic zirconia": [
+      "P172"
+    ],
+    "gold-plated dual band butterfly ring cubic zirconia": [
+      "P193"
+    ],
+    "gold-plated dual design ring floral solitaire cubic zirconia": [
+      "P190"
+    ],
+    "gold-plated floral halo ring cubic zirconia": [
+      "P155"
+    ],
+    "gold-plated floral ring cubic zirconia curved band": [
+      "P208"
+    ],
+    "gold-plated fruit charm chain bracelet": [
+      "P301"
+    ],
+    "gold-plated full-band pave ring cubic zirconia": [
+      "P184"
+    ],
+    "gold-plated geometric ring baguette round cubic zirconia": [
+      "P165"
+    ],
+    "gold-plated halo ring cushion cut cubic zirconia": [
+      "P154"
     ],
     "gold-plated halo stud earrings": [
       "P030"
@@ -240,20 +297,62 @@
     "gold-plated hug ring": [
       "P007"
     ],
+    "gold-plated infinity crossover ring pave cubic zirconia": [
+      "P182"
+    ],
     "gold-plated initial ring": [
       "P001"
+    ],
+    "gold-plated interlocked circle ring pave cubic zirconia": [
+      "P192"
+    ],
+    "gold-plated knot-style ring studded cubic zirconia": [
+      "P203"
     ],
     "gold-plated layered anklet": [
       "P580"
     ],
+    "gold-plated linked heart necklace": [
+      "P318"
+    ],
     "gold-plated love knot ring": [
       "P011"
+    ],
+    "gold-plated open ring faux pearl cubic zirconia star": [
+      "P205"
+    ],
+    "gold-plated open teardrop ring cubic zirconia": [
+      "P196"
     ],
     "gold-plated peacock nath": [
       "P032"
     ],
+    "gold-plated princess-cut solitaire ring cubic zirconia": [
+      "P195"
+    ],
+    "gold-plated rectangle multi-row ring pave cubic zirconia": [
+      "P188"
+    ],
+    "gold-plated rectangular bar ring five cubic zirconia": [
+      "P185"
+    ],
+    "gold-plated rectangular bar ring linear cubic zirconia": [
+      "P186"
+    ],
     "gold-plated ribbon bow ring": [
       "P020"
+    ],
+    "gold-plated round pave ring cubic zirconia": [
+      "P187"
+    ],
+    "gold-plated vine leaf necklace earring set anti-tarnish": [
+      "P569"
+    ],
+    "gold-plated vine leaf ring cubic zirconia": [
+      "P191"
+    ],
+    "gold-plated wavy band ring cubic zirconia": [
+      "P158"
     ],
     "gold-tone anti-tarnish watch red oval dial": [
       "P610"
@@ -297,6 +396,9 @@
     "gold-tone hoop earrings friendship hamper": [
       "P595"
     ],
+    "gold-tone i love u message ring": [
+      "P156"
+    ],
     "gold-tone mesh bracelet watch green square dial": [
       "P621"
     ],
@@ -312,11 +414,38 @@
     "gold-toned alternating stone nath": [
       "P483"
     ],
+    "gold-toned ball chain beaded strand bracelet set": [
+      "P470"
+    ],
+    "gold-toned ball chain twisted link bracelet set": [
+      "P466"
+    ],
+    "gold-toned beaded twisted chain box chain bracelet set": [
+      "P469"
+    ],
+    "gold-toned bracelet heart motif charm": [
+      "P455"
+    ],
+    "gold-toned bracelet heartbeat lifeline charm": [
+      "P451"
+    ],
+    "gold-toned bracelet interlocking double heart charm": [
+      "P454"
+    ],
+    "gold-toned bracelet love script charm": [
+      "P453"
+    ],
+    "gold-toned bracelet winged heart lock charm": [
+      "P452"
+    ],
     "gold-toned clear stone nath": [
       "P484"
     ],
     "gold-toned cluster nath": [
       "P482"
+    ],
+    "gold-toned eiffel tower charm bracelet": [
+      "P460"
     ],
     "gold-toned floral cluster nath": [
       "P485"
@@ -327,20 +456,50 @@
     "gold-toned halo nath": [
       "P477"
     ],
+    "gold-toned heart infinity bracelet": [
+      "P459"
+    ],
+    "gold-toned heart link pearl look bracelet set": [
+      "P463"
+    ],
     "gold-toned heart pendant necklace": [
       "P434"
+    ],
+    "gold-toned heartbeat lifeline bracelet": [
+      "P462"
+    ],
+    "gold-toned link leaf motif bracelet set": [
+      "P467"
     ],
     "gold-toned multicolour stone nath": [
       "P487"
     ],
+    "gold-toned paperclip heart link bracelet set": [
+      "P468"
+    ],
+    "gold-toned pearl look textured chain bracelet set": [
+      "P465"
+    ],
     "gold-toned pearl station necklace": [
       "P430"
+    ],
+    "gold-toned rope chain box link bracelet set": [
+      "P471"
+    ],
+    "gold-toned rope paperclip chain bracelet set": [
+      "P464"
     ],
     "gold-toned small cluster nath": [
       "P480"
     ],
     "gold-toned tennis bracelet set": [
       "P472"
+    ],
+    "gold-toned treble clef charm bracelet": [
+      "P461"
+    ],
+    "golden bracelet love heart motif charm": [
+      "P458"
     ],
     "golden toggle clasp bracelet": [
       "P103"
@@ -624,6 +783,9 @@
     "rope-twist glass kangan": [
       "P279"
     ],
+    "rose gold cross ring cubic zirconia": [
+      "P153"
+    ],
     "rose gold cz ring minimal glamorous": [
       "P112"
     ],
@@ -639,17 +801,35 @@
     "rose gold solitaire ring": [
       "P122"
     ],
+    "rose gold-plated criss-cross ring cubic zirconia": [
+      "P206"
+    ],
+    "rose gold-plated cubic zirconia ring": [
+      "P166"
+    ],
     "rose gold-plated emerald-cut halo ring": [
       "P180"
     ],
+    "rose gold-plated floral burst ring cubic zirconia": [
+      "P202"
+    ],
     "rose gold-plated flower cluster ring": [
       "P181"
+    ],
+    "rose gold-plated oval solitaire ring cubic zirconia": [
+      "P200"
     ],
     "rose gold-plated stacking ring": [
       "P013"
     ],
     "rose gold-plated stone band ring": [
       "P178"
+    ],
+    "rose gold-toned tennis bracelet marquise solitaire": [
+      "P457"
+    ],
+    "rose gold-toned tennis bracelet solitaire": [
+      "P456"
     ],
     "rose pink glass jelly bangles": [
       "P418"
@@ -720,11 +900,20 @@
     "silver-plated blue stud earrings": [
       "P026"
     ],
+    "silver-plated bow knot ring cubic zirconia": [
+      "P209"
+    ],
     "silver-plated criss-cross ring": [
       "P151"
     ],
+    "silver-plated double emerald-cut ring halo": [
+      "P170"
+    ],
     "silver-plated nath": [
       "P031"
+    ],
+    "silver-plated open ring floral cubic zirconia": [
+      "P162"
     ],
     "silver-plated payal": [
       "P044"
@@ -732,14 +921,29 @@
     "silver-plated pink stud earrings": [
       "P025"
     ],
+    "silver-tone anchor evil eye bracelet": [
+      "P439"
+    ],
     "silver-tone anti-tarnish watch deep blue dial": [
       "P609"
     ],
     "silver-tone baguette nath": [
       "P481"
     ],
+    "silver-tone bracelet heart-in-circle charm": [
+      "P450"
+    ],
+    "silver-tone butterfly evil eye bracelet": [
+      "P441"
+    ],
     "silver-tone double-row nath": [
       "P488"
+    ],
+    "silver-tone evil eye motif bracelet": [
+      "P438"
+    ],
+    "silver-tone eyelash evil eye bracelet": [
+      "P443"
     ],
     "silver-tone floral nath": [
       "P478"
@@ -756,8 +960,32 @@
     "silver-tone mesh bracelet watch aqua blue dial": [
       "P616"
     ],
+    "silver-tone round evil eye bracelet blue centre": [
+      "P445"
+    ],
+    "silver-tone round evil eye bracelet everyday": [
+      "P446"
+    ],
+    "silver-tone ship wheel evil eye bracelet": [
+      "P440"
+    ],
     "silver-tone signet ring": [
       "P005"
+    ],
+    "silver-tone star cz ring set": [
+      "P163"
+    ],
+    "silver-tone teardrop evil eye bracelet": [
+      "P444"
+    ],
+    "silver-tone tennis bracelet single line stones": [
+      "P448"
+    ],
+    "silver-tone tennis bracelet solitaire centrepiece": [
+      "P474"
+    ],
+    "silver-tone tree of life evil eye bracelet": [
+      "P442"
     ],
     "silver-tone twisted bow ring": [
       "P008"
@@ -773,6 +1001,9 @@
     ],
     "stacked coil ring": [
       "P123"
+    ],
+    "stainless steel moebius infinity bracelet": [
+      "P399"
     ],
     "star and square ring set": [
       "P105"
@@ -859,8 +1090,17 @@
     "adjustable anklet": [
       "P046"
     ],
+    "adjustable bar ring gift": [
+      "P185"
+    ],
+    "adjustable botanical ring gift": [
+      "P191"
+    ],
     "adjustable bow ring": [
       "P008"
+    ],
+    "adjustable bow ring gold": [
+      "P161"
     ],
     "adjustable bracelet watch": [
       "P601"
@@ -877,11 +1117,17 @@
     "adjustable chain pendant": [
       "P636"
     ],
+    "adjustable circle ring gift": [
+      "P201"
+    ],
     "adjustable cocktail ring": [
       "P012"
     ],
     "adjustable criss-cross ring": [
       "P110"
+    ],
+    "adjustable cz ring": [
+      "P154"
     ],
     "adjustable cz ring for gifting": [
       "P176"
@@ -892,11 +1138,17 @@
     "adjustable cz solitaire ring": [
       "P151"
     ],
+    "adjustable floral ring silver": [
+      "P162"
+    ],
     "adjustable flower ring": [
       "P181"
     ],
     "adjustable flower ring for women": [
       "P106"
+    ],
+    "adjustable flower ring women": [
+      "P208"
     ],
     "adjustable gold bead bracelet": [
       "P553"
@@ -907,11 +1159,23 @@
     "adjustable heart ring": [
       "P118"
     ],
+    "adjustable heart solitaire ring": [
+      "P199"
+    ],
+    "adjustable knot ring gift": [
+      "P203"
+    ],
     "adjustable kundan watch": [
       "P603"
     ],
     "adjustable letter ring": [
       "P001"
+    ],
+    "adjustable minimal ring women": [
+      "P186"
+    ],
+    "adjustable office ring india": [
+      "P194"
     ],
     "adjustable open ring": [
       "P020"
@@ -919,8 +1183,15 @@
     "adjustable pull chain bracelet": [
       "P526"
     ],
+    "adjustable ring for daily wear": [
+      "P172"
+    ],
     "adjustable ring for gifting": [
-      "P175"
+      "P175",
+      "P182"
+    ],
+    "adjustable ring for gifting india": [
+      "P192"
     ],
     "adjustable ring for stacking": [
       "P328"
@@ -936,17 +1207,59 @@
     "adjustable ring set": [
       "P105"
     ],
+    "adjustable ring under 100 rupees": [
+      "P173"
+    ],
+    "adjustable round ring gift": [
+      "P187"
+    ],
     "adjustable snake chain necklace": [
       "P630"
+    ],
+    "adjustable solitaire ring india": [
+      "P200"
+    ],
+    "adjustable statement ring india": [
+      "P207"
+    ],
+    "adjustable statement ring under 100": [
+      "P165"
+    ],
+    "adjustable statement ring women": [
+      "P170"
     ],
     "adjustable vine bracelet": [
       "P521"
     ],
+    "adjustable woven ring gold": [
+      "P206"
+    ],
+    "affordable bracelet combo india": [
+      "P463"
+    ],
+    "affordable bracelet rose gold tone": [
+      "P456"
+    ],
+    "affordable charm bracelet india": [
+      "P452"
+    ],
+    "affordable crystal charm bracelet": [
+      "P460"
+    ],
     "affordable cz ring for women": [
       "P178"
     ],
+    "affordable cz ring india": [
+      "P166"
+    ],
+    "affordable evil eye jewellery india": [
+      "P438"
+    ],
     "affordable friendship gift hamper": [
       "P596"
+    ],
+    "affordable gift bracelet india": [
+      "P453"
     ],
     "affordable gold necklace": [
       "P426"
@@ -963,12 +1276,30 @@
     "affordable pendant necklace": [
       "P434"
     ],
+    "affordable protective bracelet india": [
+      "P446"
+    ],
+    "affordable relationship gift bracelet": [
+      "P454"
+    ],
     "affordable rose gold ring": [
       "P175"
+    ],
+    "affordable solitaire look ring": [
+      "P154"
     ],
     "affordable star ring": [
       "P132",
       "P143"
+    ],
+    "affordable symbolic bracelet india": [
+      "P459"
+    ],
+    "affordable tennis bracelet india": [
+      "P474"
+    ],
+    "affordable tennis bracelet marquise": [
+      "P457"
     ],
     "all clear nath": [
       "P033"
@@ -982,20 +1313,50 @@
     "alphabet ring": [
       "P001"
     ],
+    "am diamond cross ring": [
+      "P153"
+    ],
     "amber glass bangle set": [
       "P421"
+    ],
+    "american diamond band ring": [
+      "P172"
+    ],
+    "american diamond crisscross ring": [
+      "P206"
+    ],
+    "american diamond floral ring": [
+      "P202"
     ],
     "american diamond flower ring": [
       "P106"
     ],
+    "american diamond knot ring": [
+      "P203"
+    ],
+    "american diamond open ring": [
+      "P162"
+    ],
+    "american diamond oval ring": [
+      "P200"
+    ],
     "american diamond ring": [
       "P104"
+    ],
+    "american diamond ring rose gold": [
+      "P166"
     ],
     "american diamond solitaire ring": [
       "P122"
     ],
+    "anchor charm bracelet silver": [
+      "P439"
+    ],
     "anklet set of two": [
       "P044"
+    ],
+    "anti tarnish earring necklace combo": [
+      "P569"
     ],
     "anti-tarnish anklet": [
       "P046",
@@ -1090,11 +1451,20 @@
     "baguette stone ring": [
       "P181"
     ],
+    "ball chain bracelet gold": [
+      "P470"
+    ],
+    "ball chain bracelet set gold": [
+      "P466"
+    ],
     "bangle set of four": [
       "P041"
     ],
     "bangles and earrings gift set": [
       "P534"
+    ],
+    "bar ring cz stones": [
+      "P185"
     ],
     "baroque pearl jewellery": [
       "P523"
@@ -1105,11 +1475,17 @@
     "beaded bracelet watch women": [
       "P619"
     ],
+    "beaded chain bracelet stacking": [
+      "P469"
+    ],
     "beaded edge studs": [
       "P029"
     ],
     "beaded frame green stone ring": [
       "P333"
+    ],
+    "beaded strand bracelet stacking": [
+      "P470"
     ],
     "bell bangles set": [
       "P041"
@@ -1189,8 +1565,14 @@
     "bold chain watch women": [
       "P617"
     ],
+    "bold statement ring adjustable": [
+      "P188"
+    ],
     "bold wave glass bangles": [
       "P282"
+    ],
+    "botanical bracelet duo india": [
+      "P467"
     ],
     "botanical charm necklace": [
       "P639"
@@ -1213,11 +1595,17 @@
     "box clasp bracelet": [
       "P038"
     ],
+    "box link bracelet duo": [
+      "P471"
+    ],
     "boy figure charm": [
       "P378"
     ],
     "bracelet combo set": [
       "P472"
+    ],
+    "bracelet duo gift india": [
+      "P468"
     ],
     "bracelet for gifting": [
       "P395"
@@ -1225,8 +1613,14 @@
     "bracelet with coloured stones": [
       "P397"
     ],
+    "braided ring gold cz": [
+      "P194"
+    ],
     "brass bracelet for women": [
       "P103"
+    ],
+    "brass ring for daily wear": [
+      "P166"
     ],
     "brass star ring": [
       "P147"
@@ -1271,6 +1665,12 @@
     "bulk jewellery surprise gift": [
       "P625"
     ],
+    "butterfly charm bracelet silver": [
+      "P441"
+    ],
+    "butterfly cz ring gold": [
+      "P193"
+    ],
     "butterfly ring for women": [
       "P108"
     ],
@@ -1286,6 +1686,12 @@
     ],
     "celebration charm": [
       "P373"
+    ],
+    "centre stone bracelet silver tone": [
+      "P474"
+    ],
+    "chain bracelet set gold two piece": [
+      "P464"
     ],
     "chand pendant bracelet watch": [
       "P393"
@@ -1329,6 +1735,9 @@
     "circular link bracelet watch": [
       "P615"
     ],
+    "classic evil eye bracelet silver": [
+      "P445"
+    ],
     "clear stone bracelet": [
       "P548"
     ],
@@ -1339,6 +1748,12 @@
     ],
     "cluster earrings for festive wear": [
       "P327"
+    ],
+    "cocktail dome ring cz": [
+      "P207"
+    ],
+    "cocktail ring cz gold": [
+      "P188"
     ],
     "cocktail ring under 100": [
       "P109"
@@ -1361,6 +1776,9 @@
     "colourful stone nose ring": [
       "P487"
     ],
+    "connection symbol ring gold": [
+      "P203"
+    ],
     "copper leaf jewellery": [
       "P522"
     ],
@@ -1381,6 +1799,28 @@
     ],
     "cross bezel watch women": [
       "P622"
+    ],
+    "cross motif ring for women": [
+      "P153"
+    ],
+    "crystal centre evil eye charm": [
+      "P445"
+    ],
+    "crystal charm bracelet affordable": [
+      "P461",
+      "P462"
+    ],
+    "crystal detail evil eye bracelet": [
+      "P443"
+    ],
+    "crystal evil eye bracelet women": [
+      "P441"
+    ],
+    "crystal look bracelet affordable": [
+      "P448"
+    ],
+    "crystal look charm bracelet": [
+      "P459"
     ],
     "crystal necklace and earring gift set": [
       "P597"
@@ -1475,14 +1915,29 @@
     "cubic zirconia vine necklace": [
       "P564"
     ],
+    "curved band ring gold": [
+      "P158"
+    ],
+    "cushion halo ring gold": [
+      "P154"
+    ],
     "cut-out band ring": [
       "P110"
+    ],
+    "cute bow ring gold": [
+      "P197"
     ],
     "cute charm gift": [
       "P375"
     ],
+    "cute ring for girlfriend": [
+      "P156"
+    ],
     "cz accent ring": [
       "P143"
+    ],
+    "cz bow ring adjustable": [
+      "P209"
     ],
     "cz detailed rosegold ring": [
       "P131"
@@ -1492,6 +1947,9 @@
     ],
     "cz heart ring": [
       "P107"
+    ],
+    "cz message ring": [
+      "P156"
     ],
     "cz petal ring": [
       "P106"
@@ -1517,8 +1975,14 @@
     "cz ring instead of diamond": [
       "P132"
     ],
+    "cz ring playful design": [
+      "P161"
+    ],
     "cz set rosegold ring": [
       "P137"
+    ],
+    "cz stacking ring": [
+      "P158"
     ],
     "cz stacking ring set": [
       "P105"
@@ -1532,6 +1996,9 @@
     ],
     "cz star ring for women": [
       "P126"
+    ],
+    "cz vine leaf necklace": [
+      "P569"
     ],
     "daily wear payal": [
       "P044"
@@ -1572,6 +2039,9 @@
     "diwali bracelet": [
       "P521"
     ],
+    "double band statement ring": [
+      "P183"
+    ],
     "double chain bracelet watch": [
       "P389"
     ],
@@ -1584,8 +2054,14 @@
     "double halo studs": [
       "P030"
     ],
+    "double heart charm bracelet": [
+      "P454"
+    ],
     "dove with olive branch charm": [
       "P376"
+    ],
+    "dual motif bracelet women": [
+      "P439"
     ],
     "earthy tone kada": [
       "P249"
@@ -1608,6 +2084,9 @@
     "elephant pendant bracelet watch": [
       "P390"
     ],
+    "elongated stone bracelet": [
+      "P457"
+    ],
     "emerald green cubic zirconia necklace": [
       "P630"
     ],
@@ -1616,6 +2095,9 @@
     ],
     "emerald-cut green stone ring": [
       "P334"
+    ],
+    "enamel charm bracelet women": [
+      "P301"
     ],
     "enamel flower pendant": [
       "P508"
@@ -1638,6 +2120,9 @@
     ],
     "enamel watch for women": [
       "P023"
+    ],
+    "eternity style cz ring": [
+      "P184"
     ],
     "ethnic bracelet watch for women": [
       "P601"
@@ -1674,6 +2159,12 @@
     "everyday bracelet": [
       "P039"
     ],
+    "everyday bracelet under 50 rupees": [
+      "P450"
+    ],
+    "everyday charm bracelet affordable": [
+      "P455"
+    ],
     "everyday earrings": [
       "P026"
     ],
@@ -1682,6 +2173,9 @@
     ],
     "everyday floral bracelet": [
       "P539"
+    ],
+    "everyday floral ring india": [
+      "P208"
     ],
     "everyday flower necklace": [
       "P507"
@@ -1701,6 +2195,9 @@
     "everyday hoop earrings for women": [
       "P494"
     ],
+    "everyday motif ring india": [
+      "P193"
+    ],
     "everyday nath": [
       "P482",
       "P484"
@@ -1717,6 +2214,9 @@
     ],
     "everyday ring for women": [
       "P008"
+    ],
+    "everyday ring for women india": [
+      "P187"
     ],
     "everyday rose gold ring": [
       "P176"
@@ -1751,8 +2251,20 @@
     "evil eye bracelet for women": [
       "P447"
     ],
+    "evil eye bracelet with stone": [
+      "P442"
+    ],
+    "evil eye bracelet with wheel charm": [
+      "P440"
+    ],
+    "evil eye bracelet women": [
+      "P438"
+    ],
     "evil eye chain bracelet": [
       "P449"
+    ],
+    "eyelash charm bracelet silver": [
+      "P443"
     ],
     "face mask gift hamper": [
       "P597"
@@ -1804,6 +2316,9 @@
     "festive bracelet watch women": [
       "P620"
     ],
+    "festive cz ring adjustable": [
+      "P202"
+    ],
     "festive glass bangles": [
       "P212"
     ],
@@ -1826,6 +2341,9 @@
     ],
     "festive necklace for women": [
       "P320"
+    ],
+    "festive ring for saree": [
+      "P155"
     ],
     "festive ring for women": [
       "P014",
@@ -1867,6 +2385,13 @@
     "floral adjustable ring": [
       "P111"
     ],
+    "floral cz ring adjustable": [
+      "P155"
+    ],
+    "floral cz ring gold": [
+      "P190",
+      "P208"
+    ],
     "flower earrings for daily wear": [
       "P322"
     ],
@@ -1882,6 +2407,9 @@
     ],
     "four prong cz ring": [
       "P122"
+    ],
+    "free size open ring gift": [
+      "P205"
     ],
     "free size ring": [
       "P004",
@@ -1908,6 +2436,9 @@
     "frosted cubic zirconia studs": [
       "P027"
     ],
+    "geometric cz ring gold": [
+      "P196"
+    ],
     "geometric gold necklace": [
       "P295"
     ],
@@ -1931,6 +2462,9 @@
     ],
     "gift bracelet under 100": [
       "P449"
+    ],
+    "gift bracelet under 50 rupees": [
+      "P458"
     ],
     "gift bracelet with charms": [
       "P300"
@@ -1968,6 +2502,15 @@
     "gifting necklace for her": [
       "P434"
     ],
+    "gifting ring adjustable": [
+      "P183"
+    ],
+    "gifting ring for her india": [
+      "P190"
+    ],
+    "gifting ring for teens india": [
+      "P197"
+    ],
     "gifting ring under 100": [
       "P111"
     ],
@@ -2000,6 +2543,9 @@
     "glitter glass bangles for women": [
       "P218"
     ],
+    "glossy steel bracelet fine chain": [
+      "P399"
+    ],
     "gold botanical bangle": [
       "P511"
     ],
@@ -2026,6 +2572,9 @@
     "gold hoop earrings gift set": [
       "P545"
     ],
+    "gold kada for daily wear": [
+      "P246"
+    ],
     "gold letter ring gift": [
       "P536"
     ],
@@ -2039,8 +2588,17 @@
       "P512",
       "P529"
     ],
+    "gold tone bracelet affordable": [
+      "P451"
+    ],
+    "gold tone heart bracelet": [
+      "P455"
+    ],
     "gold tone jewellery hamper": [
       "P595"
+    ],
+    "gold tone quartz watch pearl look": [
+      "P611"
     ],
     "gold vine chain bracelet": [
       "P539",
@@ -2260,6 +2818,9 @@
     "green dial mesh watch": [
       "P621"
     ],
+    "green dial watch anti tarnish": [
+      "P611"
+    ],
     "green glass bangle set": [
       "P420"
     ],
@@ -2290,6 +2851,9 @@
     "grey bangles for women": [
       "P504"
     ],
+    "growth symbol bracelet women": [
+      "P442"
+    ],
     "hair accessories set": [
       "P049"
     ],
@@ -2318,8 +2882,20 @@
     "halo ring for women": [
       "P119"
     ],
+    "heart charm bracelet affordable": [
+      "P450"
+    ],
     "heart charm hoop earrings": [
       "P574"
+    ],
+    "heart infinity charm bracelet gift": [
+      "P459"
+    ],
+    "heart link bracelet stacking": [
+      "P468"
+    ],
+    "heart lock charm bracelet": [
+      "P452"
     ],
     "heart locket necklace": [
       "P003"
@@ -2338,6 +2914,15 @@
     ],
     "heart ring gift": [
       "P118"
+    ],
+    "heart shaped cz ring": [
+      "P199"
+    ],
+    "heartbeat bracelet gift india": [
+      "P462"
+    ],
+    "heartbeat bracelet under 50 rupees": [
+      "P451"
     ],
     "herringbone anklet": [
       "P580"
@@ -2359,6 +2944,12 @@
     ],
     "holiday keepsake charm": [
       "P374"
+    ],
+    "infinity loop bracelet gift": [
+      "P399"
+    ],
+    "infinity ring gift": [
+      "P182"
     ],
     "initial ring for women": [
       "P005"
@@ -2439,6 +3030,9 @@
       "P042",
       "P043"
     ],
+    "landmark charm bracelet india": [
+      "P460"
+    ],
     "large hair bow": [
       "P048"
     ],
@@ -2451,8 +3045,17 @@
     "lavender cubic zirconia necklace": [
       "P565"
     ],
+    "layered bow ring": [
+      "P161"
+    ],
+    "layered bow ring silver": [
+      "P209"
+    ],
     "layered drop necklace gold": [
       "P639"
+    ],
+    "layering bracelet duo affordable": [
+      "P469"
     ],
     "layering bracelet set for women": [
       "P473"
@@ -2471,11 +3074,26 @@
     "layering ring": [
       "P016"
     ],
+    "leaf accent ring gold": [
+      "P201"
+    ],
+    "leaf motif bracelet set gold": [
+      "P467"
+    ],
     "leaf shaped dial watch": [
       "P617"
     ],
+    "leaf shaped dial watch women": [
+      "P611"
+    ],
     "leaf shaped studs": [
       "P025"
+    ],
+    "leaf vine cz ring": [
+      "P191"
+    ],
+    "lifeline charm bracelet meaningful": [
+      "P462"
     ],
     "lightweight cz ring": [
       "P152"
@@ -2486,11 +3104,32 @@
     "lilac stone bracelet": [
       "P547"
     ],
+    "linear cz bar ring": [
+      "P186"
+    ],
+    "linear stone ring gold": [
+      "P185"
+    ],
     "link band ring": [
       "P009"
     ],
+    "link chain bracelet stacking": [
+      "P467"
+    ],
+    "linked charm necklace gift": [
+      "P318"
+    ],
+    "linked circle ring gold": [
+      "P192"
+    ],
+    "linked heart bracelet gold": [
+      "P454"
+    ],
     "lobster clasp bracelet": [
       "P528"
+    ],
+    "lobster clasp bracelet gold": [
+      "P301"
     ],
     "locket gift for her": [
       "P002"
@@ -2504,8 +3143,14 @@
     "love charm pendant": [
       "P102"
     ],
+    "love heart charm bracelet gold": [
+      "P458"
+    ],
     "love pendant charm": [
       "P380"
+    ],
+    "love word charm bracelet": [
+      "P453"
     ],
     "lucky clover charm": [
       "P381"
@@ -2528,12 +3173,18 @@
     "marquise cubic zirconia earrings": [
       "P327"
     ],
+    "marquise cut bracelet rose gold": [
+      "P457"
+    ],
     "marquise signet ring": [
       "P005"
     ],
     "marquise stone nath": [
       "P035",
       "P485"
+    ],
+    "matching jewellery set gifting": [
+      "P569"
     ],
     "matching necklace earring set": [
       "P319"
@@ -2565,6 +3216,9 @@
     "milgrain band ring": [
       "P115"
     ],
+    "mini heart chain necklace": [
+      "P318"
+    ],
     "mini ring set for kids": [
       "P338"
     ],
@@ -2586,6 +3240,12 @@
     "minimalist bar pendant necklace": [
       "P636"
     ],
+    "minimalist bracelet daily wear": [
+      "P399"
+    ],
+    "minimalist bracelet duo india": [
+      "P466"
+    ],
     "minimalist cubic zirconia necklace": [
       "P566"
     ],
@@ -2598,8 +3258,20 @@
     "mint bangles for women": [
       "P420"
     ],
+    "mixed cut cz ring": [
+      "P165"
+    ],
+    "modern bar ring gold": [
+      "P186"
+    ],
+    "modern geometric ring gold": [
+      "P165"
+    ],
     "modern nath for women": [
       "P478"
+    ],
+    "modern teardrop ring gift": [
+      "P196"
     ],
     "monochrome hair tie set": [
       "P585"
@@ -2609,6 +3281,9 @@
     ],
     "mothers day keepsake": [
       "P379"
+    ],
+    "multi band cz ring": [
+      "P206"
     ],
     "multi band ring for women": [
       "P123"
@@ -2625,6 +3300,9 @@
     "multicolour stone bracelet": [
       "P397"
     ],
+    "music charm bracelet gift": [
+      "P461"
+    ],
     "nath for diwali": [
       "P487"
     ],
@@ -2634,6 +3312,18 @@
     "nath for wedding": [
       "P032",
       "P475"
+    ],
+    "nature inspired cz ring": [
+      "P201"
+    ],
+    "nature motif ring gold": [
+      "P191"
+    ],
+    "nautical bracelet silver toned": [
+      "P440"
+    ],
+    "nautical evil eye bracelet": [
+      "P439"
     ],
     "navy earrings for women": [
       "P026"
@@ -2687,6 +3377,9 @@
     "open adjustable ring": [
       "P108"
     ],
+    "open band ring adjustable": [
+      "P156"
+    ],
     "open band ring with stones": [
       "P355"
     ],
@@ -2698,6 +3391,12 @@
     ],
     "open oval link chain watch": [
       "P623"
+    ],
+    "open silhouette ring adjustable": [
+      "P196"
+    ],
+    "openable clasp kada": [
+      "P246"
     ],
     "openable kada bangle": [
       "P241"
@@ -2738,8 +3437,20 @@
     "palm tree charm": [
       "P374"
     ],
+    "paperclip chain bracelet set gold": [
+      "P468"
+    ],
+    "paperclip link bracelet stacking": [
+      "P464"
+    ],
+    "paris charm bracelet gift": [
+      "P460"
+    ],
     "party ring for women": [
       "P109"
+    ],
+    "party ring under 100 rupees": [
+      "P188"
     ],
     "party wear bangles": [
       "P282"
@@ -2765,8 +3476,27 @@
     "pastel stud earrings": [
       "P322"
     ],
+    "pave band ring gold": [
+      "P184"
+    ],
     "pave cz butterfly ring": [
       "P121"
+    ],
+    "pave cz crossover ring": [
+      "P182"
+    ],
+    "pave cz ring gold": [
+      "P173",
+      "P187"
+    ],
+    "pave cz ring modern shape": [
+      "P192"
+    ],
+    "pave dome ring gold": [
+      "P207"
+    ],
+    "pave style cz ring": [
+      "P172"
     ],
     "peach bangles for women": [
       "P419"
@@ -2786,8 +3516,17 @@
     "pearl bracelet rakhi hamper": [
       "P600"
     ],
+    "pearl look bracelet set gold": [
+      "P465"
+    ],
+    "pearl look bracelet stacking": [
+      "P463"
+    ],
     "pearl look bracelet watch": [
       "P617"
+    ],
+    "pearl look ring gold": [
+      "P205"
     ],
     "pearl necklace and earrings hamper": [
       "P596"
@@ -2816,6 +3555,9 @@
     ],
     "personalised ring for women": [
       "P001"
+    ],
+    "pineapple banana charm bracelet": [
+      "P301"
     ],
     "pink bangles for festive wear": [
       "P499"
@@ -2848,6 +3590,18 @@
     "plain band ring": [
       "P011"
     ],
+    "plain heart charm bracelet": [
+      "P455"
+    ],
+    "playful cz ring adjustable": [
+      "P197"
+    ],
+    "playful ring adjustable": [
+      "P193"
+    ],
+    "playful ring for gifting": [
+      "P209"
+    ],
     "polished gold ring": [
       "P020"
     ],
@@ -2863,8 +3617,17 @@
     "pressure fit nath": [
       "P034"
     ],
+    "princess cut cz ring": [
+      "P195"
+    ],
     "protection bracelet gift": [
       "P447"
+    ],
+    "protective symbol bracelet silver": [
+      "P438"
+    ],
+    "pulse line charm bracelet": [
+      "P451"
     ],
     "purple cubic zirconia bracelet": [
       "P547"
@@ -2901,6 +3664,9 @@
     ],
     "rectangular dial bracelet watch": [
       "P614"
+    ],
+    "rectangular halo ring silver": [
+      "P170"
     ],
     "rectangular oval dial watch": [
       "P619"
@@ -2941,6 +3707,9 @@
     "remembrance jewellery": [
       "P516"
     ],
+    "rhodium plated cz ring set": [
+      "P163"
+    ],
     "rhodium-plated bow ring": [
       "P019"
     ],
@@ -2965,6 +3734,18 @@
     ],
     "roman numeral watch green dial": [
       "P614"
+    ],
+    "romantic charm bracelet affordable": [
+      "P458"
+    ],
+    "romantic gift ring gold": [
+      "P199"
+    ],
+    "rope chain bracelet affordable": [
+      "P464"
+    ],
+    "rope chain bracelet gold": [
+      "P471"
     ],
     "rose enamel jewellery": [
       "P528"
@@ -3017,6 +3798,18 @@
     "rosegold star ring for gifting": [
       "P134"
     ],
+    "round cut cubic zirconia ring": [
+      "P155"
+    ],
+    "round evil eye bracelet daily wear": [
+      "P446"
+    ],
+    "round evil eye charm bracelet": [
+      "P445"
+    ],
+    "rust-resistant kada bracelet": [
+      "P246"
+    ],
     "sage and ivory enamel bangle": [
       "P249"
     ],
@@ -3061,6 +3854,9 @@
       "P487",
       "P488"
     ],
+    "script charm bracelet gold": [
+      "P453"
+    ],
     "scrunchie set of four": [
       "P588"
     ],
@@ -3086,11 +3882,23 @@
     "shimmer bow clip": [
       "P048"
     ],
+    "ship wheel charm bracelet": [
+      "P440"
+    ],
+    "silver evil eye charm bracelet": [
+      "P446"
+    ],
     "silver nath for wedding": [
       "P481"
     ],
     "silver or golden ring": [
       "P010"
+    ],
+    "silver tone bracelet stacking": [
+      "P448"
+    ],
+    "silver tone charm bracelet": [
+      "P450"
     ],
     "silver-finish beaded ring": [
       "P329",
@@ -3136,14 +3944,26 @@
     "silver-tone ring for gifting": [
       "P151"
     ],
+    "simple evil eye bracelet silver": [
+      "P444"
+    ],
     "simple ring for daily wear": [
       "P122"
+    ],
+    "simple solitaire ring adjustable": [
+      "P195"
     ],
     "single colour bracelet": [
       "P039"
     ],
     "single flower pendant": [
       "P516"
+    ],
+    "single motif protective bracelet": [
+      "P444"
+    ],
+    "single stone ring gold": [
+      "P195"
     ],
     "six pair earring gift set": [
       "P596"
@@ -3217,6 +4037,18 @@
     "solid bangle bracelet": [
       "P036"
     ],
+    "solitaire crystal bracelet rose gold": [
+      "P456"
+    ],
+    "solitaire cz ring gold": [
+      "P183"
+    ],
+    "solitaire style cz ring": [
+      "P162"
+    ],
+    "solitaire tennis bracelet silver": [
+      "P474"
+    ],
     "son keepsake charm": [
       "P378"
     ],
@@ -3250,8 +4082,14 @@
     "stacking band for women": [
       "P115"
     ],
+    "stacking ring adjustable gift": [
+      "P184"
+    ],
     "stacking ring for women": [
       "P204"
+    ],
+    "stacking ring set adjustable": [
+      "P163"
     ],
     "stacking rings for women": [
       "P338"
@@ -3278,6 +4116,9 @@
     ],
     "stainless steel textured hoops": [
       "P497"
+    ],
+    "star motif cz ring": [
+      "P205"
     ],
     "star outline ring": [
       "P133"
@@ -3311,6 +4152,9 @@
     "star ring gift for her": [
       "P137"
     ],
+    "star setting cz ring": [
+      "P153"
+    ],
     "star shaped ring for gifting": [
       "P124"
     ],
@@ -3336,6 +4180,12 @@
     "stud earring set": [
       "P508"
     ],
+    "studded band ring rose gold": [
+      "P200"
+    ],
+    "studded flower ring rose gold": [
+      "P202"
+    ],
     "sunburst necklace": [
       "P292"
     ],
@@ -3354,6 +4204,9 @@
     "teardrop charm nose pin": [
       "P480"
     ],
+    "teardrop evil eye charm": [
+      "P444"
+    ],
     "teardrop locket": [
       "P002"
     ],
@@ -3363,14 +4216,26 @@
     "teej bangles": [
       "P043"
     ],
+    "tennis bracelet single stone": [
+      "P456"
+    ],
+    "tennis bracelet under 50 rupees": [
+      "P448"
+    ],
     "textured band ring": [
       "P013"
+    ],
+    "textured chain bracelet stacking": [
+      "P465"
     ],
     "textured chain necklace": [
       "P428"
     ],
     "textured gold bracelet watch": [
       "P610"
+    ],
+    "textured heart necklace gold": [
+      "P318"
     ],
     "textured hoop earrings for women": [
       "P570",
@@ -3382,6 +4247,9 @@
     ],
     "textured medallion pendant": [
       "P635"
+    ],
+    "textured stacking ring": [
+      "P194"
     ],
     "thin gold ring for women": [
       "P016"
@@ -3417,6 +4285,12 @@
       "P420",
       "P421"
     ],
+    "treble clef jewellery india": [
+      "P461"
+    ],
+    "tree of life bracelet silver": [
+      "P442"
+    ],
     "tree of life style charm": [
       "P372"
     ],
@@ -3447,14 +4321,42 @@
     "twelve charm locket": [
       "P003"
     ],
+    "twin stone cz ring": [
+      "P170"
+    ],
     "twisted kangan set": [
       "P279"
+    ],
+    "twisted link bracelet stacking": [
+      "P466"
+    ],
+    "two design ring adjustable": [
+      "P190"
+    ],
+    "two disk statement ring": [
+      "P173"
     ],
     "two hands ring": [
       "P007"
     ],
+    "two piece bracelet set gold": [
+      "P463",
+      "P469"
+    ],
+    "two piece bracelet set india": [
+      "P465"
+    ],
+    "two piece chain bracelet duo": [
+      "P470"
+    ],
     "two piece chain bracelet set": [
       "P473"
+    ],
+    "two piece chain set affordable": [
+      "P471"
+    ],
+    "two ring set for women": [
+      "P163"
     ],
     "two vintage watches gift jar": [
       "P627"
@@ -3464,6 +4366,9 @@
     ],
     "two-tone silver and gold ring": [
       "P332"
+    ],
+    "unique evil eye bracelet design": [
+      "P443"
     ],
     "unique gift ring": [
       "P513"
@@ -3497,6 +4402,9 @@
     "wave design glass bangles": [
       "P212"
     ],
+    "wave ring adjustable": [
+      "P158"
+    ],
     "wedding bangle set": [
       "P417"
     ],
@@ -3508,6 +4416,9 @@
     ],
     "wedding nath": [
       "P035"
+    ],
+    "whimsical evil eye jewellery": [
+      "P441"
     ],
     "white dial bracelet watch": [
       "P615"
@@ -3523,6 +4434,9 @@
     ],
     "wide ring for women": [
       "P117"
+    ],
+    "winged charm bracelet gold": [
+      "P452"
     ],
     "word charm for chain": [
       "P380"

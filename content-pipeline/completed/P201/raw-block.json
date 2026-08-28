@@ -1,0 +1,46 @@
+{
+  "productId": "P201",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "499",
+    "workingId": "odoo-499",
+    "originalSku": "MJ-134",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-134-butterfly-circle-cz-gold-plated-adjustable-ring-499",
+    "referenceTitle": "Butterfly Circle CZ Gold-Plated Adjustable Ring",
+    "rawContent": "Product Description:\nShowcase whimsical elegance with the Butterfly Circle CZ Gold-Plated Adjustable Ring for Women. This enchanting ring features a sparkling CZ-studded circle adorned with a delicate Butterfly accent, set on a radiant gold-plated band. Perfect for nature lovers and style seekers, the Butterfly Circle CZ Gold-Plated Adjustable Ring for Women adds a magical yet sophisticated touch to every look, whether for daily flair or special gifting.\nWhy You Will Love It:\n✨ Unique Butterfly and circle design brings fresh, modern style\n✨ Sparkling CZ stones add luxury and shimmer\n✨ Adjustable fit for all-day comfort and versatility\n✨ Perfect for everyday elegance, parties, or gifting\nHighlights / Specifications:\n🔹 Material: High-quality, sturdy alloy\n🔹 Plating: Lush gold plating for lasting radiance\n🔹 Stone Type: Brilliant pavé-set cubic zirconia\n🔹 Design: Nature-inspired circle ring with leaf accent\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Showcase whimsical elegance with the <strong>Butterfly Circle CZ Gold-Plated Adjustable Ring for Women</strong>. This enchanting ring features a sparkling CZ-studded circle adorned with a delicate Butterfly accent, set on a radiant gold-plated band. Perfect for nature lovers and style seekers, the <strong><strong>Butterfly</strong> Circle CZ Gold-Plated Adjustable Ring for Women</strong> adds a magical yet sophisticated touch to every look, whether for daily flair or special gifting.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Unique Butterfly and circle design brings fresh, modern style</p>\n<p>✨ Sparkling CZ stones add luxury and shimmer</p>\n<p>✨ Adjustable fit for all-day comfort and versatility</p>\n<p>✨ Perfect for everyday elegance, parties, or gifting</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> High-quality, sturdy alloy</p>\n<p>🔹 <strong>Plating:</strong> Lush gold plating for lasting radiance</p>\n<p>🔹 <strong>Stone Type:</strong> Brilliant pavé-set cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Nature-inspired circle ring with leaf accent</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable for most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, and thoughtful gifting</p>\n<p>\n\n</p>\n<p>\n\n</p>\n\n<p><strong>Care Instructions:</strong></p>\n\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n\n<p><strong>Perfect For:</strong></p>\n\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Enchanting adjustable butterfly circle ring studded with CZ. A delicate yet stylish accessory for daily wear & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P201.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P201/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

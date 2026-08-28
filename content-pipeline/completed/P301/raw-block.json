@@ -1,0 +1,47 @@
+{
+  "productId": "P301",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "709",
+    "workingId": "odoo-709",
+    "originalSku": "MJ-319",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-319-gold-plated-stainless-steel-fruit-charm-bracelet-709",
+    "referenceTitle": "Gold-Plated Stainless Steel Fruit Charm Bracelet",
+    "rawContent": "- This playful gold-toned chain bracelet features a delightful assortment of fruit charms, including bananas, a pineapple, a watermelon slice, and possibly others (it's a bit unclear from the bottom charm). It's a fun and unique accessory to add a touch of whimsy to your look.\n-\n- Material: Stainless Steel\n- Plating: Gold-Plated\n- Stone type: Enamel\n- Closure: Lobster closure\n- Warranty: 1 month, provided by brand owner/manufacturer\n- Size & Fit: The Length Of Bracelet Is 17Cm. The Length Of The Adjustable Chain Is 5Cm. Weight Is 4G.\n- Care Instructions:\n- Wipe your jewelry with a soft cloth after every use.\n- Always store your jewelry in a flat box to avoid accidental scratches.\n- Keep sprays and perfumes away from your jewelry.\n- Do not soak your jewelry in water.\n- Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only.\n- Keywords: fruit bracelet, charm bracelet, gold bracelet, anti-tarnish jewelry, stainless steel, banana charm, pineapple charm, watermelon charm, playful jewelry, unique bracelet, gift for her",
+    "rawHtml": "<ul><li>This playful gold-toned chain bracelet features a delightful assortment of fruit charms, including bananas, a pineapple, a watermelon slice, and possibly others (it's a bit unclear from the bottom charm). It's a fun and unique accessory to add a touch of whimsy to your look.</li><li class=\"oe-nested\"><ul><li><b>Material:</b> Stainless Steel</li><li><b>Plating:</b> Gold-Plated</li><li><b>Stone type:</b> Enamel</li><li><b>Closure:</b> Lobster closure</li><li><b>Warranty:</b> 1 month, provided by brand owner/manufacturer</li><li><b>Size &amp; Fit:</b> The Length Of Bracelet Is 17Cm. The Length Of The Adjustable Chain Is 5Cm. Weight Is 4G.</li><li><b>Care Instructions:</b><ul><li>Wipe your jewelry with a soft cloth after every use.</li><li>Always store your jewelry in a flat box to avoid accidental scratches.</li><li>Keep sprays and perfumes away from your jewelry.</li><li>Do not soak your jewelry in water.</li><li>Clean your jewelry using a soft brush, dipped in a jewelry cleaning solution only.</li></ul></li></ul></li><li><b>Keywords:</b> fruit bracelet, charm bracelet, gold bracelet, anti-tarnish jewelry, stainless steel, banana charm, pineapple charm, watermelon charm, playful jewelry, unique bracelet, gift for her</li></ul>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": "Fun gold-plated stainless steel fruit charm bracelet. Anti-tarnish, playful & stylish accessory perfect for daily glam or gifting.",
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P301.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P301/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹199 sale price (morchadijewels.com, reference only)"
+  }
+}

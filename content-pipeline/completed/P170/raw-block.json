@@ -1,0 +1,46 @@
+{
+  "productId": "P170",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "215",
+    "workingId": "odoo-215",
+    "originalSku": "MJ-218",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-218-double-emerald-cut-cz-silver-plated-ring-215",
+    "referenceTitle": "Double Emerald-Cut CZ Silver-Plated Ring",
+    "rawContent": "Product Description:\nRadiate with sophistication wearing the Double Emerald-Cut CZ Silver-Plated Ring for Women. This dazzling ring features two large emerald-cut CZ stones, framed with brilliant halos for a luxurious finish. Designed to catch every eye, the Double Emerald-Cut CZ Silver-Plated Ring for Women is an instant showstopper, perfect for adding glamour and sparkle to your style, whether for everyday chic or a special event.\nWhy You Will Love It:\n✨ Glamorous double emerald-cut centerpiece for maximum brilliance\n✨ Sparkling halos amplify elegance and shine\n✨ Comfortable adjustable fit for effortless wear\n✨ Makes a stunning gift for birthdays, anniversaries, or celebrations\nHighlights / Specifications:\n🔹 Material: Premium high-quality alloy\n🔹 Plating: Lustrous silver plating for a dazzling look\n🔹 Stone Type: Emerald-cut cubic zirconia with halo accent stones\n🔹 Design: Double twin rectangular solitaire for elegant statement\n🔹 Size/Fit: Adjustable band fits most finger sizes\n🔹 Best Use: Perfect for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Radiate with sophistication wearing the <strong>Double Emerald-Cut CZ Silver-Plated Ring for Women</strong>. This dazzling ring features two large emerald-cut CZ stones, framed with brilliant halos for a luxurious finish. Designed to catch every eye, the <strong>Double Emerald-Cut CZ Silver-Plated Ring for Women</strong> is an instant showstopper, perfect for adding glamour and sparkle to your style, whether for everyday chic or a special event.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Glamorous double emerald-cut centerpiece for maximum brilliance</p>\n<p>✨ Sparkling halos amplify elegance and shine</p>\n<p>✨ Comfortable adjustable fit for effortless wear</p>\n<p>✨ Makes a stunning gift for birthdays, anniversaries, or celebrations</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Premium high-quality alloy</p>\n<p>🔹 <strong>Plating:</strong> Lustrous silver plating for a dazzling look</p>\n<p>🔹 <strong>Stone Type:</strong> Emerald-cut cubic zirconia with halo accent stones</p>\n<p>🔹 <strong>Design:</strong> Double twin rectangular solitaire for elegant statement</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable band fits most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Perfect for daily wear, party wear, or gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Glamorous double emerald-cut CZ silver-plated ring with halos. Adjustable fit, stunning sparkle for parties, weddings & gifts.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P170.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P170/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "productId": "P462",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "918",
+    "workingId": "odoo-918",
+    "originalSku": "MJ-283",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-283-gold-heartbeat-lifeline-bracelet-918",
+    "referenceTitle": "Gold Heartbeat Lifeline Bracelet",
+    "rawContent": "Pulse with style in this exquisite gold-toned Heartbeat Bracelet. Featuring a crystal-studded lifeline motif, this trendy piece adds a sentimental glow to any look. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after every wear.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Pulse with style in this exquisite gold-toned Heartbeat Bracelet. Featuring a crystal-studded lifeline motif, this trendy piece adds a sentimental glow to any look. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after every wear.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "duplicate title shared with template(s) 907",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P462.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P462/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

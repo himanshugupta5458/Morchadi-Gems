@@ -1,0 +1,47 @@
+{
+  "productId": "P452",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "908",
+    "workingId": "odoo-908",
+    "originalSku": "MJ-300",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-300-gold-winged-heart-lock-bracelet-908",
+    "referenceTitle": "Gold Winged Heart Lock Bracelet",
+    "rawContent": "Unlock elegance with our Winged Heart Bracelet. This trendy golden piece features a crystal-studded heart lock with delicate wings for a whimsical, high-fashion look. To preserve its radiant luster, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Unlock elegance with our Winged Heart Bracelet. This trendy golden piece features a crystal-studded heart lock with delicate wings for a whimsical, high-fashion look. To preserve its radiant luster, we recommend keeping it away from moisture and perfumes, and storing it safely in a dry place after use.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P452.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P452/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

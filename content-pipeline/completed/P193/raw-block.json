@@ -1,0 +1,46 @@
+{
+  "productId": "P193",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "491",
+    "workingId": "odoo-491",
+    "originalSku": "MJ-135",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-135-butterfly-design-dual-band-ring-491",
+    "referenceTitle": "Butterfly Design Dual Band Ring",
+    "rawContent": "Product Description:\nElevate your look with the enchanting Butterfly Design Dual Band Ring for Women. This captivating ring showcases sparkling butterflies and shimmering stones, making every gesture uniquely elegant. The chic dual band design adds a modern twist to your jewelry collection. With the Butterfly Design Dual Band Ring for Women, express your playful charm and sophisticated style, perfect for every occasion from daily wear to festive celebrations.\nWhy You Will Love It:\n✨ Unique butterfly motif adds a whimsical touch\n✨ Dazzling stones for extra sparkle\n✨ Dual band design for a trendy and comfortable fit\n✨ Makes a fabulous gift for fashion lovers\nHighlights / Specifications:\n🔹 Material: Durable high-quality alloy\n🔹 Plating: Premium gold plating for enhanced shine\n🔹 Stone Type: Beautifully set cubic zirconia stones\n🔹 Design: Dual band with intricate butterfly detailing\n🔹 Size/Fit: Adjustable design for comfortable wear\n🔹 Best Use: Ideal for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Elevate your look with the enchanting <strong>Butterfly Design Dual Band Ring for Women</strong>. This captivating ring showcases sparkling butterflies and shimmering stones, making every gesture uniquely elegant. The chic dual band design adds a modern twist to your jewelry collection. With the <strong>Butterfly Design Dual Band Ring for Women</strong>, express your playful charm and sophisticated style, perfect for every occasion from daily wear to festive celebrations.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Unique butterfly motif adds a whimsical touch</p>\n<p>✨ Dazzling stones for extra sparkle</p>\n<p>✨ Dual band design for a trendy and comfortable fit</p>\n<p>✨ Makes a fabulous gift for fashion lovers</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Durable high-quality alloy</p>\n<p>🔹 <strong>Plating:</strong> Premium gold plating for enhanced shine</p>\n<p>🔹 <strong>Stone Type:</strong> Beautifully set cubic zirconia stones</p>\n<p>🔹 <strong>Design:</strong> Dual band with intricate butterfly detailing</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable design for comfortable wear</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, or gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Trendy dual band butterfly ring with sparkling CZ accents. Adjustable, chic & versatile for daily elegance or festive gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P193.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P193/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

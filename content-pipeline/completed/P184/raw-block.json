@@ -1,0 +1,46 @@
+{
+  "productId": "P184",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "482",
+    "workingId": "odoo-482",
+    "originalSku": "MJ-451",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-451-pave-cz-gold-plated-band-ring-482",
+    "referenceTitle": "Pavé CZ Gold-Plated Band Ring",
+    "rawContent": "Product Description:\nShine with understated luxury wearing the Pavé CZ Gold-Plated Band Ring for Women. This classic ring features a full band encrusted with sparkling cubic zirconia, set in a warm gold-plated frame for a look that radiates elegance and charm. Whether you wear it solo or stack it, the Pavé CZ Gold-Plated Band Ring for Women is your go-to piece for effortless glamour, perfect for every occasion.\nWhy You Will Love It:\n✨ Timeless pavé CZ band for continuous sparkle\n✨ Elegant gold-plated finish adds a touch of luxury\n✨ Adjustable fit for comfortable, secure wear\n✨ Perfect for everyday style, special events, or gifting\nHighlights / Specifications:\n🔹 Material: High-quality, sturdy alloy\n🔹 Plating: Rich gold plating for lasting shine\n🔹 Stone Type: Brilliant pavé-set cubic zirconia\n🔹 Design: Classic full-band pavé style\n🔹 Size/Fit: Adjustable for most finger sizes\n🔹 Best Use: Ideal for daily wear, party wear, and gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Shine with understated luxury wearing the <strong>Pavé CZ Gold-Plated Band Ring for Women</strong>. This classic ring features a full band encrusted with sparkling cubic zirconia, set in a warm gold-plated frame for a look that radiates elegance and charm. Whether you wear it solo or stack it, the <strong>Pavé CZ Gold-Plated Band Ring for Women</strong> is your go-to piece for effortless glamour, perfect for every occasion.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Timeless pavé CZ band for continuous sparkle</p>\n<p>✨ Elegant gold-plated finish adds a touch of luxury</p>\n<p>✨ Adjustable fit for comfortable, secure wear</p>\n<p>✨ Perfect for everyday style, special events, or gifting</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> High-quality, sturdy alloy</p>\n<p>🔹 <strong>Plating:</strong> Rich gold plating for lasting shine</p>\n<p>🔹 <strong>Stone Type:</strong> Brilliant pavé-set cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Classic full-band pavé style</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable for most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Ideal for daily wear, party wear, and gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Classic pavé gold-plated band ring encrusted with CZ stones. Adjustable, timeless piece for daily wear, parties & elegant gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P184.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P184/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

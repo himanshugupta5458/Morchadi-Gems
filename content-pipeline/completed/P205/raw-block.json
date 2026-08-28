@@ -1,0 +1,46 @@
+{
+  "productId": "P205",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "503",
+    "workingId": "odoo-503",
+    "originalSku": "MJ-415",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-415-minimal-rose-gold-floral-star-ring-503",
+    "referenceTitle": "Minimal Rose Gold Floral & Star Ring",
+    "rawContent": "Elegant and trendy, this dual open ring set features a dainty flower made of mini pearl beads and a sparkling star motif with premium cubic zirconia stones. Finished in smooth gold plating, it brings a minimal yet stylish charm—perfect for daily wear or gifting to someone special.\n- Material: High-quality alloy base\n- Plating: Premium gold plated\n- Stone Type: Faux pearl + cubic zirconia\n- Design: Open adjustable ring with floral and star motifs\n- Size / Fit: Free size – adjustable (comfortable for most finger sizes)\n- Best Suitable For: Daily wear, party wear, gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elegant and trendy, this dual open ring set features a dainty flower made of mini pearl beads and a sparkling star motif with premium cubic zirconia stones. Finished in smooth gold plating, it brings a minimal yet stylish charm—perfect for daily wear or gifting to someone special.</p><ul>\n<li><p><strong>Material:</strong> High-quality alloy base</p></li>\n<li><p><strong>Plating:</strong> Premium gold plated</p></li>\n<li><p><strong>Stone Type:</strong> Faux pearl + cubic zirconia</p></li>\n<li><p><strong>Design:</strong> Open adjustable ring with floral and star motifs</p></li>\n<li><p><strong>Size / Fit:</strong> Free size – adjustable (comfortable for most finger sizes)</p></li>\n<li><p><strong>Best Suitable For:</strong> Daily wear, party wear, gifting</p></li>\n</ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Elegant rose gold open ring with pearl flower & CZ star. Minimalist, chic accessory perfect for daily wear & stylish gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P205.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P205/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

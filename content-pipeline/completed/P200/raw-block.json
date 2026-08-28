@@ -1,0 +1,46 @@
+{
+  "productId": "P200",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "498",
+    "workingId": "odoo-498",
+    "originalSku": "MJ-514",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-514-rose-gold-plated-oval-ad-solitaire-ring-498",
+    "referenceTitle": "Rose Gold-Plated Oval AD Solitaire Ring",
+    "rawContent": "Keep it elegant and timeless with this Rose gold-plated adjustable solitaire ring, featuring a radiant oval American Diamond stone complemented by a delicate studded band. Perfect for daily wear, office looks, or gifting, this ring adds effortless charm to any outfit.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: Oval American Diamond (AD) with side stones\n- Design: Solitaire-inspired with slim studded band\n- Size & Fit: Adjustable – fits comfortably on most finger sizes\n- Style & Use: Best for daily wear, office wear, and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Keep it elegant and timeless with this <strong>Rose</strong>&nbsp;<strong>gold-plated adjustable solitaire ring</strong>, featuring a radiant <strong>oval American Diamond stone</strong> complemented by a delicate studded band. Perfect for <strong>daily wear, office looks, or gifting</strong>, this ring adds effortless charm to any outfit.</p><ul>\n<li><p><strong>Material:</strong> Brass base</p></li>\n<li><p><strong>Plating:</strong> Premium Gold-plated finish</p></li>\n<li><p><strong>Stone Type:</strong> Oval American Diamond (AD) with side stones</p></li>\n<li><p><strong>Design:</strong> Solitaire-inspired with slim studded band</p></li>\n<li><p><strong>Size &amp; Fit:</strong> Adjustable – fits comfortably on most finger sizes</p></li>\n<li><p><strong>Style &amp; Use:</strong> Best for daily wear, office wear, and gifting</p></li></ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Classic oval solitaire AD ring with studded band. Rose gold plated & adjustable, perfect for daily wear, office or festive looks.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P200.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P200/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

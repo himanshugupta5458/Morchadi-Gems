@@ -1,0 +1,47 @@
+{
+  "productId": "P456",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "912",
+    "workingId": "odoo-912",
+    "originalSku": "MJ-236",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-236-elegant-rose-gold-tennis-bracelet-912",
+    "referenceTitle": "Elegant Rose Gold Tennis Bracelet",
+    "rawContent": "Elevate your style with this stunning rose gold-toned tennis bracelet, featuring a brilliant solitaire crystal. Perfect for adding high-fashion glamour to any outfit. To preserve its radiant finish and sparkle, we recommend keeping it away from moisture and perfumes, and storing it in a dry place after every wear.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Elevate your style with this stunning rose gold-toned tennis bracelet, featuring a brilliant solitaire crystal. Perfect for adding high-fashion glamour to any outfit. To preserve its radiant finish and sparkle, we recommend keeping it away from moisture and perfumes, and storing it in a dry place after every wear.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P456.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P456/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

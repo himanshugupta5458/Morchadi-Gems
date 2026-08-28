@@ -1,0 +1,46 @@
+{
+  "productId": "P186",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "484",
+    "workingId": "odoo-484",
+    "originalSku": "MJ-487",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-487-rectangular-baguette-cz-gold-plated-ring-484",
+    "referenceTitle": "Rectangular Baguette CZ Gold-Plated Ring",
+    "rawContent": "Product Description:\nStep out in style with the captivating Rectangular Baguette CZ Gold-Plated Ring for Women. This unique bar ring boasts a sleek gold-plated frame set with shimmering baguette-cut CZ stones for a contemporary yet timeless feel. Designed to redefine elegance, the Rectangular Baguette CZ Gold-Plated Ring for Women adds a statement finish to every outfit, making it the perfect accessory for the trendsetting woman.\nWhy You Will Love It:\n✨ Chic rectangular bar design for a fashion-forward look\n✨ Stunning baguette CZ stones for brilliant shine\n✨ Adjustable fit ensures lasting comfort\n✨ Perfect for casual sophistication or party glam\nHighlights / Specifications:\n🔹 Material: Durable, premium-quality alloy\n🔹 Plating: Glossy gold plating for a luxurious touch\n🔹 Stone Type: Sparkling baguette-cut cubic zirconia\n🔹 Design: Modern rectangular bar with linear stone setting\n🔹 Size/Fit: Adjustable to suit most finger sizes\n🔹 Best Use: Great for daily wear, party wear, or thoughtful gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Step out in style with the captivating <strong>Rectangular Baguette CZ Gold-Plated Ring for Women</strong>. This unique bar ring boasts a sleek gold-plated frame set with shimmering baguette-cut CZ stones for a contemporary yet timeless feel. Designed to redefine elegance, the <strong>Rectangular Baguette CZ Gold-Plated Ring for Women</strong> adds a statement finish to every outfit, making it the perfect accessory for the trendsetting woman.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Chic rectangular bar design for a fashion-forward look</p>\n<p>✨ Stunning baguette CZ stones for brilliant shine</p>\n<p>✨ Adjustable fit ensures lasting comfort</p>\n<p>✨ Perfect for casual sophistication or party glam</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Durable, premium-quality alloy</p>\n<p>🔹 <strong>Plating:</strong> Glossy gold plating for a luxurious touch</p>\n<p>🔹 <strong>Stone Type:</strong> Sparkling baguette-cut cubic zirconia</p>\n<p>🔹 <strong>Design:</strong> Modern rectangular bar with linear stone setting</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to suit most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Great for daily wear, party wear, or thoughtful gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Elegant rectangular baguette CZ gold-plated ring. Modern, adjustable design perfect for daily wear, parties & special gifts.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P186.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P186/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

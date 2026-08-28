@@ -1,0 +1,47 @@
+{
+  "productId": "P441",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "895",
+    "workingId": "odoo-895",
+    "originalSku": "MJ-549",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-549-silver-butterfly-evil-eye-bracelet-895",
+    "referenceTitle": "Silver Butterfly Evil Eye Bracelet",
+    "rawContent": "Embrace whimsical charm and protection with this stunning butterfly evil eye bracelet. Featuring a sparkling crystal-studded design, this fashionable statement piece shines brightest when kept away from moisture and perfumes. Store in a dry place after each wear to preserve its radiant silver-toned luster.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><p><span style=\"font-style: normal;\">Embrace whimsical charm and protection with this stunning butterfly evil eye bracelet. Featuring a sparkling crystal-studded design, this fashionable statement piece shines brightest when kept away from moisture and perfumes. Store in a dry place after each wear to preserve its radiant silver-toned luster.</span><br></p></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P441.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P441/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

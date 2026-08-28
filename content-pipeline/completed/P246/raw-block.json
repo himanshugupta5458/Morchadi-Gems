@@ -1,0 +1,56 @@
+{
+  "productId": "P246",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "631",
+    "workingId": "odoo-631",
+    "originalSku": "MJ-040",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-040-anti-tarnish-kada-bracelet-631",
+    "referenceTitle": "Anti Tarnish Kada Bracelet",
+    "rawContent": "- Elevate your style with our Premium Anti-Tarnish Openable Kada – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.\n- Features:\n- Material: High-quality anti-tarnish metal\n- Design: Openable clasp for ease of wear\n- Finish: Long-lasting shine & rust-resistant\n- Ideal For: Casual, festive, and party wear\n- Care Tip: Wipe with a soft cloth after use and store in a dry place",
+    "rawHtml": "<div data-oe-version=\"2.0\"><ul><li>Elevate your style with our <strong>Premium Anti-Tarnish Openable Kada</strong> – designed for both elegance and comfort. Crafted with high-quality materials, this kada features a smooth openable clasp for easy wear and removal. Its sturdy build ensures long-lasting shine without tarnishing, making it perfect for daily wear or special occasions. Available in a variety of unique designs and colors to match every outfit.</li><li><strong>Features:</strong></li>\n<li><p><strong>Material:</strong> High-quality anti-tarnish metal</p></li>\n<li><p><strong>Design:</strong> Openable clasp for ease of wear</p></li>\n<li><p><strong>Finish:</strong> Long-lasting shine &amp; rust-resistant</p></li>\n<li><p><strong>Ideal For:</strong> Casual, festive, and party wear</p></li>\n<li><p><strong>Care Tip:</strong> Wipe with a soft cloth after use and store in a dry place</p></li></ul></div>",
+    "originalCategories": [
+      "Anti Tarnish bracelet"
+    ],
+    "originalMetaDescription": "Premium openable anti-tarnish kada with gold finish. Long-lasting shine, rust-resistant & perfect for festive or daily wear.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "bracelets",
+  "subcategory": "anti-tarnish",
+  "suggestedCollections": [
+    "anti-tarnish"
+  ],
+  "variants": [
+    {
+      "optionName": "Design Number",
+      "values": [
+        "1",
+        "4"
+      ]
+    }
+  ],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P246.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P246/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹299 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P439",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "893",
+    "workingId": "odoo-893",
+    "originalSku": "MJ-571",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-571-sparkling-silver-anchor-evil-eye-bracelet-893",
+    "referenceTitle": "Sparkling Silver Anchor & Evil Eye Bracelet",
+    "rawContent": "Stay grounded and protected with this chic anchor and evil eye charm bracelet. A perfect high-fashion accessory for coastal-inspired looks, it keeps its brilliant silver shine best when kept dry. To preserve its luster, avoid moisture and perfumes, and store in its original packaging after use.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Stay grounded and protected with this chic anchor and evil eye charm bracelet. A perfect high-fashion accessory for coastal-inspired looks, it keeps its brilliant silver shine best when kept dry. To preserve its luster, avoid moisture and perfumes, and store in its original packaging after use.</div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P439.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P439/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

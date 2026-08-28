@@ -1,0 +1,47 @@
+{
+  "productId": "P438",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "892",
+    "workingId": "odoo-892",
+    "originalSku": "MJ-550",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-550-silver-evil-eye-bracelet-with-sparkling-crystals-892",
+    "referenceTitle": "Silver Evil Eye Bracelet with Sparkling Crystals",
+    "rawContent": "Add a touch of mystical charm to your look with this sparkling Evil Eye bracelet. Designed for effortless daily styling, this high-fashion piece shines brightest when kept away from water and perfumes. Store in a dry place after each wear to preserve its radiant silver-toned finish.",
+    "rawHtml": "<div data-oe-version=\"2.0\">Add a touch of mystical charm to your look with this sparkling Evil Eye bracelet. Designed for effortless daily styling, this high-fashion piece shines brightest when kept away from water and perfumes. Store in a dry place after each wear to preserve its radiant silver-toned finish.</div>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P438.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P438/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "productId": "P459",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "915",
+    "workingId": "odoo-915",
+    "originalSku": "MJ-285",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-285-gold-infinity-heart-bracelet-915",
+    "referenceTitle": "Gold Infinity Heart Bracelet",
+    "rawContent": "Celebrate eternal love with this chic gold-toned bracelet featuring an interlocking crystal heart and infinity symbol. This high-fashion statement piece adds a sentimental glow to any look. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.",
+    "rawHtml": "<blockquote data-oe-version=\"2.0\"><blockquote><p>Celebrate eternal love with this chic gold-toned bracelet featuring an interlocking crystal heart and infinity symbol. This high-fashion statement piece adds a sentimental glow to any look. To maintain its radiant golden luster, keep it away from moisture and perfumes, and store it safely in a dry place after use.</p></blockquote></blockquote>",
+    "originalCategories": [
+      "Bracelet under ₹99"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "no source category mapped to a target category",
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": null,
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P459.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P459/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹49 sale price, ₹9.5 cost (morchadijewels.com, reference only)"
+  }
+}

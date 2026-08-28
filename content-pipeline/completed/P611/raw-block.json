@@ -1,0 +1,46 @@
+{
+  "productId": "P611",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "1083",
+    "workingId": "odoo-1083",
+    "originalSku": null,
+    "originalUrl": "https://www.morchadijewels.com/shop/vintage-anti-tarnish-gold-green-dial-pearl-bracelet-watch-for-women-1083",
+    "referenceTitle": "Vintage Anti-Tarnish Gold Green Dial Pearl Bracelet Watch for Women",
+    "rawContent": "Add a touch of vintage elegance to your jewellery collection with this Vintage Anti-Tarnish Gold Bracelet Watch, featuring a beautiful emerald green dial and a unique pearl-detail chain bracelet. The elegant combination of gold, green and pearl accents creates a luxurious, feminine look that stands out effortlessly.\nDesigned with a jewellery-inspired bracelet and anti-tarnish finish, this watch is perfect for anyone who loves statement accessories with a classic vintage charm. The unique leaf-shaped dial and delicate pearl detailing make it a beautiful choice for both everyday styling and special occasions.\nProduct Highlights\n- ✨ Vintage-inspired jewellery watch\n- 💛 Anti-tarnish gold-tone finish\n- 💚 Elegant emerald green dial\n- 🤍 Pearl-detail bracelet design\n- 🌿 Unique leaf-shaped dial\n- ⌚ Quartz movement\n- 🔗 Stylish statement chain bracelet\n- 💎 Combines the look of a watch with a jewellery accessory\n- 👗 Perfect for ethnic and western outfits\n- 🎁 Beautiful gifting option for women\nPerfect For\nFestive occasions, parties, date nights, weddings, office wear, casual outings and everyday styling.\nCare Tip: Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.",
+    "rawHtml": "<p data-oe-version=\"2.0\">Add a touch of vintage elegance to your jewellery collection with this <strong>Vintage Anti-Tarnish Gold Bracelet Watch</strong>, featuring a beautiful emerald green dial and a unique pearl-detail chain bracelet. The elegant combination of gold, green and pearl accents creates a luxurious, feminine look that stands out effortlessly.</p><p>Designed with a <strong>jewellery-inspired bracelet and anti-tarnish finish</strong>, this watch is perfect for anyone who loves statement accessories with a classic vintage charm. The unique leaf-shaped dial and delicate pearl detailing make it a beautiful choice for both everyday styling and special occasions.</p><h3>Product Highlights</h3><ul><li>✨ Vintage-inspired jewellery watch</li><li>💛 Anti-tarnish gold-tone finish</li><li>💚 Elegant emerald green dial</li><li>🤍 Pearl-detail bracelet design</li><li>🌿 Unique leaf-shaped dial</li><li>⌚ Quartz movement</li><li>🔗 Stylish statement chain bracelet</li><li>💎 Combines the look of a watch with a jewellery accessory</li><li>👗 Perfect for ethnic and western outfits</li><li>🎁 Beautiful gifting option for women</li></ul><h3>Perfect For</h3><p>Festive occasions, parties, date nights, weddings, office wear, casual outings and everyday styling.</p><p><strong>Care Tip:</strong> Keep away from perfumes, water, excessive sweat and harsh chemicals. Store in a dry place when not in use to help maintain the finish.</p>",
+    "originalCategories": [
+      "Vintage watch"
+    ],
+    "originalMetaDescription": null,
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "watches",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P611.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P611/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹599 sale price (morchadijewels.com, reference only)"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "productId": "P172",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "217",
+    "workingId": "odoo-217",
+    "originalSku": "MJ-511",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-511-rose-gold-plated-ad-stone-band-ring-217",
+    "referenceTitle": "Rose Gold-Plated AD Stone Band Ring",
+    "rawContent": "Shine with elegance in this Rose gold-plated adjustable band ring, featuring a sleek double row of sparkling American Diamond stones. Designed for comfort and style, it's the perfect choice for daily wear, party looks, and thoughtful gifting.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: American Diamond (AD) stones\n- Design: Double-row band with stone detailing\n- Size & Fit: Adjustable – fits most finger sizes\n- Style & Use: Perfect for daily wear, parties, and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Shine with elegance in this <strong>Rose</strong>&nbsp;<strong>gold-plated adjustable band ring</strong>, featuring a sleek <strong>double row of sparkling American Diamond stones</strong>. Designed for comfort and style, it's the perfect choice for <strong>daily wear, party looks, and thoughtful gifting</strong>.</p><ul>\n<li><p><strong>Material:</strong> Brass base</p></li>\n<li><p><strong>Plating:</strong> Premium Gold-plated finish</p></li>\n<li><p><strong>Stone Type:</strong> American Diamond (AD) stones</p></li>\n<li><p><strong>Design:</strong> Double-row band with stone detailing</p></li>\n<li><p><strong>Size &amp; Fit:</strong> Adjustable – fits most finger sizes</p></li>\n<li><p><strong>Style &amp; Use:</strong> Perfect for daily wear, parties, and gifting</p></li></ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Sophisticated rose gold adjustable band with double rows of AD stones. Glamorous, versatile accessory for parties & weddings.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P172.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P172/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

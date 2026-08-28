@@ -1,0 +1,46 @@
+{
+  "productId": "P206",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "504",
+    "workingId": "odoo-504",
+    "originalSku": "MJ-512",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-512-rose-gold-plated-adjustable-ad-criss-cross-band-ring-504",
+    "referenceTitle": "Rose Gold-Plated Adjustable AD Criss-Cross Band Ring",
+    "rawContent": "Elevate your style with this Rose gold-plated adjustable ring, featuring a stunning criss-cross band design adorned with sparkling American Diamond stones. A blend of glamour and comfort, this ring is ideal for daily wear, festive occasions, and gifting.\n- Material: Brass base\n- Plating: Premium Gold-plated finish\n- Stone Type: Sparkling American Diamond (AD)\n- Design: Criss-cross multiple band with stone accents\n- Size & Fit: Adjustable – fits most finger sizes\n- Style & Use: Perfect for daily wear, parties, weddings, and gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">Elevate your style with this <strong>Rose</strong>&nbsp;<strong>gold-plated adjustable ring</strong>, featuring a stunning <strong>criss-cross band design</strong> adorned with sparkling <strong>American Diamond stones</strong>. A blend of glamour and comfort, this ring is ideal for <strong>daily wear, festive occasions, and gifting</strong>.</p><ul>\n<li><p><strong>Material:</strong> Brass base</p></li>\n<li><p><strong>Plating:</strong> Premium Gold-plated finish</p></li>\n<li><p><strong>Stone Type:</strong> Sparkling American Diamond (AD)</p></li>\n<li><p><strong>Design:</strong> Criss-cross multiple band with stone accents</p></li>\n<li><p><strong>Size &amp; Fit:</strong> Adjustable – fits most finger sizes</p></li>\n<li><p><strong>Style &amp; Use:</strong> Perfect for daily wear, parties, weddings, and gifting</p></li></ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stylish rose gold criss-cross band ring with AD stones. Adjustable fit, chic everyday accessory for parties & special occasions.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P206.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P206/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

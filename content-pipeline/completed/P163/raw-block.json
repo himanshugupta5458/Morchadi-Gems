@@ -1,0 +1,46 @@
+{
+  "productId": "P163",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "204",
+    "workingId": "odoo-204",
+    "originalSku": "MJ-569",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-569-silver-tone-star-crystal-adjustable-ring-set-204",
+    "referenceTitle": "Silver-Tone Star & Crystal Adjustable Ring Set",
+    "rawContent": "This stunning dual adjustable ring set is crafted with a shiny silver-tone finish and embellished with brilliant-cut cubic zirconia stones. Featuring a stylish star-shaped ring paired with a matching crystal band, it is perfect for stacking and adds a luxurious sparkle to everyday outfits.\n- Material: Durable alloy\n- Plating: High-shine silver / rhodium plating\n- Stone Type: Cubic zirconia crystals\n- Design: Adjustable stack-style star and crystal band set\n- Size / Fit: Free size – adjustable\n- Best Suitable For: Casual wear, special occasions, party wear, gifting",
+    "rawHtml": "<p data-oe-version=\"2.0\">This stunning dual adjustable ring set is crafted with a shiny silver-tone finish and embellished with brilliant-cut cubic zirconia stones. Featuring a stylish star-shaped ring paired with a matching crystal band, it is perfect for stacking and adds a luxurious sparkle to everyday outfits.</p><ul>\n<li><p><strong>Material:</strong> Durable alloy</p></li>\n<li><p><strong>Plating:</strong> High-shine silver / rhodium plating</p></li>\n<li><p><strong>Stone Type:</strong> Cubic zirconia crystals</p></li>\n<li><p><strong>Design:</strong> Adjustable stack-style star and crystal band set</p></li>\n<li><p><strong>Size / Fit:</strong> Free size – adjustable</p></li>\n<li><p><strong>Best Suitable For:</strong> Casual wear, special occasions, party wear, gifting</p></li></ul>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Stylish dual ring set in silver-tone with star & crystal band. Adjustable, stackable design perfect for casual, party & gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P163.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P163/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}

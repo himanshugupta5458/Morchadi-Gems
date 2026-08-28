@@ -1,0 +1,46 @@
+{
+  "productId": "P190",
+  "stage": "queued",
+  "sourceType": "migrated",
+  "batchId": "2026-08-23-batch-01",
+  "confirmationState": {
+    "draftAExtractionRun": false,
+    "imagesConfirmed": false,
+    "note": "Not a Draft A object. Extraction has not run; every value here is transcribed or suggested, never claimed."
+  },
+  "sourceNotes": {
+    "originalId": "488",
+    "workingId": "odoo-488",
+    "originalSku": "MJ-221",
+    "originalUrl": "https://www.morchadijewels.com/shop/mj-221-dual-design-gold-plated-adjustable-ring-488",
+    "referenceTitle": "Dual Design Gold-Plated Adjustable Ring",
+    "rawContent": "Product Description:\nAdd a touch of sparkle and elegance with the Dual Design Gold-Plated Adjustable Ring for Women. This gorgeous ring features two dazzling designs—one with a radiant princess-cut stone, and the other with a charming floral motif surrounded by shimmering CZ accents. The beautiful blend of statement and femininity makes the Dual Design Gold-Plated Adjustable Ring for Women a must-have piece for every jewelry lover.\nWhy You Will Love It:\n✨ Unique double-design—princess-cut & floral—on a single ring\n✨ Gorgeous sparkle with high-quality CZ stones\n✨ Easy-to-adjust for comfortable, secure fit\n✨ Perfect for daily glam or special occasions\nHighlights / Specifications:\n🔹 Material: Premium alloy ensures lasting shine and durability\n🔹 Plating: Luxurious gold plating for a rich finish\n🔹 Stone Type: Princess-cut and round cubic zirconia stones\n🔹 Design: Elegant dual design featuring floral and classic solitaire styles\n🔹 Size/Fit: Adjustable to fit most finger sizes\n🔹 Best Use: Suitable for daily wear, party wear, or gifting\nCare Instructions:\n💎 Clean gently with a microfiber or polishing cloth\n🚫 Avoid chemicals, water, and ultrasonic cleaners\n🛑 Remove while swimming, showering, or gardening\n🌡️ Store in a cool, dry place away from extreme temperatures\nPerfect For:\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals\n👭 Teen girls, daughters, sisters, and fashion-forward women\n💃 Matching with western and ethnic outfits for a glam touch",
+    "rawHtml": "<p><strong>Product Description:</strong></p>\n<p>Add a touch of sparkle and elegance with the <strong>Dual Design Gold-Plated Adjustable Ring for Women</strong>. This gorgeous ring features two dazzling designs—one with a radiant princess-cut stone, and the other with a charming floral motif surrounded by shimmering CZ accents. The beautiful blend of statement and femininity makes the <strong>Dual Design Gold-Plated Adjustable Ring for Women</strong> a must-have piece for every jewelry lover.</p>\n<p><strong>Why You Will Love It:</strong></p>\n<p>✨ Unique double-design—princess-cut &amp; floral—on a single ring</p>\n<p>✨ Gorgeous sparkle with high-quality CZ stones</p>\n<p>✨ Easy-to-adjust for comfortable, secure fit</p>\n<p>✨ Perfect for daily glam or special occasions</p>\n<p><strong>Highlights / Specifications:</strong></p>\n<p>🔹 <strong>Material:</strong> Premium alloy ensures lasting shine and durability</p>\n<p>🔹 <strong>Plating:</strong> Luxurious gold plating for a rich finish</p>\n<p>🔹 <strong>Stone Type:</strong> Princess-cut and round cubic zirconia stones</p>\n<p>🔹 <strong>Design:</strong> Elegant dual design featuring floral and classic solitaire styles</p>\n<p>🔹 <strong>Size/Fit:</strong> Adjustable to fit most finger sizes</p>\n<p>🔹 <strong>Best Use:</strong> Suitable for daily wear, party wear, or gifting</p>\n<p><strong>Care Instructions:</strong></p>\n<p>\n💎 Clean gently with a microfiber or polishing cloth</p>\n<p>\n🚫 Avoid chemicals, water, and ultrasonic cleaners</p>\n<p>\n🛑 Remove while swimming, showering, or gardening</p>\n<p>\n🌡️ Store in a cool, dry place away from extreme temperatures</p>\n<p><strong>Perfect For:</strong></p>\n<p>\n🎁 Gifting on Weddings, Birthdays, Valentine's Day, Festivals</p>\n<p>\n👭 Teen girls, daughters, sisters, and fashion-forward women</p>\n<p>\n💃 Matching with western and ethnic outfits for a glam touch</p>",
+    "originalCategories": [
+      "DC Ring"
+    ],
+    "originalMetaDescription": "Unique dual design gold-plated ring with princess-cut & floral CZ. Adjustable, chic & perfect for daily elegance or gifting.",
+    "exportNotes": [
+      "only one image available from source"
+    ],
+    "knownStub": false
+  },
+  "category": "rings",
+  "subcategory": null,
+  "suggestedCollections": [],
+  "variants": [],
+  "images": {
+    "general": [
+      {
+        "path": "/products/P190.webp",
+        "confirmed": false,
+        "sourceFile": "2026-08-23-batch-01/P190/raw/main.webp",
+        "role": "main"
+      }
+    ],
+    "variantImages": {}
+  },
+  "pricing": {
+    "referencePrice": "₹59 sale price (morchadijewels.com, reference only)"
+  }
+}
