@@ -85,19 +85,19 @@
     "variantImages": {
       "Color:Antique Gold": {
         "path": "/products/P587-antique-gold.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P587/raw/variant-antique-gold.webp",
         "verifiedDistinct": true
       },
       "Color:Lilac Shimmer": {
         "path": "/products/P587-lilac-shimmer.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P587/raw/variant-lilac-shimmer.webp",
         "verifiedDistinct": true
       },
       "Color:Cream shimmer": {
         "path": "/products/P587-cream-shimmer.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P587/raw/variant-cream-shimmer.webp",
         "verifiedDistinct": true
       }

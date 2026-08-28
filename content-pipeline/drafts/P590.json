@@ -90,19 +90,19 @@
     "variantImages": {
       "Color:pink": {
         "path": "/products/P590-pink.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P590/raw/variant-pink.webp",
         "verifiedDistinct": true
       },
       "Color:black": {
         "path": "/products/P590-black.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P590/raw/variant-black.webp",
         "verifiedDistinct": true
       },
       "Color:white": {
         "path": "/products/P590-white.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P590/raw/variant-white.webp",
         "verifiedDistinct": true
       }

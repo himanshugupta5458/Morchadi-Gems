@@ -247,103 +247,103 @@
     "variantImages": {
       "Letter:B": {
         "path": "/products/P408-b.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-b.webp",
         "verifiedDistinct": true
       },
       "Letter:C": {
         "path": "/products/P408-c.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-c.webp",
         "verifiedDistinct": true
       },
       "Letter:E": {
         "path": "/products/P408-e.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-e.webp",
         "verifiedDistinct": true
       },
       "Letter:F": {
         "path": "/products/P408-f.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-f.webp",
         "verifiedDistinct": true
       },
       "Letter:G": {
         "path": "/products/P408-g.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-g.webp",
         "verifiedDistinct": true
       },
       "Letter:H": {
         "path": "/products/P408-h.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-h.webp",
         "verifiedDistinct": true
       },
       "Letter:I": {
         "path": "/products/P408-i.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-i.webp",
         "verifiedDistinct": true
       },
       "Letter:J": {
         "path": "/products/P408-j.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-j.webp",
         "verifiedDistinct": true
       },
       "Letter:K": {
         "path": "/products/P408-k.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-k.webp",
         "verifiedDistinct": true
       },
       "Letter:L": {
         "path": "/products/P408-l.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-l.webp",
         "verifiedDistinct": true
       },
       "Letter:M": {
         "path": "/products/P408-m.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-m.webp",
         "verifiedDistinct": true
       },
       "Letter:N": {
         "path": "/products/P408-n.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-n.webp",
         "verifiedDistinct": true
       },
       "Letter:O": {
         "path": "/products/P408-o.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-o.webp",
         "verifiedDistinct": true
       },
       "Letter:P": {
         "path": "/products/P408-p.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-p.webp",
         "verifiedDistinct": true
       },
       "Letter:Q": {
         "path": "/products/P408-q.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-q.webp",
         "verifiedDistinct": true
       },
       "Letter:T": {
         "path": "/products/P408-t.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-t.webp",
         "verifiedDistinct": true
       },
       "Letter:D": {
         "path": "/products/P408-d.webp",
-        "confirmed": false,
+        "confirmed": true,
         "sourceFile": "2026-08-23-batch-01/P408/raw/variant-d.webp",
         "verifiedDistinct": true
       }
