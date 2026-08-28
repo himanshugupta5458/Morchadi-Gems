@@ -144,7 +144,8 @@ describe("the catalogue accessors", () => {
     expect(idsOf(getFeaturedProducts())).not.toContain(DRAFT_ID);
   });
 
-  it("ignores the draft's isNew flag on the home new-arrivals row", () => {
+  it("ignores the draft's isNew flag on the home new-arrivals row, at any limit", () => {
+    expect(idsOf(getNewArrivals(Number.POSITIVE_INFINITY))).not.toContain(DRAFT_ID);
     expect(idsOf(getNewArrivals())).not.toContain(DRAFT_ID);
   });
 

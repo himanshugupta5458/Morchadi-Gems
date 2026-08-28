@@ -15,12 +15,20 @@ import { ViewAllLink } from "@/components/ViewAllLink";
 const CATEGORY_SECTION_ID = "shop-by-category";
 
 /**
- * How many pieces each home strip shows on a phone. Both strips hold eight, which is four
- * rows of two on a phone and one row of four from `lg` — the same set reads as a browsable
- * row on a laptop and as a scroll on a phone. Half of it, plus the link to the rest, is the
- * amount that still reads as a taste of the collection. See ADR-033.
+ * How many pieces each home strip shows on a phone. Two rows of two, plus the link to the
+ * rest, is the amount that still reads as a taste of the collection rather than as the
+ * collection — whatever the strip holds above `sm`. See ADR-033.
  */
 const MOBILE_PRODUCT_COUNT = 4;
+
+/**
+ * How many new arrivals the home strip previews. `flags.isNew` is carried by 408 of the 449
+ * records, so the strip has to say how much of that it wants: unbounded, it rendered the whole
+ * flagged catalogue into this page's HTML. Twelve is three rows of the grid's four columns from
+ * `lg`, four rows of three at `md`, and six rows of two on a phone — of which
+ * `MOBILE_PRODUCT_COUNT` shows the first row and a half.
+ */
+const HOME_NEW_ARRIVALS_COUNT = 12;
 
 /**
  * `openGraph` is replaced wholesale by a page, never merged into the layout's — so a page
@@ -48,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage(): JSX.Element {
-  const newArrivals = getNewArrivals();
+  const newArrivals = getNewArrivals(HOME_NEW_ARRIVALS_COUNT);
   const bestSellers = getFeaturedProducts();
 
   return (
@@ -63,7 +71,7 @@ export default function HomePage(): JSX.Element {
           <SectionHeading
             roman="Shop by"
             accent="Category"
-            subtitle="Ten categories, each finished in the same workshop and held to the same anti-tarnish standard."
+            subtitle="Eleven categories, each finished in the same workshop and held to the same anti-tarnish standard."
           />
           <CategoryGrid />
           <CollectionStrip />

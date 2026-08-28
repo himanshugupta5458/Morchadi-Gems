@@ -114,8 +114,18 @@ export function getFeaturedProducts(): Product[] {
   return activeProducts.filter((product) => product.flags.featured);
 }
 
-export function getNewArrivals(): Product[] {
-  return activeProducts.filter((product) => product.flags.isNew);
+/**
+ * How many new arrivals a caller gets when it does not say. `isNew` is a merchandising flag
+ * rather than a window — 408 of the 449 records carry it — so an unbounded call renders the
+ * near-whole catalogue into whatever page asked, which is what put 1.87 MB of HTML on the home
+ * page. Twelve is the preview size the four-column grid reads as three full rows, and three at
+ * `md`, and six at the two-abreast phone width. A caller that genuinely wants every flagged
+ * product passes `Number.POSITIVE_INFINITY` and says so.
+ */
+const DEFAULT_NEW_ARRIVALS_LIMIT = 12;
+
+export function getNewArrivals(limit: number = DEFAULT_NEW_ARRIVALS_LIMIT): Product[] {
+  return activeProducts.filter((product) => product.flags.isNew).slice(0, limit);
 }
 
 export function getRelatedProducts(product: Product, limit: number): Product[] {
