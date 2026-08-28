@@ -59,37 +59,34 @@ export type NotifyOutcome =
   | "SKIPPED_NOT_CONFIGURED"
   | "FAILED";
 
-export interface DispatchAdminNotificationInput {
-  /** The status the *server* verified with Cashfree. Never a status the client asserted. */
-  verifiedStatus: VerifiedOrderState;
+export interface SendOwnerWhatsAppInput {
   message: string;
   credentials: CallMeBotCredentials | null;
-  /** Injected so the guard can be tested without a network, and mocked in tests. */
+  /** Injected so a send can be tested without a network, and mocked in tests. */
   fetchImpl?: typeof fetch;
 }
 
+/** Every outcome of a send that was already found warranted. Never `SKIPPED_NOT_PAID`. */
+export type SendOutcome = Exclude<NotifyOutcome, "SKIPPED_NOT_PAID">;
+
 /**
- * Sends the admin WhatsApp, or explains why it did not.
+ * The send itself, once something else has decided the message is warranted.
  *
- * Two guards, in this order and for different reasons. The status guard is the security one:
- * the client tells this route which order to look at, and nothing else, so a request naming
- * somebody else's unpaid order produces no message. Checking it first also means a spoofed
- * request never reaches the third party at all.
- *
- * The credentials guard is the degradation one, and it comes second so that an unconfigured
- * deployment still distinguishes "not paid" from "no keys" in its logs.
+ * It deliberately knows nothing about *why* it is being called. Two callers now hold two
+ * different warrants — `dispatchAdminNotification` below has Cashfree's word that an order was
+ * paid, and `notifyOwnerOfCodOrder` in [`lib/notify-cod.ts`](./notify-cod.ts) has a Postgres row
+ * the same request just wrote — and keeping the warrant out of here is what stops a second
+ * caller from being a second chance to weaken the first one's guard.
  *
  * Nothing here throws. A timeout, a refused connection, a 500 from CallMeBot and a body that
  * cannot be read all land on `FAILED`, because the one thing this function must never do is
- * turn a successful payment into an error somewhere up the stack.
+ * turn a placed order into an error somewhere up the stack.
  */
-export async function dispatchAdminNotification({
-  verifiedStatus,
+export async function sendOwnerWhatsApp({
   message,
   credentials,
   fetchImpl = fetch,
-}: DispatchAdminNotificationInput): Promise<NotifyOutcome> {
-  if (verifiedStatus !== "PAID") return "SKIPPED_NOT_PAID";
+}: SendOwnerWhatsAppInput): Promise<SendOutcome> {
   if (credentials === null) return "SKIPPED_NOT_CONFIGURED";
 
   try {
@@ -103,4 +100,39 @@ export async function dispatchAdminNotification({
   } catch {
     return "FAILED";
   }
+}
+
+export interface DispatchAdminNotificationInput {
+  /** The status the *server* verified with Cashfree. Never a status the client asserted. */
+  verifiedStatus: VerifiedOrderState;
+  message: string;
+  credentials: CallMeBotCredentials | null;
+  /** Injected so the guard can be tested without a network, and mocked in tests. */
+  fetchImpl?: typeof fetch;
+}
+
+/**
+ * Sends the admin WhatsApp for a **paid** order, or explains why it did not.
+ *
+ * Two guards, in this order and for different reasons. The status guard is the security one:
+ * the client tells `/api/notify-admin` which order to look at, and nothing else, so a request
+ * naming somebody else's unpaid order produces no message. Checking it first also means a
+ * spoofed request never reaches the third party at all.
+ *
+ * The credentials guard is the degradation one, and it comes second so that an unconfigured
+ * deployment still distinguishes "not paid" from "no keys" in its logs.
+ *
+ * This is the prepaid warrant and it is unchanged. A cash-on-delivery order has no Cashfree
+ * answer to check and does not come through here at all
+ * ([ADR-060](/docs/decisions/ADR-060-cod-order-notification.md)).
+ */
+export async function dispatchAdminNotification({
+  verifiedStatus,
+  message,
+  credentials,
+  fetchImpl = fetch,
+}: DispatchAdminNotificationInput): Promise<NotifyOutcome> {
+  if (verifiedStatus !== "PAID") return "SKIPPED_NOT_PAID";
+
+  return sendOwnerWhatsApp({ message, credentials, fetchImpl });
 }

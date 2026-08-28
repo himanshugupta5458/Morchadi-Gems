@@ -1,4 +1,5 @@
-import type { Address, CartItem, CheckoutData } from "@/types/cart";
+import type { Address, CheckoutData } from "@/types/cart";
+import type { SelectedOptions } from "@/types/product";
 import type { UtmParams } from "@/types/utm";
 import { LEGAL_CONFIG, SITE_CONFIG } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
@@ -26,6 +27,18 @@ function formatAddressLines(address: Address): string[] {
 }
 
 /**
+ * The least a line has to be for this message to describe it: what it is called, how many, and
+ * what was chosen on it. A `CartItem` from the shopper's own summary satisfies it, and so does
+ * an `OrderCaptureLine` the server priced and wrote itself, which is what lets one set of
+ * formatting serve a message built from an untrusted bundle and one built from a Postgres row.
+ */
+export interface AdminMessageItem {
+  name: string;
+  qty: number;
+  selectedOptions?: SelectedOptions;
+}
+
+/**
  * One numbered line per item, with its recorded choices indented underneath.
  *
  * The choices are the reason this message exists in the form it does. Cashfree knows the amount
@@ -37,7 +50,7 @@ function formatAddressLines(address: Address): string[] {
  * notification rather than the archive — and the fallback that makes a failed capture
  * recoverable, since that write is not allowed to fail a checkout.
  */
-function formatItemLines(items: CartItem[]): string[] {
+function formatItemLines(items: readonly AdminMessageItem[]): string[] {
   return items.flatMap((item, index) => {
     const heading = `${index + 1}. ${item.name} x${item.qty}`;
     const selection = formatSelectedOptions(item.selectedOptions);
@@ -129,6 +142,84 @@ export function composeAdminOrderMessage({
 
   sections.push(
     `Dispatch within ${LEGAL_CONFIG.dispatchWindow}. Check the Cashfree dashboard to confirm the payment.`,
+  );
+
+  return sections.join("\n\n");
+}
+
+export interface CodOrderMessageInput {
+  /** The ten-character order number, which is what the admin panel is searched by. */
+  trackingId: string;
+  /** The `COD_…` payment reference the order is filed under. Never a Cashfree order id. */
+  codOrderReference: string;
+  /** What the courier collects at the door. Not an amount anyone has paid. */
+  amountDue: number;
+  subtotal: number;
+  shipping: number;
+  total: number;
+  items: readonly AdminMessageItem[];
+  address: Address;
+  /** See [ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md). */
+  utm?: UtmParams | null;
+}
+
+/**
+ * The WhatsApp message the owner receives for a cash-on-delivery order.
+ *
+ * It says the same things the paid message says, in the same order, and says one thing
+ * differently on purpose: **no money has moved**. There is no `Paid:` line to misread, the one
+ * figure given prominence is what is owed at the door, and the closing line asks for the cash
+ * to be collected rather than for a payment to be confirmed. Printing an amount beside a word
+ * like "paid" would be a claim about money this shop has not received.
+ *
+ * Every figure here is the server's own, from the order it has just written to Postgres, so
+ * unlike `composeAdminOrderMessage` there is no untrusted summary to caveat and no degraded
+ * form to fall back to: a message composed at all is a message about a real row.
+ *
+ * Both identifiers are printed because they answer different questions. `trackingId` is what
+ * the admin panel and the shopper both call this order; `codOrderReference` is the column it is
+ * filed under, and the thing a server log names ([ADR-060](/docs/decisions/ADR-060-cod-order-notification.md)).
+ */
+export function composeCodOrderMessage({
+  trackingId,
+  codOrderReference,
+  amountDue,
+  subtotal,
+  shipping,
+  total,
+  items,
+  address,
+  utm = null,
+}: CodOrderMessageInput): string {
+  const sections: string[] = [
+    bold(`New Cash on Delivery Order - ${SITE_CONFIG.brandName}`),
+    [
+      `${bold("Order:")} ${trackingId}`,
+      `${bold("Reference:")} ${codOrderReference}`,
+      `${bold("Payment:")} Cash on delivery. Nothing has been paid yet.`,
+      `${bold("Due on delivery:")} ${formatRupees(amountDue)}`,
+    ].join("\n"),
+  ];
+
+  const utmLines = utm === null ? [] : formatUtmLines(utm);
+  if (utmLines.length > 0) {
+    sections.push([bold("Came from"), ...utmLines].join("\n"));
+  }
+
+  sections.push([bold("Items"), ...formatItemLines(items)].join("\n"));
+
+  sections.push(
+    [
+      `${bold("Subtotal:")} ${formatRupees(subtotal)}`,
+      `${bold("Shipping:")} ${formatRupees(shipping)}`,
+      `${bold("Total:")} ${formatRupees(total)}`,
+    ].join("\n"),
+  );
+
+  sections.push([bold("Deliver to"), ...formatAddressLines(address)].join("\n"));
+
+  sections.push(
+    `Dispatch within ${LEGAL_CONFIG.dispatchWindow}. Collect ${formatRupees(amountDue)} in cash at delivery, then mark the cash collected on order ${trackingId} in the admin panel.`,
   );
 
   return sections.join("\n\n");

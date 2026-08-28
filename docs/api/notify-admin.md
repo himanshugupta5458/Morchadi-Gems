@@ -17,6 +17,17 @@ summary exactly as described below. It also becomes the fallback that makes the 
 safe to fail: an order whose Postgres write failed still reaches the owner as a WhatsApp
 message.
 
+**Prompt 102 added the owner's cash-on-delivery notification, and changed nothing here.** A
+`COD_…` reference is rejected by `isMorchadiOrderId` at step 2 below, exactly as it was before,
+and no COD code path calls this route: a cash-on-delivery order is notified from inside
+`/api/create-order`, by the branch that captured it, because there is no payment for this route
+to ask Cashfree about. The Cashfree lookup below is the whole security argument for this
+endpoint and it was deliberately not widened with a second warrant — the reasoning, including
+what a Postgres-read warrant here would have cost, is
+[ADR-060](../decisions/ADR-060-cod-order-notification.md). The send itself now lives in
+`sendOwnerWhatsApp`, shared with that path; the `PAID` guard that decides whether to call it is
+unmoved.
+
 **There is no ADR for this route.** The admin-notification work was in flight when slot 031
 was taken by [ADR-031](../decisions/ADR-031-mobile-scale.md), and no record was ever written
 for it — see the numbering note on row 32 of the

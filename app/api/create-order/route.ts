@@ -25,6 +25,7 @@ import {
   resolvePaymentPlan,
   summariseCartPrepayment,
 } from "@/lib/cod";
+import { notifyOwnerOfCodOrder } from "@/lib/notify-cod";
 import {
   buildOrderFromCart,
   mergeOrderItemsByProduct,
@@ -223,6 +224,13 @@ function readPaymentSessionId(payload: unknown): string | null {
  * Cashfree dashboard ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md),
  * [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md)).
  *
+ * It is for the same reason the one path that sends the owner's WhatsApp notification from
+ * here rather than from the browser: the paid message is fired by `/order-confirmation` and
+ * re-verified against Cashfree at `/api/notify-admin`, and a cash-on-delivery order has no
+ * payment for that route to ask about. The captured row is the warrant instead, and the send
+ * is deliberately not awaited — a placed order must not wait on CallMeBot
+ * ([ADR-060](/docs/decisions/ADR-060-cod-order-notification.md)).
+ *
  * The client sends product ids, quantities, any recorded option choices, a delivery address,
  * and optionally the campaign it first arrived on. It does not send — and could not usefully
  * send — a price, a line total, or an order total: the amount charged is recomputed here from
@@ -353,6 +361,24 @@ export async function POST(request: Request): Promise<NextResponse> {
         codCapture.customerCreated ? "a new" : "a returning"
       } customer`,
     );
+
+    void notifyOwnerOfCodOrder({
+      trackingId: codCapture.orderId,
+      codOrderReference,
+      amountDue: plan.amountDue,
+      subtotal: captureBase.pricing.subtotal,
+      shipping: captureBase.pricing.shippingFee,
+      total: captureBase.pricing.total,
+      items: captureBase.lines.map((line) => ({
+        name: line.productName,
+        qty: line.quantity,
+        ...(line.selectedOptions === undefined
+          ? {}
+          : { selectedOptions: line.selectedOptions }),
+      })),
+      address,
+      utm,
+    });
 
     const codSuccess: CreateOrderCodSuccess = {
       paymentType: "cod",

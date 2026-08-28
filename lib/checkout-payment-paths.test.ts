@@ -1,5 +1,7 @@
-import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { CodEligibilityEntry } from "@/lib/cod";
+import { formatRupees } from "@/lib/format";
+import { CALLMEBOT_ENDPOINT } from "@/lib/notify";
 import { prisma } from "@/lib/prisma";
 import { getCodEligibilityCatalogue } from "@/lib/products";
 
@@ -219,6 +221,26 @@ describe("a checkout that names no payment path at all", () => {
 });
 
 /**
+ * Every request the route made, by URL. The cash-on-delivery path now has a legitimate
+ * outbound call of its own — the owner's WhatsApp notification — so "made no request at all"
+ * has stopped being the same statement as "went nowhere near the gateway", and the assertions
+ * below name which host they mean.
+ */
+function requestedUrls(outboundFetch: ReturnType<typeof vi.fn>): string[] {
+  return outboundFetch.mock.calls.map((call) => String(call[0]));
+}
+
+function cashfreeRequests(outboundFetch: ReturnType<typeof vi.fn>): string[] {
+  return requestedUrls(outboundFetch).filter((url) => url.includes("cashfree.com"));
+}
+
+function callMeBotRequests(outboundFetch: ReturnType<typeof vi.fn>): string[] {
+  return requestedUrls(outboundFetch).filter((url) =>
+    url.startsWith(CALLMEBOT_ENDPOINT),
+  );
+}
+
+/**
  * The path that never touches the payment gateway, checked by watching `fetch` rather than by
  * inspecting the answer: a route that quietly created a Cashfree order and then ignored it
  * would pass every assertion about the response body and still be wrong.
@@ -237,7 +259,7 @@ describe("a cash-on-delivery checkout", () => {
     });
     const body = await response.json();
 
-    expect(outboundFetch).not.toHaveBeenCalled();
+    expect(cashfreeRequests(outboundFetch)).toEqual([]);
 
     expect(response.status).toBe(200);
     expect(body.paymentType).toBe("cod");
@@ -522,5 +544,172 @@ describe("a request that lies about which path it may take", () => {
     expect(sentToCashfree[0].order_amount).not.toBe(1);
     expect(written.amountDue.toNumber()).toBe(0);
     expect(written.amountPrepaid.toNumber()).toBe(written.total.toNumber());
+  });
+});
+
+/**
+ * The gap this closes: a cash-on-delivery order has no payment for `/api/notify-admin` to
+ * re-verify with Cashfree, so nothing ever told the owner it had been placed. The warrant here
+ * is the row `captureOrder` just wrote, and the send happens inside the same request rather
+ * than from the browser ([ADR-060](/docs/decisions/ADR-060-cod-order-notification.md)).
+ *
+ * These tests configure CallMeBot for the length of the test. Everywhere else in this file it
+ * is unset, which is exactly the deployment where the notification switches itself off.
+ */
+describe("the owner's notification for a cash-on-delivery order", () => {
+  const previousPhone = process.env.CALLMEBOT_PHONE;
+  const previousKey = process.env.CALLMEBOT_APIKEY;
+
+  let silencedError: ReturnType<typeof vi.spyOn> | null = null;
+
+  beforeEach(() => {
+    process.env.CALLMEBOT_PHONE = "919358358834";
+    process.env.CALLMEBOT_APIKEY = "test_apikey";
+    silencedError = vi.spyOn(console, "error").mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    if (previousPhone === undefined) delete process.env.CALLMEBOT_PHONE;
+    else process.env.CALLMEBOT_PHONE = previousPhone;
+
+    if (previousKey === undefined) delete process.env.CALLMEBOT_APIKEY;
+    else process.env.CALLMEBOT_APIKEY = previousKey;
+
+    silencedError?.mockRestore();
+    silencedError = null;
+  });
+
+  it("goes out exactly once, saying what is due at the door rather than what was paid", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const outboundFetch = vi.fn(async () => new Response("ok", { status: 200 }));
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const body = await (
+      await postCreateOrder({
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 2 }],
+        address: PATH_TEST_ADDRESS,
+        paymentPath: "cod",
+      })
+    ).json();
+
+    expect(cashfreeRequests(outboundFetch)).toEqual([]);
+
+    const sent = callMeBotRequests(outboundFetch);
+    expect(sent).toHaveLength(1);
+
+    const message = new URL(sent[0]).searchParams.get("text") ?? "";
+
+    expect(message).toContain("New Cash on Delivery Order");
+    expect(message).toContain("Nothing has been paid yet");
+    expect(message).toContain(`*Order:* ${body.trackingId}`);
+    expect(message).toContain(`*Reference:* ${body.codOrderReference}`);
+    expect(message).toContain(`*Due on delivery:* ${formatRupees(body.amountDue)}`);
+    expect(message).toContain(PATH_TEST_ADDRESS.line1);
+    expect(message).not.toContain("*Paid:*");
+  });
+
+  /**
+   * The order is already in Postgres by the time CallMeBot is asked anything, and the shopper
+   * is waiting on this response. A hobby service having a bad day cannot be allowed to turn a
+   * placed order into a failed checkout.
+   */
+  it("cannot fail the checkout when CallMeBot does", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => {
+        throw new DOMException("Timed out", "TimeoutError");
+      }),
+    );
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "cod",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body.paymentType).toBe("cod");
+    expect(body.trackingId).toMatch(/^[23456789ABCDEFGHJKMNPQRSTUVWXYZ]{10}$/);
+
+    const written = await prisma.order.findUniqueOrThrow({
+      where: { cashfreeOrderId: body.codOrderReference },
+    });
+
+    expect(written.id).toBe(body.trackingId);
+    expect(written.paymentType).toBe("cod");
+    expect(written.amountDue.toNumber()).toBe(written.total.toNumber());
+  });
+
+  /**
+   * A refused path writes no row, so there is nothing to notify anybody about. This is the
+   * property that makes the write the warrant: no capture, no message.
+   */
+  it("does not go out for a cash-on-delivery request the cart does not permit", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await barProduct(COD_ELIGIBLE_ID, 500);
+
+    const outboundFetch = vi.fn(async () => new Response("ok", { status: 200 }));
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "cod",
+    });
+
+    expect(response.status).toBe(400);
+    expect(callMeBotRequests(outboundFetch)).toEqual([]);
+  });
+
+  /**
+   * The two gateway paths are untouched. Their notification is still the browser's, fired from
+   * `/order-confirmation` once `/api/verify-order` has said `PAID` and re-verified against
+   * Cashfree by `/api/notify-admin` — so `/api/create-order` must send nothing for either, even
+   * with the keys configured.
+   */
+  it("is not sent for a fully prepaid order, whose message is still the browser's to trigger", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const outboundFetch = vi.fn(async (_url: string, init: RequestInit) =>
+      cashfreeCreated(String(JSON.parse(String(init.body)).order_id)),
+    );
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+    });
+
+    expect(response.status).toBe(200);
+    expect(cashfreeRequests(outboundFetch)).toHaveLength(1);
+    expect(callMeBotRequests(outboundFetch)).toEqual([]);
+  });
+
+  it("is not sent for a part-paid order either, which reaches Cashfree and is verified there", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await barProduct(COD_ELIGIBLE_ID, 50);
+
+    const outboundFetch = vi.fn(async (_url: string, init: RequestInit) =>
+      cashfreeCreated(String(JSON.parse(String(init.body)).order_id)),
+    );
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 3 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "partial",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body.paymentType).toBe("partial_cod");
+    expect(cashfreeRequests(outboundFetch)).toHaveLength(1);
+    expect(callMeBotRequests(outboundFetch)).toEqual([]);
   });
 });
