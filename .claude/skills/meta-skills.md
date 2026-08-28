@@ -67,7 +67,7 @@ WhatsApp is the primary share surface; get these right the FIRST time because Wh
 - No em dashes. No banned promotional adjectives (stunning, exquisite, gorgeous, must-have, elevate, timeless, versatile, statement, luxurious, dainty, charming, effortless, radiant) or morphological variants.
 - No keyword stuffing: primary keyword at most once per field; never comma-list keywords as if the field were a tag.
 - **No field-clones:** within a product, metaTitle, metaDescription, imageAlt, and ogDescription must each be INDEPENDENTLY phrased. No field repeats another verbatim or near-verbatim.
-- **The batch tell is rhythm, not adjectives:** avoid 49 meta descriptions that are all "two sentences, descriptive then nudge." Vary sentence count, vary where/whether the nudge sits, and let some carry no nudge.
+- **The batch tell is rhythm, not adjectives:** avoid a catalogue of meta descriptions that are all "two sentences, descriptive then nudge." Vary sentence count, vary where/whether the nudge sits, and let some carry no nudge.
 - **Ledger (mandatory bookkeeping):** after each product, record one line: product ID | primaryKeyword | metaTitle | meta-desc lead angle (price/design/durability/occasion) | alt-text opening word | trust nudge used (or none). Consult it before writing the next product. The collision check (no duplicate primaryKeyword or metaTitle) is performed against this ledger, NOT against memory. Do not reuse the same lead angle more than twice consecutively. Without this ledger, variation and uniqueness decay by product 15.
 
 ## Method (per product)
@@ -113,7 +113,7 @@ ogImage: /products/P0XX.webp   1200x630 target
 PRICE-DATED: ₹199
 Ledger: P0XX | kw: silver-tone bow ring | title: Silver-Tone Bow Ring, Adjustable CZ Band | Morchadi Gems | lead: design | alt opens: Rhodium-plated | nudge: 7-day returns
 ```
-Why this works: keyword leads the title with brand fitting inside the budget; description leads with the design (the bow is the draw, price secondary), no anti-tarnish claim (not tagged), rhodium-plated named honestly and "silver-tone" never "silver"; the trust nudge is 7-day returns not the irrelevant ₹799 threshold (sub-₹799 rule); alt, meta description, and og:description are each phrased independently (no field-clones); og:image is present; price is flagged PRICE-DATED; all counts machine-verified. This is ONE valid shape, not THE shape: rotate the lead angle, the alt opening, and the nudge across the catalogue so 49 products do not read as one template.
+Why this works: keyword leads the title with brand fitting inside the budget; description leads with the design (the bow is the draw, price secondary), no anti-tarnish claim (not tagged), rhodium-plated named honestly and "silver-tone" never "silver"; the trust nudge is 7-day returns not the irrelevant ₹799 threshold (sub-₹799 rule); alt, meta description, and og:description are each phrased independently (no field-clones); og:image is present; price is flagged PRICE-DATED; all counts machine-verified. This is ONE valid shape, not THE shape: rotate the lead angle, the alt opening, and the nudge across the catalogue so 449 products do not read as one template.
 
 Second example (PRICE-led, to show the rotation the batch rules require). Product: Gold-Plated Peacock Nath, ruby-red stones and pearl-look drop, screw-fit, ₹109 (was ₹249). Category: nose-pins. Not tagged anti-tarnish.
 
@@ -130,4 +130,4 @@ ogImage: /products/P032.webp   1200x630 target
 PRICE-DATED: ₹109
 Ledger: P032 | kw: gold-plated peacock nath | title: Gold-Plated Peacock Nath with Ruby-Red Stones | lead: price | alt opens: Screw-fit | nudge: none
 ```
-Note the rotation from the first example: this one LEADS with price (the ₹109 wow), opens the alt on "Screw-fit" (a fit fact, not the material), and carries NO trust nudge (the batch rules say some should not). Between the two examples: two different lead angles, two different alt openings, two different nudge choices. That is the variation the ledger enforces across all 49.
+Note the rotation from the first example: this one LEADS with price (the ₹109 wow), opens the alt on "Screw-fit" (a fit fact, not the material), and carries NO trust nudge (the batch rules say some should not). Between the two examples: two different lead angles, two different alt openings, two different nudge choices. That is the variation the ledger enforces across all 449 records in the catalogue.

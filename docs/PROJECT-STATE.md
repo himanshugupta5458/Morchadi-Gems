@@ -181,58 +181,74 @@ npm run validate:products && npm run build`, plus a `/docs` update and a `BUILD_
 ## 4. The catalogue
 
 `data/products.json` — a flat JSON array, the single source of truth for prices. Re-counted on
-2026-08-21 and **unchanged since the previous edition of this file**.
+2026-08-28, directly from the file. The previous edition of this section described the
+49-product catalogue and had been stale since the migration batches landed.
 
-- **49 products**, ids `P001`–`P049`, contiguous.
-- **Price range ₹49–₹499.** Every product carries `pricing.price`, `pricing.mrp` and
+- **449 products**, ids `P001`–`P639`, **not contiguous** — 59 gaps, because a P-code is
+  reserved at Draft A creation and a draft that never publishes leaves its number unused
+  (Draft A rule 14).
+- **All 449 are `status: "active"`; there are no drafts in the file.**
+- **Price range ₹35–₹2,999.** Every product carries `pricing.price`, `pricing.mrp` and
   `pricing.cost`. `cost` is never readable from any shopper-facing path.
 - **6 out of stock:** P006, P008, P011, P015, P039, P040.
-- **8 flagged `featured`** (Best Sellers) and **8 flagged `isNew`** (New Arrivals).
-- **Images: 48 products have exactly one; P002 has two.** Files are `/products/P0NN.webp`.
-- **5 products carry options; 44 are plain.**
+- **8 flagged `featured`** (Best Sellers) and **408 flagged `isNew`** (New Arrivals). `isNew`
+  is carried by 91% of the catalogue because the mapper sets it on every migrated record; the
+  home strip therefore asks `getNewArrivals()` for a bounded preview rather than the flag's
+  whole population, and re-merchandising the flag itself is still open.
+- **Images: 436 products have exactly one**, and 13 have between two and eight. Files are
+  `/products/PNNN.webp`.
+- **59 products carry options; 390 are plain.**
 
-**Record shape** (union of keys across all 49):
+**Record shape** (union of keys across all 449):
 
 ```
-id, name, category, pricing{price, mrp, cost}, media{images[]}, options[]?,
-specs{material, type, size?, closure?, stone?}, description, seo{...},
-stock{inStock}, flags{featured, isNew}, collections[]?
+id, name, category, status, subcategory?, pricing{price, mrp, cost}, media{images[], variantImages?},
+options[]?, specs{...}, description, seo{...}, stock{inStock}, flags{featured, isNew},
+collections[]?, migrationProvenance{...}?
 ```
 
-**Categories** (11 in the vocabulary, 10 surfaced to shoppers — defined in `types/product.ts`,
-counts from the data). `gift-hampers` is a valid category a record may carry that reaches no
-shopper-facing surface until its first product ships; see
+`specs` is open-ended by design (ADR-027) and the catalogue now uses 119 distinct keys.
+
+**Categories** (11 in the vocabulary, all 11 now surfaced — defined in `types/product.ts`,
+counts from the data). `gift-hampers` was `pending` until its first product shipped; see
 [ADR-055](decisions/ADR-055-category-vocabulary-and-surfacing.md):
 
 | Category | Count |
 | --- | --- |
-| rings | 18 |
-| earrings | 7 |
-| nose-pins | 5 |
-| bracelets | 5 |
-| bangles | 3 |
-| anklets | 3 |
-| hair-accessories | 3 |
-| necklaces | 2 |
-| watches | 2 |
-| pendants | 1 |
-| gift-hampers | 0 — `pending`, not surfaced |
+| rings | 116 |
+| bracelets | 100 |
+| bangles | 51 |
+| necklaces | 37 |
+| pendants | 33 |
+| watches | 32 |
+| earrings | 25 |
+| gift-hampers | 23 |
+| nose-pins | 17 |
+| hair-accessories | 11 |
+| anklets | 4 |
 
 **Collections** (4 filter slugs, two hand-tagged and two derived): `gifting` and `anti-tarnish`
 are tags a product opts into; `best-sellers` derives from `flags.featured` and `new-arrivals`
-from `flags.isNew`. **8 products carry `anti-tarnish` and none carry `gifting`** — so `gifting`
-is excluded from the sitemap by `getPopulatedCollectionPaths()` rather than publishing an empty
-result page.
+from `flags.isNew`. **91 products carry `anti-tarnish` and 115 carry `gifting`** — both are now
+populated, so `getPopulatedCollectionPaths()` no longer excludes either from the sitemap.
 
-**Variant products (5).** Options never change price:
+**Variant products (59).** Options never change price. The five original records use `Letter`,
+`Shape` and `Colour`; the migrated ones are dominated by bangle and ring sizing:
 
-| Product | Option | Control | Values |
-| --- | --- | --- | --- |
-| P001 Wave Band Initial Ring | Letter | dropdown | 25 |
-| P005 Silver-Tone Initial Signet Ring | Letter | dropdown | 22 |
-| P006 Floating Locket Pendant | shape | chips | 4 |
-| P010 Mini Watch Ring | Colour | swatch | 2 |
-| P048 Satin Long Tail Bow Hair Clip | Colour | swatch | 4 |
+| Option name | Option groups | Controls in use |
+| --- | --- | --- |
+| Size for bangles | 42 | pills, dropdown |
+| Design Number | 8 | pills, dropdown |
+| Color | 4 | swatch, dropdown |
+| Letter | 3 | dropdown |
+| Size for rings | 3 | pills, dropdown |
+| Colour | 2 | swatch |
+| size | 2 | dropdown |
+| Shape | 1 | chips |
+| Stone | 1 | swatch |
+
+`Colour`/`Color` and `size`/`Size for …` are the same question spelled four ways across
+migration batches, which is a naming inconsistency the catalogue carries rather than a design.
 
 ---
 
@@ -298,7 +314,7 @@ GA4 behind `NEXT_PUBLIC_GA_MEASUREMENT_ID`, first-touch UTM capture in `localSto
 triple written to both the Cashfree `order_tags` and the `orders` / `customers` rows, and the
 Google Tag host added to `script-src` in the same change that added the tag.
 
-**SEO.** Per-product metadata for all 49, a 70-URL sitemap, `robots.txt`, Organization /
+**SEO.** Per-product metadata for all 449, a 472-URL sitemap, `robots.txt`, Organization /
 OnlineStore / WebSite / Product / BreadcrumbList / ItemList / CollectionPage JSON-LD, no
 fabricated reviews anywhere, and the security-header pass. ADR-029, ADR-034, ADR-036.
 
