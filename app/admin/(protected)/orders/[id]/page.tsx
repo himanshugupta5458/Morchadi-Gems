@@ -71,6 +71,18 @@ function isGatewayOrder(paymentType: PaymentType): boolean {
   return paymentType !== "cod";
 }
 
+/**
+ * `amountPrepaid` is written at Cashfree-session creation, before the customer has paid
+ * anything (ADR-042) — so for a gateway order it names money only once Cashfree's own status
+ * says `PAID`. A `cod` order never went through this at all, so its figure needs no such gate.
+ */
+function isPrepaidAmountConfirmed(
+  paymentType: PaymentType,
+  cashfreePaymentStatus: string,
+): boolean {
+  return !isGatewayOrder(paymentType) || cashfreePaymentStatus === "PAID";
+}
+
 function refundSummary(
   refundAmount: number | null,
   isRefunded: boolean,
@@ -250,7 +262,13 @@ export default async function AdminOrderDetailPage({
               <AdminFactRow label="Payment type">
                 {getPaymentTypeLabel(order.paymentType)}
               </AdminFactRow>
-              <AdminFactRow label="Prepaid">{formatRupees(order.amountPrepaid)}</AdminFactRow>
+              <AdminFactRow label="Prepaid">
+                {isPrepaidAmountConfirmed(order.paymentType, order.cashfreePaymentStatus) ? (
+                  formatRupees(order.amountPrepaid)
+                ) : (
+                  <span className="text-sale">Awaiting payment confirmation</span>
+                )}
+              </AdminFactRow>
               <AdminFactRow label="Due on delivery">
                 {formatRupees(order.amountDue)}
               </AdminFactRow>
