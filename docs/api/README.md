@@ -30,6 +30,7 @@ and loses its brackets:
 | `app/api/webhooks/cashfree/route.ts` | `webhooks-cashfree.md` |
 | `app/admin/api/login/route.ts` | `admin-login.md` |
 | `app/admin/api/orders/[id]/status/route.ts` | `admin-orders-id-status.md` |
+| `app/admin/api/products/[id]/route.ts` | `admin-products-id.md` |
 
 ## Required structure
 
@@ -80,8 +81,9 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `POST /admin/api/orders/{id}/status` | [admin-orders-id-status.md](admin-orders-id-status.md) |
 | `POST /admin/api/orders/{id}/address` | [admin-orders-id-address.md](admin-orders-id-address.md) |
 | `POST /admin/api/orders/{id}/receipt` | [admin-orders-id-receipt.md](admin-orders-id-receipt.md) |
+| `PATCH /admin/api/products/{id}` | [admin-products-id.md](admin-products-id.md) |
 
-Every route handler in the repository is documented — the five under `app/api/` and the five
+Every route handler in the repository is documented — the five under `app/api/` and the six
 under `app/admin/api/`. `verify-order` is the only one without a backing ADR — payment
 verification shipped in prompt 13, which produced no decision record — so its contract file
 carries the reasoning that would otherwise live in an ADR.

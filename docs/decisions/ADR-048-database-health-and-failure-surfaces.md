@@ -214,3 +214,38 @@ sentence.
 What this does **not** do is make an outage less likely, back up the orders table, or apply a
 migration. It makes each of those failures say so. The backup policy remains
 **[VERIFY WITH OWNER]** and unaddressed.
+
+## Addendum, 2026-08-29 — a seventh surface, and it is not a database at all
+
+[ADR-064](ADR-064-admin-product-management.md) added the admin product list and detail screens,
+which read `data/products.json` rather than Postgres. Decision 4 above says adding a surface means
+adding a row, so here is the row:
+
+| Surface | Decision | Why |
+| --- | --- | --- |
+| Admin product pages (list, detail) | **Loud, styled — and explicitly not the database's wording** | The catalogue is a file, and it fails differently |
+
+`components/AdminCatalogueError.tsx` is that row's implementation, and it is a **sibling** of
+`AdminDatabaseError` rather than a reuse of it. The two are kept apart on purpose, because the
+operator's next action and the urgency of it are both different:
+
+- A **Postgres** outage means orders are arriving unrecorded. That is a revenue emergency, and the
+  panel's wording says so.
+- A **catalogue** that will not parse means this one screen cannot list products. The shop carries
+  on serving the copy compiled into the running build ([ADR-064](ADR-064-admin-product-management.md),
+  finding 1), no shopper sees anything wrong, and nothing is being lost while it is fixed. The
+  usual cause is that the file is not valid JSON after a hand edit, so the message says that, and
+  says that reloading is unlikely to help on its own.
+
+An operator who read the database wording on this screen would treat a malformed JSON file as an
+outage. `lib/admin-product-pages.test.tsx`'s *"does not describe it as a database outage or imply
+orders are being lost"* is the test that keeps the two from converging.
+
+The principle above is unchanged and this row obeys it: the operator is the person who fixes
+files, so the failure is loud. What the addendum adds is that **"loud" is not one voice** — the
+surface has to name the thing that broke accurately enough for the operator to know which system
+they are about to go and look at.
+
+Nothing else in this ADR changes. The six rows above stand, `/api/health` is untouched, and the
+product pages add no database dependency of their own — they sit *behind* the protected admin
+layout, whose Postgres-backed session resolution is already row 6's business.

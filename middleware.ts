@@ -1,8 +1,10 @@
 import { NextResponse, type NextRequest } from "next/server";
 import {
   ADMIN_SESSION_COOKIE,
+  INTERNAL_ADMIN_PATH_HEADER,
   decideAdminRoute,
   firstForwardedValue,
+  isAdminPath,
   resolveRequestHostname,
 } from "@/lib/admin-routing";
 
@@ -39,12 +41,39 @@ export function middleware(request: NextRequest): NextResponse {
   if (decision.kind === "rewrite") {
     const rewritten = request.nextUrl.clone();
     rewritten.pathname = decision.internalPath;
-    return NextResponse.rewrite(rewritten);
+    return NextResponse.rewrite(rewritten, {
+      request: { headers: withInternalAdminPath(request, decision.internalPath) },
+    });
   }
 
   if (decision.kind === "redirect") return temporaryRedirect(request, decision.location);
 
+  if (isAdminPath(request.nextUrl.pathname)) {
+    return NextResponse.next({
+      request: { headers: withInternalAdminPath(request, request.nextUrl.pathname) },
+    });
+  }
+
   return NextResponse.next();
+}
+
+/**
+ * The request's headers plus the `/admin/*` path it actually resolved to.
+ *
+ * The admin layout renders the panel's nav and has to know which section is current, and a
+ * Server Component cannot ask for its own pathname. The alternative is `usePathname`, which
+ * would make the nav a Client Component and put JavaScript on every page of a panel that
+ * deliberately ships none for navigation — so the one fact it needs is passed down instead.
+ *
+ * Set on both branches on purpose. In production the admin subdomain is rewritten and the
+ * internal path is the rewrite target; on a development machine `/admin/*` is served by path and
+ * is already internal. A layout reading this header must work the same in both, or the nav is
+ * right locally and wrong in production.
+ */
+function withInternalAdminPath(request: NextRequest, internalPath: string): Headers {
+  const headers = new Headers(request.headers);
+  headers.set(INTERNAL_ADMIN_PATH_HEADER, internalPath);
+  return headers;
 }
 
 /**

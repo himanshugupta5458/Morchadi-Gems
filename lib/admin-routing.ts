@@ -178,6 +178,62 @@ export function resolveAdminOrderHref(hostname: string, orderId: string): string
 }
 
 /**
+ * The header middleware uses to tell the admin layout which `/admin/*` path a request resolved
+ * to, so the nav can mark its current section without the layout becoming a Client Component.
+ * Set on every admin request, on both the rewritten and the by-path route. See `middleware.ts`.
+ */
+export const INTERNAL_ADMIN_PATH_HEADER = "x-admin-internal-path";
+
+/** The panel's sections — one nav entry each, and the two things this panel manages. */
+export const ADMIN_SECTIONS = ["orders", "products"] as const;
+
+export type AdminSection = (typeof ADMIN_SECTIONS)[number];
+
+/**
+ * Which section an internal admin path belongs to, or null for the panel's home.
+ *
+ * Matched on the path's first segment after `/admin`, so `/admin/products/P001` is still the
+ * Products section — a detail page is inside the section it was reached from, and a nav that
+ * lost its highlight on the way into a record would be telling the operator they had left.
+ */
+export function resolveAdminSection(internalPath: string | null | undefined): AdminSection | null {
+  if (internalPath === null || internalPath === undefined) return null;
+
+  const segment = internalPath.replace(`${ADMIN_PATH_PREFIX}/`, "").split("/")[0];
+  return ADMIN_SECTIONS.find((section) => section === segment) ?? null;
+}
+
+/**
+ * The public URL of the product list on this hostname — `/products` or `/admin/products`.
+ *
+ * The catalogue's second reader, and the first one that can write to it. It resolves through the
+ * same prefix as everything else rather than being written down, because `/products` and
+ * `/admin/products` are one page reached from two domains. See
+ * [ADR-064](/docs/decisions/ADR-064-admin-product-management.md).
+ */
+export function resolveAdminProductsHref(hostname: string): string {
+  return `${resolveAdminPublicPrefix(hostname)}/products`;
+}
+
+/** The public URL of one product's detail page — `/products/P001` or `/admin/products/P001`. */
+export function resolveAdminProductHref(hostname: string, productId: string): string {
+  return `${resolveAdminProductsHref(hostname)}/${encodeURIComponent(productId)}`;
+}
+
+/**
+ * The endpoint one product's edit is saved through — `/api/products/{id}` on the admin
+ * subdomain, `/admin/api/products/{id}` on a development machine.
+ *
+ * One endpoint rather than the three the order actions have, and for the mirror of their reason:
+ * an order's three actions validate different things and refuse for different reasons, whereas a
+ * product edit is one record checked against one set of rules. Splitting it per tab would be
+ * three handlers sharing a door, and would let a save land half-applied.
+ */
+export function resolveAdminProductActionHref(hostname: string, productId: string): string {
+  return `${resolveAdminPublicPrefix(hostname)}/api/products/${encodeURIComponent(productId)}`;
+}
+
+/**
  * The three things an operator can change about one order, and the endpoint that does each.
  *
  * They are separate routes rather than one endpoint taking an `intent`, because they validate

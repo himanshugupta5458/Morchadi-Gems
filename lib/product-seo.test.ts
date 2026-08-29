@@ -169,9 +169,15 @@ describe("the honesty rules, applied to the metadata", () => {
     }
   });
 
-  it("keeps the validator's copy of the free-shipping threshold in step with the real one", () => {
-    const validator = readFileSync("scripts/validate-products.mjs", "utf8");
-    expect(validator).toContain(`const FREE_SHIPPING_THRESHOLD = ${FREE_SHIPPING_THRESHOLD};`);
+  /**
+   * The copy lives in `scripts/product-record-rules.mjs`, which is where the SEO rule that reads it
+   * moved when ADR-064 gave the gate and the admin product editor one implementation. Still a plain
+   * ESM duplicate of `lib/config.ts`, still for the reason it always was: the rules must stay
+   * runnable over the JSON with no path aliases and no TypeScript loader.
+   */
+  it("keeps the rules module's copy of the free-shipping threshold in step with the real one", () => {
+    const rules = readFileSync("scripts/product-record-rules.mjs", "utf8");
+    expect(rules).toContain(`const FREE_SHIPPING_THRESHOLD = ${FREE_SHIPPING_THRESHOLD};`);
   });
 });
 

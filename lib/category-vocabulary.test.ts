@@ -163,10 +163,10 @@ describe("selectSurfacedCategories, over arbitrary categories", () => {
 });
 
 describe("the five enumerations that must not drift apart", () => {
-  it("types/product.ts and scripts/validate-products.mjs agree", () => {
+  it("types/product.ts and scripts/product-record-rules.mjs agree", () => {
     expect(
       sorted(
-        categoriesDeclaredIn("scripts/validate-products.mjs", "CATEGORIES").map(
+        categoriesDeclaredIn("scripts/product-record-rules.mjs", "CATEGORIES").map(
           (category) => category.slug,
         ),
       ),
@@ -174,7 +174,7 @@ describe("the five enumerations that must not drift apart", () => {
   });
 
   it("they agree on each category's STATUS too, not only on the slugs", () => {
-    const declared = categoriesDeclaredIn("scripts/validate-products.mjs", "CATEGORIES");
+    const declared = categoriesDeclaredIn("scripts/product-record-rules.mjs", "CATEGORIES");
     const expected = [...CATEGORIES]
       .map((category) => ({ slug: category.slug, status: category.status }))
       .sort((left, right) => left.slug.localeCompare(right.slug));
@@ -185,12 +185,16 @@ describe("the five enumerations that must not drift apart", () => {
   /**
    * The regression guard for audit finding I-5. The validator used to answer "is this category
    * browsable" with `slug !== "gift-hampers"` — a question about a name, when ADR-055 had already
-   * created a field to answer it. A source assertion rather than a behavioural one because
-   * `validate-products.mjs` validates the catalogue and calls `process.exit` at module scope, so
-   * a test cannot import it and read the derived value.
+   * created a field to answer it.
+   *
+   * The list itself moved to `scripts/product-record-rules.mjs` when ADR-064 gave the catalogue's
+   * rules one implementation shared by the gate and the admin product editor. It is still a plain
+   * ESM copy of `types/product.ts`, still for the reason it always was, and it is still checked
+   * from the source rather than by importing it — `validate-products.mjs` calls `process.exit` at
+   * module scope, and the rules module is the file the copy now lives in.
    */
-  it("validate-products.mjs derives surfacing from status, never from a slug name", () => {
-    const code = executableSourceOf("scripts/validate-products.mjs");
+  it("product-record-rules.mjs derives surfacing from status, never from a slug name", () => {
+    const code = executableSourceOf("scripts/product-record-rules.mjs");
 
     expect(code).toContain('category.status === "surfaced"');
     expect(code).not.toContain('slug !== "gift-hampers"');

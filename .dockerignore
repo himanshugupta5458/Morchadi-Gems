@@ -30,15 +30,29 @@ build
 .claude
 
 # Most of scripts/ is dev-only pipeline and migration tooling, genuinely not read by the
-# production build. keyword-normalisation.mjs is the exception: it is a real runtime import of
-# lib/keyword-collision-check.ts (e493e4c gave the keyword rules one implementation, shared
-# between the .ts module and scripts/validate-products.mjs), so it must reach the build context
-# even though the rest of this directory should not. Without the negation below, `next build`
-# fails type-checking with "Cannot find module '@/scripts/keyword-normalisation.mjs'" inside
+# production build. The negations below are the exceptions: each is a real runtime import from
+# lib/, so it must reach the build context even though the rest of this directory should not.
+# Without them, `next build` fails type-checking with "Cannot find module '@/scripts/…'" inside
 # Docker while passing on a real filesystem, where .dockerignore never applies.
+#
+#   keyword-normalisation.mjs   imported by lib/keyword-collision-check.ts (e493e4c gave the
+#                               keyword rules one implementation, shared between the .ts module
+#                               and scripts/validate-products.mjs)
+#   product-record-rules.mjs    imported by lib/product-validation.ts — the catalogue's own
+#                               validation rules, shared between the gate and the admin product
+#                               editor so an edit cannot pass a weaker check than the build's
+#                               (ADR-064). It pulls in the two rule modules below.
+#   banned-meta-adjectives.mjs  imported by product-record-rules.mjs
+#   min-prepaid-rule.mjs        imported by product-record-rules.mjs
+#   backfill-keyword-map.mjs    imported by lib/product-repository.ts, which rebuilds
+#                               data/keyword-map.json whenever it writes the catalogue
 docs
 scripts
 !scripts/keyword-normalisation.mjs
+!scripts/product-record-rules.mjs
+!scripts/banned-meta-adjectives.mjs
+!scripts/min-prepaid-rule.mjs
+!scripts/backfill-keyword-map.mjs
 
 # the Draft A pipeline: 124 MB of source drafts, staged photographs and completed records.
 # Nothing in app/, lib/, components/ or config/ imports it, and the runner stage copies only

@@ -6,17 +6,19 @@ import { getAllProducts } from "@/lib/products";
 const EM_DASH = "—";
 
 /**
- * Two files render a lone em dash where a number has no value: `OrderTotals` for a total that
- * is not yet known, and `AdminOrderTable` for an order with nothing owing on it. In both it is
- * a typographic placeholder standing in for a figure rather than prose, which is the only use
- * of the character this project allows. Everything else is copy somebody reads as a sentence.
+ * Three files render a lone em dash where a value is absent: `OrderTotals` for a total that is
+ * not yet known, `AdminOrderTable` for an order with nothing owing on it, and `AdminProductTable`
+ * for a product carrying no compare-at price and no merchandising flag. In all three it is a
+ * typographic placeholder standing in for a value rather than prose, which is the only use of the
+ * character this project allows. Everything else is copy somebody reads as a sentence.
  *
- * The admin column is deliberately blank rather than `₹0`: a column of zeroes is one an
- * operator learns to skip, and the few rows carrying a figure are the whole reason it exists.
+ * The admin columns are deliberately blank rather than `₹0` or "None": a column of zeroes is one
+ * an operator learns to skip, and the few rows carrying a figure are the whole reason it exists.
  */
 const PLACEHOLDER_FILES = new Set([
   "components/OrderTotals.tsx",
   "components/AdminOrderTable.tsx",
+  "components/AdminProductTable.tsx",
 ]);
 
 const SCANNED_ROOTS = ["app", "components", "lib", "config", "types"];

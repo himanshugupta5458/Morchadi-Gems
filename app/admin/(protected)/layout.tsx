@@ -1,9 +1,12 @@
 import { headers } from "next/headers";
 import type { ReactNode } from "react";
 import {
+  INTERNAL_ADMIN_PATH_HEADER,
   resolveAdminLoginHref,
   resolveAdminLogoutHref,
   resolveAdminOrdersHref,
+  resolveAdminProductsHref,
+  resolveAdminSection,
   resolveRequestHostname,
 } from "@/lib/admin-routing";
 import { requireAdminSession } from "@/lib/admin-session";
@@ -52,14 +55,25 @@ export default async function ProtectedAdminLayout({
   }
 
   const admin = session.admin;
-  const hostname = resolveRequestHostname((name) => headers().get(name));
+  const requestHeaders = headers();
+  const hostname = resolveRequestHostname((name) => requestHeaders.get(name));
+  const section = resolveAdminSection(requestHeaders.get(INTERNAL_ADMIN_PATH_HEADER));
 
   return (
     <div className="flex flex-col gap-8">
       <AdminNav
         username={admin.username}
         links={[
-          { label: "Orders", href: resolveAdminOrdersHref(hostname), isCurrent: true },
+          {
+            label: "Orders",
+            href: resolveAdminOrdersHref(hostname),
+            isCurrent: section === "orders",
+          },
+          {
+            label: "Products",
+            href: resolveAdminProductsHref(hostname),
+            isCurrent: section === "products",
+          },
         ]}
         logoutApiHref={resolveAdminLogoutHref(hostname)}
         signedOutHref={resolveAdminLoginHref(hostname)}
