@@ -90,13 +90,13 @@ function buildPaymentChoiceOptions(
 
   if (prepayment.isCodEligible) {
     return [
+      payInFull,
       {
         path: "cod",
         label: "Cash on delivery",
         amountNow: 0,
         description: `Pay nothing now. Have ${formatRupees(total)} ready in cash when your order arrives.`,
       },
-      payInFull,
     ];
   }
 
@@ -104,13 +104,13 @@ function buildPaymentChoiceOptions(
   if (floor <= 0 || floor >= total) return [payInFull];
 
   return [
+    payInFull,
     {
       path: "partial",
       label: "Pay minimum now",
       amountNow: floor,
       description: `One piece in this order needs part payment up front. The remaining ${formatRupees(total - floor)} is due before delivery and is collected separately.`,
     },
-    payInFull,
   ];
 }
 
