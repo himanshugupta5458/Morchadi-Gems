@@ -281,6 +281,14 @@ export function resolvePage(requestedPage: number, pageCount: number): number {
 }
 
 /**
+ * Every record the query selects, in the order the list would show them and with no page applied.
+ *
+ * The list slices this; the `.xlsx` export takes all of it. Both being the same function is what
+ * makes "export what I am looking at" a true statement rather than a second implementation of the
+ * same filters that agrees with the first until one of them is edited
+ * ([ADR-065](/docs/decisions/ADR-065-admin-sidebar-export-and-variant-picker.md)).
+ */
+/**
  * One page of products from the whole catalogue: filter, sort, then slice.
  *
  * In memory rather than in a query, because the repository hands over an array and 449 records
@@ -288,13 +296,20 @@ export function resolvePage(requestedPage: number, pageCount: number): number {
  * `where`/`orderBy`/`skip`/`take` — and the page above it will not know, because it already reads
  * `AdminProductPage` rather than an array.
  */
+export function selectMatchingAdminProducts(
+  products: readonly Product[],
+  query: AdminProductQuery,
+): Product[] {
+  return products
+    .filter((product) => matchesAdminProductQuery(product, query))
+    .sort(ADMIN_PRODUCT_COMPARATORS[query.sort]);
+}
+
 export function selectAdminProductPage(
   products: readonly Product[],
   query: AdminProductQuery,
 ): AdminProductPage {
-  const matched = products
-    .filter((product) => matchesAdminProductQuery(product, query))
-    .sort(ADMIN_PRODUCT_COMPARATORS[query.sort]);
+  const matched = selectMatchingAdminProducts(products, query);
 
   const totalCount = matched.length;
   const pageCount = countPages(totalCount, ADMIN_PRODUCTS_PAGE_SIZE);
@@ -341,6 +356,32 @@ export function buildAdminProductsHref(
 
   const queryString = params.toString();
   return queryString === "" ? basePath : `${basePath}?${queryString}`;
+}
+
+/**
+ * Whether the list on screen is anything less than the whole catalogue — a filter, a search, or a
+ * view other than All. It is what the export button's wording turns on, and what decides whether
+ * the downloaded file may carry the standalone script's old name.
+ */
+export function isAdminProductListNarrowed(query: AdminProductQuery): boolean {
+  return hasActiveAdminProductFilters(query) || query.view !== DEFAULT_ADMIN_PRODUCT_VIEW;
+}
+
+/**
+ * What the export button says, and it says which of the two things it does.
+ *
+ * The count is in the label rather than beside it because the count *is* the promise: an operator
+ * who has filtered to six out-of-stock pieces should not have to infer whether the button means
+ * those six or all 449. See [ADR-065](/docs/decisions/ADR-065-admin-sidebar-export-and-variant-picker.md).
+ */
+export function adminProductExportLabel(
+  query: AdminProductQuery,
+  totalCount: number,
+): string {
+  const noun = totalCount === 1 ? "product" : "products";
+  return isAdminProductListNarrowed(query)
+    ? `Export these ${totalCount} filtered ${noun} (.xlsx)`
+    : `Export all ${totalCount} ${noun} (.xlsx)`;
 }
 
 /** Whether anything beyond the current view is narrowing the list. Drives "Clear filters". */

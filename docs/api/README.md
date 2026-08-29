@@ -82,6 +82,7 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `POST /admin/api/orders/{id}/address` | [admin-orders-id-address.md](admin-orders-id-address.md) |
 | `POST /admin/api/orders/{id}/receipt` | [admin-orders-id-receipt.md](admin-orders-id-receipt.md) |
 | `PATCH /admin/api/products/{id}` | [admin-products-id.md](admin-products-id.md) |
+| `GET /admin/api/products/export` | [admin-products-export.md](admin-products-export.md) |
 
 Every route handler in the repository is documented — the five under `app/api/` and the six
 under `app/admin/api/`. `verify-order` is the only one without a backing ADR — payment

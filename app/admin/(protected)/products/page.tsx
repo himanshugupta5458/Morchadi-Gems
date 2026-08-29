@@ -3,14 +3,17 @@ import { headers } from "next/headers";
 import {
   ADMIN_PRODUCT_VIEWS,
   ADMIN_PRODUCT_VIEW_LABELS,
+  adminProductExportLabel,
   buildAdminProductsHref,
   hasActiveAdminProductFilters,
+  isAdminProductListNarrowed,
   matchesAdminProductView,
   parseAdminProductQuery,
   selectAdminProductPage,
   type AdminProductSearchParams,
 } from "@/lib/admin-products";
 import {
+  resolveAdminProductExportHref,
   resolveAdminProductHref,
   resolveAdminProductsHref,
   resolveRequestHostname,
@@ -18,6 +21,7 @@ import {
 import { isCatalogueWriteEnabled, productRepository } from "@/lib/product-repository";
 import type { Product } from "@/types/product";
 import { AdminCatalogueError } from "@/components/AdminCatalogueError";
+import { AdminProductExport } from "@/components/AdminProductExport";
 import { AdminProductFilters } from "@/components/AdminProductFilters";
 import { AdminProductPagination } from "@/components/AdminProductPagination";
 import { AdminProductTable } from "@/components/AdminProductTable";
@@ -114,6 +118,16 @@ export default async function AdminProductsPage({
               })
             : null
         }
+      />
+
+      <AdminProductExport
+        href={buildAdminProductsHref(
+          resolveAdminProductExportHref(hostname),
+          query,
+          { page: 1 },
+        )}
+        label={adminProductExportLabel(query, totalCount)}
+        isNarrowed={isAdminProductListNarrowed(query)}
       />
 
       {rows.length === 0 ? (

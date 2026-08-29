@@ -866,7 +866,8 @@ None of it is shopper-facing, and none of it is on `/style-guide`, which is a st
 
 | Component | Kind | Notes |
 | --- | --- | --- |
-| `AdminNav` | Server | The panel's one piece of chrome: sections, who you are, and the way out |
+| `AdminSidebar` | Server | The panel's chrome, down the left of every protected page: shop name, sections, who you are, and the way out. The current section arrives as a prop, resolved from middleware's `x-admin-internal-path` header, so this stays a Server Component and the panel navigates with no JavaScript |
+| `AdminSidebarShell` | *Client* | One boolean: whether the sidebar is on screen below `lg`. The sidebar's contents reach it as server-rendered `children`, so nothing about the links crosses the client boundary. A disclosure rather than the storefront's modal drawer |
 | `AdminOrderTabs` / `AdminOrderFilters` / `AdminOrderPagination` / `AdminOrderTable` | Server | The order list. Links and a `<form method="get">`; ships no JavaScript |
 | `AdminPanelSection` | Server | One bordered block of the detail page: ivory header strip, title, optional description, content |
 | `AdminFactRow` | Server | A label and its value on one line, so every fact on the page aligns down one column |
@@ -875,15 +876,24 @@ None of it is shopper-facing, and none of it is on `/style-guide`, which is a st
 | `AdminOrderStatusForm` | *Client* | The status control, and the only place a refund decision is made |
 | `AdminOrderAddressPanel` | *Client* | Read-only text, or the storefront's `AddressForm` when the order is still `placed` or `packed` |
 | `AdminOrderReceiptToggles` | *Client* | "Item received back" and "COD amount collected", each posting only its own field |
+| `AdminProductTabs` / `AdminProductFilters` / `AdminProductPagination` / `AdminProductTable` | Server | The product list, mirroring the order list's four. Links and a `<form method="get">`; ships no JavaScript |
+| `AdminProductExport` | Server | The list as a downloadable `.xlsx`. A plain `<a>` to a `GET`, so a file download costs the page no JavaScript, and a label that names the count it will export |
+| `CataloguePublishNotice` | Server | Whether a save on this deployment reaches the working tree or is refused |
+| `AdminProductForm` | *Client* | The whole product record across three tabs, one draft state, one save. A sticky bar carries the tabs, the save button and whether anything is unsaved |
+| `AdminProductOptionEditor` | *Client* | One option group: name, control, one field per value, and a default chosen from those values rather than typed |
+| `AdminVariantImagePicker` | *Client* | A radio group of thumbnails per option value, with "Default photo" as the first choice rather than the absence of one. Chooses among the photographs the record already has; it never uploads one |
 
 **Every status is a colour and a word, never a colour alone** — `OrderStatusBadge` and the
 `status-*` tokens above.
 
-**The detail page's four client components are the panel's only JavaScript.** The list is
-deliberately JavaScript-free; the detail page is not, because the reason and refund fields have
-to appear the moment an unhappy status is chosen and the address form validates as it is typed.
-Every one of them submits to a route handler that re-validates the whole change. See
-[ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md).
+**Both lists are JavaScript-free; both detail pages are not.** An order's status control has to
+show the reason and refund fields the moment an unhappy status is chosen, its address form
+validates as it is typed, and a product's form holds one draft across three tabs and pairs
+photographs by clicking them. The sidebar's toggle is the only client component outside a detail
+page, and it holds one boolean. Every one of them submits to a route handler that re-validates
+the whole change. See [ADR-044](../decisions/ADR-044-admin-order-detail-and-layout-split.md),
+[ADR-064](../decisions/ADR-064-admin-product-management.md) and
+[ADR-065](../decisions/ADR-065-admin-sidebar-export-and-variant-picker.md).
 
 **`PanelNotice` is shared by `/cart` and `/address`** so the two waiting states are the same
 size and the page does not visibly collapse when one replaces real content.

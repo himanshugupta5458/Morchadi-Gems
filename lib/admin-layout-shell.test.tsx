@@ -46,12 +46,12 @@ async function renderStorefrontShell(): Promise<string> {
 async function renderAdminShell(): Promise<string> {
   const { default: RootLayout } = await import("@/app/layout");
   const { default: AdminLayout } = await import("@/app/admin/layout");
-  const { AdminNav } = await import("@/components/AdminNav");
+  const { AdminSidebar } = await import("@/components/AdminSidebar");
 
   return renderToStaticMarkup(
     <RootLayout>
       <AdminLayout>
-        <AdminNav
+        <AdminSidebar
           username="owner"
           links={[{ label: "Orders", href: "/admin/orders", isCurrent: true }]}
           logoutApiHref="/admin/api/logout"
@@ -91,12 +91,13 @@ describe("ADR-044 admin layout shell", () => {
     }
   });
 
-  it("still gives the admin page a document, a nav and its own content", async () => {
+  it("still gives the admin page a document, a sidebar and its own content", async () => {
     const html = await renderAdminShell();
 
     expect(html).toContain("<html");
     expect(html).toContain("<body");
-    expect(html).toContain("Morchadi Gems admin");
+    expect(html).toContain('aria-label="Admin panel"');
+    expect(html).toContain('aria-label="Admin sections"');
     expect(html).toContain("admin content");
   });
 

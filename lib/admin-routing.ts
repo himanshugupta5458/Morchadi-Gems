@@ -215,6 +215,53 @@ export function resolveAdminProductsHref(hostname: string): string {
   return `${resolveAdminPublicPrefix(hostname)}/products`;
 }
 
+/**
+ * Every section the sidebar lists, in the order it lists them, resolved for one hostname.
+ *
+ * The sections are declared once — `ADMIN_SECTIONS` for the header-matching, a label here, and an
+ * href resolver here — so a third section is three lines in this file and nothing at all in the
+ * layout or the sidebar. The previous top nav built its two entries inline, which made "add
+ * Customers" a change to a component that has no business knowing what a section is
+ * ([ADR-065](/docs/decisions/ADR-065-admin-sidebar-export-and-variant-picker.md)).
+ */
+export const ADMIN_SECTION_LABELS: Record<AdminSection, string> = {
+  orders: "Orders",
+  products: "Products",
+};
+
+const ADMIN_SECTION_HREF_RESOLVERS: Record<AdminSection, (hostname: string) => string> = {
+  orders: resolveAdminOrdersHref,
+  products: resolveAdminProductsHref,
+};
+
+export interface AdminSectionLink {
+  section: AdminSection;
+  label: string;
+  href: string;
+}
+
+export function resolveAdminSectionLinks(hostname: string): AdminSectionLink[] {
+  return ADMIN_SECTIONS.map((section) => ({
+    section,
+    label: ADMIN_SECTION_LABELS[section],
+    href: ADMIN_SECTION_HREF_RESOLVERS[section](hostname),
+  }));
+}
+
+
+/**
+ * The endpoint that hands back the product list as a spreadsheet — `/api/products/export` on the
+ * admin subdomain, `/admin/api/products/export` on a development machine.
+ *
+ * A `GET`, so the button that reaches it is an ordinary link and the list page ships no JavaScript
+ * to download a file. It is a static segment beside the dynamic `[id]` one, which Next resolves in
+ * its favour, so no product may be given the id `export`.
+ * See [ADR-065](/docs/decisions/ADR-065-admin-sidebar-export-and-variant-picker.md).
+ */
+export function resolveAdminProductExportHref(hostname: string): string {
+  return `${resolveAdminPublicPrefix(hostname)}/api/products/export`;
+}
+
 /** The public URL of one product's detail page — `/products/P001` or `/admin/products/P001`. */
 export function resolveAdminProductHref(hostname: string, productId: string): string {
   return `${resolveAdminProductsHref(hostname)}/${encodeURIComponent(productId)}`;

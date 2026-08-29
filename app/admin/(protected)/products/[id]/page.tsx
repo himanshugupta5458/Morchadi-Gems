@@ -88,7 +88,7 @@ export default async function AdminProductPage({
 
         <p className="text-body-sm text-muted">
           Every field on this record, across three tabs. Switching tabs keeps unsaved edits, and
-          saving saves all three at once.
+          the save bar above them stays on screen and saves all three at once.
         </p>
       </div>
 

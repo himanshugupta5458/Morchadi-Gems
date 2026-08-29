@@ -1,36 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useMemo, useState, type FormEvent, type ReactNode } from "react";
 import { submitAdminProductEdit } from "@/lib/admin-product-client";
 import {
+  PRODUCT_FORM_TABS,
+  PRODUCT_FORM_TAB_LABELS,
+  assignVariantImage,
+  photographChoicesFor,
+  serialiseDraftForComparison,
+  tabsWithProductFailures,
   toProductDraft,
   toProductEdit,
   variantImageRowsFor,
   type ProductDraft,
+  type ProductFormTab,
   type ProductOptionDraft,
   type ProductSpecDraft,
 } from "@/lib/admin-product-form";
 import { buttonClasses } from "@/lib/button-styles";
 import {
   CATEGORIES,
-  PRODUCT_OPTION_TYPES,
   PRODUCT_STATUSES,
   type Product,
-  type ProductOptionType,
   type ProductStatus,
 } from "@/types/product";
+import { AdminProductOptionEditor } from "@/components/AdminProductOptionEditor";
+import { AdminVariantImagePicker } from "@/components/AdminVariantImagePicker";
 import { Button } from "@/components/Button";
-
-const PRODUCT_FORM_TABS = ["basic", "variants", "pricing"] as const;
-
-type ProductFormTab = (typeof PRODUCT_FORM_TABS)[number];
-
-const TAB_LABELS: Record<ProductFormTab, string> = {
-  basic: "Basic details",
-  variants: "Variants & media",
-  pricing: "Pricing & SEO",
-};
 
 const FIELD_CLASSES =
   "w-full border border-line bg-white px-3 py-2.5 font-sans text-body-sm text-ink transition-colors duration-250 focus:border-gold";
@@ -119,7 +117,8 @@ export interface AdminProductFormProps {
 }
 
 /**
- * The whole of one product's record, editable, across three tabs.
+ * The whole of one product's record, editable, across three tabs behind a save bar that never
+ * leaves the screen.
  *
  * **One form, three tabs.** The tab control decides which section is on screen and nothing else:
  * every field belongs to the same `draft` state and the same submit, so switching tabs cannot lose
@@ -133,9 +132,24 @@ export interface AdminProductFormProps {
  * because a form that kept state in its inputs would pass every other test and lose the operator's
  * work on a tab change.
  *
+ * **The save bar is sticky, and the tabs are in it.** The tabs stayed; the save button moved. A
+ * record this size is a long scroll on every tab, and a save button at the bottom of one of them
+ * meant an operator with unsaved work had to remember they had it and then go and find the button.
+ * The bar states both — whether anything is unsaved, and where to put it — from wherever they are.
+ * The single-scrolling-page alternative was considered and rejected: it would have put a refused
+ * rule an entire viewport away from the field it names, which is the problem the tab markers below
+ * solve rather than create ([ADR-065](/docs/decisions/ADR-065-admin-sidebar-export-and-variant-picker.md)).
+ *
+ * **A refused save marks the tabs it came from.** The request is one save across three tabs, so a
+ * rejection routinely names a field that is not on screen. `tabsWithProductFailures` maps each
+ * rule back to the tab holding its field, so "meta title is 4 characters" is visibly a Pricing &
+ * SEO problem rather than a hunt.
+ *
  * **Nothing here is trusted.** The client-side checks are conveniences; the record is re-derived
  * and re-validated in the route handler against the same rules the build runs, because a control
- * this form does not render is still a field an authenticated `curl` can name (ADR-044).
+ * this form does not render is still a field an authenticated `curl` can name (ADR-044). The save,
+ * the version token and the CONCURRENT_CHANGE refusal are exactly the mechanics ADR-064 built —
+ * this is their presentation, not a second copy of them.
  */
 export function AdminProductForm({
   actionHref,
@@ -148,11 +162,19 @@ export function AdminProductForm({
   const [draft, setDraft] = useState<ProductDraft>(() => toProductDraft(product));
   const [tab, setTab] = useState<ProductFormTab>("basic");
   const [currentVersion, setCurrentVersion] = useState(version);
+  const [savedSnapshot, setSavedSnapshot] = useState(() =>
+    serialiseDraftForComparison(toProductDraft(product)),
+  );
   const [message, setMessage] = useState<string | null>(null);
   const [failures, setFailures] = useState<string[]>([]);
   const [advisories, setAdvisories] = useState<string[]>([]);
   const [savedNote, setSavedNote] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
+
+  const photographChoices = useMemo(() => photographChoicesFor(product), [product]);
+  const variantRows = variantImageRowsFor(draft);
+  const failedTabs = tabsWithProductFailures(failures);
+  const hasUnsavedChanges = serialiseDraftForComparison(draft) !== savedSnapshot;
 
   function update(changes: Partial<ProductDraft>): void {
     setDraft((previous) => ({ ...previous, ...changes }));
@@ -178,6 +200,8 @@ export function AdminProductForm({
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
 
+    const submitted = serialiseDraftForComparison(draft);
+
     setIsSaving(true);
     setMessage(null);
     setFailures([]);
@@ -197,6 +221,7 @@ export function AdminProductForm({
     }
 
     if (result.version !== null) setCurrentVersion(result.version);
+    setSavedSnapshot(submitted);
     setAdvisories(result.advisories);
     setSavedNote(
       result.status === "UNCHANGED"
@@ -206,27 +231,81 @@ export function AdminProductForm({
     router.refresh();
   }
 
-  const variantRows = variantImageRowsFor(draft);
+  function saveBarNote(): string {
+    if (!writesEnabled) return "This deployment serves a compiled catalogue, so saving is disabled here.";
+    if (isSaving) return "Saving all three tabs in one request.";
+    if (hasUnsavedChanges) return "Unsaved changes on this record.";
+    return "Nothing unsaved. Saving writes all three tabs at once.";
+  }
 
   return (
     <form noValidate onSubmit={(event) => void handleSubmit(event)} className="flex flex-col gap-6">
-      <nav aria-label="Product fields" className="flex flex-wrap items-center gap-6 border-b border-line">
-        {PRODUCT_FORM_TABS.map((candidate) => (
-          <button
-            key={candidate}
-            type="button"
-            aria-current={candidate === tab ? "true" : undefined}
-            onClick={() => setTab(candidate)}
-            className={
-              candidate === tab
-                ? "-mb-px border-b-2 border-ink pb-3 font-sans text-label uppercase tracking-caps text-ink"
-                : "-mb-px border-b-2 border-transparent pb-3 font-sans text-label uppercase tracking-caps text-muted transition-colors duration-250 hover:text-ink"
-            }
-          >
-            {TAB_LABELS[candidate]}
-          </button>
-        ))}
-      </nav>
+      <div className="sticky top-0 z-20 flex flex-col gap-4 border-b border-line bg-white pb-4 pt-2">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <nav aria-label="Product fields" className="flex flex-wrap items-center gap-6">
+            {PRODUCT_FORM_TABS.map((candidate) => (
+              <button
+                key={candidate}
+                type="button"
+                aria-current={candidate === tab ? "true" : undefined}
+                onClick={() => setTab(candidate)}
+                className={
+                  candidate === tab
+                    ? "border-b-2 border-ink pb-1 font-sans text-label uppercase tracking-caps text-ink"
+                    : "border-b-2 border-transparent pb-1 font-sans text-label uppercase tracking-caps text-muted transition-colors duration-250 hover:text-ink"
+                }
+              >
+                {PRODUCT_FORM_TAB_LABELS[candidate]}
+                {failedTabs.includes(candidate) ? (
+                  <>
+                    <span aria-hidden="true" className="pl-1.5 text-sale">
+                      &bull;
+                    </span>
+                    <span className="sr-only"> (has a refused rule)</span>
+                  </>
+                ) : null}
+              </button>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <span className={HINT_CLASSES}>{saveBarNote()}</span>
+            <Button type="submit" size="sm" disabled={isSaving || !writesEnabled}>
+              {isSaving ? "Saving…" : "Save product"}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {message === null ? null : (
+        <div role="alert" className="flex flex-col gap-2 border border-sale/30 bg-sale/5 px-4 py-3.5">
+          <p className="text-body-sm text-sale">{message}</p>
+          {failures.length === 0 ? null : (
+            <ul className="flex list-disc flex-col gap-1 pl-5">
+              {failures.map((failure) => (
+                <li key={failure} className="text-body-sm text-muted">
+                  {failure}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
+      {savedNote === null ? null : (
+        <div role="status" className="flex flex-col gap-2 border border-line bg-ivory px-4 py-3.5">
+          <p className="text-body-sm text-ink">{savedNote}</p>
+          {advisories.length === 0 ? null : (
+            <ul className="flex list-disc flex-col gap-1 pl-5">
+              {advisories.map((advisory) => (
+                <li key={advisory} className="text-body-sm text-muted">
+                  {advisory}. Saved anyway; this one is a judgement call rather than a rule.
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
 
       {tab === "basic" ? (
         <div className="flex flex-col gap-6">
@@ -370,75 +449,24 @@ export function AdminProductForm({
             </p>
 
             {draft.options.length === 0 ? (
-              <p className={HINT_CLASSES}>
-                This product is sold in one configuration.
-              </p>
+              <p className={HINT_CLASSES}>This product is sold in one configuration.</p>
             ) : null}
 
             {draft.options.map((option, index) => (
-              <div key={index} className="flex flex-col gap-4 border border-line bg-ivory px-4 py-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <FieldLabel label="Option name">
-                    <input
-                      type="text"
-                      value={option.name}
-                      onChange={(event) => updateOption(index, { name: event.target.value })}
-                      className={FIELD_CLASSES}
-                    />
-                  </FieldLabel>
-
-                  <FieldLabel label="Control">
-                    <select
-                      value={option.type}
-                      onChange={(event) =>
-                        updateOption(index, { type: event.target.value as ProductOptionType })
-                      }
-                      className={FIELD_CLASSES}
-                    >
-                      {PRODUCT_OPTION_TYPES.map((type) => (
-                        <option key={type} value={type}>
-                          {type}
-                        </option>
-                      ))}
-                    </select>
-                  </FieldLabel>
-                </div>
-
-                <FieldLabel label="Values" hint="One per line.">
-                  <textarea
-                    rows={4}
-                    value={option.values}
-                    onChange={(event) => updateOption(index, { values: event.target.value })}
-                    className={FIELD_CLASSES}
-                  />
-                </FieldLabel>
-
-                <FieldLabel
-                  label="Default"
-                  hint="What a shopper who never opens the control is recorded as having chosen. Must be one of the values above."
-                >
-                  <input
-                    type="text"
-                    value={option.default}
-                    onChange={(event) => updateOption(index, { default: event.target.value })}
-                    className={FIELD_CLASSES}
-                  />
-                </FieldLabel>
-
-                <div>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      update({
-                        options: draft.options.filter((_unused, position) => position !== index),
-                      })
-                    }
-                    className="font-sans text-label uppercase tracking-caps text-muted underline underline-offset-4 transition-colors duration-250 hover:text-sale"
-                  >
-                    Remove this option
-                  </button>
-                </div>
-              </div>
+              <AdminProductOptionEditor
+                key={index}
+                index={index}
+                option={option}
+                fieldClassName={FIELD_CLASSES}
+                labelClassName={FIELD_LABEL_CLASSES}
+                hintClassName={HINT_CLASSES}
+                onChange={(changes) => updateOption(index, changes)}
+                onRemove={() =>
+                  update({
+                    options: draft.options.filter((_unused, position) => position !== index),
+                  })
+                }
+              />
             ))}
 
             <div>
@@ -448,7 +476,7 @@ export function AdminProductForm({
                   update({
                     options: [
                       ...draft.options,
-                      { name: "", type: "dropdown", values: "", default: "" },
+                      { name: "", type: "dropdown", values: [""], default: "" },
                     ],
                   })
                 }
@@ -462,34 +490,21 @@ export function AdminProductForm({
           <section className={SECTION_CLASSES}>
             <h2 className={SECTION_TITLE_CLASSES}>Variant photographs</h2>
             <p className={HINT_CLASSES}>
-              One row per option value. A path here is the photograph shown when that value is
-              chosen; leave a row blank when the value has no picture of its own. Paths must already
-              exist under <code className="text-ink">public/</code>. Uploading images is not part of
-              this screen.
+              Pick which of this product&rsquo;s photographs a shopper sees for each option value.
+              A value with no photograph of its own falls through to the primary one. Uploading and
+              replacing photographs is not part of this screen.
             </p>
 
             {variantRows.length === 0 ? (
               <p className={HINT_CLASSES}>No option values to photograph.</p>
             ) : (
-              variantRows.map((row) => (
-                <FieldLabel key={row.key} label={row.key}>
-                  <input
-                    type="text"
-                    value={row.image}
-                    placeholder={`/products/${product.id}-variant.webp`}
-                    onChange={(event) =>
-                      update({
-                        variantImages: variantRows.map((candidate) =>
-                          candidate.key === row.key
-                            ? { key: candidate.key, image: event.target.value }
-                            : candidate,
-                        ),
-                      })
-                    }
-                    className={FIELD_CLASSES}
-                  />
-                </FieldLabel>
-              ))
+              <AdminVariantImagePicker
+                rows={variantRows}
+                choices={photographChoices}
+                onAssign={(key, image) =>
+                  update({ variantImages: assignVariantImage(draft, key, image) })
+                }
+              />
             )}
           </section>
 
@@ -503,9 +518,18 @@ export function AdminProductForm({
 
             <ol className="flex flex-col divide-y divide-line">
               {product.media.images.map((image, index) => (
-                <li key={image} className="flex flex-wrap items-baseline justify-between gap-x-6 py-1.5">
-                  <span className={FIELD_LABEL_CLASSES}>
-                    {index === 0 ? "Primary" : `View ${index + 1}`}
+                <li key={image} className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-2.5">
+                  <span className="flex items-center gap-3">
+                    <Image
+                      src={image}
+                      alt=""
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 object-cover"
+                    />
+                    <span className={FIELD_LABEL_CLASSES}>
+                      {index === 0 ? "Primary" : `View ${index + 1}`}
+                    </span>
                   </span>
                   <code className="text-body-sm text-ink">{image}</code>
                 </li>
@@ -736,49 +760,6 @@ export function AdminProductForm({
           </section>
         </div>
       ) : null}
-
-      <div className="flex flex-col gap-4 border-t border-line pt-6">
-        {message === null ? null : (
-          <div role="alert" className="flex flex-col gap-2 border border-sale/30 bg-sale/5 px-4 py-3.5">
-            <p className="text-body-sm text-sale">{message}</p>
-            {failures.length === 0 ? null : (
-              <ul className="flex list-disc flex-col gap-1 pl-5">
-                {failures.map((failure) => (
-                  <li key={failure} className="text-body-sm text-muted">
-                    {failure}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
-
-        {savedNote === null ? null : (
-          <div role="status" className="flex flex-col gap-2 border border-line bg-ivory px-4 py-3.5">
-            <p className="text-body-sm text-ink">{savedNote}</p>
-            {advisories.length === 0 ? null : (
-              <ul className="flex list-disc flex-col gap-1 pl-5">
-                {advisories.map((advisory) => (
-                  <li key={advisory} className="text-body-sm text-muted">
-                    {advisory}. Saved anyway; this one is a judgement call rather than a rule.
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        )}
-
-        <div className="flex flex-wrap items-center gap-5">
-          <Button type="submit" size="sm" disabled={isSaving || !writesEnabled}>
-            {isSaving ? "Saving…" : "Save product"}
-          </Button>
-          <span className={HINT_CLASSES}>
-            {writesEnabled
-              ? "Saving writes all three tabs at once."
-              : "This deployment serves a compiled catalogue, so saving is disabled here."}
-          </span>
-        </div>
-      </div>
     </form>
   );
 }
