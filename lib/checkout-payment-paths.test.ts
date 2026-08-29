@@ -2,6 +2,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 import type { CodEligibilityEntry } from "@/lib/cod";
 import { formatRupees } from "@/lib/format";
 import { CALLMEBOT_ENDPOINT } from "@/lib/notify";
+import { RESEND_API_ENDPOINT } from "@/lib/notify-customer-email";
 import { prisma } from "@/lib/prisma";
 import { getCodEligibilityCatalogue } from "@/lib/products";
 
@@ -238,6 +239,19 @@ function callMeBotRequests(outboundFetch: ReturnType<typeof vi.fn>): string[] {
   return requestedUrls(outboundFetch).filter((url) =>
     url.startsWith(CALLMEBOT_ENDPOINT),
   );
+}
+
+function resendRequests(outboundFetch: ReturnType<typeof vi.fn>): Record<string, unknown>[] {
+  return outboundFetch.mock.calls
+    .filter((call) => String(call[0]) === RESEND_API_ENDPOINT)
+    .map((call) => JSON.parse(String((call[1] as RequestInit).body)) as Record<string, unknown>);
+}
+
+function resendCreated(): Response {
+  return new Response(JSON.stringify({ id: "email_path_test" }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }
 
 /**
@@ -711,5 +725,103 @@ describe("the owner's notification for a cash-on-delivery order", () => {
     expect(body.paymentType).toBe("partial_cod");
     expect(cashfreeRequests(outboundFetch)).toHaveLength(1);
     expect(callMeBotRequests(outboundFetch)).toEqual([]);
+  });
+});
+
+/**
+ * The customer's own confirmation email for a cash-on-delivery order — the sibling of the
+ * describe block above, fired from the same branch of `/api/create-order` and subject to the
+ * same never-throw, not-awaited discipline. See
+ * [ADR-062](/docs/decisions/ADR-062-customer-order-confirmation-email.md).
+ *
+ * These tests configure `RESEND_API_KEY` for their own length. Everywhere else in this file it
+ * is unset, which is exactly the deployment where the email switches itself off — proved
+ * incidentally by every other test in this file making no request to `RESEND_API_ENDPOINT`.
+ */
+describe("the customer's confirmation email for a cash-on-delivery order", () => {
+  const previousKey = process.env.RESEND_API_KEY;
+
+  let silencedError: ReturnType<typeof vi.spyOn> | null = null;
+
+  beforeEach(() => {
+    process.env.RESEND_API_KEY = "re_test_path_key";
+    silencedError = vi.spyOn(console, "error").mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    if (previousKey === undefined) delete process.env.RESEND_API_KEY;
+    else process.env.RESEND_API_KEY = previousKey;
+
+    silencedError?.mockRestore();
+    silencedError = null;
+  });
+
+  it("goes out exactly once, addressed to the shopper, saying nothing has been paid", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const outboundFetch = vi.fn(async () => resendCreated());
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const body = await (
+      await postCreateOrder({
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 2 }],
+        address: PATH_TEST_ADDRESS,
+        paymentPath: "cod",
+      })
+    ).json();
+
+    const sent = resendRequests(outboundFetch);
+    expect(sent).toHaveLength(1);
+    expect(sent[0].to).toBe(PATH_TEST_ADDRESS.email);
+
+    const html = String(sent[0].html);
+    expect(html).toContain("Nothing has been paid yet");
+    expect(html).toContain(body.trackingId);
+    expect(html).toContain(formatRupees(body.amountDue));
+    expect(String(sent[0].subject).toLowerCase()).toContain("cash-on-delivery");
+  });
+
+  it("cannot fail the checkout when Resend does", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => {
+        throw new Error("ECONNREFUSED");
+      }),
+    );
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "cod",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body.paymentType).toBe("cod");
+
+    const written = await prisma.order.findUniqueOrThrow({
+      where: { cashfreeOrderId: body.codOrderReference },
+    });
+    expect(written.id).toBe(body.trackingId);
+  });
+
+  it("does not go out for a cash-on-delivery request the cart does not permit", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await barProduct(COD_ELIGIBLE_ID, 500);
+
+    const outboundFetch = vi.fn(async () => resendCreated());
+    vi.stubGlobal("fetch", outboundFetch);
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "cod",
+    });
+
+    expect(response.status).toBe(400);
+    expect(resendRequests(outboundFetch)).toEqual([]);
   });
 });

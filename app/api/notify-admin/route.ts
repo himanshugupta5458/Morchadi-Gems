@@ -1,12 +1,16 @@
 import { NextResponse } from "next/server";
+import { resolveAppBaseUrl } from "@/lib/cashfree-config";
 import { lookupCashfreeOrder } from "@/lib/cashfree-order";
 import { parseCheckoutValue } from "@/lib/checkout";
+import { buildTrackOrderHref } from "@/lib/navigation";
 import { composeAdminOrderMessage } from "@/lib/notify-message";
 import {
   dispatchAdminNotification,
   readCallMeBotCredentials,
   type NotifyOutcome,
 } from "@/lib/notify";
+import { dispatchOrderConfirmationEmail } from "@/lib/notify-customer-email";
+import { findCapturedOrderForPaymentReference } from "@/lib/order-capture";
 import { parseUtmParams } from "@/lib/utm";
 import { isMorchadiOrderId } from "@/lib/verify";
 
@@ -54,7 +58,10 @@ async function readRequestBody(request: Request): Promise<Record<string, unknown
 }
 
 /**
- * Tells the shop owner, over WhatsApp, that an order has been paid for.
+ * Tells the shop owner, over WhatsApp, that an order has been paid for — and, since this
+ * route is the one place a paid or partially-paid order's Cashfree status is re-verified,
+ * also emails the customer their own confirmation from here rather than building a second
+ * warrant for a second channel.
  *
  * **The decision to send is server-verified; only the message content comes from the client.**
  * The browser sends an order id and its own summary of the basket. The id is re-checked
@@ -68,8 +75,14 @@ async function readRequestBody(request: Request): Promise<Record<string, unknown
  *
  * The summary is trusted only to describe, never to decide. It is validated for shape by
  * `parseCheckoutValue` — the same validator the `sessionStorage` bundle goes through — and if
- * it fails, the message degrades to the order id and the amount rather than being abandoned.
- * The amount printed is always Cashfree's, never the client's total.
+ * it fails, the WhatsApp message degrades to the order id and the amount rather than being
+ * abandoned, and the customer email is skipped for want of an address to send it to. The
+ * amount printed is always Cashfree's, never the client's total.
+ *
+ * **The customer email additionally reads `orders.amount_due`**, which the WhatsApp message
+ * does not, so it can state a partial-payment order's balance honestly — see
+ * [`composePaidOrderConfirmationEmail`](/lib/customer-email-message.ts) for why that gap is
+ * closed here and not in the WhatsApp message it was first noticed on.
  *
  * Nothing in this route is on the critical path of a payment. See
  * [the contract](/docs/api/notify-admin.md).
@@ -93,10 +106,12 @@ export async function POST(request: Request): Promise<NextResponse<NotifyAdminRe
     return neutralResponse("SKIPPED_NOT_PAID");
   }
 
+  const bundle = parseCheckoutValue(body?.summary);
+
   const message = composeAdminOrderMessage({
     orderId: lookup.result.orderId,
     amountPaid: lookup.result.amount,
-    bundle: parseCheckoutValue(body?.summary),
+    bundle,
     utm: parseUtmParams(body?.utm),
   });
 
@@ -114,6 +129,27 @@ export async function POST(request: Request): Promise<NextResponse<NotifyAdminRe
       `${LOG_PREFIX} ${requestedOrderId} was paid but CALLMEBOT_PHONE or CALLMEBOT_APIKEY is not set`,
     );
   }
+
+  const captured = await findCapturedOrderForPaymentReference(lookup.result.orderId);
+  const trackingId = captured?.trackingId ?? null;
+
+  await dispatchOrderConfirmationEmail(
+    {
+      verifiedStatus: lookup.result.status,
+      trackingId,
+      cashfreeOrderId: lookup.result.orderId,
+      amountPaid: lookup.result.amount,
+      amountDue: captured?.amountDue ?? null,
+      bundle,
+    },
+    {
+      trackingUrl:
+        trackingId === null
+          ? null
+          : `${resolveAppBaseUrl(request.url)}${buildTrackOrderHref(trackingId)}`,
+      createdAt: captured?.createdAt ?? null,
+    },
+  );
 
   return neutralResponse(outcome);
 }

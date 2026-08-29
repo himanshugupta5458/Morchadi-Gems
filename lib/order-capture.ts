@@ -116,6 +116,8 @@ export type OrderCaptureOutcome =
       customerId: string;
       /** False when the phone number was already known. Drives nothing; logged and tested. */
       customerCreated: boolean;
+      /** Postgres' own `created_at` default — the moment this row was written, for the customer email's order-placed timestamp. */
+      createdAt: Date;
     }
   | { kind: "FAILED" };
 
@@ -384,7 +386,7 @@ export async function captureOrder(
 
     const orderId = await generateUniqueOrderId();
 
-    await client.order.create({
+    const created = await client.order.create({
       data: {
         id: orderId,
         customerId,
@@ -420,7 +422,7 @@ export async function captureOrder(
           create: [{ status: "placed", changedBy: "system", reason: null }],
         },
       },
-      select: { id: true },
+      select: { id: true, createdAt: true },
     });
 
     return {
@@ -428,6 +430,7 @@ export async function captureOrder(
       orderId,
       customerId,
       customerCreated: existingCustomer === null,
+      createdAt: created.createdAt,
     };
   } catch (captureError) {
     console.error(
@@ -462,6 +465,7 @@ export interface CapturedOrderSummary {
   trackingId: string;
   total: number;
   amountDue: number;
+  createdAt: Date;
 }
 
 /**
@@ -489,7 +493,7 @@ export async function lookupCapturedOrderForPaymentReference(
   try {
     const order = await client.order.findUnique({
       where: { cashfreeOrderId },
-      select: { id: true, total: true, amountDue: true },
+      select: { id: true, total: true, amountDue: true, createdAt: true },
     });
 
     if (order === null) return { kind: "NOT_FOUND" };
@@ -500,6 +504,7 @@ export async function lookupCapturedOrderForPaymentReference(
         trackingId: order.id,
         total: order.total.toNumber(),
         amountDue: order.amountDue.toNumber(),
+        createdAt: order.createdAt,
       },
     };
   } catch (lookupError) {

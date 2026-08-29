@@ -142,3 +142,9 @@ bundle and an `OrderCaptureLine` the server wrote both satisfy it.
   about the balance owed at the door. Nothing it prints is false. It is incomplete, and closing
   that is a separate change to the paid message rather than to this one, deliberately out of
   scope here.
+
+**Addendum (prompt 103):** this gap is now closed, but in a different message than the one it
+was recorded against. [ADR-062](ADR-062-customer-order-confirmation-email.md) adds a customer
+confirmation email that reads `orders.amount_due` and states the balance owed at the door on a
+partial-payment order. `composeAdminOrderMessage` itself is untouched and still does not — the
+gap recorded above stands exactly as written for the owner's WhatsApp message.

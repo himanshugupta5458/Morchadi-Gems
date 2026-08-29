@@ -18,6 +18,7 @@ import {
   buildReturnUrl,
   getCashfreeOrdersUrl,
   readCashfreeCredentials,
+  resolveAppBaseUrl,
   resolveCashfreeMode,
 } from "@/lib/cashfree-config";
 import {
@@ -25,7 +26,9 @@ import {
   resolvePaymentPlan,
   summariseCartPrepayment,
 } from "@/lib/cod";
+import { buildTrackOrderHref } from "@/lib/navigation";
 import { notifyOwnerOfCodOrder } from "@/lib/notify-cod";
+import { sendCodOrderConfirmationEmail } from "@/lib/notify-customer-email";
 import {
   buildOrderFromCart,
   mergeOrderItemsByProduct,
@@ -362,7 +365,7 @@ export async function POST(request: Request): Promise<NextResponse> {
       } customer`,
     );
 
-    void notifyOwnerOfCodOrder({
+    const codOrderMessage = {
       trackingId: codCapture.orderId,
       codOrderReference,
       amountDue: plan.amountDue,
@@ -378,6 +381,12 @@ export async function POST(request: Request): Promise<NextResponse> {
       })),
       address,
       utm,
+    };
+
+    void notifyOwnerOfCodOrder(codOrderMessage);
+    void sendCodOrderConfirmationEmail(codOrderMessage, {
+      trackingUrl: `${resolveAppBaseUrl(request.url)}${buildTrackOrderHref(codCapture.orderId)}`,
+      createdAt: codCapture.createdAt,
     });
 
     const codSuccess: CreateOrderCodSuccess = {

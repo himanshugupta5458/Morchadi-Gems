@@ -448,31 +448,43 @@ endpoint, no `payment_session_id`, and no read of `CASHFREE_APP_ID` or `CASHFREE
 mints a `COD_…` reference locally, writes the order, and answers. The Cashfree section below
 applies to `"full"` and `"partial"` only.
 
-### One WhatsApp notification on the cash-on-delivery path, and only that path
+### One WhatsApp notification and one customer email on the cash-on-delivery path, and only that path
 
 ```
 GET https://api.callmebot.com/whatsapp.php?phone=…&text=…&apikey=…
+POST https://api.resend.com/emails
 ```
 
-**5s timeout, no retry, not awaited, and fired only after `captureOrder` returned `CAPTURED`.**
-It is skipped silently when `CALLMEBOT_PHONE` or `CALLMEBOT_APIKEY` is unset.
+**Both fire only after `captureOrder` returned `CAPTURED`, both are `void`-called rather than
+awaited, and neither can affect this route's response.** The WhatsApp send gets a 5s timeout and
+no retry; the email gets 8s and no retry — see [ADR-062](../decisions/ADR-062-customer-order-confirmation-email.md)
+for why the figure differs from CallMeBot's. Each is skipped silently when its own credential is
+unset (`CALLMEBOT_PHONE`/`CALLMEBOT_APIKEY`, or `RESEND_API_KEY`), and the email is additionally
+skipped, and logged as such, when the address on the order carries no email — which
+`validateAddressForm` should never let happen, but the send does not assume it.
 
 A cash-on-delivery order has no payment for [`/api/notify-admin`](notify-admin.md) to re-verify
-with Cashfree, so this is the one path whose notification is sent from the server rather than
+with Cashfree, so this is the one path whose notifications are sent from the server rather than
 fired by `/order-confirmation`. The warrant is the row this request just wrote:
-`notifyOwnerOfCodOrder` in `lib/notify-cod.ts` is called by the branch that captured the order,
-with the order number Postgres assigned and the amounts this route computed. Nothing outside
-this server can reach it, and no endpoint was added.
+`notifyOwnerOfCodOrder` in `lib/notify-cod.ts` and `sendCodOrderConfirmationEmail` in
+`lib/notify-customer-email.ts` are both called by the branch that captured the order, with the
+order number Postgres assigned and the amounts this route computed. Nothing outside this server
+can reach either, and no endpoint was added for either.
 
 **Neither online path sends anything here.** A `full` or `partial_cod` order still notifies the
-way it always has, from the confirmation page once `/api/verify-order` has said `PAID`, through
-the unchanged Cashfree-verified route.
+owner, and now also emails the shopper, the way it always has for WhatsApp: from
+`/order-confirmation` once `/api/verify-order` has said `PAID`, through the unchanged
+Cashfree-verified route — see [`/api/notify-admin`](notify-admin.md).
 
-The message states the amount **due at delivery** and never an amount paid; it names the
-`trackingId` and the `COD_…` reference; and it carries the items, their chosen options and the
-delivery address. Nothing about it can affect this route's response: the send is not awaited and
-every fault it can suffer is a logged outcome. See
-[ADR-060](../decisions/ADR-060-cod-order-notification.md).
+The WhatsApp message states the amount **due at delivery** and never an amount paid; it names
+the `trackingId` and the `COD_…` reference; and it carries the items, their chosen options and
+the delivery address. The email says the same things, in the same order, addressed to the
+shopper instead of the owner, and states just as plainly that this is a cash-on-delivery order
+and nothing has been paid yet. Nothing about either can affect this route's response: neither
+send is awaited and every fault either can suffer is a logged outcome. See
+[ADR-060](../decisions/ADR-060-cod-order-notification.md) for the WhatsApp warrant and
+[ADR-062](../decisions/ADR-062-customer-order-confirmation-email.md) for the email that mirrors
+it.
 
 ### One outbound call to Cashfree on the two online paths
 
@@ -580,6 +592,7 @@ recoverable from anywhere: an unwritten one exists in no system at all. See
 | `CASHFREE_SECRET_KEY` | same | same; never logged, never in any response body |
 | `DATABASE_URL` | `lib/prisma.ts` | same — that module opens with `import "server-only"`, and the capture code that uses it is only ever reached from this route handler |
 | `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` | `lib/notify.ts`, reached from `lib/notify-cod.ts` on the cash-on-delivery path | Neither carries `NEXT_PUBLIC_`, and `lib/notify-boundary.test.ts` asserts the stronger property: no `"use client"` module reaches `lib/notify.ts` at any import depth |
+| `RESEND_API_KEY` | `lib/notify-customer-email.ts`, reached from this route's cash-on-delivery branch | Does not carry `NEXT_PUBLIC_`; `lib/notify-boundary.test.ts` asserts the same reachability property for it as for `CALLMEBOT_APIKEY` |
 
 Neither Cashfree credential is prefixed `NEXT_PUBLIC_`, so Next.js would not inline them into a
 client bundle even without the guard, and nor is `DATABASE_URL`. The Cashfree config lives in its own module rather than in

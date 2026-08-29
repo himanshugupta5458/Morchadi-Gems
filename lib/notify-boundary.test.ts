@@ -122,3 +122,43 @@ describe("the CallMeBot key never crosses into the browser", () => {
     expect(browserHalf).toContain("NOTIFY_ADMIN_API_PATH");
   });
 });
+
+/**
+ * The same guarantee, for the Resend key the customer-email channel reads. Written as a
+ * second `describe` in this file rather than a new one, since the two secrets are checked by
+ * the same reachability walk and a second file would just be this one with the names changed.
+ */
+describe("the Resend API key never crosses into the browser", () => {
+  const sourceFiles = SCANNED_ROOTS.flatMap(collectSourceFiles);
+  const clientFiles = sourceFiles.filter((path) =>
+    isClientModule(readFileSync(path, "utf8")),
+  );
+
+  it("is read from the environment by exactly one module", () => {
+    const readers = sourceFiles.filter((path) =>
+      readFileSync(path, "utf8").includes("process.env.RESEND_API_KEY"),
+    );
+
+    expect(readers).toEqual(["lib/notify-customer-email.ts"]);
+    expect(isClientModule(readFileSync("lib/notify-customer-email.ts", "utf8"))).toBe(false);
+  });
+
+  it("is not so much as named in a client module", () => {
+    const offenders = clientFiles.filter((path) =>
+      readFileSync(path, "utf8").includes("RESEND"),
+    );
+
+    expect(offenders).toEqual([]);
+  });
+
+  it("is unreachable from every client module, at any import depth", () => {
+    const secretModule = resolveLocalImport("@/lib/notify-customer-email");
+    expect(secretModule).toBe("lib/notify-customer-email.ts");
+
+    const offenders = clientFiles.filter((path) =>
+      collectReachable(path).has("lib/notify-customer-email.ts"),
+    );
+
+    expect(offenders).toEqual([]);
+  });
+});
