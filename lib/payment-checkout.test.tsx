@@ -141,7 +141,7 @@ describe("the payment step for a cart that may be sold on delivery", () => {
     expect(screen.queryByLabelText(/Pay minimum now/)).toBeNull();
 
     expect((screen.getByLabelText(/Pay in full/) as HTMLInputElement).checked).toBe(true);
-    expect(payButton().textContent).toContain("Pay ₹1,000 with Cashfree");
+    expect(payButton().textContent).toContain("Pay ₹950 with Cashfree");
   });
 
   it("names what will be collected at the door once cash on delivery is chosen", async () => {
@@ -150,6 +150,26 @@ describe("the payment step for a cart that may be sold on delivery", () => {
     fireEvent.click(screen.getByLabelText(/Cash on delivery/));
 
     expect(payButton().textContent).toContain("Place order and pay ₹1,000 on delivery");
+  });
+
+  it("shows a 'Save 5%' note and the discounted amount on paying in full, on a cash-on-delivery-eligible cart", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    const payInFullRow = screen.getByLabelText(/Pay in full/).closest("div");
+    expect(payInFullRow?.textContent).toContain("Save 5%");
+    expect(payInFullRow?.textContent).toContain("₹950");
+  });
+
+  it("reflects the online discount live in the Order Summary, and drops it the instant cash on delivery is chosen", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    expect(screen.getByText("Online payment discount (5%)")).toBeDefined();
+    expect(screen.getByText("−₹50")).toBeDefined();
+
+    fireEvent.click(screen.getByLabelText(/Cash on delivery/));
+
+    expect(screen.queryByText("Online payment discount (5%)")).toBeNull();
+    expect(screen.queryByText("−₹50")).toBeNull();
   });
 
   it("sends the chosen path and goes straight to confirmation without loading Cashfree", async () => {
@@ -191,6 +211,25 @@ describe("the payment step for a cart holding a piece that requires prepayment",
     expect(screen.getByLabelText(/Pay minimum now/)).toBeDefined();
     expect(screen.getByLabelText(/Pay in full/)).toBeDefined();
     expect(screen.queryByLabelText(/Cash on delivery/)).toBeNull();
+  });
+
+  /**
+   * The online-payment discount is completely unaffected by the partial-payment path — the
+   * regression this test exists to pin down. "Pay in full" here means "pay the whole amount
+   * online instead of paying the minimum", not "the simple cash-on-delivery-vs-online choice",
+   * and it never earns the 5% ([ADR-063](/docs/decisions/ADR-063-online-payment-discount.md)).
+   */
+  it("never discounts paying in full on a cart that requires prepayment", async () => {
+    await renderPaymentStep(REQUIRES_PREPAYMENT);
+
+    const payInFullRow = screen.getByLabelText(/Pay in full/).closest("div");
+    expect(payInFullRow?.textContent).not.toContain("Save");
+    expect(payInFullRow?.textContent).toContain("₹1,000");
+
+    expect(screen.queryByText(/Online payment discount/)).toBeNull();
+
+    fireEvent.click(screen.getByLabelText(/Pay in full/));
+    expect(payButton().textContent).toContain("Pay ₹1,000 with Cashfree");
   });
 
   it("quotes the floor as the amount now and says the balance is collected separately", async () => {

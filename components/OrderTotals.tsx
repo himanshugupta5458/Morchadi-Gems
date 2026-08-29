@@ -4,10 +4,22 @@ import {
 } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 
+export interface OrderTotalsDiscount {
+  label: string;
+  amount: number;
+}
+
 export interface OrderTotalsProps {
   subtotal: number;
   shipping: number;
   total: number;
+  /**
+   * An order-level rebate, shown as its own row between shipping and the total. Omitted by
+   * every caller except the payment step choosing online payment on a cash-on-delivery-eligible
+   * cart — `total` is expected to already have it subtracted, so this row is a breakdown of how
+   * `total` was reached, never a second place that could disagree with it.
+   */
+  discount?: OrderTotalsDiscount;
 }
 
 function TotalsRow({
@@ -43,6 +55,7 @@ export function OrderTotals({
   subtotal,
   shipping,
   total,
+  discount,
 }: OrderTotalsProps): JSX.Element {
   const shortfallToFreeShipping = amountToFreeShipping(subtotal);
 
@@ -59,6 +72,14 @@ export function OrderTotals({
             Add {formatRupees(shortfallToFreeShipping)} for free shipping.
           </p>
         ) : null}
+        {discount === undefined ? null : (
+          <div className="flex items-baseline justify-between gap-4">
+            <span className="text-body-sm text-gold-deep">{discount.label}</span>
+            <span className="font-sans text-body text-gold-deep">
+              −{formatRupees(discount.amount)}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="flex items-baseline justify-between gap-4 pt-4 sm:pt-6">

@@ -72,9 +72,24 @@ what each word costs from its own read of `data/products.json`.
 
 | Value | Meaning |
 | --- | --- |
-| `"full"` | Charge the whole order total now. The only behaviour this route had before prompt 100 |
+| `"full"` | Charge the whole order total now — 5% less on the product subtotal when the cart is cash-on-delivery-eligible (see below), otherwise the total unmodified, which was the only behaviour this route had before prompt 100 |
 | `"cod"` | Take nothing now; the whole total is due at the door |
 | `"partial"` | Charge Σ `minPrepaidAmount × qty`; the remainder is due at the door |
+
+#### The online-payment discount on `"full"`
+
+`resolvePaymentPlan` knocks 5% off the product subtotal — never shipping, never `mrp` — when
+`"full"` is requested on a cart every line of which reads `minPrepaidAmount: 0`, the same
+unanimity rule that decides whether cash on delivery is offered at all
+([ADR-058](../decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md)). It is never applied
+when eligibility could not be established (an unresolvable cart falls back to the full,
+undiscounted total, matching the safe reading `"cod"` and `"partial"` already use), and never on
+a cart holding any piece that requires prepayment — including that cart's own `"full"` option,
+which is a different button from the barred cart's minimum-payment option and charges the
+undiscounted total. Rounded to the nearest rupee by the one function
+(`calculateOnlinePaymentDiscount` in `lib/cod.ts`) the route and the payment step's own live
+preview both call, so the figure a shopper is shown before paying is byte-identical to the
+figure actually charged. See [ADR-063](../decisions/ADR-063-online-payment-discount.md).
 
 **Absent, or any unrecognised value, reads as `"full"`.** `parsePaymentPath` falls that way
 deliberately: the safe reading of a path this server does not know is the one that collects all
@@ -172,10 +187,11 @@ was valid" is not a fact the server has.
 | Line total | `product.price × qty`, computed here |
 | Subtotal | Sum of the computed line totals |
 | Shipping | `calculateShipping(subtotal)` from `lib/config.ts` — once per order, never per line. Zero at or above `FREE_SHIPPING_THRESHOLD` (₹799, inclusive) and on an empty order, `FLAT_SHIPPING_RATE` (₹99) otherwise. Derived from the catalogue-priced subtotal, so a client cannot claim to have qualified |
-| Total | `subtotal + shipping` |
+| Total | `subtotal + shipping`, less the online-payment discount when one applies — see below |
 | Prepayment floor | Σ `minPrepaidAmount × qty` over the priced lines, from `getCodEligibilityCatalogue()` — a fourth accessor that carries no price, so this figure cannot come to depend on what the cart is worth |
-| `amountPrepaid` / `amountDue` | `resolvePaymentPlan`, from the computed total and that floor. `amountPrepaid + amountDue = total` holds on all three paths by construction and is re-checked by `captureOrder` before the insert |
-| `order_amount` sent to Cashfree | The computed `amountPrepaid` — the total on `full`, the floor on `partial`, and nothing at all on `cod` because no request is made |
+| Online-payment discount | 5% of `subtotal`, nearest rupee, on `"full"` only and only on a cart every line of which is cash-on-delivery-eligible; `0` on every other path and every other cart shape. See [ADR-063](../decisions/ADR-063-online-payment-discount.md) |
+| `amountPrepaid` / `amountDue` | `resolvePaymentPlan`, from the computed subtotal, shipping and that floor. `amountPrepaid + amountDue = plan.total` holds on all three paths by construction and is re-checked by `captureOrder` before the insert |
+| `order_amount` sent to Cashfree | The computed `amountPrepaid` — the (possibly discounted) total on `full`, the floor on `partial`, and nothing at all on `cod` because no request is made |
 
 | Client-supplied value | Treatment |
 | --- | --- |
@@ -183,8 +199,8 @@ was valid" is not a fact the server has.
 | `name`, `image` on an item | Discarded; line item names come from the catalogue |
 | `productId`, `qty` | The only pricing inputs, and both are validated above |
 | `paymentPath` | A word only. It selects among three server-computed splits and can name no figure; a path the cart does not permit is refused rather than honoured |
-| Any `amountPrepaid`, `amountDue`, `minPrepaidAmount` in the body | Discarded; no field of the body is read as one, and the plan is built from the server's own figures |
-| Any claim that the cart is COD-eligible | Never read. Eligibility is recomputed here from the catalogue on every call |
+| Any `amountPrepaid`, `amountDue`, `minPrepaidAmount`, `discount` or `onlineDiscount` in the body | Discarded; no field of the body is read as one, and the plan — including the online-payment discount — is built from the server's own figures |
+| Any claim that the cart is COD-eligible, or eligible for the online-payment discount | Never read. Both are recomputed here from the catalogue on every call, from the same `isCartCodEligible` check |
 | `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
 | `utm` | Validated for shape, bounded, and written to `order_tags` alongside the options. Not an input to any amount; `buildOrderTags` has no access to one |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
@@ -531,9 +547,11 @@ reads what to engrave. Values are capped at 255 characters, so a long summary is
 `options`, `options_2` and `options_3` rather than truncated, and if even three values are not
 enough the last one ends `; +N more`. No amount is ever written to it.
 
-`order_amount` is the server's computed `amountPrepaid` — the whole total on `"full"`, and the
-prepayment floor on `"partial"`, which is the one case where the amount the shopper is charged is
-deliberately not what their cart is worth. It is never a figure from the request.
+`order_amount` is the server's computed `amountPrepaid` — the whole total on `"full"` (5% less on
+the subtotal when the cart is cash-on-delivery-eligible, per
+[ADR-063](../decisions/ADR-063-online-payment-discount.md)), and the prepayment floor on
+`"partial"`, which is the one case where the amount the shopper is charged is deliberately not
+what their cart is worth. It is never a figure from the request.
 `customer_id` is generated fresh per order and links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,
 then `NEXT_PUBLIC_BASE_URL`, then the request's own origin.
 
@@ -551,7 +569,7 @@ and the first `OrderStatusHistory` row.
 | `orders.status` | `placed` |
 | `orders.payment_type` | `prepaid`, `partial_cod` or `cod`, from `resolvePaymentPlan` — never from the request |
 | `orders.amount_prepaid` / `amount_due` | The plan's two figures. `amount_prepaid + amount_due = total` holds on all three paths and is re-checked by `isBalancedOrderPayment` immediately before the insert; a row that failed it is not written |
-| `orders.subtotal`, `shipping_fee`, `total` | The server's own computed amounts, never the client's |
+| `orders.subtotal`, `shipping_fee`, `total` | The server's own computed amounts, never the client's — `subtotal` and `total` are `plan`'s, so a discounted `"full"` order records what was actually charged rather than the catalogue's sticker price ([ADR-063](../decisions/ADR-063-online-payment-discount.md)) |
 | `orders.total_cost` | Σ `pricing.cost × quantity`, from `getOrderCaptureCatalogue()`. Margin data; never in any response |
 | `orders.cashfree_order_id` | The `order_id` Cashfree returned, falling back to the one that was sent — or, on `cod`, the locally minted `COD_…` reference. **Unique**, and non-null on every path |
 | `orders.cashfree_payment_status` | Cashfree's `order_status` through `normaliseCashfreeOrderStatus` — `PENDING` for a newly-minted session — or `NOT_APPLICABLE` on `cod`, a value that normalisation cannot produce |

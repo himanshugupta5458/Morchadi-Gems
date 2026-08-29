@@ -216,9 +216,14 @@ function readPaymentSessionId(payload: unknown): string | null {
  *
  * | Path | Sent to Cashfree | `payment_type` | `amount_prepaid` | `amount_due` |
  * | --- | --- | --- | --- | --- |
- * | `full` | `total` | `prepaid` | `total` | `0` |
+ * | `full` | `total`, less 5% of `subtotal` if every line is cash-on-delivery-eligible | `prepaid` | that (possibly discounted) total | `0` |
  * | `partial` | Σ `minPrepaidAmount × qty` | `partial_cod` | that floor | `total −` floor |
  * | `cod` | **nothing at all** | `cod` | `0` | `total` |
+ *
+ * The online-payment discount ([ADR-063](/docs/decisions/ADR-063-online-payment-discount.md))
+ * is `resolvePaymentPlan`'s decision, not this route's: it never applies to `partial`, and it
+ * never applies to `full` on a cart holding a piece that requires prepayment, whether or not
+ * cash on delivery was ever offered for it.
  *
  * The cash-on-delivery path never touches Cashfree: no `fetch`, no `payment_session_id`, no
  * credentials read, and a `COD_…` payment reference minted here rather than by a gateway. It is
@@ -320,7 +325,8 @@ export async function POST(request: Request): Promise<NextResponse> {
   }
 
   const plan = resolvePaymentPlan(parsePaymentPath(rawPaymentPath), {
-    total: order.total,
+    subtotal: order.subtotal,
+    shipping: order.shipping,
     summary: summariseCartPrepayment(order.lineItems, getCodEligibilityCatalogue()),
   });
   if (plan === null) return pathUnavailable();
@@ -332,14 +338,20 @@ export async function POST(request: Request): Promise<NextResponse> {
    * once so the three paths cannot come to disagree about what was bought or what it cost. The
    * amounts here are `plan`'s, and `captureOrder` refuses the write if they do not add up to
    * `pricing.total`.
+   *
+   * `pricing.subtotal`/`pricing.total` are `plan`'s, not `order`'s: on a discounted `full` plan
+   * they are the amount actually charged, and the row records what was charged rather than
+   * what the catalogue would have charged at sticker price
+   * ([ADR-063](/docs/decisions/ADR-063-online-payment-discount.md)). The two agree on every
+   * other path, since `plan.onlineDiscount` is zero everywhere else.
    */
   const captureBase: Omit<CaptureOrderInput, "cashfreeOrderId" | "cashfreePaymentStatus"> = {
     address,
     utm,
     pricing: {
-      subtotal: order.subtotal,
+      subtotal: order.subtotal - plan.onlineDiscount,
       shippingFee: order.shipping,
-      total: order.total,
+      total: plan.total,
     },
     payment: {
       paymentType: plan.paymentType,

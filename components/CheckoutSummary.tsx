@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { CartLine } from "@/lib/cart";
 import { formatRupees } from "@/lib/format";
 import { CART_PATH } from "@/lib/navigation";
-import { OrderTotals } from "@/components/OrderTotals";
+import { OrderTotals, type OrderTotalsDiscount } from "@/components/OrderTotals";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { SelectedOptionsSummary } from "@/components/SelectedOptionsSummary";
 
@@ -14,6 +14,8 @@ export interface CheckoutSummaryProps {
   subtotal: number;
   shipping: number;
   total: number;
+  /** See `OrderTotalsProps.discount`. Absent on the address step, which offers no payment choice yet. */
+  discount?: OrderTotalsDiscount;
 }
 
 /**
@@ -26,6 +28,7 @@ export function CheckoutSummary({
   subtotal,
   shipping,
   total,
+  discount,
 }: CheckoutSummaryProps): JSX.Element {
   return (
     <div className="border border-line bg-ivory p-6 lg:sticky lg:top-32">
@@ -72,7 +75,7 @@ export function CheckoutSummary({
       </ul>
 
       <div className="mt-6">
-        <OrderTotals subtotal={subtotal} shipping={shipping} total={total} />
+        <OrderTotals subtotal={subtotal} shipping={shipping} total={total} discount={discount} />
       </div>
     </div>
   );

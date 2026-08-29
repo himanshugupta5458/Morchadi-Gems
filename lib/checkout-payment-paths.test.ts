@@ -1,10 +1,11 @@
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import type { CodEligibilityEntry } from "@/lib/cod";
+import { calculateOnlinePaymentDiscount, type CodEligibilityEntry } from "@/lib/cod";
+import { calculateShipping } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { CALLMEBOT_ENDPOINT } from "@/lib/notify";
 import { RESEND_API_ENDPOINT } from "@/lib/notify-customer-email";
 import { prisma } from "@/lib/prisma";
-import { getCodEligibilityCatalogue } from "@/lib/products";
+import { getCodEligibilityCatalogue, getOrderPricingCatalogue } from "@/lib/products";
 
 /**
  * A prepayment floor is a per-product fact the catalogue may set on any piece at any time, so
@@ -218,6 +219,142 @@ describe("a checkout that names no payment path at all", () => {
     expect(
       written.amountPrepaid.toNumber() + written.amountDue.toNumber(),
     ).toBe(written.total.toNumber());
+  });
+});
+
+/**
+ * The route-level proof [ADR-063](../decisions/ADR-063-online-payment-discount.md) rests on:
+ * `lib/payment-paths.test.ts` proves `resolvePaymentPlan` computes the discount correctly in
+ * isolation, but nothing before this exercised the real route, a real Cashfree request and a
+ * real Postgres row together. Every expected figure below is derived from the catalogue on disk
+ * through the same functions the route itself calls (`calculateShipping`,
+ * `calculateOnlinePaymentDiscount`), never hardcoded, so these cases keep testing the real
+ * behaviour if a price or the shipping threshold ever changes.
+ */
+describe("the online-payment discount on a real checkout", () => {
+  function priceCodEligibleCart(qty: number): {
+    subtotal: number;
+    shipping: number;
+    discount: number;
+    total: number;
+  } {
+    const entry = getOrderPricingCatalogue().find((product) => product.id === COD_ELIGIBLE_ID);
+    if (entry === undefined) {
+      throw new Error(`${COD_ELIGIBLE_ID} is missing from the pricing catalogue`);
+    }
+
+    const subtotal = entry.price * qty;
+    const shipping = calculateShipping(subtotal);
+    const discount = calculateOnlinePaymentDiscount(subtotal);
+    return { subtotal, shipping, discount, total: subtotal + shipping - discount };
+  }
+
+  it("charges Cashfree the discounted amount and writes it to Postgres, on a cash-on-delivery-eligible cart paying in full", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const { subtotal, shipping, discount, total } = priceCodEligibleCart(2);
+    expect(discount, "expected the fixture cart to earn a nonzero discount").toBeGreaterThan(0);
+
+    const sentToCashfree: Array<Record<string, unknown>> = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) => {
+        const sent = JSON.parse(String(init.body)) as Record<string, unknown>;
+        sentToCashfree.push(sent);
+        return cashfreeCreated(String(sent.order_id));
+      }),
+    );
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 2 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "full",
+    });
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(sentToCashfree).toHaveLength(1);
+    expect(sentToCashfree[0].order_amount).toBe(total);
+
+    const written = await prisma.order.findUniqueOrThrow({
+      where: { cashfreeOrderId: body.cashfreeOrderId },
+    });
+
+    expect(written.subtotal.toNumber()).toBe(subtotal - discount);
+    expect(written.shippingFee.toNumber()).toBe(shipping);
+    expect(written.total.toNumber()).toBe(total);
+    expect(written.amountPrepaid.toNumber()).toBe(total);
+    expect(written.amountDue.toNumber()).toBe(0);
+  });
+
+  it("cannot be inflated by a client-sent discount claim — no field of the body names one", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    const { subtotal, discount, total } = priceCodEligibleCart(1);
+    expect(discount, "expected the fixture cart to earn a nonzero discount").toBeGreaterThan(0);
+
+    const sentToCashfree: Array<Record<string, unknown>> = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) => {
+        const sent = JSON.parse(String(init.body)) as Record<string, unknown>;
+        sentToCashfree.push(sent);
+        return cashfreeCreated(String(sent.order_id));
+      }),
+    );
+
+    const body = await (
+      await postCreateOrder({
+        items: [{ productId: COD_ELIGIBLE_ID, qty: 1, price: 1 }],
+        address: PATH_TEST_ADDRESS,
+        paymentPath: "full",
+        discount: 999_999,
+        onlineDiscount: 999_999,
+        amountPrepaid: 1,
+        total: 1,
+      })
+    ).json();
+
+    expect(sentToCashfree[0].order_amount).toBe(total);
+    expect(sentToCashfree[0].order_amount).not.toBe(1);
+    expect(subtotal).toBeGreaterThan(0);
+
+    const written = await prisma.order.findUniqueOrThrow({
+      where: { cashfreeOrderId: body.cashfreeOrderId },
+    });
+    expect(written.total.toNumber()).toBe(total);
+  });
+
+  it("never discounts the full-prepayment option on a cart that requires prepayment", async (ctx) => {
+    ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
+
+    await barProduct(COD_ELIGIBLE_ID, 500);
+    const { subtotal, shipping } = priceCodEligibleCart(1);
+    const undiscountedTotal = subtotal + shipping;
+
+    const sentToCashfree: Array<Record<string, unknown>> = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (_url: string, init: RequestInit) => {
+        const sent = JSON.parse(String(init.body)) as Record<string, unknown>;
+        sentToCashfree.push(sent);
+        return cashfreeCreated(String(sent.order_id));
+      }),
+    );
+
+    const response = await postCreateOrder({
+      items: [{ productId: COD_ELIGIBLE_ID, qty: 1 }],
+      address: PATH_TEST_ADDRESS,
+      paymentPath: "full",
+    });
+
+    expect(response.status).toBe(200);
+    expect(sentToCashfree[0].order_amount).toBe(undiscountedTotal);
+
+    const written = await prisma.order.findUniqueOrThrow({
+      where: { cashfreeOrderId: (await response.json()).cashfreeOrderId },
+    });
+    expect(written.total.toNumber()).toBe(undiscountedTotal);
   });
 });
 

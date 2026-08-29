@@ -10,6 +10,12 @@ export interface PaymentChoiceOption {
   /** The amount this option collects now. Rendered beside the label, never typed by anyone. */
   amountNow: number;
   description: string;
+  /**
+   * A short, honest badge next to the label — currently only "Save 5%" on the online-full
+   * option for a cash-on-delivery-eligible cart. No countdown, no manufactured urgency: a
+   * plain statement of a real, server-enforced discount.
+   */
+  note?: string;
 }
 
 export interface PaymentChoiceProps {
@@ -73,7 +79,14 @@ export function PaymentChoice({
                 }`}
               >
                 <span className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                  <span className="text-body text-ink">{option.label}</span>
+                  <span className="flex items-center gap-2">
+                    <span className="text-body text-ink">{option.label}</span>
+                    {option.note === undefined ? null : (
+                      <span className="text-label uppercase tracking-caps rounded-card bg-gold/15 px-1.5 py-0.5 text-gold-deep">
+                        {option.note}
+                      </span>
+                    )}
+                  </span>
                   <span className="font-sans text-body font-medium text-ink">
                     {formatRupees(option.amountNow)}
                   </span>

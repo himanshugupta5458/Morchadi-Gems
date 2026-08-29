@@ -49,6 +49,25 @@
 | TC-17 | `captureOrder` agrees with the plan on every path | `isBalancedOrderPayment` over each resolved plan | `true` for all three | Automated |
 | TC-18 | An unbalanced hand-built split is refused | Six wrong splits, including negatives, over and under | `false` for all six | Automated |
 
+### The online-payment discount on `resolvePaymentPlan` — [ADR-063](../decisions/ADR-063-online-payment-discount.md)
+
+| ID | Scenario | Steps | Expected result | Type |
+| --- | --- | --- | --- | --- |
+| TC-48 | Full prepayment is discounted 5% of the subtotal on an eligible cart | `resolvePaymentPlan("full", { subtotal: 2000, shipping: 99, summary: ELIGIBLE })` | `onlineDiscount: 100`, `total: 1999`, `amountPrepaid: 1999` | Automated |
+| TC-49 | Shipping is never discounted, only the subtotal | Same cart priced with and without a ₹99 shipping fee | Discount identical in both; `total` differs by exactly ₹99 | Automated |
+| TC-50 | Cash on delivery is never discounted | `resolvePaymentPlan("cod", eligible)` | `onlineDiscount: 0`; `amountDue` equals the undiscounted total | Automated |
+| TC-51 | **Regression: a barred cart's `"full"` and `"partial"` options are both undiscounted** | `resolvePaymentPlan` for both paths against `BARRED` | `onlineDiscount: 0` on both; `"full"` returns the exact pre-feature `PaymentPlan` shape | Automated |
+| TC-52 | Full prepayment is never discounted when eligibility could not be established | `summary: null` | `onlineDiscount: 0`, `amountPrepaid` equals the undiscounted total | Automated |
+| TC-53 | Rounding is nearest rupee, via the one function the plan and any preview share | Subtotals `[1, 9, 10, 11, 99, 101, 647, 1649, 12499]`, including several landing exactly on `.5` | `plan.onlineDiscount === calculateOnlinePaymentDiscount(subtotal)` for every one, always an integer | Automated |
+
+### The online-payment discount on the payment step UI
+
+| ID | Scenario | Steps | Expected result | Type |
+| --- | --- | --- | --- | --- |
+| TC-54 | The discounted amount and a "Save 5%" badge render on an eligible cart | Render `PaymentCheckout` with `ALL_ELIGIBLE` | Pay-in-full row shows "Save 5%" and "₹950"; pay button reads "Pay ₹950 with Cashfree" | Automated |
+| TC-55 | The Order Summary reflects the discount live and drops it on choosing COD | Same render, then click "Cash on delivery" | "Online payment discount (5%)" / "−₹50" shown, then both disappear the instant COD is selected | Automated |
+| TC-56 | **Regression: a cart that requires prepayment never shows the discount** | Render with `REQUIRES_PREPAYMENT` | No "Save" badge, no discount row; pay button reads the undiscounted total; clicking pay-in-full charges it unchanged | Automated |
+
 ### The route, against the real database
 
 | ID | Scenario | Steps | Expected result | Type |
@@ -66,6 +85,9 @@
 | TC-29 | Part payment is refused when the floor meets the total | Override floor to 100,000 | `400 PAYMENT_PATH_UNAVAILABLE` | Automated |
 | TC-30 | A request cannot talk its way onto a barred path | `paymentPath: "cod"` on a barred cart, then `paymentPath: "free"` | Refused, then silently full prepayment charging the whole total | Automated |
 | TC-31 | **No field of the body is read as an amount** | Body carrying `price`, `amountPrepaid`, `amountDue`, `minPrepaidAmount`, `total`, all set to lies | `order_amount` is the catalogue total; row is total / `0` | Automated |
+| TC-57 | **The online-payment discount, end to end** | `paymentPath: "full"` on a real cash-on-delivery-eligible product, expected figures derived from the catalogue and `calculateShipping`/`calculateOnlinePaymentDiscount` rather than hardcoded | `order_amount` sent to Cashfree is the discounted total; the written row's `subtotal`, `total` and `amount_prepaid` all reflect it, `amount_due` `0` | Automated |
+| TC-58 | **A client-sent discount claim cannot inflate the charge** | Body also carries `discount`, `onlineDiscount`, `amountPrepaid: 1`, `total: 1` alongside a real `paymentPath: "full"` cart | `order_amount` sent to Cashfree, and the written row's `total`, are the server's own discounted figure, never `1` | Automated |
+| TC-59 | **Regression, at the route: a barred cart's `"full"` option is never discounted** | Override the floor, `POST paymentPath: "full"` | `order_amount` and the written `total` equal the undiscounted subtotal + shipping | Automated |
 
 ### Database failure
 
@@ -97,3 +119,4 @@
 | TC-45 | The resulting Postgres row is correct | Query the row directly | `cod` / `0.00` / total; `NOT_APPLICABLE`; `placed`; `cod_amount_collected` false | Manual |
 | TC-46 | The confirmation survives a cold browser | Open the confirmation URL in a fresh context with no session storage | Order number and balance still shown, from `/api/cod-order`; no Cashfree request | Manual |
 | TC-47 | Verify refuses the reference over real HTTP | `curl /api/verify-order?order_id=COD_…` against the running server | `400 COD_ORDER_NOT_VERIFIABLE`; socket count to Cashfree unchanged | Manual |
+| TC-60 | **A real online-full order, at the discounted amount, verified against Cashfree's own record** — [ADR-063](../decisions/ADR-063-online-payment-discount.md) | Real dev server, real headless browser: add a `minPrepaidAmount: 0` product to cart, address, payment step, choose full payment, pay | UI shows the discounted total and "Save 5%"; the browser's own request names no discount; `GET /pg/orders/{id}` against Cashfree's sandbox API independently confirms `order_amount` is the discounted figure; the Postgres row agrees | Manual |

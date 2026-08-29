@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { PaymentPath } from "@/types/order";
 import {
+  calculateOnlinePaymentDiscount,
   isCartCodEligible,
   parsePaymentPath,
   resolvePaymentPlan,
@@ -123,41 +124,49 @@ const ELIGIBLE = { isCodEligible: true, minimumPrepayment: 0 };
 const BARRED = { isCodEligible: false, minimumPrepayment: 500 };
 
 describe("resolvePaymentPlan", () => {
-  it("prices full prepayment as today's only path, whatever the cart holds", () => {
-    for (const summary of [ELIGIBLE, BARRED, null]) {
-      expect(resolvePaymentPlan("full", { total: 2000, summary })).toEqual({
+  it("prices full prepayment at the full total, whatever the cart holds, when the cart is not cash-on-delivery-eligible", () => {
+    for (const summary of [BARRED, null]) {
+      expect(resolvePaymentPlan("full", { subtotal: 2000, shipping: 0, summary })).toEqual({
         path: "full",
         paymentType: "prepaid",
         amountPrepaid: 2000,
         amountDue: 0,
+        total: 2000,
+        onlineDiscount: 0,
       });
     }
   });
 
   it("prices cash on delivery as nothing now and everything at the door", () => {
-    expect(resolvePaymentPlan("cod", { total: 2000, summary: ELIGIBLE })).toEqual({
+    expect(resolvePaymentPlan("cod", { subtotal: 2000, shipping: 0, summary: ELIGIBLE })).toEqual({
       path: "cod",
       paymentType: "cod",
       amountPrepaid: 0,
       amountDue: 2000,
+      total: 2000,
+      onlineDiscount: 0,
     });
   });
 
   it("prices a part payment as the floor now and the remainder at the door", () => {
-    expect(resolvePaymentPlan("partial", { total: 2000, summary: BARRED })).toEqual({
+    expect(resolvePaymentPlan("partial", { subtotal: 2000, shipping: 0, summary: BARRED })).toEqual({
       path: "partial",
       paymentType: "partial_cod",
       amountPrepaid: 500,
       amountDue: 1500,
+      total: 2000,
+      onlineDiscount: 0,
     });
   });
 
   it("refuses cash on delivery on a cart holding a piece that requires prepayment", () => {
-    expect(resolvePaymentPlan("cod", { total: 2000, summary: BARRED })).toBeNull();
+    expect(resolvePaymentPlan("cod", { subtotal: 2000, shipping: 0, summary: BARRED })).toBeNull();
   });
 
   it("refuses a part payment on a cart with no floor to part-pay", () => {
-    expect(resolvePaymentPlan("partial", { total: 2000, summary: ELIGIBLE })).toBeNull();
+    expect(
+      resolvePaymentPlan("partial", { subtotal: 2000, shipping: 0, summary: ELIGIBLE }),
+    ).toBeNull();
   });
 
   /**
@@ -166,28 +175,112 @@ describe("resolvePaymentPlan", () => {
    * `amountDue` positive on every `partial_cod` row ever written.
    */
   it("refuses a part payment whose floor has reached or passed the total", () => {
-    for (const total of [500, 400, 1]) {
+    for (const subtotal of [500, 400, 1]) {
       expect(
-        resolvePaymentPlan("partial", { total, summary: BARRED }),
-        `total ${total}`,
+        resolvePaymentPlan("partial", { subtotal, shipping: 0, summary: BARRED }),
+        `subtotal ${subtotal}`,
       ).toBeNull();
     }
   });
 
-  it("refuses both cash paths on a cart it could not reason about", () => {
-    expect(resolvePaymentPlan("cod", { total: 2000, summary: null })).toBeNull();
-    expect(resolvePaymentPlan("partial", { total: 2000, summary: null })).toBeNull();
+  it("refuses cash on delivery, but never full prepayment, on a cart it could not reason about", () => {
+    expect(resolvePaymentPlan("cod", { subtotal: 2000, shipping: 0, summary: null })).toBeNull();
+    expect(
+      resolvePaymentPlan("partial", { subtotal: 2000, shipping: 0, summary: null }),
+    ).toBeNull();
+    expect(
+      resolvePaymentPlan("full", { subtotal: 2000, shipping: 0, summary: null }),
+    ).not.toBeNull();
   });
 
   it("never decides from what the cart is worth, only from what is in it", () => {
-    const cheapAndBarred = resolvePaymentPlan("cod", { total: 50, summary: BARRED });
+    const cheapAndBarred = resolvePaymentPlan("cod", { subtotal: 50, shipping: 0, summary: BARRED });
     const expensiveAndEligible = resolvePaymentPlan("cod", {
-      total: 90_000,
+      subtotal: 90_000,
+      shipping: 0,
       summary: ELIGIBLE,
     });
 
     expect(cheapAndBarred).toBeNull();
     expect(expensiveAndEligible).not.toBeNull();
+  });
+});
+
+/**
+ * [ADR-063](/docs/decisions/ADR-063-online-payment-discount.md): 5% off the product subtotal,
+ * and only for paying online in full on a cart every line of which is cash-on-delivery-eligible.
+ */
+describe("the online-payment discount on resolvePaymentPlan", () => {
+  it("discounts full prepayment by 5% of the subtotal on a cash-on-delivery-eligible cart", () => {
+    const plan = resolvePaymentPlan("full", { subtotal: 2000, shipping: 99, summary: ELIGIBLE });
+
+    expect(plan).toEqual({
+      path: "full",
+      paymentType: "prepaid",
+      amountPrepaid: 1999,
+      amountDue: 0,
+      total: 1999,
+      onlineDiscount: 100,
+    });
+  });
+
+  it("never discounts shipping, only the subtotal", () => {
+    const noShipping = resolvePaymentPlan("full", { subtotal: 2000, shipping: 0, summary: ELIGIBLE });
+    const withShipping = resolvePaymentPlan("full", {
+      subtotal: 2000,
+      shipping: 99,
+      summary: ELIGIBLE,
+    });
+
+    expect(noShipping?.onlineDiscount).toBe(100);
+    expect(withShipping?.onlineDiscount).toBe(100);
+    expect(withShipping?.total).toBe(noShipping!.total + 99);
+  });
+
+  it("never discounts cash on delivery, which keeps today's price", () => {
+    const plan = resolvePaymentPlan("cod", { subtotal: 2000, shipping: 0, summary: ELIGIBLE });
+    expect(plan?.onlineDiscount).toBe(0);
+    expect(plan?.amountDue).toBe(2000);
+  });
+
+  /**
+   * The partial-payment path, and the "pay in full" option on a partial-payment-eligible cart,
+   * are both completely unaffected by this feature — the regression this whole describe block
+   * exists to pin down.
+   */
+  it("never discounts a cart holding any piece that requires prepayment, on either of its two options", () => {
+    const payInFull = resolvePaymentPlan("full", { subtotal: 2000, shipping: 0, summary: BARRED });
+    const payMinimum = resolvePaymentPlan("partial", {
+      subtotal: 2000,
+      shipping: 0,
+      summary: BARRED,
+    });
+
+    expect(payInFull).toEqual({
+      path: "full",
+      paymentType: "prepaid",
+      amountPrepaid: 2000,
+      amountDue: 0,
+      total: 2000,
+      onlineDiscount: 0,
+    });
+    expect(payMinimum?.onlineDiscount).toBe(0);
+  });
+
+  it("never discounts full prepayment when eligibility could not be established", () => {
+    const plan = resolvePaymentPlan("full", { subtotal: 2000, shipping: 0, summary: null });
+    expect(plan?.onlineDiscount).toBe(0);
+    expect(plan?.amountPrepaid).toBe(2000);
+  });
+
+  it("rounds to the nearest rupee, via the one function both the plan and any preview must share", () => {
+    for (const subtotal of [1, 9, 10, 11, 99, 101, 647, 1649, 12_499]) {
+      const plan = resolvePaymentPlan("full", { subtotal, shipping: 0, summary: ELIGIBLE });
+      expect(plan?.onlineDiscount, `subtotal ${subtotal}`).toBe(
+        calculateOnlinePaymentDiscount(subtotal),
+      );
+      expect(Number.isInteger(plan?.onlineDiscount), `subtotal ${subtotal}`).toBe(true);
+    }
   });
 });
 
@@ -208,27 +301,27 @@ describe("amountPrepaid + amountDue = total, on every path", () => {
     { path: "partial", summary: BARRED },
   ];
 
-  it("holds for every path across a wide range of totals", () => {
+  it("holds for every path across a wide range of subtotals", () => {
     for (const { path, summary } of CASES) {
-      for (const total of [1, 210, 259, 501, 2000, 12_499, 99_999]) {
-        const plan = resolvePaymentPlan(path, { total, summary });
+      for (const subtotal of [1, 210, 259, 501, 2000, 12_499, 99_999]) {
+        const plan = resolvePaymentPlan(path, { subtotal, shipping: 0, summary });
         if (plan === null) continue;
 
-        expect(plan.amountPrepaid + plan.amountDue, `${path} at ${total}`).toBe(total);
-        expect(plan.amountPrepaid, `${path} at ${total}`).toBeGreaterThanOrEqual(0);
-        expect(plan.amountDue, `${path} at ${total}`).toBeGreaterThanOrEqual(0);
+        expect(plan.amountPrepaid + plan.amountDue, `${path} at ${subtotal}`).toBe(plan.total);
+        expect(plan.amountPrepaid, `${path} at ${subtotal}`).toBeGreaterThanOrEqual(0);
+        expect(plan.amountDue, `${path} at ${subtotal}`).toBeGreaterThanOrEqual(0);
       }
     }
   });
 
-  it("is what captureOrder checks before it writes, on every path", () => {
+  it("is what captureOrder checks before it writes, on every path, discounted or not", () => {
     for (const { path, summary } of CASES) {
-      const plan = resolvePaymentPlan(path, { total: 2000, summary });
+      const plan = resolvePaymentPlan(path, { subtotal: 1951, shipping: 49, summary });
       if (plan === null) continue;
 
       expect(
         isBalancedOrderPayment(
-          { subtotal: 1951, shippingFee: 49, total: 2000 },
+          { subtotal: plan.total - 49, shippingFee: 49, total: plan.total },
           {
             paymentType: plan.paymentType,
             amountPrepaid: plan.amountPrepaid,

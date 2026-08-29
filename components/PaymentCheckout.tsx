@@ -8,6 +8,8 @@ import type { CreateOrderItem, PaymentPath } from "@/types/order";
 import { selectPayableLines } from "@/lib/cart";
 import { useCart } from "@/lib/cart-context";
 import {
+  ONLINE_PAYMENT_DISCOUNT_RATE,
+  calculateOnlinePaymentDiscount,
   summariseCartPrepayment,
   type CartPrepaymentSummary,
   type CodEligibilityEntry,
@@ -71,19 +73,36 @@ async function readResponseBody(response: Response): Promise<unknown> {
  * because "pay the minimum" and "pay in full" would otherwise be two buttons charging the same
  * amount and only one of them would leave a balance owing.
  *
+ * Paying in full is discounted 5% on the product subtotal only when `prepayment.isCodEligible`
+ * is positively `true` — never when there is no floor to reason about at all (`prepayment`
+ * null) and never on a cart holding a piece that requires prepayment, whichever of its two
+ * options is chosen ([ADR-063](/docs/decisions/ADR-063-online-payment-discount.md)). The
+ * arithmetic is `calculateOnlinePaymentDiscount`, the same function `/api/create-order` charges
+ * from, so this preview and the real charge can never quietly disagree.
+ *
  * Every figure here is rendered, not decided. `/api/create-order` recomputes both from its own
  * catalogue read and refuses a path this cart does not permit, so a stale or tampered set of
  * options costs the shopper a refusal rather than costing the shop an order.
  */
 function buildPaymentChoiceOptions(
   prepayment: CartPrepaymentSummary | null,
+  subtotal: number,
   total: number,
 ): PaymentChoiceOption[] {
+  const onlineDiscount =
+    prepayment?.isCodEligible === true ? calculateOnlinePaymentDiscount(subtotal) : 0;
+
   const payInFull: PaymentChoiceOption = {
     path: "full",
     label: "Pay in full",
-    amountNow: total,
-    description: "Pay the whole amount now by UPI, card, net banking or a wallet.",
+    amountNow: total - onlineDiscount,
+    description:
+      onlineDiscount > 0
+        ? `Pay online and save ${formatRupees(onlineDiscount)} (${Math.round(ONLINE_PAYMENT_DISCOUNT_RATE * 100)}%) by UPI, card, net banking or a wallet, instead of cash on delivery.`
+        : "Pay the whole amount now by UPI, card, net banking or a wallet.",
+    ...(onlineDiscount > 0
+      ? { note: `Save ${Math.round(ONLINE_PAYMENT_DISCOUNT_RATE * 100)}%` }
+      : {}),
   };
 
   if (prepayment === null) return [payInFull];
@@ -282,12 +301,21 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
     codCatalogue,
   );
 
-  const paymentOptions = buildPaymentChoiceOptions(prepayment, total);
+  const paymentOptions = buildPaymentChoiceOptions(prepayment, subtotal, total);
   const chosenPath = paymentOptions.some((option) => option.path === selectedPath)
     ? selectedPath
     : "full";
   const amountNow =
     paymentOptions.find((option) => option.path === chosenPath)?.amountNow ?? total;
+
+  /**
+   * The Order Summary mirrors whichever option is currently selected, not a fixed catalogue
+   * total — the same live recalculation `amountNow` above already drives for the pay button.
+   * `total` is the discount-free figure the summary's own Subtotal/Shipping rows are built
+   * from; `onlineDiscount` is subtracted from it here so the two never have to be reconciled by
+   * the reader.
+   */
+  const onlineDiscount = chosenPath === "full" ? total - amountNow : 0;
 
   return (
     <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_22rem] lg:gap-16">
@@ -355,7 +383,15 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
         lines={lines}
         subtotal={subtotal}
         shipping={shipping}
-        total={total}
+        total={total - onlineDiscount}
+        discount={
+          onlineDiscount > 0
+            ? {
+                label: `Online payment discount (${Math.round(ONLINE_PAYMENT_DISCOUNT_RATE * 100)}%)`,
+                amount: onlineDiscount,
+              }
+            : undefined
+        }
       />
     </div>
   );
