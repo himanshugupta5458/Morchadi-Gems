@@ -14,36 +14,35 @@ import { prisma } from "@/lib/prisma";
 
 const START_POSTGRES_HINT = "start it with `docker compose up -d` — see docs/DEV-DATABASE.md";
 
+/**
+ * There is no `Admin` row to create a fixture from: `AdminSession.adminId` is a plain string,
+ * always `ADMIN_IDENTITY_ID` in real use (lib/admin-auth.ts). Tests use a distinct fake identity
+ * instead, so a session this suite creates and destroys cannot be confused with — or clean up —
+ * one another suite happens to be holding open concurrently under the real identity.
+ */
+const TEST_ADMIN_ID = "session-suite-throwaway";
 const THROWAWAY_USERNAME = "session-suite-throwaway";
-const THROWAWAY_PASSWORD_HASH = "$2b$12$notarealhashitisneververifiedbythissuiteatall1234567";
 
 let unavailableReason: string | null = null;
-let adminId = "";
+const adminId = TEST_ADMIN_ID;
 
 function firstLineOf(error: unknown): string {
   const message = error instanceof Error ? error.message : String(error);
   return message.split("\n").map((line) => line.trim()).filter(Boolean)[0] ?? "unknown error";
 }
 
-async function removeThrowawayAdmin(): Promise<void> {
-  await prisma.admin.deleteMany({ where: { username: THROWAWAY_USERNAME } });
-}
-
 beforeAll(async () => {
   try {
     await prisma.$connect();
-    await removeThrowawayAdmin();
-    const admin = await prisma.admin.create({
-      data: { username: THROWAWAY_USERNAME, passwordHash: THROWAWAY_PASSWORD_HASH },
-    });
-    adminId = admin.id;
   } catch (error) {
     unavailableReason = `no database at DATABASE_URL (${firstLineOf(error)}) — ${START_POSTGRES_HINT}`;
   }
 });
 
 afterAll(async () => {
-  if (unavailableReason === null) await removeThrowawayAdmin();
+  if (unavailableReason === null) {
+    await prisma.adminSession.deleteMany({ where: { adminId: TEST_ADMIN_ID } });
+  }
   await prisma.$disconnect();
 });
 
@@ -93,6 +92,13 @@ describe("creating a session", () => {
   it("issues a token that resolves back to the admin it was issued for", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
+    /**
+     * `readAdminSession` no longer joins to a stored username — there is no `Admin` row to
+     * join to — it reads `ADMIN_USERNAME` fresh from the environment on every lookup. Stubbing
+     * it here is what makes this test's expectation meaningful rather than accidental.
+     */
+    vi.stubEnv("ADMIN_USERNAME", THROWAWAY_USERNAME);
+
     const { token } = await createAdminSession(adminId);
 
     await expect(readAdminSession(token)).resolves.toEqual({
@@ -101,6 +107,7 @@ describe("creating a session", () => {
     });
 
     await destroyAdminSession(token);
+    vi.unstubAllEnvs();
   });
 
   it("expires it seven days out", async (ctx) => {

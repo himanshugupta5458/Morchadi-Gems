@@ -1,6 +1,6 @@
 # ADR-041: The admin panel is a subdomain of one deployment, behind a database-backed session
 
-- **Status:** Accepted
+- **Status:** Accepted — credential storage superseded by [ADR-061](ADR-061-env-var-admin-credentials.md); session storage, routing and the two-layer gate below still stand
 - **Date:** 2026-08-20
 - **Prompt:** 45
 

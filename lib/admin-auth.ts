@@ -1,10 +1,14 @@
 import "server-only";
-import { compare, hash } from "bcryptjs";
-import { prisma } from "@/lib/prisma";
+import { createHash, timingSafeEqual } from "node:crypto";
 
 /**
- * Who a verified login belongs to. Deliberately not the Prisma row: `passwordHash` has no
- * business travelling any further than the comparison that reads it.
+ * Who a verified login belongs to.
+ *
+ * There is exactly one admin account, defined by `ADMIN_USERNAME`/`ADMIN_PASSWORD` in the
+ * environment rather than a Postgres row — see
+ * [ADR-061](/docs/decisions/ADR-061-env-var-admin-credentials.md). `id` is therefore a fixed,
+ * well-known string (`ADMIN_IDENTITY_ID`) rather than a primary key: nothing distinguishes one
+ * admin from another because there can only ever be one.
  */
 export interface AdminIdentity {
   id: string;
@@ -12,50 +16,35 @@ export interface AdminIdentity {
 }
 
 /**
- * bcrypt's work factor. Twelve is the current common default — roughly a quarter of a second
- * per hash on this class of hardware, which is unnoticeable on a login a shop owner performs
- * once a week and expensive enough to make an offline attack on a stolen hash impractical.
- *
- * The factor is recorded inside every hash bcrypt produces, so raising it later does not
- * invalidate existing passwords; it only applies to ones set afterwards.
+ * The identity every successful login resolves to, and the value written into
+ * `AdminSession.adminId`. A constant is safe here for exactly the reason a lookup is not
+ * needed: there is exactly one admin account, so nothing is ever looked up by it.
  */
-export const ADMIN_PASSWORD_HASH_ROUNDS = 12;
+export const ADMIN_IDENTITY_ID = "env-admin";
 
 /**
- * The only thing a failed login is ever told, whichever half of the credentials was wrong.
+ * The only thing a failed login is ever told, whichever half of the credentials was wrong — or
+ * whether `ADMIN_USERNAME`/`ADMIN_PASSWORD` were configured at all.
  *
- * A message that distinguishes "no such user" from "wrong password" turns the login form into
- * a username oracle: an attacker learns which names exist before trying a single password.
- * There is one operator account here, so the name is the smaller half of the secret and worth
- * keeping. Both failure paths return this exact string, and `lib/admin-auth.test.ts` asserts
- * they are byte-identical rather than merely similar.
+ * A message that distinguishes these cases turns the login form into an oracle: a stranger
+ * learns which of their guesses was closer, and an operator who mistyped a variable name in
+ * Coolify gets no signal that the environment, not their memory, is the problem. Every failure
+ * path returns this exact string, and `lib/admin-auth.test.ts` asserts they are byte-identical
+ * rather than merely similar.
  */
 export const ADMIN_LOGIN_FAILURE_MESSAGE = "Username or password is incorrect.";
 
 /**
  * The floor a failed login takes, in milliseconds. A floor rather than an added delay: the
- * response is padded up to this figure rather than lengthened by it, so a missing username
- * (no bcrypt work) and a wrong password (a full bcrypt compare) take the same observable time
- * as well as returning the same words.
+ * response is padded up to this figure rather than lengthened by it, so an unconfigured
+ * environment (no comparison run at all), a wrong password (two fast constant-time comparisons)
+ * and an unknown username all take the same observable time.
  *
- * It is not rate limiting and does not pretend to be. It costs an attacker roughly a second
- * per attempt from one connection, which is a speed bump; a real lockout belongs with the
+ * It is not rate limiting and does not pretend to be. It costs an attacker roughly a second per
+ * attempt from one connection, which is a speed bump; a real lockout belongs with the
  * order-management prompt that gives the panel something worth attacking.
  */
 export const FAILED_LOGIN_FLOOR_MS = 600;
-
-/**
- * A bcrypt hash of a fixed, publicly known string, compared against when the submitted
- * username matches no admin.
- *
- * Its plaintext being in this file is harmless — it is never stored as anybody's password and
- * so can never authenticate. Its job is to make the absent-user path do the same quarter
- * second of key stretching the wrong-password path does, so the two cannot be told apart by a
- * stopwatch. Generated at `ADMIN_PASSWORD_HASH_ROUNDS`; if that figure changes, this should
- * be regenerated to match.
- */
-const ABSENT_ADMIN_PASSWORD_HASH =
-  "$2b$12$iHPHrA8uHbIuL3EcZ/0z9uWp5YCrcVrqrVrtJ6ywbX26OJluG4nkm";
 
 function sleep(milliseconds: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -67,21 +56,43 @@ async function padToFailureFloor(startedAtMs: number): Promise<null> {
   return null;
 }
 
-/** The one place a password becomes a hash, shared by the seed script's documented settings. */
-export function hashAdminPassword(plaintext: string): Promise<string> {
-  return hash(plaintext, ADMIN_PASSWORD_HASH_ROUNDS);
+/**
+ * Constant-time equality for two arbitrary-length strings.
+ *
+ * `crypto.timingSafeEqual` throws outright when its two buffers differ in length, and a caller
+ * that special-cased that with an early return (`if (a.length !== b.length) return false`)
+ * would leak the length difference through timing — precisely the side channel this exists to
+ * close. Hashing both sides first fixes every buffer at 32 bytes regardless of input length, so
+ * `timingSafeEqual` always runs and always compares the same number of bytes.
+ */
+function timingSafeStringEqual(a: string, b: string): boolean {
+  const digestA = createHash("sha256").update(a, "utf8").digest();
+  const digestB = createHash("sha256").update(b, "utf8").digest();
+  return timingSafeEqual(digestA, digestB);
 }
 
 /**
  * The admin these credentials belong to, or `null` — and `null` is all a caller ever learns.
  *
- * Every rejection leaves by the same door: unknown username, wrong password and a blank field
- * are indistinguishable in the value returned, in the message the caller is allowed to show
- * (`ADMIN_LOGIN_FAILURE_MESSAGE`) and in how long the answer takes.
+ * Credentials are compared against `process.env.ADMIN_USERNAME` and `process.env.ADMIN_PASSWORD`
+ * rather than a Postgres row. That is a deliberate, weaker security posture — a plaintext
+ * password sits in Coolify's env panel and the container's process environment, rather than a
+ * bcrypt hash in a database — accepted because resetting a database-backed password required a
+ * working SSH tunnel to production, which proved unreliable enough to make simple recovery
+ * painful. See [ADR-061](/docs/decisions/ADR-061-env-var-admin-credentials.md).
  *
- * The username is lowercased before the lookup, matching what `scripts/seed-admin.mjs`
- * stores. A single operator typing `Admin` on a Monday and `admin` on a Tuesday is a support
- * call, not an authentication event.
+ * Every rejection leaves by the same door: an unknown username, a wrong password, a blank field,
+ * and `ADMIN_USERNAME`/`ADMIN_PASSWORD` being unset or empty are all indistinguishable in the
+ * value returned, in the message the caller is allowed to show (`ADMIN_LOGIN_FAILURE_MESSAGE`)
+ * and in how long the answer takes. An unconfigured environment **fails closed** — nobody can
+ * log in — and logs a server-side error so the gap is diagnosable without ever being disclosed
+ * to a caller.
+ *
+ * The username is trimmed and lowercased before comparison, on both sides, so a single operator
+ * typing `Admin` on a Monday and `admin` on a Tuesday is a support call, not an authentication
+ * event — matching the lookup `scripts/seed-admin.mjs` used to perform. The password is compared
+ * with `timingSafeStringEqual`, never `===`: `===` on strings is variable-time and would reopen
+ * the timing side channel the failure floor exists to close.
  *
  * The plaintext is never logged, never stored and never leaves this function.
  */
@@ -92,17 +103,32 @@ export async function authenticateAdmin(
   const startedAtMs = Date.now();
   const submittedUsername = username.trim().toLowerCase();
 
+  const configuredUsername = process.env.ADMIN_USERNAME;
+  const configuredPassword = process.env.ADMIN_PASSWORD;
+
+  if (
+    typeof configuredUsername !== "string" ||
+    configuredUsername.trim().length === 0 ||
+    typeof configuredPassword !== "string" ||
+    configuredPassword.length === 0
+  ) {
+    console.error(
+      "[admin-auth] ADMIN_USERNAME/ADMIN_PASSWORD are not both set; every login attempt is being rejected",
+    );
+    return padToFailureFloor(startedAtMs);
+  }
+
   if (submittedUsername.length === 0 || password.length === 0) {
     return padToFailureFloor(startedAtMs);
   }
 
-  const admin = await prisma.admin.findUnique({ where: { username: submittedUsername } });
-  const passwordMatches = await compare(
-    password,
-    admin?.passwordHash ?? ABSENT_ADMIN_PASSWORD_HASH,
+  const usernameMatches = timingSafeStringEqual(
+    submittedUsername,
+    configuredUsername.trim().toLowerCase(),
   );
+  const passwordMatches = timingSafeStringEqual(password, configuredPassword);
 
-  if (admin === null || !passwordMatches) return padToFailureFloor(startedAtMs);
+  if (!usernameMatches || !passwordMatches) return padToFailureFloor(startedAtMs);
 
-  return { id: admin.id, username: admin.username };
+  return { id: ADMIN_IDENTITY_ID, username: submittedUsername };
 }

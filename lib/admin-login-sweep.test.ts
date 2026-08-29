@@ -1,5 +1,4 @@
-import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
-import { hash } from "bcryptjs";
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { ADMIN_SESSION_COOKIE } from "@/lib/admin-routing";
 
 /**
@@ -11,22 +10,17 @@ import { ADMIN_SESSION_COOKIE } from "@/lib/admin-routing";
  * locked the owner out of the panel for a reason that had nothing to do with their credentials.
  * ADR-048 records it as the one admin surface that degrades silently, and this file is why that
  * is safe to say.
+ *
+ * Credentials are `ADMIN_USERNAME`/`ADMIN_PASSWORD` (ADR-061), not a Postgres row, so only
+ * `adminSession` needs mocking here — `authenticateAdmin` never touches `@/lib/prisma` at all.
  */
 const database = vi.hoisted(() => ({
-  passwordHash: "",
   sweepAttempts: 0,
   sessionsCreated: 0,
 }));
 
 vi.mock("@/lib/prisma", () => ({
   prisma: {
-    admin: {
-      findUnique: async () => ({
-        id: "admin-1",
-        username: "himanshu",
-        passwordHash: database.passwordHash,
-      }),
-    },
     adminSession: {
       deleteMany: async () => {
         database.sweepAttempts += 1;
@@ -40,17 +34,23 @@ vi.mock("@/lib/prisma", () => ({
   },
 }));
 
+const CORRECT_USERNAME = "himanshu";
 const CORRECT_PASSWORD = "a-genuinely-correct-password";
 
 let silencedErrors: ReturnType<typeof vi.spyOn>;
 
-beforeAll(async () => {
+beforeAll(() => {
   silencedErrors = vi.spyOn(console, "error").mockImplementation(() => {});
-  database.passwordHash = await hash(CORRECT_PASSWORD, 10);
+});
+
+beforeEach(() => {
+  vi.stubEnv("ADMIN_USERNAME", CORRECT_USERNAME);
+  vi.stubEnv("ADMIN_PASSWORD", CORRECT_PASSWORD);
 });
 
 afterEach(() => {
   silencedErrors.mockClear();
+  vi.unstubAllEnvs();
 });
 
 afterAll(() => {
@@ -63,7 +63,7 @@ function signIn(password: string): Promise<Response> {
       new Request("http://localhost:3000/admin/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: "himanshu", password }),
+        body: JSON.stringify({ username: CORRECT_USERNAME, password }),
       }),
     ),
   );

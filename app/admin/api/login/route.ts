@@ -7,7 +7,7 @@ import {
   sweepExpiredAdminSessions,
 } from "@/lib/admin-session";
 
-/** Node, not Edge: this handler runs bcrypt and opens a Postgres connection. */
+/** Node, not Edge: this handler opens a Postgres connection to sweep and create sessions. */
 export const runtime = "nodejs";
 
 /** A login is an action, never a document. Nothing about it may be cached or reused. */
@@ -23,13 +23,14 @@ export interface AdminLoginResponseBody {
 const NO_STORE = { "Cache-Control": "no-store" } as const;
 
 /**
- * What the sign-in form shows when the panel could not even find out whether the password was
- * right. It names the database because the person reading it is the person who can restart it,
- * and because "Sign in could not be completed" — the form's own fallback — would send the
- * owner hunting for a typo in a password that was correct.
+ * What the sign-in form shows when the credentials checked out but the session itself could not
+ * be recorded. Credentials are checked against the environment, not Postgres, so a database
+ * fault here means `sweepExpiredAdminSessions`/`createAdminSession` could not run — the owner's
+ * password was right, and the message says so, because the person reading it is the person who
+ * can restart the database.
  */
 const ADMIN_LOGIN_UNAVAILABLE_MESSAGE =
-  "The admin database did not answer, so this sign-in could not be checked. It is not your password. Try again in a moment.";
+  "The session database did not answer, so this sign-in could not be completed. It is not your password. Try again in a moment.";
 
 async function readCredentials(
   request: Request,
@@ -64,8 +65,8 @@ async function readCredentials(
  * the `SameSite=Lax` cookie it sets, are the whole of the CSRF story here; a token belongs
  * with the prompt that gives the panel state worth forging a request against.
  *
- * The plaintext password is read from the body, passed to bcrypt and dropped. It is never
- * logged, never stored, and never appears in a response.
+ * The plaintext password is read from the body, compared against `ADMIN_PASSWORD` in constant
+ * time, and dropped. It is never logged, never stored, and never appears in a response.
  *
  * **The expiry sweep cannot fail a login.** It is housekeeping that happens to be convenient to
  * run here, and awaiting it bare meant a `deleteMany` fault turned a correct password into a

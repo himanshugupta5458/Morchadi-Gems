@@ -2,13 +2,27 @@ import "server-only";
 import { createHash, randomBytes } from "node:crypto";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import type { AdminIdentity } from "@/lib/admin-auth";
+import { ADMIN_IDENTITY_ID, type AdminIdentity } from "@/lib/admin-auth";
 import {
   ADMIN_SESSION_COOKIE,
   resolveAdminLoginHref,
   resolveRequestHostname,
 } from "@/lib/admin-routing";
 import { prisma } from "@/lib/prisma";
+
+/**
+ * The identity's display username, read fresh from the environment on every session lookup
+ * rather than stored at login time — there is one admin account, so its username is always
+ * whatever `ADMIN_USERNAME` currently says. Falls back to `ADMIN_IDENTITY_ID` rather than
+ * throwing if the variable has since been unset, since a live session predates that change and
+ * should not crash a page render over it.
+ */
+function currentAdminUsername(): string {
+  const configured = process.env.ADMIN_USERNAME;
+  return typeof configured === "string" && configured.trim().length > 0
+    ? configured.trim().toLowerCase()
+    : ADMIN_IDENTITY_ID;
+}
 
 /**
  * How long a login lasts. Seven days, fixed from the moment of login and never extended by
@@ -117,7 +131,6 @@ export async function readAdminSession(token: string): Promise<AdminIdentity | n
 
   const session = await prisma.adminSession.findUnique({
     where: { tokenHash: digestSessionToken(token) },
-    include: { admin: true },
   });
 
   if (session === null) return null;
@@ -127,7 +140,7 @@ export async function readAdminSession(token: string): Promise<AdminIdentity | n
     return null;
   }
 
-  return { id: session.admin.id, username: session.admin.username };
+  return { id: session.adminId, username: currentAdminUsername() };
 }
 
 /**

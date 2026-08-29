@@ -1,3 +1,10 @@
+// DEAD CODE as of ADR-061: admin credentials are now ADMIN_USERNAME/ADMIN_PASSWORD in the
+// environment, not a row in Postgres. This script writes to an `admins` table that no longer
+// exists in the schema (dropped in migration 20260829061318_drop_admin_table_env_credentials),
+// so running it will fail. It is kept only as reference — do not run it expecting it to
+// provision anything. Rotating the admin password is now a Coolify env var change and a
+// restart/redeploy; see .env.example and ADR-061.
+
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { hash } from "bcryptjs";

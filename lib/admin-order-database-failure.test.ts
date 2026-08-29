@@ -22,7 +22,6 @@ vi.mock("@/lib/prisma", () => {
   const refuse = (): Promise<never> => Promise.reject(failure.error);
 
   const stub = {
-    admin: { findUnique: refuse },
     adminSession: { findUnique: refuse, create: refuse, delete: refuse, deleteMany: refuse },
     order: { findUnique: refuse, updateMany: refuse, findMany: refuse, count: refuse },
     orderStatusHistory: { create: refuse },
@@ -155,8 +154,17 @@ describe("the three order actions with Postgres unreachable", () => {
 });
 
 describe("signing in with Postgres unreachable", () => {
+  /**
+   * Credentials are `ADMIN_USERNAME`/`ADMIN_PASSWORD` (ADR-061) and never touch Postgres, so a
+   * correct password is verified regardless of the database's health. What this proves is the
+   * step after: sweeping and creating the session both fail against the mocked-unreachable
+   * `prisma.adminSession`, and that failure is reported as the database's fault, not the
+   * password's.
+   */
   it("says so, instead of leaving the owner retyping a password that was correct", async () => {
     failure.error = CONNECTION_REFUSED;
+    vi.stubEnv("ADMIN_USERNAME", "himanshu");
+    vi.stubEnv("ADMIN_PASSWORD", "a-real-password");
 
     const { POST } = await import("@/app/admin/api/login/route");
     const response = await POST(
@@ -173,5 +181,7 @@ describe("signing in with Postgres unreachable", () => {
     expect(body.status).toBe("UNAVAILABLE");
     expect(body.error).toContain("It is not your password");
     expect(response.headers.get("Set-Cookie")).toBeNull();
+
+    vi.unstubAllEnvs();
   });
 });

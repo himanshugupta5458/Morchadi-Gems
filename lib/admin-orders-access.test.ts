@@ -1,4 +1,5 @@
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
+import { ADMIN_IDENTITY_ID } from "@/lib/admin-auth";
 import { ADMIN_SESSION_COOKIE, decideAdminRoute } from "@/lib/admin-routing";
 import { prisma } from "@/lib/prisma";
 
@@ -155,20 +156,14 @@ describe("the authoritative gate the order list renders behind", () => {
   it("renders for a live session rather than redirecting", async (ctx) => {
     ctx.skip(unavailableReason !== null, unavailableReason ?? undefined);
 
-    const admin = await prisma.admin.create({
-      data: { username: `zzt-access-${Date.now()}`, passwordHash: "unused-in-this-test" },
-      select: { id: true },
-    });
-
-    const { createAdminSession } = await import("@/lib/admin-session");
-    const ticket = await createAdminSession(admin.id);
+    const { createAdminSession, destroyAdminSession } = await import("@/lib/admin-session");
+    const ticket = await createAdminSession(ADMIN_IDENTITY_ID);
     requestCookie = ticket.token;
 
     try {
       expect(await renderProtectedLayout()).toBe("");
     } finally {
-      await prisma.adminSession.deleteMany({ where: { adminId: admin.id } });
-      await prisma.admin.delete({ where: { id: admin.id } });
+      await destroyAdminSession(ticket.token);
     }
   });
 });

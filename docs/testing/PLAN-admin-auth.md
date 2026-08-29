@@ -12,7 +12,9 @@
 - **Prerequisites:** local Postgres healthy (`docker compose ps`), `DATABASE_URL` set in `.env`
   and `.env.local`. The two database-backed suites skip rather than fail without it. The manual
   cases need a production build (`npm run build && npm start`), because `NODE_ENV=production` is
-  half of what the routing decision reads.
+  half of what the routing decision reads. Since [ADR-061](../decisions/ADR-061-env-var-admin-credentials.md),
+  `ADMIN_USERNAME`/`ADMIN_PASSWORD` must also be set — in `.env.local` for manual cases, stubbed
+  per-test with `vi.stubEnv` for the automated ones (`lib/admin-auth.test.ts`).
 
 ## Cases
 
@@ -89,7 +91,8 @@
 | TC-47 | No echo | Inspect the failure body | Contains neither the submitted password nor the username | Automated |
 | TC-48 | No caching | Inspect headers | `Cache-Control: no-store` | Automated |
 | TC-49 | Username case | Sign in with a differently-cased, space-padded username | Accepted | Automated |
-| TC-50 | Password hashing | `hashAdminPassword` twice | bcrypt format, salted (two different hashes), verifies | Automated |
+| TC-50 | Constant-time comparison ([ADR-061](../decisions/ADR-061-env-var-admin-credentials.md)) | A password wildly shorter and wildly longer than the configured one | Both rejected through the same code path as a same-length wrong password — no early-return shortcut on length | Automated |
+| TC-50a | Unconfigured credentials | Unset `ADMIN_USERNAME`, unset `ADMIN_PASSWORD`, unset both | Every case rejects — fails closed — with the same message and the same 600 ms floor as a wrong password | Automated |
 | TC-51 | Logout | `POST` with a live session cookie | 200, `{"status":"SIGNED_OUT"}`, `Max-Age=0` cookie, **session dead server-side** | Automated |
 | TC-52 | Logout with no session | `POST` with no cookie | 200, `SIGNED_OUT` — nothing to refuse | Automated |
 
@@ -117,6 +120,13 @@
 | TC-65 | Page metadata | Inspect `app/admin/layout.tsx` | `robots: { index: false, follow: false }` on every admin route | Manual |
 
 ### Seed script
+
+**Historical.** These two sections describe `scripts/seed-admin.mjs` from when it wrote the one
+admin account into Postgres. Since [ADR-061](../decisions/ADR-061-env-var-admin-credentials.md)
+the script is dead code — the `admins` table it wrote to no longer exists, and running it now
+fails outright. Kept as a record of the prompt that built it rather than pruned, per the same
+"tests are living, results are snapshots" rule that keeps every other superseded case in this
+file rather than deleting it.
 
 | ID | Scenario | Steps | Expected result | Type |
 | --- | --- | --- | --- | --- |

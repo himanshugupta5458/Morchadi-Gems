@@ -167,28 +167,21 @@ model Customer {
   @@map("customers")
 }
 
-model Admin {
-  id           String         @id @default(uuid())
-  username     String         @unique
-  /// A bcrypt hash, written only by scripts/seed-admin.mjs and by lib/admin-auth.ts. The
-  /// plaintext is never stored, never logged and never leaves the request that carried it.
-  passwordHash String         @map("password_hash")
-  createdAt    DateTime       @default(now()) @map("created_at")
-  sessions     AdminSession[]
-
-  @@map("admins")
-}
-
 /// One logged-in browser. The cookie carries an opaque random token and nothing else; this
 /// table holds the SHA-256 of that token, so a database dump yields no usable session. Deleting
 /// a row logs that browser out immediately, which is the property a signed stateless cookie
 /// cannot offer. See ADR-041.
+///
+/// There is no `Admin` model to reference. Admin credentials are `ADMIN_USERNAME`/
+/// `ADMIN_PASSWORD` in the environment, not a database row — see ADR-061 — so `adminId` is a
+/// plain string rather than a foreign key.
 model AdminSession {
   id        String   @id @default(uuid())
   /// The SHA-256 of the cookie token, hex encoded. Unique because it is what a lookup keys on.
   tokenHash String   @unique @map("token_hash")
+  /// Always `ADMIN_IDENTITY_ID` from lib/admin-auth.ts ("env-admin"). There is exactly one
+  /// admin identity, so this names it rather than joining to a row that no longer exists.
   adminId   String   @map("admin_id")
-  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now()) @map("created_at")
   /// Seven days after creation, set by the application rather than by a database default so
   /// the window is stated once, in lib/admin-session.ts, and read by the tests that prove it.
