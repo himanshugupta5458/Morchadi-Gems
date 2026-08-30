@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { validateEmail, validateName } from "@/lib/address";
+import { CONTACT_CONFIG } from "@/lib/config";
 import {
   CONTACT_FIELDS,
   EMPTY_CONTACT_FORM,
@@ -135,7 +136,7 @@ describe("the Web3Forms payload", () => {
   it("substitutes a default subject when none was given", () => {
     const payload = buildWeb3FormsPayload(formWith({ subject: "  " }), "test-key");
 
-    expect(payload.subject).toBe("New enquiry from the Morchadi Gems website");
+    expect(payload.subject).toBe(CONTACT_CONFIG.defaultEnquirySubject);
   });
 
   it("carries no field the form did not collect", () => {

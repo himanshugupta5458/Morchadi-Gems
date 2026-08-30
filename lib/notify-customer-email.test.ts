@@ -9,6 +9,7 @@ import {
   type ResendSendFn,
   type ResendSendResult,
 } from "@/lib/notify-customer-email";
+import { CONTACT_CONFIG } from "@/lib/config";
 
 const TRACKING_ID = "K7M2QPX9RJ";
 const COD_REFERENCE = "COD_1786968394909_v8j3wggq";
@@ -94,7 +95,7 @@ describe("sending a customer email", () => {
     expect(sendImpl).toHaveBeenCalledTimes(1);
     const payload = sendImpl.mock.calls[0][0];
     expect(payload.to).toBe("ananya@example.com");
-    expect(payload.from).toContain("orders@updates.morchadijewels.com");
+    expect(payload.from).toBe(CONTACT_CONFIG.transactionalFromAddress);
   });
 
   it("skips silently when there is no Resend key configured", async () => {

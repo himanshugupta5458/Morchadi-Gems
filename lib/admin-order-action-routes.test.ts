@@ -8,11 +8,12 @@ import {
   type AdminOrderAction,
 } from "@/lib/admin-routing";
 import { prisma } from "@/lib/prisma";
+import { DEFAULT_ADMIN_HOSTNAME } from "@/lib/admin-routing";
 
 const START_POSTGRES_HINT = "start it with `docker compose up -d` — see docs/DEV-DATABASE.md";
 
 const ORDER_ID = "W2ACEHACUU";
-const ADMIN_HOSTNAME = "admin.morchadigems.com";
+const ADMIN_HOSTNAME = DEFAULT_ADMIN_HOSTNAME;
 
 let unavailableReason: string | null = null;
 let requestCookie: string | null = null;

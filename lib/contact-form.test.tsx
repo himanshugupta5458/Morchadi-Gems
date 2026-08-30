@@ -5,6 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { WEB3FORMS_ENDPOINT } from "@/lib/contact";
 import { ToastProvider } from "@/lib/toast-context";
 import { ContactForm } from "@/components/ContactForm";
+import { CONTACT_CONFIG } from "@/lib/config";
 
 const VALID_INPUT: Record<string, string> = {
   "Your name": "Ananya Iyer",
@@ -123,7 +124,7 @@ describe("with a Web3Forms key — the delivery branch", () => {
       access_key: "test-key",
       name: "Ananya Iyer",
       email: "ananya@example.com",
-      subject: "New enquiry from the Morchadi Gems website",
+      subject: CONTACT_CONFIG.defaultEnquirySubject,
       message: VALID_INPUT.Message,
     });
 

@@ -1,4 +1,5 @@
 import { validateEmail, validateName } from "@/lib/address";
+import { CONTACT_CONFIG } from "@/lib/config";
 
 export interface ContactFormValues {
   name: string;
@@ -102,7 +103,7 @@ export function findFirstInvalidContactField(
 
 export const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
-const DEFAULT_SUBJECT = "New enquiry from the Morchadi Gems website";
+const DEFAULT_SUBJECT = CONTACT_CONFIG.defaultEnquirySubject;
 
 export interface Web3FormsPayload {
   access_key: string;

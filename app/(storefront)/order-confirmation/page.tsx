@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { SITE_CONFIG } from "@/lib/config";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { PanelNotice } from "@/components/PanelNotice";
@@ -12,7 +13,7 @@ import { PanelNotice } from "@/components/PanelNotice";
  */
 export const metadata: Metadata = {
   title: "Order Confirmation",
-  description: "Your Morchadi Gems order and its payment status.",
+  description: `Your ${SITE_CONFIG.brandName} order and its payment status.`,
   robots: { index: false, follow: true },
 };
 

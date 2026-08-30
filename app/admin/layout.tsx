@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { ADMIN_CONFIG } from "@/lib/config";
 
 /**
  * The panel's own title template, and `noindex, nofollow` on every route beneath `/admin`.
@@ -16,8 +17,8 @@ import type { ReactNode } from "react";
  */
 export const metadata: Metadata = {
   title: {
-    default: "Morchadi Gems admin",
-    template: "%s · Morchadi Gems admin",
+    default: ADMIN_CONFIG.title,
+    template: ADMIN_CONFIG.titleTemplate,
   },
   robots: { index: false, follow: false },
 };

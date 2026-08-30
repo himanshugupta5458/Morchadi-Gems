@@ -10,6 +10,7 @@ import { dirname, join } from "node:path";
 import { hash } from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 import { createTerminalPrompt, PromptCancelledError } from "./tty-prompt.mjs";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -153,7 +154,7 @@ async function main() {
   try {
     await prisma.$connect();
 
-    console.log("Morchadi Gems — create an admin account");
+    console.log(`${BRAND_NAME} — create an admin account`);
     console.log("");
 
     const existingCount = await prisma.admin.count();

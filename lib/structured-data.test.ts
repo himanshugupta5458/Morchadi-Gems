@@ -95,8 +95,8 @@ describe("the Organization schema", () => {
     const [contactPoint, ...rest] = buildOrganizationSchema().contactPoint;
 
     expect(rest).toEqual([]);
-    expect(contactPoint.email).toBe("admin@morchadigems.com");
-    expect(contactPoint.telephone).toBe("+91 9358358834");
+    expect(contactPoint.email).toBe(BUSINESS.supportEmail);
+    expect(contactPoint.telephone).toBe(BUSINESS.phoneDisplay);
     expect(contactPoint.areaServed).toBe("IN");
   });
 

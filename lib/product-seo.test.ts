@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { generateMetadata } from "@/app/(storefront)/product/[id]/page";
 import { FREE_SHIPPING_THRESHOLD } from "@/lib/config";
 import { getAllProducts, getImageAlts } from "@/lib/products";
+import { SITE_CONFIG } from "@/lib/config";
 import {
   BANNED_META_ADJECTIVES,
   findBannedMetaAdjectives,
@@ -170,14 +171,23 @@ describe("the honesty rules, applied to the metadata", () => {
   });
 
   /**
-   * The copy lives in `scripts/product-record-rules.mjs`, which is where the SEO rule that reads it
-   * moved when ADR-064 gave the gate and the admin product editor one implementation. Still a plain
-   * ESM duplicate of `lib/config.ts`, still for the reason it always was: the rules must stay
-   * runnable over the JSON with no path aliases and no TypeScript loader.
+   * The SEO rule that reads the threshold lives in `scripts/product-record-rules.mjs`, which is
+   * where it moved when ADR-064 gave the gate and the admin product editor one implementation.
+   * It used to hold its own `const FREE_SHIPPING_THRESHOLD = 799` — a plain-ESM duplicate,
+   * because the rules must stay runnable over the JSON with no path aliases and no TypeScript
+   * loader — and this test existed to keep the two numbers in step.
+   *
+   * There is no copy to keep in step any more: `config/site-facts.mjs` is plain ESM, so the gate
+   * imports the same definition `lib/config.ts` re-exports. The assertion inverts accordingly —
+   * it now proves the import is there and that no second `const` has crept back in beside it.
    */
-  it("keeps the rules module's copy of the free-shipping threshold in step with the real one", () => {
+  it("reads the free-shipping threshold from config rather than restating it", () => {
     const rules = readFileSync("scripts/product-record-rules.mjs", "utf8");
-    expect(rules).toContain(`const FREE_SHIPPING_THRESHOLD = ${FREE_SHIPPING_THRESHOLD};`);
+
+    expect(rules).toContain(
+      'import { FREE_SHIPPING_THRESHOLD } from "../config/site-facts.mjs";',
+    );
+    expect(rules).not.toMatch(/const\s+FREE_SHIPPING_THRESHOLD\s*=/);
   });
 });
 
@@ -227,7 +237,7 @@ describe("what a product page publishes", () => {
       const title = metadata.title as { absolute: string };
 
       expect(title.absolute, product.id).toBe(product.seo.metaTitle);
-      expect(title.absolute, product.id).not.toContain("· Morchadi Gems");
+      expect(title.absolute, product.id).not.toContain(`· ${SITE_CONFIG.brandName}`);
     }
   });
 

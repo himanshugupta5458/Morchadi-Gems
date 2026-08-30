@@ -244,7 +244,7 @@ export default function AboutPage(): JSX.Element {
           <SectionHeading
             as="h2"
             roman="Why Choose"
-            accent="Morchadi"
+            accent={SITE_CONFIG.brandNameLead}
             subtitle="Six things we hold to on every order, not just the large ones."
           />
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">

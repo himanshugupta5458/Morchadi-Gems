@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/logo.png";
+import { SITE_CONFIG } from "@/lib/config";
 
 export type WordmarkTone = "ink" | "ivory";
 
@@ -50,13 +51,13 @@ export function Wordmark({
     <Link
       href="/"
       onClick={onNavigate}
-      aria-label="Morchadi Gems, home"
+      aria-label={`${SITE_CONFIG.brandName}, home`}
       className="inline-flex items-center leading-none"
     >
       {variant === "image" ? (
         <Image
           src={logo}
-          alt="Morchadi Gems"
+          alt={SITE_CONFIG.brandName}
           priority={priority}
           sizes={LOGO_SIZES}
           className={LOGO_HEIGHT_CLASSES}
@@ -64,9 +65,9 @@ export function Wordmark({
       ) : (
         <span className="font-display text-heading-sm">
           <span className={`uppercase tracking-caps ${romanToneClasses[tone]}`}>
-            Morchadi
+            {SITE_CONFIG.brandNameLead}
           </span>{" "}
-          <span className="italic text-gold">Gems</span>
+          <span className="italic text-gold">{SITE_CONFIG.brandNameAccent}</span>
         </span>
       )}
     </Link>

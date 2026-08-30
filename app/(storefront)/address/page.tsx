@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/config";
 import { AddressCheckout } from "@/components/AddressCheckout";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
@@ -9,7 +10,7 @@ import { CheckoutSteps } from "@/components/CheckoutSteps";
  */
 export const metadata: Metadata = {
   title: "Delivery Address",
-  description: "Enter your delivery details to complete your Morchadi Gems order.",
+  description: `Enter your delivery details to complete your ${SITE_CONFIG.brandName} order.`,
   robots: { index: false, follow: true },
 };
 

@@ -1,17 +1,18 @@
 import { BUSINESS } from "@/config/business";
+import {
+  FLAT_SHIPPING_RATE,
+  FREE_SHIPPING_THRESHOLD,
+  RETURN_WINDOW_DAYS,
+} from "@/config/site-facts.mjs";
 
 /**
- * Shipping is free once the payable subtotal reaches this amount, and costs
- * `FLAT_SHIPPING_RATE` below it. The boundary is **inclusive**: a subtotal of exactly ₹799
- * ships free.
- *
- * These two constants are the single definition of what shipping costs. The cart math
- * (`lib/cart.ts`), the server-side order pricing (`lib/order.ts`), the trust strip, the order
- * summaries and the shipping policy all read them rather than writing a number down, so the
- * promise on the home page and the amount charged cannot drift apart.
+ * The shop-wide policy numbers, re-exported under the names the rest of the site already
+ * imports. They are defined in `config/site-facts.mjs` — a plain `.mjs` because the catalogue
+ * gate (`scripts/product-record-rules.mjs`) is plain Node and used to write the free-shipping
+ * threshold down a second time rather than import a TypeScript module. Nothing about their
+ * meaning changed; the definition simply moved somewhere both runtimes can read it.
  */
-export const FREE_SHIPPING_THRESHOLD = 799;
-export const FLAT_SHIPPING_RATE = 99;
+export { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD, RETURN_WINDOW_DAYS };
 
 /**
  * The one shipping calculation, shared by cart totals and by the authoritative server-side
@@ -34,13 +35,6 @@ export function amountToFreeShipping(subtotal: number): number {
 }
 
 /**
- * The one definition of the returns window. The trust strip, the refund policy and every
- * other mention read it from here, so the promise on the home page and the promise in the
- * policy cannot drift apart.
- */
-export const RETURN_WINDOW_DAYS = 7;
-
-/**
  * How the catalogue is described in one phrase, written once. The site description, the
  * shop's per-category metadata and the footer all read it, so a page cannot quietly start
  * claiming something the catalogue is not.
@@ -55,6 +49,13 @@ export const PRODUCT_DESCRIPTOR = "anti-tarnish, skin-friendly artificial jewell
 
 export const SITE_CONFIG = {
   brandName: BUSINESS.brandName,
+  /**
+   * The brand name's two halves, for the surfaces that set the second one apart rather than
+   * printing the name flat — the wordmark's text variant, the style guide's type specimen —
+   * and for the two section headings that use the lead word alone.
+   */
+  brandNameLead: BUSINESS.brandNameLead,
+  brandNameAccent: BUSINESS.brandNameAccent,
   title: `${BUSINESS.brandName} · Artificial Jewellery Online`,
   description: `Premium ${PRODUCT_DESCRIPTOR} from ${BUSINESS.brandName}. Hand-finished, quality-checked, and priced to be worn. Free shipping over ₹${FREE_SHIPPING_THRESHOLD} across India and easy ${RETURN_WINDOW_DAYS}-day returns.`,
   /**
@@ -77,6 +78,18 @@ export const SITE_CONFIG = {
   },
   whatsappNumber: BUSINESS.whatsappNumber,
   whatsappGreeting: `Hi ${BUSINESS.brandName}, I would like to know more about your jewellery.`,
+} as const;
+
+/**
+ * The panel's own title and template. Stated here rather than in `app/admin/layout.tsx` so the
+ * one place the brand name is written stays one place: an admin screen is not a shop page, but
+ * it is the same shop. See
+ * [ADR-044](/docs/decisions/ADR-044-admin-order-detail-and-layout-split.md).
+ */
+export const ADMIN_CONFIG = {
+  hostname: BUSINESS.adminHostname,
+  title: `${BUSINESS.brandName} admin`,
+  titleTemplate: `%s · ${BUSINESS.brandName} admin`,
 } as const;
 
 function toTelHref(phoneDisplay: string): string {
@@ -155,11 +168,19 @@ function toOpeningHoursSentence(): string {
  */
 export const CONTACT_CONFIG = {
   supportEmail: BUSINESS.supportEmail,
+  /**
+   * The `From:` header of the customer's order-confirmation email — the brand name in front of
+   * the verified Resend mailbox, in the `Name <mailbox>` form the RFC and Resend both take.
+   * Read only by `lib/notify-customer-email.ts`.
+   */
+  transactionalFromAddress: `${BUSINESS.brandName} <${BUSINESS.transactionalEmailFrom}>`,
   phoneDisplay: BUSINESS.phoneDisplay,
   phoneHref: toTelHref(BUSINESS.phoneDisplay),
   addressLines: ADDRESS_LINES,
   hours: toOpeningHoursSentence(),
   replyWindow: "one business day",
+  /** The subject a contact-form message carries when the visitor leaves the field empty. */
+  defaultEnquirySubject: `New enquiry from the ${BUSINESS.brandName} website`,
 } as const;
 
 /**

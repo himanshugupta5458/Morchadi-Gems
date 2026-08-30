@@ -12,7 +12,7 @@ const TRACKING_ID = "K7M2QPX9RJ";
 const COD_REFERENCE = "COD_1786968394909_v8j3wggq";
 
 const CREDENTIALS: CallMeBotCredentials = {
-  phone: "919358358834",
+  phone: "910000000000",
   apiKey: "123456",
 };
 

@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { OrderTrackingForm } from "@/components/OrderTrackingForm";
 import { OrderTrackingResult } from "@/components/OrderTrackingResult";
+import { SITE_CONFIG } from "@/lib/config";
 import { TRACK_ORDER_QUERY_PARAM } from "@/lib/navigation";
 import { findPublicOrderTracking } from "@/lib/order-tracking";
 import { TRACKING_THROTTLED_MESSAGE } from "@/lib/order-tracking-copy";
@@ -20,7 +21,7 @@ import {
  */
 export const metadata: Metadata = {
   title: "Track Your Order",
-  description: "Look up a Morchadi Gems order with the order number from your confirmation.",
+  description: `Look up a ${SITE_CONFIG.brandName} order with the order number from your confirmation.`,
   robots: { index: false, follow: true },
 };
 

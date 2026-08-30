@@ -3,6 +3,7 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { Wordmark } from "@/components/Wordmark";
+import { SITE_CONFIG } from "@/lib/config";
 
 vi.mock("next/link", () => ({
   default: ({
@@ -46,7 +47,7 @@ describe("Wordmark", () => {
   it("renders the logo image by default", () => {
     render(<Wordmark />);
 
-    const logo = screen.getByAltText("Morchadi Gems");
+    const logo = screen.getByAltText(SITE_CONFIG.brandName);
     expect(logo.tagName).toBe("IMG");
     expect(logo.getAttribute("src")).toContain("logo");
   });
@@ -61,7 +62,7 @@ describe("Wordmark", () => {
 
   it("names the link for assistive technology", () => {
     render(<Wordmark />);
-    expect(screen.getByRole("link", { name: "Morchadi Gems, home" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: `${SITE_CONFIG.brandName}, home` })).toBeTruthy();
   });
 
   /**
@@ -72,7 +73,7 @@ describe("Wordmark", () => {
   it("constrains the logo's height and lets width follow the aspect ratio", () => {
     render(<Wordmark />);
 
-    const className = screen.getByAltText("Morchadi Gems").getAttribute("class") ?? "";
+    const className = screen.getByAltText(SITE_CONFIG.brandName).getAttribute("class") ?? "";
     expect(className).toContain("h-11");
     expect(className).toContain("lg:h-16");
     expect(className).toContain("w-auto");
@@ -80,10 +81,10 @@ describe("Wordmark", () => {
 
   it("marks the logo as priority only when asked", () => {
     const { rerender } = render(<Wordmark />);
-    expect(screen.getByAltText("Morchadi Gems").getAttribute("data-priority")).toBe("false");
+    expect(screen.getByAltText(SITE_CONFIG.brandName).getAttribute("data-priority")).toBe("false");
 
     rerender(<Wordmark priority />);
-    expect(screen.getByAltText("Morchadi Gems").getAttribute("data-priority")).toBe("true");
+    expect(screen.getByAltText(SITE_CONFIG.brandName).getAttribute("data-priority")).toBe("true");
   });
 
   /**
@@ -96,7 +97,7 @@ describe("Wordmark", () => {
     it("renders the two-tone type lockup and no image at all", () => {
       render(<Wordmark variant="text" tone="ivory" />);
 
-      expect(screen.queryByAltText("Morchadi Gems")).toBeNull();
+      expect(screen.queryByAltText(SITE_CONFIG.brandName)).toBeNull();
       expect(screen.getByText("Morchadi")).toBeTruthy();
       expect(screen.getByText("Gems")).toBeTruthy();
     });

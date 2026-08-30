@@ -1,6 +1,7 @@
 import "server-only";
 import { Resend } from "resend";
 import type { VerifiedOrderState } from "@/types/order";
+import { CONTACT_CONFIG } from "@/lib/config";
 import {
   composeCodOrderConfirmationEmail,
   composePaidOrderConfirmationEmail,
@@ -19,13 +20,15 @@ const LOG_PREFIX = "[notify-customer-email]";
 export const RESEND_API_ENDPOINT = "https://api.resend.com/emails";
 
 /**
- * The address this project's transactional email is sent from. `updates.morchadijewels.com`
- * is verified in Resend (SPF and DKIM), so it is written once here rather than assembled from
- * `SITE_CONFIG.brandName` plus an environment variable — nothing about it is deployment-
- * specific the way `CASHFREE_ENV` or `ADMIN_HOSTNAME` are.
+ * The address this project's transactional email is sent from, in the `Name <mailbox>` form.
+ * Assembled in `lib/config.ts` from the brand name and `BUSINESS.transactionalEmailFrom`, and
+ * re-exported here under the name this module's callers and tests already use.
+ *
+ * It is a configured fact rather than an environment variable because nothing about it is
+ * deployment-specific the way `CASHFREE_ENV` or `ADMIN_HOSTNAME` are:
+ * `updates.morchadijewels.com` is verified in Resend (SPF and DKIM) once, for the business.
  */
-export const ORDER_CONFIRMATION_FROM_ADDRESS =
-  "Morchadi Gems <orders@updates.morchadijewels.com>";
+export const ORDER_CONFIRMATION_FROM_ADDRESS = CONTACT_CONFIG.transactionalFromAddress;
 
 /**
  * Eight seconds, against five for CallMeBot. Neither send is ever awaited by a shopper — the

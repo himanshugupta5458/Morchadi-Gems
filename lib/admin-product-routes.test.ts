@@ -8,9 +8,10 @@ import {
 } from "@/lib/admin-routing";
 import type { ProductUpdateOutcome } from "@/lib/product-repository";
 import type { Product } from "@/types/product";
+import { DEFAULT_ADMIN_HOSTNAME } from "@/lib/admin-routing";
 
 const PRODUCT_ID = "P001";
-const ADMIN_HOSTNAME = "admin.morchadigems.com";
+const ADMIN_HOSTNAME = DEFAULT_ADMIN_HOSTNAME;
 
 /**
  * The session this test grants or withholds. `null` is a request with no live session, which is

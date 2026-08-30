@@ -22,6 +22,7 @@
 
 import { findBannedMetaAdjectives } from "./banned-meta-adjectives.mjs";
 import { isValidMinPrepaidAmount, minPrepaidExceedsPrice } from "./min-prepaid-rule.mjs";
+import { FREE_SHIPPING_THRESHOLD } from "../config/site-facts.mjs";
 
 export const MIN_FEATURED_COUNT = 4;
 export const MIN_NEW_COUNT = 4;
@@ -218,12 +219,6 @@ export const OG_TITLE_MAX = 70;
 export const OG_DESCRIPTION_MAX = 200;
 export const IMAGE_ALT_MAX = 125;
 
-/**
- * Repeated here rather than imported: this module is plain Node with no path aliases, and the
- * only thing it needs from `lib/config.ts` is the one number a meta description is allowed to
- * quote. Kept in sync by the shipping tests, which read the real constant.
- */
-const FREE_SHIPPING_THRESHOLD = 799;
 
 export function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;

@@ -125,7 +125,7 @@ export default function HomePage(): JSX.Element {
       <section className="bg-ivory">
         <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
           <SectionHeading
-            roman="The Morchadi"
+            roman={`The ${SITE_CONFIG.brandNameLead}`}
             accent="Promise"
             subtitle="Every order is inspected, insured in transit, and returnable for seven days."
           />

@@ -14,7 +14,7 @@ import {
 const ORDER_ID = "MG_1786968394909_v8j3wggq";
 
 const CREDENTIALS: CallMeBotCredentials = {
-  phone: "919358358834",
+  phone: "910000000000",
   apiKey: "123456",
 };
 
@@ -354,14 +354,14 @@ describe("reading the CallMeBot credentials", () => {
   });
 
   it("reads both values when both are set", () => {
-    process.env.CALLMEBOT_PHONE = "919358358834";
+    process.env.CALLMEBOT_PHONE = "910000000000";
     process.env.CALLMEBOT_APIKEY = "123456";
 
     expect(readCallMeBotCredentials()).toEqual(CREDENTIALS);
   });
 
   it("is null when either is missing, so the feature switches itself off", () => {
-    process.env.CALLMEBOT_PHONE = "919358358834";
+    process.env.CALLMEBOT_PHONE = "910000000000";
     delete process.env.CALLMEBOT_APIKEY;
     expect(readCallMeBotCredentials()).toBeNull();
 

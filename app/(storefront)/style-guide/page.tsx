@@ -7,7 +7,7 @@ import {
   getPrimaryImage,
   toCatalogueEntry,
 } from "@/lib/products";
-import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD } from "@/lib/config";
+import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD, SITE_CONFIG } from "@/lib/config";
 import { formatRupees, hasVisibleDiscount } from "@/lib/format";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { Button } from "@/components/Button";
@@ -248,7 +248,8 @@ export default function StyleGuidePage(): JSX.Element {
             <div key={step.token} className="flex flex-col gap-1">
               <span className="text-eyebrow uppercase text-muted">{step.token}</span>
               <p className={`font-display ${step.className}`}>
-                Morchadi <span className="italic text-gold">Gems</span>
+                {SITE_CONFIG.brandNameLead}{" "}
+                <span className="italic text-gold">{SITE_CONFIG.brandNameAccent}</span>
               </p>
             </div>
           ))}

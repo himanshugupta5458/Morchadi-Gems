@@ -84,6 +84,20 @@ surface's current decision is the table in
 [ADR-048](docs/decisions/ADR-048-database-health-and-failure-surfaces.md); adding a new one means
 adding a row.
 
+**Brand, contact and policy values are configured, never typed twice.** The shop's name, its
+legal entity, its phone number, its WhatsApp number, its support inbox, its transactional
+sending address, its admin hostname, its postal address, the free-shipping threshold, the flat
+shipping rate and the return window are each written down in exactly one place and read
+everywhere else. `config/business.ts` is that place, `config/site-facts.mjs` holds the few
+values the plain-Node scripts need as well, and `lib/config.ts` derives every rendered form
+from them — `SITE_CONFIG`, `CONTACT_CONFIG`, `LEGAL_CONFIG`, `ADMIN_CONFIG` and the rest. No
+page, component, route handler, script or **test** writes one of these values as a literal.
+Introducing a new one means adding the field to `config/business.ts` first, surfacing it
+through `lib/config.ts`, and importing it — a second copy is a bug even when both copies agree,
+because they agree only until the owner changes one. `lib/site-identity.test.ts` greps the
+source tree and fails on any duplicate; a doc comment that *mentions* a value is fine, a line
+of code that restates it is not.
+
 **Secrets never reach the client bundle.** `CASHFREE_APP_ID`, `CASHFREE_SECRET_KEY` and
 `DATABASE_URL` are read only inside route handlers and server-only modules. Only `NEXT_PUBLIC_*` variables may
 appear in client components. Never inline a secret into a `"use client"` file, and never
@@ -136,7 +150,9 @@ app/          Routes, layouts, and API route handlers (App Router)
 components/   Reusable presentational UI
 lib/          Utilities, cart context, Cashfree client, server-side pricing, the order
               lifecycle, admin auth and sessions. Tests live beside what they test
-config/       business.ts (owner-editable facts) and security-headers.mjs (the CSP)
+config/       business.ts (owner-editable brand, contact and legal facts), site-facts.mjs
+              (the brand names and policy numbers the plain-Node scripts need too) and
+              security-headers.mjs (the CSP)
 data/         products.json — the static catalogue, the single source of truth for prices
 prisma/       schema.prisma and the committed migration history (ADR-040)
 scripts/      One-off and maintenance scripts, plain .mjs

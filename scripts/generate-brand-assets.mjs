@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import sharp from "sharp";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const LOGO_PATH = join(REPO_ROOT, "public", "logo.png");
@@ -145,7 +146,7 @@ async function generateBrandAssets() {
   const ogImage = await renderOgImage();
   writeFileSync(join(OG_DIR, "default.webp"), ogImage);
 
-  console.log("Morchadi Gems — brand asset generation\n");
+  console.log(`${BRAND_NAME} — brand asset generation\n`);
   console.log(`Source            public/logo.png`);
   console.log(`Icon crop         ${FEATHER_CROP.width}x${FEATHER_CROP.height} at (${FEATHER_CROP.left}, ${FEATHER_CROP.top}) — the peacock feather eye`);
   console.log(`app/icon.png      ${ICON_SIZE}x${ICON_SIZE}, transparent`);

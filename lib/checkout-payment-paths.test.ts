@@ -714,7 +714,7 @@ describe("the owner's notification for a cash-on-delivery order", () => {
   let silencedError: ReturnType<typeof vi.spyOn> | null = null;
 
   beforeEach(() => {
-    process.env.CALLMEBOT_PHONE = "919358358834";
+    process.env.CALLMEBOT_PHONE = "910000000000";
     process.env.CALLMEBOT_APIKEY = "test_apikey";
     silencedError = vi.spyOn(console, "error").mockImplementation(() => {});
   });

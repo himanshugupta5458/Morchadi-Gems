@@ -7,6 +7,7 @@ import {
   serialiseKeywordMap,
 } from "./backfill-keyword-map.mjs";
 import { looselyNormaliseKeyword } from "./keyword-normalisation.mjs";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 import {
   ADVISORY_DISCOUNT_PERCENT,
   CATEGORY_SLUGS,
@@ -201,7 +202,7 @@ const {
   pricedMetadataIds,
 } = counters;
 
-console.log("Morchadi Gems — product catalogue validation\n");
+console.log(`${BRAND_NAME} — product catalogue validation\n`);
 console.log(`Products            ${catalogue.length}`);
 console.log(`Unique ids          ${seenIds.size}`);
 console.log(`Active              ${statusCounts.active}`);

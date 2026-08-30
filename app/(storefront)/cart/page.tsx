@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG } from "@/lib/config";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CartView } from "@/components/CartView";
 
@@ -9,7 +10,7 @@ import { CartView } from "@/components/CartView";
  */
 export const metadata: Metadata = {
   title: "Your Cart",
-  description: "Review the pieces in your Morchadi Gems cart before checkout.",
+  description: `Review the pieces in your ${SITE_CONFIG.brandName} cart before checkout.`,
   robots: { index: false, follow: true },
 };
 

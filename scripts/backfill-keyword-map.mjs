@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { dirname, join } from "node:path";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
@@ -117,7 +118,7 @@ function runCli() {
   writeFileSync(KEYWORD_MAP_PATH, serialiseKeywordMap(map), "utf8");
 
   const summary = summariseKeywordMap(map);
-  console.log("Morchadi Gems — keyword map backfill\n");
+  console.log(`${BRAND_NAME} — keyword map backfill\n`);
   console.log(`Wrote               ${KEYWORD_MAP_RELATIVE_PATH}`);
   console.log(`Published products  ${summary.products}`);
   console.log(`Primary keywords    ${summary.primaryKeywords}`);

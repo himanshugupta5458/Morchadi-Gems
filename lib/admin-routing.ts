@@ -7,7 +7,12 @@
  * over a hostname, a pathname and a boolean, which is also why it is testable without a
  * request, a server or a browser. See
  * [ADR-041](/docs/decisions/ADR-041-admin-subdomain-and-auth.md).
+ *
+ * `lib/config.ts` is the one import it does take: that module is plain data derived from
+ * `config/business.ts` and reaches for nothing the Edge runtime lacks.
  */
+
+import { ADMIN_CONFIG } from "@/lib/config";
 
 /**
  * The internal route space the admin panel occupies. In production the shopper-facing URL of
@@ -37,7 +42,7 @@ export const ADMIN_ROBOTS_PATH = "/admin/robots.txt";
 export const ADMIN_SESSION_COOKIE = "morchadi_admin_session";
 
 /** The production admin hostname when `ADMIN_HOSTNAME` is unset. */
-export const DEFAULT_ADMIN_HOSTNAME = "admin.morchadigems.com";
+export const DEFAULT_ADMIN_HOSTNAME = ADMIN_CONFIG.hostname;
 
 const LOCAL_HOSTNAMES: readonly string[] = ["localhost", "127.0.0.1", "::1", "[::1]", "0.0.0.0"];
 

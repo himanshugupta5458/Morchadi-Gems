@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/config";
 import { AdminSidebarShell } from "@/components/AdminSidebarShell";
 import { AdminSignOutButton } from "@/components/AdminSignOutButton";
 
@@ -45,7 +46,7 @@ export function AdminSidebar({
         className="flex flex-col gap-8 border border-line bg-ivory px-5 py-6"
       >
         <div className="flex flex-col gap-1">
-          <span className="font-display text-heading-sm text-ink">Morchadi Gems</span>
+          <span className="font-display text-heading-sm text-ink">{SITE_CONFIG.brandName}</span>
           <span className="text-eyebrow uppercase tracking-caps-wide text-muted">admin</span>
         </div>
 

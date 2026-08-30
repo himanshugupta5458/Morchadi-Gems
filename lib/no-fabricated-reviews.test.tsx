@@ -13,6 +13,7 @@ import { buildProductBreadcrumb } from "@/lib/breadcrumbs";
 import { buildProductSchemaGraph, buildSiteSchemaGraph } from "@/lib/structured-data";
 import { JsonLd } from "@/components/JsonLd";
 import { ProductCard } from "@/components/ProductCard";
+import { SITE_CONFIG } from "@/lib/config";
 
 vi.mock("next/link", () => ({
   default: ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -164,7 +165,7 @@ describe("the Open Graph type of a product page", () => {
     if (product === undefined) throw new Error("Fixture product P001 is missing");
     const metadata = generateMetadata({ params: { id: product.id } });
 
-    expect(metadata.openGraph?.siteName).toBe("Morchadi Gems");
+    expect(metadata.openGraph?.siteName).toBe(SITE_CONFIG.brandName);
     expect(metadata.openGraph?.url).toBe("/product/P001");
     expect(metadata.openGraph?.images).toHaveLength(1);
   });

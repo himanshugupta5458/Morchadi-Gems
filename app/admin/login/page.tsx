@@ -5,6 +5,7 @@ import {
   resolveAdminLoginApiHref,
   resolveRequestHostname,
 } from "@/lib/admin-routing";
+import { SITE_CONFIG } from "@/lib/config";
 import { AdminLoginForm } from "@/components/AdminLoginForm";
 
 /**
@@ -25,7 +26,7 @@ export default function AdminLoginPage(): JSX.Element {
     <div className="mx-auto flex w-full max-w-md flex-col gap-8">
       <div className="flex flex-col gap-3 text-center">
         <span className="text-eyebrow uppercase tracking-caps text-muted">
-          Morchadi Gems
+          {SITE_CONFIG.brandName}
         </span>
         <h1 className="font-display text-heading text-ink">Admin sign in</h1>
         <span aria-hidden className="mx-auto block h-px w-12 bg-gold" />

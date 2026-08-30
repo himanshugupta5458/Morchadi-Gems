@@ -7,16 +7,43 @@
  * component reads them from `lib/config.ts`. Change a field below and the header, footer,
  * contact page, all four policies and the WhatsApp button follow.
  *
+ * Its sibling is `config/site-facts.mjs`, which holds the few values the plain-Node scripts
+ * need as well as the site does — the brand names and the shop-wide policy numbers. They live
+ * in a `.mjs` only because a script cannot import TypeScript; the fields below republish the
+ * brand names so this stays the one file to read. Between the two, every brand, contact and
+ * policy value this site states is written down exactly once.
+ *
  * Plain data only. No logic, no formatting, no derived values — anything computed from these
  * fields (a `tel:` href, a wa.me link) is derived in `lib/config.ts` so this file stays safe
  * to edit without reading any code.
  */
+import {
+  BRAND_NAME,
+  BRAND_NAME_ACCENT,
+  BRAND_NAME_LEAD,
+  LEGAL_ENTITY_NAME,
+} from "@/config/site-facts.mjs";
+
 export const BUSINESS = {
   /** Registered entity that operates the store. Appears in the terms and privacy policies. */
-  legalEntityName: "Morchadi Enterprise",
+  legalEntityName: LEGAL_ENTITY_NAME,
 
   /** Customer-facing store name. Appears in the wordmark, page titles and share cards. */
-  brandName: "Morchadi Gems",
+  brandName: BRAND_NAME,
+
+  /**
+   * The same name split at the word the brand sets apart — `brandNameLead` in roman capitals,
+   * `brandNameAccent` in italic gold. The wordmark's text variant and the style guide's type
+   * specimen render the pair; the home page's "The Morchadi Promise" and `/about`'s "Why
+   * Choose Morchadi" render the lead on its own.
+   *
+   * Split at the source rather than computed from `brandName`, because where the emphasis
+   * falls is a design decision and not a property of the string. `lib/site-identity.test.ts`
+   * asserts the two joined by a space are exactly `brandName`, so a rename cannot leave them
+   * behind.
+   */
+  brandNameLead: BRAND_NAME_LEAD,
+  brandNameAccent: BRAND_NAME_ACCENT,
 
   /** Year the workshop opened. Drives the "Est." line, the story and the journey timeline. */
   foundedYear: 2016,
@@ -37,6 +64,15 @@ export const BUSINESS = {
   /** The single inbox for support, order, returns and privacy enquiries. */
   supportEmail: "admin@morchadigems.com",
 
+  /**
+   * The mailbox the customer's order-confirmation email is sent from. A different domain from
+   * `supportEmail` on purpose: `updates.morchadijewels.com` is the domain verified in Resend
+   * with SPF and DKIM, and mail sent from an unverified domain is mail that lands in spam.
+   * `lib/config.ts` puts `brandName` in front of it to make the `From:` header a shopper
+   * reads. Replying to it reaches nobody — the confirmation email points at `supportEmail`.
+   */
+  transactionalEmailFrom: "orders@updates.morchadijewels.com",
+
   /** Phone number as a shopper should read it. The `tel:` link is derived from these digits. */
   phoneDisplay: "+91 9358358834",
 
@@ -45,6 +81,14 @@ export const BUSINESS = {
    * Kept separate from `phoneDisplay` so the chat number can differ from the phone number.
    */
   whatsappNumber: "919358358834",
+
+  /**
+   * The hostname the admin panel answers on, and the fallback when `ADMIN_HOSTNAME` is unset.
+   * A domain the brand owns is a brand fact, so it is written here once; a deployment that
+   * moves the panel sets the environment variable and never edits this
+   * ([ADR-041](/docs/decisions/ADR-041-admin-subdomain-and-auth.md)).
+   */
+  adminHostname: "admin.morchadigems.com",
 
   /**
    * Registered postal address, in parts rather than as display lines. Structured because two

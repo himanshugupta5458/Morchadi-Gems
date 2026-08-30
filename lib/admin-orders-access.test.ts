@@ -1,6 +1,10 @@
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { ADMIN_IDENTITY_ID } from "@/lib/admin-auth";
-import { ADMIN_SESSION_COOKIE, decideAdminRoute } from "@/lib/admin-routing";
+import {
+  ADMIN_SESSION_COOKIE,
+  DEFAULT_ADMIN_HOSTNAME,
+  decideAdminRoute,
+} from "@/lib/admin-routing";
 import { prisma } from "@/lib/prisma";
 
 const START_POSTGRES_HINT = "start it with `docker compose up -d` — see docs/DEV-DATABASE.md";
@@ -95,7 +99,7 @@ describe("the middleware gate on /admin/orders", () => {
   it("does the same on the admin subdomain, in that host's own URL space", () => {
     expect(
       decideAdminRoute({
-        hostname: "admin.morchadigems.com",
+        hostname: DEFAULT_ADMIN_HOSTNAME,
         pathname: "/orders",
         hasSessionCookie: false,
       }),
@@ -115,7 +119,7 @@ describe("the middleware gate on /admin/orders", () => {
   it("is not a public path — it must never answer without a session", () => {
     expect(
       decideAdminRoute({
-        hostname: "admin.morchadigems.com",
+        hostname: DEFAULT_ADMIN_HOSTNAME,
         pathname: "/orders",
         hasSessionCookie: true,
       }),
@@ -141,7 +145,7 @@ describe("the authoritative gate the order list renders behind", () => {
   });
 
   it("redirects to the admin host's own login page when that is where the request came from", async () => {
-    requestHost = "admin.morchadigems.com";
+    requestHost = DEFAULT_ADMIN_HOSTNAME;
 
     expect(await renderProtectedLayout()).toBe("/login");
   });

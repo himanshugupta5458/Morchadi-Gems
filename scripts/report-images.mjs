@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const DEFAULT_REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -163,7 +164,7 @@ function runCli(argv) {
   const verbose = argv.includes("--all-products");
   const report = collectImageReport({ batchId });
 
-  console.log("Morchadi Gems — image pipeline report (read-only)\n");
+  console.log(`${BRAND_NAME} — image pipeline report (read-only)\n`);
 
   const untouched = report.products.filter((product) => product.confirmed === 0);
   const inProgress = report.products.filter(

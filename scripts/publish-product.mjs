@@ -4,6 +4,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { buildKeywordMap, serialiseKeywordMap } from "./backfill-keyword-map.mjs";
 import { formatFinding, validatePublishReadiness } from "./validate-draft-a.mjs";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const DEFAULT_REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -263,7 +264,7 @@ function runCli(argv) {
     return 2;
   }
 
-  console.log(`Morchadi Gems — publishing ${productId}\n`);
+  console.log(`${BRAND_NAME} — publishing ${productId}\n`);
   const result = publishProduct(productId);
 
   if (!result.published) {

@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 import {
   OPENING_SHINGLE_SIZE,
@@ -441,5 +442,5 @@ const summaryLine = METRICS.map(
   (metric) => `${metric.label} max ${format(overall.get(metric.key).max)} / p99 ${format(overall.get(metric.key).p99)}`,
 ).join(" · ");
 process.stdout.write(
-  `Morchadi Gems — content similarity calibration\n\n  products ${products.length}\n  pairs    ${pairs.length}\n  ${summaryLine}\n\n  report ${reportPath.replace(`${repoRoot}/`, "")}\n  scores ${scoresPath.replace(`${repoRoot}/`, "")}\n\nNo threshold set — see the report's opening section.\n`,
+  `${BRAND_NAME} — content similarity calibration\n\n  products ${products.length}\n  pairs    ${pairs.length}\n  ${summaryLine}\n\n  report ${reportPath.replace(`${repoRoot}/`, "")}\n  scores ${scoresPath.replace(`${repoRoot}/`, "")}\n\nNo threshold set — see the report's opening section.\n`,
 );

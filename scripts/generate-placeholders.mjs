@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import sharp from "sharp";
+import { BRAND_NAME } from "../config/site-facts.mjs";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE_PATH = join(REPO_ROOT, "data", "products.json");
@@ -336,7 +337,7 @@ async function generatePlaceholders() {
   if (heroOutcome === "written") tally.heroWritten += 1;
   else tally.heroSkipped += 1;
 
-  console.log("Morchadi Gems — placeholder image generation\n");
+  console.log(`${BRAND_NAME} — placeholder image generation\n`);
   console.log(`Products    written ${tally.productsWritten}   skipped ${tally.productsSkipped}`);
   console.log(`Extra views written ${tally.extraViewsWritten}   skipped ${tally.extraViewsSkipped}`);
   console.log(`Variants    written ${tally.variantsWritten}   skipped ${tally.variantsSkipped}`);

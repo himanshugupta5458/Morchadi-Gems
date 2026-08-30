@@ -10,6 +10,7 @@ import { CHECKOUT_STORAGE_KEY } from "@/lib/checkout";
 import { NOTIFY_ADMIN_API_PATH } from "@/lib/navigation";
 import { UTM_STORAGE_KEY } from "@/lib/utm";
 import { readSavedAddress } from "@/lib/saved-address";
+import { CONTACT_CONFIG } from "@/lib/config";
 import { MAX_VERIFY_ATTEMPTS, PENDING_POLL_INTERVAL_MS } from "@/lib/verify";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 
@@ -623,7 +624,7 @@ describe("/order-confirmation — PENDING", () => {
     expect(fetchMock).toHaveBeenCalledTimes(MAX_VERIFY_ATTEMPTS);
     expect(screen.getByText("Your payment is still processing")).toBeTruthy();
     expect(screen.getByText("Check again")).toBeTruthy();
-    expect(screen.getByText("admin@morchadigems.com")).toBeTruthy();
+    expect(screen.getByText(CONTACT_CONFIG.supportEmail)).toBeTruthy();
     expect(screen.queryByText("Your payment was not completed")).toBeNull();
     expect(storedCartItemCount()).toBe(1);
   });
