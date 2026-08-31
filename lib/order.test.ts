@@ -9,6 +9,7 @@ function makeEntry(overrides: Partial<CatalogueEntry> = {}): CatalogueEntry {
   return {
     id: "nk-001",
     name: "Kundan Rani Haar",
+    category: "necklaces",
     price: 1000,
     mrp: 9999,
     image: "/products/nk-001.webp",
@@ -21,12 +22,14 @@ const NECKLACE = makeEntry();
 const EARRING = makeEntry({
   id: "er-001",
   name: "Polki Jhumkas",
+  category: "necklaces",
   price: 250,
   mrp: 8888,
 });
 const SOLD_OUT_RING = makeEntry({
   id: "rg-001",
   name: "Temple Gold Ring",
+  category: "necklaces",
   price: 700,
   mrp: 7777,
   inStock: false,
@@ -35,6 +38,7 @@ const SOLD_OUT_RING = makeEntry({
 const BANGLE = makeEntry({
   id: "bg-001",
   name: "Oxidised Silver Bangle",
+  category: "necklaces",
   price: 100,
   mrp: 6666,
 });

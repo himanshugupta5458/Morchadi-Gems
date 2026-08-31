@@ -31,7 +31,7 @@ export function CheckoutSummary({
   discount,
 }: CheckoutSummaryProps): JSX.Element {
   return (
-    <div className="border border-line bg-ivory p-6 lg:sticky lg:top-32">
+    <div className="border border-line bg-ivory p-6 lg:sticky lg:top-32 lg:self-start">
       <div className="flex items-baseline justify-between gap-4">
         <h2 className="font-display text-heading-sm text-ink">Order summary</h2>
         <Link

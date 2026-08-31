@@ -8,6 +8,7 @@ import { FLAT_SHIPPING_RATE } from "@/lib/config";
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -17,6 +18,7 @@ const NECKLACE: CatalogueEntry = {
 const EARRING: CatalogueEntry = {
   id: "er-001",
   name: "Polki Jhumkas",
+  category: "necklaces",
   price: 250,
   mrp: 400,
   image: "/products/er-001.webp",
@@ -26,6 +28,7 @@ const EARRING: CatalogueEntry = {
 const SOLD_OUT_RING: CatalogueEntry = {
   id: "rg-001",
   name: "Temple Gold Ring",
+  category: "necklaces",
   price: 700,
   mrp: 900,
   image: "/products/rg-001.webp",
@@ -50,6 +53,7 @@ function linesFor(quantities: Record<string, number>): CartLine[] {
     Object.entries(quantities).map(([productId, qty]) => ({
       productId,
       name: "snapshot",
+      category: "necklaces",
       price: 1,
       image: "",
       qty,
@@ -226,6 +230,7 @@ describe("parseCheckoutData", () => {
 const INITIAL_RING: CatalogueEntry = {
   id: "P001",
   name: "Wave Band Initial Ring",
+  category: "necklaces",
   price: 400,
   mrp: 600,
   image: "/products/P001.webp",
@@ -242,6 +247,7 @@ function optionedLines(selections: { letter: string; qty: number }[]): CartLine[
     selections.map(({ letter, qty }) => ({
       productId: "P001",
       name: "snapshot",
+      category: "necklaces",
       price: 1,
       image: "",
       qty,

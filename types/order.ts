@@ -46,6 +46,13 @@ export interface CreateOrderRequest {
    */
   paymentPath?: PaymentPath;
   /**
+   * A note the shopper typed for whoever packs the parcel. Free text, capped and sanitised by
+   * `parseGiftMessage` on the server, recorded on the order and read by nothing that decides an
+   * amount. Absent on the ordinary order. See
+   * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
+   */
+  giftMessage?: string;
+  /**
    * The campaign this visitor first arrived on, when the browser has one stored. Marketing
    * metadata: it is written onto the Cashfree order as tags and never read by any amount.
    * Absent on the ordinary order, which is most of them. See ADR-039.

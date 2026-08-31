@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/types/product";
-import { getPrimaryImage, getSecondaryImage, toCatalogueEntry } from "@/lib/products";
+import type { ProductCardView } from "@/types/product";
+import {
+  getPrimaryImage,
+  getSecondaryImage,
+  toCatalogueEntry,
+} from "@/lib/product-view";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductBadgeTag } from "@/components/ProductBadgeTag";
 import { ProductCardPurchase } from "@/components/ProductCardPurchase";
@@ -16,13 +20,22 @@ import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 const NAME_HEIGHT_CLASSES = "line-clamp-2 min-h-[2.75rem]";
 
 export interface ProductCardProps {
-  product: Product;
+  /**
+   * `ProductCardView`, not `Product`. A whole record carries `pricing.cost` and, on migrated
+   * pieces, another shop's identifiers; the shop listing and the home page still hand one in
+   * and lose nothing by it, because they render on the server. The cross-sell rails render in
+   * the browser and hand in the narrowed shape instead — see `ProductCardView`.
+   */
+  product: ProductCardView;
   priority?: boolean;
 }
 
 /**
- * A Server Component. The only thing it ships to the browser is `ProductCardPurchase`, and that
- * receives the lean `CatalogueEntry` rather than the whole product record.
+ * A Server Component wherever a Server Component renders it — which is the shop listing, the
+ * home page and the product page. The cross-sell rails render it inside a Client Component
+ * instead, so this module is compiled into a browser bundle as well, and that is why it takes
+ * `ProductCardView` and imports its projections from `lib/product-view.ts` rather than from
+ * `lib/products.ts`: the latter carries `data/products.json` with it.
  *
  * A product with a **second** photograph reveals it on hover, and on a phone when the card's
  * link takes focus. One with a single photograph — 436 of the 449 records — gets no second

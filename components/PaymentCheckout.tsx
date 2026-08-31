@@ -15,7 +15,9 @@ import {
   type CodEligibilityEntry,
 } from "@/lib/cod";
 import { readCheckoutData, stampCheckoutDataOrder } from "@/lib/checkout";
+import { DELIVERY_ESTIMATE_LINE } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
+import { GIFT_MESSAGE_MAX_LENGTH } from "@/lib/gift-message";
 import {
   CART_PATH,
   CHECKOUT_ADDRESS_PATH,
@@ -33,7 +35,12 @@ import { AddressRecap } from "@/components/AddressRecap";
 import { Button } from "@/components/Button";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSummary } from "@/components/CheckoutSummary";
+import {
+  CheckoutTrustStrip,
+  PaymentMethodMarks,
+} from "@/components/CheckoutTrustStrip";
 import { PanelNotice } from "@/components/PanelNotice";
+import { TextAreaField } from "@/components/TextAreaField";
 import { PaymentChoice, type PaymentChoiceOption } from "@/components/PaymentChoice";
 import { PaymentErrorNotice } from "@/components/PaymentErrorNotice";
 
@@ -137,10 +144,18 @@ function buildPaymentChoiceOptions(
  * Step two of checkout. It shows what is about to be charged and hands the browser to
  * Cashfree, and it is deliberately incapable of doing anything else: it holds no credentials,
  * knows no Cashfree endpoint, and sends only product ids, quantities, the recorded option
- * choices, the address and the stored campaign to our own route. The amount below the button
- * is what the *server* will independently arrive at from the same ids — it is a rendering of
- * the order, not an instruction about its price, and neither a recorded choice nor a campaign
- * is an input to it at all.
+ * choices, the address, an optional gift note and the stored campaign to our own route. The
+ * amount below the button is what the *server* will independently arrive at from the same ids —
+ * it is a rendering of the order, not an instruction about its price, and neither a recorded
+ * choice, nor a gift note, nor a campaign is an input to it at all.
+ *
+ * **The saving line is the same figure as the discount row, not a second one.** `onlineDiscount`
+ * is derived once, from the selected option's `amountNow`, and both the sentence above the pay
+ * button and the summary's discount row read it — so there is no arithmetic here that could
+ * disagree with what `/api/create-order` charges. There is deliberately no free-shipping nudge
+ * on this screen at all: it is the cart's, and only the cart's
+ * ([ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md)).
+ *
  * See [ADR-013](/docs/decisions/ADR-013-order-creation-and-payment.md) and
  * [ADR-019](/docs/decisions/ADR-019-product-options.md).
  */
@@ -154,6 +169,13 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
   const [status, setStatus] = useState<PaymentStatus>("idle");
   const [failure, setFailure] = useState<PaymentFailure | null>(null);
   const [selectedPath, setSelectedPath] = useState<PaymentPath>("full");
+  /**
+   * Held here rather than in the `sessionStorage` bundle. That bundle is a *summary* the
+   * confirmation page reconciles against a verified order, and a note the shopper is still
+   * typing is neither summary nor evidence — it goes straight into the one request that creates
+   * the order, and if they navigate away it is gone, exactly like an unsubmitted form field.
+   */
+  const [giftMessage, setGiftMessage] = useState("");
 
   /**
    * The state update that disables the button does not land until React re-renders, so a
@@ -198,6 +220,7 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
           items,
           address: checkoutData.address,
           paymentPath: selectedPath,
+          ...(giftMessage.trim().length === 0 ? {} : { giftMessage }),
           ...(utm === null ? {} : { utm }),
         }),
       });
@@ -323,9 +346,8 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
         <div className="flex flex-col gap-2">
           <h2 className="font-display text-heading-sm text-ink">Review and pay</h2>
           <p className="max-w-prose text-body-sm text-muted">
-            Online payment is handled by Cashfree on their secure page. We never see your
-            card or UPI details, and every amount below is confirmed by our server before
-            anything is charged.
+            Payment is handled by Cashfree on their secure page. We never see your card or
+            UPI details.
           </p>
         </div>
 
@@ -348,6 +370,31 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
             onChange={setSelectedPath}
           />
         )}
+
+        {onlineDiscount > 0 ? (
+          <p className="border border-gold/40 bg-gold/5 px-4 py-3 text-body-sm text-gold-deep">
+            You are saving {formatRupees(onlineDiscount)} on this order by paying online.
+          </p>
+        ) : null}
+
+        <div className="flex flex-col gap-2">
+          <TextAreaField
+            id="gift-message"
+            label="Gift message or note for us"
+            value={giftMessage}
+            rows={3}
+            isOptional
+            maxLength={GIFT_MESSAGE_MAX_LENGTH}
+            placeholder="A note to go in the parcel, or anything we should know before we pack it."
+            onChange={setGiftMessage}
+            onBlur={() => undefined}
+          />
+          <p className="text-body-sm text-muted">
+            Free, and written on a card in the parcel. {GIFT_MESSAGE_MAX_LENGTH -
+              giftMessage.length}{" "}
+            characters left.
+          </p>
+        </div>
 
         <div className="flex flex-col gap-3">
           <Button
@@ -376,6 +423,12 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
               Change your order
             </Link>
           </p>
+        </div>
+
+        <div className="flex flex-col gap-4 border-t border-line pt-6">
+          {chosenPath === "cod" ? null : <PaymentMethodMarks />}
+          <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+          <CheckoutTrustStrip />
         </div>
       </div>
 

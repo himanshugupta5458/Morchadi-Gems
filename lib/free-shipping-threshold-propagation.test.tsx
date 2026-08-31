@@ -108,7 +108,7 @@ describe("changing the threshold in config/site-facts.mjs alone", () => {
     ).toBeNull();
   });
 
-  it("moves the order summary's shipping label and its add-more nudge together", async () => {
+  it("moves the order summary's shipping label", async () => {
     const { OrderTotals } = await import("@/components/OrderTotals");
 
     render(<OrderTotals subtotal={REAL_THRESHOLD} shipping={99} total={REAL_THRESHOLD + 99} />);
@@ -116,12 +116,45 @@ describe("changing the threshold in config/site-facts.mjs alone", () => {
     expect(
       screen.getByText(`Shipping (free over ${CHANGED_THRESHOLD_TEXT})`, { exact: false }),
     ).toBeTruthy();
+  });
+
+  /**
+   * The add-more nudge left `OrderTotals` when it stopped appearing on all four surfaces that
+   * summarise an order (ADR-072). It is `FreeShippingProgress` now, on the cart alone, and the
+   * propagation it has to survive is the same one: the shortfall it names and the bar it draws
+   * both have to move when the threshold does.
+   */
+  it("moves the cart's free-shipping progress, in its words and in its bar", async () => {
+    const { FreeShippingProgress } = await import("@/components/FreeShippingProgress");
+
+    render(<FreeShippingProgress subtotal={REAL_THRESHOLD} />);
+
     expect(
       screen.getByText(
-        `Add ₹${(CHANGED_THRESHOLD - REAL_THRESHOLD).toLocaleString("en-IN")} for free shipping.`,
+        `₹${(CHANGED_THRESHOLD - REAL_THRESHOLD).toLocaleString("en-IN")}`,
         { exact: false },
       ),
     ).toBeTruthy();
+
+    const bar = screen.getByRole("progressbar", {
+      name: "Progress towards free shipping",
+    });
+    expect(bar.getAttribute("aria-valuenow")).toBe(
+      String(Math.round((REAL_THRESHOLD / CHANGED_THRESHOLD) * 100)),
+    );
+  });
+
+  it("fills the bar exactly when the new threshold is reached", async () => {
+    const { FreeShippingProgress } = await import("@/components/FreeShippingProgress");
+
+    render(<FreeShippingProgress subtotal={CHANGED_THRESHOLD} />);
+
+    expect(screen.getByText("Free shipping unlocked.")).toBeTruthy();
+    expect(
+      screen
+        .getByRole("progressbar", { name: "Progress towards free shipping" })
+        .getAttribute("aria-valuenow"),
+    ).toBe("100");
   });
 });
 

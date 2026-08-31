@@ -105,6 +105,7 @@ describe("a product carrying migration provenance", () => {
  */
 describe("the client-facing catalogue entry", () => {
   const CATALOGUE_ENTRY_KEYS = [
+    "category",
     "id",
     "image",
     "inStock",

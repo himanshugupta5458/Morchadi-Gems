@@ -26,6 +26,7 @@ import {
   resolvePaymentPlan,
   summariseCartPrepayment,
 } from "@/lib/cod";
+import { parseGiftMessage } from "@/lib/gift-message";
 import { buildTrackOrderHref } from "@/lib/navigation";
 import { notifyOwnerOfCodOrder } from "@/lib/notify-cod";
 import { sendCodOrderConfirmationEmail } from "@/lib/notify-customer-email";
@@ -239,13 +240,18 @@ function readPaymentSessionId(payload: unknown): string | null {
  * is deliberately not awaited — a placed order must not wait on CallMeBot
  * ([ADR-060](/docs/decisions/ADR-060-cod-order-notification.md)).
  *
- * The client sends product ids, quantities, any recorded option choices, a delivery address,
- * and optionally the campaign it first arrived on. It does not send — and could not usefully
- * send — a price, a line total, or an order total: the amount charged is recomputed here from
- * `data/products.json` on every call, and the request body is not consulted for it. Neither
- * options nor `utm` enter that calculation at any point; both are validated for shape and
- * recorded in the order's metadata, and an order carrying neither sends the request it always
- * sent.
+ * The client sends product ids, quantities, any recorded option choices, a delivery address, an
+ * optional gift note, and optionally the campaign it first arrived on. It does not send — and
+ * could not usefully send — a price, a line total, or an order total: the amount charged is
+ * recomputed here from `data/products.json` on every call, and the request body is not consulted
+ * for it. None of `selectedOptions`, `giftMessage` or `utm` enters that calculation at any
+ * point; all three are validated for shape and recorded on the order, and an order carrying
+ * none of them sends the request it always sent.
+ *
+ * `giftMessage` is the newest of the three and the most obviously free-form, so it is worth
+ * being explicit: it is parsed by `parseGiftMessage` into the capture input beside `utm`, after
+ * `plan` has already been resolved, and no function that decides an amount is passed it. See
+ * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
  *
  * The 200 body names both of the order's identifiers and calls neither of them `orderId`:
  * `cashfreeOrderId` is the gateway's reference that the return URL and `/api/verify-order`
@@ -273,6 +279,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     items: rawItems,
     address: rawAddress,
     paymentPath: rawPaymentPath,
+    giftMessage: rawGiftMessage,
     utm: rawUtm,
   } = body as Record<string, unknown>;
 
@@ -332,6 +339,7 @@ export async function POST(request: Request): Promise<NextResponse> {
   if (plan === null) return pathUnavailable();
 
   const utm = parseUtmParams(rawUtm);
+  const giftMessage = parseGiftMessage(rawGiftMessage);
 
   /**
    * Everything the order write needs except which payment reference it is filed under, built
@@ -348,6 +356,7 @@ export async function POST(request: Request): Promise<NextResponse> {
   const captureBase: Omit<CaptureOrderInput, "cashfreeOrderId" | "cashfreePaymentStatus"> = {
     address,
     utm,
+    giftMessage,
     pricing: {
       subtotal: order.subtotal - plan.onlineDiscount,
       shippingFee: order.shipping,

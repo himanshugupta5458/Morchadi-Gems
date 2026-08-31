@@ -184,7 +184,7 @@ CLI and the app will disagree about which database they are talking to.
 ## Migrations
 
 The schema lives in [`prisma/schema.prisma`](../prisma/schema.prisma). The tables it describes —
-`orders`, `order_status_history`, `order_line_items`, `customers`, `admins`, `admin_sessions` —
+`orders`, `order_status_history`, `order_line_items`, `customers`, `admin_sessions` —
 are created by the migrations in `prisma/migrations/`, which **are committed to git**: they are the ordered history
 of how the database got its shape, and production will replay exactly this list.
 
@@ -193,8 +193,10 @@ of how the database got its shape, and production will replay exactly this list.
 | `20260820062848_init_orders_crm_schema` | The five order and CRM tables and the `order_status` enum ([ADR-040](decisions/ADR-040-postgres-for-orders.md)) |
 | `20260820064646_add_admin_sessions` | `admin_sessions` ([ADR-041](decisions/ADR-041-admin-subdomain-and-auth.md)) |
 | `20260820085000_add_payment_type_and_order_id_uniqueness` | The `payment_type` enum, seven payment and return-receipt columns on `orders`, and `cashfree_order_id` from indexed to **unique** ([ADR-042](decisions/ADR-042-order-capture-in-postgres.md)) |
+| `20260829061318_drop_admin_table_env_credentials` | The `admins` table dropped; credentials moved to environment variables ([ADR-061](decisions/ADR-061-env-var-admin-credentials.md)) |
+| `20260831084331_add_gift_message_to_orders` | `orders.gift_message`, a nullable `VARCHAR(300)` ([ADR-072](decisions/ADR-072-checkout-flow-polish.md)) |
 
-The third one adds `amount_prepaid` as `NOT NULL` with **no default**, which is only safe
+The `payment_type` one adds `amount_prepaid` as `NOT NULL` with **no default**, which is only safe
 against an empty table — `orders` held zero rows when it was written, checked before it ran. A
 database with real orders would need that column back-filled first, and the unique index would
 fail outright on duplicate `cashfree_order_id` values rather than dedupe them.

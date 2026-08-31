@@ -1,8 +1,9 @@
 import Image from "next/image";
-import type { CartItem } from "@/types/cart";
+import type { CartItem, CheckoutData } from "@/types/cart";
 import { formatRupees } from "@/lib/format";
 import { cartItemKey } from "@/lib/cart";
-import { OrderTotals } from "@/components/OrderTotals";
+import { readBundleReceiptTotals } from "@/lib/verify";
+import { OrderTotals, type OrderTotalsDiscount } from "@/components/OrderTotals";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { SelectedOptionsSummary } from "@/components/SelectedOptionsSummary";
 
@@ -10,7 +11,13 @@ export interface OrderReceiptProps {
   items: CartItem[];
   subtotal: number;
   shipping: number;
+  /**
+   * What the order was charged, from `readBundleReceiptTotals` — the sum of the two amounts the
+   * server stamped, not the cart's worth at the address step. See that function for why the two
+   * differ on a discounted order.
+   */
   total: number;
+  discount?: OrderTotalsDiscount;
 }
 
 /**
@@ -28,6 +35,7 @@ export function OrderReceipt({
   subtotal,
   shipping,
   total,
+  discount,
 }: OrderReceiptProps): JSX.Element {
   return (
     <section className="border border-line bg-ivory p-6 text-left">
@@ -66,8 +74,44 @@ export function OrderReceipt({
       </ul>
 
       <div className="mt-6">
-        <OrderTotals subtotal={subtotal} shipping={shipping} total={total} />
+        <OrderTotals
+          subtotal={subtotal}
+          shipping={shipping}
+          total={total}
+          discount={discount}
+        />
       </div>
     </section>
   );
+}
+
+/**
+ * The label a rebate on a completed order carries.
+ *
+ * `resolvePaymentPlan` has exactly one way to charge less than `subtotal + shipping`, and it is
+ * the online-payment discount on a cash-on-delivery-eligible cart paid in full
+ * ([ADR-063](/docs/decisions/ADR-063-online-payment-discount.md)) — so a gap on a completed
+ * order can only be that, and naming it is honest rather than a guess. The percentage is left
+ * off deliberately: the amount is derived from the two figures the server stamped, and printing
+ * a rate beside it would be a second claim that could disagree with the first.
+ */
+const RECEIPT_DISCOUNT_LABEL = "Online payment discount";
+
+/**
+ * The receipt's props for one completed order's bundle, with its total corrected to what was
+ * actually charged. See `readBundleReceiptTotals` for why the bundle's own `total` is not it.
+ */
+export function toReceiptProps(
+  bundle: CheckoutData,
+): Pick<OrderReceiptProps, "subtotal" | "shipping" | "total" | "discount"> {
+  const { subtotal, shipping, total, discount } = readBundleReceiptTotals(bundle);
+
+  return {
+    subtotal,
+    shipping,
+    total,
+    ...(discount === null
+      ? {}
+      : { discount: { label: RECEIPT_DISCOUNT_LABEL, amount: discount } }),
+  };
 }

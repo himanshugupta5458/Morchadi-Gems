@@ -50,6 +50,7 @@ const LONG_GROUP: ProductOption = {
 const BASE: CatalogueEntry = {
   id: "P900",
   name: "Fixture",
+  category: "necklaces",
   price: 200,
   mrp: 300,
   image: "/products/P900.webp",

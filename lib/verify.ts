@@ -328,6 +328,59 @@ function amountChargedOnlineFor(bundle: CheckoutData): number {
   return bundle.amountPrepaid ?? bundle.total;
 }
 
+/**
+ * The receipt's own three figures, taken from the bundle but corrected by the two amounts the
+ * *server* stamped onto it.
+ *
+ * The bundle's `total` is written at `/address`, one step before a payment path has been
+ * chosen, so on an order that earned the online-payment discount it is the amount the cart was
+ * worth and not the amount that was charged. Rendering it produced a receipt whose Total read
+ * ₹549 directly under an "Amount paid" of ₹526 — two true figures on one screen with nothing
+ * saying why they differ, which reads as an overcharge at exactly the moment a shopper is
+ * looking for reassurance.
+ *
+ * `amountPrepaid` and `amountDue` are not the bundle's own arithmetic: they are copied back from
+ * the create-order response and are what `canDisplayBundleForOrder` already reconciles against
+ * Cashfree before any of this is shown. Their sum is therefore what the order is worth, and the
+ * gap to `subtotal + shipping` is the discount that was applied — derived from the server's
+ * figures rather than recomputed from the rate, so this can never disagree with what was
+ * charged. A bundle stamped before those fields existed, or one whose figures leave no gap,
+ * yields no discount row and the total it always showed.
+ *
+ * See [ADR-063](/docs/decisions/ADR-063-online-payment-discount.md) and
+ * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
+ */
+export interface BundleReceiptTotals {
+  subtotal: number;
+  shipping: number;
+  total: number;
+  /** Rupees off, or null when the order was charged what the cart was worth. */
+  discount: number | null;
+}
+
+export function readBundleReceiptTotals(bundle: CheckoutData): BundleReceiptTotals {
+  const cartWorth = bundle.subtotal + bundle.shipping;
+
+  if (bundle.amountPrepaid === undefined || bundle.amountDue === undefined) {
+    return {
+      subtotal: bundle.subtotal,
+      shipping: bundle.shipping,
+      total: bundle.total,
+      discount: null,
+    };
+  }
+
+  const charged = bundle.amountPrepaid + bundle.amountDue;
+  const discount = cartWorth - charged;
+
+  return {
+    subtotal: bundle.subtotal,
+    shipping: bundle.shipping,
+    total: charged,
+    discount: discount > 0 ? discount : null,
+  };
+}
+
 export function canDisplayBundleForOrder(
   bundle: CheckoutData | null,
   verified: CashfreePaymentSummary,

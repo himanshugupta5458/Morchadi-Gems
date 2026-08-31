@@ -38,6 +38,7 @@ const NECKLACE_IMAGES = ["/products/P907.webp", "/products/P907-2.webp"];
 const WATCH_RING: CatalogueEntry = {
   id: "P910",
   name: "Mini Watch Ring",
+  category: "necklaces",
   price: 300,
   mrp: 500,
   image: "/products/P910.webp",
@@ -51,6 +52,7 @@ const WATCH_RING: CatalogueEntry = {
 const NECKLACE: CatalogueEntry = {
   id: "P907",
   name: "Teardrop Glass Locket Necklace",
+  category: "necklaces",
   price: 450,
   mrp: 999,
   image: NECKLACE_IMAGES[0],
@@ -65,6 +67,7 @@ const NECKLACE: CatalogueEntry = {
 const BOTH: CatalogueEntry = {
   id: "P900",
   name: "Fixture With Both",
+  category: "necklaces",
   price: 500,
   mrp: 700,
   image: "/products/P900.webp",
@@ -81,6 +84,7 @@ const BOTH_IMAGES = ["/products/P900.webp", "/products/P900-2.webp"];
 const FULLY_MAPPED: CatalogueEntry = {
   id: "P901",
   name: "Fixture Fully Mapped",
+  category: "necklaces",
   price: 500,
   mrp: 700,
   image: "/products/P901.webp",
@@ -98,6 +102,7 @@ const FULLY_MAPPED: CatalogueEntry = {
 const SELF_MAPPED: CatalogueEntry = {
   id: "P902",
   name: "Fixture Mapped To Its Own Image",
+  category: "necklaces",
   price: 500,
   mrp: 700,
   image: "/products/P902.webp",
@@ -114,6 +119,7 @@ const SELF_MAPPED_IMAGES = ["/products/P902.webp", "/products/P902-2.webp"];
 const MANY: CatalogueEntry = {
   id: "P903",
   name: "Fixture With Many Images",
+  category: "necklaces",
   price: 500,
   mrp: 700,
   image: "/products/P903.webp",
@@ -136,6 +142,7 @@ const MANY_IMAGES = [
 const SINGLE: CatalogueEntry = {
   id: "P904",
   name: "Fixture With One Image",
+  category: "necklaces",
   price: 500,
   mrp: 700,
   image: "/products/P904.webp",
@@ -172,7 +179,7 @@ function Gallery({
           />
           <ProductPurchaseActions item={item} />
         </ProductSelectionProvider>
-        <CartView />
+        <CartView codCatalogue={[]} crossSellShortlists={{}} />
       </ToastProvider>
     </CartProvider>
   );

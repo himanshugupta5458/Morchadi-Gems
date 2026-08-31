@@ -16,12 +16,14 @@ import {
   addProductToCart,
   buildCartLines,
   changeCartItemOptions,
+  calculateCartMrpSubtotal,
   calculateCartTotals,
   countCartItems,
   hasUnavailableLine,
   parsePersistedCart,
   reconcileCartWithCatalogue,
   removeProductFromCart,
+  restoreCartItem,
   setCartItemQuantity,
   type CartLine,
   type CartOptionChange,
@@ -30,8 +32,24 @@ import {
 export interface CartContextValue {
   items: CartItem[];
   lines: CartLine[];
+  /**
+   * The lean catalogue this cart was built against — the same array `CartProvider` was handed.
+   *
+   * Exposed because two surfaces need to ask a question about a product that is *not* in the
+   * cart: which shelf it came from. The cross-sell rails read `category` off it, and the
+   * confirmation screen reads it after the cart has been emptied, when `lines` is gone and the
+   * completed order's items are all that is left. It costs nothing to expose — the array is
+   * already in the browser — and it is read-only: every price the cart charges still comes from
+   * the same entries through `buildCartLines`.
+   */
+  catalogue: CatalogueEntry[];
   itemCount: number;
   subtotal: number;
+  /**
+   * The same payable lines at their compare-at prices, for the savings row. Display only — see
+   * `calculateCartMrpSubtotal`. Equal to `subtotal` on a cart holding nothing discounted.
+   */
+  mrpSubtotal: number;
   shipping: number;
   total: number;
   hasUnavailableItems: boolean;
@@ -52,6 +70,12 @@ export interface CartContextValue {
   ) => void;
   /** Addressed by `CartLine.key`, not by product id — one product can hold several lines. */
   removeItem: (lineKey: string) => void;
+  /**
+   * Puts a removed line back where it was. The caller keeps the item and its position — it has
+   * them, because it had to read them to remove the line — so this context holds no undo
+   * history of its own and nothing has to be cleaned up when the offer expires.
+   */
+  restoreItem: (item: CartItem, index: number) => void;
   setQty: (lineKey: string, quantity: number) => void;
   /**
    * Changes a line's recorded choices, returning the refusal when the catalogue no longer
@@ -134,6 +158,10 @@ export function CartProvider({
     setItems((currentItems) => removeProductFromCart(currentItems, lineKey));
   }, []);
 
+  const restoreItem = useCallback((item: CartItem, index: number) => {
+    setItems((currentItems) => restoreCartItem(currentItems, item, index));
+  }, []);
+
   const setQty = useCallback((lineKey: string, quantity: number) => {
     setItems((currentItems) => setCartItemQuantity(currentItems, lineKey, quantity));
   }, []);
@@ -158,14 +186,17 @@ export function CartProvider({
     return {
       items,
       lines,
+      catalogue,
       itemCount: countCartItems(items),
       subtotal,
+      mrpSubtotal: calculateCartMrpSubtotal(lines),
       shipping,
       total,
       hasUnavailableItems: hasUnavailableLine(lines),
       isHydrated,
       addItem,
       removeItem,
+      restoreItem,
       setQty,
       setLineOptions,
       clearCart,
@@ -176,6 +207,7 @@ export function CartProvider({
     isHydrated,
     addItem,
     removeItem,
+    restoreItem,
     setQty,
     setLineOptions,
     clearCart,

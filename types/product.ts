@@ -435,6 +435,14 @@ export interface ProductFlags {
 export interface CatalogueEntry {
   id: string;
   name: string;
+  /**
+   * Which shelf the piece sits on. Carried so the browser can answer "what else is like what
+   * is already in this basket" without a second catalogue crossing the boundary — the cart and
+   * the confirmation screen both read it through `selectCrossSellCategory` in
+   * [`lib/cross-sell.ts`](/lib/cross-sell.ts). Display and merchandising only: no amount, no
+   * eligibility rule and no total has ever read it.
+   */
+  category: Category;
   /** The amount actually charged. The only field a cart total may read. */
   price: number;
   /** Display-only compare-at price. Never used in any amount calculation. */
@@ -451,6 +459,32 @@ export interface CatalogueEntry {
    * no amount reads it. Absent on products photographed in one configuration.
    */
   variantImages?: VariantImages;
+}
+
+/**
+ * The projection of a product a **card** is allowed to hold — the one shape that may be handed
+ * to a client component and rendered there.
+ *
+ * `Product` is not that shape. It carries `pricing.cost`, which is margin data barred from
+ * every browser-facing catalogue (see `getOrderCaptureCatalogue`), and `migrationProvenance`,
+ * which names another shop's identifiers. Both would be serialised into the page the moment a
+ * whole record crossed a `"use client"` boundary, so the cross-sell rails hand this across
+ * instead and `lib/catalogue-client-boundary.test.ts` keeps it that way.
+ *
+ * A `Product` satisfies it structurally, which is what lets the shop listing, the home page and
+ * the product page go on passing whole records to `ProductCard` unchanged — those render on the
+ * server, where the extra fields never leave.
+ */
+export interface ProductCardView {
+  id: string;
+  name: string;
+  category: Category;
+  pricing: { price: number; mrp: number };
+  media: ProductMedia;
+  seo: { imageAlt: string };
+  stock: ProductStock;
+  flags: ProductFlags;
+  options?: ProductOption[];
 }
 
 /**

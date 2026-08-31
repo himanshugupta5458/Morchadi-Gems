@@ -88,6 +88,14 @@ model Order {
   utmMedium             String?              @map("utm_medium")
   utmCampaign           String?              @map("utm_campaign")
   shippingAddress       Json                 @map("shipping_address")
+  /// A note the shopper typed at the payment step, for whoever packs the parcel. Free text from
+  /// a browser and treated as such: it is sanitised and truncated by `parseGiftMessage` before
+  /// it reaches this column, it is rendered read-only on the admin order detail, and no amount
+  /// on this row has ever been computed from it. The length cap is repeated here as a
+  /// VARCHAR(300) so the database refuses what the application layer is supposed to have
+  /// already trimmed. Null on every order placed without one, and on every order placed before
+  /// the field existed.
+  giftMessage           String?              @map("gift_message") @db.VarChar(300)
   /// A refund is orthogonal to which terminal status was reached — an order can be returned
   /// and refunded, returned and not refunded, or refunded without having been returned at all.
   /// That is why these three survive where the terminal-state booleans did not. See ADR-040.

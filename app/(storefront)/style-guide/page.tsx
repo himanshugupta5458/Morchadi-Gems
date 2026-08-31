@@ -9,6 +9,7 @@ import {
 } from "@/lib/products";
 import { FLAT_SHIPPING_RATE, FREE_SHIPPING_THRESHOLD, SITE_CONFIG } from "@/lib/config";
 import { formatRupees, hasVisibleDiscount } from "@/lib/format";
+import { describeCartCodAvailability } from "@/lib/cod";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { Button } from "@/components/Button";
 import { CartEmptyState } from "@/components/CartEmptyState";
@@ -16,6 +17,7 @@ import { CartSummary } from "@/components/CartSummary";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
 import { FormFieldPreview } from "@/components/FormFieldPreview";
+import { FreeShippingProgress } from "@/components/FreeShippingProgress";
 import { Prose } from "@/components/Prose";
 import { TextAreaFieldPreview } from "@/components/TextAreaFieldPreview";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -549,27 +551,50 @@ export default function StyleGuidePage(): JSX.Element {
 
       <Panel
         title="Cart summary"
-        note="Three states: a subtotal at or over the free-shipping threshold, one below it showing the flat rate and the shortfall hint, and the blocked state an out-of-stock line produces. Both shipping numbers come from lib/config.ts."
+        note="Three states: a subtotal at or over the free-shipping threshold, one below it showing the flat rate, and the blocked state an out-of-stock line produces. Both shipping numbers come from lib/config.ts, and the cash-on-delivery sentence from describeCartCodAvailability. The shortfall hint is no longer here; it is FreeShippingProgress, below."
       >
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <CartSummary
             subtotal={4200}
+            mrpSubtotal={5600}
             shipping={0}
             total={4200}
             isCheckoutBlocked={false}
+            codAvailability={describeCartCodAvailability({
+              isCodEligible: true,
+              minimumPrepayment: 0,
+            })}
           />
           <CartSummary
             subtotal={FREE_SHIPPING_THRESHOLD - 300}
+            mrpSubtotal={FREE_SHIPPING_THRESHOLD - 300}
             shipping={FLAT_SHIPPING_RATE}
             total={FREE_SHIPPING_THRESHOLD - 300 + FLAT_SHIPPING_RATE}
             isCheckoutBlocked={false}
+            codAvailability={describeCartCodAvailability({
+              isCodEligible: false,
+              minimumPrepayment: 500,
+            })}
           />
           <CartSummary
             subtotal={0}
+            mrpSubtotal={0}
             shipping={0}
             total={0}
             isCheckoutBlocked
+            codAvailability={describeCartCodAvailability(null)}
           />
+        </div>
+      </Panel>
+
+      <Panel
+        title="Free-shipping progress"
+        note="The cart's own nudge, and the only surface it appears on. Measured against the payable subtotal, never the MRP subtotal and never the total after the online-payment discount, because neither is what calculateShipping charges from."
+      >
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <FreeShippingProgress subtotal={199} />
+          <FreeShippingProgress subtotal={FREE_SHIPPING_THRESHOLD - 250} />
+          <FreeShippingProgress subtotal={FREE_SHIPPING_THRESHOLD} />
         </div>
       </Panel>
 

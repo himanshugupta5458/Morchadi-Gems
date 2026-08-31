@@ -29,6 +29,7 @@ vi.mock("next/link", () => ({
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -38,6 +39,7 @@ const NECKLACE: CatalogueEntry = {
 const SOLD_OUT_RING: CatalogueEntry = {
   id: "rg-001",
   name: "Temple Gold Ring",
+  category: "necklaces",
   price: 700,
   mrp: 900,
   image: "/products/rg-001.webp",
@@ -61,7 +63,7 @@ function CartPage(): JSX.Element {
   return (
     <CartProvider catalogue={CATALOGUE}>
       <ToastProvider>
-        <CartView />
+        <CartView codCatalogue={[]} crossSellShortlists={{}} />
       </ToastProvider>
     </CartProvider>
   );

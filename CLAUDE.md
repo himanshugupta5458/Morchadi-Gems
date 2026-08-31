@@ -98,6 +98,15 @@ because they agree only until the owner changes one. `lib/site-identity.test.ts`
 source tree and fails on any duplicate; a doc comment that *mentions* a value is fine, a line
 of code that restates it is not.
 
+**The catalogue never reaches the client bundle either.** `data/products.json` is 1.4MB and
+holds `pricing.cost` on every record. It stays out of the browser not by luck but by two rules:
+the only catalogue shapes that may cross a `"use client"` boundary are `CatalogueEntry` and
+`ProductCardView`, and no client-reachable module may import `lib/products.ts`, which loads the
+JSON at module scope. `ProductCard` is a *shared* component now — the cross-sell rails render it
+in the browser — so it imports its projections from `lib/product-view.ts`, which holds no
+catalogue. `lib/catalogue-client-boundary.test.ts` walks the import graph and fails if that ever
+stops being true. See [ADR-072](docs/decisions/ADR-072-checkout-flow-polish.md).
+
 **Secrets never reach the client bundle.** `CASHFREE_APP_ID`, `CASHFREE_SECRET_KEY` and
 `DATABASE_URL` are read only inside route handlers and server-only modules. Only `NEXT_PUBLIC_*` variables may
 appear in client components. Never inline a secret into a `"use client"` file, and never
@@ -145,8 +154,12 @@ that README before adding a file there.
 middleware.ts The one middleware Next 14 permits, and it must live here. It classifies the
               request hostname and rewrites the admin subdomain into app/admin/* (ADR-041)
 app/          Routes, layouts, and API route handlers (App Router)
-              app/(storefront)/ is the shop and app/admin/ is the panel — sibling route
-              groups with sibling layouts, so panel screens carry no shop chrome (ADR-044)
+              app/(storefront)/ is the shop, app/(checkout)/ is /address and /payment, and
+              app/admin/ is the panel — three sibling route groups with sibling layouts, so a
+              panel screen carries no shop chrome and a checkout step carries no shop nav and
+              no floating chat bubble (ADR-044, ADR-072). Route groups add no URL segment, so
+              every page is served exactly where it was. The providers the two shopper shells
+              share live in components/ShopProviders.tsx
 components/   Reusable presentational UI
 lib/          Utilities, cart context, Cashfree client, server-side pricing, the order
               lifecycle, admin auth and sessions. Tests live beside what they test

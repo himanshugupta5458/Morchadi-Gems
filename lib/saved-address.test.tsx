@@ -52,6 +52,7 @@ const IN_PROGRESS_ADDRESS: Address = {
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -74,7 +75,7 @@ function seedCart(): void {
 function renderAddressStep() {
   return render(
     <CartProvider catalogue={CATALOGUE}>
-      <AddressCheckout />
+      <AddressCheckout codCatalogue={[]} />
     </CartProvider>,
   );
 }

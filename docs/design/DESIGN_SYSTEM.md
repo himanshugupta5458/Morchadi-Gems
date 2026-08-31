@@ -715,6 +715,7 @@ options the key *is* the product id and nothing about the line changed. See
 ```tsx
 <OrderTotals subtotal={2000} shipping={0} total={2000} />     free — subtotal ≥ ₹799
 <OrderTotals subtotal={500} shipping={99} total={599} />      charged — subtotal < ₹799
+<OrderTotals subtotal={450} mrpSubtotal={999} shipping={99} total={549} />   with the savings rows
 ```
 
 Subtotal, shipping and total, rendered identically wherever an order is summarised — `/cart`
@@ -731,25 +732,135 @@ takes its value from the caller:
 | nothing payable | `—` |
 
 `FREE` and `—` are deliberately different: an empty cart has not earned free shipping, it
-has nothing to ship, and showing `FREE` there would read as a promise. Below the threshold
-a `gold-deep` hint line reads &ldquo;Add ₹X for free shipping&rdquo;, computed by
-`amountToFreeShipping` — display only, never part of a total. See
+has nothing to ship, and showing `FREE` there would read as a promise. See
 [ADR-015](../decisions/ADR-015-business-config-and-shipping-threshold.md).
+
+**`mrpSubtotal` splits the first row in two.** Supplied and above `subtotal`, it renders
+&ldquo;Subtotal (MRP)&rdquo; and a `gold-deep` &ldquo;You save&rdquo; row; omitted, or at or below
+`subtotal`, it renders the single &ldquo;Subtotal&rdquo; row every other caller shows, so a cart
+of undiscounted pieces never advertises a saving of nothing. It comes from
+`calculateCartMrpSubtotal`, which is deliberately *not* part of `CartTotals`: every field of that
+object is one an amount is computed from, and a compare-at price may not be acquired by
+destructuring one.
+
+**The &ldquo;add ₹X for free shipping&rdquo; hint is no longer here.** It used to render from this
+component, which put it on all four screens that summarise an order — including the payment step,
+where it sat two lines above the online-payment discount, and the confirmation screen, where the
+order was already placed. It is `FreeShippingProgress` now, on `/cart` alone. See
+[ADR-072](../decisions/ADR-072-checkout-flow-polish.md).
+
+#### `FreeShippingProgress`
+
+```tsx
+<FreeShippingProgress subtotal={450} />        56% of the way, &ldquo;Add ₹349 for free shipping.&rdquo;
+<FreeShippingProgress subtotal={799} />        full bar, &ldquo;Free shipping unlocked.&rdquo;
+<FreeShippingProgress subtotal={0} />          renders nothing
+```
+
+A bar and a sentence, rendered by the cart and nothing else, directly above the cross-sell rail
+so the two read as one thought. The bar is a real `role="progressbar"` with
+`aria-valuenow`, because a shopper using a screen reader is owed the same figure as one looking
+at a gold rectangle.
+
+**The subtotal it measures is the payable one, at the prices being charged**, which is exactly
+what `calculateShipping` charges from. Neither the MRP subtotal nor the total after the
+online-payment discount may be substituted: the first would promise free delivery to a discounted
+cart the server charges ₹99 for, and the second would advertise a threshold the server does not
+honour, because the rebate is applied *after* shipping has already been decided. Pinned in both
+directions by `lib/free-shipping-gap.test.ts`.
 
 #### `CartSummary`
 
 ```tsx
-<CartSummary subtotal={4200} shipping={0} total={4200} isCheckoutBlocked={false} />
+<CartSummary
+  subtotal={4200}
+  mrpSubtotal={5600}
+  shipping={0}
+  total={4200}
+  isCheckoutBlocked={false}
+  codAvailability={describeCartCodAvailability(prepayment)}
+/>
 ```
 
-`OrderTotals` plus the two CTAs. When `isCheckoutBlocked`, the primary CTA renders as a
-disabled `Button` rather than a `ButtonLink`, because a link cannot be disabled.
+`OrderTotals`, one primary CTA, and the reassurance a shopper wants before pressing it: the
+delivery estimate, what this basket may be paid by, and `CheckoutTrustStrip`. When
+`isCheckoutBlocked`, the primary CTA renders as a disabled `Button` rather than a `ButtonLink`,
+because a link cannot be disabled.
+
+**One primary action.** &ldquo;Continue shopping&rdquo; was a full-width secondary button directly
+under Proceed to checkout — two equally weighted choices at the one moment the page has a single
+job. It is a text link now: leaving is always available and never needs advertising at the same
+size as staying.
+
+**`lg:self-start` is what makes `lg:sticky` do anything.** A grid item is stretched to its row's
+height by default, so the panel filled its own containing block and had nowhere to travel; the
+class was on the element for several prompts and the summary scrolled away with the page
+regardless. `CheckoutSummary` needed the same one-word fix. Measured in
+[the audit log](../logs/2026-08-31-free-shipping-gap-audit.md).
+
+**Below `lg` the cart pins a bar instead.** `CartView` renders a fixed bottom bar carrying the
+total and a Checkout link, marked `data-control="action"` so the floating WhatsApp button reads it
+as an obstacle and lifts clear ([ADR-069](../decisions/ADR-069-floating-contact-clearance.md)).
+Its label is &ldquo;Checkout&rdquo; rather than &ldquo;Proceed to checkout&rdquo; — two links with
+one accessible name on one page is an ambiguity, not a repetition.
+
+#### `CheckoutTrustStrip` and `PaymentMethodMarks`
+
+```tsx
+<CheckoutTrustStrip />                    three promises and the support address
+<CheckoutTrustStrip showSupportEmail={false} />
+<PaymentMethodMarks />                    UPI · Cards · Net banking · Wallets
+```
+
+Rendered on `/cart`, `/address` and `/payment`. Every value is read from the one place it is
+written: the gateway from `LEGAL_CONFIG.paymentProvider`, the window from `RETURN_WINDOW_DAYS`,
+the coverage from `LEGAL_CONFIG.shippingScope`, the inbox from `CONTACT_CONFIG.supportEmail`.
+
+`TrustStripCompact` is deliberately not reused here — its second badge is the free-shipping
+threshold, which on the cart restates the number the progress bar above it is already counting
+towards, and on the payment step is exactly the nudge ADR-072 removed from that screen.
+
+**There is no &ldquo;insured in transit&rdquo; line**, which the brief suggested. Nothing in this
+shop's arrangements substantiates it: no carrier insurance is bought and no policy page claims it.
+The support address is the honest version of the same reassurance.
+
+**`PaymentMethodMarks` carries no logos.** Cashfree's brand assets are not in this repository and
+neither are the card networks'; drawing something that resembles them would be putting a
+fabricated trademark on a payment screen. The methods are stated in text. If the owner supplies
+the official artwork it belongs in `public/`, and that component is where it goes.
+
+#### `CrossSellRow` — *Client Component*
+
+```tsx
+<CrossSellRow
+  basket={lines.map((line) => ({ productId: line.entry.id, amount: line.lineTotal }))}
+  shortlists={crossSellShortlists}
+  roman="Complete"
+  accent="the Set"
+  subtitle="More from the same collection…"
+/>
+```
+
+A rail of four pieces from the shelf the basket is most about, on `/cart` and
+`/order-confirmation`. It renders `ProductGrid` — the same cards the shop lists — and renders
+**nothing at all**, no heading and no empty state, when there is nothing relevant to suggest.
+
+The category is chosen by **total value per category**, ties broken on the most valuable single
+line and then on the basket's own order. The candidates come from `getCrossSellShortlists`,
+which cuts six in-stock pieces per category on the server as `ProductCardView` — the projection a
+browser may hold, with `pricing.cost` and `migrationProvenance` absent rather than merely unread.
+
+**This is why `ProductCard` is a shared component now**, and why its projections live in
+`lib/product-view.ts` rather than `lib/products.ts`: the latter imports the 1.4MB catalogue at
+module scope, and one import in the wrong place would ship all of it to the browser.
+`lib/catalogue-client-boundary.test.ts` is what stops that happening again.
 
 #### Toasts
 
 ```tsx
 const { showToast } = useToast();
 showToast("Added to cart");
+showToast("Removed from cart", { label: "Undo", onAction: () => restoreItem(item, index) });
 ```
 
 `ToastProvider` is mounted in `app/layout.tsx` and holds **one** toast at a time &mdash; a new
@@ -759,8 +870,23 @@ bottom-left (`bottom-4 left-4`, `sm:bottom-6 sm:left-6`) to stay clear of the Wh
 the right. The live region is always mounted so a screen reader announces the message rather than
 the arrival of the region.
 
+**A toast with an `action` is a different thing from one without.** Without one it reports that
+something happened; with one it offers a way back out of it, and the difference is visible in
+three places: the pill takes `pointer-events-auto` back (the container stays
+`pointer-events-none` so a plain toast never intercepts a click meant for the page), it stays up
+for `TOAST_ACTION_DURATION_MS` rather than `TOAST_DURATION_MS`, and taking the action dismisses
+it. The longer window is the point: a notice is read at a glance, an offer has to be noticed,
+understood and reached for, and an Undo that expires before the hand arrives teaches that the
+offer cannot be relied on.
+
+The cart's × is its one user. The removed item and its position are read *before* the removal and
+handed to the toast, so Undo replays exactly what was there — quantity, recorded choices and
+place in the list — rather than adding the product again. Nothing is kept after the toast fades:
+there is no undo history, and a line that is gone when it expires is genuinely gone. See
+[ADR-072](../decisions/ADR-072-checkout-flow-polish.md).
+
 **Design tokens added:** the `toast-in` keyframe and animation (250ms fade and 0.5rem rise),
-disabled under `prefers-reduced-motion`, and `CheckIcon` in `icons.tsx`.
+disabled under `prefers-reduced-motion`, and `CheckIcon` and `CopyIcon` in `icons.tsx`.
 
 ### Form fields
 
@@ -872,6 +998,7 @@ the others. Taking it off is a decision for whoever commissions the legal review
 
 | Component | Kind | Notes |
 | --- | --- | --- |
+| `CheckoutHeader` | Server | The whole of `/address` and `/payment`'s chrome: logo, `CheckoutSteps`, one link back to the cart |
 | `CheckoutSteps` | Server | Address / Payment / Confirmation. `current: 1 \| 2 \| 3` |
 | `AddressCheckout` | *Client* | `/address` below the heading: waits, guards, then form + summary |
 | `AddressForm` | *Client* | Owns form values and errors; calls back with a validated `Address`. `submitLabel` and `isSubmitting` let the admin panel reuse it to correct an order's address |
@@ -889,7 +1016,21 @@ relocates you unannounced reads as a fault. It offers Back to cart and Continue 
 
 **`CheckoutSummary` is the read-only twin of `CartSummary`.** It lists what is being bought
 with a quantity pip on each thumbnail, but offers no stepper and no remove — quantity edits
-belong on `/cart`, which the Edit cart link goes to.
+belong on `/cart`, which the Edit cart link goes to. It carries no MRP rows: the savings
+breakdown is a reason to check out, and this screen is past that.
+
+**`/address` and `/payment` render no shop chrome at all.** They live in `app/(checkout)`, a
+sibling route group with its own layout — the providers, the page, and four policy links — so
+there is no shop header to decline and no floating WhatsApp button to sit over a form. A route
+group adds no URL segment, so both are served exactly where they always were. `CheckoutHeader`
+takes the step as a prop rather than reading the pathname, because each page already knows which
+step it is. The confirmation screen deliberately keeps the full shop chrome: it is the one
+post-funnel screen, and it ends in Continue shopping and a cross-sell rail. See
+[ADR-072](../decisions/ADR-072-checkout-flow-polish.md).
+
+**The payment step's gift-note field** is a `TextAreaField` with `maxLength`, a live remaining
+count, and no validation of its own — the server sanitises and truncates, and a malformed note
+costs the note rather than the order.
 
 ### Order tracking components
 

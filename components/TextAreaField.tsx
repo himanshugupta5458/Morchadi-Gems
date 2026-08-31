@@ -13,6 +13,8 @@ export interface TextAreaFieldProps {
   value: string;
   rows?: number;
   placeholder?: string;
+  /** Hard stop on what the control will accept. Set where a stored value has a length cap. */
+  maxLength?: number;
   error?: string;
   isOptional?: boolean;
   onChange: (value: string) => void;
@@ -25,6 +27,7 @@ export function TextAreaField({
   value,
   rows = 5,
   placeholder,
+  maxLength,
   error,
   isOptional = false,
   onChange,
@@ -39,6 +42,7 @@ export function TextAreaField({
         value={value}
         rows={rows}
         placeholder={placeholder}
+        maxLength={maxLength}
         aria-invalid={hasError}
         aria-describedby={hasError ? fieldErrorId(id) : undefined}
         onChange={(event) => onChange(event.target.value)}

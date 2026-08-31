@@ -1,11 +1,30 @@
 import catalogue from "@/data/products.json";
 import type { CatalogueEntry, Category, Product } from "@/types/product";
+import { CATEGORY_SLUGS } from "@/types/product";
 import { hasProductOptions } from "@/lib/options";
 import { isStockAvailable } from "@/lib/product-badge";
+import {
+  getPrimaryImage,
+  getSecondaryImage,
+  toCatalogueEntry,
+  toProductCardView,
+} from "@/lib/product-view";
 import type { OrderPricingEntry } from "@/lib/order";
 import type { CodEligibilityEntry } from "@/lib/cod";
+import {
+  CROSS_SELL_SHORTLIST_DEPTH,
+  type CrossSellShortlists,
+} from "@/lib/cross-sell";
 import type { OrderCaptureEntry } from "@/lib/order-capture";
 import type { OrderOptionEntry } from "@/lib/order-options";
+
+/**
+ * The card projections live in `lib/product-view.ts` — a module with no catalogue in it — so
+ * that `ProductCard` can be rendered from a Client Component without `data/products.json`
+ * following it into the browser. They are re-exported here because every server-side caller
+ * already imports them from this module and none of them needed to change.
+ */
+export { getPrimaryImage, getSecondaryImage, toCatalogueEntry };
 
 /**
  * The one place the catalogue JSON becomes typed. TypeScript infers a union of object
@@ -47,24 +66,6 @@ export function getAllProductsIncludingDrafts(): Product[] {
   return products;
 }
 
-/** The photograph every listing shows, or null for a product with no photograph yet. */
-export function getPrimaryImage(product: Product): string | null {
-  return product.media.images.length > 0 ? product.media.images[0] : null;
-}
-
-/**
- * The second photograph a card reveals on hover, or null.
- *
- * Null for all but thirteen of the 449 records, and that is the point of the accessor: a
- * product with one photograph gets **no** hover behaviour at all rather than a fade to a
- * placeholder or a flash of the same picture. A swap the shopper cannot predict is worse than
- * no swap, and a swap to nothing is worse than both. See
- * [ADR-070](/docs/decisions/ADR-070-home-page-composition.md).
- */
-export function getSecondaryImage(product: Product): string | null {
-  return product.media.images.length > 1 ? product.media.images[1] : null;
-}
-
 /**
  * One alt string per entry in `media.images`, in the same order, so a gallery can label each
  * thumbnail with what that photograph actually shows. `seo.imageAlt` covers the first image
@@ -77,31 +78,6 @@ export function getImageAlts(product: Product): string[] {
   return product.media.images.map(
     (_image, index) => (index === 0 ? product.seo.imageAlt : additional[index - 1]) ?? product.seo.imageAlt,
   );
-}
-
-/**
- * Narrows a product to the fields a cart line needs. Server Components call this before
- * handing anything to a client cart component, so a full product record — description,
- * specs, reviews — never crosses the boundary.
- *
- * `options` is part of that minimum: the client cart re-validates a persisted selection and
- * fills in defaults, and it cannot do either without knowing what is currently offered.
- * `variantImages` is the other: a cart line shows the photograph of the variant it records,
- * and that mapping lives nowhere else on the client.
- */
-export function toCatalogueEntry(product: Product): CatalogueEntry {
-  return {
-    id: product.id,
-    name: product.name,
-    price: product.pricing.price,
-    mrp: product.pricing.mrp,
-    image: getPrimaryImage(product),
-    inStock: isStockAvailable(product.stock),
-    ...(hasProductOptions(product.options) ? { options: product.options } : {}),
-    ...(product.media.variantImages === undefined
-      ? {}
-      : { variantImages: product.media.variantImages }),
-  };
 }
 
 /** The whole catalogue as lean entries — what `CartProvider` is given to reconcile against. */
@@ -207,6 +183,39 @@ export function getCodEligibilityCatalogue(): CodEligibilityEntry[] {
     id: product.id,
     minPrepaidAmount: product.pricing.minPrepaidAmount,
   }));
+}
+
+/**
+ * The per-category shortlists the cross-sell rails are drawn from, as the lean card shape a
+ * browser may hold.
+ *
+ * Computed on the server and handed to `CrossSellRow` as a prop, rather than fetched: which
+ * shelf to suggest from is decided in the browser (the cart lives in `localStorage` and a
+ * completed order's items live in `sessionStorage`, so no server render can know either), while
+ * *what is on* each shelf is a property of `data/products.json` that no request changes. Sending
+ * six cards per category costs about 24KB against the 66KB catalogue index every storefront page
+ * already carries, and buys a rail that renders with the page instead of arriving after a round
+ * trip on the two screens where a shopper is least patient.
+ *
+ * Sold-out pieces are cut here as well as in `selectCrossSellProducts`, so a shortlist is never
+ * spent on something nobody can buy. Categories with nothing to suggest are simply absent.
+ */
+export function getCrossSellShortlists(
+  depth: number = CROSS_SELL_SHORTLIST_DEPTH,
+): CrossSellShortlists {
+  const shortlists: CrossSellShortlists = {};
+
+  for (const slug of CATEGORY_SLUGS) {
+    const shortlist = activeProducts
+      .filter((product) => product.category === slug)
+      .filter((product) => isStockAvailable(product.stock))
+      .slice(0, depth)
+      .map(toProductCardView);
+
+    if (shortlist.length > 0) shortlists[slug] = shortlist;
+  }
+
+  return shortlists;
 }
 
 /**

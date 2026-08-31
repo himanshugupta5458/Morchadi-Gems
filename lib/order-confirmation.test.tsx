@@ -45,6 +45,7 @@ const OTHER_TRACKING_ID = "4KQPMR7TDX";
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -141,7 +142,7 @@ async function renderConfirmation(search: string): Promise<void> {
   await act(async () => {
     render(
       <CartProvider catalogue={CATALOGUE}>
-        <OrderConfirmation />
+        <OrderConfirmation crossSellShortlists={{}} />
       </CartProvider>,
     );
   });
@@ -586,7 +587,7 @@ describe("/order-confirmation — PENDING", () => {
     await act(async () => {
       render(
         <CartProvider catalogue={CATALOGUE}>
-          <OrderConfirmation />
+          <OrderConfirmation crossSellShortlists={{}} />
         </CartProvider>,
       );
     });
@@ -612,7 +613,7 @@ describe("/order-confirmation — PENDING", () => {
     await act(async () => {
       render(
         <CartProvider catalogue={CATALOGUE}>
-          <OrderConfirmation />
+          <OrderConfirmation crossSellShortlists={{}} />
         </CartProvider>,
       );
     });
@@ -637,7 +638,7 @@ describe("/order-confirmation — PENDING", () => {
     await act(async () => {
       render(
         <CartProvider catalogue={CATALOGUE}>
-          <OrderConfirmation />
+          <OrderConfirmation crossSellShortlists={{}} />
         </CartProvider>,
       );
     });

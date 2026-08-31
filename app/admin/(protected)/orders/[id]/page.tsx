@@ -135,6 +135,11 @@ function buildReceiptToggles(
  * is no second place for authentication to be established. The *writes* do go through route
  * handlers — a page cannot answer a POST — and each of those re-checks the session itself.
  *
+ * The gift-message panel appears only on an order that carries one, and is read-only. It is a
+ * display field in the strictest sense: no admin write touches `orders.gift_message`, so there
+ * is no rule for a route handler to re-derive and nothing here for an authenticated `curl` to
+ * name. See [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
+ *
  * The `[id]` segment is `orders.id`, the ten-character number ADR-043 made the order's public
  * name and the same value the list's first column links on. The Cashfree id appears far down
  * this page in fine print, because it names the payment and not the order, and the one place a
@@ -223,6 +228,17 @@ export default async function AdminOrderDetailPage({
               lockedNote={addressLockedNote(order.status)}
             />
           </AdminPanelSection>
+
+          {order.giftMessage === null ? null : (
+            <AdminPanelSection
+              title="Gift message"
+              description="The customer's own words, to go in the parcel"
+            >
+              <p className="whitespace-pre-line border border-gold/40 bg-gold/5 px-4 py-3 text-body-sm text-ink">
+                {order.giftMessage}
+              </p>
+            </AdminPanelSection>
+          )}
 
           <AdminPanelSection
             title="History"

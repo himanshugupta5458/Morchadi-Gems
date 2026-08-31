@@ -8,6 +8,8 @@ import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY, parseCheckoutData } from "@/lib/checkout";
 import type { CodEligibilityEntry } from "@/lib/cod";
+import { DELIVERY_ESTIMATE_LINE, LEGAL_CONFIG } from "@/lib/config";
+import { GIFT_MESSAGE_MAX_LENGTH } from "@/lib/gift-message";
 import { PaymentCheckout } from "@/components/PaymentCheckout";
 
 const pushMock = vi.fn();
@@ -38,6 +40,7 @@ vi.mock("next/image", () => ({
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -297,5 +300,139 @@ describe("the payment step when the floor has reached the order total", () => {
     expect(screen.queryByLabelText(/Cash on delivery/)).toBeNull();
     expect(screen.queryByRole("radio")).toBeNull();
     expect(payButton().textContent).toContain("Pay ₹1,000 with Cashfree");
+  });
+});
+
+/**
+ * What the payment step says, as distinct from what it charges.
+ *
+ * Three of these are removals, and removals are what a test suite is worst at noticing: the
+ * second sentence of the security paragraph, the free-shipping nudge, and the full-width
+ * "Continue shopping" twin of the pay button. The fourth is the saving line, which is a second
+ * *rendering* of `onlineDiscount` and must never become a second computation of it — so it is
+ * checked against the same figure the summary's discount row shows. See
+ * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
+ */
+describe("what the payment step tells a shopper", () => {
+  it("keeps the short security sentence and drops the explanation that followed it", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    expect(
+      screen.getByText(
+        "Payment is handled by Cashfree on their secure page. We never see your card or UPI details.",
+      ),
+    ).toBeTruthy();
+    expect(document.body.textContent).not.toContain(
+      "every amount below is confirmed by our server",
+    );
+  });
+
+  it("carries no free-shipping nudge, this late in the funnel", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    expect(document.body.textContent).not.toContain("for free shipping");
+  });
+
+  it("reinforces the online saving with the same figure the discount row shows", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    expect(screen.getByText("Online payment discount (5%)")).toBeTruthy();
+    expect(screen.getByText("−₹50")).toBeTruthy();
+    expect(
+      screen.getByText("You are saving ₹50 on this order by paying online."),
+    ).toBeTruthy();
+  });
+
+  it("withdraws the saving line the moment cash on delivery is chosen", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    fireEvent.click(screen.getByLabelText(/Cash on delivery/));
+
+    expect(document.body.textContent).not.toContain("by paying online");
+  });
+
+  it("says nothing about saving on a cart that earns no discount", async () => {
+    await renderPaymentStep(REQUIRES_PREPAYMENT);
+
+    expect(document.body.textContent).not.toContain("by paying online");
+  });
+
+  it("states the delivery estimate and the trust points, and names no logo it does not have", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    expect(screen.getByText(DELIVERY_ESTIMATE_LINE)).toBeTruthy();
+    expect(screen.getByText("UPI")).toBeTruthy();
+    expect(screen.getByText("Cards")).toBeTruthy();
+    expect(
+      screen.getByText(`Secure checkout via ${LEGAL_CONFIG.paymentProvider}`),
+    ).toBeTruthy();
+  });
+});
+
+describe("the gift note", () => {
+  it("offers a free-text field, capped at the length the column holds", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    const field = screen.getByLabelText(/Gift message or note for us/) as HTMLTextAreaElement;
+
+    expect(field.maxLength).toBe(GIFT_MESSAGE_MAX_LENGTH);
+    expect(document.body.textContent).toContain(
+      `${GIFT_MESSAGE_MAX_LENGTH} characters left`,
+    );
+  });
+
+  it("travels in the create-order request, and changes no amount in it", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(
+      jsonResponse({
+        paymentType: "prepaid",
+        cashfreeOrderId: "MG_1786968394909_v8j3wggq",
+        trackingId: "W2ACEHACUU",
+        paymentSessionId: "session_gift",
+        amountPrepaid: 950,
+        amountDue: 0,
+        mode: "sandbox",
+      }),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    fireEvent.change(screen.getByLabelText(/Gift message or note for us/), {
+      target: { value: "Please gift wrap it." },
+    });
+
+    await act(async () => {
+      fireEvent.click(payButton());
+    });
+
+    const body = readRequestBody();
+    expect(body.giftMessage).toBe("Please gift wrap it.");
+    expect(body).not.toHaveProperty("total");
+    expect(body).not.toHaveProperty("subtotal");
+    expect(body).not.toHaveProperty("amount");
+    expect(body.items).toEqual([{ productId: "nk-001", qty: 1 }]);
+  });
+
+  it("is left out of the request entirely when nothing was typed", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(
+      jsonResponse({
+        paymentType: "prepaid",
+        cashfreeOrderId: "MG_1786968394909_v8j3wggq",
+        trackingId: "W2ACEHACUU",
+        paymentSessionId: "session_no_gift",
+        amountPrepaid: 950,
+        amountDue: 0,
+        mode: "sandbox",
+      }),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    await act(async () => {
+      fireEvent.click(payButton());
+    });
+
+    expect(readRequestBody()).not.toHaveProperty("giftMessage");
   });
 });

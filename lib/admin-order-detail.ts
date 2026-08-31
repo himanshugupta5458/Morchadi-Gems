@@ -56,6 +56,12 @@ export interface AdminOrderDetail {
   customerPhone: string;
   customerEmail: string | null;
   shippingAddress: AddressFormValues;
+  /**
+   * The note the shopper typed at the payment step, for whoever packs the parcel, or null.
+   * Read-only on this page and everywhere else: it is the customer's words, and an operator
+   * editing them would be putting their own into a card the customer thinks they wrote.
+   */
+  giftMessage: string | null;
   lines: AdminOrderDetailLine[];
   history: AdminOrderStatusEvent[];
 }
@@ -158,6 +164,7 @@ export async function findAdminOrderDetail(
       cashfreeOrderId: true,
       cashfreePaymentStatus: true,
       shippingAddress: true,
+      giftMessage: true,
       customer: { select: { name: true, phone: true, email: true } },
       lineItems: {
         orderBy: { id: "asc" },
@@ -204,6 +211,7 @@ export async function findAdminOrderDetail(
     customerPhone: order.customer.phone,
     customerEmail: order.customer.email,
     shippingAddress: readShippingAddress(order.shippingAddress),
+    giftMessage: order.giftMessage,
     lines: order.lineItems.map((line) => ({
       id: line.id,
       productId: line.productId,

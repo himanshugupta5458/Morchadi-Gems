@@ -2,14 +2,10 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SITE_CONFIG } from "@/lib/config";
 import { buildSiteSchemaGraph } from "@/lib/structured-data";
-import { getCatalogueIndex } from "@/lib/products";
-import { CartProvider } from "@/lib/cart-context";
-import { ToastProvider } from "@/lib/toast-context";
 import { Footer } from "@/components/Footer";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
-import { UtmCapture } from "@/components/UtmCapture";
+import { ShopProviders } from "@/components/ShopProviders";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
@@ -48,6 +44,12 @@ export const metadata: Metadata = {
  * The shopper-facing metadata is here for the same reason: an admin page has no Open Graph
  * card and no `%s · Morchadi Gems` title, and inheriting them from the root was how it got
  * both. See [ADR-044](/docs/decisions/ADR-044-admin-order-detail-and-layout-split.md).
+ *
+ * The same argument was made a second time, one level down, for the address and payment steps:
+ * a checkout page has no use for a category menu or a floating chat bubble, and could not
+ * decline either while it was nested here. `app/(checkout)` is now a sibling group with its own
+ * shell, and the providers both shells need live in `ShopProviders` rather than in this file.
+ * See [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
  */
 export default function StorefrontLayout({
   children,
@@ -55,16 +57,12 @@ export default function StorefrontLayout({
   return (
     <>
       <JsonLd id="site-schema" graph={buildSiteSchemaGraph()} />
-      <GoogleAnalytics />
-      <UtmCapture />
-      <CartProvider catalogue={getCatalogueIndex()}>
-        <ToastProvider>
-          <Header />
-          <main className="flex-1 pb-16 sm:pb-0">{children}</main>
-          <Footer />
-          <WhatsAppButton />
-        </ToastProvider>
-      </CartProvider>
+      <ShopProviders>
+        <Header />
+        <main className="flex-1 pb-16 sm:pb-0">{children}</main>
+        <Footer />
+        <WhatsAppButton />
+      </ShopProviders>
     </>
   );
 }

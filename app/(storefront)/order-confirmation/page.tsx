@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SITE_CONFIG } from "@/lib/config";
+import { getCrossSellShortlists } from "@/lib/products";
 import { CheckoutSteps } from "@/components/CheckoutSteps";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { PanelNotice } from "@/components/PanelNotice";
@@ -36,7 +37,7 @@ export default function OrderConfirmationPage(): JSX.Element {
 
       <div className="mt-10 lg:mt-12">
         <Suspense fallback={<PanelNotice>Confirming your payment…</PanelNotice>}>
-          <OrderConfirmation />
+          <OrderConfirmation crossSellShortlists={getCrossSellShortlists()} />
         </Suspense>
       </div>
     </div>

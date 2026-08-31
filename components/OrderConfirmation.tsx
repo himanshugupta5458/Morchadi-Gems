@@ -7,6 +7,7 @@ import type { VerifyOrderResult } from "@/types/order";
 import { useCart } from "@/lib/cart-context";
 import { clearCheckoutData, readCheckoutData } from "@/lib/checkout";
 import { DELIVERY_ESTIMATE_LINE } from "@/lib/config";
+import type { CrossSellShortlists } from "@/lib/cross-sell";
 import { formatRupees } from "@/lib/format";
 import {
   CART_PATH,
@@ -35,8 +36,10 @@ import { Button } from "@/components/Button";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CenteredNotice } from "@/components/CenteredNotice";
 import { CodOrderConfirmation } from "@/components/CodOrderConfirmation";
+import { ConfirmationEmailNote } from "@/components/ConfirmationEmailNote";
+import { CrossSellRow } from "@/components/CrossSellRow";
 import { OrderNumberCallout, SupportLine } from "@/components/OrderNumberCallout";
-import { OrderReceipt } from "@/components/OrderReceipt";
+import { OrderReceipt, toReceiptProps } from "@/components/OrderReceipt";
 import { CheckIcon, GemOutlineIcon } from "@/components/icons";
 
 /**
@@ -116,8 +119,26 @@ function OrderFact({ label, value }: { label: string; value: string }): JSX.Elem
  * consulted about whether the order was paid or about what it cost, and it is only shown when
  * it can be reconciled with the order the server verified. See
  * [the verify-order contract](/docs/api/verify-order.md).
+ *
+ * **The "Payment reference MG_…" fine print stays.** Unlike the `COD_…` reference its sibling
+ * screen used to print, this one names something outside this codebase: it is the id Cashfree's
+ * dashboard is searched by and the reference a bank dispute is raised against, and it is the
+ * only identifier a shopper has if the Postgres capture failed and there is no order number
+ * ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)). See
+ * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
+ *
+ * There is no free-shipping nudge here either, for the reason it left the payment step: the
+ * order is placed, and a nudge is an instruction to do something the shopper can no longer do.
  */
-export function OrderConfirmation(): JSX.Element {
+
+export interface OrderConfirmationProps {
+  /** The per-category cross-sell shortlists, from the Server Component that renders this. */
+  crossSellShortlists: CrossSellShortlists;
+}
+
+export function OrderConfirmation({
+  crossSellShortlists,
+}: OrderConfirmationProps): JSX.Element {
   const searchParams = useSearchParams();
   const requestedOrderId = searchParams.get("order_id")?.trim() ?? "";
   const orderId = isMorchadiOrderId(requestedOrderId) ? requestedOrderId : null;
@@ -241,7 +262,12 @@ export function OrderConfirmation(): JSX.Element {
    * machinery below untouched by a path that has no payment to verify.
    */
   if (codOrderReference !== null) {
-    return <CodOrderConfirmation codOrderReference={codOrderReference} />;
+    return (
+      <CodOrderConfirmation
+        codOrderReference={codOrderReference}
+        crossSellShortlists={crossSellShortlists}
+      />
+    );
   }
 
   if (orderId === null) {
@@ -297,6 +323,8 @@ export function OrderConfirmation(): JSX.Element {
 
   if (result.status === "PAID") {
     const displayableBundle = canDisplayBundleForOrder(bundle, result) ? bundle : null;
+    const receiptTotals =
+      displayableBundle === null ? null : toReceiptProps(displayableBundle);
 
     return (
       <div className="flex flex-col gap-10">
@@ -346,6 +374,10 @@ export function OrderConfirmation(): JSX.Element {
 
           <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
 
+          {displayableBundle === null ? null : (
+            <ConfirmationEmailNote email={displayableBundle.address.email} />
+          )}
+
           {orderReference.trackingId === null ? null : (
             <p className="text-body-sm text-muted">
               Payment reference {result.orderId}
@@ -353,16 +385,24 @@ export function OrderConfirmation(): JSX.Element {
           )}
         </CenteredNotice>
 
-        {displayableBundle === null ? null : (
+        {displayableBundle === null || receiptTotals === null ? null : (
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_22rem] lg:gap-8">
-            <OrderReceipt
-              items={displayableBundle.cart}
-              subtotal={displayableBundle.subtotal}
-              shipping={displayableBundle.shipping}
-              total={displayableBundle.total}
-            />
+            <OrderReceipt items={displayableBundle.cart} {...receiptTotals} />
             <AddressRecap address={displayableBundle.address} />
           </div>
+        )}
+
+        {displayableBundle === null ? null : (
+          <CrossSellRow
+            basket={displayableBundle.cart.map((item) => ({
+              productId: item.productId,
+              amount: item.price * item.qty,
+            }))}
+            shortlists={crossSellShortlists}
+            roman="Complete"
+            accent="the Look"
+            subtitle="More from the same collection, for the next time."
+          />
         )}
       </div>
     );

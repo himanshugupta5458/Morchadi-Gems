@@ -179,6 +179,15 @@ export function LinkIcon({ className }: IconProps): JSX.Element {
   );
 }
 
+export function CopyIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <rect x="9" y="9" width="11" height="11" rx="1.5" />
+      <path d="M15 5.5V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h.5" />
+    </svg>
+  );
+}
+
 export function WhatsAppIcon({ className }: IconProps): JSX.Element {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden fill="currentColor">

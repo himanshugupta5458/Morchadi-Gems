@@ -39,6 +39,7 @@ const SIZE: ProductOption = {
 const BANGLE: CatalogueEntry = {
   id: "P901",
   name: "Kada",
+  category: "necklaces",
   price: 200,
   mrp: 300,
   image: "/products/P901.webp",
@@ -49,6 +50,7 @@ const BANGLE: CatalogueEntry = {
 const PLAIN: CatalogueEntry = {
   id: "P900",
   name: "Plain Pendant",
+  category: "necklaces",
   price: 150,
   mrp: 200,
   image: "/products/P900.webp",
@@ -165,7 +167,7 @@ function CartPage(): JSX.Element {
   return (
     <CartProvider catalogue={CATALOGUE}>
       <ToastProvider>
-        <CartView />
+        <CartView codCatalogue={[]} crossSellShortlists={{}} />
       </ToastProvider>
     </CartProvider>
   );

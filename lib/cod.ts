@@ -123,6 +123,30 @@ export function summariseCartPrepayment(
 }
 
 /**
+ * What a basket may be told about paying at the door, before any choice has been made.
+ *
+ * The sibling of `describeProductCodAvailability`, and here for the same reason: the sentence
+ * is built beside the rule that decides it, so no page can promise cash on delivery on a cart
+ * the checkout will refuse it on. The cart and the address step both render it, and both get
+ * their answer from `summariseCartPrepayment` over the same `minPrepaidAmount` accessor
+ * `/api/create-order` re-reads before it charges anything.
+ *
+ * A `null` summary — a cart naming a product this catalogue does not hold — is described the
+ * way `resolvePaymentPlan` prices it: as a cart that must be paid online. Saying nothing at all
+ * would be the other option, and it is the worse one, because a shopper who was told nothing
+ * assumes the option they saw on the product page still stands.
+ */
+export function describeCartCodAvailability(
+  summary: CartPrepaymentSummary | null,
+): string {
+  if (summary === null || summary.minimumPrepayment > 0) {
+    return "This order is paid online. One or more pieces in it are not sold cash on delivery.";
+  }
+
+  return "Cash on delivery available on this order, or pay online and save.";
+}
+
+/**
  * The one incentive this checkout offers: 5% off the product subtotal — never shipping — for
  * paying online in full on a cart every line of which is cash-on-delivery-eligible. Fixed
  * rather than configurable, on the explicit brief that a per-owner setting was out of scope.

@@ -68,6 +68,13 @@ export interface CaptureOrderInput {
   cashfreePaymentStatus: string;
   address: Address;
   utm: UtmParams | null;
+  /**
+   * The shopper's note for whoever packs the parcel, already sanitised and truncated by
+   * `parseGiftMessage`, or null. It is carried on this input rather than derived from anything,
+   * and it is written to the row and read nowhere else — no amount on the order is computed
+   * from it and the balance guard below never sees it.
+   */
+  giftMessage?: string | null;
   /** The server's computed amounts. Never anything the client sent. */
   pricing: OrderCapturePricing;
   payment: OrderCapturePayment;
@@ -404,6 +411,7 @@ export async function captureOrder(
         utmMedium: input.utm?.medium ?? null,
         utmCampaign: input.utm?.campaign ?? null,
         shippingAddress: input.address as unknown as Prisma.InputJsonValue,
+        giftMessage: input.giftMessage ?? null,
         lineItems: {
           create: input.lines.map((line) => ({
             productId: line.productId,

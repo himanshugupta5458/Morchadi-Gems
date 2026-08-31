@@ -209,6 +209,42 @@ export function removeProductFromCart(
   return items.filter((item) => cartItemKey(item) !== key);
 }
 
+/**
+ * Puts a removed line back exactly where it was, with the quantity and the recorded choices it
+ * had. The other half of `removeProductFromCart`, and what the cart's Undo is built on.
+ *
+ * The item is replayed rather than re-derived: `addProductToCart` would clamp the quantity to
+ * one line's maximum and re-resolve the options against the catalogue, which is right for a
+ * shopper adding something and wrong for one taking back a removal they did not mean. What was
+ * in the cart a second ago was already valid, and Undo owes them that and not an approximation
+ * of it.
+ *
+ * A cart that has moved on since the removal is respected rather than overwritten. An index
+ * past the end appends, and a line the shopper re-added by hand in the meantime absorbs the
+ * restored quantity instead of becoming a duplicate — the same merge adding the identical
+ * choice twice already performs.
+ */
+export function restoreCartItem(
+  items: CartItem[],
+  restoredItem: CartItem,
+  index: number,
+): CartItem[] {
+  const restoredKey = cartItemKey(restoredItem);
+  const existingIndex = items.findIndex((item) => cartItemKey(item) === restoredKey);
+
+  if (existingIndex !== -1) {
+    return items.map((item, position) =>
+      position === existingIndex
+        ? { ...item, qty: clampQuantity(item.qty + restoredItem.qty) }
+        : item,
+    );
+  }
+
+  const restored = [...items];
+  restored.splice(Math.max(0, Math.min(index, items.length)), 0, restoredItem);
+  return restored;
+}
+
 export function setCartItemQuantity(
   items: CartItem[],
   key: string,
@@ -357,4 +393,24 @@ export function calculateCartTotals(lines: CartLine[]): CartTotals {
   const shipping = calculateShipping(subtotal);
 
   return { subtotal, shipping, total: subtotal + shipping };
+}
+
+/**
+ * What the payable lines would come to at their compare-at prices — the figure the cart's
+ * "Subtotal (MRP)" row states and the one its "You save" row is the difference from.
+ *
+ * **Display only, and deliberately not a field of `CartTotals`.** Every number in that object
+ * is one an amount is computed from, and `mrp` is barred from all of them (see the note on
+ * `calculateCartTotals`). Keeping this a separate call means no total can acquire a compare-at
+ * price by destructuring, and the savings row stays what it is: an account of a discount the
+ * catalogue already applied, not a second price.
+ *
+ * A record whose `mrp` is not above its `price` shows no saving of its own, and contributes its
+ * `price` here, so the row can never claim a discount the product page does not show.
+ */
+export function calculateCartMrpSubtotal(lines: CartLine[]): number {
+  return selectPayableLines(lines).reduce(
+    (sum, line) => sum + Math.max(line.entry.mrp, line.unitPrice) * line.quantity,
+    0,
+  );
 }

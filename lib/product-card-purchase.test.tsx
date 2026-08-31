@@ -53,6 +53,7 @@ const DESIGN: ProductOption = {
 const PLAIN: CatalogueEntry = {
   id: "P900",
   name: "Plain Pendant",
+  category: "necklaces",
   price: 200,
   mrp: 300,
   image: "/products/P900.webp",

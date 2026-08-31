@@ -14,6 +14,7 @@ import {
   parsePersistedCart,
   reconcileCartWithCatalogue,
   removeProductFromCart,
+  restoreCartItem,
   selectPayableLines,
   setCartItemQuantity,
 } from "@/lib/cart";
@@ -22,6 +23,7 @@ function makeEntry(overrides: Partial<CatalogueEntry> = {}): CatalogueEntry {
   return {
     id: "nk-001",
     name: "Kundan Rani Haar",
+    category: "necklaces",
     price: 1000,
     mrp: 1500,
     image: "/products/nk-001.webp",
@@ -34,6 +36,7 @@ const NECKLACE = makeEntry();
 const EARRING = makeEntry({
   id: "er-001",
   name: "Polki Jhumkas",
+  category: "necklaces",
   price: 250,
   mrp: 400,
   image: "/products/er-001.webp",
@@ -41,6 +44,7 @@ const EARRING = makeEntry({
 const SOLD_OUT_RING = makeEntry({
   id: "rg-001",
   name: "Temple Gold Ring",
+  category: "necklaces",
   price: 700,
   mrp: 900,
   image: "/products/rg-001.webp",
@@ -50,6 +54,7 @@ const SOLD_OUT_RING = makeEntry({
 const BANGLE = makeEntry({
   id: "bg-001",
   name: "Oxidised Silver Bangle",
+  category: "necklaces",
   price: 1,
   mrp: 2,
   image: "/products/bg-001.webp",
@@ -187,6 +192,61 @@ describe("removeProductFromCart", () => {
 
   it("empties a single-line cart", () => {
     expect(removeProductFromCart([makeItem(NECKLACE, 2)], "nk-001")).toEqual([]);
+  });
+});
+
+/**
+ * The other half of `removeProductFromCart`, and what the cart's Undo toast is built on. Its job
+ * is to replay a line rather than to add a product again: the quantity and the recorded choices
+ * come back as they were, and so does the position, because a line that reappeared at the bottom
+ * of the list would read as a different removal.
+ */
+describe("restoreCartItem", () => {
+  it("puts the line back where it was", () => {
+    const removed = makeItem(NECKLACE, 2);
+    const remaining = [makeItem(EARRING, 1), makeItem(BANGLE, 1)];
+
+    const restored = restoreCartItem(remaining, removed, 0);
+
+    expect(restored.map((item) => item.productId)).toEqual([
+      "nk-001",
+      "er-001",
+      "bg-001",
+    ]);
+  });
+
+  it("brings the quantity and the recorded choices back untouched", () => {
+    const removed = { ...makeItem(NECKLACE, 5), selectedOptions: { Letter: "B" } };
+
+    const [restored] = restoreCartItem([], removed, 0);
+
+    expect(restored.qty).toBe(5);
+    expect(restored.selectedOptions).toEqual({ Letter: "B" });
+  });
+
+  it("appends when the cart has shrunk past the position it held", () => {
+    const removed = makeItem(NECKLACE, 1);
+
+    const restored = restoreCartItem([makeItem(EARRING, 1)], removed, 7);
+
+    expect(restored.map((item) => item.productId)).toEqual(["er-001", "nk-001"]);
+  });
+
+  it("merges into a line the shopper re-added by hand rather than duplicating it", () => {
+    const removed = makeItem(NECKLACE, 2);
+
+    const restored = restoreCartItem([makeItem(NECKLACE, 1)], removed, 0);
+
+    expect(restored).toHaveLength(1);
+    expect(restored[0].qty).toBe(3);
+  });
+
+  it("still clamps a merge that would exceed the per-line maximum", () => {
+    const removed = makeItem(NECKLACE, MAX_QUANTITY);
+
+    const restored = restoreCartItem([makeItem(NECKLACE, MAX_QUANTITY)], removed, 0);
+
+    expect(restored[0].qty).toBe(MAX_QUANTITY);
   });
 });
 
@@ -509,6 +569,7 @@ describe("shipping rule", () => {
 const INITIAL_RING = makeEntry({
   id: "P001",
   name: "Wave Band Initial Ring",
+  category: "necklaces",
   price: 400,
   mrp: 600,
   image: "/products/P001.webp",
@@ -520,6 +581,7 @@ const INITIAL_RING = makeEntry({
 const WATCH_RING = makeEntry({
   id: "P010",
   name: "Mini Watch Ring",
+  category: "necklaces",
   price: 300,
   mrp: 500,
   image: "/products/P010.webp",

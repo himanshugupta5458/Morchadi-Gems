@@ -35,6 +35,7 @@ const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const INITIAL_RING: CatalogueEntry = {
   id: "P001",
   name: "Wave Band Initial Ring",
+  category: "necklaces",
   price: 400,
   mrp: 600,
   image: "/products/P001.webp",
@@ -45,6 +46,7 @@ const INITIAL_RING: CatalogueEntry = {
 const WATCH_RING: CatalogueEntry = {
   id: "P010",
   name: "Mini Watch Ring",
+  category: "necklaces",
   price: 300,
   mrp: 500,
   image: "/products/P010.webp",
@@ -57,6 +59,7 @@ const WATCH_RING: CatalogueEntry = {
 const NECKLACE: CatalogueEntry = {
   id: "nk-001",
   name: "Kundan Rani Haar",
+  category: "necklaces",
   price: 1000,
   mrp: 1500,
   image: "/products/nk-001.webp",
@@ -72,7 +75,7 @@ function ProductAndCart({ item }: { item: CatalogueEntry }): JSX.Element {
         <ProductSelectionProvider options={item.options}>
           <ProductPurchaseActions item={item} />
         </ProductSelectionProvider>
-        <CartView />
+        <CartView codCatalogue={[]} crossSellShortlists={{}} />
       </ToastProvider>
     </CartProvider>
   );
@@ -88,8 +91,14 @@ function addToCart(): void {
   fireEvent.click(screen.getByRole("button", { name: "Add to cart" }));
 }
 
+/**
+ * The cart's own list, by its accessible name. Scoped rather than `getAllByRole("listitem")`
+ * across the document, because the cart summary now carries a trust strip that is also a list.
+ */
 function cartLines(): HTMLElement[] {
-  return screen.getAllByRole("listitem");
+  return within(
+    screen.getByRole("list", { name: "Pieces in your cart" }),
+  ).getAllByRole("listitem");
 }
 
 beforeEach(() => {

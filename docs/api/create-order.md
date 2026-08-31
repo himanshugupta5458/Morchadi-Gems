@@ -39,6 +39,7 @@ interface CreateOrderRequest {
     selectedOptions?: Record<string, string>;   // { "Letter": "A" } — recorded, never priced
   }[];
   paymentPath?: "cod" | "partial" | "full";   // absent means "full" — see below
+  giftMessage?: string; // optional, ≤300 chars after sanitising — recorded, never priced
   address: {
     name: string;
     phone: string;      // 10 digits, no country code — the server prefixes +91
@@ -98,6 +99,27 @@ of the money up front, and it is what every pre-existing client body means.
 A path the cart does not permit is **refused** with `400 PAYMENT_PATH_UNAVAILABLE`, never
 downgraded — see check 11 below. Eligibility is a property of which pieces are in the basket and
 never of what it is worth ([ADR-058](../decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md)).
+
+### `giftMessage` — optional, and never a pricing input
+
+A note the shopper types at `/payment` for whoever packs the parcel. It is free text and is
+treated as such: `parseGiftMessage` in `lib/gift-message.ts` drops C0 and C1 control characters
+(newlines survive — a note is written in lines), trims, and truncates to
+`GIFT_MESSAGE_MAX_LENGTH` (300). Anything that is not a string — a number, an object, an array,
+`null` — becomes `null`.
+
+**Every malformed value is `null` rather than a 400**, and an over-long note is truncated rather
+than refused, for the reason a failed WhatsApp message is not an error: a gift note is a courtesy
+layered on a working checkout and must never become a new way for a paid order to fail.
+
+It is parsed **after** `resolvePaymentPlan` has already decided every amount, and is handed to
+`captureOrder` beside `utm`. No function that decides an amount is passed it. The 300-character
+cap is enforced three times — the textarea's `maxLength`, this parser, and
+`orders.gift_message`'s own `VARCHAR(300)` — so a request that bypassed the first two would fail
+the insert rather than write the longest column in the table.
+
+It is written to `orders.gift_message` and read on exactly one screen: the admin order detail,
+read-only. See [ADR-072](../decisions/ADR-072-checkout-flow-polish.md).
 
 ### `utm` — optional, and never a pricing input
 
@@ -202,6 +224,7 @@ was valid" is not a fact the server has.
 | Any `amountPrepaid`, `amountDue`, `minPrepaidAmount`, `discount` or `onlineDiscount` in the body | Discarded; no field of the body is read as one, and the plan — including the online-payment discount — is built from the server's own figures |
 | Any claim that the cart is COD-eligible, or eligible for the online-payment discount | Never read. Both are recomputed here from the catalogue on every call, from the same `isCartCodEligible` check |
 | `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
+| `giftMessage` | Sanitised, truncated to 300 characters, and written to `orders.gift_message`. Parsed after the payment plan is resolved, so no amount can have been computed from it; `lib/gift-message.test.ts` and `lib/checkout-gift-message.test.ts` pin that a 10,000-character note, a note full of digits and a note that is an object all leave the charged total exactly where it was |
 | `utm` | Validated for shape, bounded, and written to `order_tags` alongside the options. Not an input to any amount; `buildOrderTags` has no access to one |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
 
@@ -575,6 +598,7 @@ and the first `OrderStatusHistory` row.
 | `orders.cashfree_payment_status` | Cashfree's `order_status` through `normaliseCashfreeOrderStatus` — `PENDING` for a newly-minted session — or `NOT_APPLICABLE` on `cod`, a value that normalisation cannot produce |
 | `orders.utm_*` | The same validated `utm` written to `order_tags` |
 | `orders.shipping_address` | The validated address, as JSON |
+| `orders.gift_message` | The sanitised, truncated note, or `NULL` on an order placed without one |
 | `order_line_items.product_name` / `product_image` | **Snapshotted from the catalogue at this moment**, not referenced |
 | `order_status_history` | One row: `placed`, `changed_by = "system"`, `reason = null` |
 

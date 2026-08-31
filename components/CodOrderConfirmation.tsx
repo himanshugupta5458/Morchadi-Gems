@@ -6,6 +6,8 @@ import type { CodOrderResult } from "@/types/order";
 import { useCart } from "@/lib/cart-context";
 import { clearCheckoutData, readCheckoutData } from "@/lib/checkout";
 import { DELIVERY_ESTIMATE_LINE } from "@/lib/config";
+import type { CrossSellShortlists } from "@/lib/cross-sell";
+import { formatRupees } from "@/lib/format";
 import { buildCodOrderPath } from "@/lib/navigation";
 import { saveAddressForNextTime } from "@/lib/saved-address";
 import { SHOP_PATH } from "@/lib/shop-query";
@@ -15,8 +17,10 @@ import { AmountDueNotice } from "@/components/AmountDueNotice";
 import { Button } from "@/components/Button";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CenteredNotice } from "@/components/CenteredNotice";
+import { ConfirmationEmailNote } from "@/components/ConfirmationEmailNote";
+import { CrossSellRow } from "@/components/CrossSellRow";
 import { OrderNumberCallout, SupportLine } from "@/components/OrderNumberCallout";
-import { OrderReceipt } from "@/components/OrderReceipt";
+import { OrderReceipt, toReceiptProps } from "@/components/OrderReceipt";
 import { CheckIcon, GemOutlineIcon } from "@/components/icons";
 
 /**
@@ -63,15 +67,29 @@ function readRetryable(payload: unknown): boolean {
  *
  * There is no payment to celebrate and the copy says so plainly. The success here is that the
  * order is *placed*; the money is a future event at the door, which is why the balance is given
- * the same prominence as the order number rather than being a line of small print.
+ * the same prominence as the order number rather than being a line of small print, and why the
+ * screen now also says what happens at that door — the courier calls first, and exact change
+ * helps.
+ *
+ * **The `COD_…` reference is no longer printed on this screen.** It was fine print under the
+ * order-number callout and it was the wrong fine print: a `COD_…` reference names a payment that
+ * does not exist. No gateway minted it, no bank statement carries it, and nothing outside this
+ * codebase can be looked up by it — it is our own join key, and the shopper's only use for it
+ * was to confuse it with the order number set in heading type above it. It survives on the
+ * *unresolved* states, where it is the only identifier this page has to quote. Its sibling on
+ * the prepaid screen, "Payment reference MG_…", is a different thing entirely and stays exactly
+ * where it is: that one is what a bank dispute and a Cashfree dashboard lookup are keyed on.
+ * See [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
  *
  * See [ADR-059](/docs/decisions/ADR-059-checkout-payment-paths.md) and
  * [the cod-order contract](/docs/api/cod-order.md).
  */
 export function CodOrderConfirmation({
   codOrderReference,
+  crossSellShortlists,
 }: {
   codOrderReference: string;
+  crossSellShortlists: CrossSellShortlists;
 }): JSX.Element {
   const { clearCart } = useCart();
 
@@ -205,21 +223,41 @@ export function CodOrderConfirmation({
           <AmountDueNotice amountDue={result.amountDue} amountPrepaid={0} />
         ) : null}
 
+        {result.amountDue > 0 ? (
+          <p className="max-w-prose text-body-sm text-muted">
+            Our courier will call before delivery. Please keep{" "}
+            {formatRupees(result.amountDue)} in cash ready, and exact change helps.
+          </p>
+        ) : null}
+
         <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
 
-        <p className="text-body-sm text-muted">Order reference {result.codOrderReference}</p>
+        {displayableBundle === null ? null : (
+          <ConfirmationEmailNote email={displayableBundle.address.email} />
+        )}
       </CenteredNotice>
 
       {displayableBundle === null ? null : (
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_22rem] lg:gap-8">
           <OrderReceipt
             items={displayableBundle.cart}
-            subtotal={displayableBundle.subtotal}
-            shipping={displayableBundle.shipping}
-            total={displayableBundle.total}
+            {...toReceiptProps(displayableBundle)}
           />
           <AddressRecap address={displayableBundle.address} />
         </div>
+      )}
+
+      {displayableBundle === null ? null : (
+        <CrossSellRow
+          basket={displayableBundle.cart.map((item) => ({
+            productId: item.productId,
+            amount: item.price * item.qty,
+          }))}
+          shortlists={crossSellShortlists}
+          roman="Complete"
+          accent="the Look"
+          subtitle="More from the same collection, for the next time."
+        />
       )}
     </div>
   );
