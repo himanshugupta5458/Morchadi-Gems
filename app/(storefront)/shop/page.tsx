@@ -11,6 +11,7 @@ import {
   buildCanonicalShopHref,
   buildShopHref,
   getShopResults,
+  hasSearchTerm,
   withPage,
   type ShopQuery,
   type ShopResults,
@@ -36,6 +37,12 @@ interface ShopPageProps {
  * listing, so no combination of filters can mint a title that misdescribes the results.
  */
 function singleFacetLabelOf(query: ShopQuery): string | null {
+  /**
+   * A searched listing is never a named page, whatever else is ticked. "Rings" as a title over
+   * the four rings that matched the word "star" describes a page that does not exist.
+   */
+  if (hasSearchTerm(query)) return null;
+
   const isSingleCategory =
     query.categories.length === 1 && query.collections.length === 0;
   if (isSingleCategory) return getCategoryLabel(query.categories[0]);
@@ -48,6 +55,7 @@ function singleFacetLabelOf(query: ShopQuery): string | null {
 }
 
 function listingTitleOf(query: ShopQuery): string {
+  if (hasSearchTerm(query)) return `Search: ${query.search}`;
   const facetLabel = singleFacetLabelOf(query);
   return facetLabel === null ? "Shop All Jewellery" : facetLabel;
 }
@@ -78,7 +86,14 @@ export function generateMetadata({ searchParams }: ShopPageProps): Metadata {
     title,
     description,
     alternates: { canonical },
-    ...(total === 0 ? { robots: { index: false, follow: true } } : {}),
+    /**
+     * A searched listing is `noindex` however many products it found. `?q=` accepts arbitrary
+     * text, so leaving it indexable would mint an unbounded set of near-duplicate pages for a
+     * crawler to spend its budget on — the classic internal-search trap — and the useful page
+     * for any of those terms is the category or collection listing that already exists.
+     * `follow` stays on, as it does for an empty facet, so the products found are still crawled.
+     */
+    ...(total === 0 || hasSearchTerm(query) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       type: "website",
       siteName: SITE_CONFIG.brandName,
@@ -143,23 +158,38 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
   const results = getShopResults(searchParams);
   const { query } = results;
   const facetLabel = singleFacetLabelOf(query);
+  const isSearched = hasSearchTerm(query);
 
   return (
     <div className="container py-8 sm:py-12 lg:py-16">
       <ListingSchema results={results} />
 
       <header className="flex flex-col gap-4">
-        <SectionHeading
-          as="h1"
-          align="left"
-          roman={facetLabel === null ? "The" : "Shop"}
-          accent={facetLabel === null ? "Collection" : facetLabel}
-          subtitle={
-            facetLabel === null
-              ? `Every piece we make, anti-tarnish and hand-finished, across ${SURFACED_CATEGORIES.length} categories.`
-              : `Every ${facetLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
-          }
-        />
+        {isSearched ? (
+          <SectionHeading
+            as="h1"
+            align="left"
+            roman="Search"
+            accent={`“${query.search}”`}
+            subtitle={
+              results.total === 0
+                ? "Nothing in the collection matches those words."
+                : `${results.total} ${results.total === 1 ? "piece matches" : "pieces match"} those words. Narrow them further with the filters.`
+            }
+          />
+        ) : (
+          <SectionHeading
+            as="h1"
+            align="left"
+            roman={facetLabel === null ? "The" : "Shop"}
+            accent={facetLabel === null ? "Collection" : facetLabel}
+            subtitle={
+              facetLabel === null
+                ? `Every piece we make, anti-tarnish and hand-finished, across ${SURFACED_CATEGORIES.length} categories.`
+                : `Every ${facetLabel.toLowerCase()} piece in the collection, anti-tarnish and hand-finished.`
+            }
+          />
+        )}
       </header>
 
       <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-10 lg:mt-14 lg:grid-cols-[15rem_1fr] lg:gap-14">

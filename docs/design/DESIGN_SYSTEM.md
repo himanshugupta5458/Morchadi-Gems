@@ -29,13 +29,23 @@ literal.** Available as `bg-*`, `text-*`, `border-*`, `fill-*`, `ring-*`.
 `whatsapp` is a vendor colour, not a brand colour. It exists so `WhatsAppButton` does not
 write a hex literal; it is off-palette by design and must not spread.
 
-### `status-*` — operational colour, admin only
+### `status-*` — operational colour, shared by the panel and the tracking timeline
 
 Seven hues, one per `OrderStatus`, added in prompt 49 for the admin order list
-([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)). **No storefront surface
-uses them and none may start.** They are deliberately outside the palette above: a status badge
-has to be scannable down a column of fifty rows, which is a different job from anything the shop
-front asks of colour.
+([ADR-043](../decisions/ADR-043-order-id-as-primary-identifier.md)). They are deliberately
+outside the palette above: a status badge has to be scannable down a column of fifty rows, which
+is a different job from anything the shop front asks of colour.
+
+**They were admin-only until prompt 115.** `/track`'s timeline now reads the same seven through
+the same `orderStatusBadgeClasses`, so a state cannot look one way to the operator and another
+to the customer ([ADR-071](../decisions/ADR-071-order-tracking-detail-and-timestamps.md)). What
+the two surfaces do *not* share is the wording: `getOrderStatusLabel` says "RTO" and
+`getCustomerOrderStatusLabel` says "Came back to us". Colour is the part worth sharing, because
+it is the part that says these seven outcomes differ from one another.
+
+`orderStatusMarkerClasses` is the same seven at full strength, for the timeline's filled dot.
+It is the one place colour carries information with no label inside it, which is why the label
+is always written directly underneath.
 
 | Token | Hex | Status |
 | --- | --- | --- |
@@ -172,8 +182,16 @@ it on any new one.
 
 **The bottom 64px of a phone viewport belongs to the WhatsApp button.** It is `fixed
 bottom-4 right-4` and 48px tall, so `main` carries `pb-16 sm:pb-0` and the footer carries
-`pb-24`. Anything else that can end a scroll needs the same clearance, or the button will
-come to rest on top of it.
+`pb-24`. Anything else that can end a scroll needs the same clearance.
+
+That reservation covers the *end* of a scroll and nothing else — a `fixed` element covers
+whatever the page has scrolled under it at every offset in between, which is what let the button
+come to rest on 29% of a product card's call to action. Since prompt 115 the button also gets out
+of the way by itself; see `WhatsAppButton` below and
+[ADR-069](../decisions/ADR-069-floating-contact-clearance.md). **A new control does not need to
+do anything to be avoided** — `<button>`, `<select>` and `<input>` inside `main` are avoided by
+tag name. An anchor styled as a button needs `data-control="action"`, which `ButtonLink` already
+supplies.
 
 ## Components
 
@@ -461,16 +479,20 @@ Labels and slugs come from `CATEGORIES`, and the image path from
 <CollectionStrip />
 ```
 
-The second tier under the tiles on home: a wrapped row of pill links, one per `COLLECTIONS`
-entry, each to `/shop?collection={slug}`. Links rather than tiles on purpose — a collection
-cuts across categories, so no single photograph could honestly stand for one
-([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)).
+The second tier, in its own band under the category grid: one photographed tile per
+`COLLECTIONS` entry, each linking to `/shop?collection={slug}`. A 4:3 landscape frame on mobile
+and 3:2 from `sm`, with the same bottom scrim and hover zoom `CategoryTile` uses, `shadow-card`
+at rest lifting to `shadow-card-hover`, wrapped in `RevealOnScroll`.
 
-The pills are **filled, not outlined**: `border-gold/45 bg-gold/10 px-6 py-3 shadow-card`,
-hovering to the charcoal fill. The original `border-line` outline on white was about 1.2:1
-and made the second tier of the IA effectively invisible. A solid `bg-gold` resting state
-was rejected — ivory on gold is roughly 2.3:1 at 12px, and dark on gold competes with the
-charcoal primary button ([ADR-023](../decisions/ADR-023-home-polish.md)).
+It was a wrapped row of gold-washed pill links, on the reasoning that a collection cuts across
+categories so no single photograph could honestly stand for one
+([ADR-020](../decisions/ADR-020-two-tier-catalogue-ia.md)). **That reversed in prompt 115**, and
+only because the photograph stopped being chosen by hand: `getCollectionCovers` in
+`lib/collection-cover.ts` asks `isProductInCollection` — the same predicate the `?collection=`
+facet filters with — so every tile shows a piece the tile's own link will list. A featured member
+is preferred where the collection has one; a collection with no photographed member falls back to
+`ProductImagePlaceholder` rather than borrowing somebody else's picture. See
+[ADR-070](../decisions/ADR-070-home-page-composition.md).
 
 ### Product page components
 
@@ -480,6 +502,9 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | --- | --- | --- |
 | `Breadcrumb` | Server | `trail: { label, href? }[]`; the last step has no `href` and gets `aria-current="page"` |
 | `ProductImagePanel` | Server | One square image, `object-contain` on `ivory`, or the placeholder |
+| `ProductImageZoom` | *Client* | Wraps `ProductImagePanel` in a `cursor-zoom-in` button and opens the photograph full-size in a native `<dialog>`. No lightbox library: `showModal()` already gives the top layer, Escape, focus trapping and focus restore — only the backdrop click is added. A product with no photograph renders the panel alone and no control |
+| `ProductDescription` | *Client* | The free-text description, cut at a paragraph boundary with the rest behind "See more". **Every paragraph is in the markup from the first render**, held back with `hidden` rather than unrendered, so a crawler and a reader mode get the whole thing — the control shortens the page, not its content. `splitDescriptionForPreview` cuts at `DESCRIPTION_PREVIEW_WORDS` (150, the floor of the house range the catalogue gate enforces) and always keeps the first paragraph |
+| `ProductShareButton` | *Client* | `navigator.share` where the browser has it, a clipboard copy plus a toast where it does not. The capability is settled in an effect rather than during render, so the server's markup and the first client render agree |
 | `ProductGallery` | *Client* | Main image plus a thumbnail strip; reads the selection for a per-variant swap. **Only rendered when `media.images.length > 1` or `media.variantImages` is present** |
 | `ProductSelectionProvider` | *Client* | Holds the selected options above the gallery and the buy panel; its `children` stay server-rendered |
 | `QuantityStepper` | *Client* | Controlled. `value` / `onChange` / `disabled` / `accessibleLabel` |
@@ -493,7 +518,14 @@ Rationale in [ADR-009](../decisions/ADR-009-product-page.md).
 | `OptionRadioGroup` | *Client* | The radio wiring the three non-dropdown controls compose |
 | `SelectedOptionsSummary` | Server | `Letter: A · Colour: Silver`; renders nothing when there is no selection |
 | `PersonalizedNote` | Server | &ldquo;Personalized · non-returnable&rdquo;, long form with a `/refund` link |
-| `ProductDetailsList` | Server | Compact spec list under the buy actions; renders every `specs` entry present, and `null` when there are none |
+| `ProductDetailsList` | Server | Compact spec list under the buy actions; renders every `specs` entry present, and `null` when there are none. **Never collapsed** — it is a short list a shopper checks *before* deciding, and an accordion over four rows costs a tap to reveal what would have fitted |
+
+Prompt 115 added four things to the info column, in this order: the badge cascade beside the
+category eyebrow (`ProductBadgeTag`, the same component and the same `selectProductBadge` the
+card runs — never a second stock rule), an "Inclusive of all taxes" line beside the price with
+the COD sentence `describeProductCodAvailability` derives from `pricing.minPrepaidAmount`, and
+`TrustStripCompact` plus `ProductShareButton` under the buy actions. See
+[ADR-070](../decisions/ADR-070-home-page-composition.md).
 
 #### The gallery, and what changes the main image
 
@@ -859,6 +891,82 @@ relocates you unannounced reads as a fault. It offers Back to cart and Continue 
 with a quantity pip on each thumbnail, but offers no stepper and no remove — quantity edits
 belong on `/cart`, which the Edit cart link goes to.
 
+### Order tracking components
+
+`/track` takes a ten-character order number and nothing else. What it is allowed to render is
+`PublicOrderTracking`, and that projection is a security boundary rather than a convenience —
+see [ADR-045](../decisions/ADR-045-public-order-tracking.md) and
+[ADR-071](../decisions/ADR-071-order-tracking-detail-and-timestamps.md).
+
+| Component | Kind | Notes |
+| --- | --- | --- |
+| `OrderTrackingForm` | Server | One input, one button, a plain `GET` to `/track`. No state, no fetch — which is what makes a lookup survive a refresh, work as a bookmark, and work with JavaScript off |
+| `OrderTrackingResult` | Server | A headline card over three panels: the journey, the contents, the payment |
+| `OrderTrackingTimeline` | Server | The history, **horizontal**, oldest first |
+| `OrderTrackingItems` | Server | Line items with their snapshot photograph, quantity and recorded options. **No price per line** |
+| `OrderTrackingPayment` | Server | `total`, `paid`, and either an amount due or "Paid in full" — never a row reading ₹0 |
+
+**The timeline is laid out as the confirmation email's journey graphic is** — a marker per step,
+a rule between them, the label and the timestamp underneath — so the picture a customer met in
+their inbox is the picture they meet again here. The email's version is four fixed steps with
+only the first filled, because an email has no live feed behind it; this one is real history, so
+every marker it draws is an event that happened. On a phone the row scrolls sideways rather than
+stacking: a timeline that is a column at one breakpoint and a row at the next is two components
+pretending to be one.
+
+**Two fields per step and no third.** `changedBy` and `reason` are not merely unrendered — they
+are absent from `PublicOrderStatusEvent` and from the query that fills it, so the component has
+nothing to leak.
+
+**Non-linear outcomes are coloured, not special-cased.** `cancelled`, `rto` and `returned` get
+their own hue through `orderStatusBadgeClasses` — the same function the admin order detail page
+badges a status with, which has no separate treatment for the three of them either. Only the
+vocabulary differs: `getCustomerOrderStatusLabel` says "Came back to us" where
+`getOrderStatusLabel` says "RTO". The last step is additionally marked "Where it is now", which
+is what a happy order and an unhappy one still have in common.
+
+**Timestamps carry the clock** — `formatTrackingDateTime`, "20 Aug 2026, 4:12 pm". Day-only made
+an order placed, packed and collected inside a working day read as three events that had not
+happened. `formatTrackingDate` is unchanged and still read by the confirmation email's "Placed
+on" line and by the refund sentence.
+
+### `ProductSearch` — *Client Component*
+
+```tsx
+<ProductSearch />
+```
+
+The home page's search box: a real `GET` form pointed at `/shop` with the input named `q`,
+enhanced with a dropdown of suggestions from `/api/search`. The form works with JavaScript off —
+the same shape `OrderTrackingForm` takes and for the same reason.
+
+Eight rows maximum, each a thumbnail, the name, the category label and the price. A term with
+more matches than that ends the list with "See all N results" into `/shop?q=`, rather than a
+longer list: eight rows is what fits above the fold on a phone and the ninth pushes the first out
+of sight. Arrow keys move a highlight, Enter follows it, Escape closes, a click outside
+dismisses. 180ms of debounce, and the in-flight request is aborted when the term changes.
+
+A route rather than a client-side index: the suggestion fields for 449 products are roughly 50KB
+every visitor would pay for on the chance they search. See
+[ADR-070](../decisions/ADR-070-home-page-composition.md) and
+[the contract](../api/search.md).
+
+### `RevealOnScroll` — *Client Component*
+
+```tsx
+<RevealOnScroll delayMs={70}>{children}</RevealOnScroll>
+```
+
+Fades and lifts its children eight pixels into place the first time they scroll into view, then
+disconnects. Used to stagger the collection tiles, so a band that is identical before and after
+the shopper reaches it stops reading as a screenshot.
+
+**It fires once.** An element that re-animates on every re-entry turns scrolling back up into a
+light show. The hidden state is applied *after* mount, so the server-rendered markup is the
+finished one and a page with no JavaScript shows everything. `prefers-reduced-motion` is checked
+in script rather than in CSS, because the initial state is `opacity: 0` and a media query
+governing only the transition would leave those readers looking at nothing.
+
 ### Admin panel components
 
 The panel has its own shell (`app/admin/layout.tsx`) and therefore its own small vocabulary.
@@ -973,7 +1081,20 @@ what the page below it is called.
 `TrustBadge` takes `icon`, `label`, and an optional `detail`, and is the primitive a page
 maps its own list over — `/about` renders six of them in a 2/3-column grid for "Why Choose
 Morchadi". `TrustStrip` takes no props and renders the fixed four — Secure Payments, Free Shipping Over ₹799, Easy 7-Day Returns,
-Anti-Tarnish Quality — 2-up on mobile, 4-up from `lg`. The threshold and the returns window are
+Top notch quality — 2-up on mobile, 4-up from `lg`.
+
+**The fourth badge said "Anti-Tarnish Quality" until prompt 115.** Anti-tarnish is true of most
+of the catalogue and is still claimed where it is true — the site description, the hero, the
+pieces themselves. This band covers *every* order, and a claim that covers every order has to be
+one every order can keep ([ADR-070](../decisions/ADR-070-home-page-composition.md)). Same rule as
+"Certified Quality" below, one step further along.
+
+`TrustStripCompact` is the same four promises as one line: the icon at `h-5 w-5`, the label at
+`text-eyebrow`, no `detail`, 2-up on mobile and a wrapped row from `sm`. It reads **the same
+array** as the full band, so it is a second rendering and never a second copy — the threshold
+cannot differ between the top of the home page and the bottom. Rendered directly under the hero
+and under the product page's buy actions, which are the two places a shopper decides whether this
+shop can be trusted with a card number. The threshold and the returns window are
 `FREE_SHIPPING_THRESHOLD` and `RETURN_WINDOW_DAYS` from `lib/config.ts`, the same constants
 the cart charges from and the policies quote, so the badge cannot outlive the rule.
 
@@ -984,21 +1105,30 @@ catalogue belongs to the same rule as copy that quotes a number — say what is 
 once. `PRODUCT_DESCRIPTOR` in `lib/config.ts` is the single definition of how the catalogue is
 described in metadata, read by `SITE_CONFIG.description` and by the shop's `generateMetadata`.
 
-### Social proof: none, deliberately
+### Social proof: a place for it, and nothing in it
 
 There is no `TestimonialCard`, no `TestimonialBand`, no `TestimonialCarousel`, no
 `StarRating`, no `ProductReviews` and no `Monogram`. All six were deleted in
 [ADR-034](../decisions/ADR-034-seo-audit-remediation.md), along with the fabricated data they
 rendered: 49 product ratings, 147 product reviews and six store testimonials, none of which any
-customer wrote.
+customer wrote. `lib/no-fabricated-reviews.test.tsx` greps every rendered source file and fails
+on any of those six names.
 
-The home page now closes on the Morchadi Promise trust strip and `/about` on its call to
-action, rather than on a band of invented quotes. `ProductCard` and the product page carry a
-name and a price where a star row used to sit.
+`SocialProofSection` (prompt 115) is a band of curated photographs and the words that came with
+them, read from `data/social-proof.json`. **It ships empty and renders `null`, and that is its
+finished state, not a stub.** An entry is an assertion about a real person, so the file follows
+the same rule `BUSINESS.socialProfileUrls` does: empty until the thing it claims exists. A
+seeded sample would be exactly what ADR-034 deleted, under a new file name.
 
-Nothing here is a styling decision waiting to be reversed. Reviews come back as components
-when there are real reviews to put in them — with the reviewer's own words, a date per review
-and a genuine distribution — and the `amber` token and this section come back with them.
+An entry carries an id, an image path under `public/social/`, alt text describing the
+photograph (never the quote repeated), the quote, an optional attribution and an optional
+`sourceUrl` so the claim can be checked. `lib/social-proof.test.ts` enforces all of that,
+including that the image is on disk. A JSON file rather than an admin form, for the reasons in
+[ADR-070](../decisions/ADR-070-home-page-composition.md).
+
+Still no ratings and still no reviews. They come back as components when there are real ones to
+put in them — the reviewer's own words, a date per review and a genuine distribution — and the
+`amber` token comes back with them.
 
 ### Global chrome
 
@@ -1150,12 +1280,29 @@ links come from `CONTACT_CONFIG`, which reads `config/business.ts`, so they matc
 page and the policies by construction. The year is build-time, since every route is
 prerendered.
 
-#### `WhatsAppButton`
+#### `WhatsAppButton` — *Client Component*
 
 `fixed bottom-4 right-4` (`bottom-6 right-6` from `sm`), `z-30` — under the header and the
 drawer, over page content. A `whatsapp`-green pill with the glyph plus a "Chat with us"
-label that collapses to an icon-only circle below `sm`, so it does not sit on top of mobile
-content. A plain `<a>` to `wa.me` built by `buildWhatsAppLink()`; no widget, no script.
+label that collapses to an icon-only circle below `sm`. A plain `<a>` to `wa.me` built by
+`buildWhatsAppLink()`; no widget, no script.
+
+It became a Client Component in prompt 115, for two behaviours that together keep it off every
+call to action ([ADR-069](../decisions/ADR-069-floating-contact-clearance.md)):
+
+1. **It fades out while the page is scrolling** and returns 160ms after the page settles.
+   Scrolling is the whole window during which a static corner button sweeps across the layout.
+2. **On settle it lifts clear of anything it landed on.** `liftClearingObstacles` in
+   `lib/floating-contact.ts` takes its rectangle and the rectangles of everything matching
+   `CONTACT_OBSTACLE_SELECTOR` and returns a `translateY`, bounded at 320px. A product grid puts
+   one row of actions every card-height, so the clear space is a short hop away.
+
+**A product card is deliberately not an obstacle.** It is a link over its whole area, so covering
+a corner of a photograph costs nothing and covering the 44px action box costs the sale. Focus
+restores the button, because a focusable element that cannot be seen is a trap.
+
+`scripts/measure-floating-contact.mjs` checks the invariant in a real browser across five widths
+and five scroll positions per page; `lib/floating-contact.test.ts` checks the arithmetic.
 
 ### `icons.tsx`
 
@@ -1217,11 +1364,20 @@ number.
 `buildPaginationRange`. It imports **no product data**, which is what lets Client Components
 use it without shipping the catalogue.
 
-Three facets, three params — `category`, `collection`, `price` — each a comma-separated
-list, each OR-ed within itself and AND-ed against the others. Every mutator
-(`toggleCategory`, `toggleCollection`, `togglePriceBand`, `withSort`) resets to page 1, and
-`buildShopHref` emits the params in one canonical order with defaults omitted, so the same
-filter state always produces the same URL.
+Facets as comma-separated lists — `category`, `collection`, `status`, `price` — each OR-ed
+within itself and AND-ed against the others, plus the typed `min`/`max` range and, since prompt
+115, the free-text `q`. Every mutator (`toggleCategory`, `toggleCollection`, `togglePriceBand`,
+`toggleStatus`, `withSearch`, `withSort`) resets to page 1, and `buildShopHref` emits the params
+in one canonical order with defaults omitted, so the same filter state always produces the same
+URL.
+
+`q` is a facet like the rest — AND-ed, carried in the canonical URL, cleared by its own chip —
+rather than a mode the page switches into. It is capped at 64 characters, because it is
+attacker-controlled text the page echoes into a chip and a `<title>`, and a listing carrying one
+is `noindex, follow`: `?q=` accepts arbitrary words and an indexable internal search mints an
+unbounded set of near-duplicate pages. `SEARCH_QUERY_PARAM` and the matching predicate both live
+in `lib/product-search.ts`, shared with `/api/search`, so the dropdown and the listing behind
+"see all results" cannot disagree about what matches.
 
 `lib/shop.ts` adds `getShopResults` — the pure filter/sort/paginate core, covered by 71 unit
 tests — plus `matchesShopQuery(product, query)` and `isProductInCollection(product, slug)`

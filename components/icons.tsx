@@ -138,6 +138,47 @@ export function CloseIcon({ className }: IconProps): JSX.Element {
   );
 }
 
+export function SearchIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M16 16l4.5 4.5" />
+    </svg>
+  );
+}
+
+export function ZoomIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M16 16l4.5 4.5" />
+      <path d="M8.5 11h5" />
+      <path d="M11 8.5v5" />
+    </svg>
+  );
+}
+
+export function ShareIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <circle cx="18" cy="5.5" r="2.5" />
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="18.5" r="2.5" />
+      <path d="M8.2 10.8l7.6-4.1" />
+      <path d="M8.2 13.2l7.6 4.1" />
+    </svg>
+  );
+}
+
+export function LinkIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <path d="M10 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1.2 1.2" />
+      <path d="M14 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1.2-1.2" />
+    </svg>
+  );
+}
+
 export function WhatsAppIcon({ className }: IconProps): JSX.Element {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden fill="currentColor">

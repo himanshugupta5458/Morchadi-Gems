@@ -750,6 +750,7 @@ describe("buildShopHref", () => {
 
   it("emits params in a canonical order", () => {
     const query: ShopQuery = {
+      search: "star",
       categories: ["earrings", "rings"],
       collections: ["gifting"],
       statuses: ["low-stock"],
@@ -760,7 +761,7 @@ describe("buildShopHref", () => {
     };
 
     expect(buildShopHref(query)).toBe(
-      "/shop?category=earrings,rings&collection=gifting&status=low-stock&price=under-999&min=200&max=300&sort=price-asc&page=3",
+      "/shop?q=star&category=earrings,rings&collection=gifting&status=low-stock&price=under-999&min=200&max=300&sort=price-asc&page=3",
     );
   });
 

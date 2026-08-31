@@ -1,34 +1,28 @@
 import type { Metadata } from "next";
+import { HOME_CATEGORIES } from "@/types/product";
 import { SITE_CONFIG } from "@/lib/config";
+import {
+  HOME_MOBILE_PRODUCT_COUNT,
+  HOME_NEW_ARRIVALS_COUNT,
+  HOME_STANDARD_SECTION_PADDING,
+  HOME_TIGHT_SECTION_PADDING,
+} from "@/lib/home-page";
 import { buildCollectionHref } from "@/lib/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
 import { getFeaturedProducts, getNewArrivals } from "@/lib/products";
+import { getSocialProof } from "@/lib/social-proof";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { CollectionStrip } from "@/components/CollectionStrip";
 import { Hero } from "@/components/Hero";
 import { OrderTrackingForm } from "@/components/OrderTrackingForm";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ProductSearch } from "@/components/ProductSearch";
 import { SectionHeading } from "@/components/SectionHeading";
-import { TrustStrip } from "@/components/TrustStrip";
+import { SocialProofSection } from "@/components/SocialProofSection";
+import { TrustStrip, TrustStripCompact } from "@/components/TrustStrip";
 import { ViewAllLink } from "@/components/ViewAllLink";
 
 const CATEGORY_SECTION_ID = "shop-by-category";
-
-/**
- * How many pieces each home strip shows on a phone. Two rows of two, plus the link to the
- * rest, is the amount that still reads as a taste of the collection rather than as the
- * collection — whatever the strip holds above `sm`. See ADR-033.
- */
-const MOBILE_PRODUCT_COUNT = 4;
-
-/**
- * How many new arrivals the home strip previews. `flags.isNew` is carried by 408 of the 449
- * records, so the strip has to say how much of that it wants: unbounded, it rendered the whole
- * flagged catalogue into this page's HTML. Twelve is three rows of the grid's four columns from
- * `lg`, four rows of three at `md`, and six rows of two on a phone — of which
- * `MOBILE_PRODUCT_COUNT` shows the first row and a half.
- */
-const HOME_NEW_ARRIVALS_COUNT = 12;
 
 /**
  * `openGraph` is replaced wholesale by a page, never merged into the layout's — so a page
@@ -58,28 +52,57 @@ export const metadata: Metadata = {
 export default function HomePage(): JSX.Element {
   const newArrivals = getNewArrivals(HOME_NEW_ARRIVALS_COUNT);
   const bestSellers = getFeaturedProducts();
+  const socialProof = getSocialProof();
 
   return (
     <>
       <Hero categoryAnchorId={CATEGORY_SECTION_ID} />
 
+      {/**
+       * The search box and the four promises, in one band directly under the hero.
+       *
+       * Both were several screens down. A shopper who arrives knowing what they want had to
+       * scroll past three strips to look for it, and a shopper deciding whether to trust the
+       * shop at all had to scroll past four to find out about returns. The full promise band
+       * stays where it was for anyone reading the page top to bottom; this is the same four
+       * facts stated in one line at the moment they are first useful. See ADR-070.
+       */}
+      <section className="border-b border-line bg-ivory">
+        <div className="container flex flex-col gap-5 py-5 sm:gap-6 sm:py-7">
+          <div className="mx-auto w-full max-w-2xl">
+            <ProductSearch />
+          </div>
+          <TrustStripCompact />
+        </div>
+      </section>
+
       <section
         id={CATEGORY_SECTION_ID}
         className="scroll-mt-20 bg-white lg:scroll-mt-36"
       >
-        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+        <div className={`container flex flex-col gap-6 sm:gap-10 lg:gap-14 ${HOME_STANDARD_SECTION_PADDING}`}>
           <SectionHeading
             roman="Shop by"
             accent="Category"
-            subtitle="Eleven categories, each finished in the same workshop and held to the same anti-tarnish standard."
+            subtitle={`${HOME_CATEGORIES.length} categories, each finished in the same workshop and held to the same standard.`}
           />
           <CategoryGrid />
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-white">
+        <div className={`container flex flex-col gap-6 sm:gap-8 lg:gap-10 ${HOME_TIGHT_SECTION_PADDING}`}>
+          <SectionHeading
+            roman="Shop by"
+            accent="Collection"
+            subtitle="Four ways to cut across the categories, each one showing a piece it actually holds."
+          />
           <CollectionStrip />
         </div>
       </section>
 
       <section className="border-t border-line bg-white">
-        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+        <div className={`container flex flex-col gap-6 sm:gap-10 lg:gap-14 ${HOME_STANDARD_SECTION_PADDING}`}>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
             <SectionHeading
               roman="New Arrivals"
@@ -88,10 +111,10 @@ export default function HomePage(): JSX.Element {
               subtitle="The most recent pieces off the bench, before they settle into the main collection."
             />
             <div className="hidden shrink-0 sm:flex">
-              <ViewAllLink href={buildCollectionHref("new-arrivals")} />
+              <ViewAllLink href={buildCollectionHref("new-arrivals")} label="See all" />
             </div>
           </div>
-          <ProductGrid products={newArrivals} mobileLimit={MOBILE_PRODUCT_COUNT} />
+          <ProductGrid products={newArrivals} mobileLimit={HOME_MOBILE_PRODUCT_COUNT} />
           <div className="sm:hidden">
             <ButtonLink href={buildCollectionHref("new-arrivals")} variant="secondary" fullWidth>
               View all new arrivals
@@ -101,7 +124,7 @@ export default function HomePage(): JSX.Element {
       </section>
 
       <section className="border-t border-line bg-white">
-        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+        <div className={`container flex flex-col gap-6 sm:gap-10 lg:gap-14 ${HOME_STANDARD_SECTION_PADDING}`}>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-10">
             <SectionHeading
               roman="Shop"
@@ -113,7 +136,7 @@ export default function HomePage(): JSX.Element {
               <ViewAllLink href={buildCollectionHref("best-sellers")} />
             </div>
           </div>
-          <ProductGrid products={bestSellers} mobileLimit={MOBILE_PRODUCT_COUNT} />
+          <ProductGrid products={bestSellers} mobileLimit={HOME_MOBILE_PRODUCT_COUNT} />
           <div className="sm:hidden">
             <ButtonLink href={buildCollectionHref("best-sellers")} variant="secondary" fullWidth>
               View all best sellers
@@ -122,8 +145,10 @@ export default function HomePage(): JSX.Element {
         </div>
       </section>
 
+      <SocialProofSection entries={socialProof} />
+
       <section className="bg-ivory">
-        <div className="container flex flex-col gap-6 py-10 sm:gap-10 sm:py-16 lg:gap-14 lg:py-24">
+        <div className={`container flex flex-col gap-6 sm:gap-8 lg:gap-10 ${HOME_TIGHT_SECTION_PADDING}`}>
           <SectionHeading
             roman={`The ${SITE_CONFIG.brandNameLead}`}
             accent="Promise"

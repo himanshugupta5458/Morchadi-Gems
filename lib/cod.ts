@@ -1,5 +1,6 @@
 import type { PaymentType } from "@prisma/client";
 import type { PaymentPath } from "@/types/order";
+import { formatRupees } from "@/lib/format";
 
 /**
  * Every path this checkout offers, in the order the payment step lists them. Used to validate
@@ -43,6 +44,28 @@ export function isCartCodEligible(
 ): boolean {
   if (lines.length === 0) return false;
   return lines.every((line) => line.minPrepaidAmount === 0);
+}
+
+/**
+ * What a product page says about paying at the door, derived from the one field that decides
+ * it rather than typed onto the page as a claim.
+ *
+ * `minPrepaidAmount` is the whole rule — `0` means the piece may be sold cash on delivery, and
+ * anything above it is the amount that must be paid online first
+ * ([ADR-058](/docs/decisions/ADR-058-cod-eligibility-and-min-prepaid-amount.md)). Both
+ * sentences are built here, beside the eligibility rule they describe, so a product page cannot
+ * promise COD on a piece the checkout will refuse it on.
+ *
+ * It is deliberately about *this piece* and not about the cart. A basket is offered COD only
+ * when every line qualifies, and a page has no idea what else is in the basket — so the wording
+ * says what is true of the piece in front of the shopper and stops there.
+ */
+export function describeProductCodAvailability(minPrepaidAmount: number): string {
+  if (minPrepaidAmount <= 0) {
+    return "Cash on delivery available on this piece.";
+  }
+
+  return `${formatRupees(minPrepaidAmount)} payable online, the balance on delivery.`;
 }
 
 /**

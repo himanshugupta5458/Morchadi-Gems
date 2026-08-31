@@ -7,6 +7,7 @@ import {
   togglePriceBand,
   toggleStatus,
   withoutPriceRange,
+  withoutSearch,
   type ShopQuery,
 } from "@/lib/shop-query";
 import type { AppliedFilter } from "@/lib/shop";
@@ -24,6 +25,8 @@ export interface ShopActiveFiltersProps {
  */
 function buildRemovalHref(query: ShopQuery, filter: AppliedFilter): string {
   switch (filter.kind) {
+    case "search":
+      return buildShopHref(withoutSearch(query));
     case "category":
       return buildShopHref(toggleCategory(query, filter.slug));
     case "collection":
@@ -38,7 +41,9 @@ function buildRemovalHref(query: ShopQuery, filter: AppliedFilter): string {
 }
 
 function filterKey(filter: AppliedFilter): string {
-  return filter.kind === "price-range" ? filter.kind : `${filter.kind}:${filter.slug}`;
+  return filter.kind === "price-range" || filter.kind === "search"
+    ? filter.kind
+    : `${filter.kind}:${filter.slug}`;
 }
 
 export function ShopActiveFilters({

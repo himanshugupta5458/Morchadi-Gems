@@ -1,6 +1,6 @@
 import "server-only";
 import type { OrderStatus, PrismaClient } from "@prisma/client";
-import { normaliseOrderId } from "@/lib/admin-order-detail";
+import { normaliseOrderId, readSelectedOptions } from "@/lib/admin-order-detail";
 import { ORDER_ID_ALPHABET, ORDER_ID_LENGTH } from "@/lib/order-id";
 import { prisma } from "@/lib/prisma";
 
@@ -19,6 +19,42 @@ export interface PublicOrderStatusEvent {
   changedAt: Date;
 }
 
+/**
+ * One line of the order, as the customer's own receipt would show it.
+ *
+ * What was bought, how many, and what was chosen — and no amount. `unit_price` is not selected
+ * and neither is `unit_cost`: what this order is worth is stated once, as
+ * `PublicOrderPayment`, and a per-line figure adds nothing a customer asking "did my order go
+ * through" needs while giving a page with no authentication a second money field to leak. Cost
+ * is margin data and was never a candidate.
+ *
+ * `productName` and `productImage` are snapshot columns, so an order opened months later still
+ * describes the thing that was actually sold. See
+ * [ADR-071](/docs/decisions/ADR-071-order-tracking-detail-and-timestamps.md).
+ */
+export interface PublicOrderItem {
+  id: string;
+  productName: string;
+  productImage: string;
+  selectedOptions: Record<string, string>;
+  quantity: number;
+}
+
+/**
+ * What this order is worth, what has been collected, and what is still owed.
+ *
+ * Three figures rather than the whole money block. `subtotal`, `shipping_fee`, `total_cost` and
+ * `payment_type` stay unselected: the question a tracking page answers is "is there anything
+ * left to pay when the courier arrives", and `due` answers it. The invariant
+ * `paid + due = total` holds in the row by construction, so this is a projection of it rather
+ * than three independently readable numbers.
+ */
+export interface PublicOrderPayment {
+  total: number;
+  paid: number;
+  due: number;
+}
+
 /** Money that has gone back, when any has. Never the reason it went back. */
 export interface PublicOrderRefund {
   amount: number;
@@ -26,19 +62,31 @@ export interface PublicOrderRefund {
 }
 
 /**
- * Everything `/track` is allowed to know about an order, which is everything it needs and
- * nothing else: the number that was typed in, when it was placed, where it is, how it got
- * there, and whether money has been returned.
+ * Everything `/track` is allowed to know about an order: the number that was typed in, when it
+ * was placed, where it is, how it got there, what was in it, what is still owed on it, and
+ * whether money has been returned.
  *
- * There is no customer name, no phone number, no address, no line item, no payment type, no
- * Cashfree identifier and no cost figure — not omitted at render time but never selected, so
- * no future edit to a component can put one on the page.
+ * **What is still absent is absent on purpose, and this list is the contract.** There is no
+ * customer name, no phone number, no email, **no delivery address**, no per-line price, no
+ * cost figure, no payment type, no Cashfree identifier, no UTM campaign, no `changedBy` and no
+ * `reason` — none of them omitted at render time, all of them never selected, so no future edit
+ * to a component can put one on the page.
+ *
+ * The address is the load-bearing one. This page is reachable by anyone holding a ten-character
+ * order number and asks for nothing else: no login, no email confirmation, no one-time code. An
+ * order number travels — it is read aloud over WhatsApp, forwarded in an email, screenshotted —
+ * and every place it lands would otherwise be a place someone's home address lands with it.
+ * Items and a payment summary tell the person who placed the order what they need; the address
+ * tells a stranger where they live. See ADR-045, narrowed by
+ * [ADR-071](/docs/decisions/ADR-071-order-tracking-detail-and-timestamps.md).
  */
 export interface PublicOrderTracking {
   id: string;
   placedAt: Date;
   status: OrderStatus;
   history: PublicOrderStatusEvent[];
+  items: PublicOrderItem[];
+  payment: PublicOrderPayment;
   refund: PublicOrderRefund | null;
 }
 
@@ -87,9 +135,22 @@ async function findTrackedOrderRow(client: PublicOrderTrackingClient, orderId: s
         id: true,
         createdAt: true,
         status: true,
+        total: true,
+        amountPrepaid: true,
+        amountDue: true,
         isRefunded: true,
         refundedAt: true,
         refundAmount: true,
+        lineItems: {
+          orderBy: { id: "asc" },
+          select: {
+            id: true,
+            productName: true,
+            productImage: true,
+            selectedOptions: true,
+            quantity: true,
+          },
+        },
         statusHistory: {
           orderBy: [{ changedAt: "asc" }, { id: "asc" }],
           select: { status: true, changedAt: true },
@@ -142,6 +203,18 @@ export async function findPublicOrderTracking(
     placedAt: order.createdAt,
     status: order.status,
     history: collapseRepeatedStatuses(order.statusHistory),
+    items: order.lineItems.map((line) => ({
+      id: line.id,
+      productName: line.productName,
+      productImage: line.productImage,
+      selectedOptions: readSelectedOptions(line.selectedOptions),
+      quantity: line.quantity,
+    })),
+    payment: {
+      total: order.total.toNumber(),
+      paid: order.amountPrepaid.toNumber(),
+      due: order.amountDue.toNumber(),
+    },
     /**
      * A refund is announced only once there is money to announce. `refund_amount` is `0` on an
      * order where somebody decided nothing goes back, and `is_refunded` is false alongside it;

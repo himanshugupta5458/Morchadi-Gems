@@ -32,7 +32,7 @@ import { ViewAllLink } from "@/components/ViewAllLink";
 import { SURFACED_CATEGORIES, getCategoryLabel } from "@/types/product";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TrustBadge } from "@/components/TrustBadge";
-import { TrustStrip } from "@/components/TrustStrip";
+import { TrustStrip, TrustStripCompact } from "@/components/TrustStrip";
 import { NAV_MENUS } from "@/lib/navigation";
 import { ORDER_STATUSES } from "@/lib/order-status";
 import { OrderStatusBadge } from "@/components/OrderStatusBadge";
@@ -398,7 +398,10 @@ export default function StyleGuidePage(): JSX.Element {
         </div>
       </Panel>
 
-      <Panel title="TrustBadge and TrustStrip">
+      <Panel
+        title="TrustBadge, TrustStrip and TrustStripCompact"
+        note="The compact strip reads the same array as the full band, so the free-shipping threshold and the returns window cannot differ between the two. It drops each badge's detail line and keeps the label: under the hero and under a product page's buy actions there is room for the promise and not for the reassurance."
+      >
         <div className="flex flex-col gap-8">
           <div className="max-w-xs">
             <TrustBadge
@@ -408,6 +411,7 @@ export default function StyleGuidePage(): JSX.Element {
             />
           </div>
           <TrustStrip />
+          <TrustStripCompact />
         </div>
       </Panel>
 

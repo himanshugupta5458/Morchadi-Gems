@@ -167,6 +167,7 @@ export function isPriceInBand(price: number, band: PriceBand): boolean {
 export type RawSearchParam = string | string[] | undefined;
 
 export interface ShopSearchParams {
+  q?: RawSearchParam;
   category?: RawSearchParam;
   collection?: RawSearchParam;
   status?: RawSearchParam;
@@ -178,6 +179,16 @@ export interface ShopSearchParams {
 }
 
 export interface ShopQuery {
+  /**
+   * The free-text term, or `""` for a listing nobody searched.
+   *
+   * A facet like any other — AND-ed with the rest, cleared by its own chip, and carried in the
+   * canonical URL — rather than a separate mode the page switches into. The home page's
+   * autocomplete links here with `?q=`, so "see all results" lands on the shop with the term
+   * still narrowing it and every filter still available on top. See
+   * [ADR-070](/docs/decisions/ADR-070-home-page-composition.md).
+   */
+  search: string;
   categories: Category[];
   collections: CollectionFilterSlug[];
   statuses: StatusSlug[];
@@ -259,6 +270,22 @@ function parsePageToken(token: string | undefined): number {
   return whole < 1 ? 1 : whole;
 }
 
+/**
+ * The typed term, collapsed to single spaces and capped.
+ *
+ * The cap is not validation — a long term simply matches nothing — it is a bound on what the
+ * page will echo back into a chip and a `<title>`, since `?q=` is attacker-controlled text that
+ * arrives on a public URL.
+ */
+const MAX_SEARCH_TERM_LENGTH = 64;
+
+function parseSearchTerm(raw: RawSearchParam): string {
+  const values = raw === undefined ? [] : Array.isArray(raw) ? raw : [raw];
+  const [first] = values;
+  if (first === undefined) return "";
+  return first.trim().replace(/\s+/g, " ").slice(0, MAX_SEARCH_TERM_LENGTH);
+}
+
 export function parseShopQuery(params: ShopSearchParams): ShopQuery {
   const categories = uniqueInOrder(
     toTokens(params.category).filter(isSurfacedCategory),
@@ -282,6 +309,7 @@ export function parseShopQuery(params: ShopSearchParams): ShopQuery {
     sortToken !== undefined && isSortSlug(sortToken) ? sortToken : DEFAULT_SORT;
 
   return {
+    search: parseSearchTerm(params.q),
     categories,
     collections,
     statuses,
@@ -294,6 +322,7 @@ export function parseShopQuery(params: ShopSearchParams): ShopQuery {
 
 export function emptyShopQuery(): ShopQuery {
   return {
+    search: "",
     categories: [],
     collections: [],
     statuses: [],
@@ -312,6 +341,9 @@ export function emptyShopQuery(): ShopQuery {
 export function buildShopHref(query: ShopQuery): string {
   const parts: string[] = [];
 
+  if (query.search.length > 0) {
+    parts.push(`q=${encodeURIComponent(query.search)}`);
+  }
   if (query.categories.length > 0) {
     parts.push(`category=${query.categories.join(",")}`);
   }
@@ -351,6 +383,11 @@ export function buildShopHref(query: ShopQuery): string {
  */
 export function buildCanonicalShopHref(query: ShopQuery): string {
   return buildShopHref({ ...query, sort: DEFAULT_SORT });
+}
+
+/** Whether this listing was reached by typing words rather than by ticking boxes. */
+export function hasSearchTerm(query: ShopQuery): boolean {
+  return query.search.length > 0;
 }
 
 function toggle<T>(values: T[], value: T, rank: Map<T, number>): T[] {
@@ -393,6 +430,14 @@ export function toggleStatus(query: ShopQuery, slug: StatusSlug): ShopQuery {
     statuses: toggle(query.statuses, slug, STATUS_ORDER),
     page: 1,
   };
+}
+
+export function withSearch(query: ShopQuery, search: string): ShopQuery {
+  return { ...query, search: search.trim().replace(/\s+/g, " "), page: 1 };
+}
+
+export function withoutSearch(query: ShopQuery): ShopQuery {
+  return withSearch(query, "");
 }
 
 export function withPriceRange(query: ShopQuery, priceRange: PriceRange): ShopQuery {

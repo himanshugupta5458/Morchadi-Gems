@@ -71,8 +71,15 @@ export default async function TrackOrderPage({
         <span className="italic text-gold">Order</span>
       </h1>
 
-      <div className="mt-6 flex max-w-2xl flex-col gap-10 sm:mt-10 lg:mt-12">
-        <OrderTrackingForm submittedOrderId={submittedOrderId ?? ""} />
+      <p className="mt-3 max-w-prose text-body-sm text-muted">
+        No account and no password. The ten-character number on your confirmation is the whole
+        of it.
+      </p>
+
+      <div className="mt-6 flex flex-col gap-8 sm:mt-10 sm:gap-10 lg:mt-12">
+        <div className="max-w-2xl">
+          <OrderTrackingForm submittedOrderId={submittedOrderId ?? ""} />
+        </div>
 
         {hasSubmittedOrderId ? (
           lookupVerdict === "throttled" ? (

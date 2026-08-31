@@ -11,7 +11,7 @@ import {
   resolveVariantImage,
   type GalleryImage,
 } from "@/lib/variant-images";
-import { ProductImagePanel } from "@/components/ProductImagePanel";
+import { ProductImageZoom } from "@/components/ProductImageZoom";
 import { ArrowRightIcon } from "@/components/icons";
 
 export interface ProductGalleryProps {
@@ -51,8 +51,8 @@ function windowStartShowing(start: number, shownIndex: number, total: number): n
 /**
  * The product page's picture, for the products that have more than one of them — several
  * views, a per-variant photograph, or both. A product with a single image and no variant
- * mapping never reaches here: the page renders `ProductImagePanel` directly, so the common
- * case still ships no client JavaScript for its image. See ADR-009 and ADR-027.
+ * mapping never reaches here: the page renders `ProductImageZoom` directly, so the common case
+ * still ships no thumbnail strip and no selection wiring. See ADR-009 and ADR-027.
  *
  * The strip lists every photograph the product has, mapped and unmapped alike, so each one
  * is reachable by clicking it. Clicking a mapped photograph also records its option value,
@@ -67,6 +67,10 @@ function windowStartShowing(start: number, shownIndex: number, total: number): n
  *
  * Alt text follows the photograph. A variant image has no alt written for it, so it falls
  * back to the product's main alt rather than describing the wrong finish. See ADR-036.
+ *
+ * The shown photograph is wrapped in `ProductImageZoom`, so whichever thumbnail or option value
+ * put it on screen, tapping it opens that photograph full size — the single-image product page
+ * uses the same component, so the zoom is one implementation rather than two.
  */
 export function ProductGallery({
   images,
@@ -151,7 +155,7 @@ export function ProductGallery({
 
   return (
     <div className="flex flex-col gap-4">
-      <ProductImagePanel src={shownImage} alt={mainImageAlt} priority />
+      <ProductImageZoom src={shownImage} alt={mainImageAlt} priority />
 
       {gallery.length > 1 ? (
         <div className="flex items-center gap-3">

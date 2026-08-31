@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/product";
-import { getPrimaryImage, toCatalogueEntry } from "@/lib/products";
+import { getPrimaryImage, getSecondaryImage, toCatalogueEntry } from "@/lib/products";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductBadgeTag } from "@/components/ProductBadgeTag";
 import { ProductCardPurchase } from "@/components/ProductCardPurchase";
@@ -24,6 +24,11 @@ export interface ProductCardProps {
  * A Server Component. The only thing it ships to the browser is `ProductCardPurchase`, and that
  * receives the lean `CatalogueEntry` rather than the whole product record.
  *
+ * A product with a **second** photograph reveals it on hover, and on a phone when the card's
+ * link takes focus. One with a single photograph — 436 of the 449 records — gets no second
+ * image element at all, so there is nothing to fade to and no placeholder flashes. The swap is
+ * two stacked `next/image` fills crossfading in CSS, which keeps the card a Server Component.
+ *
  * **Everything below the photograph is height-reserved**: the name block, the option row and
  * the action. A grid row holds cards with no options beside cards showing chips beside cards
  * whose button carries a two-line label, and each of those reserves the same space as the
@@ -35,6 +40,7 @@ export function ProductCard({
   priority = false,
 }: ProductCardProps): JSX.Element {
   const primaryImage = getPrimaryImage(product);
+  const hoverImage = getSecondaryImage(product);
 
   return (
     <article className="group relative flex h-full flex-col border border-line bg-white transition duration-250 hover:-translate-y-1 hover:shadow-card-hover">
@@ -42,14 +48,30 @@ export function ProductCard({
         {primaryImage === null ? (
           <ProductImagePlaceholder />
         ) : (
-          <Image
-            src={primaryImage}
-            alt={product.seo.imageAlt}
-            fill
-            priority={priority}
-            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
-            className="object-contain p-4 transition-transform duration-250 group-hover:scale-[1.03]"
-          />
+          <>
+            <Image
+              src={primaryImage}
+              alt={product.seo.imageAlt}
+              fill
+              priority={priority}
+              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+              className={`object-contain p-4 transition-all duration-250 group-hover:scale-[1.03] ${
+                hoverImage === null
+                  ? ""
+                  : "group-hover:opacity-0 group-focus-within:opacity-0"
+              }`}
+            />
+            {hoverImage === null ? null : (
+              <Image
+                src={hoverImage}
+                alt=""
+                aria-hidden
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="object-contain p-4 opacity-0 transition-opacity duration-250 group-hover:opacity-100 group-focus-within:opacity-100"
+              />
+            )}
+          </>
         )}
 
         <div className="absolute left-3 top-3">

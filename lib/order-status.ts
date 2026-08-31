@@ -89,9 +89,37 @@ const ORDER_STATUS_BADGE_BASE =
   "inline-flex items-center border px-2.5 py-1 font-sans text-[0.6875rem] font-medium uppercase tracking-caps";
 
 /**
- * The full class string for one status badge. Shared by the admin list and the style guide so
- * the two cannot show different colours for the same status.
+ * The full class string for one status badge. Shared by the admin list, the style guide and —
+ * since ADR-071 — the customer's tracking timeline, so no two surfaces can show different
+ * colours for the same status.
+ *
+ * The customer surface reuses the classes and **not** the labels: `getOrderStatusLabel` says
+ * "RTO", which is what the owner needs on a list of fifty orders and means nothing to the
+ * person who was waiting for the parcel. `getCustomerOrderStatusLabel` says "Came back to us".
+ * The hue is the part worth sharing, because it is the part that says these seven outcomes are
+ * different from each other.
  */
 export function orderStatusBadgeClasses(status: OrderStatus): string {
   return `${ORDER_STATUS_BADGE_BASE} ${ORDER_STATUS_BADGE_CLASSES[status]}`;
+}
+
+const ORDER_STATUS_MARKER_CLASSES: Record<OrderStatus, string> = {
+  placed: "border-status-placed bg-status-placed",
+  packed: "border-status-packed bg-status-packed",
+  shipped: "border-status-shipped bg-status-shipped",
+  delivered: "border-status-delivered bg-status-delivered",
+  rto: "border-status-rto bg-status-rto",
+  returned: "border-status-returned bg-status-returned",
+  cancelled: "border-status-cancelled bg-status-cancelled",
+};
+
+/**
+ * The same seven hues at full strength, for a filled dot rather than a washed chip.
+ *
+ * A timeline marker has no room for a label inside it, so this is the one place colour carries
+ * information alone — which is why the label is always written directly under the dot it
+ * belongs to, and why the dot is never the only thing distinguishing two steps.
+ */
+export function orderStatusMarkerClasses(status: OrderStatus): string {
+  return ORDER_STATUS_MARKER_CLASSES[status];
 }

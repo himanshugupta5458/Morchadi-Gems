@@ -66,3 +66,4 @@ What stops this class of bug recurring — a check, a convention, a doc change.
 | [2026-08-27](2026-08-27-phase-2-eight-failures-not-pre-existing.md) | A prior run's "8 pre-existing, unrelated" test-failure claim was false | Major | Resolved |
 | [2026-08-28](2026-08-28-docker-build-cannot-find-module-scripts-keyword-normalisation.md) | Docker build fails type-checking on `Cannot find module '@/scripts/keyword-normalisation.mjs'`, while the same commit builds clean locally | Blocker | Resolved |
 | [2026-08-28](2026-08-28-eight-tests-fail-after-one-catalogue-price-edit.md) | Eight tests fail after one product's `minPrepaidAmount` moved from 0 to 49 | Major | Resolved |
+| [2026-08-31](2026-08-31-whatsapp-button-covers-a-card-call-to-action.md) | The floating WhatsApp button covers part of a product card's call to action | Major | Resolved |

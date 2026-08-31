@@ -107,10 +107,45 @@ const TRACKING_DATE_FORMAT = new Intl.DateTimeFormat("en-IN", {
 /**
  * "20 August 2026" — a date and no clock time, in Indian time on a server that runs in UTC.
  *
- * Deliberately coarser than `formatAdminOrderDate`. An operator reconciling a courier's
- * manifest needs the minute; a customer asking "has it shipped yet" does not, and a timestamp
- * accurate to the minute invites "it says 4:12pm, so why has nothing moved by 4:40pm".
+ * Still day-only, and still used: the confirmation email's "Placed on" line and the refund
+ * sentence on `/track` both read it. A single date stated once in prose has none of the problem
+ * the timeline had — there is no second date beside it to look identical to.
+ *
+ * The timeline itself now uses `formatTrackingDateTime`. See
+ * [ADR-071](/docs/decisions/ADR-071-order-tracking-detail-and-timestamps.md).
  */
 export function formatTrackingDate(instant: Date): string {
   return TRACKING_DATE_FORMAT.format(instant);
+}
+
+const TRACKING_DATE_TIME_FORMAT = new Intl.DateTimeFormat("en-IN", {
+  timeZone: "Asia/Kolkata",
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+  hour12: true,
+});
+
+/**
+ * "20 Aug 2026, 4:12 pm" — the date **and** the clock time, in Indian time.
+ *
+ * This reverses the reasoning `formatTrackingDate` was written under, and the reversal is the
+ * point. Day-only was chosen so that a timestamp accurate to the minute would not invite "it
+ * says 4:12pm, so why has nothing moved by 4:40pm". What it produced instead was a timeline of
+ * three rows reading "1 May 2026, 1 May 2026, 1 May 2026" — an order that was placed, packed
+ * and picked up inside a working day looked like three events that had not happened, which is
+ * a worse version of the same worry and one the customer cannot resolve by reading harder.
+ *
+ * Showing the time answers it directly: two events on one day are visibly hours apart. The
+ * original concern is real but it belongs to the *copy* — `describeOrderStatusForCustomer`
+ * says what happens next in words — rather than to the precision of a fact.
+ *
+ * Short month rather than long, because the horizontal timeline puts these under narrow
+ * columns and "September" wraps where "Sep" does not. Same time zone, same locale, same
+ * server-runs-in-UTC pinning as its sibling. See ADR-071.
+ */
+export function formatTrackingDateTime(instant: Date): string {
+  return TRACKING_DATE_TIME_FORMAT.format(instant);
 }

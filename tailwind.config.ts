@@ -38,11 +38,15 @@ const config: Config = {
         line: "#E8E4DC",
         whatsapp: "#25D366",
         /**
-         * One hue per fulfilment status, for the admin order list's badges. Operational
-         * colour, deliberately outside the storefront palette above: nothing a shopper sees
-         * uses these, and a status badge must be scannable rather than on-brand. Every one is
-         * used at 10% as a wash, 35% as a border and full strength as text — see
-         * `lib/order-status.ts`.
+         * One hue per fulfilment status. Deliberately outside the storefront palette above:
+         * a status badge must be scannable rather than on-brand, and seven distinguishable
+         * hues is what makes a list of fifty orders readable at a glance.
+         *
+         * Started as admin-only. `/track`'s timeline reuses the same seven through
+         * `orderStatusBadgeClasses` and `orderStatusMarkerClasses`, so a customer and the
+         * operator looking at the same order see the same colour for its state — see
+         * `lib/order-status.ts` and ADR-071. Every one is used at 10% as a wash, 35% as a
+         * border and full strength as text or as a filled marker.
          */
         status: {
           placed: "#6B6B6B",

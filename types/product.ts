@@ -82,6 +82,50 @@ export const SURFACED_CATEGORIES: readonly CategoryOption[] =
 export const SURFACED_CATEGORY_SLUGS: readonly Category[] =
   SURFACED_CATEGORIES.map((category) => category.slug);
 
+/**
+ * How many category tiles the home page shows. Ten rather than eleven because the grid is five
+ * abreast from `lg` and two abreast on a phone: eleven tiles is two full rows plus one orphan
+ * at both widths, and the orphan reads as a tile that failed to load rather than as the last
+ * category.
+ */
+export const HOME_CATEGORY_LIMIT = 10;
+
+/**
+ * The categories the home page's tile grid leaves out.
+ *
+ * `gift-hampers` is browsable, in the nav, in the shop facets and in the sitemap — it is
+ * `surfaced` and this does not change that. What it is not is a *category* in the sense the
+ * other ten are: the rest name a thing you wear, and a hamper is a way of buying several of
+ * them. Putting it in the same grid asks the shopper to choose between "Rings" and "how it is
+ * packaged", which is not one question.
+ *
+ * A list rather than a status on `CategoryOption`, because this is a decision about one
+ * page's grid and not a property of the category. `SURFACED_CATEGORIES` stays eleven and
+ * every other surface still reads it. See
+ * [ADR-070](/docs/decisions/ADR-070-home-page-composition.md).
+ */
+export const HOME_HIDDEN_CATEGORIES: readonly Category[] = ["gift-hampers"];
+
+/**
+ * The tiles the home grid renders: the surfaced categories, minus the ones held back from it,
+ * capped at `HOME_CATEGORY_LIMIT`.
+ *
+ * Takes the list rather than reading `SURFACED_CATEGORIES` for the reason
+ * `selectSurfacedCategories` does — so the rule can be tested over categories that do not
+ * exist, instead of only over the one that happens to be held back today.
+ */
+export function selectHomeCategories(
+  categories: readonly CategoryOption[],
+  limit: number = HOME_CATEGORY_LIMIT,
+): CategoryOption[] {
+  return categories
+    .filter((category) => !HOME_HIDDEN_CATEGORIES.includes(category.slug))
+    .slice(0, limit);
+}
+
+export const HOME_CATEGORIES: readonly CategoryOption[] =
+  selectHomeCategories(SURFACED_CATEGORIES);
+
 export function getCategoryLabel(slug: Category): string {
   const match = CATEGORIES.find((category) => category.slug === slug);
   return match ? match.label : slug;

@@ -53,6 +53,19 @@ export function getPrimaryImage(product: Product): string | null {
 }
 
 /**
+ * The second photograph a card reveals on hover, or null.
+ *
+ * Null for all but thirteen of the 449 records, and that is the point of the accessor: a
+ * product with one photograph gets **no** hover behaviour at all rather than a fade to a
+ * placeholder or a flash of the same picture. A swap the shopper cannot predict is worse than
+ * no swap, and a swap to nothing is worse than both. See
+ * [ADR-070](/docs/decisions/ADR-070-home-page-composition.md).
+ */
+export function getSecondaryImage(product: Product): string | null {
+  return product.media.images.length > 1 ? product.media.images[1] : null;
+}
+
+/**
  * One alt string per entry in `media.images`, in the same order, so a gallery can label each
  * thumbnail with what that photograph actually shows. `seo.imageAlt` covers the first image
  * and `seo.additionalImageAlts` the rest; a product whose extra images have no alt written

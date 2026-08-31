@@ -10,6 +10,7 @@ import {
 } from "@/types/product";
 import { getAllProducts } from "@/lib/products";
 import { selectProductBadge } from "@/lib/product-badge";
+import { matchesSearchTerm } from "@/lib/product-search";
 import {
   PER_PAGE,
   formatPriceRange,
@@ -34,6 +35,8 @@ export * from "@/lib/shop-query";
  * back into a `Category` or a `PriceBandSlug`.
  */
 export type AppliedFilter =
+  /** The free-text term, as one chip whose × drops the words and keeps every tick-box. */
+  | { kind: "search"; label: string }
   | { kind: "category"; slug: Category; label: string }
   | { kind: "collection"; slug: CollectionFilterSlug; label: string }
   | { kind: "status"; slug: StatusSlug; label: string }
@@ -145,6 +148,7 @@ function matchesStatuses(product: Product, statuses: StatusSlug[]): boolean {
  */
 export function matchesShopQuery(product: Product, query: ShopQuery): boolean {
   return (
+    matchesSearchTerm(product, query.search) &&
     matchesCategories(product, query.categories) &&
     matchesCollections(product, query.collections) &&
     matchesStatuses(product, query.statuses) &&
@@ -154,6 +158,9 @@ export function matchesShopQuery(product: Product, query: ShopQuery): boolean {
 }
 
 function toAppliedFilters(query: ShopQuery): AppliedFilter[] {
+  const searchFilters: AppliedFilter[] =
+    query.search.length === 0 ? [] : [{ kind: "search", label: `“${query.search}”` }];
+
   const categoryFilters: AppliedFilter[] = query.categories.map((slug) => ({
     kind: "category",
     slug,
@@ -183,6 +190,7 @@ function toAppliedFilters(query: ShopQuery): AppliedFilter[] {
     : [];
 
   return [
+    ...searchFilters,
     ...categoryFilters,
     ...collectionFilters,
     ...statusFilters,

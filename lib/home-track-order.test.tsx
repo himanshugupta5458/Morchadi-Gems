@@ -15,6 +15,15 @@ vi.mock("next/link", () => ({
   ),
 }));
 
+/**
+ * The home page's search box reaches for the app router to follow a highlighted suggestion.
+ * Nothing in this file is about that, but rendering the page mounts it, and `useRouter` throws
+ * outside a router provider.
+ */
+vi.mock("next/navigation", () => ({
+  useRouter: () => ({ push: vi.fn() }),
+}));
+
 afterEach(() => {
   cleanup();
   document.body.innerHTML = "";

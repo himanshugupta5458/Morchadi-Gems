@@ -75,6 +75,7 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `GET /api/verify-order` | [verify-order.md](verify-order.md) |
 | `GET /api/cod-order` | [cod-order.md](cod-order.md) |
 | `GET /api/health` | [health.md](health.md) |
+| `GET /api/search` | [search.md](search.md) |
 | `POST /api/notify-admin` | [notify-admin.md](notify-admin.md) |
 | `POST /admin/api/login` | [admin-login.md](admin-login.md) |
 | `POST /admin/api/logout` | [admin-logout.md](admin-logout.md) |
@@ -84,7 +85,7 @@ five Cashfree origins the Content-Security-Policy has to allow for checkout to w
 | `PATCH /admin/api/products/{id}` | [admin-products-id.md](admin-products-id.md) |
 | `GET /admin/api/products/export` | [admin-products-export.md](admin-products-export.md) |
 
-Every route handler in the repository is documented — the five under `app/api/` and the six
+Every route handler in the repository is documented — the six under `app/api/` and the six
 under `app/admin/api/`. `verify-order` is the only one without a backing ADR — payment
 verification shipped in prompt 13, which produced no decision record — so its contract file
 carries the reasoning that would otherwise live in an ADR.

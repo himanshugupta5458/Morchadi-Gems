@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCategoryLabel } from "@/types/product";
+import { describeProductCodAvailability } from "@/lib/cod";
 import { SITE_CONFIG } from "@/lib/config";
+import { splitDescriptionForPreview } from "@/lib/product-description";
 import { buildProductOpenGraphTypeMeta } from "@/lib/metadata";
 import {
   getAllProducts,
@@ -18,12 +20,16 @@ import { buildProductSchemaGraph } from "@/lib/structured-data";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
 import { PriceDisplay } from "@/components/PriceDisplay";
+import { ProductBadgeTag } from "@/components/ProductBadgeTag";
+import { ProductDescription } from "@/components/ProductDescription";
 import { ProductDetailsList } from "@/components/ProductDetailsList";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductGrid } from "@/components/ProductGrid";
-import { ProductImagePanel } from "@/components/ProductImagePanel";
+import { ProductImageZoom } from "@/components/ProductImageZoom";
 import { ProductPurchaseActions } from "@/components/ProductPurchaseActions";
+import { ProductShareButton } from "@/components/ProductShareButton";
 import { SectionHeading } from "@/components/SectionHeading";
+import { TrustStripCompact } from "@/components/TrustStrip";
 
 interface ProductPageProps {
   params: { id: string };
@@ -102,7 +108,9 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
   const hasGallery =
     product.media.images.length > 1 || product.media.variantImages !== undefined;
   const breadcrumbTrail = buildProductBreadcrumb(product);
-  const descriptionParagraphs = getDescriptionParagraphs(product.description);
+  const description = splitDescriptionForPreview(
+    getDescriptionParagraphs(product.description),
+  );
   const imageAlts = getImageAlts(product);
 
   return (
@@ -123,32 +131,47 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
               variantImages={product.media.variantImages}
             />
           ) : (
-            <ProductImagePanel src={primaryImage} alt={product.seo.imageAlt} priority />
+            <ProductImageZoom src={primaryImage} alt={product.seo.imageAlt} priority />
           )}
 
           <div className="flex flex-col gap-4 sm:gap-6">
-            <span className="text-eyebrow uppercase text-gold-deep">
-              {categoryLabel}
-            </span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-eyebrow uppercase text-gold-deep">
+                {categoryLabel}
+              </span>
+              {/**
+               * The same cascade the card runs, with the same component. A page that computed
+               * "Only 2 left" for itself would be a second implementation of a rule whose whole
+               * point is that availability outranks merchandising everywhere. See ADR-067.
+               */}
+              <ProductBadgeTag stock={product.stock} flags={product.flags} />
+            </div>
 
             <h1 className="font-display text-heading-sm sm:text-heading-lg">
               {product.name}
             </h1>
 
-            <PriceDisplay
-              mrp={product.pricing.mrp}
-              price={product.pricing.price}
-              size="lg"
-            />
-
-            <div className="flex max-w-prose flex-col gap-3 text-body text-muted">
-              {descriptionParagraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-              ))}
+            <div className="flex flex-col gap-1.5">
+              <PriceDisplay
+                mrp={product.pricing.mrp}
+                price={product.pricing.price}
+                size="lg"
+              />
+              <p className="text-body-sm text-muted">
+                Inclusive of all taxes ·{" "}
+                {describeProductCodAvailability(product.pricing.minPrepaidAmount)}
+              </p>
             </div>
+
+            <ProductDescription description={description} />
 
             <div className="border-t border-line pt-5 sm:pt-6">
               <ProductPurchaseActions item={toCatalogueEntry(product)} />
+            </div>
+
+            <div className="flex flex-col gap-4 border-t border-line pt-5 sm:pt-6">
+              <TrustStripCompact />
+              <ProductShareButton title={product.name} />
             </div>
 
             <ProductDetailsList specs={product.specs} />
