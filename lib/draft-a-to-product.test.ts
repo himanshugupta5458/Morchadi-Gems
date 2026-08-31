@@ -444,8 +444,8 @@ describe("buildProductFromDraft", () => {
       },
       description: CONTENT.description,
       seo: SEO,
-      stock: { inStock: true },
-      flags: { featured: false, isNew: true },
+      stock: { inStock: true, quantity: 10 },
+      flags: { featured: false, isNew: true, badge: null },
     });
   });
 
@@ -611,8 +611,8 @@ describe("checkCandidatePrimaryKeyword", () => {
       specs: { material: "Gold plated brass" },
       description: "A ring.",
       seo: { ...SEO, primaryKeyword },
-      stock: { inStock: true },
-      flags: { featured: false, isNew: true },
+      stock: { inStock: true, quantity: 10 },
+      flags: { featured: false, isNew: true, badge: null },
     };
   }
 

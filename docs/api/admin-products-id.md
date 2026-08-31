@@ -58,7 +58,7 @@ interface ProductEdit {
   description: string;
   status: "draft" | "active";
   flags: { featured: boolean; isNew: boolean };
-  stock: { inStock: boolean };
+  stock: { inStock: boolean, quantity: 10 };
   /** An empty array removes the key — a product sold in one configuration has no options. */
   options: { name: string; type: ProductOptionType; values: string[]; default: string }[];
   /** Keyed "OptionName:value". An empty object removes the key. */

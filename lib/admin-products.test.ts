@@ -136,7 +136,7 @@ describe("the four views partition the catalogue", () => {
     const draft: Product = {
       ...catalogue[0],
       status: "draft",
-      stock: { inStock: true },
+      stock: { inStock: true, quantity: 10 },
     };
 
     expect(matchesAdminProductView(draft, "draft")).toBe(true);
@@ -168,13 +168,10 @@ describe("filters narrow the list to exactly what they name", () => {
   });
 
   it("returns only products inside the named price band", () => {
-    const page = selectAdminProductPage(catalogue, query({ priceBand: "1000-4999" }));
+    const page = selectAdminProductPage(catalogue, query({ priceBand: "above-999" }));
 
     expect(page.totalCount).toBeGreaterThan(0);
-    for (const row of page.rows) {
-      expect(row.price).toBeGreaterThanOrEqual(1000);
-      expect(row.price).toBeLessThanOrEqual(4999);
-    }
+    for (const row of page.rows) expect(row.price).toBeGreaterThanOrEqual(1000);
   });
 
   it("returns only flagged products", () => {

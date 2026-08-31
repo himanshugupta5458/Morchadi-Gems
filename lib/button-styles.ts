@@ -5,6 +5,22 @@ export interface ButtonAppearance {
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
+  /**
+   * Fill the height of the box the button was put in, instead of standing it up out of its own
+   * padding.
+   *
+   * The one caller is the product card, and the reason is alignment rather than taste: a card
+   * row holds "Add to cart" beside "Choose Your Options", and the second label wraps to two
+   * lines at every width below a desktop column. Left to their padding the two buttons would be
+   * different heights in the same row, which is the misalignment the fixed title block and the
+   * reserved chip row already exist to prevent. The card reserves one height for the action and
+   * both buttons take it, whether their label runs to one line or two.
+   *
+   * Padding still defines the height of every other button on the site, which is what ADR-025
+   * settled — this replaces that rule only where a caller has already decided the height. See
+   * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
+   */
+  fillHeight?: boolean;
 }
 
 const baseClasses =
@@ -34,15 +50,29 @@ const sizeClasses: Record<ButtonSize, string> = {
 };
 
 /**
+ * The same horizontal scale with the vertical padding dropped rather than overridden, because
+ * two padding utilities in one class string are settled by the order Tailwind emits them in
+ * and not by the order they are written. `leading-tight` is what lets a two-line label sit
+ * inside the height its caller reserved.
+ */
+const fillHeightSizeClasses: Record<ButtonSize, string> = {
+  sm: "h-full px-3 text-[0.6875rem] leading-tight",
+  md: "h-full px-10 text-label leading-tight",
+};
+
+/**
  * Shared by `Button` (a `<button>`, Client Component) and `ButtonLink` (an `<a>`), so the
- * two cannot drift apart. Appearance is chosen by variant and size only — there is no
- * `className` escape hatch on either component.
+ * two cannot drift apart. Appearance is chosen by the four named fields above and nothing
+ * else — there is no `className` escape hatch on either component.
  */
 export function buttonClasses({
   variant = "primary",
   size = "md",
   fullWidth = false,
+  fillHeight = false,
 }: ButtonAppearance): string {
   const widthClass = fullWidth ? "w-full" : "";
-  return `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass}`;
+  const scaleClasses = fillHeight ? fillHeightSizeClasses[size] : sizeClasses[size];
+
+  return `${baseClasses} ${variantClasses[variant]} ${scaleClasses} ${widthClass}`;
 }

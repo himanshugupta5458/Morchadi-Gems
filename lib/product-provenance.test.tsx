@@ -60,8 +60,8 @@ function migratedProduct(): Product {
       ogDescription: "A gold-plated band topped with a little cubic zirconia bow.",
       ogImage: "/products/P901.webp",
     },
-    stock: { inStock: true },
-    flags: { featured: false, isNew: true },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: false, isNew: true, badge: null },
     migrationProvenance: PROVENANCE,
   };
 }

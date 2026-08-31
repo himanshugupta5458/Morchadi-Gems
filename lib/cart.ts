@@ -7,6 +7,7 @@ import {
   parseSelectedOptions,
   resolveSelectedOptions,
 } from "@/lib/options";
+import { validateOrderLineOptions } from "@/lib/order-options";
 import { clampQuantity } from "@/lib/quantity";
 import { selectDisplayImage } from "@/lib/variant-images";
 
@@ -119,6 +120,86 @@ export function addProductToCart(
       ? toCartItem(entry, item.qty + requestedQuantity, item.selectedOptions)
       : item,
   );
+}
+
+/**
+ * What happened to a request to change a line's choices: the cart as it now stands, and the
+ * refusal if there was one.
+ *
+ * A refusal returns the *unchanged* items rather than throwing, so a caller can render the
+ * message beside the control the shopper is still looking at and leave their selection where
+ * it was to be corrected.
+ */
+export interface CartOptionChange {
+  items: CartItem[];
+  /** `null` when the change was applied. The validator's own sentence otherwise. */
+  error: string | null;
+}
+
+const MISSING_LINE_ERROR = "That piece is no longer in your cart.";
+const UNAVAILABLE_LINE_ERROR =
+  "This piece sold out while it was in your cart, so its options can no longer be changed.";
+
+/**
+ * Changes one line's recorded choices, having asked the same question checkout asks.
+ *
+ * **The check is `validateOrderLineOptions`, not a second copy of it.** That is the function
+ * `/api/create-order` runs over every line before an order is created, so a selection this
+ * accepts is one checkout will accept, and a value the catalogue has withdrawn is refused here
+ * in the words the order route would have used. Building a cart-side rule instead would have
+ * meant two answers to "is this a legal choice" that agree until the catalogue changes. See
+ * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md) and ADR-019.
+ *
+ * A change that lands on a line the cart already holds — the shopper editing one of two
+ * bangles down to the size of the other — merges into it and sums the quantities, exactly as
+ * adding the same choice twice does. A change that does not keeps the line where it was in the
+ * list, because a line that jumped to the bottom on every edit would read as a removal.
+ */
+export function changeCartItemOptions(
+  items: CartItem[],
+  catalogue: CatalogueEntry[],
+  key: string,
+  requestedOptions: SelectedOptions,
+): CartOptionChange {
+  const editedIndex = items.findIndex((item) => cartItemKey(item) === key);
+  if (editedIndex === -1) return { items, error: MISSING_LINE_ERROR };
+
+  const edited = items[editedIndex];
+  const entry = indexCatalogue(catalogue).get(edited.productId);
+  if (entry === undefined) return { items, error: MISSING_LINE_ERROR };
+  if (!entry.inStock) return { items, error: UNAVAILABLE_LINE_ERROR };
+
+  const { errors } = validateOrderLineOptions(
+    [{ productId: entry.id, qty: edited.qty, selectedOptions: requestedOptions }],
+    [
+      {
+        id: entry.id,
+        name: entry.name,
+        ...(entry.options === undefined ? {} : { options: entry.options }),
+      },
+    ],
+  );
+  if (errors.length > 0) return { items, error: errors[0].message };
+
+  const updated = toCartItem(entry, edited.qty, requestedOptions);
+  const updatedKey = cartItemKey(updated);
+  const withoutEdited = items.filter((item) => cartItemKey(item) !== key);
+  const twinIndex = withoutEdited.findIndex((item) => cartItemKey(item) === updatedKey);
+
+  if (twinIndex === -1) {
+    const next = [...withoutEdited];
+    next.splice(editedIndex, 0, updated);
+    return { items: next, error: null };
+  }
+
+  return {
+    items: withoutEdited.map((item, index) =>
+      index === twinIndex
+        ? toCartItem(entry, item.qty + edited.qty, requestedOptions)
+        : item,
+    ),
+    error: null,
+  };
 }
 
 export function removeProductFromCart(

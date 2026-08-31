@@ -5,6 +5,8 @@ import {
   toggleCategory,
   toggleCollection,
   togglePriceBand,
+  toggleStatus,
+  withoutPriceRange,
   type ShopQuery,
 } from "@/lib/shop-query";
 import type { AppliedFilter } from "@/lib/shop";
@@ -15,15 +17,28 @@ export interface ShopActiveFiltersProps {
   filters: AppliedFilter[];
 }
 
+/**
+ * Where a chip's × points: the same query with that one selection undone, and nothing else
+ * touched. The custom range clears both of its bounds together, because it was one control and
+ * one chip and half a range is not a filter anybody asked for.
+ */
 function buildRemovalHref(query: ShopQuery, filter: AppliedFilter): string {
   switch (filter.kind) {
     case "category":
       return buildShopHref(toggleCategory(query, filter.slug));
     case "collection":
       return buildShopHref(toggleCollection(query, filter.slug));
+    case "status":
+      return buildShopHref(toggleStatus(query, filter.slug));
     case "price":
       return buildShopHref(togglePriceBand(query, filter.slug));
+    case "price-range":
+      return buildShopHref(withoutPriceRange(query));
   }
+}
+
+function filterKey(filter: AppliedFilter): string {
+  return filter.kind === "price-range" ? filter.kind : `${filter.kind}:${filter.slug}`;
 }
 
 export function ShopActiveFilters({
@@ -38,7 +53,7 @@ export function ShopActiveFilters({
 
       {filters.map((filter) => (
         <Link
-          key={`${filter.kind}:${filter.slug}`}
+          key={filterKey(filter)}
           href={buildRemovalHref(query, filter)}
           scroll={false}
           className="group inline-flex items-center gap-2 border border-line bg-ivory py-1.5 pl-3 pr-2.5 text-body-sm text-ink transition-colors duration-250 hover:border-charcoal"

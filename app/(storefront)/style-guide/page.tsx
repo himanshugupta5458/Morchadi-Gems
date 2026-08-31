@@ -145,8 +145,8 @@ function buildOptionControlsShowcase(images: string[]): Product {
       ogDescription: "A synthetic record that exists to render every option control at once.",
       ogImage: images[0] ?? "",
     },
-    stock: { inStock: true },
-    flags: { featured: false, isNew: false },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: false, isNew: false, badge: null },
   };
 }
 
@@ -362,7 +362,7 @@ export default function StyleGuidePage(): JSX.Element {
         title="ViewAllLink"
         note="The shelf action that sits opposite a left-aligned SectionHeading. Arrow nudges right on hover."
       >
-        <ViewAllLink href="/shop?sort=newest" />
+        <ViewAllLink href="/shop?collection=new-arrivals" />
       </Panel>
 
       <Panel

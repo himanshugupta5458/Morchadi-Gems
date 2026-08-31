@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import type { CartLine } from "@/lib/cart";
+import type { SelectedOptions } from "@/types/product";
+import type { CartLine, CartOptionChange } from "@/lib/cart";
 import { formatRupees } from "@/lib/format";
-import { formatSelectedOptions } from "@/lib/options";
+import { formatSelectedOptions, hasProductOptions } from "@/lib/options";
+import { CartLineOptionsEditor } from "@/components/CartLineOptionsEditor";
 import { PersonalizedNote } from "@/components/PersonalizedNote";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
@@ -16,6 +18,10 @@ export interface CartLineItemProps {
   line: CartLine;
   onQuantityChange: (lineKey: string, quantity: number) => void;
   onRemove: (lineKey: string) => void;
+  onOptionsChange: (
+    lineKey: string,
+    selectedOptions: SelectedOptions,
+  ) => CartOptionChange;
 }
 
 /**
@@ -26,15 +32,23 @@ export interface CartLineItemProps {
  *
  * Every action addresses `line.key`, not the product id, because one product can hold several
  * lines here — one per recorded choice. See ADR-019.
+ *
+ * A personalised line's choices are editable in place. They used to be read-only muted text,
+ * which meant the only way out of a wrong selection was to remove the line and add it again
+ * from the product page — the recovery path for a shopper who was handed a default they never
+ * chose. See [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
  */
 export function CartLineItem({
   line,
   onQuantityChange,
   onRemove,
+  onOptionsChange,
 }: CartLineItemProps): JSX.Element {
   const { key, entry, selectedOptions, image, quantity, lineTotal, isPayable } = line;
   const productHref = `/product/${entry.id}`;
   const isPersonalized = selectedOptions !== undefined;
+  const isEditable =
+    isPayable && isPersonalized && hasProductOptions(entry.options);
   const removeLabel =
     isPersonalized
       ? `Remove ${entry.name} (${formatSelectedOptions(selectedOptions)}) from cart`
@@ -74,7 +88,16 @@ export function CartLineItem({
               {entry.name}
             </Link>
 
-            <SelectedOptionsSummary selectedOptions={selectedOptions} />
+            {isEditable && selectedOptions !== undefined && entry.options !== undefined ? (
+              <CartLineOptionsEditor
+                options={entry.options}
+                selectedOptions={selectedOptions}
+                productName={entry.name}
+                onApply={(nextOptions) => onOptionsChange(key, nextOptions)}
+              />
+            ) : (
+              <SelectedOptionsSummary selectedOptions={selectedOptions} />
+            )}
 
             {isPayable ? (
               <PriceDisplay mrp={entry.mrp} price={entry.price} />

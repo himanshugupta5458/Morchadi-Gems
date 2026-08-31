@@ -11,6 +11,7 @@ export interface ButtonLinkProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
+  fillHeight?: boolean;
   children: ReactNode;
 }
 
@@ -19,10 +20,11 @@ export function ButtonLink({
   variant = "primary",
   size = "md",
   fullWidth = false,
+  fillHeight = false,
   children,
 }: ButtonLinkProps): JSX.Element {
   return (
-    <Link href={href} className={buttonClasses({ variant, size, fullWidth })}>
+    <Link href={href} className={buttonClasses({ variant, size, fullWidth, fillHeight })}>
       {children}
     </Link>
   );

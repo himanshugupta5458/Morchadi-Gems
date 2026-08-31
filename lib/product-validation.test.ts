@@ -119,6 +119,34 @@ describe("record-level rules", () => {
     expect(failuresFor({ ...sample, reviews: [] }).join(" ")).toContain("reviews must not be");
   });
 
+  it("refuses a stock quantity that is not a whole count", () => {
+    for (const quantity of [-1, 2.5, "10", null, undefined]) {
+      expect(
+        failuresFor({ ...sample, stock: { ...sample.stock, quantity } }).join(" "),
+        String(quantity),
+      ).toContain("stock.quantity must be a whole number of pieces, zero or more");
+    }
+  });
+
+  it("accepts a stock quantity of zero, which is how sold out is written down", () => {
+    expect(failuresFor({ ...sample, stock: { inStock: false, quantity: 0 } })).toEqual([]);
+  });
+
+  it("refuses a badge outside the vocabulary, and a missing one", () => {
+    for (const badge of ["featured", "sale", "", undefined]) {
+      expect(
+        failuresFor({ ...sample, flags: { ...sample.flags, badge } }).join(" "),
+        String(badge),
+      ).toContain("flags.badge must be null or one of trending, bestseller, new");
+    }
+  });
+
+  it("accepts each badge the owner may choose, and null for none", () => {
+    for (const badge of [null, "trending", "bestseller", "new"]) {
+      expect(failuresFor({ ...sample, flags: { ...sample.flags, badge } })).toEqual([]);
+    }
+  });
+
   it("refuses a status outside the vocabulary", () => {
     expect(failuresFor({ ...sample, status: "archived" }).join(" ")).toContain(
       "status must be one of draft, active",

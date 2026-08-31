@@ -1,11 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { COLLECTIONS, COLLECTION_SLUGS, type Product } from "@/types/product";
+import {
+  COLLECTIONS,
+  COLLECTION_SLUGS,
+  SURFACED_CATEGORY_SLUGS,
+  type Product,
+} from "@/types/product";
+import { selectProductBadge } from "@/lib/product-badge";
 import { getAllProducts } from "@/lib/products";
 import {
   DEFAULT_SORT,
   PER_PAGE,
   PRICE_BANDS,
   SORT_OPTIONS,
+  STATUS_FILTERS,
   buildPaginationRange,
   buildShopHref,
   countActiveFilters,
@@ -74,8 +81,8 @@ function productFixture(overrides: Partial<Product> = {}): Product {
       ogDescription: "A fixture.",
       ogImage: "",
     },
-    stock: { inStock: true },
-    flags: { featured: false, isNew: false },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: false, isNew: false, badge: null },
     ...overrides,
   };
 }
@@ -122,52 +129,211 @@ describe("getShopResults — defaults", () => {
 
 describe("price bands", () => {
   it("treats both bounds as inclusive", () => {
-    const under999 = getPriceBand("under-999");
-    const mid = getPriceBand("1000-4999");
-    const premium = getPriceBand("5000-plus");
+    const under99 = getPriceBand("under-99");
+    const above999 = getPriceBand("above-999");
 
-    expect(isPriceInBand(999, under999)).toBe(true);
-    expect(isPriceInBand(1000, under999)).toBe(false);
+    expect(isPriceInBand(99, under99)).toBe(true);
+    expect(isPriceInBand(100, under99)).toBe(false);
 
-    expect(isPriceInBand(999, mid)).toBe(false);
-    expect(isPriceInBand(1000, mid)).toBe(true);
-    expect(isPriceInBand(4999, mid)).toBe(true);
-    expect(isPriceInBand(5000, mid)).toBe(false);
-
-    expect(isPriceInBand(4999, premium)).toBe(false);
-    expect(isPriceInBand(5000, premium)).toBe(true);
+    expect(isPriceInBand(999, above999)).toBe(false);
+    expect(isPriceInBand(1000, above999)).toBe(true);
   });
 
-  it("is unbounded above in the premium band", () => {
-    expect(isPriceInBand(Number.MAX_SAFE_INTEGER, getPriceBand("5000-plus"))).toBe(true);
+  it("is unbounded above in the top band", () => {
+    expect(isPriceInBand(Number.MAX_SAFE_INTEGER, getPriceBand("above-999"))).toBe(true);
   });
 
   it("keeps every returned product inside the requested band", () => {
-    let returnedAcrossAllBands = 0;
-
     for (const band of PRICE_BANDS) {
-      const everyItem = collectEveryPage({ price: band.slug });
-      returnedAcrossAllBands += everyItem.length;
-
-      for (const product of everyItem) {
+      for (const product of collectEveryPage({ price: band.slug })) {
         expect(isPriceInBand(product.pricing.price, band)).toBe(true);
       }
     }
-
-    expect(returnedAcrossAllBands).toBe(CATALOGUE_SIZE);
   });
 
-  it("partitions the catalogue — the three bands are disjoint and exhaustive", () => {
-    const totals = PRICE_BANDS.map((band) => getShopResults({ price: band.slug }).total);
-    expect(totals.reduce((sum, total) => sum + total, 0)).toBe(CATALOGUE_SIZE);
+  it("nests the four ceilings, each containing the one below it", () => {
+    const ceilings = ["under-99", "under-299", "under-499", "under-999"] as const;
+    const totals = ceilings.map((slug) => getShopResults({ price: slug }).total);
+
+    expect(totals[0]).toBeGreaterThan(0);
+    for (let index = 1; index < totals.length; index += 1) {
+      expect(totals[index]).toBeGreaterThanOrEqual(totals[index - 1]);
+    }
   });
 
-  it("ORs multiple bands together", () => {
-    const combined = getShopResults({ price: "under-999,5000-plus" }).total;
-    const under = getShopResults({ price: "under-999" }).total;
-    const premium = getShopResults({ price: "5000-plus" }).total;
+  it("covers every price between the widest ceiling and the floor above it", () => {
+    const under999 = getShopResults({ price: "under-999" }).total;
+    const above999 = getShopResults({ price: "above-999" }).total;
 
-    expect(combined).toBe(under + premium);
+    expect(under999 + above999).toBe(CATALOGUE_SIZE);
+  });
+
+  it("ORs multiple bands together, which for nested bands is the wider one", () => {
+    const combined = getShopResults({ price: "under-99,above-999" }).total;
+    const under = getShopResults({ price: "under-99" }).total;
+    const above = getShopResults({ price: "above-999" }).total;
+
+    expect(combined).toBe(under + above);
+    expect(getShopResults({ price: "under-99,under-999" }).total).toBe(
+      getShopResults({ price: "under-999" }).total,
+    );
+  });
+});
+
+describe("the custom price range", () => {
+  it("applies a min and a max together", () => {
+    const everyItem = collectEveryPage({ min: "200", max: "300" });
+
+    expect(everyItem.length).toBeGreaterThan(0);
+    for (const product of everyItem) {
+      expect(product.pricing.price).toBeGreaterThanOrEqual(200);
+      expect(product.pricing.price).toBeLessThanOrEqual(300);
+    }
+  });
+
+  it("applies either bound on its own", () => {
+    for (const product of collectEveryPage({ min: "500" })) {
+      expect(product.pricing.price).toBeGreaterThanOrEqual(500);
+    }
+    for (const product of collectEveryPage({ max: "60" })) {
+      expect(product.pricing.price).toBeLessThanOrEqual(60);
+    }
+  });
+
+  it("ANDs with a ticked band rather than widening it", () => {
+    const banded = getShopResults({ price: "under-99" }).total;
+    const narrowed = getShopResults({ price: "under-99", min: "90" }).total;
+
+    expect(narrowed).toBeLessThan(banded);
+    expect(getShopResults({ price: "under-99", min: "5000" }).total).toBe(0);
+  });
+
+  it("ignores a bound that is not a number, and one below zero", () => {
+    expect(getShopResults({ min: "abc" }).total).toBe(CATALOGUE_SIZE);
+    expect(getShopResults({ max: "-5" }).total).toBe(CATALOGUE_SIZE);
+  });
+
+  it("drops an inverted range whole rather than rendering an impossible one", () => {
+    const result = getShopResults({ min: "900", max: "100" });
+
+    expect(result.total).toBe(CATALOGUE_SIZE);
+    expect(result.query.priceRange).toEqual({ min: null, max: null });
+    expect(result.appliedFilters).toEqual([]);
+  });
+
+  it("reports the range as one removable chip", () => {
+    const { appliedFilters } = getShopResults({ min: "200", max: "300" });
+
+    expect(appliedFilters).toEqual([{ kind: "price-range", label: "₹200 – ₹300" }]);
+  });
+
+  it("counts as one active filter however many bounds are set", () => {
+    expect(countActiveFilters(queryOf({ min: "200" }))).toBe(1);
+    expect(countActiveFilters(queryOf({ min: "200", max: "300" }))).toBe(1);
+  });
+});
+
+describe("the status facet", () => {
+  it("offers exactly the badges a card can render", () => {
+    expect(STATUS_FILTERS.map((option) => option.slug)).toEqual([
+      "sold-out",
+      "low-stock",
+      "trending",
+      "bestseller",
+      "new",
+    ]);
+  });
+
+  it("lists exactly the products whose card shows that badge", () => {
+    for (const option of STATUS_FILTERS) {
+      for (const product of collectEveryPage({ status: option.slug })) {
+        expect(selectProductBadge(product.stock, product.flags)?.kind).toBe(option.slug);
+      }
+    }
+  });
+
+  it("finds the sold-out products in the real catalogue", () => {
+    const soldOut = collectEveryPage({ status: "sold-out" });
+
+    expect(soldOut.length).toBe(
+      getAllProducts().filter((product) => !product.stock.inStock).length,
+    );
+    expect(soldOut.length).toBeGreaterThan(0);
+  });
+
+  it("files a low-stock product under low stock even when it carries a manual badge", () => {
+    const query = queryOf({ status: "trending" });
+    const lowAndTrending = productFixture({
+      stock: { inStock: true, quantity: 1 },
+      flags: { featured: false, isNew: false, badge: "trending" },
+    });
+
+    expect(matchesShopQuery(lowAndTrending, query)).toBe(false);
+    expect(matchesShopQuery(lowAndTrending, queryOf({ status: "low-stock" }))).toBe(true);
+  });
+
+  it("matches nothing for a product showing no badge at all", () => {
+    const unbadged = productFixture({
+      stock: { inStock: true, quantity: 10 },
+      flags: { featured: false, isNew: false, badge: null },
+    });
+
+    for (const option of STATUS_FILTERS) {
+      expect(matchesShopQuery(unbadged, queryOf({ status: option.slug }))).toBe(false);
+    }
+    expect(matchesShopQuery(unbadged, queryOf({}))).toBe(true);
+  });
+
+  it("ORs the selected statuses together", () => {
+    const soldOut = getShopResults({ status: "sold-out" }).total;
+    const isNew = getShopResults({ status: "new" }).total;
+
+    expect(getShopResults({ status: "sold-out,new" }).total).toBe(soldOut + isNew);
+  });
+
+  it("drops an unknown status instead of matching nothing", () => {
+    expect(getShopResults({ status: "backordered" }).total).toBe(CATALOGUE_SIZE);
+  });
+
+  it("reports an applied status filter with its display label", () => {
+    expect(getShopResults({ status: "low-stock" }).appliedFilters).toEqual([
+      { kind: "status", slug: "low-stock", label: "Only a few left" },
+    ]);
+  });
+});
+
+describe("category counts", () => {
+  it("counts every surfaced category against the unfiltered catalogue", () => {
+    const { categoryCounts } = getShopResults({});
+
+    for (const slug of SURFACED_CATEGORY_SLUGS) {
+      expect(categoryCounts[slug]).toBe(
+        getAllProducts().filter((product) => product.category === slug).length,
+      );
+    }
+  });
+
+  it("sums to the catalogue when nothing is filtered", () => {
+    const { categoryCounts } = getShopResults({});
+    const total = Object.values(categoryCounts).reduce((sum, count) => sum + count, 0);
+
+    expect(total).toBe(CATALOGUE_SIZE);
+  });
+
+  it("narrows under another facet, so a count promises what ticking the box gives", () => {
+    const { categoryCounts } = getShopResults({ price: "under-99" });
+
+    for (const slug of SURFACED_CATEGORY_SLUGS) {
+      expect(categoryCounts[slug]).toBe(
+        getShopResults({ price: "under-99", category: slug }).total,
+      );
+    }
+  });
+
+  it("is unchanged by the category facet itself, so no count reads zero", () => {
+    const unfiltered = getShopResults({}).categoryCounts;
+
+    expect(getShopResults({ category: "rings" }).categoryCounts).toEqual(unfiltered);
   });
 });
 
@@ -182,24 +348,42 @@ describe("sorting", () => {
     expect(prices).toEqual([...prices].sort((left, right) => right - left));
   });
 
-  it("offers no rating sort, because the catalogue carries no ratings", () => {
-    expect(SORT_OPTIONS.map((option) => option.slug)).not.toContain("rating-desc");
+  it("offers exactly four sorts, and no rating sort", () => {
+    expect(SORT_OPTIONS.map((option) => option.slug)).toEqual([
+      "price-asc",
+      "price-desc",
+      "name-asc",
+      "name-desc",
+    ]);
+    expect(SORT_OPTIONS.map((option) => option.label)).toEqual([
+      "Price: Low to High",
+      "Price: High to Low",
+      "A to Z",
+      "Z to A",
+    ]);
     expect(isSortSlug("rating-desc")).toBe(false);
+  });
+
+  it("no longer offers a newest sort", () => {
+    expect(SORT_OPTIONS.map((option) => option.slug)).not.toContain("newest");
+    expect(isSortSlug("newest")).toBe(false);
+    expect(getShopResults({ sort: "newest" }).query.sort).toBe(DEFAULT_SORT);
   });
 
   it("falls back to the default sort when an unknown sort is asked for", () => {
     expect(getShopResults({ sort: "rating-desc" }).query.sort).toBe(DEFAULT_SORT);
   });
 
-  it("puts new arrivals first under the default sort", () => {
-    const everyItem = collectEveryPage({ sort: "newest" });
-    const newCount = everyItem.filter((product) => product.flags.isNew).length;
+  it("defaults to A to Z", () => {
+    expect(DEFAULT_SORT).toBe("name-asc");
 
-    expect(newCount).toBeGreaterThan(0);
-    expect(everyItem.slice(0, newCount).every((product) => product.flags.isNew)).toBe(
-      true,
-    );
-    expect(everyItem.slice(newCount).some((product) => product.flags.isNew)).toBe(false);
+    const names = collectEveryPage({}).map((product) => product.name);
+    expect(names).toEqual([...names].sort((left, right) => left.localeCompare(right)));
+  });
+
+  it("orders name-desc as the exact reverse ordering of name-asc", () => {
+    const names = collectEveryPage({ sort: "name-desc" }).map((product) => product.name);
+    expect(names).toEqual([...names].sort((left, right) => right.localeCompare(left)));
   });
 
   it("breaks price ties on id, so tied products keep a stable order", () => {
@@ -215,20 +399,14 @@ describe("sorting", () => {
     expect(idsOf(tied)).toEqual([...idsOf(tied)].sort());
   });
 
-  it("breaks newest ties on the featured flag, then id", () => {
-    const everyItem = collectEveryPage({ sort: "newest" });
+  it("breaks name ties on id, so products sharing a name keep a stable order", () => {
+    const everyItem = collectEveryPage({ sort: "name-asc" });
 
     for (let index = 1; index < everyItem.length; index += 1) {
       const previous = everyItem[index - 1];
       const current = everyItem[index];
-      if (previous.flags.isNew !== current.flags.isNew) continue;
-
-      if (previous.flags.featured === current.flags.featured) {
-        expect(previous.id.localeCompare(current.id)).toBeLessThan(0);
-      } else {
-        expect(previous.flags.featured).toBe(true);
-        expect(current.flags.featured).toBe(false);
-      }
+      if (previous.name !== current.name) continue;
+      expect(previous.id.localeCompare(current.id)).toBeLessThan(0);
     }
   });
 
@@ -257,7 +435,7 @@ describe("filter combinations", () => {
     const necklaces = getShopResults({ category: "necklaces" }).total;
 
     expect(necklaces).toBeGreaterThan(0);
-    expect(getShopResults({ category: "necklaces", price: "5000-plus" }).total).toBe(0);
+    expect(getShopResults({ category: "necklaces", price: "above-999" }).total).toBe(0);
   });
 
   it("ORs multiple categories", () => {
@@ -276,7 +454,7 @@ describe("filter combinations", () => {
   });
 
   it("returns an empty result set without crashing when nothing matches", () => {
-    const result = getShopResults({ category: "anklets", price: "5000-plus" });
+    const result = getShopResults({ category: "anklets", price: "above-999" });
 
     expect(result.total).toBe(0);
     expect(result.items).toEqual([]);
@@ -353,7 +531,7 @@ describe("page clamping", () => {
   it("clamps to page 1 when the filtered set is empty", () => {
     const result = getShopResults({
       category: "anklets",
-      price: "5000-plus",
+      price: "above-999",
       page: "9999",
     });
     expect(result.page).toBe(1);
@@ -417,7 +595,7 @@ describe("collections", () => {
   it("reads best-sellers off the featured flag, not a tag", () => {
     const featured = productFixture({
       id: "fx-featured",
-      flags: { featured: true, isNew: false },
+      flags: { featured: true, isNew: false, badge: null },
     });
 
     expect(isProductInCollection(featured, "best-sellers")).toBe(true);
@@ -428,7 +606,7 @@ describe("collections", () => {
   it("reads new-arrivals off the isNew flag, not a tag", () => {
     const fresh = productFixture({
       id: "fx-new",
-      flags: { featured: false, isNew: true },
+      flags: { featured: false, isNew: true, badge: null },
     });
 
     expect(isProductInCollection(fresh, "new-arrivals")).toBe(true);
@@ -460,7 +638,7 @@ describe("collections", () => {
   });
 
   it("ANDs collection with price band", () => {
-    const query = queryOf({ collection: "gifting", price: "under-999" });
+    const query = queryOf({ collection: "gifting", price: "under-499" });
 
     expect(
       matchesShopQuery(
@@ -554,9 +732,9 @@ describe("parseShopQuery", () => {
       "earrings",
       "rings",
     ]);
-    expect(parseShopQuery({ price: "5000-plus,under-999" }).priceBands).toEqual([
-      "under-999",
-      "5000-plus",
+    expect(parseShopQuery({ price: "above-999,under-99" }).priceBands).toEqual([
+      "under-99",
+      "above-999",
     ]);
   });
 
@@ -574,13 +752,15 @@ describe("buildShopHref", () => {
     const query: ShopQuery = {
       categories: ["earrings", "rings"],
       collections: ["gifting"],
+      statuses: ["low-stock"],
       priceBands: ["under-999"],
+      priceRange: { min: 200, max: 300 },
       sort: "price-asc",
       page: 3,
     };
 
     expect(buildShopHref(query)).toBe(
-      "/shop?category=earrings,rings&collection=gifting&price=under-999&sort=price-asc&page=3",
+      "/shop?category=earrings,rings&collection=gifting&status=low-stock&price=under-999&min=200&max=300&sort=price-asc&page=3",
     );
   });
 
@@ -588,7 +768,10 @@ describe("buildShopHref", () => {
     const query = parseShopQuery({
       category: "rings,earrings",
       collection: "anti-tarnish,gifting",
-      price: "1000-4999",
+      status: "new,trending",
+      price: "under-299",
+      min: "150",
+      max: "400",
       sort: "price-desc",
       page: "4",
     });
@@ -602,7 +785,10 @@ function hrefToParams(href: string): ShopSearchParams {
   return {
     category: search.get("category") ?? undefined,
     collection: search.get("collection") ?? undefined,
+    status: search.get("status") ?? undefined,
     price: search.get("price") ?? undefined,
+    min: search.get("min") ?? undefined,
+    max: search.get("max") ?? undefined,
     sort: search.get("sort") ?? undefined,
     page: search.get("page") ?? undefined,
   };

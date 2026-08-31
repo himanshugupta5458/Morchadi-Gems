@@ -165,13 +165,18 @@ export default function ShopPage({ searchParams }: ShopPageProps): JSX.Element {
       <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-10 sm:gap-10 lg:mt-14 lg:grid-cols-[15rem_1fr] lg:gap-14">
         <aside className="hidden lg:block">
           <h2 className="sr-only">Filters</h2>
-          <ShopFilterPanel query={query} />
+          <div className="sticky top-36 max-h-[calc(100vh-10rem)] overflow-y-auto pb-4 pr-1">
+            <ShopFilterPanel query={query} categoryCounts={results.categoryCounts} />
+          </div>
         </aside>
 
         <div className="flex flex-col gap-6 sm:gap-8">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line pb-4 sm:pb-5">
             <div className="flex items-center gap-4">
-              <ShopFilterDrawer query={query} />
+              <ShopFilterDrawer
+                query={query}
+                categoryCounts={results.categoryCounts}
+              />
               <p className="text-body-sm text-muted">
                 {results.total === 0
                   ? "No pieces match"

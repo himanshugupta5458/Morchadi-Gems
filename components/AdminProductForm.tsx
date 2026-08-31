@@ -22,10 +22,14 @@ import {
 import { buttonClasses } from "@/lib/button-styles";
 import {
   CATEGORIES,
+  PRODUCT_BADGES,
   PRODUCT_STATUSES,
+  isProductBadge,
   type Product,
+  type ProductBadge,
   type ProductStatus,
 } from "@/types/product";
+import { LOW_STOCK_THRESHOLD } from "@/lib/product-badge";
 import { AdminProductOptionEditor } from "@/components/AdminProductOptionEditor";
 import { AdminVariantImagePicker } from "@/components/AdminVariantImagePicker";
 import { Button } from "@/components/Button";
@@ -40,6 +44,18 @@ const HINT_CLASSES = "text-body-sm text-muted";
 const SECTION_CLASSES = "flex flex-col gap-5 border border-line px-5 py-5";
 
 const SECTION_TITLE_CLASSES = "font-sans text-label uppercase tracking-caps text-ink";
+
+const NO_BADGE_VALUE = "none";
+
+const BADGE_LABELS: Record<ProductBadge, string> = {
+  trending: "Trending",
+  bestseller: "Best Seller",
+  new: "New",
+};
+
+function toBadgeChoice(value: string): ProductBadge | null {
+  return isProductBadge(value) ? value : null;
+}
 
 /**
  * A labelled control, with any explanatory line kept **outside** the `<label>`.
@@ -390,6 +406,19 @@ export function AdminProductForm({
               checked={draft.inStock}
               onChange={(next) => update({ inStock: next })}
             />
+
+            <FieldLabel
+              label="Quantity on the shelf"
+              hint={`A whole number of pieces. Zero reads as sold out whatever the tick above says, and ${LOW_STOCK_THRESHOLD} or fewer puts "Only N left" on the card. Leave it above that unless the count is real.`}
+            >
+              <input
+                type="text"
+                inputMode="numeric"
+                value={draft.quantity}
+                onChange={(event) => update({ quantity: event.target.value })}
+                className={FIELD_CLASSES}
+              />
+            </FieldLabel>
             <CheckboxField
               label="Featured"
               hint="Fills the home best-sellers row and the Best Sellers collection."
@@ -402,6 +431,24 @@ export function AdminProductForm({
               checked={draft.isNew}
               onChange={(next) => update({ isNew: next })}
             />
+
+            <FieldLabel
+              label="Card badge"
+              hint="What the card says when the piece is in stock and not running low. Sold out and low stock outrank it. New shows anyway while New arrival is ticked."
+            >
+              <select
+                value={draft.badge ?? NO_BADGE_VALUE}
+                onChange={(event) => update({ badge: toBadgeChoice(event.target.value) })}
+                className={FIELD_CLASSES}
+              >
+                <option value={NO_BADGE_VALUE}>No badge</option>
+                {PRODUCT_BADGES.map((badge) => (
+                  <option key={badge} value={badge}>
+                    {BADGE_LABELS[badge]}
+                  </option>
+                ))}
+              </select>
+            </FieldLabel>
           </section>
 
           <section className={SECTION_CLASSES}>

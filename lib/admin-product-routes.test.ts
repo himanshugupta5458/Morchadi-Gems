@@ -79,8 +79,8 @@ function productFixture(): Product {
       ogDescription: "A gold-plated wave band.",
       ogImage: `/products/${PRODUCT_ID}.webp`,
     },
-    stock: { inStock: true },
-    flags: { featured: false, isNew: true },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: false, isNew: true, badge: null },
   };
 }
 

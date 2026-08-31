@@ -71,11 +71,13 @@
       "ogImage": "/products/P001.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -120,11 +122,13 @@
       "ogImage": "/products/P002.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -165,11 +169,13 @@
       "ogImage": "/products/P003.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -210,11 +216,13 @@
       "ogImage": "/products/P004.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -286,11 +294,13 @@
       "ogImage": "/products/P005.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -344,11 +354,13 @@
       "ogImage": "/products/P006.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -389,11 +401,13 @@
       "ogImage": "/products/P007.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -434,11 +448,13 @@
       "ogImage": "/products/P008.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -479,11 +495,13 @@
       "ogImage": "/products/P009.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -538,11 +556,13 @@
       "ogImage": "/products/P010.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -583,11 +603,13 @@
       "ogImage": "/products/P011.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -628,11 +650,13 @@
       "ogImage": "/products/P012.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -673,11 +697,13 @@
       "ogImage": "/products/P013.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -718,11 +744,13 @@
       "ogImage": "/products/P014.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -763,11 +791,13 @@
       "ogImage": "/products/P015.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -808,11 +838,13 @@
       "ogImage": "/products/P016.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -853,11 +885,13 @@
       "ogImage": "/products/P017.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -898,11 +932,13 @@
       "ogImage": "/products/P018.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -943,11 +979,13 @@
       "ogImage": "/products/P019.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -988,11 +1026,13 @@
       "ogImage": "/products/P020.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -1033,11 +1073,13 @@
       "ogImage": "/products/P021.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1081,11 +1123,13 @@
       "ogImage": "/products/P022.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1129,11 +1173,13 @@
       "ogImage": "/products/P023.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1174,11 +1220,13 @@
       "ogImage": "/products/P024.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -1219,11 +1267,13 @@
       "ogImage": "/products/P025.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1264,11 +1314,13 @@
       "ogImage": "/products/P026.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1309,11 +1361,13 @@
       "ogImage": "/products/P027.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1354,11 +1408,13 @@
       "ogImage": "/products/P028.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1399,11 +1455,13 @@
       "ogImage": "/products/P029.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1444,11 +1502,13 @@
       "ogImage": "/products/P030.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1490,11 +1550,13 @@
       "ogImage": "/products/P031.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -1536,11 +1598,13 @@
       "ogImage": "/products/P032.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1582,11 +1646,13 @@
       "ogImage": "/products/P033.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1628,11 +1694,13 @@
       "ogImage": "/products/P034.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1674,11 +1742,13 @@
       "ogImage": "/products/P035.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1721,11 +1791,13 @@
       "ogImage": "/products/P036.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1769,11 +1841,13 @@
       "ogImage": "/products/P037.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": true,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1817,11 +1891,13 @@
       "ogImage": "/products/P038.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1865,11 +1941,13 @@
       "ogImage": "/products/P039.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1913,11 +1991,13 @@
       "ogImage": "/products/P040.webp"
     },
     "stock": {
-      "inStock": false
+      "inStock": false,
+      "quantity": 0
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -1958,11 +2038,13 @@
       "ogImage": "/products/P041.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2002,11 +2084,13 @@
       "ogImage": "/products/P042.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2046,11 +2130,13 @@
       "ogImage": "/products/P043.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2090,11 +2176,13 @@
       "ogImage": "/products/P044.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2135,11 +2223,13 @@
       "ogImage": "/products/P045.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2183,11 +2273,13 @@
       "ogImage": "/products/P046.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -2227,11 +2319,13 @@
       "ogImage": "/products/P047.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2284,11 +2378,13 @@
       "ogImage": "/products/P048.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     }
   },
   {
@@ -2329,11 +2425,13 @@
       "ogImage": "/products/P049.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": false
+      "isNew": false,
+      "badge": null
     }
   },
   {
@@ -2379,11 +2477,13 @@
       "ogImage": "/products/P106.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "124",
@@ -2443,11 +2543,13 @@
       "ogImage": "/products/P108.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "128",
@@ -2501,11 +2603,13 @@
       "ogImage": "/products/P109.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "129",
@@ -2559,11 +2663,13 @@
       "ogImage": "/products/P110.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "131",
@@ -2617,11 +2723,13 @@
       "ogImage": "/products/P115.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "138",
@@ -2675,11 +2783,13 @@
       "ogImage": "/products/P117.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "141",
@@ -2733,11 +2843,13 @@
       "ogImage": "/products/P118.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "142",
@@ -2791,11 +2903,13 @@
       "ogImage": "/products/P119.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "143",
@@ -2849,11 +2963,13 @@
       "ogImage": "/products/P120.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "145",
@@ -2907,11 +3023,13 @@
       "ogImage": "/products/P121.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "146",
@@ -2963,11 +3081,13 @@
       "ogImage": "/products/P122.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "148",
@@ -3027,11 +3147,13 @@
       "ogImage": "/products/P101.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "31",
@@ -3079,11 +3201,13 @@
       "ogImage": "/products/P102.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "50",
@@ -3134,11 +3258,13 @@
       "ogImage": "/products/P104.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "121",
@@ -3192,11 +3318,13 @@
       "ogImage": "/products/P123.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "151",
@@ -3247,11 +3375,13 @@
       "ogImage": "/products/P204.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "502",
@@ -3332,11 +3462,13 @@
       "ogImage": "/products/P212.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "511",
@@ -3401,11 +3533,13 @@
       "ogImage": "/products/P213.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "512",
@@ -3466,11 +3600,13 @@
       "ogImage": "/products/P241.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "626",
@@ -3557,11 +3693,13 @@
       "ogImage": "/products/P279.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "667",
@@ -3642,11 +3780,13 @@
       "ogImage": "/products/P282.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "670",
@@ -3709,11 +3849,13 @@
       "ogImage": "/products/P292.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "690",
@@ -3772,11 +3914,13 @@
       "ogImage": "/products/P295.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "699",
@@ -3835,11 +3979,13 @@
       "ogImage": "/products/P321.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "747",
@@ -3899,11 +4045,13 @@
       "ogImage": "/products/P322.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "748",
@@ -3964,11 +4112,13 @@
       "ogImage": "/products/P363.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "803",
@@ -4014,11 +4164,13 @@
       "ogImage": "/products/P372.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "818",
@@ -4064,11 +4216,13 @@
       "ogImage": "/products/P373.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "819",
@@ -4114,11 +4268,13 @@
       "ogImage": "/products/P374.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "820",
@@ -4164,11 +4320,13 @@
       "ogImage": "/products/P375.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "821",
@@ -4214,11 +4372,13 @@
       "ogImage": "/products/P376.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "824",
@@ -4264,11 +4424,13 @@
       "ogImage": "/products/P377.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "825",
@@ -4314,11 +4476,13 @@
       "ogImage": "/products/P378.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "826",
@@ -4364,11 +4528,13 @@
       "ogImage": "/products/P379.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "827",
@@ -4414,11 +4580,13 @@
       "ogImage": "/products/P380.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "828",
@@ -4464,11 +4632,13 @@
       "ogImage": "/products/P381.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "829",
@@ -4518,11 +4688,13 @@
       "ogImage": "/products/P385.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "834",
@@ -4581,11 +4753,13 @@
       "ogImage": "/products/P395.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "847",
@@ -4637,11 +4811,13 @@
       "ogImage": "/products/P396.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "848",
@@ -4693,11 +4869,13 @@
       "ogImage": "/products/P397.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "849",
@@ -4747,11 +4925,13 @@
       "ogImage": "/products/P447.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "902",
@@ -4800,11 +4980,13 @@
       "ogImage": "/products/P449.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "905",
@@ -4854,11 +5036,13 @@
       "ogImage": "/products/P475.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "931",
@@ -4908,11 +5092,13 @@
       "ogImage": "/products/P478.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "934",
@@ -4963,11 +5149,13 @@
       "ogImage": "/products/P533.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "997",
@@ -5023,11 +5211,13 @@
       "ogImage": "/products/P580.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1050",
@@ -5121,11 +5311,13 @@
       "ogImage": "/products/P586.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1056",
@@ -5180,11 +5372,13 @@
       "ogImage": "/products/P606.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1078",
@@ -5240,11 +5434,13 @@
       "ogImage": "/products/P608.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1080",
@@ -5291,11 +5487,13 @@
       "ogImage": "/products/P426.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "879",
@@ -5343,11 +5541,13 @@
       "ogImage": "/products/P427.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "880",
@@ -5395,11 +5595,13 @@
       "ogImage": "/products/P428.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "881",
@@ -5446,11 +5648,13 @@
       "ogImage": "/products/P429.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "882",
@@ -5497,11 +5701,13 @@
       "ogImage": "/products/P431.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "884",
@@ -5549,11 +5755,13 @@
       "ogImage": "/products/P435.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "888",
@@ -5601,11 +5809,13 @@
       "ogImage": "/products/P436.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "889",
@@ -5653,11 +5863,13 @@
       "ogImage": "/products/P473.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "929",
@@ -5709,11 +5921,13 @@
       "ogImage": "/products/P494.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "950",
@@ -5765,11 +5979,13 @@
       "ogImage": "/products/P495.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "951",
@@ -5821,11 +6037,13 @@
       "ogImage": "/products/P496.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "952",
@@ -5877,11 +6095,13 @@
       "ogImage": "/products/P497.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "953",
@@ -5933,11 +6153,13 @@
       "ogImage": "/products/P498.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "954",
@@ -5984,11 +6206,13 @@
       "ogImage": "/products/P499.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "955",
@@ -6035,11 +6259,13 @@
       "ogImage": "/products/P500.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "956",
@@ -6086,11 +6312,13 @@
       "ogImage": "/products/P501.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "957",
@@ -6137,11 +6365,13 @@
       "ogImage": "/products/P502.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "958",
@@ -6188,11 +6418,13 @@
       "ogImage": "/products/P503.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "959",
@@ -6239,11 +6471,13 @@
       "ogImage": "/products/P504.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "960",
@@ -6296,11 +6530,13 @@
       "ogImage": "/products/P549.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1015",
@@ -6351,11 +6587,13 @@
       "ogImage": "/products/P103.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "62",
@@ -6407,11 +6645,13 @@
       "ogImage": "/products/P105.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "123",
@@ -6463,11 +6703,13 @@
       "ogImage": "/products/P107.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "126",
@@ -6521,11 +6763,13 @@
       "ogImage": "/products/P111.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "133",
@@ -6579,11 +6823,13 @@
       "ogImage": "/products/P112.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "134",
@@ -6637,11 +6883,13 @@
       "ogImage": "/products/P113.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "135",
@@ -6695,11 +6943,13 @@
       "ogImage": "/products/P124.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "154",
@@ -6753,11 +7003,13 @@
       "ogImage": "/products/P125.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "155",
@@ -6811,11 +7063,13 @@
       "ogImage": "/products/P126.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "156",
@@ -6869,11 +7123,13 @@
       "ogImage": "/products/P130.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "160",
@@ -6927,11 +7183,13 @@
       "ogImage": "/products/P131.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "161",
@@ -6985,11 +7243,13 @@
       "ogImage": "/products/P132.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "162",
@@ -7043,11 +7303,13 @@
       "ogImage": "/products/P133.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "163",
@@ -7101,11 +7363,13 @@
       "ogImage": "/products/P134.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "164",
@@ -7159,11 +7423,13 @@
       "ogImage": "/products/P137.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "167",
@@ -7217,11 +7483,13 @@
       "ogImage": "/products/P139.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "169",
@@ -7275,11 +7543,13 @@
       "ogImage": "/products/P140.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "170",
@@ -7333,11 +7603,13 @@
       "ogImage": "/products/P143.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "173",
@@ -7391,11 +7663,13 @@
       "ogImage": "/products/P145.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "175",
@@ -7449,11 +7723,13 @@
       "ogImage": "/products/P147.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "177",
@@ -7506,11 +7782,13 @@
       "ogImage": "/products/P151.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "183",
@@ -7564,11 +7842,13 @@
       "ogImage": "/products/P152.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "184",
@@ -7617,11 +7897,13 @@
       "ogImage": "/products/P175.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "472",
@@ -7670,11 +7952,13 @@
       "ogImage": "/products/P176.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "473",
@@ -7723,11 +8007,13 @@
       "ogImage": "/products/P178.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "475",
@@ -7776,11 +8062,13 @@
       "ogImage": "/products/P180.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "477",
@@ -7829,11 +8117,13 @@
       "ogImage": "/products/P181.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "478",
@@ -7893,11 +8183,13 @@
       "ogImage": "/products/P215.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "514",
@@ -7957,11 +8249,13 @@
       "ogImage": "/products/P216.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "515",
@@ -8021,11 +8315,13 @@
       "ogImage": "/products/P218.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "517",
@@ -8079,11 +8375,13 @@
       "ogImage": "/products/P240.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "541",
@@ -8134,11 +8432,13 @@
       "ogImage": "/products/P247.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "632",
@@ -8189,11 +8489,13 @@
       "ogImage": "/products/P248.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "633",
@@ -8244,11 +8546,13 @@
       "ogImage": "/products/P249.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "634",
@@ -8303,11 +8607,13 @@
       "ogImage": "/products/P299.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "703",
@@ -8360,11 +8666,13 @@
       "ogImage": "/products/P300.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "708",
@@ -8417,11 +8725,13 @@
       "ogImage": "/products/P319.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "741",
@@ -8470,11 +8780,13 @@
       "ogImage": "/products/P320.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "742",
@@ -8523,11 +8835,13 @@
       "ogImage": "/products/P327.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "753",
@@ -8580,11 +8894,13 @@
       "ogImage": "/products/P328.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "754",
@@ -8634,11 +8950,13 @@
       "ogImage": "/products/P329.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "755",
@@ -8688,11 +9006,13 @@
       "ogImage": "/products/P330.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "756",
@@ -8742,11 +9062,13 @@
       "ogImage": "/products/P331.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "757",
@@ -8796,11 +9118,13 @@
       "ogImage": "/products/P332.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "758",
@@ -8850,11 +9174,13 @@
       "ogImage": "/products/P333.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "759",
@@ -8905,11 +9231,13 @@
       "ogImage": "/products/P334.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "764",
@@ -8959,11 +9287,13 @@
       "ogImage": "/products/P338.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "768",
@@ -9012,11 +9342,13 @@
       "ogImage": "/products/P355.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "790",
@@ -9079,11 +9411,13 @@
       "ogImage": "/products/P356.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "792",
@@ -9145,11 +9479,13 @@
       "ogImage": "/products/P357.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "793",
@@ -9203,11 +9539,13 @@
       "ogImage": "/products/P358.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "794",
@@ -9264,11 +9602,13 @@
       "ogImage": "/products/P386.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "835",
@@ -9321,11 +9661,13 @@
       "ogImage": "/products/P387.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "836",
@@ -9377,11 +9719,13 @@
       "ogImage": "/products/P388.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "837",
@@ -9433,11 +9777,13 @@
       "ogImage": "/products/P389.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "839",
@@ -9491,11 +9837,13 @@
       "ogImage": "/products/P390.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "840",
@@ -9546,11 +9894,13 @@
       "ogImage": "/products/P391.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "841",
@@ -9602,11 +9952,13 @@
       "ogImage": "/products/P392.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "842",
@@ -9658,11 +10010,13 @@
       "ogImage": "/products/P393.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "844",
@@ -9721,11 +10075,13 @@
       "ogImage": "/products/P417.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "870",
@@ -9784,11 +10140,13 @@
       "ogImage": "/products/P418.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "871",
@@ -9847,11 +10205,13 @@
       "ogImage": "/products/P419.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "872",
@@ -9910,11 +10270,13 @@
       "ogImage": "/products/P420.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "873",
@@ -9973,11 +10335,13 @@
       "ogImage": "/products/P421.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "874",
@@ -10027,11 +10391,13 @@
       "ogImage": "/products/P430.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "883",
@@ -10081,11 +10447,13 @@
       "ogImage": "/products/P434.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "887",
@@ -10135,11 +10503,13 @@
       "ogImage": "/products/P437.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "891",
@@ -10190,11 +10560,13 @@
       "ogImage": "/products/P472.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "928",
@@ -10244,11 +10616,13 @@
       "ogImage": "/products/P477.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "933",
@@ -10298,11 +10672,13 @@
       "ogImage": "/products/P479.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "935",
@@ -10352,11 +10728,13 @@
       "ogImage": "/products/P480.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "936",
@@ -10405,11 +10783,13 @@
       "ogImage": "/products/P481.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "937",
@@ -10459,11 +10839,13 @@
       "ogImage": "/products/P482.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "938",
@@ -10513,11 +10895,13 @@
       "ogImage": "/products/P483.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "939",
@@ -10567,11 +10951,13 @@
       "ogImage": "/products/P484.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "940",
@@ -10621,11 +11007,13 @@
       "ogImage": "/products/P485.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "941",
@@ -10674,11 +11062,13 @@
       "ogImage": "/products/P487.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "943",
@@ -10728,11 +11118,13 @@
       "ogImage": "/products/P488.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "944",
@@ -10780,11 +11172,13 @@
       "ogImage": "/products/P507.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "968",
@@ -10834,11 +11228,13 @@
       "ogImage": "/products/P508.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "969",
@@ -10891,11 +11287,13 @@
       "ogImage": "/products/P509.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "970",
@@ -10950,11 +11348,13 @@
       "ogImage": "/products/P510.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "971",
@@ -11007,11 +11407,13 @@
       "ogImage": "/products/P511.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "972",
@@ -11061,11 +11463,13 @@
       "ogImage": "/products/P512.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "973",
@@ -11116,11 +11520,13 @@
       "ogImage": "/products/P513.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "974",
@@ -11174,11 +11580,13 @@
       "ogImage": "/products/P516.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "978",
@@ -11231,11 +11639,13 @@
       "ogImage": "/products/P517.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "979",
@@ -11288,11 +11698,13 @@
       "ogImage": "/products/P518.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "980",
@@ -11345,11 +11757,13 @@
       "ogImage": "/products/P519.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "981",
@@ -11402,11 +11816,13 @@
       "ogImage": "/products/P520.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "982",
@@ -11456,11 +11872,13 @@
       "ogImage": "/products/P521.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "983",
@@ -11511,11 +11929,13 @@
       "ogImage": "/products/P522.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "984",
@@ -11565,11 +11985,13 @@
       "ogImage": "/products/P523.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "985",
@@ -11620,11 +12042,13 @@
       "ogImage": "/products/P524.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "986",
@@ -11675,11 +12099,13 @@
       "ogImage": "/products/P525.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "987",
@@ -11731,11 +12157,13 @@
       "ogImage": "/products/P526.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "988",
@@ -11785,11 +12213,13 @@
       "ogImage": "/products/P527.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "989",
@@ -11840,11 +12270,13 @@
       "ogImage": "/products/P528.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "990",
@@ -11894,11 +12326,13 @@
       "ogImage": "/products/P529.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "991",
@@ -11952,11 +12386,13 @@
       "ogImage": "/products/P530.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "992",
@@ -12005,11 +12441,13 @@
       "ogImage": "/products/P534.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "998",
@@ -12060,11 +12498,13 @@
       "ogImage": "/products/P535.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "999",
@@ -12115,11 +12555,13 @@
       "ogImage": "/products/P536.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1000",
@@ -12171,11 +12613,13 @@
       "ogImage": "/products/P537.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1001",
@@ -12227,11 +12671,13 @@
       "ogImage": "/products/P538.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1002",
@@ -12283,11 +12729,13 @@
       "ogImage": "/products/P539.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1005",
@@ -12336,11 +12784,13 @@
       "ogImage": "/products/P545.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1011",
@@ -12388,11 +12838,13 @@
       "ogImage": "/products/P546.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1012",
@@ -12442,11 +12894,13 @@
       "ogImage": "/products/P547.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1013",
@@ -12496,11 +12950,13 @@
       "ogImage": "/products/P548.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1014",
@@ -12555,11 +13011,13 @@
       "ogImage": "/products/P553.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1019",
@@ -12610,11 +13068,13 @@
       "ogImage": "/products/P557.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1023",
@@ -12664,11 +13124,13 @@
       "ogImage": "/products/P558.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1024",
@@ -12720,11 +13182,13 @@
       "ogImage": "/products/P559.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1026",
@@ -12779,11 +13243,13 @@
       "ogImage": "/products/P564.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1033",
@@ -12838,11 +13304,13 @@
       "ogImage": "/products/P565.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1034",
@@ -12896,11 +13364,13 @@
       "ogImage": "/products/P566.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1035",
@@ -12955,11 +13425,13 @@
       "ogImage": "/products/P567.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1036",
@@ -13014,11 +13486,13 @@
       "ogImage": "/products/P568.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1037",
@@ -13069,11 +13543,13 @@
       "ogImage": "/products/P570.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1040",
@@ -13124,11 +13600,13 @@
       "ogImage": "/products/P571.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1041",
@@ -13180,11 +13658,13 @@
       "ogImage": "/products/P572.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1042",
@@ -13236,11 +13716,13 @@
       "ogImage": "/products/P573.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1043",
@@ -13292,11 +13774,13 @@
       "ogImage": "/products/P574.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1044",
@@ -13348,11 +13832,13 @@
       "ogImage": "/products/P575.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1045",
@@ -13405,11 +13891,13 @@
       "ogImage": "/products/P576.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1046",
@@ -13462,11 +13950,13 @@
       "ogImage": "/products/P577.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1047",
@@ -13517,11 +14007,13 @@
       "ogImage": "/products/P584.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1054",
@@ -13572,11 +14064,13 @@
       "ogImage": "/products/P585.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1055",
@@ -13640,11 +14134,13 @@
       "ogImage": "/products/P591.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1061",
@@ -13696,11 +14192,13 @@
       "ogImage": "/products/P592.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1062",
@@ -13754,11 +14252,13 @@
       "ogImage": "/products/P593.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1063",
@@ -13821,11 +14321,13 @@
       "ogImage": "/products/P588.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1058",
@@ -13888,11 +14390,13 @@
       "ogImage": "/products/P589.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1059",
@@ -13945,11 +14449,13 @@
       "ogImage": "/products/P594.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1064",
@@ -14003,11 +14509,13 @@
       "ogImage": "/products/P595.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1065",
@@ -14060,11 +14568,13 @@
       "ogImage": "/products/P596.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1066",
@@ -14117,11 +14627,13 @@
       "ogImage": "/products/P597.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1067",
@@ -14174,11 +14686,13 @@
       "ogImage": "/products/P598.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1068",
@@ -14231,11 +14745,13 @@
       "ogImage": "/products/P600.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1070",
@@ -14285,11 +14801,13 @@
       "ogImage": "/products/P601.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1071",
@@ -14343,11 +14861,13 @@
       "ogImage": "/products/P609.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1081",
@@ -14404,11 +14924,13 @@
       "ogImage": "/products/P610.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1082",
@@ -14460,11 +14982,13 @@
       "ogImage": "/products/P603.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1073",
@@ -14516,11 +15040,13 @@
       "ogImage": "/products/P612.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1084",
@@ -14573,11 +15099,13 @@
       "ogImage": "/products/P613.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1085",
@@ -14630,11 +15158,13 @@
       "ogImage": "/products/P614.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1086",
@@ -14688,11 +15218,13 @@
       "ogImage": "/products/P615.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1087",
@@ -14744,11 +15276,13 @@
       "ogImage": "/products/P616.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1088",
@@ -14801,11 +15335,13 @@
       "ogImage": "/products/P617.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1089",
@@ -14858,11 +15394,13 @@
       "ogImage": "/products/P619.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1091",
@@ -14918,11 +15456,13 @@
       "ogImage": "/products/P620.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1092",
@@ -14974,11 +15514,13 @@
       "ogImage": "/products/P621.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1093",
@@ -15031,11 +15573,13 @@
       "ogImage": "/products/P622.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1094",
@@ -15088,11 +15632,13 @@
       "ogImage": "/products/P623.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1095",
@@ -15141,11 +15687,13 @@
       "ogImage": "/products/P624.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1096",
@@ -15194,11 +15742,13 @@
       "ogImage": "/products/P625.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1097",
@@ -15247,11 +15797,13 @@
       "ogImage": "/products/P626.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1098",
@@ -15300,11 +15852,13 @@
       "ogImage": "/products/P627.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1099",
@@ -15355,11 +15909,13 @@
       "ogImage": "/products/P630.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1102",
@@ -15411,11 +15967,13 @@
       "ogImage": "/products/P635.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1107",
@@ -15467,11 +16025,13 @@
       "ogImage": "/products/P636.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1108",
@@ -15524,11 +16084,13 @@
       "ogImage": "/products/P639.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1111",
@@ -15583,11 +16145,13 @@
       "ogImage": "/products/P127.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "157",
@@ -15641,11 +16205,13 @@
       "ogImage": "/products/P129.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "159",
@@ -15697,11 +16263,13 @@
       "ogImage": "/products/P153.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "191",
@@ -15752,11 +16320,13 @@
       "ogImage": "/products/P154.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "192",
@@ -15807,11 +16377,13 @@
       "ogImage": "/products/P155.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "193",
@@ -15860,11 +16432,13 @@
       "ogImage": "/products/P156.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "195",
@@ -15915,11 +16489,13 @@
       "ogImage": "/products/P158.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "197",
@@ -15970,11 +16546,13 @@
       "ogImage": "/products/P161.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "200",
@@ -16024,11 +16602,13 @@
       "ogImage": "/products/P162.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "202",
@@ -16078,11 +16658,13 @@
       "ogImage": "/products/P163.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "204",
@@ -16133,11 +16715,13 @@
       "ogImage": "/products/P165.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "210",
@@ -16188,11 +16772,13 @@
       "ogImage": "/products/P166.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "211",
@@ -16243,11 +16829,13 @@
       "ogImage": "/products/P170.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "215",
@@ -16297,11 +16885,13 @@
       "ogImage": "/products/P172.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "217",
@@ -16352,11 +16942,13 @@
       "ogImage": "/products/P173.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "218",
@@ -16410,11 +17002,13 @@
       "ogImage": "/products/P182.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "479",
@@ -16468,11 +17062,13 @@
       "ogImage": "/products/P183.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "481",
@@ -16526,11 +17122,13 @@
       "ogImage": "/products/P184.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "482",
@@ -16584,11 +17182,13 @@
       "ogImage": "/products/P185.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "483",
@@ -16642,11 +17242,13 @@
       "ogImage": "/products/P186.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "484",
@@ -16700,11 +17302,13 @@
       "ogImage": "/products/P187.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "485",
@@ -16758,11 +17362,13 @@
       "ogImage": "/products/P188.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "486",
@@ -16816,11 +17422,13 @@
       "ogImage": "/products/P189.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "487",
@@ -16874,11 +17482,13 @@
       "ogImage": "/products/P190.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "488",
@@ -16932,11 +17542,13 @@
       "ogImage": "/products/P191.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "489",
@@ -16990,11 +17602,13 @@
       "ogImage": "/products/P192.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "490",
@@ -17048,11 +17662,13 @@
       "ogImage": "/products/P193.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "491",
@@ -17102,11 +17718,13 @@
       "ogImage": "/products/P194.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "492",
@@ -17160,11 +17778,13 @@
       "ogImage": "/products/P195.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "493",
@@ -17218,11 +17838,13 @@
       "ogImage": "/products/P196.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "494",
@@ -17276,11 +17898,13 @@
       "ogImage": "/products/P197.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "495",
@@ -17334,11 +17958,13 @@
       "ogImage": "/products/P198.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "496",
@@ -17392,11 +18018,13 @@
       "ogImage": "/products/P199.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "497",
@@ -17449,11 +18077,13 @@
       "ogImage": "/products/P200.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "498",
@@ -17507,11 +18137,13 @@
       "ogImage": "/products/P201.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "499",
@@ -17561,11 +18193,13 @@
       "ogImage": "/products/P202.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "500",
@@ -17615,11 +18249,13 @@
       "ogImage": "/products/P203.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "501",
@@ -17669,11 +18305,13 @@
       "ogImage": "/products/P205.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "503",
@@ -17723,11 +18361,13 @@
       "ogImage": "/products/P206.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "504",
@@ -17778,11 +18418,13 @@
       "ogImage": "/products/P207.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "505",
@@ -17831,11 +18473,13 @@
       "ogImage": "/products/P208.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "507",
@@ -17886,11 +18530,13 @@
       "ogImage": "/products/P209.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "508",
@@ -17944,11 +18590,13 @@
       "ogImage": "/products/P210.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "509",
@@ -18002,11 +18650,13 @@
       "ogImage": "/products/P211.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "510",
@@ -18066,11 +18716,13 @@
       "ogImage": "/products/P214.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "513",
@@ -18130,11 +18782,13 @@
       "ogImage": "/products/P217.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "516",
@@ -18188,11 +18842,13 @@
       "ogImage": "/products/P229.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "530",
@@ -18259,11 +18915,13 @@
       "ogImage": "/products/P230.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "531",
@@ -18317,11 +18975,13 @@
       "ogImage": "/products/P242.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "627",
@@ -18375,11 +19035,13 @@
       "ogImage": "/products/P243.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "628",
@@ -18433,11 +19095,13 @@
       "ogImage": "/products/P244.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "629",
@@ -18491,11 +19155,13 @@
       "ogImage": "/products/P245.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "630",
@@ -18560,11 +19226,13 @@
       "ogImage": "/products/P246.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "631",
@@ -18615,11 +19283,13 @@
       "ogImage": "/products/P251.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "637",
@@ -18670,11 +19340,13 @@
       "ogImage": "/products/P253.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "639",
@@ -18725,11 +19397,13 @@
       "ogImage": "/products/P254.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "640",
@@ -18780,11 +19454,13 @@
       "ogImage": "/products/P255.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "641",
@@ -18835,11 +19511,13 @@
       "ogImage": "/products/P256.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "642",
@@ -18890,11 +19568,13 @@
       "ogImage": "/products/P257.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "643",
@@ -18945,11 +19625,13 @@
       "ogImage": "/products/P258.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "644",
@@ -19001,11 +19683,13 @@
       "ogImage": "/products/P259.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "645",
@@ -19057,11 +19741,13 @@
       "ogImage": "/products/P260.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "646",
@@ -19112,11 +19798,13 @@
       "ogImage": "/products/P261.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "647",
@@ -19167,11 +19855,13 @@
       "ogImage": "/products/P263.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "649",
@@ -19222,11 +19912,13 @@
       "ogImage": "/products/P264.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "650",
@@ -19277,11 +19969,13 @@
       "ogImage": "/products/P265.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "651",
@@ -19333,11 +20027,13 @@
       "ogImage": "/products/P266.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "652",
@@ -19389,11 +20085,13 @@
       "ogImage": "/products/P269.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "655",
@@ -19445,11 +20143,13 @@
       "ogImage": "/products/P270.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "656",
@@ -19502,11 +20202,13 @@
       "ogImage": "/products/P271.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "657",
@@ -19559,11 +20261,13 @@
       "ogImage": "/products/P272.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "658",
@@ -19615,11 +20319,13 @@
       "ogImage": "/products/P273.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "659",
@@ -19692,11 +20398,13 @@
       "ogImage": "/products/P280.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "668",
@@ -19768,11 +20476,13 @@
       "ogImage": "/products/P281.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "669",
@@ -19843,11 +20553,13 @@
       "ogImage": "/products/P283.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "671",
@@ -19919,11 +20631,13 @@
       "ogImage": "/products/P284.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "672",
@@ -19983,11 +20697,13 @@
       "ogImage": "/products/P285.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "677",
@@ -20049,11 +20765,13 @@
       "ogImage": "/products/P286.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "678",
@@ -20118,11 +20836,13 @@
       "ogImage": "/products/P287.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "679",
@@ -20184,11 +20904,13 @@
       "ogImage": "/products/P288.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "680",
@@ -20251,11 +20973,13 @@
       "ogImage": "/products/P289.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "681",
@@ -20318,11 +21042,13 @@
       "ogImage": "/products/P290.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "682",
@@ -20376,11 +21102,13 @@
       "ogImage": "/products/P298.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "702",
@@ -20433,11 +21161,13 @@
       "ogImage": "/products/P301.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "709",
@@ -20500,11 +21230,13 @@
       "ogImage": "/products/P312.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "730",
@@ -20566,11 +21298,13 @@
       "ogImage": "/products/P313.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "731",
@@ -20630,11 +21364,13 @@
       "ogImage": "/products/P314.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "732",
@@ -20686,11 +21422,13 @@
       "ogImage": "/products/P317.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "739",
@@ -20742,11 +21480,13 @@
       "ogImage": "/products/P318.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "740",
@@ -20795,11 +21535,13 @@
       "ogImage": "/products/P323.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "749",
@@ -20851,11 +21593,13 @@
       "ogImage": "/products/P324.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "750",
@@ -20916,11 +21660,13 @@
       "ogImage": "/products/P339.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "773",
@@ -20985,11 +21731,13 @@
       "ogImage": "/products/P340.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "774",
@@ -21055,11 +21803,13 @@
       "ogImage": "/products/P341.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "775",
@@ -21126,11 +21876,13 @@
       "ogImage": "/products/P342.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "776",
@@ -21196,11 +21948,13 @@
       "ogImage": "/products/P343.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "777",
@@ -21266,11 +22020,13 @@
       "ogImage": "/products/P344.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "778",
@@ -21336,11 +22092,13 @@
       "ogImage": "/products/P345.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "779",
@@ -21407,11 +22165,13 @@
       "ogImage": "/products/P346.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "780",
@@ -21477,11 +22237,13 @@
       "ogImage": "/products/P347.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "781",
@@ -21546,11 +22308,13 @@
       "ogImage": "/products/P348.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "782",
@@ -21615,11 +22379,13 @@
       "ogImage": "/products/P349.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "783",
@@ -21684,11 +22450,13 @@
       "ogImage": "/products/P350.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "784",
@@ -21753,11 +22521,13 @@
       "ogImage": "/products/P351.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "785",
@@ -21823,11 +22593,13 @@
       "ogImage": "/products/P352.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "786",
@@ -21879,11 +22651,13 @@
       "ogImage": "/products/P364.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "804",
@@ -21936,11 +22710,13 @@
       "ogImage": "/products/P365.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "805",
@@ -21990,11 +22766,13 @@
       "ogImage": "/products/P367.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "808",
@@ -22043,11 +22821,13 @@
       "ogImage": "/products/P368.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "809",
@@ -22103,11 +22883,13 @@
       "ogImage": "/products/P383.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "831",
@@ -22158,11 +22940,13 @@
       "ogImage": "/products/P384.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "832",
@@ -22214,11 +22998,13 @@
       "ogImage": "/products/P394.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "846",
@@ -22280,11 +23066,13 @@
       "ogImage": "/products/P398.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "850",
@@ -22339,11 +23127,13 @@
       "ogImage": "/products/P399.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "851",
@@ -22394,11 +23184,13 @@
       "ogImage": "/products/P404.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "856",
@@ -22483,11 +23275,13 @@
       "ogImage": "/products/P408.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "861",
@@ -22535,11 +23329,13 @@
       "ogImage": "/products/P422.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "875",
@@ -22586,11 +23382,13 @@
       "ogImage": "/products/P423.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "876",
@@ -22637,11 +23435,13 @@
       "ogImage": "/products/P424.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "877",
@@ -22688,11 +23488,13 @@
       "ogImage": "/products/P425.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "878",
@@ -22740,11 +23542,13 @@
       "ogImage": "/products/P432.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "885",
@@ -22792,11 +23596,13 @@
       "ogImage": "/products/P433.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "886",
@@ -22844,11 +23650,13 @@
       "ogImage": "/products/P438.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "892",
@@ -22896,11 +23704,13 @@
       "ogImage": "/products/P439.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "893",
@@ -22948,11 +23758,13 @@
       "ogImage": "/products/P440.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "894",
@@ -23001,11 +23813,13 @@
       "ogImage": "/products/P441.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "895",
@@ -23054,11 +23868,13 @@
       "ogImage": "/products/P442.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "896",
@@ -23107,11 +23923,13 @@
       "ogImage": "/products/P443.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "897",
@@ -23159,11 +23977,13 @@
       "ogImage": "/products/P444.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "898",
@@ -23212,11 +24032,13 @@
       "ogImage": "/products/P445.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "899",
@@ -23265,11 +24087,13 @@
       "ogImage": "/products/P446.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "900",
@@ -23318,11 +24142,13 @@
       "ogImage": "/products/P448.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "904",
@@ -23371,11 +24197,13 @@
       "ogImage": "/products/P450.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "906",
@@ -23424,11 +24252,13 @@
       "ogImage": "/products/P451.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "907",
@@ -23477,11 +24307,13 @@
       "ogImage": "/products/P452.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "908",
@@ -23531,11 +24363,13 @@
       "ogImage": "/products/P453.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "909",
@@ -23584,11 +24418,13 @@
       "ogImage": "/products/P454.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "910",
@@ -23638,11 +24474,13 @@
       "ogImage": "/products/P455.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "911",
@@ -23691,11 +24529,13 @@
       "ogImage": "/products/P456.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "912",
@@ -23744,11 +24584,13 @@
       "ogImage": "/products/P457.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "913",
@@ -23797,11 +24639,13 @@
       "ogImage": "/products/P458.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "914",
@@ -23850,11 +24694,13 @@
       "ogImage": "/products/P459.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "915",
@@ -23903,11 +24749,13 @@
       "ogImage": "/products/P460.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "916",
@@ -23956,11 +24804,13 @@
       "ogImage": "/products/P461.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "917",
@@ -24009,11 +24859,13 @@
       "ogImage": "/products/P462.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "918",
@@ -24062,11 +24914,13 @@
       "ogImage": "/products/P463.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "919",
@@ -24114,11 +24968,13 @@
       "ogImage": "/products/P464.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "920",
@@ -24167,11 +25023,13 @@
       "ogImage": "/products/P465.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "921",
@@ -24219,11 +25077,13 @@
       "ogImage": "/products/P466.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "922",
@@ -24271,11 +25131,13 @@
       "ogImage": "/products/P467.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "923",
@@ -24323,11 +25185,13 @@
       "ogImage": "/products/P468.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "924",
@@ -24375,11 +25239,13 @@
       "ogImage": "/products/P469.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "925",
@@ -24427,11 +25293,13 @@
       "ogImage": "/products/P470.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "926",
@@ -24479,11 +25347,13 @@
       "ogImage": "/products/P471.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "927",
@@ -24531,11 +25401,13 @@
       "ogImage": "/products/P474.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "930",
@@ -24583,11 +25455,13 @@
       "ogImage": "/products/P532.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "995",
@@ -24640,11 +25514,13 @@
       "ogImage": "/products/P543.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1009",
@@ -24698,11 +25574,13 @@
       "ogImage": "/products/P544.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1010",
@@ -24756,11 +25634,13 @@
       "ogImage": "/products/P550.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1016",
@@ -24815,11 +25695,13 @@
       "ogImage": "/products/P554.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1020",
@@ -24874,11 +25756,13 @@
       "ogImage": "/products/P555.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1021",
@@ -24935,11 +25819,13 @@
       "ogImage": "/products/P569.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1038",
@@ -25000,11 +25886,13 @@
       "ogImage": "/products/P587.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1057",
@@ -25066,11 +25954,13 @@
       "ogImage": "/products/P590.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1060",
@@ -25124,11 +26014,13 @@
       "ogImage": "/products/P611.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1083",
@@ -25180,11 +26072,13 @@
       "ogImage": "/products/P628.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1100",
@@ -25237,11 +26131,13 @@
       "ogImage": "/products/P629.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1101",
@@ -25295,11 +26191,13 @@
       "ogImage": "/products/P634.webp"
     },
     "stock": {
-      "inStock": true
+      "inStock": true,
+      "quantity": 10
     },
     "flags": {
       "featured": false,
-      "isNew": true
+      "isNew": true,
+      "badge": null
     },
     "migrationProvenance": {
       "originalId": "1106",

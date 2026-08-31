@@ -24,6 +24,7 @@ export function CartView(): JSX.Element {
     isHydrated,
     removeItem,
     setQty,
+    setLineOptions,
   } = useCart();
 
   if (!isHydrated) return <PanelNotice>Loading your cart…</PanelNotice>;
@@ -43,6 +44,7 @@ export function CartView(): JSX.Element {
                 line={line}
                 onQuantityChange={setQty}
                 onRemove={removeItem}
+                onOptionsChange={setLineOptions}
               />
             </li>
           ))}

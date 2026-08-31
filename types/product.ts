@@ -325,13 +325,58 @@ export interface ProductMigrationProvenance {
   originalCategories: string[];
 }
 
+/**
+ * How many of a piece the owner has on the shelf. A real count rather than a bucket, because
+ * the card says "Only 2 left" in the owner's own words and a bucket cannot fill in the number.
+ *
+ * It does not replace `inStock`. The two answer different questions — "is this piece being
+ * sold at all" and "how many are on the shelf" — and the owner uses the first to withdraw a
+ * piece that is still in a drawer. `isStockAvailable` in `lib/product-badge.ts` is the one
+ * place they are combined, and every surface that asks whether a product can be bought asks
+ * it rather than reading either field alone. See
+ * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
+ */
 export interface ProductStock {
   inStock: boolean;
+  /** A non-negative whole count. `0` and `inStock: false` both mean sold out. */
+  quantity: number;
 }
 
+/**
+ * The merchandising badge the owner has chosen for a piece, or `null` for the pieces they
+ * have not merchandised. It is a *request* for a badge rather than the badge itself:
+ * `selectProductBadge` decides what actually renders, and availability outranks anything
+ * chosen here.
+ */
+export type ProductBadge = "trending" | "bestseller" | "new";
+
+export const PRODUCT_BADGES: readonly ProductBadge[] = [
+  "trending",
+  "bestseller",
+  "new",
+] as const;
+
+export function isProductBadge(value: string): value is ProductBadge {
+  return PRODUCT_BADGES.some((badge) => badge === value);
+}
+
+/**
+ * `isNew` and `badge` are deliberately both here and they are not duplicates.
+ *
+ * `isNew` is a *membership* flag: it decides the home new-arrivals row, the `new-arrivals`
+ * collection facet, and the catalogue floor that keeps that row full. 408 of the 449 records
+ * carry it, which is why it can never be a badge on its own — a badge on nine cards in ten is
+ * not a badge.
+ *
+ * `badge` is a *display* choice, one per product, and the only field that can ask for
+ * "Trending" or "Best Seller". The one place they meet is the New case of the cascade, which
+ * fires on either, so today's New badge renders exactly where it always did while the owner
+ * gains somewhere to say something else. See ADR-067.
+ */
 export interface ProductFlags {
   featured: boolean;
   isNew: boolean;
+  badge: ProductBadge | null;
 }
 
 /**

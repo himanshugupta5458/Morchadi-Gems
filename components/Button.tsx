@@ -14,6 +14,7 @@ export interface ButtonProps
   variant?: ButtonVariant;
   size?: ButtonSize;
   fullWidth?: boolean;
+  fillHeight?: boolean;
   children: ReactNode;
 }
 
@@ -21,6 +22,7 @@ export function Button({
   variant = "primary",
   size = "md",
   fullWidth = false,
+  fillHeight = false,
   type = "button",
   children,
   ...buttonProps
@@ -28,7 +30,7 @@ export function Button({
   return (
     <button
       type={type}
-      className={buttonClasses({ variant, size, fullWidth })}
+      className={buttonClasses({ variant, size, fullWidth, fillHeight })}
       {...buttonProps}
     >
       {children}

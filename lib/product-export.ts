@@ -55,9 +55,11 @@ export function flattenProductForExport(product: Product): ProductExportRow {
       : "",
 
     "stock.inStock": product.stock?.inStock ?? "",
+    "stock.quantity": product.stock?.quantity ?? "",
 
     "flags.featured": product.flags?.featured ?? "",
     "flags.isNew": product.flags?.isNew ?? "",
+    "flags.badge": product.flags?.badge ?? "",
 
     options: (product.options ?? [])
       .map((option) => `${option.name}: ${(option.values ?? []).join(", ")}`)

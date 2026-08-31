@@ -157,6 +157,14 @@ export const PRODUCT_STATUSES = ["draft", "active"];
 
 export const OPTION_TYPES = ["dropdown", "swatch", "pills", "chips"];
 
+/**
+ * The merchandising badges `flags.badge` may name. `null` is the fourth legal value and means
+ * the owner has not chosen one — it is not an absence, and the key is required like every
+ * other, so "no badge" is written down rather than inferred from a missing field. See
+ * [ADR-067](../docs/decisions/ADR-067-card-variant-selection.md).
+ */
+export const PRODUCT_BADGES = ["trending", "bestseller", "new"];
+
 const VARIANT_KEY_SEPARATOR = ":";
 
 export const PRODUCT_KEYS = [
@@ -230,6 +238,11 @@ export function isPlainObject(value) {
 
 export function isPositiveInteger(value) {
   return typeof value === "number" && Number.isInteger(value) && value > 0;
+}
+
+/** Zero is a legal stock count and a legal one only for counts, hence the second predicate. */
+export function isNonNegativeInteger(value) {
+  return typeof value === "number" && Number.isInteger(value) && value >= 0;
 }
 
 /**
@@ -763,6 +776,10 @@ export function validateStockAndFlags(product, label, context) {
       typeof stock.inStock === "boolean",
       `${label}: stock.inStock must be a boolean`,
     );
+    check(
+      isNonNegativeInteger(stock.quantity),
+      `${label}: stock.quantity must be a whole number of pieces, zero or more`,
+    );
     if (stock.inStock === false && published) counters.outOfStockCount += 1;
   }
 
@@ -775,6 +792,10 @@ export function validateStockAndFlags(product, label, context) {
     `${label}: flags.featured must be a boolean`,
   );
   check(typeof flags.isNew === "boolean", `${label}: flags.isNew must be a boolean`);
+  check(
+    flags.badge === null || PRODUCT_BADGES.includes(flags.badge),
+    `${label}: flags.badge must be null or one of ${PRODUCT_BADGES.join(", ")} — found ${JSON.stringify(flags.badge)}`,
+  );
   if (flags.featured === true && published) counters.featuredCount += 1;
   if (flags.isNew === true && published) counters.newCount += 1;
 }

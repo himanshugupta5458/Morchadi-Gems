@@ -726,11 +726,28 @@ export interface ProductBuildInput {
   content: AuthoredContent;
   /** Control type per option name. Required for every variant the draft declares. */
   optionTypes?: Readonly<Record<string, string>>;
-  /** Defaults to `{ featured: false, isNew: true }` — a product nobody has merchandised yet. */
+  /**
+   * Defaults to `{ featured: false, isNew: true, badge: null }` — a product nobody has
+   * merchandised yet. `badge` is null rather than `"new"` because `isNew` already produces the
+   * New badge through the cascade, and a record that said both would say it twice.
+   */
   flags?: ProductFlags;
   /** Defaults to `true`. A piece being published is one the shop has. */
   inStock?: boolean;
+  /** Defaults to {@link NEW_PRODUCT_STOCK_QUANTITY}. Ignored when `inStock` is false. */
+  quantity?: number;
 }
+
+/**
+ * The shelf count a newly built record starts on, and the figure every existing record was
+ * backfilled to when `stock.quantity` was added.
+ *
+ * Ten rather than one: the count is rendered, and the low-stock cascade fires at two or fewer,
+ * so a placeholder of one or two would put "Only 1 left" on the whole catalogue and turn the
+ * one badge that has to be believed into the one that never is. It is a placeholder either
+ * way — the owner sets the real figure in the admin product form. See ADR-067.
+ */
+export const NEW_PRODUCT_STOCK_QUANTITY = 10;
 
 export interface ProductBuildResult {
   /** `null` whenever any error was raised. A partial product is never returned. */
@@ -755,7 +772,7 @@ export interface ProductBuildResult {
  * that fails one never reaches the point of having a record built for it.
  */
 export function buildProductFromDraft(input: ProductBuildInput): ProductBuildResult {
-  const { draft, content, optionTypes = {}, flags, inStock } = input;
+  const { draft, content, optionTypes = {}, flags, inStock, quantity } = input;
   const issues: MappingIssue[] = [];
 
   const id = typeof draft?.productId === "string" ? draft.productId.trim() : "";
@@ -852,8 +869,11 @@ export function buildProductFromDraft(input: ProductBuildInput): ProductBuildRes
     specs: specResult.specs,
     description,
     seo: content.seo,
-    stock: { inStock: inStock ?? true },
-    flags: flags ?? { featured: false, isNew: true },
+    stock: {
+      inStock: inStock ?? true,
+      quantity: inStock === false ? 0 : quantity ?? NEW_PRODUCT_STOCK_QUANTITY,
+    },
+    flags: flags ?? { featured: false, isNew: true, badge: null },
     ...(provenanceResult.migrationProvenance === null
       ? {}
       : { migrationProvenance: provenanceResult.migrationProvenance }),

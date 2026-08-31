@@ -15,6 +15,7 @@ import {
   calculateShipping,
 } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
+import { isStockAvailable } from "@/lib/product-badge";
 import { getAllProducts } from "@/lib/products";
 import { toSpecRows } from "@/lib/specs";
 import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
@@ -525,7 +526,7 @@ export function buildOfferSchema(product: Product): OfferSchema {
     price: product.pricing.price,
     priceCurrency: CURRENCY,
     priceValidUntil: getOfferPriceValidUntil(),
-    availability: product.stock.inStock
+    availability: isStockAvailable(product.stock)
       ? `${SCHEMA_CONTEXT}/InStock`
       : `${SCHEMA_CONTEXT}/OutOfStock`,
     itemCondition: `${SCHEMA_CONTEXT}/NewCondition`,

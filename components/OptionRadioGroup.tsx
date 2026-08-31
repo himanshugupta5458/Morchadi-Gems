@@ -12,6 +12,13 @@ export interface OptionRadioGroupProps {
   listClassName: string;
   itemClassName: (isSelected: boolean) => string;
   renderContent?: (optionValue: string, isSelected: boolean) => ReactNode;
+  className?: string;
+  /**
+   * Where the group's name is shown, or `sr-only` to keep it as the accessible name alone.
+   * The card is the one surface that hides it: it has a fixed row of vertical space to spend
+   * and the values themselves are the question there. Every other control shows it.
+   */
+  legendClassName?: string;
 }
 
 /**
@@ -30,12 +37,14 @@ export function OptionRadioGroup({
   listClassName,
   itemClassName,
   renderContent,
+  className = "flex flex-col gap-3",
+  legendClassName = "text-eyebrow uppercase text-muted",
 }: OptionRadioGroupProps): JSX.Element {
   const groupId = useId();
 
   return (
-    <fieldset className="flex flex-col gap-3">
-      <legend className="text-eyebrow uppercase text-muted">{option.name}</legend>
+    <fieldset className={className}>
+      <legend className={legendClassName}>{option.name}</legend>
 
       <div className={listClassName}>
         {option.values.map((optionValue) => {

@@ -6,6 +6,7 @@ import { computeProductVersion, type ProductUpdateOutcome } from "@/lib/product-
 import type { AdminProductActionResponseBody, ProductEdit } from "@/types/admin-product";
 import type {
   Category,
+  ProductBadge,
   ProductOption,
   ProductOptionType,
   ProductSpecs,
@@ -69,8 +70,12 @@ export function readProductEdit(body: Record<string, unknown>): ProductEdit {
     flags: {
       featured: flags.featured as boolean,
       isNew: flags.isNew as boolean,
+      badge: (flags.badge ?? null) as ProductBadge | null,
     },
-    stock: { inStock: stock.inStock as boolean },
+    stock: {
+      inStock: stock.inStock as boolean,
+      quantity: stock.quantity as number,
+    },
     options: options.map((option): ProductOption => {
       const group = isPlainObject(option) ? option : {};
       return {

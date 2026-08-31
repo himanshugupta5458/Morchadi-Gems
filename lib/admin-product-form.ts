@@ -3,6 +3,7 @@ import type { ProductEdit } from "@/types/admin-product";
 import type {
   Category,
   Product,
+  ProductBadge,
   ProductOptionType,
   ProductSpecs,
   ProductStatus,
@@ -59,7 +60,15 @@ export interface ProductDraft {
   status: ProductStatus;
   featured: boolean;
   isNew: boolean;
+  /** `null` is "no badge chosen", which is a value the operator picks rather than a blank. */
+  badge: ProductBadge | null;
   inStock: boolean;
+  /**
+   * Held as the string the input carries, like the amounts and for the same reason: `"7.5"`
+   * must reach `stock.quantity must be a whole number of pieces` rather than be rounded here
+   * into a count nobody typed. See ADR-067.
+   */
+  quantity: string;
   options: ProductOptionDraft[];
   variantImages: VariantImageDraft[];
   price: string;
@@ -124,7 +133,9 @@ export function toProductDraft(product: Product): ProductDraft {
     status: product.status,
     featured: product.flags.featured,
     isNew: product.flags.isNew,
+    badge: product.flags.badge,
     inStock: product.stock.inStock,
+    quantity: toAmountField(product.stock.quantity),
     options: (product.options ?? []).map((option) => ({
       name: option.name,
       type: option.type,
@@ -209,8 +220,8 @@ export function toProductEdit(draft: ProductDraft): ProductEdit {
     subcategory: draft.subcategory.trim() === "" ? null : draft.subcategory.trim(),
     description: draft.description,
     status: draft.status,
-    flags: { featured: draft.featured, isNew: draft.isNew },
-    stock: { inStock: draft.inStock },
+    flags: { featured: draft.featured, isNew: draft.isNew, badge: draft.badge },
+    stock: { inStock: draft.inStock, quantity: toAmount(draft.quantity) },
     options: draft.options
       .filter((option) => option.name.trim() !== "")
       .map((option) => ({

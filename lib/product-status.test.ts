@@ -33,8 +33,8 @@ vi.mock("@/data/products.json", async (importOriginal) => {
     status: "draft",
     collections: ["gifting"],
     pricing: { price: DRAFT_PRICE, mrp: DRAFT_PRICE, cost: 1 },
-    stock: { inStock: true },
-    flags: { featured: true, isNew: true },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: true, isNew: true, badge: null },
     seo: {
       ...seo,
       primaryKeyword: "unreleased draft ring",
@@ -192,7 +192,7 @@ describe("the shop listing and its facets", () => {
 
   it("does not let the draft take the first slot under a price sort it would otherwise win", () => {
     expect(idsOf(everyShopPage({ sort: "price-desc" }))).not.toContain(DRAFT_ID);
-    expect(idsOf(everyShopPage({ sort: "newest" }))).not.toContain(DRAFT_ID);
+    expect(idsOf(everyShopPage({ sort: "name-desc" }))).not.toContain(DRAFT_ID);
   });
 
   it("still returns a full first page of published products", () => {

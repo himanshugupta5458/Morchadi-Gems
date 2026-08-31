@@ -15,6 +15,7 @@ import {
   CART_STORAGE_KEY,
   addProductToCart,
   buildCartLines,
+  changeCartItemOptions,
   calculateCartTotals,
   countCartItems,
   hasUnavailableLine,
@@ -23,6 +24,7 @@ import {
   removeProductFromCart,
   setCartItemQuantity,
   type CartLine,
+  type CartOptionChange,
 } from "@/lib/cart";
 
 export interface CartContextValue {
@@ -51,6 +53,16 @@ export interface CartContextValue {
   /** Addressed by `CartLine.key`, not by product id — one product can hold several lines. */
   removeItem: (lineKey: string) => void;
   setQty: (lineKey: string, quantity: number) => void;
+  /**
+   * Changes a line's recorded choices, returning the refusal when the catalogue no longer
+   * offers what was asked for. It returns rather than throws because the caller is a control
+   * the shopper is still looking at, and the message belongs beside it. Validated by the same
+   * function `/api/create-order` runs — see `changeCartItemOptions`.
+   */
+  setLineOptions: (
+    lineKey: string,
+    selectedOptions: SelectedOptions,
+  ) => CartOptionChange;
   clearCart: () => void;
 }
 
@@ -126,6 +138,15 @@ export function CartProvider({
     setItems((currentItems) => setCartItemQuantity(currentItems, lineKey, quantity));
   }, []);
 
+  const setLineOptions = useCallback(
+    (lineKey: string, selectedOptions: SelectedOptions): CartOptionChange => {
+      const change = changeCartItemOptions(items, catalogue, lineKey, selectedOptions);
+      if (change.error === null) setItems(change.items);
+      return change;
+    },
+    [items, catalogue],
+  );
+
   const clearCart = useCallback(() => {
     setItems([]);
   }, []);
@@ -146,9 +167,19 @@ export function CartProvider({
       addItem,
       removeItem,
       setQty,
+      setLineOptions,
       clearCart,
     };
-  }, [items, catalogue, isHydrated, addItem, removeItem, setQty, clearCart]);
+  }, [
+    items,
+    catalogue,
+    isHydrated,
+    addItem,
+    removeItem,
+    setQty,
+    setLineOptions,
+    clearCart,
+  ]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

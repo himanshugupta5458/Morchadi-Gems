@@ -1,18 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import type { CategoryCounts } from "@/lib/shop";
 import { countActiveFilters, type ShopQuery } from "@/lib/shop-query";
 import { ShopFilterPanel } from "@/components/ShopFilterPanel";
 import { CloseIcon, FilterIcon } from "@/components/icons";
 
 export interface ShopFilterDrawerProps {
   query: ShopQuery;
+  categoryCounts: CategoryCounts;
 }
 
 const DRAWER_ID = "shop-filter-drawer";
 const FOCUSABLE_SELECTOR = "a[href], button:not([disabled]), input, select";
 
-export function ShopFilterDrawer({ query }: ShopFilterDrawerProps): JSX.Element {
+export function ShopFilterDrawer({
+  query,
+  categoryCounts,
+}: ShopFilterDrawerProps): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -113,7 +118,11 @@ export function ShopFilterDrawer({ query }: ShopFilterDrawerProps): JSX.Element 
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-6">
-              <ShopFilterPanel query={query} onNavigate={() => setIsOpen(false)} />
+              <ShopFilterPanel
+                query={query}
+                categoryCounts={categoryCounts}
+                onNavigate={() => setIsOpen(false)}
+              />
             </div>
           </div>
         </div>

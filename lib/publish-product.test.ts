@@ -39,8 +39,8 @@ function product(id: string, status: string, primaryKeyword = SEO.primaryKeyword
     specs: { material: "Gold-plated brass", stone: "Cubic zirconia" },
     description: "A gold-tone band carrying a small cubic zirconia bow, open at the back.",
     seo: { ...SEO, primaryKeyword, ogImage: `/products/${id}.webp` },
-    stock: { inStock: true },
-    flags: { featured: false, isNew: true },
+    stock: { inStock: true, quantity: 10 },
+    flags: { featured: false, isNew: true, badge: null },
   };
 }
 

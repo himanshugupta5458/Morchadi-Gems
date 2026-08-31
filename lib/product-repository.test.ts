@@ -123,7 +123,7 @@ describe("JsonFileProductRepository.updateProduct", () => {
     const before = readFileSync(cataloguePath(), "utf8");
     const [current] = readCatalogueFromDisk();
     const edit = editFrom(current);
-    edit.stock = { inStock: !current.stock.inStock };
+    edit.stock = { inStock: !current.stock.inStock, quantity: current.stock.quantity };
 
     await repository().updateProduct({
       id: current.id,

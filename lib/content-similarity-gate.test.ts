@@ -263,8 +263,8 @@ describe("draft-to-draft comparison", () => {
         ogDescription: `${id} og description`,
         ogImage: `/products/${id}.webp`,
       },
-      stock: { inStock: true },
-      flags: { featured: false, isNew: true },
+      stock: { inStock: true, quantity: 10 },
+      flags: { featured: false, isNew: true, badge: null },
     };
   }
 

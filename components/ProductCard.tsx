@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/types/product";
 import { getPrimaryImage, toCatalogueEntry } from "@/lib/products";
-import { AddToCartButton } from "@/components/AddToCartButton";
 import { PriceDisplay } from "@/components/PriceDisplay";
+import { ProductBadgeTag } from "@/components/ProductBadgeTag";
+import { ProductCardPurchase } from "@/components/ProductCardPurchase";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 
 /**
@@ -20,8 +21,14 @@ export interface ProductCardProps {
 }
 
 /**
- * A Server Component. The only thing it ships to the browser is `AddToCartButton`, and that
+ * A Server Component. The only thing it ships to the browser is `ProductCardPurchase`, and that
  * receives the lean `CatalogueEntry` rather than the whole product record.
+ *
+ * **Everything below the photograph is height-reserved**: the name block, the option row and
+ * the action. A grid row holds cards with no options beside cards showing chips beside cards
+ * whose button carries a two-line label, and each of those reserves the same space as the
+ * others so the row keeps one baseline in every combination. See
+ * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
  */
 export function ProductCard({
   product,
@@ -45,17 +52,9 @@ export function ProductCard({
           />
         )}
 
-        {product.flags.isNew && product.stock.inStock ? (
-          <span className="absolute left-3 top-3 bg-white px-2.5 py-1 text-eyebrow uppercase text-maroon ring-1 ring-line">
-            New
-          </span>
-        ) : null}
-
-        {product.stock.inStock ? null : (
-          <span className="absolute left-3 top-3 bg-charcoal px-2.5 py-1 text-eyebrow uppercase text-ivory">
-            Sold out
-          </span>
-        )}
+        <div className="absolute left-3 top-3">
+          <ProductBadgeTag stock={product.stock} flags={product.flags} />
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-2 p-3 sm:gap-3 sm:p-4">
@@ -69,7 +68,7 @@ export function ProductCard({
         <PriceDisplay mrp={product.pricing.mrp} price={product.pricing.price} />
 
         <div className="relative z-10 mt-auto pt-1">
-          <AddToCartButton item={toCatalogueEntry(product)} fullWidth />
+          <ProductCardPurchase item={toCatalogueEntry(product)} />
         </div>
       </div>
     </article>

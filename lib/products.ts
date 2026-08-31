@@ -1,6 +1,7 @@
 import catalogue from "@/data/products.json";
 import type { CatalogueEntry, Category, Product } from "@/types/product";
 import { hasProductOptions } from "@/lib/options";
+import { isStockAvailable } from "@/lib/product-badge";
 import type { OrderPricingEntry } from "@/lib/order";
 import type { CodEligibilityEntry } from "@/lib/cod";
 import type { OrderCaptureEntry } from "@/lib/order-capture";
@@ -82,7 +83,7 @@ export function toCatalogueEntry(product: Product): CatalogueEntry {
     price: product.pricing.price,
     mrp: product.pricing.mrp,
     image: getPrimaryImage(product),
-    inStock: product.stock.inStock,
+    inStock: isStockAvailable(product.stock),
     ...(hasProductOptions(product.options) ? { options: product.options } : {}),
     ...(product.media.variantImages === undefined
       ? {}
@@ -149,7 +150,7 @@ export function getOrderPricingCatalogue(): OrderPricingEntry[] {
     id: product.id,
     name: product.name,
     price: product.pricing.price,
-    inStock: product.stock.inStock,
+    inStock: isStockAvailable(product.stock),
   }));
 }
 
