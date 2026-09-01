@@ -7,6 +7,8 @@ import {
   serialiseKeywordMap,
 } from "./backfill-keyword-map.mjs";
 import { looselyNormaliseKeyword } from "./keyword-normalisation.mjs";
+import { PLACEHOLDER_MAX_STDEV, averageChannelStdev } from "./image-flatness.mjs";
+import { collectStagingPlan } from "./stage-images.mjs";
 import { BRAND_NAME } from "../config/site-facts.mjs";
 import {
   ADVISORY_DISCOUNT_PERCENT,
@@ -177,6 +179,103 @@ for (const slug of CATEGORY_SLUGS) {
   if (fileExists) categoryImagesOnDisk += 1;
 }
 
+/**
+ * Does the file at `/products/{id}.webp` actually hold the photograph the record claims?
+ *
+ * `existsUnderPublic` answers "is something there", and something was always there — 206
+ * products shipped a generated placeholder standing exactly where a confirmed migrated
+ * photograph belonged, and every one of them passed this gate for months. Existence was never
+ * the question.
+ *
+ * The check is a **conjunction**, and neither half works alone:
+ *
+ * 1. The record's own confirmed `sourceFile` is resolved and compared **byte for byte** with
+ *    what is published. Identical is proof, not evidence — that file *is* the photograph, and
+ *    nothing further is measured. This is also what keeps the check quick: the healthier the
+ *    catalogue gets, the fewer images are left to decode, and a fully staged catalogue decodes
+ *    none of them.
+ * 2. Only for a file that differs from its own staged source is flatness measured, and only
+ *    then does `PLACEHOLDER_MAX_STDEV` decide. On its own that threshold would be wrong: three
+ *    genuine migrated photographs measure 15.7, 17.5 and 18.3, inside the placeholder's own
+ *    14.1–19.9 band. They are never measured, because they are byte-identical to their sources.
+ *
+ * A product with no pipeline record, or none with a confirmed `sourceFile`, is not judged at
+ * all. It was photographed by hand rather than migrated, nothing claims a photograph exists for
+ * it, and a flat image there may simply be a plain product shot.
+ */
+const STAGED_PHOTOGRAPH_CONCURRENCY = 8;
+
+const publishedOverStagedPhotograph = [];
+const stagedPhotographUnresolved = [];
+const republishedOverStagedPhotograph = [];
+let stagedPhotographsVerified = 0;
+let unmigratedProductCount = 0;
+
+const pipelineBundleRoot = join(REPO_ROOT, "content-pipeline", "completed");
+const pipelineBundleAvailable = existsSync(pipelineBundleRoot);
+
+if (pipelineBundleAvailable) {
+  const candidates = [];
+
+  for (const product of catalogue) {
+    if (typeof product?.id !== "string") continue;
+
+    const plan = collectStagingPlan(product.id, { repoRoot: REPO_ROOT });
+    const primary = plan.entries.find(
+      (entry) => entry.publicPath === `/products/${product.id}.webp`,
+    );
+
+    if (plan.recordPath === null || primary === undefined || primary.status === "no-source") {
+      unmigratedProductCount += 1;
+      continue;
+    }
+    if (primary.status === "unresolved") {
+      stagedPhotographUnresolved.push(
+        `${product.id}: the record confirms ${primary.sourceFile}, but no such file is staged — the photograph behind this listing cannot be found`,
+      );
+      continue;
+    }
+    if (primary.status === "identical") {
+      stagedPhotographsVerified += 1;
+      continue;
+    }
+    if (primary.status === "copy") continue;
+
+    candidates.push({ productId: product.id, primary });
+  }
+
+  const queue = [...candidates];
+  const measure = async () => {
+    while (queue.length > 0) {
+      const { productId, primary } = queue.pop();
+      const stdev = await averageChannelStdev(primary.destination);
+      if (stdev < PLACEHOLDER_MAX_STDEV) {
+        publishedOverStagedPhotograph.push({ productId, stdev, primary });
+      } else {
+        republishedOverStagedPhotograph.push({ productId, stdev, primary });
+      }
+    }
+  };
+
+  await Promise.all(
+    Array.from({ length: Math.min(STAGED_PHOTOGRAPH_CONCURRENCY, candidates.length) }, measure),
+  );
+
+  publishedOverStagedPhotograph.sort((left, right) =>
+    left.productId.localeCompare(right.productId),
+  );
+  republishedOverStagedPhotograph.sort((left, right) =>
+    left.productId.localeCompare(right.productId),
+  );
+
+  for (const { productId, stdev, primary } of publishedOverStagedPhotograph) {
+    check(
+      false,
+      `${productId}: public/products/${productId}.webp is a flat generated graphic (colour stdev ${stdev.toFixed(1)}, below ${PLACEHOLDER_MAX_STDEV}) and is not the confirmed photograph the record stages at ${primary.sourceFile}. A real photo exists but was never published — run: npm run stage:images -- ${productId} --force`,
+    );
+  }
+}
+
 const {
   seenIds,
   statusCounts,
@@ -234,6 +333,16 @@ console.log(`  primary files      ${primaryImagesOnDisk}/${catalogue.length}`);
 console.log(`  additional views   ${additionalImageCount}`);
 console.log(`  variant images     ${variantImageCount}`);
 console.log(`  category files     ${categoryImagesOnDisk}/${CATEGORY_SLUGS.length}`);
+console.log("\nPublished photographs against the pipeline's own confirmed source");
+if (!pipelineBundleAvailable) {
+  console.log("  NOT CHECKED — content-pipeline/completed/ is not in this checkout");
+} else {
+  console.log(`  verified identical ${stagedPhotographsVerified}`);
+  console.log(`  no staged photo    ${unmigratedProductCount} (hand-made, nothing claims one)`);
+  console.log(`  differ, not flat   ${republishedOverStagedPhotograph.length}`);
+  console.log(`  source missing     ${stagedPhotographUnresolved.length}`);
+  console.log(`  PLACEHOLDER SHOWN  ${publishedOverStagedPhotograph.length}`);
+}
 console.log("\nSearch and social metadata");
 console.log(`  with seo block     ${catalogue.filter((product) => isPlainObject(product?.seo)).length}/${catalogue.length}`);
 console.log(`  unique metaTitles  ${seenMetaTitles.size}`);
@@ -305,6 +414,22 @@ if (pricedMetadataIds.length > 0) {
   console.warn(
     `\nADVISORY — ${pricedMetadataIds.length} product(s) quote an amount in their search or social copy. Re-check these when a price or the shipping threshold moves: ${pricedMetadataIds.join(", ")}`,
   );
+}
+
+if (stagedPhotographUnresolved.length > 0) {
+  console.warn(
+    `\nADVISORY — ${stagedPhotographUnresolved.length} product(s) confirm a photograph whose staged file is not in this checkout. Nothing can be verified for these, and nothing is claimed about them:`,
+  );
+  for (const advisory of stagedPhotographUnresolved) console.warn(`  - ${advisory}`);
+}
+
+if (republishedOverStagedPhotograph.length > 0) {
+  console.warn(
+    `\nADVISORY — ${republishedOverStagedPhotograph.length} published photograph(s) differ from the file the record stages but are not flat, so each is a real image someone put there on purpose. Worth knowing, not a failure:`,
+  );
+  for (const { productId, stdev } of republishedOverStagedPhotograph) {
+    console.warn(`  - ${productId} (colour stdev ${stdev.toFixed(1)})`);
+  }
 }
 
 if (context.failures.length > 0) {

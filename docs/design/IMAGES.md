@@ -24,10 +24,17 @@ dead-code cleanup ([ADR-038](../decisions/ADR-038-dead-code-and-doc-accuracy-cle
 The four that remain are named above and are not orphans — removing them breaks the test
 suite.
 
-Nothing in the tooling can tell a photograph from a placeholder. `generate:placeholders`
-never overwrites an existing file, which is what protects them — but the
-`rm -rf public/products` recipe further down this page would delete them, so **do not run
+`generate:placeholders` never overwrites an existing file, which is what protects them — but
+the `rm -rf public/products` recipe further down this page would delete them, so **do not run
 it**. It was written when every file in that folder was regenerable, and it no longer is.
+
+Nothing in the tooling could tell a photograph from a placeholder, and for these 49 files
+nothing still can: they are the owner's own photography, nothing in the repository stages a
+copy of them, and three of them are flatter than any placeholder the generator draws. What
+changed is narrower and only covers a **migrated** product, where the pipeline holds the
+photograph the record confirmed: `validate:products` compares the published file against that
+source byte for byte, and only measures flatness on one that already differs from it
+([ADR-074](../decisions/ADR-074-publish-stages-its-own-photographs.md)).
 
 The products they belong to are the owner's real catalogue; the id-is-the-P-code decision is
 in [ADR-016](../decisions/ADR-016-real-product-import.md).
@@ -141,11 +148,28 @@ npx sharp-cli --input photo.jpg --output public/products/P001.webp
 
 ## Adding a new product
 
+**A product that came through the content pipeline already has a photograph, and it is not the
+generator's job to stand in for it.** Take the branch that matches:
+
 ```bash
-# 1. append the product row to data/products.json
-npm run generate:placeholders   # writes only the new paths, skips everything already on disk
-npm run validate:products       # confirms every path and its file on disk
+# A migrated product — the confirmed photograph is staged under content-pipeline/
+npm run stage:images -- P123     # copies the record's own sourceFile to the path it claims
+npm run validate:products        # confirms each file IS the photograph, not merely that one exists
+
+# A product nobody has photographed yet
+npm run generate:placeholders    # writes only the new paths, skips everything already on disk
+npm run validate:products
 ```
+
+Getting this wrong in the first direction is not recoverable by re-running anything: the
+generator never overwrites, so a placeholder written over a staged photograph stays there
+permanently. That is exactly how 206 products came to ship a gem motif instead of their own
+photograph ([ADR-074](../decisions/ADR-074-publish-stages-its-own-photographs.md)), and it is
+why `validate:products` now compares the published file against the record's staged source
+rather than only checking that something is at the path.
+
+Publishing through `npm run publish:product` performs the staging copy itself, so the first
+branch is only needed when you are working ahead of a publish or repairing one.
 
 The generator reads the whole of `media`, so an additional view or a per-variant image
 declared in the record gets a stand-in on the same run and the same skip-if-exists rule.

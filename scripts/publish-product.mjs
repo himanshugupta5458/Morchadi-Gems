@@ -3,6 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { buildKeywordMap, serialiseKeywordMap } from "./backfill-keyword-map.mjs";
+import { applyStagingPlan, collectStagingPlan, describeUnresolved } from "./stage-images.mjs";
 import { formatFinding, validatePublishReadiness } from "./validate-draft-a.mjs";
 import { BRAND_NAME } from "../config/site-facts.mjs";
 
@@ -28,6 +29,14 @@ const DEFAULT_REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
  *    `content-pipeline/completed/PNNN/`. Staging then empties as products ship, and `completed/`
  *    holds the full provenance bundle behind each live product. A product with no staging
  *    directory (the fresh, hand-made path) publishes exactly as before.
+ * 5. Every confirmed photograph is copied to the path the record claims under
+ *    `public/products/`, by `./stage-images.mjs`. This used to be a hand-typed `cp` that no
+ *    script performed and only one line of one document described, and skipping it did not stop
+ *    a publish — the catalogue gate failed afterwards on a missing file, and the nearest
+ *    documented remedy wrote a generated placeholder at that path instead. 206 products shipped
+ *    a placeholder over a real photograph before anyone looked. It runs *before* the catalogue
+ *    is written, so a record whose confirmed photograph cannot be found refuses the publish
+ *    rather than reaching the gate with a hole for a placeholder to fill.
  *
  * What it deliberately does not do is touch the two tracking registers under
  * `docs/pipeline-prep/`. Those are hand-maintained human indexes over an untracked directory
@@ -209,6 +218,24 @@ export function publishProduct(productId, options = {}) {
     };
   }
 
+  const stagingPlan = collectStagingPlan(productId, {
+    repoRoot,
+    recordPath: draftPath(productId, repoRoot),
+  });
+  const unresolvedImages = stagingPlan.entries.filter((entry) => entry.status === "unresolved");
+  if (unresolvedImages.length > 0 || stagingPlan.errors.length > 0) {
+    return {
+      published: false,
+      errors: [
+        ...stagingPlan.errors,
+        ...unresolvedImages.map((entry) => describeUnresolved(entry, productId)),
+      ],
+      warnings: [],
+    };
+  }
+
+  const stagedImages = applyStagingPlan(stagingPlan, { force: false });
+
   writeFileSync(catalogueFile, serialiseCatalogue(activation.catalogue), "utf8");
   writeFileSync(keywordMapPath(repoRoot), serialiseKeywordMap(keywordMap), "utf8");
 
@@ -223,6 +250,12 @@ export function publishProduct(productId, options = {}) {
   }
 
   const warnings = [];
+  for (const entry of stagedImages.blocked) {
+    warnings.push(
+      `public${entry.publicPath} already held a different file, so the staged photograph was not copied over it. Check which one belongs there, then run: npm run stage:images -- ${productId} --force`,
+    );
+  }
+
   const similarityReport = similarityReportPath(productId, repoRoot);
   if (existsSync(similarityReport)) {
     warnings.push(
@@ -240,6 +273,12 @@ export function publishProduct(productId, options = {}) {
     publishedProductCount: keywordMap.productCount,
     movedTo: `content-pipeline/completed/${productId}.json`,
     stagingMovedTo,
+    stagedImages: {
+      copied: stagedImages.copied.length,
+      alreadyStaged: stagedImages.identical.length,
+      notOverwritten: stagedImages.blocked.length,
+      unstaged: stagedImages.noSource.length,
+    },
   };
 }
 
@@ -280,6 +319,9 @@ function runCli(argv) {
   if (result.stagingMovedTo !== null) {
     console.log(`  staging filed     ${result.stagingMovedTo}`);
   }
+  console.log(
+    `  photographs       ${result.stagedImages.copied} copied, ${result.stagedImages.alreadyStaged} already in place`,
+  );
 
   for (const warning of result.warnings) console.log(`\nNOTE — ${warning}`);
 

@@ -1,6 +1,6 @@
 /** @vitest-environment jsdom */
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { cleanup, render } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
@@ -15,7 +15,6 @@ import { HOME_MOBILE_PRODUCT_COUNT, HOME_NEW_ARRIVALS_COUNT } from "@/lib/home-p
 import { getAllProducts, getNewArrivals, getSecondaryImage } from "@/lib/products";
 import { getCollectionCovers } from "@/lib/collection-cover";
 import { getAllSocialProof, getSocialProof } from "@/lib/social-proof";
-import { isProductInCollection } from "@/lib/shop";
 import { CategoryGrid } from "@/components/CategoryGrid";
 import { SocialProofSection } from "@/components/SocialProofSection";
 import { TrustStrip, TrustStripCompact } from "@/components/TrustStrip";
@@ -177,20 +176,50 @@ describe("the promise band", () => {
 });
 
 describe("the collection tiles", () => {
-  it("gives every collection a photograph of a piece that collection actually holds", () => {
-    const products = getAllProducts();
+  /**
+   * The tiles used to be derived from catalogue membership, and this file used to assert that
+   * derivation. Each collection now carries a commissioned cover instead, so what is worth
+   * pinning is the opposite: that the path is fixed, that it is fixed to the *right* slug, and
+   * that the file behind it is really there.
+   */
+  it("gives every collection its own commissioned cover", () => {
+    for (const cover of getCollectionCovers()) {
+      expect(cover.image, `${cover.slug} has no cover`).toBe(
+        `/collections/${cover.slug}-fallback.jpg`,
+      );
+    }
+  });
+
+  /**
+   * A path that resolves to nothing renders as a broken tile rather than as a failure, so the
+   * asset is checked on disk rather than assumed from the string.
+   */
+  it("ships the file each cover points at", () => {
+    for (const cover of getCollectionCovers()) {
+      expect(
+        existsSync(`public${cover.image as string}`),
+        `${cover.slug}'s cover file is missing from public/`,
+      ).toBe(true);
+    }
+  });
+
+  it("gives every collection a distinct cover", () => {
+    const paths = getCollectionCovers().map((cover) => cover.image);
+
+    expect(new Set(paths).size).toBe(paths.length);
+  });
+
+  /**
+   * The reason the alt text stopped naming a piece. A fixed cover is not a product photograph,
+   * and describing it with a member's `seo.imageAlt` would describe something that is not on
+   * screen.
+   */
+  it("describes the collection rather than naming a product", () => {
+    const alts = getAllProducts().map((product) => product.seo.imageAlt);
 
     for (const cover of getCollectionCovers()) {
-      expect(cover.image, `${cover.slug} has no cover`).not.toBeNull();
-
-      const owner = products.find(
-        (product) => product.media.images[0] === cover.image,
-      );
-      expect(owner, `${cover.slug}'s cover belongs to no product`).toBeDefined();
-      expect(
-        isProductInCollection(owner as NonNullable<typeof owner>, cover.slug),
-        `${cover.slug} is represented by a piece that is not in it`,
-      ).toBe(true);
+      expect(cover.alt).toBe(`A curated piece from the ${cover.label} collection`);
+      expect(alts).not.toContain(cover.alt);
     }
   });
 

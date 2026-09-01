@@ -314,6 +314,87 @@ describe("publishProduct", () => {
     expect(existsSync(join(root, "content-pipeline", "incoming", "2026-08-23-batch-01", "P900", "raw-block.json"))).toBe(true);
   });
 
+  /**
+   * The gap this closes: publishing used to leave the photograph where it was staged, the
+   * catalogue gate then failed on a missing file, and the nearest documented remedy wrote a
+   * generated placeholder at that path — permanently, because the generator never overwrites.
+   * Publishing now carries the photograph itself, and refuses rather than leaving a hole.
+   */
+  function draftStagingItsOwnPhoto(id: string) {
+    const draft = readyDraft(id);
+    return {
+      ...draft,
+      images: {
+        ...draft.images,
+        general: draft.images.general.map((image) => ({
+          ...image,
+          sourceFile: `2026-08-23-batch-01/${id}/raw/main.webp`,
+        })),
+      },
+    };
+  }
+
+  function publishedImage(id: string): string {
+    return join(root, "public", "products", `${id}.webp`);
+  }
+
+  it("copies the confirmed photograph to the path the record claims", () => {
+    seedRepository([product("P900", "draft")], { P900: draftStagingItsOwnPhoto("P900") });
+    seedStagingDir("2026-08-23-batch-01", "P900");
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(true);
+    expect(result.stagedImages).toEqual({
+      copied: 1,
+      alreadyStaged: 0,
+      notOverwritten: 0,
+      unstaged: 0,
+    });
+    expect(readFileSync(publishedImage("P900"), "utf8")).toBe("not-a-real-image");
+  });
+
+  it("refuses when the confirmed photograph is nowhere on disk, changing nothing", () => {
+    seedRepository([product("P900", "draft")], { P900: draftStagingItsOwnPhoto("P900") });
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(false);
+    expect(result.errors[0]).toContain("no such file is staged");
+    expect(statusOf("P900")).toBe("draft");
+    expect(existsSync(draftFile("P900"))).toBe(true);
+    expect(existsSync(join(root, "data", "keyword-map.json"))).toBe(false);
+  });
+
+  it("warns rather than replacing a different file already at the destination", () => {
+    seedRepository([product("P900", "draft")], { P900: draftStagingItsOwnPhoto("P900") });
+    seedStagingDir("2026-08-23-batch-01", "P900");
+    mkdirSync(join(root, "public", "products"), { recursive: true });
+    writeFileSync(publishedImage("P900"), "a-generated-placeholder", "utf8");
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(true);
+    expect(result.stagedImages?.notOverwritten).toBe(1);
+    expect(result.warnings.join(" ")).toContain("stage:images");
+    expect(readFileSync(publishedImage("P900"), "utf8")).toBe("a-generated-placeholder");
+  });
+
+  it("publishes a hand-made product, which stages no photograph, exactly as before", () => {
+    seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
+
+    const result = publishProduct("P900", { repoRoot: root });
+
+    expect(result.published).toBe(true);
+    expect(result.stagedImages).toEqual({
+      copied: 0,
+      alreadyStaged: 0,
+      notOverwritten: 0,
+      unstaged: 1,
+    });
+    expect(existsSync(publishedImage("P900"))).toBe(false);
+  });
+
   it("names the row the owner has to write by hand", () => {
     seedRepository([product("P900", "draft")], { P900: readyDraft("P900") });
 

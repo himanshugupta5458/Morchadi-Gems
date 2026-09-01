@@ -84,14 +84,31 @@ between those two points and publishing cannot be undone.
 npm run publish:product PNNN
 ```
 
-Flips `PNNN` from `draft` to `active` in `data/products.json`, regenerates `data/keyword-map.json`,
+Copies every confirmed photograph to the path the record claims under `public/products/`
+([ADR-074](../docs/decisions/ADR-074-publish-stages-its-own-photographs.md)), flips `PNNN` from
+`draft` to `active` in `data/products.json`, regenerates `data/keyword-map.json`,
 moves `drafts/PNNN.json` to `completed/PNNN.json`, moves the product's staging directory
 `incoming/{batch}/PNNN/` to `completed/PNNN/`
 ([ADR-057](../docs/decisions/ADR-057-staging-colocation-and-completed-tracking.md)), and prints
 the two register rows to update by hand. It refuses if the readiness check fails, if the record
-is not in the catalogue, if it is already active, or if publishing would give one primary
-keyword two owners. The record itself is written into `data/products.json` beforehand by the
+is not in the catalogue, if it is already active, if publishing would give one primary
+keyword two owners, or **if a confirmed photograph names a staged file that is not there** —
+that last one is new, and it is there because a publish that left the photograph behind used to
+succeed and fail the catalogue gate afterwards, whose documented remedy wrote a placeholder at
+that path for good. The record itself is written into `data/products.json` beforehand by the
 orchestration skill, always as a draft.
+
+## Staging a product's photographs on their own
+
+```
+npm run stage:images -- PNNN [PNNN...] [--dry-run] [--force]
+```
+
+The same copy, callable before publish or over an already-published product. It reads the
+draft's own `sourceFile` and `path` and carries one to the other — it derives no path and
+invents no variant slug, because the record already carries both. A file already at the
+destination is skipped and reported; `--force` replaces it and prints the size and dimensions
+either side, so an overwrite is never silent.
 
 ## Surveying the staged images
 

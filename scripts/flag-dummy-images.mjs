@@ -4,18 +4,17 @@
  * WebP's adaptive compression squeezes both real photos and flat generated graphics into a
  * similar bytes-per-pixel band, so that signal had no real discriminative power here.
  *
- * This version measures PIXEL VALUE VARIANCE instead (via sharp's per-channel standard
- * deviation), which survives compression format differences. A real jewellery photograph has
- * continuous shading, reflections and shadow gradients even on a clean studio background — real
- * pixel-to-pixel variation. A flat icon-on-gradient placeholder graphic has very little of that;
- * most of the image is smooth, near-uniform colour. Low standard deviation = flat/generated;
- * high standard deviation = photographic detail.
+ * This version measures PIXEL VALUE VARIANCE instead, which survives compression format
+ * differences. The measurement itself now lives in `./image-flatness.mjs`, because
+ * `validate-products.mjs` came to need the same number and a second copy of it would have been
+ * two thresholds to keep in step.
  */
 
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import sharp from "sharp";
+
+import { averageChannelStdev } from "./image-flatness.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -45,10 +44,7 @@ async function main() {
       continue;
     }
 
-    const stats = await sharp(absolutePath).stats();
-    const avgStdev =
-      stats.channels.slice(0, 3).reduce((sum, ch) => sum + ch.stdev, 0) /
-      Math.min(3, stats.channels.length);
+    const avgStdev = await averageChannelStdev(absolutePath);
 
     results.push({ id: product.id, path: primaryImage, avgStdev });
   }
