@@ -2,6 +2,7 @@ import { CartLink } from "@/components/CartLink";
 import { HeaderAnnouncement } from "@/components/HeaderAnnouncement";
 import { MobileNav } from "@/components/MobileNav";
 import { PrimaryNav } from "@/components/PrimaryNav";
+import { ProductSearch } from "@/components/ProductSearch";
 import { TrackOrderLink } from "@/components/TrackOrderLink";
 import { Wordmark } from "@/components/Wordmark";
 
@@ -14,6 +15,18 @@ import { Wordmark } from "@/components/Wordmark";
  *
  * The header is sticky from the logo row down; the announcement scrolls with it now rather
  * than away above it. See [ADR-028](/docs/decisions/ADR-028-header-restructure.md).
+ *
+ * **Search lives here, on every shop page.** It was on the home page alone, which meant a
+ * shopper who knew the word they were looking for had to go back to `/` to type it. From `lg`
+ * it sits in the right cluster beside Track Order, where the row already had the width; below
+ * `lg` that row holds four things and a logo, so it takes a slim band of its own under them
+ * rather than squeezing the wordmark. Two instances are mounted and one is visible at any
+ * width, each with its own state and its own dropdown anchored to its own box.
+ *
+ * The checkout shell renders `CheckoutHeader` instead of this and therefore carries no search,
+ * deliberately: `/address` and `/payment` strip navigation to keep a committed shopper in the
+ * funnel, and a search box is the broadest exit there is. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function Header(): JSX.Element {
   return (
@@ -27,10 +40,18 @@ export function Header(): JSX.Element {
         <HeaderAnnouncement />
 
         <div className="flex items-center justify-end gap-4 lg:gap-6">
+          <div className="hidden w-full max-w-[18rem] lg:block">
+            <ProductSearch variant="header" />
+          </div>
           <TrackOrderLink />
           <CartLink />
         </div>
       </div>
+
+      <div className="container pb-3 lg:hidden">
+        <ProductSearch variant="header" />
+      </div>
+
       <PrimaryNav />
     </header>
   );

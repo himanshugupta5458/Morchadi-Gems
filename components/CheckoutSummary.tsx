@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import type { CartLine } from "@/lib/cart";
 import { formatRupees } from "@/lib/format";
 import { CART_PATH } from "@/lib/navigation";
@@ -16,6 +17,18 @@ export interface CheckoutSummaryProps {
   total: number;
   /** See `OrderTotalsProps.discount`. Absent on the address step, which offers no payment choice yet. */
   discount?: OrderTotalsDiscount;
+  /**
+   * Reassurance under the total, behind a divider — the secure-checkout badge, the returns
+   * window, the delivery coverage, the support address.
+   *
+   * It sits in this column rather than above the form because it is not an instruction. The
+   * address step's left column is a sequence of things to do, and a boxed panel of four
+   * promises between the heading and the first field is four lines of reading before the
+   * shopper can start typing. Beside the total is where a shopper looks when they are deciding
+   * whether to go on, which is when a promise is worth making. See
+   * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+   */
+  footer?: ReactNode;
 }
 
 /**
@@ -29,6 +42,7 @@ export function CheckoutSummary({
   shipping,
   total,
   discount,
+  footer,
 }: CheckoutSummaryProps): JSX.Element {
   return (
     <div className="border border-line bg-ivory p-6 lg:sticky lg:top-32 lg:self-start">
@@ -77,6 +91,10 @@ export function CheckoutSummary({
       <div className="mt-6">
         <OrderTotals subtotal={subtotal} shipping={shipping} total={total} discount={discount} />
       </div>
+
+      {footer === undefined ? null : (
+        <div className="mt-6 border-t border-line pt-6">{footer}</div>
+      )}
     </div>
   );
 }

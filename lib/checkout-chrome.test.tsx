@@ -122,6 +122,21 @@ describe("the checkout header", () => {
     expect(await renderCheckoutHeader(2)).toContain('aria-current="step"');
   });
 
+  /**
+   * The search box went into the shop header, which is on every shop page — and deliberately not
+   * into this one. `/address` and `/payment` strip navigation to keep a committed shopper in the
+   * funnel, and a search box is the broadest exit there is: it reaches any product from any
+   * screen. See [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+   */
+  it("carries no search box, unlike the shop header", async () => {
+    const markup = await renderCheckoutHeader(1);
+
+    expect(markup).not.toContain("Search the collection");
+    expect(markup).not.toContain('type="search"');
+    expect(readFileSync("components/CheckoutHeader.tsx", "utf8")).not.toContain("ProductSearch");
+    expect(readFileSync("components/Header.tsx", "utf8")).toContain("ProductSearch");
+  });
+
   it("offers no other way out of the funnel", async () => {
     const markup = await renderCheckoutHeader(2);
     const hrefs = Array.from(markup.matchAll(/href="([^"]+)"/g)).map((match) => match[1]);

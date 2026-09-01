@@ -30,6 +30,13 @@ const COPIED_FEEDBACK_MS = 2000;
  *
  * Shared by both confirmation screens — a paid order and a cash-on-delivery one — because the
  * order number means the same thing on each and is the same thing to write down.
+ *
+ * **Quiet, and quieter than the balance beside it.** Both panels were gold-tinted and the same
+ * weight, which made a reference the shopper may never use look as urgent as the cash they have
+ * to find before the courier arrives. This one is a hairline on white now; `AmountDueNotice`
+ * keeps the gold. The sentence below is also the only place this screen says to keep the
+ * number — it used to say so again in the footnote under the buttons. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.Element {
   const [isCopied, setIsCopied] = useState(false);
@@ -50,7 +57,7 @@ export function OrderNumberCallout({ trackingId }: { trackingId: string }): JSX.
   }
 
   return (
-    <div className="flex w-full max-w-sm flex-col items-center gap-2 border border-gold/40 bg-gold/5 px-6 py-6">
+    <div className="flex w-full max-w-sm flex-col items-center gap-2 border border-line bg-white px-6 py-6">
       <span className="text-eyebrow uppercase tracking-caps-wide text-muted">
         Your order number
       </span>

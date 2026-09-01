@@ -337,18 +337,22 @@ export function OrderConfirmation({
           title="Your order is confirmed"
           message={
             result.amountDue !== null && result.amountDue > 0
-              ? "Your payment went through and your order is with us. The balance below is due when it is delivered."
+              ? "Your payment went through and your order is with us. There is a balance still to settle at the door."
               : "Your payment went through and your order is with us. Nothing more is needed from you."
           }
           actions={<ButtonLink href={SHOP_PATH}>Continue shopping</ButtonLink>}
-          footnote={
-            <SupportLine>Keep your order number. Questions about this order go to</SupportLine>
-          }
         >
           {orderReference.trackingId === null ? null : (
             <OrderNumberCallout trackingId={orderReference.trackingId} />
           )}
 
+          {/**
+           * The balance, the courier's call and the delivery window in one panel, exactly as on
+           * the cash-on-delivery screen and from the same component. A fully paid order has no
+           * balance and therefore no panel, so the delivery window is stated on its own line
+           * instead — it is the only thing left for that shopper to wait for. See
+           * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+           */}
           {result.amountDue !== null && result.amountDue > 0 ? (
             <AmountDueNotice
               amountDue={result.amountDue}
@@ -372,7 +376,9 @@ export function OrderConfirmation({
             )}
           </dl>
 
-          <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+          {result.amountDue !== null && result.amountDue > 0 ? null : (
+            <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+          )}
 
           {displayableBundle === null ? null : (
             <ConfirmationEmailNote email={displayableBundle.address.email} />

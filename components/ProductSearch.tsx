@@ -13,7 +13,7 @@ import {
   type ProductSearchResults,
 } from "@/lib/product-search";
 import { SHOP_PATH } from "@/lib/shop-query";
-import { fieldBorderClasses, fieldControlClasses } from "@/components/FormField";
+import { fieldBorderClasses, fieldControlBaseClasses } from "@/components/FormField";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 import { SearchIcon } from "@/components/icons";
 
@@ -29,8 +29,24 @@ function buildSearchHref(term: string): string {
   return `${SHOP_PATH}?${SEARCH_QUERY_PARAM}=${encodeURIComponent(term)}`;
 }
 
+export type ProductSearchVariant = "page" | "header";
+
+export interface ProductSearchProps {
+  /**
+   * `header` is the shorter control the persistent header carries; `page` is the full-height
+   * field a form uses. Only the input's own padding and type scale differ — the dropdown, the
+   * request, the keyboard handling and the fallback form are one implementation.
+   */
+  variant?: ProductSearchVariant;
+}
+
+const inputScaleClasses: Record<ProductSearchVariant, string> = {
+  page: "py-3 text-body",
+  header: "py-2 text-body-sm",
+};
+
 /**
- * The home page's search box: type, and the matching pieces appear under it.
+ * The shop's search box: type, and the matching pieces appear under it.
  *
  * **A `GET` form first, an autocomplete second.** The markup is a real form pointed at `/shop`
  * with the input named `q`, so pressing Enter finds things whether or not the JavaScript
@@ -45,8 +61,19 @@ function buildSearchHref(term: string): string {
  * A term matching more pieces than the dropdown can hold ends with a link to that set rather
  * than a longer list: eight rows is what fits above the fold on a phone, and the ninth would
  * push the first out of sight.
+ *
+ * **It lives in the header now, not on the home page.** A shopper who knows what they want
+ * could previously only say so from `/`, which meant leaving whatever page they were on to look
+ * for something. The dropdown is positioned against this component's own box rather than
+ * against the viewport, so it hangs correctly from a 124px phone header and a 96px desktop one
+ * without either being told about it. The checkout header deliberately does not carry it — that
+ * shell strips navigation to keep a committed shopper in the funnel, and a search box is the
+ * broadest exit of all. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
-export function ProductSearch(): JSX.Element {
+export function ProductSearch({
+  variant = "page",
+}: ProductSearchProps): JSX.Element {
   const router = useRouter();
   const listboxId = useId();
   const [term, setTerm] = useState("");
@@ -148,7 +175,7 @@ export function ProductSearch(): JSX.Element {
             aria-expanded={isListVisible && hits.length > 0}
             aria-controls={listboxId}
             aria-autocomplete="list"
-            className={`${fieldControlClasses} ${fieldBorderClasses(false)} pl-10`}
+            className={`${fieldControlBaseClasses} ${fieldBorderClasses(false)} ${inputScaleClasses[variant]} pl-10`}
           />
         </span>
       </form>

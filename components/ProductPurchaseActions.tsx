@@ -5,7 +5,7 @@ import type { CatalogueEntry, SelectedOptions } from "@/types/product";
 import { useCart } from "@/lib/cart-context";
 import { CHECKOUT_ADDRESS_PATH } from "@/lib/navigation";
 import { useToast } from "@/lib/toast-context";
-import { ADDED_TO_CART_MESSAGE } from "@/components/AddToCartButton";
+import { ADDED_TO_CART_MESSAGE } from "@/lib/add-to-cart-flow";
 import { ProductPurchasePanel } from "@/components/ProductPurchasePanel";
 
 /**

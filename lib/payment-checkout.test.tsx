@@ -4,6 +4,7 @@ import { act, cleanup, fireEvent, render, screen } from "@testing-library/react"
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { CartItem, CheckoutData } from "@/types/cart";
 import type { CatalogueEntry } from "@/types/product";
+import { formatAddressOneLine } from "@/lib/address";
 import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY, parseCheckoutData } from "@/lib/checkout";
@@ -314,17 +315,50 @@ describe("the payment step when the floor has reached the order total", () => {
  * [ADR-072](/docs/decisions/ADR-072-checkout-flow-polish.md).
  */
 describe("what the payment step tells a shopper", () => {
-  it("keeps the short security sentence and drops the explanation that followed it", async () => {
+  /**
+   * One security sentence on the screen, and it is the one under the pay button. The subtitle
+   * used to carry a near-verbatim copy of it three sections higher, which is the same
+   * reassurance twice — the second time at the moment it is actually being acted on.
+   */
+  it("states who processes the payment once, under the button rather than above the form", async () => {
     await renderPaymentStep(ALL_ELIGIBLE);
 
-    expect(
-      screen.getByText(
-        "Payment is handled by Cashfree on their secure page. We never see your card or UPI details.",
-      ),
-    ).toBeTruthy();
-    expect(document.body.textContent).not.toContain(
-      "every amount below is confirmed by our server",
-    );
+    const body = document.body.textContent ?? "";
+
+    expect(body).toContain("Review your order and choose how to pay.");
+    expect(body).not.toContain("Payment is handled by Cashfree on their secure page.");
+    expect(body.split("We never see your card or UPI details").length - 1).toBe(1);
+    expect(body).not.toContain("every amount below is confirmed by our server");
+  });
+
+  /**
+   * The address is confirmed on the screen before this one, so it is a line here rather than a
+   * six-line boxed panel between the heading and the payment choice.
+   */
+  it("recaps the delivery address as one line with a way back to it", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    const recap = screen.getByRole("heading", { name: "Delivering to" }).parentElement;
+    const text = (recap?.textContent ?? "").replace(/\s+/g, " ");
+
+    expect(text).toContain(STORED_ADDRESS.address.name);
+    expect(text).toContain(formatAddressOneLine(STORED_ADDRESS.address));
+    expect(text).toContain("Edit");
+    expect(recap?.querySelectorAll("span, a").length).toBeLessThan(8);
+  });
+
+  /**
+   * The four-line trust strip belongs to the address step, one screen back, in its summary
+   * column. Repeating it after the shopper has committed to that screen is reassurance offered
+   * to somebody who has stopped asking.
+   */
+  it("carries no repeat of the address step's trust strip", async () => {
+    await renderPaymentStep(ALL_ELIGIBLE);
+
+    const body = document.body.textContent ?? "";
+
+    expect(body).not.toContain(`Secure checkout via ${LEGAL_CONFIG.paymentProvider}`);
+    expect(body).not.toContain(`Delivered across ${LEGAL_CONFIG.shippingScope}`);
   });
 
   it("carries no free-shipping nudge, this late in the funnel", async () => {
@@ -357,15 +391,13 @@ describe("what the payment step tells a shopper", () => {
     expect(document.body.textContent).not.toContain("by paying online");
   });
 
-  it("states the delivery estimate and the trust points, and names no logo it does not have", async () => {
+  it("states the delivery estimate and the methods, and names no logo it does not have", async () => {
     await renderPaymentStep(ALL_ELIGIBLE);
 
     expect(screen.getByText(DELIVERY_ESTIMATE_LINE)).toBeTruthy();
     expect(screen.getByText("UPI")).toBeTruthy();
     expect(screen.getByText("Cards")).toBeTruthy();
-    expect(
-      screen.getByText(`Secure checkout via ${LEGAL_CONFIG.paymentProvider}`),
-    ).toBeTruthy();
+    expect(document.body.querySelector("img")).toBeNull();
   });
 });
 

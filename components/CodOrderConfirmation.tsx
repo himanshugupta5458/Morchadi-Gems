@@ -7,7 +7,6 @@ import { useCart } from "@/lib/cart-context";
 import { clearCheckoutData, readCheckoutData } from "@/lib/checkout";
 import { DELIVERY_ESTIMATE_LINE } from "@/lib/config";
 import type { CrossSellShortlists } from "@/lib/cross-sell";
-import { formatRupees } from "@/lib/format";
 import { buildCodOrderPath } from "@/lib/navigation";
 import { saveAddressForNextTime } from "@/lib/saved-address";
 import { SHOP_PATH } from "@/lib/shop-query";
@@ -67,9 +66,10 @@ function readRetryable(payload: unknown): boolean {
  *
  * There is no payment to celebrate and the copy says so plainly. The success here is that the
  * order is *placed*; the money is a future event at the door, which is why the balance is given
- * the same prominence as the order number rather than being a line of small print, and why the
- * screen now also says what happens at that door — the courier calls first, and exact change
- * helps.
+ * **more** prominence than the order number rather than the same — it is the one thing on this
+ * screen the shopper still has to act on. What happens at that door is stated inside that panel
+ * rather than under it: the courier calls first, exact change helps, and the parcel is dispatched
+ * and delivered inside the stated windows.
  *
  * **The `COD_…` reference is no longer printed on this screen.** It was fine print under the
  * order-number callout and it was the wrong fine print: a `COD_…` reference names a payment that
@@ -211,26 +211,22 @@ export function CodOrderConfirmation({
           </span>
         }
         title="Your order is placed"
-        message="Your order is with us and nothing has been charged. You pay the courier in cash when it arrives."
+        message="Your order is with us and nothing has been charged."
         actions={<ButtonLink href={SHOP_PATH}>Continue shopping</ButtonLink>}
-        footnote={
-          <SupportLine>Keep your order number. Questions about this order go to</SupportLine>
-        }
       >
         <OrderNumberCallout trackingId={result.trackingId} />
 
+        {/**
+         * The amount, the courier's call and the delivery window are all inside this panel now.
+         * They were the panel plus two paragraphs under it, which said the cash figure a second
+         * time and the dispatch window for the fourth time in one checkout. See
+         * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+         */}
         {result.amountDue > 0 ? (
           <AmountDueNotice amountDue={result.amountDue} amountPrepaid={0} />
-        ) : null}
-
-        {result.amountDue > 0 ? (
-          <p className="max-w-prose text-body-sm text-muted">
-            Our courier will call before delivery. Please keep{" "}
-            {formatRupees(result.amountDue)} in cash ready, and exact change helps.
-          </p>
-        ) : null}
-
-        <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+        ) : (
+          <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
+        )}
 
         {displayableBundle === null ? null : (
           <ConfirmationEmailNote email={displayableBundle.address.email} />

@@ -23,8 +23,6 @@ const MOBILE_TO_DESKTOP_PAIRS: ReadonlyArray<{
   { file: "components/Hero.tsx", what: "hero subtext", mobile: "text-body", desktop: "sm:text-body-lg" },
 
   { file: "components/ProductCard.tsx", what: "card image aspect", mobile: "aspect-[5/4]", desktop: "sm:aspect-square" },
-  { file: "components/ProductCard.tsx", what: "card body padding", mobile: "p-3", desktop: "sm:p-4" },
-  { file: "components/ProductCard.tsx", what: "card body gap", mobile: "gap-2", desktop: "sm:gap-3" },
   { file: "components/ProductGrid.tsx", what: "grid row gap", mobile: "gap-y-5", desktop: "sm:gap-y-8" },
   { file: "components/ProductGrid.tsx", what: "grid column gap", mobile: "gap-x-3", desktop: "sm:gap-x-4" },
 
@@ -41,6 +39,26 @@ const MOBILE_TO_DESKTOP_PAIRS: ReadonlyArray<{
 ];
 
 describe("ADR-031 mobile scale", () => {
+  /**
+   * The card body is the one place a pair was deliberately retired rather than broken.
+   *
+   * ADR-031 restated `p-3`/`gap-2` at `sm:p-4`/`sm:gap-3` so a card that tightened on a phone
+   * kept its desktop spacing. ADR-073 tightened the card at *every* width — the option row and
+   * the second name line are gone, and the brief asked for 8-10px between the photograph, the
+   * name, the price and the button rather than the 16-20px that was there. A restated desktop
+   * value would now be a desktop card looser than the one that was asked for, so the pair is
+   * gone and the unprefixed value governs both. This asserts that, rather than leaving the
+   * absence to be read as an accident.
+   */
+  it("lets the product card body use one spacing at every width", () => {
+    const source = readFileSync("components/ProductCard.tsx", "utf8");
+    const body = source.slice(source.indexOf("flex flex-1 flex-col"));
+
+    expect(body).toContain("gap-2 p-3");
+    expect(body).not.toContain("sm:p-4");
+    expect(body).not.toContain("sm:gap-3");
+  });
+
   it.each(MOBILE_TO_DESKTOP_PAIRS)(
     "$file restates the desktop value for $what",
     ({ file, mobile, desktop }) => {

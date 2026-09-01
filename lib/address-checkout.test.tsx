@@ -8,7 +8,25 @@ import type { CatalogueEntry } from "@/types/product";
 import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY, parseCheckoutData } from "@/lib/checkout";
+import { describeCartCodAvailability } from "@/lib/cod";
+import {
+  CONTACT_CONFIG,
+  DELIVERY_ESTIMATE_LINE,
+  LEGAL_CONFIG,
+  RETURN_WINDOW_DAYS,
+} from "@/lib/config";
 import { AddressCheckout } from "@/components/AddressCheckout";
+
+/**
+ * The two sentences `describeCartCodAvailability` can produce, read from `lib/cod.ts` rather
+ * than restated here — which of the two this cart gets depends on the COD catalogue the page is
+ * handed, and the assertion below is about the *shape* of the line rather than about which rule
+ * fired.
+ */
+const COD_SENTENCES = [
+  describeCartCodAvailability(null),
+  describeCartCodAvailability({ isCodEligible: true, minimumPrepayment: 0 }),
+];
 
 const pushMock = vi.fn();
 
@@ -180,6 +198,62 @@ describe("the empty-cart guard", () => {
     await hydratePage();
 
     expect(screen.getByText("One piece is no longer available")).toBeDefined();
+  });
+});
+
+describe("what stands between the heading and the first field", () => {
+  beforeEach(() => {
+    seedCart([{ productId: "nk-001", qty: 2 }]);
+  });
+
+  /**
+   * One line: how this order may be paid, and when it arrives. It was a bordered panel carrying
+   * those two sentences plus four promise lines, which put six lines of reading in front of the
+   * box the shopper came to type in. See
+   * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+   */
+  it("states the payment method and the timing on one line", async () => {
+    await hydratePage();
+
+    const intro = screen.getByText(new RegExp(DELIVERY_ESTIMATE_LINE.slice(0, 20)));
+
+    expect(intro.tagName).toBe("P");
+    expect(COD_SENTENCES.some((sentence) => intro.textContent?.startsWith(sentence))).toBe(true);
+    expect(intro.textContent?.endsWith(DELIVERY_ESTIMATE_LINE)).toBe(true);
+  });
+
+  it("puts the full name field immediately after that line", async () => {
+    await hydratePage();
+
+    const intro = screen.getByText(new RegExp(DELIVERY_ESTIMATE_LINE.slice(0, 20)));
+    const fullName = screen.getByLabelText("Full name");
+
+    const order = intro.compareDocumentPosition(fullName);
+    expect(order & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+
+    /** Nothing else with text between them: no boxed panel, no bulleted promises. */
+    const between = document.body.textContent ?? "";
+    const afterIntro = between.slice(between.indexOf(DELIVERY_ESTIMATE_LINE));
+    expect(afterIntro.indexOf("Full name")).toBeLessThan(80);
+  });
+
+  /**
+   * The promises moved to the summary column, under the total and behind a divider — where a
+   * shopper is deciding whether to go on rather than typing. They are not deleted, and this
+   * asserts both halves of that: gone from the left column, present in the right.
+   */
+  it("moves the promises into the order summary, under the total", async () => {
+    await hydratePage();
+
+    const secureCheckout = screen.getByText(
+      `Secure checkout via ${LEGAL_CONFIG.paymentProvider}`,
+    );
+    const summaryHeading = screen.getByRole("heading", { name: "Order summary" });
+    const summary = summaryHeading.closest("div")?.parentElement;
+
+    expect(summary?.contains(secureCheckout)).toBe(true);
+    expect(screen.getByText(`${RETURN_WINDOW_DAYS}-day returns`)).toBeTruthy();
+    expect(screen.getByText(CONTACT_CONFIG.supportEmail)).toBeTruthy();
   });
 });
 

@@ -1,6 +1,10 @@
 "use client";
 
 import type { ProductOption } from "@/types/product";
+import {
+  optionControlSizeClasses,
+  type OptionControlLayout,
+} from "@/lib/option-control-layout";
 import { getSwatchInk } from "@/lib/swatches";
 import {
   OptionRadioGroup,
@@ -14,9 +18,11 @@ export interface OptionSwatchGroupProps {
   value: string;
   disabled: boolean;
   onChange: (value: string) => void;
+  label?: string;
+  layout?: OptionControlLayout;
 }
 
-const swatchClasses = `${optionControlBaseClasses} gap-2.5 px-4 py-2.5`;
+const flowSwatchClasses = "px-4 py-2.5";
 
 /**
  * A colour dot beside its name, never a dot alone. The name is what carries the meaning —
@@ -29,13 +35,18 @@ export function OptionSwatchGroup({
   value,
   disabled,
   onChange,
+  label,
+  layout = "flow",
 }: OptionSwatchGroupProps): JSX.Element {
+  const swatchClasses = `${optionControlBaseClasses} gap-2.5 ${optionControlSizeClasses(layout, flowSwatchClasses)}`;
+
   return (
     <OptionRadioGroup
       option={option}
       value={value}
       disabled={disabled}
       onChange={onChange}
+      label={label}
       listClassName="flex flex-wrap gap-2"
       itemClassName={(isSelected) =>
         `${swatchClasses} ${isSelected ? optionControlSelectedClasses : optionControlUnselectedClasses}`

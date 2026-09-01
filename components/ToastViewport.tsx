@@ -24,6 +24,13 @@ export interface ToastViewportProps {
  * The container stays `pointer-events-none` so a plain toast never intercepts a click meant for
  * the page under it; the pill takes pointer events back only when it carries an action, which
  * is the only time there is anything on it to press.
+ *
+ * Bottom-centre rather than bottom-left. Every add-to-cart confirmation in the shop is this
+ * toast now, including the ones raised by the add-to-cart modal, and a modal is centred — a
+ * confirmation that appeared in the far corner of the screen from the button that raised it is
+ * one a shopper does not connect to what they just did. Left of centre it also sat under the
+ * cart page's pinned checkout bar on a phone. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function ToastViewport({
   toastKey,
@@ -35,7 +42,7 @@ export function ToastViewport({
     <div
       role="status"
       aria-live="polite"
-      className="pointer-events-none fixed bottom-4 left-4 z-50 sm:bottom-6 sm:left-6"
+      className="pointer-events-none fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 justify-center px-4 sm:bottom-6"
     >
       {message === null ? null : (
         <div

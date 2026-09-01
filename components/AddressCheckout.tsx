@@ -47,6 +47,12 @@ export interface AddressCheckoutProps {
  * deciding whether an unfamiliar shop can be trusted with an address wants to know they are not
  * committing to paying online before they have seen the parcel, and finding that out one screen
  * later is one screen too late.
+ *
+ * It is one line now, joined to the delivery estimate, and it is the only thing between the
+ * heading and the Full Name field. Everything else that panel carried — the secure-checkout
+ * badge, the returns window, the delivery coverage and the support address — is in the summary
+ * column under the total, which is where a shopper is deciding rather than typing. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function AddressCheckout({
   codCatalogue,
@@ -134,16 +140,16 @@ export function AddressCheckout({
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-display text-heading-sm text-ink">Delivery details</h2>
+          {/**
+           * How this order may be paid and when it arrives, on one line, and nothing else
+           * between the heading and the first field. It was a bordered panel carrying the same
+           * two sentences plus four promise lines, which put six lines of reading in front of
+           * the box the shopper came to type in. The promises moved to the summary column; see
+           * `CheckoutSummaryProps.footer`.
+           */}
           <p className="max-w-prose text-body-sm text-muted">
-            We ship across India. No account needed, and we use these details for this order
-            only.
+            {`${describeCartCodAvailability(prepayment)} · ${DELIVERY_ESTIMATE_LINE}`}
           </p>
-        </div>
-
-        <div className="flex flex-col gap-3 border border-line bg-ivory px-4 py-4 sm:px-5">
-          <p className="text-body-sm text-ink">{describeCartCodAvailability(prepayment)}</p>
-          <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
-          <CheckoutTrustStrip />
         </div>
 
         {isPrefilledFromLastOrder ? (
@@ -171,6 +177,7 @@ export function AddressCheckout({
         subtotal={subtotal}
         shipping={shipping}
         total={total}
+        footer={<CheckoutTrustStrip />}
       />
     </div>
   );

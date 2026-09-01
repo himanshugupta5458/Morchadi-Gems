@@ -9,6 +9,9 @@ export interface ProductShareButtonProps {
   title: string;
 }
 
+const SHARE_LABEL = "Share";
+const COPY_LABEL = "Copy link";
+
 export const LINK_COPIED_MESSAGE = "Link copied";
 
 /**
@@ -23,6 +26,12 @@ export const LINK_COPIED_MESSAGE = "Link copied";
  * An abandoned share sheet rejects with `AbortError`, which is a shopper changing their mind
  * and not a failure to report. Every rejection is swallowed for that reason: there is no
  * message this button could show that would help.
+ *
+ * **Icon only, in the corner beside the badge.** It was a labelled control on a line of its own
+ * under the trust strip, which gave a secondary action the same weight as Add to cart and put
+ * it below the fold on a phone. The label survives as the accessible name and as the tooltip,
+ * so nothing is lost to anyone who needs it. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function ProductShareButton({ title }: ProductShareButtonProps): JSX.Element {
   const { showToast } = useToast();
@@ -58,14 +67,15 @@ export function ProductShareButton({ title }: ProductShareButtonProps): JSX.Elem
     <button
       type="button"
       onClick={() => void handleShare()}
-      className="inline-flex items-center gap-2 self-start text-label uppercase tracking-caps text-muted transition-colors duration-250 hover:text-ink"
+      aria-label={canShare ? SHARE_LABEL : COPY_LABEL}
+      title={canShare ? SHARE_LABEL : COPY_LABEL}
+      className="inline-flex h-9 w-9 shrink-0 items-center justify-center border border-line bg-white text-muted transition-colors duration-250 hover:border-charcoal hover:text-ink"
     >
       {canShare ? (
         <ShareIcon className="h-4 w-4" />
       ) : (
         <LinkIcon className="h-4 w-4" />
       )}
-      {canShare ? "Share" : "Copy link"}
     </button>
   );
 }

@@ -12,8 +12,19 @@ export function fieldErrorId(id: string): string {
   return `${id}-error`;
 }
 
-export const fieldControlClasses =
-  "w-full border bg-white px-4 py-3 font-sans text-body text-ink transition-colors duration-250 placeholder:text-muted/70 disabled:text-muted";
+/**
+ * Everything a field control looks like except how tall it is: border, ground, horizontal
+ * padding, ink, transition. The vertical padding and the type scale are held out so a caller
+ * that needs a shorter control can state its own without two `py-*` utilities landing in one
+ * class string — which Tailwind settles by the order it emits them in, not the order they are
+ * written, exactly as [ADR-025](/docs/decisions/ADR-025-button-padding-tailwind-content.md)
+ * found for buttons.
+ */
+export const fieldControlBaseClasses =
+  "w-full border bg-white px-4 font-sans text-ink transition-colors duration-250 placeholder:text-muted/70 disabled:text-muted";
+
+/** The full-height control every form field uses. */
+export const fieldControlClasses = `${fieldControlBaseClasses} py-3 text-body`;
 
 export function fieldBorderClasses(hasError: boolean): string {
   return hasError ? "border-sale" : "border-line";

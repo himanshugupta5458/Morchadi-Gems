@@ -6,18 +6,42 @@ import {
   getSecondaryImage,
   toCatalogueEntry,
 } from "@/lib/product-view";
+import { describeOptionGroups } from "@/lib/card-purchase";
 import { PriceDisplay } from "@/components/PriceDisplay";
 import { ProductBadgeTag } from "@/components/ProductBadgeTag";
 import { ProductCardPurchase } from "@/components/ProductCardPurchase";
 import { ProductImagePlaceholder } from "@/components/ProductImagePlaceholder";
 
 /**
- * Two lines of `text-body-sm` at its 22px line height, reserved whether the name needs them
- * or not. A one-line name and a two-line name therefore push the price and the button to the
- * same offset, so a row of cards shares one baseline. Names longer than two lines are clamped
- * rather than allowed to reflow the row.
+ * One line, truncated, with the whole name kept in the DOM and in the `title`.
+ *
+ * It was two lines with the second reserved whether it was needed or not, which is what kept a
+ * grid row on one baseline while the space below the name varied. Nothing below it varies any
+ * more — every card carries the same price row and the same 40px button — so the reserved
+ * second line was 22px of blank space on most cards, bought to solve a problem that no longer
+ * exists. Truncating rather than wrapping is what keeps the guarantee: a name cannot reflow a
+ * row it cannot reach a second line of.
  */
-const NAME_HEIGHT_CLASSES = "line-clamp-2 min-h-[2.75rem]";
+const NAME_CLASSES = "truncate";
+
+/**
+ * The one line the options tag occupies, reserved on every card whether or not the product has
+ * anything to tag.
+ *
+ * It is exactly the line box `text-eyebrow` brings, and it is the last reserved slot on the card.
+ * ADR-067's two boxes together came to 76px and existed because a card's *controls* varied; this
+ * one is 16px and exists because a card's *label* does.
+ *
+ * **What the measurement actually found is worth stating, because it is not what was assumed.**
+ * Cards within one row are the same height with or without this slot: `ProductGrid` stretches
+ * its grid items and `mt-auto` bottom-aligns the action, so the row is level either way. What
+ * the slot buys is *row-to-row* uniformity — removing it makes a row with no tagged card in it
+ * 24px shorter than a row with one, so the listing's rhythm would depend on which products
+ * happened to land in which row, and change with the sort order. The numbers are in
+ * `docs/testing/PLAN-universal-add-to-cart-modal.md`. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+ */
+const OPTIONS_TAG_HEIGHT_CLASSES = "flex h-4 items-center";
 
 export interface ProductCardProps {
   /**
@@ -42,11 +66,13 @@ export interface ProductCardProps {
  * image element at all, so there is nothing to fade to and no placeholder flashes. The swap is
  * two stacked `next/image` fills crossfading in CSS, which keeps the card a Server Component.
  *
- * **Everything below the photograph is height-reserved**: the name block, the option row and
- * the action. A grid row holds cards with no options beside cards showing chips beside cards
- * whose button carries a two-line label, and each of those reserves the same space as the
- * others so the row keeps one baseline in every combination. See
- * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
+ * **Every card below the photograph is the same card.** A single-line name, a price row, and a
+ * 40px button — no option row, no second button label, nothing whose presence depends on what
+ * the product carries. Where [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md) kept
+ * a row aligned by reserving space for its chips and its two-line button label, one 16px line
+ * is left: a product with options says so in a muted tag under the price, and asks its question
+ * in a modal rather than on the card. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function ProductCard({
   product,
@@ -54,6 +80,7 @@ export function ProductCard({
 }: ProductCardProps): JSX.Element {
   const primaryImage = getPrimaryImage(product);
   const hoverImage = getSecondaryImage(product);
+  const optionsTag = describeOptionGroups(product.options);
 
   return (
     <article className="group relative flex h-full flex-col border border-line bg-white transition duration-250 hover:-translate-y-1 hover:shadow-card-hover">
@@ -92,17 +119,26 @@ export function ProductCard({
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col gap-2 p-3 sm:gap-3 sm:p-4">
+      <div className="flex flex-1 flex-col gap-2 p-3">
         <Link
           href={`/product/${product.id}`}
-          className={`${NAME_HEIGHT_CLASSES} text-body-sm text-muted transition-colors duration-250 after:absolute after:inset-0 after:content-[''] hover:text-ink`}
+          title={product.name}
+          className={`${NAME_CLASSES} text-body-sm text-muted transition-colors duration-250 after:absolute after:inset-0 after:content-[''] hover:text-ink`}
         >
           {product.name}
         </Link>
 
         <PriceDisplay mrp={product.pricing.mrp} price={product.pricing.price} />
 
-        <div className="relative z-10 mt-auto pt-1">
+        <div className={OPTIONS_TAG_HEIGHT_CLASSES}>
+          {optionsTag === null ? null : (
+            <span className="truncate text-eyebrow uppercase tracking-caps text-muted">
+              {optionsTag}
+            </span>
+          )}
+        </div>
+
+        <div className="relative z-10 mt-auto">
           <ProductCardPurchase item={toCatalogueEntry(product)} />
         </div>
       </div>

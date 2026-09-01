@@ -29,7 +29,7 @@ import { ProductImageZoom } from "@/components/ProductImageZoom";
 import { ProductPurchaseActions } from "@/components/ProductPurchaseActions";
 import { ProductShareButton } from "@/components/ProductShareButton";
 import { SectionHeading } from "@/components/SectionHeading";
-import { TrustStripCompact } from "@/components/TrustStrip";
+import { ProductTrustLine } from "@/components/ProductTrustLine";
 
 interface ProductPageProps {
   params: { id: string };
@@ -123,16 +123,33 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
       <Breadcrumb trail={breadcrumbTrail} />
 
       <ProductSelectionProvider options={product.options}>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
-          {hasGallery ? (
-            <ProductGallery
-              images={product.media.images}
-              imageAlts={imageAlts}
-              variantImages={product.media.variantImages}
-            />
-          ) : (
-            <ProductImageZoom src={primaryImage} alt={product.seo.imageAlt} priority />
-          )}
+        {/**
+         * `items-start` rather than the default stretch, so both columns begin at the same
+         * offset on the first paint — a sticky child of a stretched grid item is pinned to a
+         * track as tall as the text beside it and appears to start lower than it does.
+         */}
+        <div className="mt-6 grid grid-cols-1 items-start gap-6 sm:mt-8 sm:gap-10 lg:mt-12 lg:grid-cols-2 lg:gap-16">
+          {/**
+           * The photograph follows the shopper down the description and the specs. A product
+           * page is one long column of prose beside one image, and scrolling to read the second
+           * paragraph used to mean scrolling away from the piece being described.
+           *
+           * `top-32` clears the 96px desktop header the sticky element scrolls under. Below
+           * `lg` the two columns are stacked rather than side by side and there is nothing to
+           * stay beside, so it is not sticky at all. See
+           * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+           */}
+          <div className="lg:sticky lg:top-32">
+            {hasGallery ? (
+              <ProductGallery
+                images={product.media.images}
+                imageAlts={imageAlts}
+                variantImages={product.media.variantImages}
+              />
+            ) : (
+              <ProductImageZoom src={primaryImage} alt={product.seo.imageAlt} priority />
+            )}
+          </div>
 
           <div className="flex flex-col gap-4 sm:gap-6">
             <div className="flex flex-wrap items-center gap-3">
@@ -145,6 +162,9 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
                * point is that availability outranks merchandising everywhere. See ADR-067.
                */}
               <ProductBadgeTag stock={product.stock} flags={product.flags} />
+              <div className="ml-auto">
+                <ProductShareButton title={product.name} />
+              </div>
             </div>
 
             <h1 className="font-display text-heading-sm sm:text-heading-lg">
@@ -165,13 +185,9 @@ export default function ProductPage({ params }: ProductPageProps): JSX.Element {
 
             <ProductDescription description={description} />
 
-            <div className="border-t border-line pt-5 sm:pt-6">
-              <ProductPurchaseActions item={toCatalogueEntry(product)} />
-            </div>
-
             <div className="flex flex-col gap-4 border-t border-line pt-5 sm:pt-6">
-              <TrustStripCompact />
-              <ProductShareButton title={product.name} />
+              <ProductPurchaseActions item={toCatalogueEntry(product)} />
+              <ProductTrustLine />
             </div>
 
             <ProductDetailsList specs={product.specs} />

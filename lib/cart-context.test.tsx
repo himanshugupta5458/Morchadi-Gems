@@ -59,6 +59,17 @@ function Storefront(): JSX.Element {
   );
 }
 
+/**
+ * The add button confirms in place for a moment after a tap — it reads "Added ✓" for
+ * `ADDED_FEEDBACK_MS` before going back to inviting the next one — so a second add has to find
+ * it by either label. Matching the pair here rather than waiting the feedback out keeps the test
+ * about the cart rather than about a timer. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+ */
+function addToCartButton(): HTMLElement {
+  return screen.getByRole("button", { name: /Add to cart|Added/ });
+}
+
 function CartPage(): JSX.Element {
   return (
     <CartProvider catalogue={CATALOGUE}>
@@ -152,12 +163,12 @@ describe("adding to cart", () => {
     expect(readBadgeLabel()).toBe("Cart, empty");
 
     await act(async () => {
-      fireEvent.click(screen.getByRole("button", { name: "Add to cart" }));
+      fireEvent.click(addToCartButton());
     });
     expect(readBadgeLabel()).toBe("Cart, 1 items");
 
     await act(async () => {
-      fireEvent.click(screen.getByRole("button", { name: "Add to cart" }));
+      fireEvent.click(addToCartButton());
     });
     expect(readBadgeLabel()).toBe("Cart, 2 items");
     expect(readStoredQuantities()).toEqual({ "nk-001": 2 });

@@ -20,9 +20,15 @@ export interface ConfirmationEmailNoteProps {
  *
  * What *is* knowable is that an address was captured and that the dispatch was attempted for
  * this order, which is why the caller renders this only when the reconciled bundle carries a
- * non-empty email. The spam-folder sentence and the support address are there because they are
- * what actually helps when the email does not arrive — which, on the deployments above, is a
- * real possibility rather than a formality.
+ * non-empty email.
+ *
+ * **It is the only contact line on the screen now, and it carries both addresses.** The
+ * shopper's own was here, the support address was here *and* again in the footnote under the
+ * buttons, and the spam-folder sentence sat between them — three sentences and two mailto links
+ * saying one thing, which is where to write and where a copy went. The spam-folder advice went
+ * with them: it is guesswork about somebody else's inbox, and the support address it was
+ * hedging towards is on the same line anyway. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export function ConfirmationEmailNote({
   email,
@@ -31,10 +37,8 @@ export function ConfirmationEmailNote({
 
   return (
     <p className="max-w-prose text-body-sm text-muted">
-      A copy of this order is on its way to{" "}
-      <span className="text-ink">{email}</span>. If it has not arrived in a few minutes,
-      check your spam folder or{" "}
-      <SupportLine>reach us at</SupportLine>.
+      A copy is on its way to <span className="text-ink">{email}</span>.{" "}
+      <SupportLine>Questions?</SupportLine>
     </p>
   );
 }

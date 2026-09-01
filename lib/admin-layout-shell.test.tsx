@@ -2,6 +2,17 @@ import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 
+/**
+ * The header carries the search box now, and `ProductSearch` reaches for the app router to
+ * follow an arrow-keyed suggestion. There is no router outside a Next render, so the shell tests
+ * stand one up, exactly as they already stand up `next/image` and `next/font`.
+ */
+vi.mock("next/navigation", () => ({
+  useRouter: () => ({ push: () => undefined, replace: () => undefined, prefetch: () => undefined }),
+  usePathname: () => "/",
+  useSearchParams: () => new URLSearchParams(),
+}));
+
 vi.mock("next/font/google", () => ({
   Fraunces: () => ({ variable: "font-display-variable" }),
   Jost: () => ({ variable: "font-sans-variable" }),

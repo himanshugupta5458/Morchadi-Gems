@@ -2,11 +2,24 @@ import type { Category, ProductCardView } from "@/types/product";
 import { isStockAvailable } from "@/lib/product-badge";
 
 /**
- * How many suggestions a cross-sell rail shows. Four, because the grid is four abreast from
- * `lg` and two abreast on a phone — so the rail is exactly one row at every width, and never
- * the ragged half-row a fifth card would make.
+ * How many suggestions a cross-sell rail holds in total, shown and collapsed together.
+ *
+ * Still four. What changed is that they are no longer all on screen: the rail renders
+ * `CROSS_SELL_VISIBLE_LIMIT` of them and puts the rest behind one toggle, so four remains the
+ * size of the *shortlist* rather than the height of the section. See
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export const CROSS_SELL_LIMIT = 4;
+
+/**
+ * How many of those are visible before the shopper asks for more.
+ *
+ * Two, because this rail sits under a basket on the cart page and under a placed order on the
+ * confirmation screen, and in neither place is it the thing the shopper came for. Four compact
+ * rows pushed the cart's checkout button further down the phone screen than the free-shipping
+ * bar above it; two suggest, and the toggle admits there are more without spending the space.
+ */
+export const CROSS_SELL_VISIBLE_LIMIT = 2;
 
 /**
  * How deep a per-category shortlist is cut on the server.
@@ -114,4 +127,27 @@ export function selectCrossSellProducts(
     .filter((product) => !basketProductIds.has(product.id))
     .filter((product) => isStockAvailable(product.stock))
     .slice(0, limit);
+}
+
+/** The suggestions on screen, and the ones one tap away. */
+export interface CrossSellSplit {
+  shown: ProductCardView[];
+  hidden: ProductCardView[];
+}
+
+/**
+ * Splits a rail's suggestions into what it shows and what its toggle reveals.
+ *
+ * A function rather than two `slice` calls at the call site because the confirmation screen and
+ * the cart render the same rail from the same shortlists, and a rail that showed two pieces in
+ * one place and three in the other would be two features wearing one name.
+ */
+export function splitCrossSellSuggestions(
+  suggestions: readonly ProductCardView[],
+  visibleLimit: number = CROSS_SELL_VISIBLE_LIMIT,
+): CrossSellSplit {
+  return {
+    shown: suggestions.slice(0, visibleLimit),
+    hidden: suggestions.slice(visibleLimit),
+  };
 }

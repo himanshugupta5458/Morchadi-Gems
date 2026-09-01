@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { TrustStripCompact } from "@/components/TrustStrip";
 
 const HERO_IMAGE_SRC = "/hero/home-hero.webp";
 const HERO_IMAGE_ALT =
@@ -72,6 +73,21 @@ export function Hero({ categoryAnchorId }: HeroProps): JSX.Element {
             >
               Explore Categories
             </ButtonLink>
+          </div>
+
+          {/**
+           * The four promises, directly under the two calls to action rather than in a band
+           * below the hero.
+           *
+           * They are the answer to the question the buttons raise — can this shop be trusted
+           * with a card number — and a shopper who has to scroll past the fold to find it has
+           * already decided without it. The full promise band stays further down the page for
+           * anyone reading top to bottom; this is the same four facts, from the same array, at
+           * the moment they are first useful. See
+           * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+           */}
+          <div className="w-full border-t border-line/70 pt-4 sm:pt-5">
+            <TrustStripCompact />
           </div>
         </div>
       </div>

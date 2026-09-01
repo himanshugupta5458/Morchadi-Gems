@@ -1,11 +1,14 @@
 "use client";
 
 import type { CatalogueEntry } from "@/types/product";
-import { useCart } from "@/lib/cart-context";
-import { useToast } from "@/lib/toast-context";
+import {
+  ADDED_TO_CART_LABEL,
+  ADDED_TO_CART_MESSAGE,
+  useAddToCartFlow,
+} from "@/lib/add-to-cart-flow";
 import { Button, type ButtonSize, type ButtonVariant } from "@/components/Button";
 
-export const ADDED_TO_CART_MESSAGE = "Added to cart";
+export { ADDED_TO_CART_MESSAGE };
 
 export interface AddToCartButtonProps {
   item: CatalogueEntry;
@@ -15,9 +18,13 @@ export interface AddToCartButtonProps {
 }
 
 /**
- * The interactive island a Server Component slots into an otherwise static card. It takes a
- * `CatalogueEntry` rather than a `Product` so a card grid serialises five fields per product
- * instead of a full record with reviews and details.
+ * A standalone add button, for a surface that has a `CatalogueEntry` and no purchase panel of
+ * its own — the style guide, and whatever comes next.
+ *
+ * It goes through `useAddToCartFlow` rather than calling `addItem` directly, so a product with
+ * options opens the modal here exactly as it does on a card. A button that added straight to
+ * the cart would be sending option defaults nobody chose, which is the whole of what
+ * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md) removed.
  */
 export function AddToCartButton({
   item,
@@ -25,23 +32,20 @@ export function AddToCartButton({
   size = "sm",
   fullWidth = false,
 }: AddToCartButtonProps): JSX.Element {
-  const { addItem } = useCart();
-  const { showToast } = useToast();
-
-  function handleAddToCart(): void {
-    addItem(item, 1);
-    showToast(ADDED_TO_CART_MESSAGE);
-  }
+  const { isJustAdded, requestAdd, modal } = useAddToCartFlow(item);
 
   return (
-    <Button
-      variant={variant}
-      size={size}
-      fullWidth={fullWidth}
-      disabled={!item.inStock}
-      onClick={handleAddToCart}
-    >
-      {item.inStock ? "Add to cart" : "Sold out"}
-    </Button>
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        fullWidth={fullWidth}
+        disabled={!item.inStock}
+        onClick={requestAdd}
+      >
+        {!item.inStock ? "Sold out" : isJustAdded ? ADDED_TO_CART_LABEL : "Add to cart"}
+      </Button>
+      {modal}
+    </>
   );
 }

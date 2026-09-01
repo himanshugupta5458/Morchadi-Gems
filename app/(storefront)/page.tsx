@@ -16,10 +16,9 @@ import { CollectionStrip } from "@/components/CollectionStrip";
 import { Hero } from "@/components/Hero";
 import { OrderTrackingForm } from "@/components/OrderTrackingForm";
 import { ProductGrid } from "@/components/ProductGrid";
-import { ProductSearch } from "@/components/ProductSearch";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SocialProofSection } from "@/components/SocialProofSection";
-import { TrustStrip, TrustStripCompact } from "@/components/TrustStrip";
+import { TrustStrip } from "@/components/TrustStrip";
 import { ViewAllLink } from "@/components/ViewAllLink";
 
 const CATEGORY_SECTION_ID = "shop-by-category";
@@ -58,27 +57,9 @@ export default function HomePage(): JSX.Element {
     <>
       <Hero categoryAnchorId={CATEGORY_SECTION_ID} />
 
-      {/**
-       * The search box and the four promises, in one band directly under the hero.
-       *
-       * Both were several screens down. A shopper who arrives knowing what they want had to
-       * scroll past three strips to look for it, and a shopper deciding whether to trust the
-       * shop at all had to scroll past four to find out about returns. The full promise band
-       * stays where it was for anyone reading the page top to bottom; this is the same four
-       * facts stated in one line at the moment they are first useful. See ADR-070.
-       */}
-      <section className="border-b border-line bg-ivory">
-        <div className="container flex flex-col gap-5 py-5 sm:gap-6 sm:py-7">
-          <div className="mx-auto w-full max-w-2xl">
-            <ProductSearch />
-          </div>
-          <TrustStripCompact />
-        </div>
-      </section>
-
       <section
         id={CATEGORY_SECTION_ID}
-        className="scroll-mt-20 bg-white lg:scroll-mt-36"
+        className="scroll-mt-32 bg-white lg:scroll-mt-36"
       >
         <div className={`container flex flex-col gap-6 sm:gap-10 lg:gap-14 ${HOME_STANDARD_SECTION_PADDING}`}>
           <SectionHeading

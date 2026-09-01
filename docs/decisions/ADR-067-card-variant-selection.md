@@ -1,6 +1,6 @@
 # ADR-067: How a product card asks for an option, and how a cart line changes one
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR-073](ADR-073-universal-add-to-cart-modal.md) — §1, §2 and §4 only; §3 (editable cart lines through `validateOrderLineOptions`) and §5 (`isStockAvailable` and the badge cascade) stand unchanged
 - **Date:** 2026-08-30
 - **Prompt:** 111
 

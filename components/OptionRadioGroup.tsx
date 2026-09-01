@@ -14,9 +14,16 @@ export interface OptionRadioGroupProps {
   renderContent?: (optionValue: string, isSelected: boolean) => ReactNode;
   className?: string;
   /**
+   * What the legend reads, when the surface wants something other than the group's bare name.
+   * The add-to-cart modal passes "Select Size for bangles"; the product page passes nothing and
+   * gets the name. It is one string rather than a visible label beside a hidden legend, so the
+   * accessible name and the printed one can never say different things.
+   */
+  label?: string;
+  /**
    * Where the group's name is shown, or `sr-only` to keep it as the accessible name alone.
-   * The card is the one surface that hides it: it has a fixed row of vertical space to spend
-   * and the values themselves are the question there. Every other control shows it.
+   * Every surface shows it today; the prop stays because a surface with one row of vertical
+   * space to spend may still need to hide it.
    */
   legendClassName?: string;
 }
@@ -37,6 +44,7 @@ export function OptionRadioGroup({
   listClassName,
   itemClassName,
   renderContent,
+  label,
   className = "flex flex-col gap-3",
   legendClassName = "text-eyebrow uppercase text-muted",
 }: OptionRadioGroupProps): JSX.Element {
@@ -44,7 +52,7 @@ export function OptionRadioGroup({
 
   return (
     <fieldset className={className}>
-      <legend className={legendClassName}>{option.name}</legend>
+      <legend className={legendClassName}>{label ?? option.name}</legend>
 
       <div className={listClassName}>
         {option.values.map((optionValue) => {

@@ -2,46 +2,56 @@ import type { ProductOption } from "@/types/product";
 import { hasProductOptions } from "@/lib/options";
 
 /**
- * The most values a group may hold before the card stops asking the question and sends the
- * shopper to the page that can ask it properly.
+ * What the bottom of a product card does, decided from the product's option groups alone.
  *
- * Three, because a fourth chip does not fit a card at the two-abreast phone width without
- * either wrapping to a second row — which breaks the fixed height a grid row depends on — or
- * shrinking past the point where the label is readable. See
- * [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md).
- */
-export const CARD_OPTION_VALUE_LIMIT = 3;
-
-/**
- * What the bottom of a card does, decided from the product's option groups alone.
+ * Two modes now, where [ADR-067](/docs/decisions/ADR-067-card-variant-selection.md) had three.
+ * A card either adds in one tap because there is nothing to ask, or it opens the add-to-cart
+ * modal because there is — however many groups the product carries and however many values
+ * each of them lists. The value ceiling that used to split "chips on the card" from "choose on
+ * the product page" is gone with the chips, and so is the pre-selected default that ceiling was
+ * an argument about: the modal starts with nothing chosen in any group.
  *
- * - `add` — no groups. One tap, nothing to choose, unchanged from before options existed.
- * - `choose-on-card` — exactly one group of at most three values, shown as chips. A default is
- *   pre-selected and Add to cart adds whatever is selected.
- * - `choose-on-page` — anything else: one group with more values, or more than one group. The
- *   button links to the product page and adds nothing.
- *
- * The line between the last two is the whole point of ADR-067. A card that silently added an
- * option group's declared default was choosing on the shopper's behalf with no visible signal
- * a choice had been made at all, and `/api/create-order`'s `INVALID_OPTION` guard could never
- * catch it because the value sent was always a legal one — just one nobody picked.
+ * The property ADR-067 existed to protect is unchanged and is now unconditional. A card can
+ * never record a choice nobody made, because a card with options no longer records a choice at
+ * all — it asks. See [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
  */
 export type CardPurchaseMode =
   | { kind: "add" }
-  | { kind: "choose-on-card"; option: ProductOption }
-  | { kind: "choose-on-page" };
+  | { kind: "choose"; options: ProductOption[] };
 
 export function selectCardPurchaseMode(
   options: ProductOption[] | undefined,
 ): CardPurchaseMode {
-  if (!hasProductOptions(options)) return { kind: "add" };
-
-  const [option] = options;
-  const isSingleShortGroup =
-    options.length === 1 && option.values.length <= CARD_OPTION_VALUE_LIMIT;
-
-  return isSingleShortGroup ? { kind: "choose-on-card", option } : { kind: "choose-on-page" };
+  return hasProductOptions(options) ? { kind: "choose", options } : { kind: "add" };
 }
 
-/** What the card's button says when it is a link to the product page rather than an add. */
-export const CHOOSE_OPTIONS_LABEL = "Choose Your Options";
+/**
+ * A group whose name is about size gets counted in sizes rather than in options, because
+ * "3 sizes" answers a question a shopper is already asking and "3 options" does not.
+ */
+const SIZE_GROUP_PATTERN = /\bsizes?\b/i;
+
+/**
+ * The muted tag beside a card's price — `3 sizes`, `25 options`, `2 options` — or null for a
+ * product with nothing to choose.
+ *
+ * **What is counted depends on how many groups there are, and that is deliberate.** With one
+ * group the useful number is how many values it offers, because that is the whole of the
+ * question the modal will ask. With several, the useful number is how many questions there are:
+ * a piece with a design group and a size group is "2 options" to a shopper, and summing its
+ * values into "5 options" would describe a list that never appears anywhere.
+ *
+ * It is a tag about the *shape* of the choice, never about the choice itself. The card renders
+ * no values; that is the modal's job.
+ */
+export function describeOptionGroups(
+  options: ProductOption[] | undefined,
+): string | null {
+  if (!hasProductOptions(options)) return null;
+
+  if (options.length > 1) return `${options.length} options`;
+
+  const [option] = options;
+  const noun = SIZE_GROUP_PATTERN.test(option.name) ? "sizes" : "options";
+  return `${option.values.length} ${noun}`;
+}

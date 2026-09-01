@@ -145,14 +145,34 @@ describe("the promise band", () => {
     }
   });
 
-  it("puts the compact form under the hero and keeps the full one further down", () => {
-    const compactAt = HOME_PAGE_SOURCE.indexOf("<TrustStripCompact />");
+  /**
+   * The compact form is *inside* the hero now, under its two calls to action, rather than in a
+   * band below it — it answers the question the buttons raise, and a shopper who has to scroll
+   * past the fold to find it has already decided without it. The full band stays where it was
+   * for anyone reading the page top to bottom. See
+   * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+   */
+  it("puts the compact form inside the hero and keeps the full one further down", () => {
+    const heroSource = readFileSync("components/Hero.tsx", "utf8");
+    const ctaAt = heroSource.indexOf("Explore Categories");
+    const compactAt = heroSource.indexOf("<TrustStripCompact />");
+
+    expect(compactAt).toBeGreaterThan(ctaAt);
+    expect(HOME_PAGE_SOURCE).not.toContain("<TrustStripCompact />");
+
     const fullAt = HOME_PAGE_SOURCE.indexOf("<TrustStrip />");
     const categoriesAt = HOME_PAGE_SOURCE.indexOf("<CategoryGrid />");
-
-    expect(compactAt).toBeGreaterThan(-1);
-    expect(compactAt).toBeLessThan(categoriesAt);
     expect(fullAt).toBeGreaterThan(categoriesAt);
+  });
+
+  /**
+   * The search box left the home page for the header, so it is on every shop page rather than
+   * only on `/`. The header is where this is now asserted; what matters here is that the band it
+   * used to live in is gone rather than duplicated.
+   */
+  it("no longer carries a search box of its own", () => {
+    expect(HOME_PAGE_SOURCE).not.toContain("<ProductSearch");
+    expect(readFileSync("components/Header.tsx", "utf8")).toContain("<ProductSearch");
   });
 });
 

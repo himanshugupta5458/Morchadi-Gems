@@ -195,3 +195,19 @@ export function WhatsAppIcon({ className }: IconProps): JSX.Element {
     </svg>
   );
 }
+
+/**
+ * A wallet, for the one amount on a confirmation screen the shopper still has to do something
+ * about. It is the only icon in this set that marks an obligation rather than a reassurance,
+ * which is why the "Due on delivery" panel carries it and the order-number panel beside it
+ * carries none. See [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+ */
+export function WalletIcon({ className }: IconProps): JSX.Element {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden {...strokeProps}>
+      <path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H17v3" />
+      <path d="M3 7.5V17a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2H5.5A2.5 2.5 0 0 1 3 7.5z" />
+      <circle cx="16.5" cy="14" r="1.1" />
+    </svg>
+  );
+}

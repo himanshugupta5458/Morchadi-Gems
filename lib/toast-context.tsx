@@ -12,7 +12,12 @@ import {
 } from "react";
 import { ToastViewport, type ToastAction } from "@/components/ToastViewport";
 
-export const TOAST_DURATION_MS = 2800;
+/**
+ * How long a plain confirmation stays up. Long enough to be read after the eye has moved back
+ * to the grid, short enough not to sit over the next card a shopper is reaching for — and
+ * shorter than it was, because the button that raised it now also says "Added ✓" in place.
+ */
+export const TOAST_DURATION_MS = 2200;
 
 /**
  * How long a toast carrying an action stays up. More than twice the plain duration, because a

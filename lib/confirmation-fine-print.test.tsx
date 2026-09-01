@@ -7,7 +7,7 @@ import type { CatalogueEntry } from "@/types/product";
 import { CART_STORAGE_KEY } from "@/lib/cart";
 import { CartProvider } from "@/lib/cart-context";
 import { CHECKOUT_STORAGE_KEY } from "@/lib/checkout";
-import { CONTACT_CONFIG } from "@/lib/config";
+import { CONTACT_CONFIG, DELIVERY_ESTIMATE_LINE } from "@/lib/config";
 import { formatRupees } from "@/lib/format";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 
@@ -176,21 +176,51 @@ describe("the cash-on-delivery confirmation screen", () => {
     expect(screen.getByText(`Order reference ${COD_REFERENCE}`)).toBeTruthy();
   });
 
-  it("sets the expectation for the door, with the real amount due", async () => {
+  /**
+   * The amount, the courier's call and the delivery window are all inside the Due on Delivery
+   * panel now. They used to be the panel plus two paragraphs under it, which stated the cash
+   * figure a second time and the dispatch window for the fourth time in one checkout.
+   */
+  it("sets the expectation for the door inside the panel that names the amount", async () => {
     await renderConfirmation(`order_id=${COD_REFERENCE}`);
 
-    expect(
-      screen.getByText(
-        `Our courier will call before delivery. Please keep ${formatRupees(2099)} in cash ready, and exact change helps.`,
-      ),
-    ).toBeTruthy();
+    const panel = screen.getByText("Due on delivery").parentElement;
+    expect(panel).not.toBeNull();
+
+    const text = panel?.textContent ?? "";
+    expect(text).toContain(formatRupees(2099));
+    expect(text).toContain("Our courier calls before delivery.");
+    expect(text).toContain("exact change helps");
+    expect(text).toContain(DELIVERY_ESTIMATE_LINE);
+  });
+
+  it("states the cash figure once, in that panel and nowhere else", async () => {
+    await renderConfirmation(`order_id=${COD_REFERENCE}`);
+
+    const notice = screen.getByText("Your order is placed").parentElement;
+    const occurrences = (notice?.textContent ?? "").split(formatRupees(2099)).length - 1;
+
+    expect(occurrences).toBe(1);
+  });
+
+  /**
+   * Said once, directly under the number, and not again in a footnote under the buttons. The
+   * order number is the one thing on this screen worth copying down, and saying so twice made
+   * the sentence that carries the tracking link easier to skip.
+   */
+  it("says to keep the order number once", async () => {
+    await renderConfirmation(`order_id=${COD_REFERENCE}`);
+
+    const body = document.body.textContent ?? "";
+    expect(body.split("Keep this.").length - 1).toBe(1);
+    expect(body).not.toContain("Keep your order number");
   });
 
   it("names the address the confirmation is going to", async () => {
     await renderConfirmation(`order_id=${COD_REFERENCE}`);
 
     expect(document.body.textContent).toContain(
-      `A copy of this order is on its way to ${CUSTOMER_EMAIL}.`,
+      `A copy is on its way to ${CUSTOMER_EMAIL}. Questions? ${CONTACT_CONFIG.supportEmail}`,
     );
   });
 
@@ -255,7 +285,7 @@ describe("the prepaid confirmation screen", () => {
     await renderConfirmation(`order_id=${PAYMENT_REFERENCE}`);
 
     expect(document.body.textContent).toContain(
-      `A copy of this order is on its way to ${CUSTOMER_EMAIL}.`,
+      `A copy is on its way to ${CUSTOMER_EMAIL}. Questions? ${CONTACT_CONFIG.supportEmail}`,
     );
   });
 

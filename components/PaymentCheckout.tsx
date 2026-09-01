@@ -35,10 +35,7 @@ import { AddressRecap } from "@/components/AddressRecap";
 import { Button } from "@/components/Button";
 import { CheckoutGuardNotice } from "@/components/CheckoutGuardNotice";
 import { CheckoutSummary } from "@/components/CheckoutSummary";
-import {
-  CheckoutTrustStrip,
-  PaymentMethodMarks,
-} from "@/components/CheckoutTrustStrip";
+import { PaymentMethodMarks } from "@/components/CheckoutTrustStrip";
 import { PanelNotice } from "@/components/PanelNotice";
 import { TextAreaField } from "@/components/TextAreaField";
 import { PaymentChoice, type PaymentChoiceOption } from "@/components/PaymentChoice";
@@ -345,13 +342,23 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-display text-heading-sm text-ink">Review and pay</h2>
+          {/**
+           * Not a second security line. "Payment is handled by Cashfree on their secure page.
+           * We never see your card or UPI details." stood here and again, near-verbatim, under
+           * `PaymentMethodMarks` below the pay button — the same sentence twice on one screen,
+           * the second time at the moment it is actually being acted on. That one stays; this
+           * one says what the screen is for instead.
+           */}
           <p className="max-w-prose text-body-sm text-muted">
-            Payment is handled by Cashfree on their secure page. We never see your card or
-            UPI details.
+            Review your order and choose how to pay.
           </p>
         </div>
 
-        <AddressRecap address={checkoutData.address} editHref={CHECKOUT_ADDRESS_PATH} />
+        <AddressRecap
+          address={checkoutData.address}
+          editHref={CHECKOUT_ADDRESS_PATH}
+          compact
+        />
 
         {failure === null ? null : (
           <PaymentErrorNotice
@@ -425,10 +432,16 @@ export function PaymentCheckout({ codCatalogue }: PaymentCheckoutProps): JSX.Ele
           </p>
         </div>
 
+        {/**
+         * The methods and who processes them, and nothing else. The four-line trust strip that
+         * was here is on the address step, one screen back, in the summary column — repeating
+         * it after the shopper has already committed to that screen is reassurance offered to
+         * somebody who has stopped asking. See
+         * [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+         */}
         <div className="flex flex-col gap-4 border-t border-line pt-6">
           {chosenPath === "cod" ? null : <PaymentMethodMarks />}
           <p className="text-body-sm text-muted">{DELIVERY_ESTIMATE_LINE}</p>
-          <CheckoutTrustStrip />
         </div>
       </div>
 

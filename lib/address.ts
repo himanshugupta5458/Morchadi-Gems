@@ -210,3 +210,21 @@ export function toAddressFormValues(address: Address): AddressFormValues {
     pincode: address.pincode,
   };
 }
+
+/**
+ * `203, Sunpro Kedarnath, Jaipur 302020` — the delivery address as one line.
+ *
+ * The state is left out and the omission is deliberate: a pincode identifies a state uniquely
+ * in India, so printing both spends a third of the line restating something the six digits
+ * beside it already say. The full address, state included, is still rendered in full on the
+ * confirmation screen and in the receipt — this is the recap on the payment step, where the
+ * shopper is confirming something they typed two screens ago rather than reading it for the
+ * first time. See [ADR-073](/docs/decisions/ADR-073-universal-add-to-cart-modal.md).
+ */
+export function formatAddressOneLine(address: Address): string {
+  const streetLines = [address.line1, address.line2].filter(
+    (line): line is string => line !== undefined && line.trim().length > 0,
+  );
+
+  return [...streetLines, `${address.city} ${address.pincode}`].join(", ");
+}
