@@ -1,31 +1,48 @@
 import { COLLECTIONS, type CollectionFilterSlug, type Product } from "@/types/product";
 import { buildCollectionHref } from "@/lib/navigation";
-import { getAllProducts, getPrimaryImage } from "@/lib/products";
+import { getPrimaryImage } from "@/lib/products";
 import { isProductInCollection } from "@/lib/shop";
 
-/** One collection tile: where it goes, what it is called, and the piece standing for it. */
+/** One collection tile: where it goes, what it is called, and the cover it is shown behind. */
 export interface CollectionCover {
   slug: CollectionFilterSlug;
   label: string;
   href: string;
-  /** A photograph of a piece genuinely in this collection, or null when it has none yet. */
+  /**
+   * The collection's own commissioned cover. Typed as nullable because the tile still renders a
+   * placeholder for the absent case, though `COLLECTION_COVER_IMAGES` supplies every slug today.
+   */
   image: string | null;
   alt: string;
 }
 
 /**
- * The piece whose photograph stands for a collection: a member that carries the `featured`
+ * The commissioned cover each collection is shown behind, one fixed file per slug.
+ *
+ * A collection cuts across categories, and the tile is a piece of art direction rather than a
+ * shop window onto one product: the four images are made for these four tiles and change only
+ * when somebody replaces the file. Keyed by `CollectionFilterSlug` rather than by string, so a
+ * new collection fails to compile until it has been given a cover instead of quietly rendering
+ * a placeholder.
+ */
+const COLLECTION_COVER_IMAGES: Record<CollectionFilterSlug, string> = {
+  gifting: "/collections/gifting-fallback.jpg",
+  "anti-tarnish": "/collections/anti-tarnish-fallback.jpg",
+  "best-sellers": "/collections/best-sellers-fallback.jpg",
+  "new-arrivals": "/collections/new-arrivals-fallback.jpg",
+};
+
+/**
+ * The piece whose photograph would stand for a collection: a member that carries the `featured`
  * flag if the collection has one, otherwise its first member with a photograph.
  *
- * Membership is asked of `isProductInCollection`, the same function the shop's `?collection=`
- * facet filters with, so a tile can only ever show a piece the tile's own link will list.
- * That is the whole of the honesty rule the flat strip was written to respect — its comment
- * said collections "have no single image that could honestly stand for one", which was true
- * of an image chosen by hand and is not true of one derived from the collection's own
- * membership. Preferring a featured member is a merchandising nicety on top: given a choice
- * of 408 new arrivals, the one the owner already picked out is the better shop window.
+ * **No tile is derived this way any more** — every collection shows its own commissioned cover
+ * from `COLLECTION_COVER_IMAGES`. The derivation is kept because the rule it encodes is still
+ * the honest one for any surface that wants to show a *product* standing for a collection:
+ * membership is asked of `isProductInCollection`, the same function the shop's `?collection=`
+ * facet filters with, so such a surface can only ever show a piece its own link will list.
  */
-function coverProductFor(
+export function coverProductFor(
   slug: CollectionFilterSlug,
   products: readonly Product[],
 ): Product | undefined {
@@ -37,27 +54,30 @@ function coverProductFor(
 }
 
 /**
- * Every collection, with the photograph that represents it. Derived at render time from the
- * catalogue rather than written down, so a collection whose membership changes gets a new
- * cover without anybody remembering to swap a file path.
+ * What a screen reader is told about a commissioned cover.
+ *
+ * It describes the collection rather than naming a product, because the image no longer *is* a
+ * product: sourcing this from a member's `seo.imageAlt` would describe a piece that is not the
+ * one on screen.
+ */
+function describeCollectionCover(label: string): string {
+  return `A curated piece from the ${label} collection`;
+}
+
+/**
+ * Every collection, with the cover commissioned for it.
+ *
+ * The path is looked up rather than derived, so a tile no longer changes when the catalogue's
+ * membership does — which is the point: the four covers are art-directed for these four tiles,
+ * and a collection is a theme rather than a shelf with a best piece on it.
  */
 export function getCollectionCovers(): CollectionCover[] {
-  const products = getAllProducts();
-
-  return COLLECTIONS.map((collection) => {
-    const cover = coverProductFor(collection.slug, products);
-
-    return {
-      slug: collection.slug,
-      label: collection.label,
-      href: buildCollectionHref(collection.slug),
-      image: cover === undefined ? null : getPrimaryImage(cover),
-      /**
-       * The tile's own label is already read out by the link, so the photograph is described
-       * rather than named — a screen reader hearing "Gifting, Gifting" has been told nothing
-       * twice.
-       */
-      alt: cover === undefined ? "" : cover.seo.imageAlt,
-    };
-  });
+  return COLLECTIONS.map((collection) => ({
+    slug: collection.slug,
+    label: collection.label,
+    href: buildCollectionHref(collection.slug),
+    image: COLLECTION_COVER_IMAGES[collection.slug],
+    alt: describeCollectionCover(collection.label),
+  }));
 }
+
