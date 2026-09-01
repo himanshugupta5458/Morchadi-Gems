@@ -136,3 +136,31 @@ keep the generator for what it was always for: a product nobody has photographed
 **What this does not do** is judge a photograph. A file that differs from its staged source and
 is not flat is reported as an advisory and nothing more — someone put a real image there on
 purpose, and this gate has no standing to overrule them.
+
+## Addendum, 2026-09-01 — the repair ran, and it found the next one
+
+The consequence above — "`npm run validate:products` fails today, and that failure is correct" —
+no longer holds. The 206 were re-published in the change immediately following this one, from the
+list the gate itself derives, and the photograph check now reads `verified identical 400`,
+`PLACEHOLDER SHOWN 0`. The results are in
+[RESULT-2026-09-01-republish-206-photographs.md](../testing/RESULT-2026-09-01-republish-206-photographs.md).
+Nothing in the decision changed; only the state of the catalogue it measures.
+
+Running the repair surfaced a defect this ADR does not cover and does not fix. Staging all 206
+products copied **267 secondary photographs** as well — the `-2`, `-3` and `-{variant}` entries
+their records confirm — and **`data/products.json` references none of them**. 436 of 449 records
+carry exactly one entry in `media.images`, and no runtime path resolves a `-N` suffix:
+`lib/variant-images.ts` reads an explicit `media.variantImages` mapping and returns `null` for an
+unmapped selection.
+
+The mapper is not the thing at fault. `mapImagesToMedia` pushes **every** confirmed general path,
+and P629 shows the gap plainly: its completed draft confirms three images with three distinct
+paths, and the catalogue holds one. Whatever wrote those records dropped the extras somewhere
+between the mapper and the file — the same shape of loss this ADR closed for the primary
+photograph, one layer further in.
+
+It is left open deliberately. Repairing it edits `data/products.json`, which is a catalogue
+change under [ADR-001](ADR-001-tech-stack.md) and takes its own review, and the check that would
+catch it does not exist yet: the gate compares a *published path* against its source, so an image
+that reaches no path at all is invisible to it. A record that confirms an image the catalogue
+never names should be a finding, and today it is silence.
