@@ -6,7 +6,6 @@ import type {
   CreateOrderErrorCode,
   CreateOrderOnlineSuccess,
 } from "@/types/order";
-import type { UtmParams } from "@/types/utm";
 import {
   ADDRESS_FIELDS,
   validateAddressForm,
@@ -48,7 +47,7 @@ import {
   getOrderOptionCatalogue,
   getOrderPricingCatalogue,
 } from "@/lib/products";
-import { parseUtmParams, toUtmOrderTags } from "@/lib/utm";
+import { parseUtmParams } from "@/lib/utm";
 import { normaliseCashfreeOrder } from "@/lib/verify";
 
 /**
@@ -173,19 +172,19 @@ function gatewayUnavailable(): NextResponse<CreateOrderErrorBody> {
  * This predates the database and survives it. The order is now also written to Postgres by
  * `captureOrder` below ([ADR-042](/docs/decisions/ADR-042-order-capture-in-postgres.md)), but
  * that write is allowed to fail without failing the checkout, so the tags stay the copy of the
- * fulfilment detail that lives wherever the money does.
+ * fulfilment detail that lives wherever the money does. A packer reads them in the Cashfree
+ * dashboard, which is why the options — and only the options — still travel there.
  *
- * The campaign a shopper arrived on rides in the same map, under `utm_source`, `utm_medium`
- * and `utm_campaign` ([ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md)).
- * It is descriptive metadata exactly as the options are: it is bounded and normalised by
- * `lib/utm.ts` before it gets here, and no amount on any path reads it. Six tags is the
- * ceiling this can reach, inside Cashfree's ten.
+ * The campaign a shopper arrived on used to ride in the same map under `utm_source`,
+ * `utm_medium` and `utm_campaign`, and no longer does
+ * ([ADR-075](/docs/decisions/ADR-075-minimal-cashfree-customer-payload.md)). Attribution is not
+ * a fulfilment detail and Cashfree is not the system that reports on it: `captureOrder` writes
+ * the same `utm` to Postgres exactly as before
+ * ([ADR-039](/docs/decisions/ADR-039-analytics-and-utm-attribution.md)), so nothing about the
+ * shop's own analytics changes — only what leaves the building does.
  */
-function buildOrderTags(
-  summary: string,
-  utm: UtmParams | null,
-): Record<string, string> | null {
-  const tags = { ...toOrderOptionTags(summary), ...toUtmOrderTags(utm) };
+function buildOrderTags(summary: string): Record<string, string> | null {
+  const tags = toOrderOptionTags(summary);
   return Object.keys(tags).length === 0 ? null : tags;
 }
 
@@ -437,7 +436,39 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const orderId = generateOrderId();
   const mode = resolveCashfreeMode();
-  const orderTags = buildOrderTags(lineOptions.summary, utm);
+  const orderTags = buildOrderTags(lineOptions.summary);
+
+  /**
+   * Deliberately the smallest body Cashfree accepts, and short by four fields a reader may
+   * expect: `customer_name`, `customer_email`, and the three `utm_*` order tags are gone on
+   * purpose rather than forgotten.
+   *
+   * Cashfree support confirmed in writing on ticket 8314128 (2026-09-01) that `customer_id`
+   * and `customer_phone` are the only mandatory members of `customer_details`, and that
+   * `customer_email` is optional — supplying it changes neither the payment methods offered
+   * nor the gateway's fraud scoring. So the shopper's name and inbox buy nothing at the
+   * gateway, and a field that buys nothing is a field the payment processor should not hold.
+   * The `utm_*` tags left for the same reason: attribution is reported from Postgres, not
+   * from the Cashfree dashboard.
+   *
+   * None of this narrows the order record. `captureOrder` still writes the name, the email,
+   * the full address and the campaign to Postgres exactly as before — this is the outbound
+   * payload only. Product option tags stay, because a packer reads them where the money is.
+   * See [ADR-075](/docs/decisions/ADR-075-minimal-cashfree-customer-payload.md).
+   */
+  const cashfreeOrderPayload = {
+    order_id: orderId,
+    order_amount: plan.amountPrepaid,
+    order_currency: "INR",
+    customer_details: {
+      customer_id: generateGuestCustomerId(),
+      customer_phone: `+91${address.phone}`,
+    },
+    order_meta: {
+      return_url: buildReturnUrl(request.url, orderId),
+    },
+    ...(orderTags === null ? {} : { order_tags: orderTags }),
+  };
 
   let cashfreeResponse: Response;
   try {
@@ -450,21 +481,7 @@ export async function POST(request: Request): Promise<NextResponse> {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        order_id: orderId,
-        order_amount: plan.amountPrepaid,
-        order_currency: "INR",
-        customer_details: {
-          customer_id: generateGuestCustomerId(),
-          customer_name: address.name,
-          customer_email: address.email,
-          customer_phone: `+91${address.phone}`,
-        },
-        order_meta: {
-          return_url: buildReturnUrl(request.url, orderId),
-        },
-        ...(orderTags === null ? {} : { order_tags: orderTags }),
-      }),
+      body: JSON.stringify(cashfreeOrderPayload),
       cache: "no-store",
       signal: AbortSignal.timeout(CASHFREE_TIMEOUT_MS),
     });

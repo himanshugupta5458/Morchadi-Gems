@@ -10,6 +10,14 @@
 - **Prerequisites:** none for the automated cases. The manual cases need
   `NEXT_PUBLIC_GA_MEASUREMENT_ID` set to a real GA4 property and Cashfree sandbox credentials.
 - **Decision:** [ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md).
+- **Narrowed, prompt 120.** A captured campaign now travels to **one** place, not two:
+  [ADR-075](../decisions/ADR-075-minimal-cashfree-customer-payload.md) stopped forwarding the
+  `utm_*` tags to Cashfree, so the scope line above describes what this plan covered when it
+  was written rather than what ships. The `orders` / `customers` write and the admin WhatsApp
+  message are unchanged; `toUtmOrderTags` still exists and is still unit-tested here, and
+  `lib/cashfree-order-payload.test.ts` now owns the assertion that its output does not reach
+  the gateway. The manual case asking whether Cashfree stores the `utm_*` tags on a real order
+  is **obsolete** — there are none to store.
 
 ## Cases
 

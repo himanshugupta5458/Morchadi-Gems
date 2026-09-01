@@ -224,10 +224,10 @@ describe("POST /api/create-order with Postgres unreachable", () => {
 
     expect(sentBodies).toHaveLength(1);
     expect(sentBodies[0].order_amount).toBe(priced.total);
-    expect(sentBodies[0].order_tags).toMatchObject({
-      options: "P001:Letter=A",
-      utm_source: "instagram",
-    });
+    expect(sentBodies[0].order_tags).toEqual({ options: "P001:Letter=A" });
+    expect(Object.keys(sentBodies[0].order_tags as Record<string, string>)).not.toContain(
+      "utm_source",
+    );
   });
 });
 

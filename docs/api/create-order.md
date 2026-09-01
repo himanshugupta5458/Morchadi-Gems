@@ -134,11 +134,19 @@ truncated at 120 characters, and an object with nothing usable left in it become
 malformed or hostile `utm` therefore costs the order its attribution, never the order itself —
 there is no validation failure it can cause and no error code it can produce.
 
-`utm_source`, `utm_medium` and `utm_campaign` are written onto the Cashfree order as
-`order_tags`, merged into the same map that already carries the recorded option choices
-(at most six tags, against Cashfree's ten). `term` and `content` are accepted and stored in the
-browser but not tagged; GA4 reports on them natively. Nothing in the pricing path can read any
-of it. See [ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md).
+All five fields are written to the order row in Postgres by `captureOrder`, exactly as they
+have been since [ADR-042](../decisions/ADR-042-order-capture-in-postgres.md). That is where
+attribution is reported from, and this prompt did not touch it.
+
+**None of it goes to Cashfree.** Through prompt 119 `utm_source`, `utm_medium` and
+`utm_campaign` also rode on the Cashfree order as `order_tags`, merged into the same map that
+carries the recorded option choices. They no longer do: a campaign tag does no work at the
+gateway, nobody reads one off the Cashfree dashboard, and a second copy held by a third party
+with no reader is a liability rather than a record. `buildOrderTags` no longer takes a `utm`
+argument and cannot reach one. `term` and `content` were never tagged; GA4 reports on them
+natively. Nothing in the pricing path can read any of it. See
+[ADR-039](../decisions/ADR-039-analytics-and-utm-attribution.md) and
+[ADR-075](../decisions/ADR-075-minimal-cashfree-customer-payload.md).
 
 There is **no amount field, and adding one has no effect**. `price`, `mrp`, `lineTotal`,
 `subtotal`, `shipping` and `total` are all discarded by `parseOrderItems` before the body
@@ -225,7 +233,7 @@ was valid" is not a fact the server has.
 | Any claim that the cart is COD-eligible, or eligible for the online-payment discount | Never read. Both are recomputed here from the catalogue on every call, from the same `isCartCodEligible` check |
 | `selectedOptions` | Validated against the catalogue and written to `order_tags`. Not an input to any amount — the module that handles it is typed without a `price` field |
 | `giftMessage` | Sanitised, truncated to 300 characters, and written to `orders.gift_message`. Parsed after the payment plan is resolved, so no amount can have been computed from it; `lib/gift-message.test.ts` and `lib/checkout-gift-message.test.ts` pin that a 10,000-character note, a note full of digits and a note that is an object all leave the charged total exactly where it was |
-| `utm` | Validated for shape, bounded, and written to `order_tags` alongside the options. Not an input to any amount; `buildOrderTags` has no access to one |
+| `utm` | Validated for shape, bounded, and written to the `orders` row. Not an input to any amount, and since ADR-075 not sent to Cashfree at all — `buildOrderTags` no longer receives it |
 | The `sessionStorage` checkout bundle's amounts | Never sent, and would be ignored if they were |
 
 `mrp` is never read on any path. The `catalogue` parameter of `buildOrderFromCart` is typed
@@ -550,8 +558,6 @@ which case `https://api.cashfree.com`. Timeout `CASHFREE_TIMEOUT_MS` (15s), defi
   "order_currency": "INR",
   "customer_details": {
     "customer_id": "guest_a7f2k9m3x1qd",
-    "customer_name": "Ananya Iyer",
-    "customer_email": "ananya@example.com",
     "customer_phone": "+919876543210"
   },
   "order_meta": {
@@ -577,6 +583,27 @@ the subtotal when the cart is cash-on-delivery-eligible, per
 what their cart is worth. It is never a figure from the request.
 `customer_id` is generated fresh per order and links to nothing — there are no accounts. The return URL origin comes from `APP_BASE_URL`,
 then `NEXT_PUBLIC_BASE_URL`, then the request's own origin.
+
+#### That body is short by four fields on purpose
+
+Through prompt 119 `customer_details` also carried `customer_name` and `customer_email`, and
+`order_tags` also carried `utm_source`, `utm_medium` and `utm_campaign`. Cashfree support
+confirmed in writing on **ticket 8314128 (2026-09-01)** that `customer_id` and `customer_phone`
+are the **only mandatory** members of `customer_details`, and that `customer_email` is optional
+and affects **neither the payment methods offered nor fraud scoring**. With no payment-method
+argument and no risk argument left for it, the shopper's name and inbox stopped travelling to
+the gateway, and the campaign tags went with them for the same reason.
+
+The `options` tag stays, and the split is the whole rule: a packer reads the engraving off the
+payment record, so that tag does operational work at Cashfree; a campaign does none and is
+reported from Postgres instead.
+
+**Nothing about the order record narrowed.** `captureOrder` still receives and writes the
+shopper's name, email, phone, both address lines, city, state, pincode, gift message and full
+`utm`, exactly as the Postgres write below describes — this change did not touch that path.
+`lib/cashfree-order-payload.test.ts` pins both halves of one checkout: that the outbound body
+contains none of the name, inbox, street or pincode, and that the capture input contains all of
+them. See [ADR-075](../decisions/ADR-075-minimal-cashfree-customer-payload.md).
 
 ### The Postgres write
 

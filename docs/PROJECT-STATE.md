@@ -314,8 +314,12 @@ from the order being placed, while first-touch attribution deliberately is not
 
 **Analytics and attribution** ([ADR-039](decisions/ADR-039-analytics-and-utm-attribution.md)).
 GA4 behind `NEXT_PUBLIC_GA_MEASUREMENT_ID`, first-touch UTM capture in `localStorage`, the
-triple written to both the Cashfree `order_tags` and the `orders` / `customers` rows, and the
-Google Tag host added to `script-src` in the same change that added the tag.
+triple written to the `orders` / `customers` rows, and the Google Tag host added to `script-src`
+in the same change that added the tag. The same triple used to ride on the Cashfree
+`order_tags` as well; since
+[ADR-075](decisions/ADR-075-minimal-cashfree-customer-payload.md) it does not, along with
+`customer_name` and `customer_email` — attribution is reported from Postgres, and the payment
+processor is sent only what a payment needs.
 
 **SEO.** Per-product metadata for all 449, a 472-URL sitemap, `robots.txt`, Organization /
 OnlineStore / WebSite / Product / BreadcrumbList / ItemList / CollectionPage JSON-LD, no
